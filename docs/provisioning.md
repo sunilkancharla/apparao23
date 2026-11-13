@@ -77,3 +77,5 @@ Then separately review model digests/licenses/quantizations/sizes and English OC
 ## Current review boundary
 
 The target remains 16 GB/CPU-only. Dedicated `.venv` and the reviewed baseline were requested and installed; the historical loose `.tools` proposal was not used. P03 and later optional-tool/model trials retain their approval gates. Installing the baseline does not complete runtime architecture adoption. No source commit or next task starts automatically.
+
+T05 follow-up: the user authorized continuing with permissive alternatives after licensing review. Nine exact pdf-eval packages were installed using uv sync --frozen --group pdf-eval --no-build. Offline frozen sync and lock check passed after provisioning. No baseline pins/global installs changed; PyMuPDF was excluded. Tests/measurements and remaining review gates are in [the PDF report](benchmarks/pdf-parsers.md).

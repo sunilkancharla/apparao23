@@ -1,6 +1,6 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-**Status:** Approved; T01–T03 complete, T04 explicitly deferred by the user, T05 not started. Adoption/implementation remain gated.
+**Status:** Approved; T01–T03 and T05 complete, T04 explicitly deferred by the user. T05 closes with approved PyMuPDF empirical-comparison deferral. T06 review authorized; provisioning/adoption/implementation remain gated.
 
 **Prepared:** 2026-11-13 (Asia/Calcutta).
 
@@ -152,7 +152,7 @@ Implementation verification: meaningful failing tests first, smallest change, re
 
 ## 8. Ordered milestones and dependency map
 
-TODO holds the complete atomic criteria/files/evidence. All tasks are proposed and unstarted.
+TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 are complete; T04 is deferred; the user accepted deferring PyMuPDF's empirical comparison. T06 review is authorized; later tasks remain proposed and unstarted.
 
 | Milestone | Tasks in default execution order | Review outcome |
 |---|---|---|
@@ -215,4 +215,4 @@ The TXT path proves the full pipeline before every parser is built. Each later f
 
 Review the task sequence, architecture proposal, nine decision areas, task sizes, and evaluation/adoption gates. The next proposed task after approval is **T01**, not application scaffolding or model download. No investigation, provisioning, product code or commit is authorized merely by the presence of this plan.
 
-**Current progress:** T01–T03 complete; environment preparation brought forward from T18 was verified and committed in bb68c40. T04 optional SkillSpector is deferred at explicit user direction, with no scanner trial. Manual skill/script review remains required. T05 PDF parser comparison is next and not started; exact candidate provisioning still needs approval. No application/model/parser benchmark has run. Target stays 16 GB/CPU-only; T18 is not otherwise complete.
+**Current progress:** T01–T03 and T05 complete; environment preparation brought forward from T18 was verified and committed in bb68c40. T04 optional SkillSpector is deferred at explicit user direction, with no scanner trial. Manual skill/script review remains required. T05 compared pypdf/pdfplumber locally after user authorization; results, limits and five passing tests are in `docs/benchmarks/pdf-parsers.md`. User accepted deferral of the unrun PyMuPDF empirical comparison and authorized the T05 commit and T06 review. SPEC remains unchanged; this explicit evaluation exception does not select a runtime parser. No application/model benchmark or runtime adoption occurred. Target stays 16 GB/CPU-only; T18 is not otherwise complete.

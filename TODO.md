@@ -1,12 +1,12 @@
 # Stage 1 Atomic Task Checklist
 
-**Status:** T01–T03 complete; T04 explicitly deferred; T05 next, unstarted. **Prepared:** 2026-11-13 (Asia/Calcutta).
+**Status:** T01–T03 and T05 complete; T04 explicitly deferred. T05 closes with approved PyMuPDF comparison deferral. **Prepared:** 2026-11-13 (Asia/Calcutta).
 
-**Authority:** Approved SPEC, AGENTS and PLAN. T04 closes by user-approved optional-tool deferral; T05–T50 and proposed T16A are unstarted.
+**Authority:** Approved SPEC, AGENTS and PLAN. T04 closes by user-approved optional-tool deferral; T05 permissive trial was authorized after licensing review; T06–T50 and proposed T16A are unstarted.
 
 ## Checklist conventions and completion rules
 
-- User authorized T03 closeout and read-only T04 review, then explicitly declined SkillSpector. G1–G4 and D01–D09 still govern later work. No scanner installation or next task is authorized by the deferral.
+- User authorized T03 closeout and read-only T04 review, then explicitly declined SkillSpector. T05 review and permissive trial were authorized. Replying “ok, next step please” to the explicit closeout/commit question approves PyMuPDF comparison deferral, the T05 commit and T06 review. G1–G4 and D01–D09 still govern later work; no runtime adoption or T06 installation is authorized.
 - Record explicit task authorization before starting, then work on one task at a time. All required prerequisites/decisions must be satisfied. Plan approval alone does not authorize installs, trials, component adoption, commits, or every subsequent task.
 - Every task includes G3: relevant skill verification, actual evidence, quality/security review as applicable, README/PLAN/TODO updates, readable diff, commit question, and next-task authorization. Existing permission persists for its approved scope.
 - Scope S means normally 1–2 substantive files; M means 3–5, plus routine README/PLAN/TODO updates. Likely paths are proposals, not instructions to create empty modules. Re-split before work if a task exceeds one focused session/five substantive files.
@@ -70,14 +70,15 @@
 
 ### T05 — Compare native PDF parsers
 
-**Status:** Proposed. **Prerequisites:** T02–T04; exact candidates/provisioning approved under G1. **Scope:** M.
+**Status:** Complete with user-approved PyMuPDF empirical-comparison deferral. **Prerequisites:** T02–T04; permissive trial authorized after licensing review. **Scope:** M.
 **Objective:** Measure native PDF text/table/image provenance and error/resource behavior.
 
-- [ ] Compare a bounded viable candidate set including PyMuPDF as a candidate only on text/mixed/blank pages, tables/regions and image references, retaining warnings/parser-version and golden page anchors.
-- [ ] Measure time/RAM/footprint/offline behavior and malformed/protected/resource-boundary handling; document license/native dependency tradeoffs and unavailable precision.
+- [x] Compare a bounded viable candidate set on text/mixed/blank pages, tables/regions and image references, retaining warnings/parser-version and golden page anchors.
+  - pypdf/pdfplumber compared on controlled/native/image/blank/table/column fixtures and three reports; PyMuPDF metadata reviewed only. User approved deferring its empirical comparison at closeout. This is an explicit evaluation exception to the original benchmark sequence, not evidence of a PyMuPDF trial or a runtime selection; SPEC remains unchanged.
+- [x] Measure time/RAM/footprint/offline behavior and malformed/protected/resource-boundary handling for the authorized permissive subset; document license/native dependency tradeoffs and unavailable precision, with explicit sampling/security limitations.
 
 **Verification:** Run identical PDF samples, compare expected structure/locations and inspect failures; no adoption inferred from trial installation.
-**Evidence:** Pending — `docs/benchmarks/pdf-parsers.md`, raw local measurements and recommendation.
+**Evidence:** `docs/benchmarks/pdf-parsers.md`: nine trial packages installed only in project .venv, baseline pins unchanged; 24 final sample runs, 48/48 limited fact checks, five passing tests, memory/timeout/socket-denial controls, offline frozen sync/lock checks and warning/layout/OCR limits. No runtime adoption. Real-report table coverage and full-report resources remain gaps; T08/T09/T17 must address them before adoption. Resource/offline evidence is bounded by the host sandbox, not a final disconnected application gate. User accepted closeout/deferral and authorized its commit on 2026-11-13.
 **Likely files:** That report and at most three bounded evaluation files under `tests/evals/spikes/`.
 
 ### T06 — Compare DOCX parsers
@@ -684,4 +685,4 @@
 
 ## Current handoff
 
-The plan/T02 design are approved; **T01–T03 complete; T04 deferred at user request**. Baseline setup was verified and committed in bb68c40. This decision record documents the optional-tool deferral and manual-review fallback. T05 is next and not started. No new installation, parser/model trial or application implementation occurred during T04. Further provisioning/adoption remains gated.
+The plan/T02 design are approved; **T01–T03 and T05 complete; T04 deferred at user request**. Baseline setup was verified and committed in bb68c40. T05 results and limitations are in `docs/benchmarks/pdf-parsers.md`; user accepted PyMuPDF empirical-comparison deferral and authorized the T05 commit plus T06 review. No application implementation/runtime parser adoption occurred. Further provisioning/adoption remains gated.
