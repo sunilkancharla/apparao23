@@ -1,6 +1,22 @@
 # T07A — Legacy XLS parser review and proposed trial
 
-**Date:** 2026-11-13 (Asia/Calcutta). **Status:** Read-only review authorized and completed; the package below is proposed, not authorized or executed. No parser/writer installation, fixture generation, workbook parsing, application implementation or runtime adoption. The three newly supplied XLS files remain ignored in `sample_files/`.
+**Date:** 2026-11-13 (Asia/Calcutta). **Status:** User approved the documented trial and review-document commit. Review committed in `e3c598d`. Execution stopped at the native-network preflight: enforced denial was not established. No package downloaded/installed, parser imported, fixture generated or workbook parsed. The three supplied XLS files remain ignored in `sample_files/`.
+
+## Actual preflight outcome
+
+The user explicitly approved proceeding with the documented package. Four test-first control tests initially failed because the new evaluation module did not exist; the smallest control implementation then passed all four tests in **0.19 seconds**. These cover strict interpretation of native access-denial observations, the 512-MiB controller/4-GiB availability guards, twenty-minute provisioning deadline and persistent 100-start allocation. They do not prove an installed OS memory limit, descendant enforcement or document-reader safety. Ruff formatting, lint and format verification passed after that control implementation; no parser tests or old metered trial were run.
+
+Before provisioning, a direct **Winsock** control bypassed Python's socket API and read no documents. Nonblocking TCP connection attempts to documentation-only IPv4/IPv6 addresses returned **10035 (operation would block)**. The zero-length UDP send returned **0 (accepted)**. Neither pending TCP nor a successful send call proves delivery or a completed external connection, but neither establishes enforced native network denial. No document content was involved. Only explicit access-denied results would satisfy this control; route failures/timeouts cannot substitute for isolation evidence.
+
+The package explicitly requires stopping native document trials when that boundary cannot be verified, and stopping an affected run after a failed control. Execution therefore stopped **before any wheel download, installation/import, fixture generation or sample parsing**. No firewall, global environment, PATH, model store, dependency manifest or lockfile was changed. Do not retry this control, substitute Python socket monkeypatching for native isolation, or silently drop Calamine to declare the comparison complete.
+
+Ignored receipt: `data/evals/t07a/run-01/network-preflight.json`; persistent meter: `meter.json` beside it. The probe observed about **9.34 GiB available RAM** and **9.68 MiB controller private memory**, not parser RAM. Final accounting reserves **12/100 slots**: six explicit tool/interpreter starts (two pytest, one native-control Python, three Ruff) plus six conservative launcher/descendant slots; **zero downloaded bytes and zero model/API calls**. Three initial launcher allowances were added at closeout and retained as such, not presented as kernel-observed starts. Kernel descendant accounting/job enforcement was not established before the stop; complete process/memory enforcement remains unverified. The raw control receipt preserves its earlier three-explicit-start snapshot; the final ledger includes closeout allocations. No full-trial budget-enforcement claim is made.
+
+Remaining planned parser runs are **0/18 original-file, 0/24 synthetic and 0/12 negative**, with S-XLS/Q21–Q25 still unmaterialized/unscored. This is a failed readiness control, not an extraction score or a reason to mark T07A complete. Runtime adoption remains gated.
+
+Recommended next decision: authorize a **read-only design review for stronger project-worker native isolation** before another document trial. It should compare available per-process Windows isolation with the actual host sandbox, define native TCP/UDP and filesystem controls, and document setup/cleanup and system impact. Any new executable, policy/firewall change, dependency or revised trial needs explicit approval. Alternatively, a reduced xlrd-only trial may be proposed with its narrower guarantees; it would not complete the approved two-reader comparison. No fallback has been selected.
+
+The remaining sections preserve the approved pre-run proposal; their proposed/unstarted language is historical. Approval authorized this bounded package, not bypassing its stop conditions.
 
 ## Findings and recommendation
 

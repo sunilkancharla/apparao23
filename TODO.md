@@ -117,14 +117,14 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 ### T07A — Compare legacy XLS parsers
 
-**Status:** Authorized read-only review complete; exact trial package proposed for approval. Three supplied XLS samples have verified sizes/hashes/compound-file signatures; workbook parsing is unstarted. **Prerequisites:** T02R, T03–T04, T07; exact trial provisioned only after G1 approval. **Scope:** M.
+**Status:** Exact trial and review-document commit approved; review committed in e3c598d. Preflight stopped because native network denial could not be established. Four control tests and Ruff passed; no download/install, parser import, generated fixture or workbook parsing. T07A remains incomplete. **Prerequisites:** T02R, T03–T04, T07; approved package's stop conditions remain binding. **Scope:** M.
 **Objective:** Establish a local binary XLS extraction path independently of XLSX.
 
 - [ ] Review a bounded candidate shortlist, including license, maintenance/advisories, Windows/Python compatibility, native/transitive dependencies, footprint and offline behavior; compare against a justified alternative before choosing.
 - [ ] Use fixed golden sheets/cells/stored values, merged/header context and date types; measure time/RAM, errors/protected/invalid files and honest missing-cache warnings. Never execute formulas, macros, embedded content or external links; reject mislabeled unsupported workbooks.
 
 **Verification:** Bounded local comparison with fixture hashes, golden value/anchor checks and negative/network/resource controls. No runtime adoption inferred.
-**Evidence:** [XLS parser review and exact trial proposal](docs/benchmarks/xls-parsers.md): xlrd 2.0.2, python-calamine 0.9.1 and evaluation-only xlwt 1.3.0 reviewed; wheel identities, inherited license clauses, native dependencies, provenance/cache risks and alternatives recorded. Three originals total 857,088 bytes; only metadata/header checks performed. Proposed 100 shared experimental starts, 10-MiB network, 20-minute provisioning/30-minute execution, fixture/negative controls and stop conditions need approval. No installation, generation, parser test or runtime adoption. Genuine encryption/active-content, independent anchors and transitive advisory/license checks remain explicit readiness/coverage gates.
+**Evidence:** [XLS review/preflight report](docs/benchmarks/xls-parsers.md): pinned readers/writer, notices, native dependencies, risks and alternatives reviewed. User approved the 100-slot/10-MiB bounded package and document commit. Native Winsock control returned TCP4/TCP6 10035 and UDP4 accepted (0); these do not establish enforced network denial, so the documented stop rule applied before documents/dependencies. Four red-to-green control tests passed; Ruff passed. Final ledger reserves 12 slots (six explicit roots plus conservative launcher allocations), zero downloads/calls; kernel descendant/job enforcement remains unverified. All planned parser comparisons are unrun, Q21–Q25 unscored, no runtime adoption. Stronger native isolation design or a separately approved reduced trial is the next decision; no automatic retry/fallback.
 **Likely files:** That report and at most three evaluation aids.
 
 ### T08 — Evaluate Microsoft MarkItDown against format-specific baselines
