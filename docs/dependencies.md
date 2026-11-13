@@ -1,0 +1,58 @@
+# T03 Dependency Review Inventory
+
+**Status:** The user subsequently requested dedicated project installation of the reviewed baseline. It is installed in `.venv` with exact resolution in `uv.lock`. Earlier global observations below are historical inventory, not inherited dependencies. Parser/OCR/model/runtime adoption gates remain pending. Sources checked 2026-11-13.
+
+## Dedicated environment outcome
+
+Installed pins: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5. uv 0.13.8 is a verified executable in `.venv/Scripts`, not a global package. `uv.lock` records the full 24-distribution installed graph. Relative to the global inventory below, annotated-doc is 0.0.6, annotated-types 0.8.0 is included, anyio 4.16.0, certifi 2026.10.23 and idna 3.20. Global distributions were not changed.
+
+All package locations were verified under `.venv`; imports, versions, lock consistency and frozen offline sync passed. No source builds or exporter/SDK/cloud CLI were added; opentelemetry-api remains. Colorama's installed LICENSE.txt was located and inspected despite the missing metadata field. No vulnerability-free or offline application claim is made. This environment setup is a user-authorized sequencing exception before T18, not completed architecture/features. Later adoption, downloads and global changes remain gated.
+
+## Baseline candidates and alternatives
+
+| Component / candidate version | Purpose / alternatives | License and Windows/CPU review | Resource, security and offline implications |
+|---|---|---|---|
+| Existing CPython 3.14.6 | Reuse approved 3.11+ interpreter in isolated environments; alternative approved managed older Python if a parser lacks compatible wheels | Actual 64-bit Windows interpreter; package support must be tested | Avoids a new interpreter download initially; never inherit global site-packages; no third-party code required for stdlib CSV/TXT/SQLite |
+| uv 0.13.8 | Required environment/lock workflow; standalone archive versus installer/WinGet; pip/requirements substitution is not approved | MIT OR Apache-2.0; x64 Windows artifact published; native prebuilt executable | Developer tool, not runtime server. Network resolver/download capability requires scoped provisioning; direct archive avoids installer/profile changes. Actual installed footprint/RAM unmeasured. [Registry](https://pypi.org/project/uv/), [release](https://github.com/astral-sh/uv/releases/tag/0.13.8) |
+| FastAPI 0.162.2 | API/type validation per SPEC; alternatives Starlette directly or another framework would change architecture | MIT; Python >=3.10; package supports Windows-independent Python use | Requires Starlette/Pydantic and native Pydantic core transitively. Installed metadata includes opentelemetry-api; review its initialization/absence of exporters before adoption. Avoid standard/all extras; no privacy guarantee from package metadata. [Version source](https://pypi.org/project/fastapi/0.162.2/) |
+| Uvicorn 0.54.0, minimal package | ASGI server; alternatives other ASGI servers need review | BSD-3-Clause, Python >=3.10; minimal package avoids optional compiled/event-loop extras | Click/h11 baseline; bind loopback. Optional reload/WebSocket/native extras not needed until a justified task. Offline serving possible in principle, not yet tested. [Source](https://pypi.org/project/uvicorn/) |
+| HTTPX 0.28.1, minimal package | Async/sync loopback Ollama API and API tests; stdlib urllib is a smaller synchronous alternative | BSD-3-Clause, Python >=3.8; actual host support not tested as an app | anyio/httpcore/h11/certifi/idna graph. Explicit local URLs, bounded timeouts and no environment-proxy routing for document requests must be verified. No HTTP2/SOCKS/CLI extras planned. [Source](https://pypi.org/project/httpx/) |
+| pytest 9.2.0 | Fixture/parameter/API tests; unittest is stdlib alternative but SPEC selects pytest | MIT, Python >=3.10; Windows classified | Dev only; plugin discovery can execute installed code, so isolate environment and review plugins. No external service required for mocked tests. [Source](https://pypi.org/project/pytest/) |
+| Ruff 0.17.5 | Required lint/format workflow; multiple separate linters/formatters add tools | MIT; published Windows x64 wheel about 10.3 MB | Dev-only prebuilt native tool; no Rust compilation proposed. Runtime memory/installed size unmeasured; run checks locally. [Source](https://pypi.org/project/ruff/) |
+| sqlite3, csv, pathlib, hashlib, zipfile/XML | Metadata/history, text/table handling and integrity helpers; no separate SQLite server/package by default | Python standard library; SQLite 3.50.4 observed | No extra download; constrain paths, archive sizes and XML/entity handling; SQL parameters and transaction semantics still require implementation review |
+
+Maintenance observations are bounded: upstream release pages show FastAPI updated in November 2026, Uvicorn in September 2026, pytest in October 2026 and uv/Ruff in November 2026. HTTPX's registry release is older; longevity alone is not a security verdict. No package or resolved graph is certified vulnerability-free; changelog/advisory checks and artifact/hash review are required before actual adoption.
+
+## Observed transitive packages — not a proposed lockfile
+
+These are read-only installed-distribution metadata observations, not a clean resolver result or a list approved for reuse. Resolve the future isolated environment and review its actual lock graph, including additional dependencies, before installation/adoption.
+
+| Package | Installed version | Declared local license |
+|---|---|---|
+| starlette | 1.10.0 | BSD-3-Clause |
+| pydantic / pydantic_core | 2.14.3 / 2.50.4 | MIT / MIT |
+| typing_extensions | 4.16.0 | PSF-2.0 |
+| typing-inspection / annotated-doc | 0.4.5 / 0.0.5 | MIT / MIT |
+| opentelemetry-api | 1.45.2 | Apache-2.0 |
+| click / h11 | 8.5.1 / 0.16.0 | BSD-3-Clause / MIT |
+| anyio / httpcore | 4.14.2 / 1.0.9 | MIT / BSD-3-Clause |
+| certifi / idna | 2026.7.22 / 3.19 | MPL-2.0 / BSD-3-Clause |
+| colorama | 0.4.6 | Missing license field in inspected metadata; source/license-file review outstanding |
+| iniconfig / pluggy | 2.3.1 / 1.7.0 | MIT / MIT |
+| packaging / pygments | 26.3 / 2.21.0 | Apache-2.0 OR BSD-2-Clause / BSD-2-Clause |
+
+Do not add telemetry exporters/instrumentation. Presence of an API-only telemetry package is not itself proof of transmission, and absence of an exporter in a metadata list is not proof of no outbound traffic. Review runtime initialization and verify traffic in T19/T47. Native Pydantic core/wheel compatibility is a specific Python 3.14 check. License notices and artifact provenance remain part of the eventual inventory/lock review.
+
+## Later evaluations, not current installation requests
+
+- T04 SkillSpector: exact project/version and scripts/security remain unverified; manual inspection still required. No installer proposal exists yet.
+- T05–T09 parsers/OCR: PyMuPDF 1.28.2 is globally installed and its local metadata states AGPL-3.0 or Artifex commercial licensing. It is not adopted. Compare its licensing/dependencies/provenance with alternatives; python-docx, openpyxl, MarkItDown, PDF rendering and English OCR assets need exact trial proposals. No universal parser is assumed.
+- T10/T11 models: `embeddinggemma` and `qwen2.5:3b` remain candidates. Review exact digest/quantization/license/download size/context and CPU/RAM behavior before pulls. No model files were inspected or downloaded.
+- Ollama: no reachable local service/version. Its [Windows documentation](https://docs.ollama.com/windows) describes native installation and at least 4 GB binary-install space; model storage is additional. Choose a pinned release/artifact/license/update behavior in a separate proposal; do not use an unversioned installer silently.
+- T12 vector representation, T13/T14 exact RTK/ponytail identities, T15 UI UX Pro Max and T16A local chart tooling remain separately gated. No frontend framework, cloud model, vector service or native OCR binary is approved here.
+
+## Privacy and offline adoption checks
+
+The approved workflow needs local-only inference/storage/assets and no runtime downloads. Ollama's [FAQ](https://docs.ollama.com/faq) documents disabling cloud features using `OLLAMA_NO_CLOUD=1` and default loopback binding, but Windows desktop updates can download automatically. Review update control and package choice before installation; do not claim local-only traffic from defaults. Its [GPU guidance](https://docs.ollama.com/gpu) describes excluding NVIDIA devices; CPU-only execution must also be observed during actual runs, including other GPU backends.
+
+Before adopting any component: exact pin/hash and upstream provenance, direct/transitive/native license review, applicable advisories/changelog review, isolated Windows wheel/command smoke, resource footprint, bounded inputs/errors, no content/network telemetry, no cloud fallback, and offline behavior after provisioning. Public documentation research in T03 sent no user content externally. Nothing in this inventory authorizes downloads, a global package change or application implementation.

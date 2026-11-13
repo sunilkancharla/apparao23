@@ -1,0 +1,49 @@
+# Stage 1 Decision Register
+
+## Approval and current task
+
+The user approved AGENTS.md, PLAN.md and TODO.md and explicitly agreed to T01's downstream decision allocation (“yes please”). T01 is complete; the user approved T02's fixture/rubric design (“good”) and T03 read-only review proceeded. T03 inventory/dependency/provisioning reports are prepared; installations, downloads, adoption, commits and later tasks remain gated. SPEC's T01 clarification records approved product choices.
+
+## Confirmed design direction
+
+- Design 1 (`images/Design1_Offline Document Assistant Dashboard.png`) is the primary landing-page reference.
+- Design 2 (`images/Design2_Document Assistant Dashboard Interface.png`) informs the chat interface, citations and evidence panel.
+- The user approved minimal locally served HTML/CSS/JavaScript for Stage 1, without a frontend framework. The references do not add requirements from image details or authorize UI implementation now.
+
+## Supplied samples: metadata inspection
+
+The user supplied files under `sample_files/` for project evaluation. Local directory metadata shows 3 PDFs, 4 XLSX workbooks and 2 CSVs. No legacy XLS files, DOCX files or TXT files were found there. The largest PDF is 54,671,155 bytes (about 55 MB). No document content was parsed, evaluated, uploaded or modified during this check; native/scanned characteristics and extraction quality are not yet verified.
+
+Use these as initial local sample candidates, not the complete acceptance corpus. Subsequent authorized T02 inspection recorded hashes, workbook sheet metadata and selected CSV answers/locations in the fixture manifest; authored definitions supply design coverage for missing formats and controls. PDF/workbook contents and generated artifacts remain unverified. Supplied originals must not enter Git; no files have been staged. Parser/model trials remain separately gated.
+
+## Decision status
+
+IDs match PLAN. Nothing listed as open is an approved default.
+
+| ID | Status | Decision needed / evidence so far |
+|---|---|---|
+| D01 | Approved | User answered “1 ok” to 100 MB per file, 10 files per upload/conversation, and 1 GB of library originals. Derived-data/storage budgets, exact enforcement/counting rules and measured viability remain for review; do not silently reduce these approved limits after benchmarks. |
+| D02 | Approved | User selected English-only OCR. No additional OCR language assets are required by the current decision. |
+| D03 | Evaluation scope approved | User answered “1 ok” to the bounded evaluation-first chart scope in `docs/proposals/chart-interpretation.md`. Runtime support is decided after measured local results. T16A proposes the separate investigation; no trial installation or execution is authorized yet. |
+| D04 | Core deletion rules approved; retention details open | Delete a chat's exclusive attachments and preserve library/shared content. User approved the interim Stage 1 rule (“ok, next”): warn and block library deletion while saved conversations reference it. More advanced deletion/citation handling can be considered later. Remaining historical-message/citation, derived-artifact and temporary-file retention details must be settled before lifecycle implementation; detaching references does not implicitly approve destruction of historical citation evidence. |
+| D05 | Approved | User answered “1 ok” to minimal HTML/CSS/JavaScript, with Design 1 for the landing page and Design 2 for chat/citations/evidence. A framework requires a separately reviewed change. |
+| D06 | Timing and initial T02 rubric approved | Final speed/memory targets follow initial local benchmarks, before T17 adoption. Bounded trial budgets first. User approved T02 initial quality rubric/gates; T16 refinements require review before acceptance. Hardware inventory differs, but user explicitly said “don't change, keep it as before”: retain 16 GB/CPU-only target. |
+| D07 | T02 design approved | Supplied samples are inventoried/hashed; CSV ground truth locally checked; authored definitions cover missing formats/controls. PDF/workbook contents and generated artifacts remain unverified. T02 approval is design acceptance, not permission to publish/commit original documents or proof of parser quality. |
+| D08 | Deferral approved | Exact RTK/ponytail identities and trial decisions move to T13/T14. No reliance or install until exact projects are identified and approved. |
+| D09 | Deferral approved | Exact provisioning/assets/commands/trial budgets move to T03 and individual G1 proposals. No blanket installation permission. |
+
+## T01 completion criteria
+
+T01 acceptance is satisfied: D01/D02, D03 evaluation scope, D04 core deletion rules, D05 frontend and D06 decision timing are approved, and the user explicitly approved the downstream allocation below. Library/reference invariants are preserved, approved SPEC clarifications recorded and no dependencies adopted. T01 completion does not complete deferred contracts/trials.
+
+## Approved allocation of remaining details
+
+Subsequent user direction overrides the earlier uv-only loose-tool proposal: use a dedicated project `.venv` and install the reviewed baseline here; the user will manage installations/uninstallations elsewhere. This explicitly brings environment preparation forward from T18. Verified setup is recorded in `docs/provisioning.md`; no global changes, application implementation, parser/OCR/model installation or commit was authorized/performed.
+
+- D01 enforcement/counting and derived-storage budgets: T17 contracts before T20/T23 implementation.
+- D04 historical-message/citation, detached-reference, derived-artifact and temporary-file retention: T17 contracts before ownership/lifecycle implementation; preserve approved deletion rules.
+- D06 quality rubric and D07 full sample/expected-evidence definitions: T02, with detailed grounding thresholds in T16 before acceptance evaluation. Keep originals local and out of Git.
+- D08 RTK/ponytail identities: T13/T14; no installation/reliance/adoption until exact projects are identified and approved. If still ambiguous then, obtain an explicit skip/defer decision.
+- D09 exact assets, commands and trial budgets: T03 and individual G1 proposals; no blanket provisioning approval.
+
+The user confirmed the allocation, authorized T02 and approved its design/rubric. T03 reports are in `docs/benchmarks/environment.md`, `docs/dependencies.md` and `docs/provisioning.md`. The first concrete download proposal is P01, uv 0.13.8 only; no provisioning permission has been inferred. Original target explicitly retained after hardware clarification. No parser/model was installed or benchmarked, and no files staged/committed.
