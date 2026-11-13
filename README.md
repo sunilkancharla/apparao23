@@ -54,6 +54,8 @@ Optional shell activation: `.\.venv\Scripts\Activate.ps1` (not invoked during ve
 
 ## Current evaluation and next step
 
+T07A's authorized [read-only XLS parser review](docs/benchmarks/xls-parsers.md) is complete. Three newly supplied XLS samples have checked hashes and compound-file headers; workbook contents have not been parsed. The proposed trial compares xlrd 2.0.2 with python-calamine 0.9.1, using xlwt 1.3.0 only for bounded authored fixtures. Exact versions/licenses, resource limits, cache/provenance checks and gaps are documented for approval. No new installation, fixture generation or XLS capability is implemented.
+
 T07's approved XLSX/CSV trial is finished; the user approved committing its reviewed results and process updates. Remaining acceptance coverage is still open. The [report](docs/benchmarks/tabular-text-parsers.md) records 40 successful original-file workers, 15,656 sampled workbook cell values agreeing between readers per repetition, CSV value/line checks, nine passing full-suite tests plus a later focused duplicate-member test and mutation detection. These are bounded extraction results, not model/application scores. Genuine encrypted/VBA controls and full-workbook scalability remain gaps.
 
 The T07 counter recorded 79 workers; the full suite also ran 13 T05 regression workers outside it, totaling 92. The combined 80-worker cap was not enforced across the test session. No further workers after identifying the gap. Future combined trials need one shared budget including regressions. The persistent trial budget prevents silently rerunning parser tests; arrange a fresh approved run and unused output/basetemp before reproduction. Ruff and offline frozen sync/lock passed. No application is implemented.
