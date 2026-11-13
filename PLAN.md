@@ -2,7 +2,7 @@
 
 ## Latest approved scope - PDF/XLSX/CSV
 
-The user deferred legacy XLS on 2026-11-13. T07A and T37 are excluded from Stage 1, with their earlier evidence retained. T08 now depends on T05/T07; T16/T17 and acceptance no longer depend on XLS evaluation or implementation. T38 follows T36, bypassing T37. Next proposed work is the T08 read-only MarkItDown review; execution/install/adoption remain gated. Earlier format-amendment and T02R paragraphs below describe historical decisions superseded by this amendment.
+The user deferred legacy XLS on 2026-11-13. T07A and T37 are excluded from Stage 1, with their earlier evidence retained. T08 now depends on T05/T07; T16/T17 and acceptance no longer depend on XLS evaluation or implementation. T38 follows T36, bypassing T37. T08 closes with user-approved non-adoption and empirical-trial deferral; the T09 read-only OCR review is authorized. OCR execution/install/adoption remain gated. Earlier format-amendment and T02R paragraphs below describe historical decisions superseded by this amendment.
 
 **Status:** Approved; T01–T03 and T05 complete, T04 explicitly deferred by the user. T05 closes with approved PyMuPDF empirical-comparison deferral. T02R definition refresh is complete; user approved the reviewed definitions and commit. Format scope is PDF/XLSX/CSV; remaining downstream revisions, provisioning/adoption/implementation retain their gates.
 
@@ -145,7 +145,7 @@ For each candidate/artifact, record exact upstream repository/version/digest whe
 | T06 | Excluded: DOCX | Retired task ID only; no Stage 1 development, trial or dependency |
 | T07 | XLSX alternatives including openpyxl; standard-library CSV baseline | Sheets/cells/headers/formulas without execution, encodings/quoted cells, memory and record/line provenance |
 | T07A (deferred) | Legacy XLS outside Stage 1 | Historical review/preflight retained; no further trial or adoption in this stage |
-| T08 — before parser adoption | Microsoft MarkItDown against T05/T07 | Same three-format samples; XLS is outside this comparison, tables/scans/images, provenance loss, OCR integration needs, installation footprint/time/RAM and local-only configuration |
+| T08 - closed with approved exception | MarkItDown v0.1.9 source/dependency review | User accepted non-adoption and empirical-trial deferral; no measured comparison or runtime adoption. See docs/benchmarks/markitdown.md |
 | T09 | Local OCR alternatives, e.g. a Tesseract-based path and another viable Windows/CPU option | Approved languages, page detection/native-vs-OCR distinction, ground-truth accuracy, rendering/native assets, warnings, resource/offline results |
 | T10/T11 | Ollama embedding/chat candidates | Actual-machine quality/latency/memory; `embeddinggemma` and `qwen2.5:3b` are candidates, not defaults |
 | T12 | SQLite metadata plus local vector alternatives | Minimal representation versus justified index library; ranking/persistence/delete/rebuild/versioning and interrupted-write integrity |

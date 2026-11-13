@@ -1,5 +1,9 @@
 # Stage 1 Decision Register
 
+## MarkItDown non-adoption and trial deferral - 2026-11-13
+
+The user replied "okay, proceed" to the concrete proposal to defer the empirical MarkItDown trial, commit the source/dependency review and start T09 local OCR review. Accept non-adoption of MarkItDown for Stage 1 and close T08 with that evaluation exception. This selects no runtime parser, waives no OCR/provenance/privacy requirement, and authorizes no OCR installation or benchmark. See [review](benchmarks/markitdown.md).
+
 ## Latest approved format decision - XLS deferred (2026-11-13)
 
 User explicitly requested PDF, XLSX and CSV only for Stage 1, deferring legacy XLS. This supersedes earlier XLS inclusion: exclude T07A/T37 and XLS-specific fixtures/questions/negative controls from active work and acceptance. Preserve earlier evidence, original expected answers and local samples. XLS must be rejected as unsupported by the future Stage 1 upload contract; later support requires explicit approval. T08 no longer depends on T07A. This scope decision does not resolve or waive native-network isolation for other future trials, change dependencies, authorize installations, or delete files. Reintroducing XLS or selecting isolation remains separately gated.

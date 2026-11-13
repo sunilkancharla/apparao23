@@ -2,7 +2,7 @@
 
 ## Latest approved scope amendment - XLS deferred
 
-User direction on 2026-11-13 limits Stage 1 to PDF/XLSX/CSV. T07A and T37 are excluded/deferred, not completed; their historical evidence and unchecked criteria remain below. S-XLS/Q21-Q25 and XLS-specific negative controls are excluded from active evaluation. T08 is the next proposed read-only review, depending on T05/T07. T16/T17 bypass T07A; T38 follows T36. No further XLS trial, isolation setup, installation or implementation is authorized. Verification: JSON scope/reference/count checks and historical ground-truth comparison passed; Git whitespace checks passed. Documentation/selection metadata only, no execution or dependency changes. Earlier scope/approval entries below are historical where superseded.
+User direction on 2026-11-13 limits Stage 1 to PDF/XLSX/CSV. T07A and T37 are excluded/deferred, not completed; their historical evidence and unchecked criteria remain below. S-XLS/Q21-Q25 and XLS-specific negative controls are excluded from active evaluation. T08 is closed with user-approved non-adoption and empirical-trial deferral; T09 read-only review is authorized. T16/T17 bypass T07A; T38 follows T36. No further XLS trial, isolation setup, installation or implementation is authorized. Verification: JSON scope/reference/count checks and historical ground-truth comparison passed; Git whitespace checks passed. Documentation/selection metadata only, no execution or dependency changes. Earlier scope/approval entries below are historical where superseded.
 
 **Status:** T01–T03/T02R/T05 complete; T04 deferred; T07 bounded results reviewed and approved for commit; coverage follow-up remains open, with the budget-accounting gap recorded. Three approved process improvements implemented. T05 closes with approved PyMuPDF comparison deferral. **Prepared:** 2026-11-13 (Asia/Calcutta).
 
@@ -133,14 +133,14 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T08 — Evaluate Microsoft MarkItDown against format-specific baselines
 
-**Status:** Proposed. **Prerequisites:** T05, T07; T06 explicitly excluded; exact MarkItDown configuration/install approved under G1. **Scope:** M.
+**Status:** Closed with user-approved non-adoption and empirical-trial deferral on 2026-11-13 ("okay, proceed"). **Prerequisites:** T05, T07; T06/T07A excluded; any exact trial configuration/install requires G1 approval. **Scope:** M.
 **Objective:** Determine whether MarkItDown improves the project enough to justify dependencies and provenance tradeoffs.
 
 - [ ] Compare identical PDF/XLSX/CSV samples for fidelity, tables, page/sheet/row anchors, scans/images, OCR integration needs, time/RAM and install footprint against T05/T07.
 - [ ] Inspect plugin/LLM/remote-processing paths and verify the trial stays local; document limitations and ask adopt/reject, with OCR integration measurements completed in T09.
 
 **Verification:** Produce side-by-side results and manually trace output to original locations; no cloud text/image conversion paths allowed.
-**Evidence:** Pending — `docs/benchmarks/markitdown.md`, exact configuration and user decision.
+**Evidence:** [MarkItDown review](docs/benchmarks/markitdown.md): v0.1.9 tagged source and registry wheel identity reviewed, MIT license, direct/extras dependencies, Windows/Python range, permissions/remote paths and provenance limitations documented. Markdown does not provide the structured citation mapping required by this project; pandas/classifier dependencies add cost. No installation/import, fixture generation, sample conversion, performance measurement or empirical comparison. Exact transitive graph/native assets and trial boundary remain unverified. Documentation/link/whitespace checks passed; no application/parser tests ran. The user approved non-adoption, empirical-trial deferral, this documentation commit and proceeding to the T09 read-only review. T08 closes under that exception, without empirical scores or runtime adoption.
 **Likely files:** That report and at most two comparison aids.
 
 ### T09 — Compare local OCR and scanned/mixed-PDF paths

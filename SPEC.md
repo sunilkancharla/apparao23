@@ -4,6 +4,10 @@
 
 The user explicitly directed: "leave the .xls files from our context" and use PDF, XLSX and CSV for Stage 1. This supersedes all earlier requirements to support or evaluate legacy XLS in this stage. XLS is unsupported for Stage 1 uploads/library ingestion and is excluded from parser provisioning, fixture generation, positive-support evaluation and acceptance. Defer T07A and T37; retain prior evidence, definitions and local samples as history without parsing or deleting them. Reintroducing XLS requires explicit approval. No other format, OCR, chart, privacy, resource or approval requirement changes.
 
+## Approved T08 evaluation exception (2026-11-13)
+
+After reviewing MarkItDown v0.1.9 source/dependencies, the user accepted non-adoption and deferral of its empirical comparison, approved committing the review and authorized T09 read-only OCR review. Earlier MarkItDown comparison requirements below are subject to this exception. No measured MarkItDown quality/performance or runtime parser selection is implied. PDF/XLSX/CSV provenance, local OCR and privacy acceptance remain required. Evidence: `docs/benchmarks/markitdown.md`.
+
 ## Objective
 
 Build a single-user, browser-based, local document-chat assistant with conversation attachments, a reusable document library, scanned-PDF OCR, grounded citations, saved chats, and an evidence indicator. The target machine is Windows 11 with 16 GB RAM and no dedicated GPU.

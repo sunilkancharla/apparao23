@@ -1,6 +1,6 @@
 # Document Assistant
 
-**Latest scope decision (2026-11-13):** Stage 1 supports PDF, XLSX and CSV only. Legacy XLS is deferred; DOCX/TXT remain excluded. T07A/T37 and XLS-specific evaluation definitions are inactive, with historical evidence and local samples preserved. Next proposed work: T08 read-only MarkItDown review for the three supported formats. No new installations or trials have started.
+**Latest scope decision (2026-11-13):** Stage 1 supports PDF, XLSX and CSV only. Legacy XLS is deferred; DOCX/TXT remain excluded. T07A/T37 and XLS-specific evaluation definitions are inactive, with historical evidence and local samples preserved. T08 is closed with user-approved non-adoption and empirical-trial deferral; T09 read-only OCR review is next. No new installations or trials have started.
 
 Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 16 GB RAM and CPU-only operation. SPEC, AGENTS, PLAN, TODO and T02's design/rubric are approved. T01–T03 and T05 are complete; T04 SkillSpector was explicitly deferred. T05 closes with approved PyMuPDF empirical-comparison deferral; runtime adoption remains pending.
 
@@ -55,6 +55,8 @@ For a rerun, choose a fresh unused path below `data/` for `--basetemp`; pytest c
 Optional shell activation: `.\.venv\Scripts\Activate.ps1` (not invoked during verification). Explicit paths work without activation. `pyproject.toml` keeps uv cache inside `.venv`, disables automatic Python downloads and uses copy link mode. Offline sync was checked with this environment/cache already present; fresh provisioning needs approved network downloads. `.gitignore` excludes `.venv`, originals, runtime data and generated document artifacts. See [setup details](docs/provisioning.md) for the hash-verified uv bootstrap and exact checks. Five PDF evaluation tests passed; no application tests or model benchmarks exist yet.
 
 ## Current evaluation and next step
+
+T08's [MarkItDown source/dependency review](docs/benchmarks/markitdown.md) is complete. Recommendation: keep format-specific parser candidates for architecture review and avoid adopting MarkItDown as the ingestion backbone, because its Markdown result lacks the structured source mappings our citations need. Its XLSX path adds pandas; exact classifier/native/transitive costs remain unmeasured. No packages installed or samples converted. The user approved non-adoption, deferring the empirical comparison, committing this review and starting the T09 read-only OCR review. No runtime parser is selected.
 
 T07A's [XLS review](docs/benchmarks/xls-parsers.md) is committed in `e3c598d`; the user approved its exact bounded trial. Preflight stopped because direct Winsock controls did not establish enforced native network denial. Four control tests and Ruff passed; no packages downloaded/installed, parsers imported, fixtures generated or samples parsed. The three supplied XLS samples retain checked hashes/compound-file headers. The user subsequently deferred XLS outside Stage 1; this stopped trial is retained as history and will not continue. No XLS capability or runtime reader is adopted.
 
