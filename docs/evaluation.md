@@ -1,6 +1,8 @@
 # Stage 1 Fixture and Evaluation Design
 
-**Current status (2026-11-13):** T02R definition refresh verified and approved by the user at closeout (“yes please”). Stage 1 formats are PDF/XLS/XLSX/CSV. DOCX/TXT development, fixture generation and positive-support acceptance remain excluded. Historical definitions are retained unchanged. T05 PDF trials already ran, as recorded in [pdf-parsers.md](benchmarks/pdf-parsers.md); T02R generated no documents, installed no packages and ran no parser/model/application benchmark. New definitions are not verified serialized artifacts or passing runtime tests.
+**Latest scope amendment (2026-11-13):** PDF/XLSX/CSV only. XLS is deferred. Retain all ground truth, but exclude S-XLS, Q21-Q25 and N-XLS-* from active selection/materialization/scoring. Current totals: 11 authored definitions (7 active, 4 excluded), 25 questions (16 active, 9 excluded), 20 negative/lifecycle definitions (16 active, 4 excluded); nine supplied originals unchanged. Earlier T02R counts/XLS gates below are historical. No new artifacts, parser/model runs or scores.
+
+**Historical T02R status (superseded for XLS by the latest scope amendment):** T02R definition refresh verified and approved by the user at closeout (“yes please”). Stage 1 formats are PDF/XLS/XLSX/CSV. DOCX/TXT development, fixture generation and positive-support acceptance remain excluded. Historical definitions are retained unchanged. T05 PDF trials already ran, as recorded in [pdf-parsers.md](benchmarks/pdf-parsers.md); T02R generated no documents, installed no packages and ran no parser/model/application benchmark. New definitions are not verified serialized artifacts or passing runtime tests.
 
 ## T02R four-format corpus revision
 

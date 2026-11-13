@@ -1,5 +1,9 @@
 # Stage 1 Decision Register
 
+## Latest approved format decision - XLS deferred (2026-11-13)
+
+User explicitly requested PDF, XLSX and CSV only for Stage 1, deferring legacy XLS. This supersedes earlier XLS inclusion: exclude T07A/T37 and XLS-specific fixtures/questions/negative controls from active work and acceptance. Preserve earlier evidence, original expected answers and local samples. XLS must be rejected as unsupported by the future Stage 1 upload contract; later support requires explicit approval. T08 no longer depends on T07A. This scope decision does not resolve or waive native-network isolation for other future trials, change dependencies, authorize installations, or delete files. Reintroducing XLS or selecting isolation remains separately gated.
+
 ## Approved process improvements and T07 package — 2026-11-13
 
 The user explicitly approved T07 and all three improvements: consolidate settled SPEC requirements, bounded work-package approvals, earlier model feasibility/CSV-first delivery. Preserve Git/G2/scope/stage gates; do not ask repeatedly for covered package steps. T10/T11A move earlier; combined OCR/model checks remain before adoption. Optional RTK/ponytail cannot block the first slice, UI UX Pro Max remains before frontend implementation. Moving tasks authorizes no future model/service downloads.

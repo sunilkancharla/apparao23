@@ -13,7 +13,7 @@ This file contains persistent, repository-wide working instructions for Codex. R
 ## Current approval state and stopping point
 
 - **Active stage: Stage 1 — Local Prototype. The user has approved `SPEC.md`.** Do not ask for approval of the unchanged specification again.
-- **PLAN.md and TODO.md are approved.** Current task status, approvals and evidence belong in TODO/PLAN and linked reports; keep this file focused on persistent rules. The approved format scope is PDF/XLS/XLSX/CSV, with DOCX/TXT excluded entirely. T07 and the three delivery-process improvements were explicitly authorized; later work remains within its recorded package gates.
+- **PLAN.md and TODO.md are approved.** Current task status, approvals and evidence belong in TODO/PLAN and linked reports; keep this file focused on persistent rules. The approved format scope is PDF/XLSX/CSV, with legacy XLS deferred and DOCX/TXT excluded entirely. T07 and the three delivery-process improvements were explicitly authorized; later work remains within its recorded package gates.
 - Specification approval does not approve a plan, unresolved behavior, architecture/dependency/model selection, installation, application implementation, Git commit, or stage transition.
 - Documentation and planning requests may proceed within their explicitly authorized scope. Finish the requested documents and consistency/diff checks, then wait at the applicable approval gate. Do not use a documentation or planning request to begin provisioning or application coding.
 - When planning is requested, propose root-level `PLAN.md` and `TODO.md` using the verified planning skill. Include a first task to resolve blockers and separate architecture, dependency, parser, OCR, model, storage, and optional-tool evaluations before implementation. Present the plan for approval.
@@ -23,9 +23,9 @@ This file contains persistent, repository-wide working instructions for Codex. R
 
 - Target **Windows 11, 16 GB RAM, no dedicated GPU**, one local user, and a browser-based interface.
 - Use local **Ollama** for generation and embeddings and SQLite for local metadata/history. Keep documents, extraction outputs, prompts, embeddings, indexes, chat data, inference, and answers local.
-- Support PDF, XLS, XLSX and CSV; DOCX/TXT are excluded entirely from Stage 1 under the explicit 2026-11-13 scope amendment. Include native-text and scanned/mixed PDFs through local OCR; conversation-specific attachments; a reusable library; saved chats; grounded citations/previews; and an evidence-support indicator.
+- Support PDF, XLSX and CSV; DOCX/TXT are excluded entirely from Stage 1 under the explicit 2026-11-13 scope amendment. Include native-text and scanned/mixed PDFs through local OCR; conversation-specific attachments; a reusable library; saved chats; grounded citations/previews; and an evidence-support indicator.
 - Library documents can be referenced by multiple conversations without copying their stored bytes. Keep ownership/reference semantics distinct from content deduplication and retrieval scope.
-- Preserve PDF page/table-region/image references where available, XLS/XLSX sheets and cell ranges, and CSV record/column context with physical-line spans. Review legacy XLS separately from XLSX; never execute workbook macros/formulas or fetch external links. Disclose coarse or unavailable precision rather than fabricating locations or quotations.
+- Preserve PDF page/table-region/image references where available, XLSX sheets and cell ranges, and CSV record/column context with physical-line spans. Legacy XLS is deferred outside Stage 1; never execute workbook macros/formulas or fetch external links. Disclose coarse or unavailable precision rather than fabricating locations or quotations.
 - Distinguish native PDF text from OCR-derived text; retain parser/version, extraction warnings, and OCR confidence where available. Preserve table relationships rather than flattening them ambiguously.
 - Answer from retrieved evidence; abstain or qualify when evidence is insufficient. Conversation history must not override current evidence or expose unrelated attachments.
 - The evidence indicator describes observed support/citation coverage and limitations, **not a calibrated probability of correctness**. Valid citation identifiers alone do not establish semantic support.
@@ -75,7 +75,7 @@ Use skills as workflows, not mandatory application dependencies. Load only relev
 ## Delivery priorities
 
 - Prove CPU-only embedding/chat feasibility early using fixed, verified evidence before completing all optional-tool investigations. Combined OCR/model resource checks still precede final adoption.
-- Deliver the CSV upload → retrieval → local answer → citation → saved-conversation vertical slice before expanding product ingestion. XLS remains required and receives separate parser evidence.
+- Deliver the CSV upload → retrieval → local answer → citation → saved-conversation vertical slice before expanding product ingestion. Legacy XLS is deferred outside Stage 1 by explicit user direction; preserve its historical evidence without further trials.
 - Optional developer tools do not block core architecture or the first slice. Evaluate a tool before installing/relying on it; keep UI UX Pro Max's separate review before frontend implementation. No automatic adoption or removal of mandatory format/OCR/privacy acceptance follows from prioritization.
 
 ## Python, dependencies and architecture
@@ -121,7 +121,7 @@ When planning is authorized, create separate PLAN/TODO evaluation tasks before i
 | Milestone | Candidate | Evaluation |
 |---|---|---|
 | Before accepting additional third-party skills | SkillSpector | Verify availability; inspect skill instructions/scripts/permissions/outbound calls and manually review findings; not a security guarantee |
-| Ingestion/parser design | Microsoft MarkItDown | Compare with format-specific parsers/local OCR across PDF/XLS/XLSX/CSV, tables, provenance, scans/images, time/RAM, footprint, and offline behavior |
+| Ingestion/parser design | Microsoft MarkItDown | Compare with format-specific parsers/local OCR across PDF/XLSX/CSV, tables, provenance, scans/images, time/RAM, footprint, and offline behavior |
 | OCR design | Local OCR engines | Compare Windows/CPU support, approved languages, fidelity, license, native assets, size, and local-only operation |
 | Frontend design | UI UX Pro Max | Evaluate accessibility, upload/status states, chat/library flows, citation previews, generated code/assets, and licensing |
 | Developer-tool review | RTK and ponytail, separately | First confirm exact projects/intended benefits; compare trust, license, Windows support, and measured workflow value |

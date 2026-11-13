@@ -1,5 +1,7 @@
 # T07A — Legacy XLS parser review and proposed trial
 
+**Latest disposition (2026-11-13):** User deferred legacy XLS outside Stage 1. This report and its failed-readiness evidence are historical; T07A will not continue in this stage. The isolation recommendation and original trial approval below do not authorize further work. Local samples are preserved.
+
 **Date:** 2026-11-13 (Asia/Calcutta). **Status:** User approved the documented trial and review-document commit. Review committed in `e3c598d`. Execution stopped at the native-network preflight: enforced denial was not established. No package downloaded/installed, parser imported, fixture generated or workbook parsed. The three supplied XLS files remain ignored in `sample_files/`.
 
 ## Actual preflight outcome

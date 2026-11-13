@@ -1,6 +1,10 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-**Status:** Approved; T01–T03 and T05 complete, T04 explicitly deferred by the user. T05 closes with approved PyMuPDF empirical-comparison deferral. T02R definition refresh is complete; user approved the reviewed definitions and commit. Format scope is PDF/XLS/XLSX/CSV; remaining downstream revisions, provisioning/adoption/implementation retain their gates.
+## Latest approved scope - PDF/XLSX/CSV
+
+The user deferred legacy XLS on 2026-11-13. T07A and T37 are excluded from Stage 1, with their earlier evidence retained. T08 now depends on T05/T07; T16/T17 and acceptance no longer depend on XLS evaluation or implementation. T38 follows T36, bypassing T37. Next proposed work is the T08 read-only MarkItDown review; execution/install/adoption remain gated. Earlier format-amendment and T02R paragraphs below describe historical decisions superseded by this amendment.
+
+**Status:** Approved; T01–T03 and T05 complete, T04 explicitly deferred by the user. T05 closes with approved PyMuPDF empirical-comparison deferral. T02R definition refresh is complete; user approved the reviewed definitions and commit. Format scope is PDF/XLSX/CSV; remaining downstream revisions, provisioning/adoption/implementation retain their gates.
 
 **Prepared:** 2026-11-13 (Asia/Calcutta).
 
@@ -10,23 +14,23 @@
 
 ## Format amendment and proposed task revision — 2026-11-13
 
-User approved PDF, XLS, XLSX and CSV for Stage 1, replacing DOCX/TXT. T05 is committed in d8d12e7. Propose T02R to update active fixtures/questions while retaining historical definitions; exclude T06, add T07A for legacy XLS evaluation, and change the first vertical slice from TXT to CSV. Repurpose the unstarted T37 slot for XLS implementation and T39 for CSV robustness after its initial T23–T34 slice. Task IDs for completed work are unchanged. Review these sequence changes before further trials; no dependency/model provisioning is authorized.
+Historical first amendment: the user approved PDF, XLS, XLSX and CSV, replacing DOCX/TXT. The latest amendment above defers XLS. T05 is committed in d8d12e7. Propose T02R to update active fixtures/questions while retaining historical definitions; exclude T06, add T07A for legacy XLS evaluation, and change the first vertical slice from TXT to CSV. Repurpose the unstarted T37 slot for XLS implementation and T39 for CSV robustness after its initial T23–T34 slice. Task IDs for completed work are unchanged. Review these sequence changes before further trials; no dependency/model provisioning is authorized.
 
-T08 depends on T05, T07 and T07A (not excluded T06). T17 must resolve all four required formats and XLS license/security/provenance questions. DOCX/TXT definitions are historical only: no Stage 1 parser work, dependency evaluation/install, fixture generation, benchmarking or positive-support acceptance. Later support requires explicit user approval. No XLS original has been verified; add a safe authored fixture and seek a representative legacy workbook if available.
+T08 depends on T05 and T07 (T06 and T07A excluded). T17 must resolve all three required formats and their license/security/provenance questions. DOCX/TXT definitions are historical only: no Stage 1 parser work, dependency evaluation/install, fixture generation, benchmarking or positive-support acceptance. Later support requires explicit user approval. No further XLS fixture or sample work is planned in Stage 1.
 
-**T02R evidence:** The user authorized the definition refresh after e1ee6ff and reconfirmed XLS is required. `docs/evaluation.md` now records S-XLS/Q21–Q25, S-CSV-INJECTION/Q20, 21 in-scope questions, four historical exclusions and explicit scoring-readiness gates. Definitions/source integrity checks passed; no documents generated or new packages installed. Exact XLS tooling, binary cache verification and representative sample coverage remain T07A/T17 gates. T02R closeout/commit approved; T07 review is now authorized and in progress. Original T02 counts below are historical, superseded by this refresh.
+**T02R evidence:** The user authorized the definition refresh after e1ee6ff and reconfirmed XLS is required. `docs/evaluation.md` now records S-XLS/Q21–Q25, S-CSV-INJECTION/Q20, 21 in-scope questions, four historical exclusions and explicit scoring-readiness gates. Definitions/source integrity checks passed; no documents generated or new packages installed. Those historical XLS gates are now deferred outside Stage 1. T02R closeout/commit approved; T07 review is now authorized and in progress. Original T02 counts below are historical, superseded by this refresh.
 
-**T07 current work:** User approved the exact package and three process improvements. Bounded results were reviewed and approved for commit in `docs/benchmarks/tabular-text-parsers.md`: 40 original-file runs, sampled agreement and controls, with encrypted/VBA/full-scale gaps and the combined worker-budget overrun. No runtime adoption/application ingestion. T07/process changes are committed in e8ec471. T10 provisioning and the separately approved continuation comparison are complete; see docs/benchmarks/embeddings.md for results and original accounting limitations. T10 is committed in 55d68f6. The approved T11A no-download continuation completed all 96 planned request slots across epochs, retaining the original timeout; measurements and the pending local semantic-review gate are in docs/benchmarks/chat-models.md. No automatic model adoption or next-task execution; T07A XLS remains required.
+**T07 current work:** User approved the exact package and three process improvements. Bounded results were reviewed and approved for commit in `docs/benchmarks/tabular-text-parsers.md`: 40 original-file runs, sampled agreement and controls, with encrypted/VBA/full-scale gaps and the combined worker-budget overrun. No runtime adoption/application ingestion. T07/process changes are committed in e8ec471. T10 provisioning and the separately approved continuation comparison are complete; see docs/benchmarks/embeddings.md for results and original accounting limitations. T10 is committed in 55d68f6. The approved T11A no-download continuation completed all 96 planned request slots across epochs, retaining the original timeout; measurements and the pending local semantic-review gate are in docs/benchmarks/chat-models.md. No automatic model adoption or next-task execution; T07A XLS is now deferred outside Stage 1.
 
 ## Approved process refinement and execution priority — 2026-11-13
 
 The user approved all three improvements while authorizing the complete T07 package: consolidate settled SPEC decisions, bundle exact bounded-task permissions, and prioritize model feasibility plus the CSV-first slice. The T07 approval covers its three pins, fixtures, tests, measurements and specified budgets without another task-start question. Git commit, G2 adoption, scope changes and work exceeding approved artifacts/budgets still need explicit approval.
 
-Revised execution order after T07: **T10 → T11A → T07A → T08 → T09 → T11 → T12 → T16 → T17/G2 → T18–T34**, with T15 before T33. T11A uses fixed verified evidence to expose CPU-only chat limitations early; T11 later combines those settings with OCR/embedding contention after T09. No model provisioning is authorized by moving the task. T07A XLS and T08 MarkItDown remain required parser reviews before adoption. T16A chart evaluation or an explicit runtime-scope decision remains required at G2.
+Revised execution order after T07: **T10 → T11A → T08 → T09 → T11 → T12 → T16 → T17/G2 → T18–T34**, with T15 before T33. T11A uses fixed verified evidence to expose CPU-only chat limitations early; T11 later combines those settings with OCR/embedding contention after T09. No model provisioning is authorized by moving the task. T08 MarkItDown remains required before parser adoption; T07A XLS is deferred. T16A chart evaluation or an explicit runtime-scope decision remains required at G2.
 
 T13/T14 optional developer-tool reviews move after the first CSV slice (or immediately before proposed tool use); they cannot block core architecture or a working answer path. T15 UI UX Pro Max stays a separate evaluation before frontend implementation, with manual design as a reviewed alternative. No tool is implicitly adopted, installed or declared evaluated. Core G2 approves the already selected minimal HTML/CSS/JavaScript approach; later design-aid evaluation cannot silently change that stack.
 
-This order prioritizes CSV upload → retrieval → local answer → citation → saved conversation. XLS, XLSX, native/scanned PDFs, lifecycle, privacy and full acceptance remain required later slices; a first CSV demo does not satisfy all Stage 1 criteria. Complete-model resource adoption still needs combined evidence, not early fixed-evidence timings alone.
+This order prioritizes CSV upload → retrieval → local answer → citation → saved conversation. XLSX, native/scanned PDFs, lifecycle, privacy and full acceptance remain required later slices; a first CSV demo does not satisfy all Stage 1 criteria. Complete-model resource adoption still needs combined evidence, not early fixed-evidence timings alone.
 
 ## 1. Planning basis and current state
 
@@ -42,7 +46,7 @@ This delivery creates PLAN/TODO and synchronizes only the current planning state
 
 Stage 1 delivers one browser-based local application for one user on **Windows 11, 16 GB RAM, no dedicated GPU**:
 
-- Validated single/batch PDF, XLS, XLSX and CSV uploads with per-file progress, warnings, success and useful errors.
+- Validated single/batch PDF, XLSX and CSV uploads with per-file progress, warnings, success and useful errors.
 - Native-text and scanned/mixed PDF extraction through local OCR; useful document structure, tables, image/page references, extraction method/version and warnings retained.
 - Conversation-specific attachments plus a reusable library with shared bytes and explicit reference/lifecycle rules.
 - Local extraction, chunking, embeddings, vector storage, scoped retrieval and Ollama answers with real citations, passage previews, and understandable evidence-support signals.
@@ -117,7 +121,7 @@ flowchart LR
 
 Boundary contracts to approve in T16/T17:
 
-- **Content and provenance:** keep originals separate from normalized outputs. Carry stable document/extraction/chunk identity, content hash, display filename/format, parser/version, native/OCR method, warnings/confidence where available, and source anchors through answers and previews. PDF pages/table regions/images; XLS/XLSX sheet/cell ranges; CSV record/column and physical-line spans. Unknown precision is explicit.
+- **Content and provenance:** keep originals separate from normalized outputs. Carry stable document/extraction/chunk identity, content hash, display filename/format, parser/version, native/OCR method, warnings/confidence where available, and source anchors through answers and previews. PDF pages/table regions/images; XLSX sheet/cell ranges; CSV record/column and physical-line spans. Unknown precision is explicit.
 - **Ownership and persistence:** distinguish stored content from document ownership and conversation/library references. Hash-based deduplication must not merge conversation visibility. Persist processing state, messages, timestamps and selected references needed for restart; evolve schema with each slice rather than implement all future tables upfront.
 - **Index and retrieval:** deterministic chunk metadata, explicit parser/extraction/embedding/index versions, idempotent indexing, scoped relevance search, bounded context/history and a defined rebuild/recovery strategy. Reindexing and removal must not leave stale searchable evidence.
 - **Generation and citations:** separate system policy from untrusted documents/model output/history. Ground answers in selected evidence; abstain when insufficient and handle ambiguity explicitly. Validate returned citation IDs against supplied passages; derive location/filename from provenance rather than model guesses. Quote/location checks and valid IDs do not prove every claim is supported.
@@ -140,8 +144,8 @@ For each candidate/artifact, record exact upstream repository/version/digest whe
 | T05 | Native PDF alternatives, including PyMuPDF as a candidate | Text/page/table/image provenance, corrupt/protected input, resource costs and licenses |
 | T06 | Excluded: DOCX | Retired task ID only; no Stage 1 development, trial or dependency |
 | T07 | XLSX alternatives including openpyxl; standard-library CSV baseline | Sheets/cells/headers/formulas without execution, encodings/quoted cells, memory and record/line provenance |
-| T07A | Legacy XLS alternatives; exact packages subject to review | Binary-workbook compatibility, stored values, sheets/cells, macros/external links never executed, resource/license/offline evidence |
-| T08 — before parser adoption | Microsoft MarkItDown against T05/T07/T07A | Same four-format samples; unsupported XLS must be reported explicitly, tables/scans/images, provenance loss, OCR integration needs, installation footprint/time/RAM and local-only configuration |
+| T07A (deferred) | Legacy XLS outside Stage 1 | Historical review/preflight retained; no further trial or adoption in this stage |
+| T08 — before parser adoption | Microsoft MarkItDown against T05/T07 | Same three-format samples; XLS is outside this comparison, tables/scans/images, provenance loss, OCR integration needs, installation footprint/time/RAM and local-only configuration |
 | T09 | Local OCR alternatives, e.g. a Tesseract-based path and another viable Windows/CPU option | Approved languages, page detection/native-vs-OCR distinction, ground-truth accuracy, rendering/native assets, warnings, resource/offline results |
 | T10/T11 | Ollama embedding/chat candidates | Actual-machine quality/latency/memory; `embeddinggemma` and `qwen2.5:3b` are candidates, not defaults |
 | T12 | SQLite metadata plus local vector alternatives | Minimal representation versus justified index library; ranking/persistence/delete/rebuild/versioning and interrupted-write integrity |
@@ -153,7 +157,7 @@ Reading the explicitly requested local planning skill is authorized; it did not 
 
 ## 7. Reproducible benchmarks and tests
 
-T02 defines an approved compact fixture manifest and rubric before trials. Cover all formats, native/scanned/mixed PDFs, tables/images, legacy XLS and XLSX sheets/merged headers/stored formula values, and CSV quoted/multiline cells/encoding. T02R revises the original corpus before scoring. Include unsupported, malformed, protected, extension/content mismatch, resource-boundary and injection cases. Do not evaluate unapproved languages, file limits or semantic visual requirements by assuming defaults.
+T02 defines an approved compact fixture manifest and rubric before trials. Cover all supported formats, native/scanned/mixed PDFs, tables/images, XLSX sheets/merged headers/stored formula values, and CSV quoted/multiline cells/encoding. T02R revises the original corpus before scoring. Include unsupported, malformed, protected, extension/content mismatch, resource-boundary and injection cases. Do not evaluate unapproved languages, file limits or semantic visual requirements by assuming defaults.
 
 Version safe authored question/answer/location manifests and fixture definitions. Keep user documents and generated PDF/XLS/XLSX/binary artifacts ignored/local or temporary; do not commit them. Record fixture identity/hashes. No tool trial receives content over an external service; reports/logs must not expose sensitive content.
 
@@ -173,28 +177,28 @@ Implementation verification: meaningful failing tests first, smallest change, re
 
 ## 8. Ordered milestones and dependency map
 
-TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 are complete; T04 is deferred; the user accepted deferring PyMuPDF's empirical comparison. T06 is excluded from Stage 1. T02R was explicitly authorized, verified and approved at closeout; T07/T07A and remaining downstream revisions retain their review/execution gates.
+TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 are complete; T04 is deferred; the user accepted deferring PyMuPDF's empirical comparison. T06 is excluded from Stage 1. T02R was explicitly authorized, verified and approved at closeout; T07 remaining coverage and downstream tasks retain their review/execution gates; T07A is deferred.
 
 | Milestone | Tasks in default execution order | Review outcome |
 |---|---|---|
-| M0 — Decisions/evaluations/design | T01 decisions; T02 fixtures/rubric; T03 environment/dependencies; T04 SkillSpector; T05 PDF; T02R corpus revision; T06 excluded; T07 XLSX/CSV; T10 embeddings; T11A early chat; T07A XLS; T08 MarkItDown; T09 OCR; T11 combined chat; T12 storage; T16 grounding; T17 core architecture | G1 trial approvals throughout; G2 design/component adoption before app code |
+| M0 — Decisions/evaluations/design | T01 decisions; T02 fixtures/rubric; T03 environment/dependencies; T04 SkillSpector; T05 PDF; T02R corpus revision; T06 excluded; T07 XLSX/CSV; T10 embeddings; T11A early chat; T07A XLS (deferred); T08 MarkItDown; T09 OCR; T11 combined chat; T12 storage; T16 grounding; T17 core architecture | G1 trial approvals throughout; G2 design/component adoption before app code |
 | M1 — Minimal foundations | T18 reproducible project; T19 local startup/config; T20 ownership persistence; T21 provenance contracts; T22 fixture harness | Tested foundations only; no complete future schema or unused modules |
 | M2 — First upload slice | T23 safe CSV attachment; T24 batch/status; T25 extraction/preview | User can upload and inspect traceable local text |
 | M3 — First answer slice | T26 chunk; T27 embed; T28 index; T29 retrieve; T30 grounded chat; T31 citations; T32 indicator; T15 UI aid review; T33 browser flow; T34 saved chats | CSV upload → answer/abstention → citation → restart/reopen |
-| M4 — Required format expansion | T35 native PDF; T36 scanned/mixed OCR; T37 XLS; T38 XLSX; T39 CSV robustness; T40 mixed-format integration | Four formats with table/image/OCR provenance and disclosed limitations |
+| M4 — Required format expansion | T35 native PDF; T36 scanned/mixed OCR; T37 XLS (deferred); T38 XLSX; T39 CSV robustness; T40 mixed-format integration | Three formats with table/image/OCR provenance and disclosed limitations |
 | M5 — Library and lifecycle | T41 library upload/list; T42 references/scope; T43 impact warnings; T44 document removal; T45 chat deletion | Shared bytes, safe scope, approved removal/retention and citations |
 | M6 — Acceptance | T46 security/recovery; T47 offline traffic; T48 quality/resource baseline; T49 setup/inventory/docs; T50 demo/sign-off | G4 evidence; no automatic Stage 2 transition |
 
 ```text
 G0 → T01 → T02 → T03 → G1 approvals for trials
-T02/T03 → T04 → T05; T02R → T07 → T07A; T05/T07/T07A → T08 → T09
-T07 → T10 → T11A → T07A/T08/T09 → T11 → T12
+T02/T03 → T04 → T05; T02R → T07; T05/T07 → T08 → T09
+T07 → T10 → T11A → T08/T09 → T11 → T12
 T34 → T13/T14 (or before tool use); T17 → T15 → T33
 Required parser/model/storage/grounding evidence → T16 → T17 → G2 (T13–T15 do not block core G2)
 G2 → T18 → T19 → T20 → T21 → T22
 T22 → T23 → T24 → T25 → T26 → T27 → T28 → T29
 T29 → T30 → T31 → T32 → T33 → T34
-T34 → T35 → T36 → T37 → T38 → T39 → T40
+T34 → T35 → T36 → T38 → T39 → T40
 T40 → T41 → T42 → T43 → T44 → T45
 T45 → T46 → T47 → T48 → T49 → T50 → G4
 ```

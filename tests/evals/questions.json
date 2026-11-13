@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "T02R definitions verified and user-approved at closeout; 25 total, 21 Stage 1 questions, 4 historical exclusions; no pipeline scores",
+  "status": "Latest user-approved scope: 25 total definitions, 16 Stage 1 questions, 9 historical exclusions; no pipeline scores",
   "scoring_rule": "Only materialized fixtures with manually verified anchors are eligible; list excluded question IDs and coverage gaps, never silently drop failures.",
   "questions": [
     {
@@ -588,8 +588,9 @@
       },
       "ground_truth_status": "T02R_authored_definition_checked; serialized_artifact_and_anchor_verification_pending",
       "pipeline_run_status": "not_run",
-      "stage1_in_scope": true,
-      "scoring_eligible": false
+      "stage1_in_scope": false,
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; ground truth retained."
     },
     {
       "id": "Q22",
@@ -619,8 +620,9 @@
       },
       "ground_truth_status": "T02R_authored_definition_checked; serialized_artifact_and_anchor_verification_pending",
       "pipeline_run_status": "not_run",
-      "stage1_in_scope": true,
-      "scoring_eligible": false
+      "stage1_in_scope": false,
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; ground truth retained."
     },
     {
       "id": "Q23",
@@ -650,8 +652,9 @@
       },
       "ground_truth_status": "T02R_authored_definition_checked; serialized_artifact_and_anchor_verification_pending",
       "pipeline_run_status": "not_run",
-      "stage1_in_scope": true,
-      "scoring_eligible": false
+      "stage1_in_scope": false,
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; ground truth retained."
     },
     {
       "id": "Q24",
@@ -675,8 +678,9 @@
       },
       "ground_truth_status": "T02R_authored_definition_checked; serialized_artifact_and_anchor_verification_pending",
       "pipeline_run_status": "not_run",
-      "stage1_in_scope": true,
-      "scoring_eligible": false
+      "stage1_in_scope": false,
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; ground truth retained."
     },
     {
       "id": "Q25",
@@ -707,8 +711,9 @@
       },
       "ground_truth_status": "T02R_authored_definition_checked; serialized_artifact_and_anchor_verification_pending",
       "pipeline_run_status": "not_run",
-      "stage1_in_scope": true,
-      "scoring_eligible": false
+      "stage1_in_scope": false,
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; ground truth retained."
     }
   ],
   "stage1_scope": {
@@ -716,7 +721,12 @@
       "Q07",
       "Q08",
       "Q09",
-      "Q17"
+      "Q17",
+      "Q21",
+      "Q22",
+      "Q23",
+      "Q24",
+      "Q25"
     ],
     "policy": "Require explicit stage1_in_scope=true for selection and separately verified artifact/provenance readiness before enabling scoring. Q20 replaces excluded Q17 for Stage 1; do not pool both.",
     "active_question_ids": [
@@ -735,14 +745,9 @@
       "Q16",
       "Q18",
       "Q19",
-      "Q20",
-      "Q21",
-      "Q22",
-      "Q23",
-      "Q24",
-      "Q25"
+      "Q20"
     ],
-    "planned_question_count": 21,
+    "planned_question_count": 16,
     "currently_pipeline_scoring_eligible": 0,
     "required_coverage_rule": "Freeze task-specific required IDs and corpus hashes before a run; missing artifacts fail readiness, run failures stay in the denominator. Report per-format/category counts and exclusions. Scope approval never enables scoring."
   }

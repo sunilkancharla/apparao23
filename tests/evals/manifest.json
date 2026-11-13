@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "T02R four-format definitions verified and user-approved at closeout; no new artifact or parser/model run",
+  "status": "Latest user-approved scope PDF/XLSX/CSV; XLS definitions retained but excluded; no new artifact or parser/model run",
   "privacy": {
     "originals": "local_only_do_not_stage",
     "manifest_review": "review derived facts and source names before any approved commit",
@@ -448,7 +448,7 @@
     {
       "id": "S-XLS",
       "format": "XLS",
-      "stage1_in_scope": true,
+      "stage1_in_scope": false,
       "definition": {
         "container": "Legacy binary .xls; BIFF8 workbook in compound storage, to verify after serialization",
         "date_system": "1900",
@@ -525,7 +525,8 @@
         ]
       },
       "state": "definition_only; no XLS artifact generated or parser evaluated; serialization and manual anchor checks required",
-      "scoring_eligible": false
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; historical definition retained."
     },
     {
       "id": "S-CSV-INJECTION",
@@ -691,60 +692,69 @@
       "id": "N-XLS-CORRUPT",
       "case": "Truncated compound-storage/BIFF workbook and non-workbook .xls payload",
       "expected": "Bounded invalid-XLS rejection; never accept renamed XLSX/HTML/CSV as binary XLS",
-      "stage1_in_scope": true,
+      "stage1_in_scope": false,
       "status": "definition_only_not_run",
-      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing"
+      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing",
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; historical definition retained."
     },
     {
       "id": "N-XLS-PROTECTED",
       "case": "Genuinely encrypted/password-protected XLS workbook",
       "expected": "Reject clearly, no password guessing; sheet-protection flags alone do not establish file encryption",
-      "stage1_in_scope": true,
+      "stage1_in_scope": false,
       "status": "definition_only_not_run",
-      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing"
+      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing",
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; historical definition retained."
     },
     {
       "id": "N-XLS-ACTIVE-CONTENT",
       "case": "XLS external-link and macro/embedded-content indicators beside harmless fixed values",
       "expected": "No fetch/recalculation/macro/embedded execution or Office launch; use inert records/mocked sentinels, never construct or execute an exploit",
-      "stage1_in_scope": true,
+      "stage1_in_scope": false,
       "status": "definition_only_not_run",
-      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing"
+      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing",
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; historical definition retained."
     },
     {
       "id": "N-XLS-RESOURCE",
       "case": "Oversized compound streams/record counts or malformed offsets in a bounded XLS control",
       "expected": "Stop under approved time/memory/output limits; use small malformed controls or mocked size metadata, never destructive payloads",
-      "stage1_in_scope": true,
+      "stage1_in_scope": false,
       "status": "definition_only_not_run",
-      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing"
+      "materialization_gate": "T07A tooling/security/budget approval; report unavailable controls, never mislabel dummy files as encrypted or macro-bearing",
+      "scoring_eligible": false,
+      "exclusion_reason": "Legacy XLS deferred outside Stage 1 by explicit user scope amendment on 2026-11-13; historical definition retained."
     }
   ],
   "known_gaps": [
     "Supplied PDF native/scanned/table/chart features and page anchors remain unverified; approved parser/manual inspection required later.",
     "No xl/charts/chartN.xml parts were found in the four supplied workbooks; this is not proof that embedded images or other diagrams are absent.",
     "S-CHART is a trial design, not an implemented feature or proven local model capability.",
-    "No XLS original in the supplied inventory at T02R; S-XLS is an authored definition, not a binary artifact or evidence of parser support.",
-    "XLS stored/missing formula caches, dates and security controls require independently verified local artifacts; tooling/generation not authorized by T02R.",
+    "Historical, outside Stage 1 after XLS deferral: No XLS original in the supplied inventory at T02R; S-XLS is an authored definition, not a binary artifact or evidence of parser support.",
+    "Historical, outside Stage 1 after XLS deferral: XLS stored/missing formula caches, dates and security controls require independently verified local artifacts; tooling/generation not authorized by T02R.",
     "DOCX/TXT and original TXT injection definitions are historical/excluded; S-CSV-INJECTION replaces only the Stage 1 scenario without altering historical ground truth."
   ],
   "stage1_scope": {
     "formats": [
       "PDF",
-      "XLS",
       "XLSX",
       "CSV"
     ],
     "excluded_formats": [
+      "XLS",
       "DOCX",
       "TXT"
     ],
     "excluded_fixture_ids": [
       "S-DOCX",
       "S-INJECTION",
-      "S-TXT"
+      "S-TXT",
+      "S-XLS"
     ],
-    "policy": "Only explicit stage1_in_scope=true definitions may be selected. In-scope is not scoring eligibility. Excluded historical definitions must not materialize or score. XLS tooling/trial approval remains T07A.",
+    "policy": "Only explicit stage1_in_scope=true definitions may be selected. In-scope is not scoring eligibility. Historical XLS/DOCX/TXT definitions must not materialize or score in Stage 1.",
     "active_authored_fixture_ids": [
       "S-PDF-NATIVE",
       "S-PDF-SCAN",
@@ -752,9 +762,14 @@
       "S-XLSX",
       "S-CSV",
       "S-CHART",
-      "S-XLS",
       "S-CSV-INJECTION"
     ],
-    "materialization_rule": "Require stage1_in_scope=true, separately authorized tooling/run, actual artifact hash and verified anchors before enabling scoring."
+    "materialization_rule": "Require stage1_in_scope=true, separately authorized tooling/run, actual artifact hash and verified anchors before enabling scoring.",
+    "excluded_negative_case_ids": [
+      "N-XLS-CORRUPT",
+      "N-XLS-PROTECTED",
+      "N-XLS-ACTIVE-CONTENT",
+      "N-XLS-RESOURCE"
+    ]
   }
 }
