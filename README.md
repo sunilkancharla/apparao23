@@ -14,6 +14,8 @@ The subsequently approved [startup diagnostic](docs/benchmarks/python-startup-di
 
 The user subsequently approved a receipt-handling repair: observed PID/exit/Job data is now saved before the unchanged safety guard raises. Ten synthetic policy tests and Ruff passed. No diagnostic case was rerun; this fixes future evidence capture and does not resolve the accounting discrepancy or authorize OCR execution.
 
+A [two-case Job accounting investigation](docs/proposals/job-accounting-investigation.md) is proposed to capture counts and active PIDs before/after launch and exit, keeping the initial stop condition intact. Its instrumentation and native launches await approval.
+
 The dedicated project environment is `F:/document_assistant/.venv`, using Python 3.14.6 and local uv 0.13.8. Installed baseline: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5, with exact transitive versions in `uv.lock`. Global/user packages are not inherited. No application or selected runtime parser/OCR/index/model exists yet. The optional pdf-eval group installs pypdf 7.0.1, pdfplumber 0.11.10 and seven pinned dependencies locally for evaluation only; all baseline versions are unchanged. The approved tabular-eval group adds openpyxl 3.1.5, et-xmlfile 2.0.0 and defusedxml 0.7.1 for T07 evaluation only.
 
 ## Project documents
