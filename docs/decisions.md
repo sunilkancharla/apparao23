@@ -38,6 +38,8 @@ T01 acceptance is satisfied: D01/D02, D03 evaluation scope, D04 core deletion ru
 
 ## Approved allocation of remaining details
 
+T03 host/baseline review is complete, with future model/OCR/tool artifacts still requiring individual G1 approval. T04 SkillSpector was explicitly deferred by the user (“then do not bother about it”); no scanner installation/trial. Use manual skill/script review. See `docs/benchmarks/skillspector.md`; do not revisit the optional scanner unless requested.
+
 Subsequent user direction overrides the earlier uv-only loose-tool proposal: use a dedicated project `.venv` and install the reviewed baseline here; the user will manage installations/uninstallations elsewhere. This explicitly brings environment preparation forward from T18. Verified setup is recorded in `docs/provisioning.md`; no global changes, application implementation, parser/OCR/model installation or commit was authorized/performed.
 
 - D01 enforcement/counting and derived-storage budgets: T17 contracts before T20/T23 implementation.

@@ -1,12 +1,12 @@
 # Stage 1 Atomic Task Checklist
 
-**Status:** T01/T02 complete; T03 inventory and review proposals prepared, decisions pending. **Prepared:** 2026-11-13 (Asia/Calcutta).
+**Status:** T01–T03 complete; T04 explicitly deferred; T05 next, unstarted. **Prepared:** 2026-11-13 (Asia/Calcutta).
 
-**Authority:** Approved SPEC, AGENTS and PLAN. T01/T02 are complete; T03 is active; T04–T50 and proposed T16A are unstarted.
+**Authority:** Approved SPEC, AGENTS and PLAN. T04 closes by user-approved optional-tool deferral; T05–T50 and proposed T16A are unstarted.
 
 ## Checklist conventions and completion rules
 
-- Current authorization covers T03 read-only environment/dependency review after T02 approval. G1–G4 and D01–D09 refer to remaining gates/decisions. No install/download, commit or application implementation is authorized by this review.
+- User authorized T03 closeout and read-only T04 review, then explicitly declined SkillSpector. G1–G4 and D01–D09 still govern later work. No scanner installation or next task is authorized by the deferral.
 - Record explicit task authorization before starting, then work on one task at a time. All required prerequisites/decisions must be satisfied. Plan approval alone does not authorize installs, trials, component adoption, commits, or every subsequent task.
 - Every task includes G3: relevant skill verification, actual evidence, quality/security review as applicable, README/PLAN/TODO updates, readable diff, commit question, and next-task authorization. Existing permission persists for its approved scope.
 - Scope S means normally 1–2 substantive files; M means 3–5, plus routine README/PLAN/TODO updates. Likely paths are proposals, not instructions to create empty modules. Re-split before work if a task exceeds one focused session/five substantive files.
@@ -44,11 +44,11 @@
 
 ### T03 — Review the actual host and dependency/provisioning proposals
 
-**Status:** In progress — review prepared; user explicitly authorized dedicated environment/baseline provisioning, now verified. Later tool/model proposals remain gated. **Prerequisites:** T01–T02 complete; project-local setup authorized. **Scope:** Review plus explicit provisioning exception.
+**Status:** Complete — host/dependency review and explicitly authorized project baseline verified. Later tool/model artifact approvals remain with their individual G1 tasks. **Prerequisites:** T01–T02 complete; project-local setup authorized. **Scope:** Review plus explicit provisioning exception.
 **Objective:** Establish actual environment constraints and exact installation proposals without installing anything implicitly.
 
 - [x] Read CPU/RAM/disk/OS, Python/uv/Ollama/local-model inventory; review baseline FastAPI/Uvicorn/HTTPX/pytest/Ruff and required transitive/native assets against PLAN's dependency fields.
-- [ ] Validate proposed PowerShell commands/loopback endpoints and present exact versions/artifacts/downloads/commands/resource budgets for each G1 approval; include model/language assets and optional evaluation environments.
+- [x] Validate proposed PowerShell commands/loopback endpoints and present exact versions/artifacts/downloads/commands/resource budgets for each G1 approval; include model/language assets and optional evaluation environments.
 
 **Verification:** Read-only host checks and primary-source license/security/compatibility review; record which concrete next trials are authorized.
 **Evidence:** User replaced the loose-tool proposal with dedicated `.venv` installation of the reviewed baseline. CPython 3.14.6 isolation, uv 0.13.8 publisher checksum, 24 locked distributions, imports/tool versions, project cache, offline lock/sync and ignore rules verified. `pyproject.toml`, `uv.lock` and `docs/provisioning.md` record exact setup. Global packages untouched. Target stays 16 GB/CPU-only; Ollama/models/OCR not installed. Later artifact/adoption/privacy/advisory checks remain gated; no application tests/benchmarks or commits.
@@ -58,14 +58,14 @@
 
 ### T04 — Evaluate SkillSpector and manual skill-review process
 
-**Status:** Proposed. **Prerequisites:** T03; exact tool identity/trial approval under G1. **Scope:** M.
+**Status:** Complete — optional tool deferred by explicit user decision; no trial/adoption. **Prerequisites:** T03 complete; user declined further SkillSpector work. **Scope:** Read-only identification and decision record.
 **Objective:** Assess SkillSpector before acceptance of additional third-party skills/instructions.
 
 - [ ] Verify repository/version/license, scripts/permissions/outbound calls, Windows support and footprint; compare an approved benign/suspicious local skill fixture with manual review.
 - [ ] Record useful findings, false positives/missed risks and adopt/reject/unavailable/defer decision; review next-needed skill instructions/scripts manually regardless of scan outcome.
 
 **Verification:** Reproduce the bounded trial and manually inspect findings; a clean report is not a security guarantee. Do not preload/execute all skills.
-**Evidence:** Pending — trust review and user decision in `docs/benchmarks/skillspector.md`.
+**Evidence:** `docs/benchmarks/skillspector.md` records partial upstream/source review and the user's “then do not bother about it” decision. Scanner/fixture/performance checks were not run; the original trial acceptance checkboxes remain unchecked. This task closes via the explicit user-approved optional-tool deferral rule. Relevant local workflow instructions were manually reviewed; no scanner/scripts/dependencies installed or executed.
 **Likely files:** That report and at most two local fixture/evaluation aids; no unreviewed skill scripts executed.
 
 ### T05 — Compare native PDF parsers
@@ -684,4 +684,4 @@
 
 ## Current handoff
 
-The original plan and T02 design are approved; **T01/T02 complete, T03 active**. At explicit user request, dedicated `.venv`/uv and reviewed baseline dependencies are now provisioned; lock, isolation, imports/tool versions and offline sync verified. This brings environment preparation forward from T18 without completing application work. T04 onward/T16A remain unstarted, except that recorded foundation preparation. No application test/benchmark, global installation change, staging or commit. Further provisioning/adoption remains gated.
+The plan/T02 design are approved; **T01–T03 complete; T04 deferred at user request**. Baseline setup was verified and committed in bb68c40. This decision record documents the optional-tool deferral and manual-review fallback. T05 is next and not started. No new installation, parser/model trial or application implementation occurred during T04. Further provisioning/adoption remains gated.

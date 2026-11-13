@@ -1,12 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-**Status:** Approved by the user; T01/T02 complete, T03 review active. Adoption and implementation remain gated.
+**Status:** Approved; T01–T03 complete, T04 explicitly deferred by the user, T05 not started. Adoption/implementation remain gated.
 
 **Prepared:** 2026-11-13 (Asia/Calcutta).
 
 **Requirements:** User-approved `SPEC.md`; process governed by `AGENTS.md`.
 
-**Task tracker:** Root-level `TODO.md`. T02 design approved; T03 inventory/review proposals prepared. No implementation or evaluation trial has started. Decisions: `docs/decisions.md`; design: `docs/evaluation.md`; provisioning proposals: `docs/provisioning.md`.
+**Task tracker:** Root-level `TODO.md`. Baseline setup verified; optional SkillSpector deferred in `docs/benchmarks/skillspector.md`. No application implementation or parser/model trial has started. Decisions: `docs/decisions.md`; design: `docs/evaluation.md`; setup: `docs/provisioning.md`.
 
 ## 1. Planning basis and current state
 
@@ -215,4 +215,4 @@ The TXT path proves the full pipeline before every parser is built. Each later f
 
 Review the task sequence, architecture proposal, nine decision areas, task sizes, and evaluation/adoption gates. The next proposed task after approval is **T01**, not application scaffolding or model download. No investigation, provisioning, product code or commit is authorized merely by the presence of this plan.
 
-**Current progress:** T01/T02 complete; T03 review prepared. User explicitly replaced the loose-tool proposal with a dedicated `.venv` and reviewed baseline installation. Environment preparation is brought forward from T18: Python 3.14.6, local uv 0.13.8, pyproject/lock, 24 installed distributions and project cache; isolation/import/version/offline-sync checks passed. No global installations changed. Target stays 16 GB/CPU-only; no application code/test, parser/model benchmark, OCR/Ollama/model install or commit. Later tasks remain gated; T18 is not otherwise complete.
+**Current progress:** T01–T03 complete; environment preparation brought forward from T18 was verified and committed in bb68c40. T04 optional SkillSpector is deferred at explicit user direction, with no scanner trial. Manual skill/script review remains required. T05 PDF parser comparison is next and not started; exact candidate provisioning still needs approval. No application/model/parser benchmark has run. Target stays 16 GB/CPU-only; T18 is not otherwise complete.
