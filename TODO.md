@@ -155,14 +155,14 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 ### T10 — Benchmark local Ollama embedding candidates
 
-**Status:** Proposed. **Prerequisites:** T02–T04; D06; approved exact models/downloads under G1. **Scope:** M.
+**Status:** Bounded comparison complete; results reviewed and source commit explicitly approved. Original run limitations retained; no runtime adoption or full offline/target-scale acceptance. **Prerequisites:** T02–T04/T02R and D06 satisfied; original G1 and documented continuation approved. **Scope:** M.
 **Objective:** Measure retrieval usefulness and embedding resource cost on the actual CPU-only machine.
 
-- [ ] Trial `embeddinggemma` as a candidate and a justified approved alternative; record digest/license/dimensions/settings/input limits/truncation and query/document consistency.
-- [ ] Use fixed fixture/questions and approved cold/warm repetitions to measure batch throughput, relevance/recall at chosen k, RAM/disk and latency against D06; do not select defaults yet.
+- [x] Trial `embeddinggemma` and approved Nomic alternative; record digest/license, validated dimensions, explicit query/document prefixes, context and over-limit rejection.
+- [x] Complete frozen corpus/query repetitions, batch-one subset, lexical comparison and resource observations. First passes have uncontrolled OS caches; broader/combined/scale/offline acceptance remains future work. No runtime default selected.
 
 **Verification:** Reproduce PLAN's actual-machine protocol using bounded reference search, retain failed runs and model-change reindex implications.
-**Evidence:** Pending — `docs/benchmarks/embeddings.md`, raw measurements/settings and recommendation.
+**Evidence:** [Embedding comparison](docs/benchmarks/embeddings.md): both pinned models completed four CPU passes, recall@5 1.00 on 12 related CSV variants; lexical recall@5 0.9583. Nomic is recommended for later adoption review given smaller weights/lower observed memory, not universally faster. Original failure/counter uncertainty retained. Separate approved continuation used 24/24 starts, 82/100 calls, no downloads; final 11 tests passed (1.14 s), Ruff passed before hash-reference correction. Owned server stopped/port released; corpus and original result preserved. Wider quality/combined pressure/storage and disconnected verification remain later gates; source commit approved separately, no runtime selection.
 **Likely files:** That report and at most three evaluation files.
 
 ### T11A — Check chat feasibility early using fixed evidence
@@ -730,4 +730,4 @@ After T07 closeout: T10 → T11A (early CPU feasibility) → T07A → T08 → T0
 
 ## Current handoff
 
-T01–T03/T02R/T05 complete; T04 deferred; T06 excluded. T02R is committed in 28ec7ad. The approved T07 package and three process improvements are implemented, reviewed and approved for commit; remaining coverage still needs follow-up before adoption. Coverage and budget limitations remain explicit rather than marking all T07 criteria complete. Next proposed package is T10 read-only service/model/embedding review, then T11A early chat feasibility; model/service provisioning still needs exact artifact/budget approval. XLS remains required at T07A. No application ingestion or runtime adoption occurred.
+T01–T03/T02R/T05 complete; T04 deferred; T06 excluded. T02R is committed in 28ec7ad. The approved T07 package and three process improvements are committed in e8ec471; remaining coverage still needs follow-up before adoption. Coverage and budget limitations remain explicit rather than marking all T07 criteria complete. T10 provisioning and the approved continuation comparison are complete, with original trial limitations retained in the embedding report. T10 results reviewed and source commit explicitly approved; T11A early chat review is next under a separate package gate. No further experimental starts remain in the T10 allocation. XLS remains required at T07A. No application ingestion or runtime adoption occurred.
