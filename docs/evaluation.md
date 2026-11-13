@@ -1,9 +1,54 @@
 # Stage 1 Fixture and Evaluation Design
 
-**Scope amendment (2026-11-13):** Active Stage 1 formats are PDF/XLS/XLSX/CSV. This document and JSON files preserve the original T02 design as history. S-TXT/S-DOCX/S-INJECTION and Q07–Q09/Q17 are explicitly excluded from Stage 1 scoring and materialization in the JSON metadata; the TXT-based S-INJECTION/Q17 must move to an in-scope artifact and be reverified before scoring. No new score denominator or XLS ground truth is approved yet. Proposed T02R will add XLS coverage and replace the excluded TXT injection scenario with an in-scope definition before T07/T07A trials. Earlier DOCX/TXT/five-format references below describe the original design. JSON now records these scope exclusions; the corpus still needs T02R review before scoring.
+**Current status (2026-11-13):** T02R definition refresh verified and approved by the user at closeout (“yes please”). Stage 1 formats are PDF/XLS/XLSX/CSV. DOCX/TXT development, fixture generation and positive-support acceptance remain excluded. Historical definitions are retained unchanged. T05 PDF trials already ran, as recorded in [pdf-parsers.md](benchmarks/pdf-parsers.md); T02R generated no documents, installed no packages and ran no parser/model/application benchmark. New definitions are not verified serialized artifacts or passing runtime tests.
 
+## T02R four-format corpus revision
 
-**Status:** T02 design and initial rubric/gates approved by the user (“good”). Fixture generation, parser/model trials, application tests and benchmarks have not run. Detailed T16 refinement and individual trial approvals remain required; approval is not a measured pass.
+The user authorized T02R with “cool, go ahead” and reconfirmed that XLS is required. Three historical authored fixtures (`S-TXT`, `S-DOCX`, `S-INJECTION`) and four questions (Q07–Q09/Q17) remain explicitly out of scope. There are now **11 authored definitions: 8 in scope and 3 excluded**, **20 negative/lifecycle definitions**, and **25 questions: 21 in scope and 4 excluded**. The nine supplied originals remain unchanged. Their extensions are three PDF, four XLSX and two CSV; **no real XLS sample is present**.
+
+| New ID | Purpose | Required evidence |
+|---|---|---|
+| S-XLS; Q21–Q25 | Binary XLS with North/South sheets, merged heading, dates, stored/missing formula caches | Real sheet/cell/range anchors; explicit cache/type warnings; no formula execution |
+| S-CSV-INJECTION; Q20 | Replace the excluded TXT injection scenario in active Stage 1 coverage | Budget 12000 units at data record 1, source row/physical line 2; ignore hostile record 2/line 3 |
+
+Q20 and S-CSV-INJECTION have new identities; Q17 and its original expected answer remain historical and unchanged. The original Q01–Q19 facts, source anchors and questions have not been rewritten to suit the revised scope or a parser. Q01–Q06 remain the checked CSV ground truth for the first vertical slice. All authored artifacts still require serialization/anchor verification; none is created by T02R. Scope flags are definitions for the future harness, not an implemented enforcement feature.
+
+### XLS definition and materialization gates
+
+S-XLS specifies a legacy binary workbook, not an XLSX/CSV file renamed `.xls`. North!B2=120 and South!B2=50; Merged!A1:B1 has heading Sales and Merged!B3=25. North!C2 has a declared 1900 date system, serial 46068 and date format `yyyy-mm-dd`, expected as 2026-02-15. Preserve the original serial/type/format alongside any normalized date. North!B4 must contain a verified stored numeric formula result 200; North!B5 must be a genuine formula with no available numeric cache. A zero or ordinary blank cell cannot stand in for that control. Never calculate a formula to manufacture a stored result.
+
+At T07A, review and request approval of the exact local generator or fixture artifact, versions/licenses, dependencies and bounded run budget. The definition approves no writer, download or provisioning. After approval, create only ignored files under `data/evals/t07a/<unique-run-id>` (or `data/evals/t22/<unique-run-id>` at T22). Do not launch Office/Excel automation or enable macros, links or recalculation. Record artifact hashes and independently inspect actual cells, merged ranges, date encoding and cache states before evaluating a candidate. If tooling cannot create or independently verify a required state, record a readiness/coverage gap; do not label a dummy control passed. The user approved this definition-level procedure at T02R closeout; the concrete tool/artifact still needs its separate G1 approval.
+
+Four new negative definitions cover XLS corruption/mismatch, actual encrypted/password-protected files, active-content/external-link handling and resource limits. Sheet-protection flags alone are not an encrypted-file test. Use inert markers or mocked sentinels for active content; do not create executable exploits. Bound malformed controls and use metadata mocks rather than destructive resource payloads. The generic negative matrix now addresses in-scope formats and treats DOCX/TXT only as unsupported-extension rejection cases.
+
+No supplied real XLS has been validated. Synthetic-only results must be disclosed, and representative coverage resolved before T17 adoption. Neither the fixture design nor future XLSX success establishes XLS support.
+
+### Selection, readiness and denominators
+
+Require `stage1_in_scope: true` explicitly in both fixture and question records. An in-scope question may reference only in-scope fixtures. Historical exclusions never enter the denominator or materialization queue. `scoring_eligible` is separate: **all 25 questions currently have it set to false**; no current pipeline scoring denominator exists (N/A). Checked CSV source facts do not establish a runnable retriever/model evaluation.
+
+The planned active set contains 21 questions: 15 retained in-scope originals plus Q20–Q25. Counts by format are XLS=5 (Q21–Q25), XLSX=2 (Q14–Q15), CSV=8 (Q01–Q06/Q16/Q20) and PDF=6 (Q10–Q13/Q18–Q19). Report exact question IDs and per-category/format counts from the JSON, rather than counting evidence links as separate questions. A multi-source question counts once in its question denominator.
+
+Before each separately approved trial, freeze the task-specific required ID set, input artifact/configuration hashes and approved rubric. T07's set must cover XLSX/CSV controls; T07A's set must include S-XLS/Q21–Q25 plus its negatives; later cross-format acceptance uses all applicable in-scope questions, with chart trial/adoption gates still respected. Missing artifacts or unverified anchors fail readiness; runtime errors remain failures in the frozen denominator. Never silently omit unavailable cases or convert N/A to 100%. Initial T02 quality thresholds remain unchanged; T16 refinements and final performance budgets retain their approval gates.
+
+### T02R verification record — 2026-11-13
+
+Ran the project Python against a local, ignored definition-integrity aid (`.\.venv\Scripts\python.exe data/t02r-validate.py`) and `git diff --check`. Checks passed: JSON parsing; unique fixture/question/negative IDs; all question/evidence references; explicit active/excluded ID sets; four-format coverage; all 25 question scoring flags false; original Q01–Q19 questions/expected facts/anchors and historical fixture definitions unchanged; all nine supplied original hashes/sizes unchanged; new CSV records parsed in memory; XLS question cell/merged/date/cache-definition checks; planned counts PDF=6/XLS=5/XLSX=2/CSV=8; local Markdown links valid. Arithmetic/date checks validate authored definitions only, not a workbook reader or formula engine. Source/sample originals were read locally and not modified or sent anywhere.
+
+The local aid is not a versioned application harness or a fresh-clone test command. Reproduce the checks with standard-library JSON/hashlib/csv/datetime and compare historical gold with commit e1ee6ff. Record IDs/counts, verify original source hashes from the manifest, inspect XLS cell definitions and parse CSV physical-line definitions without executing document text. T22 will provide the versioned runtime harness. T02R did not run pytest/parser/model/application tests because it changed definitions/documentation only. Quality/security review checked scope exclusions, provenance honesty, readiness failure reporting, safe generation boundaries and cache/date caveats; no runtime safety claim is inferred.
+
+Definition hashes at verification:
+
+| File | SHA-256 |
+|---|---|
+| tests/evals/manifest.json | `b4fdc7d0de187eec646ce3e42b3e3d7e2c89b57d111fe253be004444dbd0ea11` |
+| tests/evals/questions.json | `6466f03e7c12549827f52c11eabd3c86bfbafcc5ab64f52b11f2329750668dfc` |
+
+The user approved the reviewed T02R definitions/materialization procedure and source commit on 2026-11-13 (“yes please”). T02R is complete as a definition-only task. Exact XLS tooling/fixture trials, installations, model downloads and product implementation remain separately gated; T07 review is next proposed.
+
+## Historical T02 design record
+
+The sections below describe the original approved T02 design, its original counts and inspection limits. The T02R scope/selection rules above supersede DOCX/TXT coverage references. T05's separate report supersedes original statements that PDF parsing had not yet been investigated. These historical records are not current execution claims.
 
 ## Purpose and artifacts
 

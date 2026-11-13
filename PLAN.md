@@ -1,6 +1,6 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-**Status:** Approved; T01–T03 and T05 complete, T04 explicitly deferred by the user. T05 closes with approved PyMuPDF empirical-comparison deferral. Format scope revised by the user to PDF/XLS/XLSX/CSV; downstream task revisions proposed for review; provisioning/adoption/implementation remain gated.
+**Status:** Approved; T01–T03 and T05 complete, T04 explicitly deferred by the user. T05 closes with approved PyMuPDF empirical-comparison deferral. T02R definition refresh is complete; user approved the reviewed definitions and commit. Format scope is PDF/XLS/XLSX/CSV; remaining downstream revisions, provisioning/adoption/implementation retain their gates.
 
 **Prepared:** 2026-11-13 (Asia/Calcutta).
 
@@ -13,6 +13,8 @@
 User approved PDF, XLS, XLSX and CSV for Stage 1, replacing DOCX/TXT. T05 is committed in d8d12e7. Propose T02R to update active fixtures/questions while retaining historical definitions; exclude T06, add T07A for legacy XLS evaluation, and change the first vertical slice from TXT to CSV. Repurpose the unstarted T37 slot for XLS implementation and T39 for CSV robustness after its initial T23–T34 slice. Task IDs for completed work are unchanged. Review these sequence changes before further trials; no dependency/model provisioning is authorized.
 
 T08 depends on T05, T07 and T07A (not excluded T06). T17 must resolve all four required formats and XLS license/security/provenance questions. DOCX/TXT definitions are historical only: no Stage 1 parser work, dependency evaluation/install, fixture generation, benchmarking or positive-support acceptance. Later support requires explicit user approval. No XLS original has been verified; add a safe authored fixture and seek a representative legacy workbook if available.
+
+**T02R evidence:** The user authorized the definition refresh after e1ee6ff and reconfirmed XLS is required. `docs/evaluation.md` now records S-XLS/Q21–Q25, S-CSV-INJECTION/Q20, 21 in-scope questions, four historical exclusions and explicit scoring-readiness gates. Definitions/source integrity checks passed; no documents generated or new packages installed. Exact XLS tooling, binary cache verification and representative sample coverage remain T07A/T17 gates. T02R closeout/commit approved; T07 review is next proposed. Original T02 counts below are historical, superseded by this refresh.
 
 ## 1. Planning basis and current state
 
@@ -159,7 +161,7 @@ Implementation verification: meaningful failing tests first, smallest change, re
 
 ## 8. Ordered milestones and dependency map
 
-TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 are complete; T04 is deferred; the user accepted deferring PyMuPDF's empirical comparison. T06 is excluded from Stage 1 by the subsequent format amendment; T02R/T07/T07A and other downstream revisions are proposed for review.
+TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 are complete; T04 is deferred; the user accepted deferring PyMuPDF's empirical comparison. T06 is excluded from Stage 1. T02R was explicitly authorized, verified and approved at closeout; T07/T07A and remaining downstream revisions retain their review/execution gates.
 
 | Milestone | Tasks in default execution order | Review outcome |
 |---|---|---|

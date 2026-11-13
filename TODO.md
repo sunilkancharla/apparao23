@@ -1,8 +1,8 @@
 # Stage 1 Atomic Task Checklist
 
-**Status:** T01–T03 and T05 complete; T04 explicitly deferred. T05 closes with approved PyMuPDF comparison deferral. **Prepared:** 2026-11-13 (Asia/Calcutta).
+**Status:** T01–T03 and T05 complete; T04 explicitly deferred; T02R complete — user approved closeout/commit. T05 closes with approved PyMuPDF comparison deferral. **Prepared:** 2026-11-13 (Asia/Calcutta).
 
-**Authority:** Approved SPEC, AGENTS and PLAN. T04 closes by user-approved optional-tool deferral; T05 permissive trial was authorized after licensing review; T06 is excluded from Stage 1; T07–T50 and proposed T02R/T07A/T16A are unstarted.
+**Authority:** Approved SPEC, AGENTS and PLAN. Format amendment committed in e1ee6ff. The user authorized T02R (“cool, go ahead”) and reconfirmed XLS is required; its definition refresh is verified and approved at closeout. T04 closes by user-approved optional-tool deferral; T05 permissive trial was authorized after licensing review; T06 is excluded from Stage 1; T07–T50 and proposed T07A/T16A are unstarted.
 
 ## Proposed scope-alignment revision — 2026-11-13
 
@@ -10,14 +10,14 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 ### T02R — Align active evaluation coverage with the four-format scope
 
-**Status:** Proposed; first next task after review. **Prerequisites:** Approved format amendment and reviewed task revision. **Scope:** M, definition-only.
+**Status:** Complete — definitions verified; user approved the reviewed result and commit (“yes please”). **Prerequisites:** Approved format amendment; the user explicitly authorized this task after the scope commit. **Scope:** M, definition-only.
 **Objective:** Keep scores and fixture coverage faithful to PDF/XLS/XLSX/CSV without losing historical ground truth.
 
-- [ ] Keep DOCX/TXT fixture/question definitions excluded from Stage 1; exclude them from active scoring and materialization and migrate the injection scenario to an in-scope artifact without changing its expected safety behavior.
-- [ ] Specify an XLS fixture with sheet/cell/merged-header/stored-value anchors and invalid/protected/macro/external-link cases; document missing real XLS samples and an approved materialization path before trials. Reuse checked CSV questions for the first vertical slice.
+- [x] Keep DOCX/TXT fixture/question definitions excluded from Stage 1; exclude them from active scoring and materialization and migrate the injection scenario to an in-scope artifact without changing its expected safety behavior.
+- [x] Specify an XLS fixture with sheet/cell/merged-header/stored-value anchors and invalid/protected/macro/external-link cases; document missing real XLS samples and a gated materialization procedure for review before trials. Reuse checked CSV questions for the first vertical slice. Exact XLS tooling/artifact and trial approval remain T07A; no generation is claimed or authorized here.
 
 **Verification:** Validate JSON references, active/excluded selection and format coverage; review new gold anchors and scoring denominators. No document generation, dependency installation or model evaluation.
-**Evidence:** Pending — revised manifest/questions/evaluation design and consistency checks.
+**Evidence:** `docs/evaluation.md` T02R section and dated verification record: 11 authored definitions (8 in scope), 20 negative cases, 25 questions (21 in scope, 4 excluded), S-XLS/Q21–Q25 and S-CSV-INJECTION/Q20. Explicit scope/readiness flags, IDs/references, original gold preservation, nine source hashes/sizes, in-memory CSV and XLS anchor/date definitions and local links checked successfully; `git diff --check` passed. No artifacts/packages/parser/model/application tests or scores. Concrete XLS generation/independent cache verification and representative XLS coverage remain T07A/T17 gates. User approved T02R closeout and this commit on 2026-11-13. T07 review remains the next proposed task; no trial installation or execution authorized.
 **Likely files:** `tests/evals/manifest.json`, `tests/evals/questions.json`, `docs/evaluation.md`.
 
 ## Checklist conventions and completion rules
