@@ -1,4 +1,8 @@
-﻿# Session checkpoint — 2026-11-14 (Asia/Calcutta)
+# Latest result — manual-04 completed, 2026-11-14
+
+Commit 0797fe5 contains reviewed enum repair/evaluation config and handoff. User ran manual-04 disconnected: 60 comparisons, all 20 controls, teardown verified/no active children. Do not rerun any old command below. Both engines passed 24/24 readable synthetic repetitions; 90-degree rotation failed for both. Mean worker time Tesserocr 1.02 s/RapidOCR 5.21 s; max sampled private memory 193.82/543.92 MiB. Raw OCR/images remain local. Completed ledger 132/160 plus 4 sanitized documentation-closeout slots =136/160; prior ledgers unchanged. See docs/benchmarks/manual-ocr-results.md. No further native run, adoption, model download or combined T11 package approved. User approved results/docs commit and preparation of next combined evaluation proposal; verify resulting Git commit before claiming it. Rotated-case scores rechecked unchanged, positive user visual assessment recorded separately; local discrepancy review remains open. Native ledger now 144/160 including authorized result/Git closeout, with 16 cleanup slots preserved. Next proposal execution remains unapproved. T09 has quality/rotation/provenance acceptance gaps and combined OCR/Ollama pressure remains pending. Earlier checkpoint follows for history only.
+
+# Session checkpoint — 2026-11-14 (Asia/Calcutta)
 
 Stage 1: Windows 11, 16 GB RAM, CPU only; PDF/XLSX/CSV. SPEC/PLAN/TODO approved. XLS deferred, DOCX/TXT excluded, SkillSpector deferred. No subagents authorized. Local Ollama/SQLite/browser application remains planned; evaluations do not adopt runtime components.
 

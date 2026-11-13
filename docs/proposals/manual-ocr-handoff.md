@@ -1,4 +1,6 @@
-﻿# Manual offline OCR trial: manual-04 instructions
+**COMPLETED — do not run again.** Manual-04 finished with verified teardown. See [results and limitations](../benchmarks/manual-ocr-results.md). Instructions below describe the historical approved run.
+
+# Manual offline OCR trial: manual-04 instructions
 
 Only manual-04 is current, under the [approved fresh package](manual-ocr-fourth-run.md). Do not rerun/reset/reseal manual-01, manual-02 or manual-03. Existing approved project packages are verified and reused; no downloads or global installations.
 

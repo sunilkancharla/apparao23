@@ -1,3 +1,5 @@
+**COMPLETED — do not run again.** Manual-04 finished with verified teardown. See [results and limitations](../benchmarks/manual-ocr-results.md). Instructions below describe the historical approved run.
+
 # Approved manual-04 offline OCR continuation
 
 2026-11-14 (Asia/Calcutta). The user explicitly approved committing the reviewed changes and preparing a fresh offline run with the same tests and a new 160-start allowance, after the [manual-03 enum failure and repair](../benchmarks/manual-ocr-third-stop.md).
