@@ -1,5 +1,6 @@
 """Focused synthetic policy tests; no trial processes are launched."""
 
+import struct
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -85,6 +86,38 @@ class DiagnosticPolicyTests(unittest.TestCase):
         with patch.object(diagnostic, "write_receipt") as writer:
             self.assertEqual(diagnostic.record_completed_case(result), result)
         writer.assert_called_once_with("case-A-staged.json", result)
+
+    def test_pid_list_uses_native_pointer_width(self):
+        for width, code in ((4, "I"), (8, "Q")):
+            raw = struct.pack("<II" + code * 2, 2, 2, 123, 456)
+            self.assertEqual(diagnostic.decode_pid_list(raw, width), [123, 456])
+
+    def test_incomplete_or_oversized_pid_list_stops(self):
+        for raw in (b"short", struct.pack("<IIQ", 2, 1, 123),
+                    struct.pack("<II", 1025, 1025), bytes(16385)):
+            with self.assertRaises(RuntimeError):
+                diagnostic.decode_pid_list(raw, 8)
+
+    def test_snapshot_is_saved_before_mismatch_raises(self):
+        saved = []
+        bad = {"worker": {"total": 2, "active": 0, "pids": []},
+               "controller": {"total": 3, "active": 1, "pids": [99]}}
+        with (
+            patch.object(diagnostic, "write_receipt",
+                         side_effect=lambda name, data: saved.append((name, data))),
+            self.assertRaises(RuntimeError),
+        ):
+            diagnostic.enforce_snapshot("case", bad, 99, 2)
+        self.assertEqual(saved, [("snapshot-case.json", bad)])
+
+    def test_cleanup_and_later_change_do_not_authorize_next_case(self):
+        bad = {"worker": {"total": 1, "active": 1, "pids": [123]},
+               "controller": {"total": 2, "active": 2, "pids": [99, 123]}}
+        calls = []
+        with patch.object(diagnostic, "write_receipt"), self.assertRaises(RuntimeError):
+            diagnostic.enforce_snapshot("case", bad, 99, 2)
+            calls.append("next")
+        self.assertEqual(calls, [])
 
 
 if __name__ == "__main__":

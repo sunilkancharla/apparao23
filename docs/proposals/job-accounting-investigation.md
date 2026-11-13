@@ -2,6 +2,8 @@
 
 **Status:** User explicitly approved this exact investigation and its three-document proposal commit ("all the best, approved"). Approval is not an execution result. [Previous results](../benchmarks/python-startup-diagnostic.md) remain incomplete; neither stopped trial will be resumed or reset.
 
+**Actual outcome:** Proposal committed in `db50257`; A-original completed and B-original exited 0 with a marker but hit the Job/PID accounting guard. Its worker cumulative count remained two through the 250 ms snapshot, with no worker active. [Results and limits](../benchmarks/job-accounting-investigation.md). No automatic retry or isolation/OCR readiness claim.
+
 ## Objective
 
 Capture the actual counts and active process IDs missing from the earlier accounting failure. Distinguish an observed timing/count change from evidence of an unexpected active process, while retaining every safety-stop result. Do not assume a race condition, a specific extra executable or a host defect. The receipt repair in `ab1a04d` preserves values before raising; it does not solve the mismatch.

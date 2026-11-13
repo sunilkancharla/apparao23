@@ -6,6 +6,7 @@ import ctypes
 import hashlib
 import json
 import os
+import struct
 import subprocess
 import time
 from ctypes import wintypes as w
@@ -99,6 +100,78 @@ def record_completed_case(result: dict) -> dict:
     return result
 
 
+def decode_pid_list(raw: bytes, pointer_width: int) -> list[int]:
+    """Decode bounded native Job PID data, rejecting incomplete membership lists."""
+    if pointer_width not in (4, 8) or not 8 <= len(raw) <= 16384:
+        raise RuntimeError("Invalid PID buffer size/layout")
+    assigned, returned = struct.unpack_from("<II", raw)
+    if assigned != returned or returned > 1024 or 8 + returned * pointer_width > len(raw):
+        raise RuntimeError("Incomplete or oversized PID list")
+    return list(struct.unpack_from("<" + ("I" if pointer_width == 4 else "Q") * returned,
+                                   raw, 8))
+
+
+def enforce_snapshot(name: str, snapshot: dict, controller_pid: int,
+                     expected_total: int) -> None:
+    """Write the initial snapshot before enforcing, never accept later convergence."""
+    write_receipt(f"snapshot-{name}.json", snapshot)
+    worker, controller = snapshot["worker"], snapshot["controller"]
+    if (worker["total"] != 1 or worker["active"] != 0 or worker["pids"]
+            or controller["total"] != expected_total or controller["active"] != 1
+            or controller["pids"] != [controller_pid]):
+        raise RuntimeError("Initial Job/PID invariant mismatch; stop schedule")
+
+
+class AccountingObserver:
+    """Read only owned Job state at declared points and bounded cleanup times."""
+
+    def __init__(self, native: Native, controller_job, name: str, expected_total: int):
+        self.native = native
+        self.controller_job = controller_job
+        self.name = name
+        self.expected_total = expected_total
+        self.initial = None
+        self.exit_observation = None
+
+    def job_state(self, job) -> dict:
+        """One bounded query; any incomplete list stops rather than being ignored."""
+        raw = ctypes.create_string_buffer(8 + 1024 * ctypes.sizeof(ctypes.c_size_t))
+        returned = w.DWORD()
+        self.native.check(self.native.kernel.QueryInformationJobObject(
+            job, 3, raw, len(raw), ctypes.byref(returned)))
+        return self.native.accounting(job) | {
+            "pids": decode_pid_list(raw.raw, ctypes.sizeof(ctypes.c_size_t))}
+
+    def capture(self, point: str, worker_job) -> dict:
+        """Retain timestamps and counts without scanning unrelated processes."""
+        snapshot = {"point": point, "monotonic": time.monotonic(),
+                    "controller": self.job_state(self.controller_job),
+                    "worker": self.job_state(worker_job)}
+        if self.exit_observation is not None:
+            snapshot["exit_observation"] = self.exit_observation
+        write_receipt(f"snapshot-{self.name}-{point}.json", snapshot)
+        return snapshot
+
+    def __call__(self, point: str, worker_job, pid: int) -> None:
+        snapshot = self.capture(point, worker_job)
+        if point == "post_wait":
+            self.initial = snapshot
+            observed = time.monotonic()
+            for delay in (0.020, 0.100, 0.250):
+                time.sleep(max(0, observed + delay - time.monotonic()))
+                self.capture(f"after-{int(delay * 1000)}ms", worker_job)
+            enforce_snapshot(self.name + "-initial", snapshot, os.getpid(), self.expected_total)
+        elif point in {"created", "assigned"}:
+            controller = snapshot["controller"]
+            if (controller["total"] != self.expected_total or controller["active"] != 2
+                    or set(controller["pids"]) != {os.getpid(), pid}):
+                raise RuntimeError("Creation-time controller Job/PID mismatch")
+            if point == "assigned" and snapshot["worker"] != {
+                "total": 1, "active": 1, "terminated": 0, "pids": [pid]
+            }:
+                raise RuntimeError("Suspended worker Job/PID mismatch")
+
+
 def write_receipt(name: str, value: object) -> None:
     """Write bounded sanitized evidence only within the new run."""
     content = json.dumps(value, indent=2).encode()
@@ -162,7 +235,8 @@ def output_limits() -> None:
         raise RuntimeError("Aggregate diagnostic output exceeds 1 MiB")
 
 
-def trial(native: Native, row: str, source: str, probe: Path) -> dict:
+def trial(native: Native, row: str, source: str, probe: Path,
+          observer: AccountingObserver | None = None) -> dict:
     """Create exactly one suspended direct child and verify Job membership first."""
     if (row, source) not in schedule():
         raise ValueError("Unlisted trial")
@@ -183,6 +257,8 @@ def trial(native: Native, row: str, source: str, probe: Path) -> dict:
     child_policy = w.DWORD(1)
     started = time.monotonic()
     try:
+        if observer:
+            observer("before_create", job, 0)
         if row in "BC":
             flags |= 0x80000 | 0x8000000
             size = ctypes.c_size_t()
@@ -200,11 +276,15 @@ def trial(native: Native, row: str, source: str, probe: Path) -> dict:
                 str(executable), ctypes.create_unicode_buffer(command(executable, probe, output)),
                 None, None, False, flags, block, str(RUN / "work"),
                 ctypes.byref(startup), ctypes.byref(process))))
+        if observer:
+            observer("created", job, process.pid)
         native.check(native.kernel.AssignProcessToJobObject(job, process.process))
         inside = w.BOOL()
         native.check(native.kernel.IsProcessInJob(process.process, job, ctypes.byref(inside)))
         if not inside.value or native.accounting(job)["total"] != 1:
             raise RuntimeError("Trial Job membership/accounting failure")
+        if observer:
+            observer("assigned", job, process.pid)
         if native.kernel.ResumeThread(process.thread) == 0xFFFFFFFF:
             raise ctypes.WinError(ctypes.get_last_error())
         while True:
@@ -225,6 +305,13 @@ def trial(native: Native, row: str, source: str, probe: Path) -> dict:
                   "duration_seconds": time.monotonic() - started,
                   "classification": "not_yet_validated",
                   "marker": None, "accounting": accounting, "timed_out": False}
+        if observer:
+            observer.exit_observation = result
+            # Include marker state in forensic evidence before completion checks.
+            output_limits()
+            result["marker"] = json.loads(output.read_text()) if output.exists() else None
+            write_receipt(f"case-{row}-{source}.json", result)
+            observer("post_wait", job, process.pid)
         record_completed_case(result)
         output_limits()
         marker = json.loads(output.read_text()) if output.exists() else None
@@ -236,6 +323,8 @@ def trial(native: Native, row: str, source: str, probe: Path) -> dict:
             native.kernel.TerminateProcess(process.process, 125)
             if native.kernel.WaitForSingleObject(process.process, 5000) != 0:
                 raise RuntimeError("Owned worker cleanup failed")
+        if observer:
+            observer.capture("cleanup", job)
         for handle in (process.thread, process.process, job):
             if handle:
                 native.kernel.CloseHandle(handle)
@@ -281,3 +370,66 @@ def execute(controller_job) -> None:
         print(json.dumps(result, indent=2))
     if result["status"] == "safety_stop":
         raise RuntimeError("Diagnostic stopped; see preserved result; no retry")
+
+
+def investigate_accounting(controller_job) -> None:
+    """Explicit opt-in to the separately approved, original-only two-case package."""
+    global RUN
+    RUN = ROOT / "data/t09-job-accounting/accounting-01"
+    meter = json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
+    if datetime.now(UTC) > datetime.fromisoformat(meter["deadline_utc"]):
+        raise RuntimeError("Investigation preparation deadline exhausted")
+    meter["execution_deadline_utc"] = datetime.fromtimestamp(time.time() + 300, UTC).isoformat()
+    write_receipt("meter.json", meter)
+    baseline = json.loads((RUN / "baseline-identities.json").read_text(encoding="utf-8-sig"))
+    native = Native()
+    result = {"status": "in_progress", "attempted": [], "completed": []}
+    try:
+        for path, digest in baseline.items():
+            # This package intentionally instruments the diagnostic source itself.
+            if path != "tests/evals/spikes/python_startup_diagnostic.py":
+                verify_bytes((ROOT / path).read_bytes(), (ROOT / path).stat().st_size, digest)
+        manifest = json.loads((OLD_RUN / "runtime-manifest.json").read_bytes())
+        if len(manifest) != 810 or len({item["path"] for item in manifest}) != 810:
+            raise RuntimeError("Original runtime manifest drift")
+        for item in manifest:
+            verify_bytes(contained(BASE, BASE / item["path"]).read_bytes(),
+                         item["bytes"], item["sha256"])
+        write_receipt("verified-identities.json", {
+            "baseline": baseline,
+            "instrumented_helper_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            "runtime_files": len(manifest), "runtime_bytes": sum(x["bytes"] for x in manifest)})
+        for name in ("inputs", "outputs", "work"):
+            safe_output(RUN, RUN / name).mkdir(exist_ok=False)
+        probe = RUN / "inputs/probe.py"
+        probe.write_text(PROBE, encoding="utf-8")
+        for index, row in enumerate("AB"):
+            observer = AccountingObserver(native, controller_job, row, index + 2)
+            before = observer.job_state(controller_job)
+            write_receipt(f"controller-before-{row}.json", before)
+            if before != {"total": index + 1, "active": 1, "terminated": 0,
+                          "pids": [os.getpid()]}:
+                raise RuntimeError("Pre-case controller accounting mismatch")
+            result["attempted"].append(row + "-original")
+            result["completed"].append(trial(native, row, "original", probe, observer))
+        result["status"] = "two_cases_complete_no_isolation_claim"
+    except (OSError, RuntimeError, ValueError) as error:
+        result["status"] = "safety_stop"
+        result["error"] = f"{type(error).__name__}: {error}"
+    finally:
+        result["final_controller"] = AccountingObserver(
+            native, controller_job, "final", 0).job_state(controller_job)
+        extra = max(0, result["final_controller"]["total"] - 1 - len(result["attempted"]))
+        result["extra_observed_starts"] = extra
+        for _ in range(extra):
+            reserve("Observed extra kernel-accounted process; stop, not authorized new work")
+        for path in ("data/t09-appcontainer/preflight-01/meter.json",
+                     "data/t09-startup-diagnostic/diagnostic-01/meter.json"):
+            if hashlib.sha256((ROOT / path).read_bytes()).hexdigest() != baseline[path]:
+                result["status"] = "safety_stop"
+                result["error"] = "Prior meter changed"
+        output_limits()
+        write_receipt("result.json", result)
+        print(json.dumps(result, indent=2))
+    if result["status"] == "safety_stop":
+        raise RuntimeError("Accounting investigation stopped; no automatic retry")
