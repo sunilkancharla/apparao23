@@ -107,6 +107,8 @@ Sources checked on 2026-11-13: Microsoft's [AppContainer isolation](https://lear
 
 ## Part B - conditional comparison design, not execution approval
 
+The user authorized the read-only feasibility review following `5374496`. Its [findings and exact proposed AppContainer preflight](ocr-appcontainer-preflight.md) identify the external base-interpreter dependency, a project-local staged-runtime alternative and temporary per-user profile side effects. No profile/ACL change, native control or OCR run is approved or performed by that review. Review the preflight before any boundary configuration; Part B retains the gates below.
+
 **Blocking decisions:** reviewed Part A results and English-data SHA-256 record; accepted native network/filesystem boundary; approved trial settings/quality gates below. Do not rerun T07A controls or change firewall/OS policy under this proposal. If no suitable execution boundary is agreed, no native import, PDF render, fixture decoding or OCR trial starts. Public metadata preparation is independent of that boundary.
 
 Proposed permitted work after final Part B approval: one evaluation adapter/test package (not application ingestion), exact uv provisioning in the project `.venv`, reuse of existing pypdf/Pillow/pypdfium2 pins, deterministic synthetic fixture materialization, tests and measurements, then teardown/reporting. No Ollama calls or user-document parsing; T11 later covers combined pressure. Proposed files: `tests/evals/spikes/ocr_trial.py`, `test_ocr_trial.py`, one shared-meter aid if justified, and affected documentation/dependency files.

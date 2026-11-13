@@ -8,6 +8,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 The [OCR execution-boundary comparison](docs/proposals/ocr-trial.md#native-execution-boundary-recommendation---pending-decision) recommends AppContainer feasibility review before a separately approved preflight. Sandbox and a manually disconnected synthetic-only trial are alternatives with different limits. No boundary is selected or tested; no OCR installation/execution is authorized by this documentation.
 
+The [read-only feasibility review](docs/proposals/ocr-appcontainer-preflight.md) is complete. It proposes staging the existing base Python under `.venv` and a temporary per-user AppContainer profile, with an exact access map and bounded synthetic preflight. Those changes and controls await approval; the current environment is unchanged.
+
 The dedicated project environment is `F:/document_assistant/.venv`, using Python 3.14.6 and local uv 0.13.8. Installed baseline: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5, with exact transitive versions in `uv.lock`. Global/user packages are not inherited. No application or selected runtime parser/OCR/index/model exists yet. The optional pdf-eval group installs pypdf 7.0.1, pdfplumber 0.11.10 and seven pinned dependencies locally for evaluation only; all baseline versions are unchanged. The approved tabular-eval group adds openpyxl 3.1.5, et-xmlfile 2.0.0 and defusedxml 0.7.1 for T07 evaluation only.
 
 ## Project documents
