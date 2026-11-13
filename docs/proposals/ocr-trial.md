@@ -1,6 +1,8 @@
 # T09 - Proposed bounded English OCR evaluation
 
-**Date:** 2026-11-13. **Status:** Part A artifact preparation and proposal commit explicitly approved on 2026-11-13 ("yes proceed"); Part B remains unapproved. The user approved committing the shortlist and preparing this proposal. That review is committed in `1337560`. No wheels, language data or model bytes have been fetched; no OCR package was installed/imported or run.
+**Date:** 2026-11-13. **Status:** Part A artifact preparation and proposal commit explicitly approved on 2026-11-13 ("yes proceed"); Part B remains unapproved. The shortlist is committed in `1337560`. At proposal preparation no artifacts had been fetched; the subsequent partial download/stop is recorded immediately below. No OCR package was installed/imported or run.
+
+**Actual disposition:** Proposal committed in `bf3b82e`; Part A subsequently stopped incomplete at the FlatBuffers missing-notice gate. See the [actual outcome](../benchmarks/ocr.md). Fourteen wheel hashes/sizes were verified, thirteen notice collections completed; 125,721,610 bytes/14 requests and all 16 conservative process slots consumed. No separate English assets fetched, installs or OCR imports/runs. The pre-run descriptions below are historical where superseded by that result; no automatic retry or Part B approval.
 
 ## Requested decision and sequence
 
