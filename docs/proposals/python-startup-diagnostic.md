@@ -2,6 +2,8 @@
 
 **Status:** User explicitly approved this diagnostic package and its three-document proposal commit ("continue please"). Approval is not execution evidence; results will be recorded separately. This is a new diagnostic package, not a restart of the stopped AppContainer preflight. [Prior failure and evidence](../benchmarks/appcontainer-preflight.md). Stage 1 remains PDF/XLSX/CSV, Windows 11, 16 GB and CPU only.
 
+**Actual outcome:** Proposal committed in `1658cdc`. A-original and A-staged started successfully; B-original produced a marker but hit the native Job accounting guard before its full receipt. The remaining five cases were not attempted. [Results, accounting discrepancy and evidence gap](../benchmarks/python-startup-diagnostic.md). No automatic retry or repair; the schedule below describes the approved intent, not eight completed cases.
+
 ## Question and scope
 
 Determine whether the observed startup failure follows the staged runtime, launch configuration or both. The existing evidence establishes only an unrestricted positive worker's exit `0xC0000142`; it identifies neither a failed DLL nor a cause. Even a successful contrast may only narrow the cause. Do not promise this small experiment will identify a particular DLL or repair startup.
