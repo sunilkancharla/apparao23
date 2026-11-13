@@ -1,8 +1,8 @@
 # Stage 1 Atomic Task Checklist
 
-**Status:** T01–T03 and T05 complete; T04 explicitly deferred; T02R complete — user approved closeout/commit. T05 closes with approved PyMuPDF comparison deferral. **Prepared:** 2026-11-13 (Asia/Calcutta).
+**Status:** T01–T03/T02R/T05 complete; T04 deferred; T07 bounded results reviewed and approved for commit; coverage follow-up remains open, with the budget-accounting gap recorded. Three approved process improvements implemented. T05 closes with approved PyMuPDF comparison deferral. **Prepared:** 2026-11-13 (Asia/Calcutta).
 
-**Authority:** Approved SPEC, AGENTS and PLAN. Format amendment committed in e1ee6ff. The user authorized T02R (“cool, go ahead”) and reconfirmed XLS is required; its definition refresh is verified and approved at closeout. T04 closes by user-approved optional-tool deferral; T05 permissive trial was authorized after licensing review; T06 is excluded from Stage 1; T07–T50 and proposed T07A/T16A are unstarted.
+**Authority:** Approved SPEC, AGENTS and PLAN. Format amendment committed in e1ee6ff; T02R in 28ec7ad. The user explicitly approved the exact T07 package and three process improvements. Provisioning/local trial ran; the user approved recording the reviewed results/gaps and committing the package; remaining acceptance coverage is not waived. T04 closes by user-approved optional-tool deferral; T05 permissive trial was authorized after licensing review; T06 is excluded from Stage 1; T08–T50 and proposed T07A/T16A are unstarted.
 
 ## Proposed scope-alignment revision — 2026-11-13
 
@@ -23,8 +23,8 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 ## Checklist conventions and completion rules
 
 - User authorized T03 closeout and read-only T04 review, then explicitly declined SkillSpector. T05 review and permissive trial were authorized. Replying “ok, next step please” to the explicit closeout/commit question approves PyMuPDF comparison deferral, the T05 commit and initially T06 review; later user instructions supersede that next step by excluding DOCX/TXT from Stage 1 and revising formats. G1–G4 and D01–D09 still govern later work; no runtime adoption or T06 installation is authorized.
-- Record explicit task authorization before starting, then work on one task at a time. All required prerequisites/decisions must be satisfied. Plan approval alone does not authorize installs, trials, component adoption, commits, or every subsequent task.
-- Every task includes G3: relevant skill verification, actual evidence, quality/security review as applicable, README/PLAN/TODO updates, readable diff, commit question, and next-task authorization. Existing permission persists for its approved scope.
+- Record one explicit approval for a bounded package containing ordered task IDs, exact artifacts/versions, provisioning/fixture/execution permissions, resource limits, checks and stop conditions. Proceed sequentially within that approved scope without repeating permission questions. Ask for scope/budget/artifact expansion or another unapproved package; commits, G2 adoption and stage transitions retain explicit gates.
+- Each coherent package closeout includes G3: actual checks/evidence, relevant review, TODO and affected documentation updates, readable diff and commit question. Keep README current for coherent results and PLAN for sequence/scope changes; existing authorization persists for covered steps.
 - Scope S means normally 1–2 substantive files; M means 3–5, plus routine README/PLAN/TODO updates. Likely paths are proposals, not instructions to create empty modules. Re-split before work if a task exceeds one focused session/five substantive files.
 - Code tasks use test-first development: meaningful failing test, smallest passing change, refactor, focused pytest plus relevant regression checks and Ruff. Mock Ollama in routine tests; label actual local model/OCR smoke results separately. Validate commands after approved setup, normally `uv run pytest <listed-test-path>`, `uv run ruff check .`, `uv run ruff format --check .`.
 - Every trial first verifies exact upstream/version/artifacts, alternatives, license/transitive/native obligations, maintenance/security, permissions/network behavior, Windows/CPU support, RAM/disk and offline assets. G1 permission is required before optional installation/download/execution; G2 adoption is separate. Use only approved local non-sensitive fixtures.
@@ -105,14 +105,14 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 ### T07 — Compare XLSX and CSV extraction baselines
 
-**Status:** Proposed. **Prerequisites:** T02–T04, T02R; exact trial approved under G1. **Scope:** M, bounded shared fixture trial.
-**Objective:** Establish structured local tabular/text baselines with minimal dependencies.
+**Status:** Bounded results reviewed and commit approved; follow-up acceptance coverage remains open. Genuine encrypted/VBA coverage and combined worker-cap accounting gaps are retained. **Prerequisites:** T02–T04/T02R and exact T07 package approval satisfied. **Scope:** M, bounded shared fixture trial.
+**Objective:** Establish structured local XLSX/CSV baselines with minimal dependencies; no TXT work.
 
-- [ ] Compare viable XLSX handling including openpyxl as a candidate with standard-library CSV paths; retain sheets/cells/records/columns/headers/physical-line spans, quoted cells and encoding warnings.
+- [x] Compare viable XLSX handling including openpyxl as a candidate with standard-library CSV paths; retain sheets/cells/records/columns/headers/physical-line spans, quoted cells and encoding warnings.
 - [ ] Evaluate merged headers, formula/cached values without execution, external links, protected/invalid inputs and approved memory boundaries; record fidelity, resource, license and offline tradeoffs.
 
 **Verification:** Compare expected cell/range/record and physical-line anchors and values on the fixed small corpus; disclose missing cached values and unsupported encodings.
-**Evidence:** Pending — `docs/benchmarks/tabular-text-parsers.md` and local measurements.
+**Evidence:** `docs/benchmarks/tabular-text-parsers.md`: three exact packages installed in `.venv`, earlier pins unchanged; 40 original-sample workers, reader agreement on 15,656 cells/repetition, CSV gold/provenance checks, nine-test full-suite pass plus a later focused guard pass and mutation detection. Offline sync/lock, Ruff and diff checks passed. Genuine encrypted/VBA/full-scale coverage remains unverified. T07 counter=79, plus 13 T05 regression workers outside it (92 overall); the combined 80-worker cap was not enforced, and further workers stopped. No runtime adoption; second criterion remains open for gap review/follow-up before adoption. Approved process consolidation/package approvals/early feasibility order implemented. User approved committing these reviewed results and process changes (“yes please”); no runtime adoption or retroactive budget expansion is inferred.
 **Likely files:** That report and at most three evaluation files.
 
 ### T07A — Compare legacy XLS parsers
@@ -165,9 +165,23 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 **Evidence:** Pending — `docs/benchmarks/embeddings.md`, raw measurements/settings and recommendation.
 **Likely files:** That report and at most three evaluation files.
 
+### T11A — Check chat feasibility early using fixed evidence
+
+**Status:** Scheduled next after T10; not started. **Prerequisites:** T02R, T03/T10; exact Ollama/model/asset/budget package approved under G1. **Scope:** M.
+**Objective:** Detect CPU-only generation quality/latency/RAM limitations before completing other parser/tool investigations.
+
+- [ ] Review exact small-model candidates/artifacts/licenses and run bounded fixed-evidence English questions with real CSV/PDF anchors; record context/settings/digest and abstention/citation behavior.
+- [ ] Measure first-load and repeated response latency, throughput and total system/Ollama memory on the 16 GB CPU-only target; report infeasibility/tradeoffs without selecting a default or claiming combined OCR feasibility.
+
+**Verification:** Fixed gold evidence/questions, retained failures and reproducible actual-machine measurements. Reuse approved artifacts/settings at T11; avoid duplicate runs absent changed conditions.
+**Evidence:** Pending — early section of `docs/benchmarks/chat-models.md` and bounded measurements.
+**Likely files:** That report and at most three local evaluation aids.
+
+**Checkpoint CP-FEAS — T10/T11A:** Review CPU-only embedding/chat feasibility before more parser/tool investment. Models remain candidates until combined checks and G2 approval.
+
 ### T11 — Benchmark local Ollama chat candidates
 
-**Status:** Proposed. **Prerequisites:** T09–T10; approved exact chat models/downloads under G1. **Scope:** M.
+**Status:** Proposed. **Prerequisites:** T09–T10 and T11A; approved exact chat models/downloads under G1. Reuse early fixed-evidence results; focus remaining work on combined OCR/model pressure and any unresolved quality cases. **Scope:** M.
 **Objective:** Find practical evidence-grounded CPU chat settings within the 16 GB workstation budget.
 
 - [ ] Compare `qwen2.5:3b` as a candidate with another approved model/size on fixed evidence/questions/settings; record digest/quantization/context, load/first-token/full-answer latency, token rate and variation.
@@ -193,6 +207,8 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 ### T13 — Identify and evaluate the intended RTK project
 
+**Scheduling:** After T34 or before proposed tool use; does not block core G2 or the first CSV slice.
+
 **Status:** Proposed. **Prerequisites:** T01, T03–T04; D08 identity; approved optional trial under G1. **Scope:** S.
 **Objective:** Evaluate only the user-intended RTK project against a concrete developer-workflow need.
 
@@ -205,6 +221,8 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 ### T14 — Identify and evaluate the intended ponytail project
 
+**Scheduling:** After T34 or before proposed tool use; does not block core G2 or the first CSV slice.
+
 **Status:** Proposed. **Prerequisites:** T01, T03–T04; D08 identity; approved optional trial under G1. **Scope:** S.
 **Objective:** Review ponytail independently without assumptions from similarly named tools.
 
@@ -216,6 +234,8 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 **Likely files:** That report and at most one fixture description.
 
 ### T15 — Evaluate UI UX Pro Max before frontend adoption
+
+**Scheduling:** After core G2 and before T33; evaluate the aid/manual alternative without implicitly changing the approved frontend stack.
 
 **Status:** Proposed. **Prerequisites:** T02–T04; D05; exact optional tool/trial approved under G1. **Scope:** M, design aid only.
 **Objective:** Evaluate whether the aid improves required local browser flows without selecting a framework implicitly.
@@ -245,7 +265,7 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 **Additional review prerequisite:** Resolve the approved chart-evaluation scope through the proposed T16A investigation below or an explicit user-approved deferral before architecture adoption.
 
-**Status:** Proposed. **Prerequisites:** T01–T16, with only explicit optional-tool deferrals; all blocking decisions resolved. **Scope:** M, review only.
+**Status:** Proposed. **Prerequisites:** T01/T02/T02R/T03/T05/T07/T07A/T08/T09/T10/T11A/T11/T12/T16, T04 approved deferral, and chart-scope prerequisite above; all core blocking decisions resolved. T06 excluded; T13/T14 are scheduled after the first slice or before use; T15 remains required before T33, not core G2. **Scope:** M, review only.
 **Objective:** Obtain G2 approval of exact components and interfaces before application implementation.
 
 - [ ] Present benchmark-backed parser/OCR/model/index/UI alternatives and selections, diagram/inventory, ownership/provenance/data-root/API/status/error boundaries, loopback security, retention and interruption/recovery design.
@@ -316,6 +336,7 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 - [ ] Load stable evaluation manifests; create necessary synthetic document artifacts only in ignored/temporary paths using approved packages and keep private samples separate with ground truth/hashes.
 - [ ] Provide representative valid/invalid/native/scanned/table fixtures and mocked Ollama responses so routine tests need neither internet nor a running model.
+- [ ] Enforce one run budget across parser/model/negative/regression child processes and retained output, with deterministic exhaustion tests; do not repeat T07's counter gap. Before any earlier combined rerun, supply the equivalent shared meter/allocation in its approved package.
 
 **Verification:** Repeat fixture generation/loading and compare expected content/anchors; run harness/mock checks and inspect ignored artifacts.
 **Evidence:** Pending — reproducibility, coverage and privacy review.
@@ -703,6 +724,10 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 **Evidence:** Pending — report, raw non-sensitive measurements and user adoption decision.
 **Likely files:** `docs/benchmarks/chart-interpretation.md`, fixture/question definitions and at most two bounded evaluation aids. This is an investigation proposal, not authorization for dependencies or code execution.
 
+## Approved delivery priority
+
+After T07 closeout: T10 → T11A (early CPU feasibility) → T07A → T08 → T09 → T11 (combined pressure) → T12 → T16 → T17/G2 → CSV-first T18–T34, with T15 before T33. T13/T14 follow the first slice or precede proposed use. These are scheduling changes approved with the three improvements; provisioning/execution of those future packages remains gated. New T11A is an early risk check, not runtime adoption or replacement of T11's combined measurements.
+
 ## Current handoff
 
-The plan/T02 design are approved; **T01–T03 and T05 complete; T04 deferred at user request**. Baseline setup was verified and committed in bb68c40. T05 results and limitations are in `docs/benchmarks/pdf-parsers.md`; user accepted PyMuPDF empirical-comparison deferral and authorized the T05 commit (d8d12e7). The subsequent explicit format amendment excludes T06; the proposed T02R/T07/T07A sequence and CSV-first/XLS task changes await review. No application implementation/runtime parser adoption occurred. Further provisioning/adoption remains gated.
+T01–T03/T02R/T05 complete; T04 deferred; T06 excluded. T02R is committed in 28ec7ad. The approved T07 package and three process improvements are implemented, reviewed and approved for commit; remaining coverage still needs follow-up before adoption. Coverage and budget limitations remain explicit rather than marking all T07 criteria complete. Next proposed package is T10 read-only service/model/embedding review, then T11A early chat feasibility; model/service provisioning still needs exact artifact/budget approval. XLS remains required at T07A. No application ingestion or runtime adoption occurred.

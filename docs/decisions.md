@@ -1,5 +1,11 @@
 # Stage 1 Decision Register
 
+## Approved process improvements and T07 package — 2026-11-13
+
+The user explicitly approved T07 and all three improvements: consolidate settled SPEC requirements, bounded work-package approvals, earlier model feasibility/CSV-first delivery. Preserve Git/G2/scope/stage gates; do not ask repeatedly for covered package steps. T10/T11A move earlier; combined OCR/model checks remain before adoption. Optional RTK/ponytail cannot block the first slice, UI UX Pro Max remains before frontend implementation. Moving tasks authorizes no future model/service downloads.
+
+Actual T07 results, coverage gaps and combined worker-budget accounting failure are in `docs/benchmarks/tabular-text-parsers.md`. Installed three pins inside `.venv`, no runtime adoption/application ingestion. The user approved committing the reviewed results and process changes (“yes please”). This does not waive remaining acceptance coverage, retroactively expand the worker budget or adopt runtime components.
+
 ## Format-scope decision — 2026-11-13
 
 User explicitly instructed “we will stick with - pdf, xls, xlsx, csv for this stage”. Approved Stage 1 formats are PDF/XLS/XLSX/CSV; DOCX/TXT are excluded entirely from Stage 1; later inclusion requires explicit user approval. The user clarified that DOCX/TXT must be excluded entirely from Stage 1 development, evaluation provisioning, fixture materialization and positive-support acceptance. They may be included in later stages only if the user explicitly requests it. This supersedes earlier five-format statements and the initial instruction to skip DOCX temporarily. SPEC and persistent rules are synchronized. Propose T02R corpus refresh, separate T07A XLS evaluation, CSV-first implementation and repurposed unstarted T37/T39 tasks; sequence changes await review. Do not add parser dependencies or claim XLS support yet. No formulas/macros/external relationships may execute. Limits, OCR, privacy and other approved behavior remain in force.

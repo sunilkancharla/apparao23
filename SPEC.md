@@ -11,29 +11,23 @@ Build a single-user, browser-based, local document-chat assistant with conversat
 - SQLite for metadata/chat history; local retrieval index/vector storage to be selected after benchmarks.
 - Format-specific parsers and/or MarkItDown, local OCR engine for scanned PDFs, pytest and Ruff.
 - Support PDF, XLS, XLSX and CSV; both conversation attachments and reusable library. DOCX and TXT are excluded entirely from Stage 1.
-- File size/count limits, OCR languages, deletion behavior and advanced image interpretation remain open decisions.
+- Confirmed limits, OCR language, UI and lifecycle rules are consolidated below. Only the listed unresolved details require decisions.
 
-## Commands
+## Confirmed Stage 1 decisions
 
-Use these as **proposed** Windows PowerShell commands; validate versions, paths, and prerequisites during the dependency-review task before adopting them. Commands describe development setup, not permission to start implementation.
+Current approved requirements; do not ask for these decisions again. Remaining details are listed under Open Questions.
 
-```powershell
-uv python install 3.11
-uv venv --python 3.11
-.\.venv\Scripts\Activate.ps1
-uv add fastapi uvicorn httpx
-uv add --dev pytest ruff
-ollama pull qwen2.5:3b
-ollama pull embeddinggemma
-uv run pytest
-uv run uvicorn app.main:app --host 127.0.0.1 --port 8000
-```
+- **Limits:** 100 MB per file, 10 files per upload/conversation, and 1 GB of library originals. Derived-data/storage budgets and exact enforcement/counting details are reviewed before implementation. Benchmark findings do not silently reduce these approved limits.
+- **OCR:** English only.
+- **Frontend:** Minimal locally served HTML/CSS/JavaScript. Use Design 1 as the primary landing-page reference and Design 2 for chat, citations and the evidence panel. A frontend framework requires separate review/approval.
+- **Performance decision timing:** Set final speed/memory targets after initial local benchmarks, before model/architecture adoption. Agree bounded trial budgets first; initial measurements are exploratory. Quality/evaluation thresholds need agreement before applicable acceptance evaluations.
+- **Chat deletion:** Delete the conversation's exclusive attachments; preserve reusable library documents and content still required by other references. Historical citation/message and derived-artifact retention details remain to be settled.
+- **Data charts/diagrams:** Approve a bounded local feasibility evaluation before deciding runtime support. Use an agreed English-labelled sample set to assess trends, comparisons, labelled values and data-diagram relationships, with real document/page/chart-region or sheet references where available. Compare structured data/labels/OCR with a local visual approach only after exact trial provisioning is approved. Check against manual ground truth, disclose approximate readings and abstain when unsupported. Measure correctness/grounding, citation support, cold/warm latency and total memory pressure on the target CPU-only 16 GB machine. Exact types, thresholds and trial budget are agreed first. No universal visual-understanding guarantee, cloud processing or automatic model/dependency adoption is authorized. The reviewed detail is in `docs/proposals/chart-interpretation.md`; runtime implementation/acceptance tasks require a separate adoption decision after results.
+- **Referenced library deletion:** Warn and block deletion while saved conversations reference the library document. This interim Stage 1 rule is approved. SQLite history and document IDs/references remain Stage 1 requirements; more advanced deletion/citation handling may be considered later. Historical citation/message, detached-reference and derived-artifact retention details must be agreed before lifecycle implementation.
 
-- `ollama serve` is needed only if the local Ollama service is not already running.
-- Model names are **candidates**, not approved defaults; benchmark on Windows 11, 16 GB RAM, CPU-only. `embeddinggemma` and `qwen2.5:3b` come from the attached example, not a hardware benchmark.
-- Add document parsers, OCR engines, vector storage, frontend tools, and security packages only after a reviewed comparison; commands above are not a complete install recipe.
-- Provisioning may require internet; production runtime must never silently download models or invoke cloud APIs. Stage 3 includes an explicit disconnected-runtime verification.
+## Commands and actual setup
 
+Verified environment, lock, test and evaluation commands are maintained in `README.md` and `docs/provisioning.md`. Use the dedicated project `.venv` and its uv; do not install another interpreter, modify PATH or inherit global packages. Model/service/parser provisioning requires an approved exact work package. No application startup command is implemented yet; document it when the first slice exists. Model names `embeddinggemma` and `qwen2.5:3b` remain candidates, not defaults.
 
 ## Project Structure
 
@@ -128,7 +122,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 - Save conversations, messages, timestamps, and associated document collection references locally.
 - List, reopen, rename, and delete conversations.
 - On reopening, restore the conversation transcript and document context.
-- Define whether uploaded files remain attached to a conversation or belong to a reusable local library; this is a clarification item.
+- Support both conversation-specific attachments and a reusable library with distinct ownership and saved document references.
 
 ### FR-07 — Basic quality evaluation
 - Create a small, version-controlled evaluation set from sample documents.
@@ -161,7 +155,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 - Use `uv` for dependency management and a project-local `.venv`. Maintain a reproducible lockfile. Reassess each dependency for license, Windows compatibility, maintenance, memory cost, and offline behavior before adding it.
 - Treat uploaded document content as untrusted data, not instructions. Never execute macros, embedded scripts, or document-provided commands.
 - Maintain atomic `PLAN.md` and `TODO.md` tasks. Update `README.md` after each completed task or coherent feature with its actual functionality and libraries.
-- After each task/feature show tests and the Git diff, and **ask for approval before committing**. Record material design choices in `docs/ADR/`.
+- At each coherent task/work-package closeout, show checks and the Git diff and **ask for approval before committing**. Approved package steps do not need repeated task-start questions. Record material design choices in `docs/ADR/`.
 - Use Codex Agent Skills progressively: invoke only the skill appropriate to the current task; do not install or load every skill at once. `AGENTS.md` should be established after spec approval to capture persistent project rules.
 
 
@@ -174,7 +168,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 ## Boundaries
 
 - **Always:** local processing, untrusted-document isolation, source-grounded answers, explicit abstention, citations, evidence support signals, user-approved commits.
-- **Ask first:** file size limits, OCR language, visual chart reasoning, parser/embedding model selection, major dependencies, deletion semantics, LAN access.
+- **Ask first:** changes to confirmed limits/languages/scope, unresolved chart/runtime or retention choices, parser/model/runtime adoption, unapproved dependency/work packages and LAN access. Do not reopen settled requirements or repeat approval for covered steps.
 - **Never:** hosted inference/embeddings, executing document instructions/macros, fabricated citations, multi-user auth or MCP actions in Stage 1.
 
 ## Success Criteria
@@ -186,7 +180,10 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 ## Open Questions
 
-- Maximum file size/count/library volume; OCR languages; whether chart/diagram semantics are needed; deletion and retention semantics; final frontend choice.
+- Exact byte conversion, counting/dedup rules and derived/temporary storage budgets under the approved limits.
+- Historical message/citation, detached-reference, derived-artifact and temporary-file retention, preserving approved deletion rules.
+- Chart/diagram sample types, trial budgets/thresholds and runtime adoption after the approved feasibility evaluation.
+- Exact parser/OCR/model/index artifacts, performance/context/concurrency budgets and final architecture after evaluation. English-only OCR and minimal HTML/CSS/JavaScript are already approved.
 
 ## Agent Skills and Tool Evaluation Checkpoints
 
@@ -195,7 +192,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 | When to try it | Candidate tool / skill | What to test or decide |
 |---|---|---|
 | Before writing implementation tasks | `@spec-driven-development`, then `@planning-and-task-breakdown` | Review this stage's SPEC, resolve blocking questions, then create atomic PLAN/TODO tasks. |
-| Before accepting third-party Agent Skills or external tool instructions | **SkillSpector** | Evaluate as a skill-security inspection option: review skill contents, scripts, permissions, trust boundaries, and any external calls. Do not treat its report as a security guarantee; verify availability and usage before adoption. |
+| Before accepting third-party Agent Skills or external tool instructions | **SkillSpector** | Explicitly deferred by the user. Continue manual instruction/script/permission/outbound-call review; do not install, run or revisit SkillSpector unless requested. |
 | During document ingestion/parser spike | **Microsoft MarkItDown** | Compare against format-specific libraries on PDF, XLS, XLSX, CSV, scanned PDFs and tables. Record unsupported formats rather than assuming coverage. Measure extraction fidelity, provenance, OCR compatibility, installation size and offline operation. |
 | When deciding on UI implementation | **UI UX Pro Max** | Try as a design/workflow aid for accessibility, upload flows, citation previews and chat UX. Review generated assets/code and check licensing; not a required runtime dependency. |
 | When implementing and testing tasks | `@incremental-implementation`, `@test-driven-development`, `@code-review-and-quality` | Apply one relevant skill at a time; run tests and review changes before requesting commit approval. |
@@ -206,7 +203,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 ### Stage 1 tool trials
 
 1. **Before parser implementation:** compare MarkItDown with the evaluated PDF alternatives, separate XLS/XLSX candidates, standard-library CSV and local OCR on a representative fixture set. Compare page/sheet/cell/row provenance, tables, scanned pages and images; select the smallest adequate combination. The user accepted deferral of PyMuPDF's empirical comparison at T05 closeout; its metadata review is not a benchmark.
-2. **Before trusting downloaded Agent Skills:** try SkillSpector as an additional review, then manually inspect any shell scripts, file access and outbound requests.
+2. **Before trusting additional Agent Skills:** manually inspect instructions, scripts, file access and outbound requests. SkillSpector is explicitly deferred at user direction; no scanner trial is required.
 3. **During first web UI implementation:** trial UI UX Pro Max for layouts and accessibility; review output before use.
 4. **During Codex setup:** try `/status` to inspect the session and `/compact` only at sensible task boundaries. Review RTK and ponytail only after identifying their exact projects and proposed benefits.
 
@@ -259,12 +256,6 @@ Evaluate XLS separately from XLSX. Preserve sheet/cell/range provenance and avai
 - The user sees citations and a transparent evidence indicator; internal evaluation metrics are also recorded.
 - No multi-user authentication, RBAC, OAuth, MCP actions, or desktop packaging is required for Stage 1.
 
-### Remaining Stage 1 decisions
-- Confirm maximum file size, number of files per conversation, and total library size.
-- Confirm required OCR languages (English only, or additional languages).
-- Confirm whether embedded charts/diagrams need semantic interpretation in Stage 1 or whether traceable extraction/OCR is sufficient.
-- Confirm the deletion and retention behavior for documents referenced by saved conversations.
-
 ### Original stage deliverables and acceptance details
 
 ### 9. Stage 1 deliverables
@@ -298,14 +289,8 @@ Do not begin implementation until the user approves this Stage 1 specification, 
 
 **Conflict rule:** Confirmed decisions in the carried-forward revision and the concise top-level stage scope override older provisional or conditional language reproduced for traceability above. Any still-unresolved choice must be approved before it becomes an implementation commitment.
 
-## Approved T01 clarifications
+## Approved delivery-process refinement — 2026-11-13
 
-These explicit user decisions supersede the corresponding open questions above; other requirements and approval gates remain in force.
+The user approved consolidating settled requirements, bounded work-package approvals, and earlier hardware/model feasibility with a CSV-first vertical slice. A package states exact task scope, dependencies/versions/artifacts, downloads, local fixture generation, execution limits, checks and stop conditions. One approval covers those necessary steps; do not repeatedly request permission within that approved scope. Obtain a new decision only for scope/budget/artifact changes or another unapproved package. Git commits, G2 architecture/runtime adoption and stage transitions retain explicit approval. Do not silently download models or dependencies at startup.
 
-- **Limits:** 100 MB per file, 10 files per upload/conversation, and 1 GB of library originals. Derived-data/storage budgets and exact enforcement/counting details are reviewed before implementation. Benchmark findings do not silently reduce these approved limits.
-- **OCR:** English only.
-- **Frontend:** Minimal locally served HTML/CSS/JavaScript. Use Design 1 as the primary landing-page reference and Design 2 for chat, citations and the evidence panel. A frontend framework requires separate review/approval.
-- **Performance decision timing:** Set final speed/memory targets after initial local benchmarks, before model/architecture adoption. Agree bounded trial budgets first; initial measurements are exploratory. Quality/evaluation thresholds need agreement before applicable acceptance evaluations.
-- **Chat deletion:** Delete the conversation's exclusive attachments; preserve reusable library documents and content still required by other references. Historical citation/message and derived-artifact retention details remain to be settled.
-- **Data charts/diagrams:** Approve a bounded local feasibility evaluation before deciding runtime support. Use an agreed English-labelled sample set to assess trends, comparisons, labelled values and data-diagram relationships, with real document/page/chart-region or sheet references where available. Compare structured data/labels/OCR with a local visual approach only after exact trial provisioning is approved. Check against manual ground truth, disclose approximate readings and abstain when unsupported. Measure correctness/grounding, citation support, cold/warm latency and total memory pressure on the target CPU-only 16 GB machine. Exact types, thresholds and trial budget are agreed first. No universal visual-understanding guarantee, cloud processing or automatic model/dependency adoption is authorized. The reviewed detail is in `docs/proposals/chart-interpretation.md`; runtime implementation/acceptance tasks require a separate adoption decision after results.
-- **Referenced library deletion:** Warn and block deletion while saved conversations reference the library document. This interim Stage 1 rule is approved. SQLite history and document IDs/references remain Stage 1 requirements; more advanced deletion/citation handling may be considered later. Historical citation/message, detached-reference and derived-artifact retention details must be agreed before lifecycle implementation.
+Prioritize T10 embedding feasibility and a new T11A fixed-evidence chat feasibility task after T07, before the remaining format/tool evaluations. Complete combined OCR/model pressure checks after T09 before final adoption. Optional developer tools cannot delay the CSV upload → retrieval → local answer → citation → saved-conversation path; evaluate them before use. UI UX Pro Max remains a separate checkpoint before frontend implementation. See PLAN/TODO for the revised dependency order. No model installation or next-task execution is implied by this process refinement.

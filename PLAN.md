@@ -14,7 +14,19 @@ User approved PDF, XLS, XLSX and CSV for Stage 1, replacing DOCX/TXT. T05 is com
 
 T08 depends on T05, T07 and T07A (not excluded T06). T17 must resolve all four required formats and XLS license/security/provenance questions. DOCX/TXT definitions are historical only: no Stage 1 parser work, dependency evaluation/install, fixture generation, benchmarking or positive-support acceptance. Later support requires explicit user approval. No XLS original has been verified; add a safe authored fixture and seek a representative legacy workbook if available.
 
-**T02R evidence:** The user authorized the definition refresh after e1ee6ff and reconfirmed XLS is required. `docs/evaluation.md` now records S-XLS/Q21–Q25, S-CSV-INJECTION/Q20, 21 in-scope questions, four historical exclusions and explicit scoring-readiness gates. Definitions/source integrity checks passed; no documents generated or new packages installed. Exact XLS tooling, binary cache verification and representative sample coverage remain T07A/T17 gates. T02R closeout/commit approved; T07 review is next proposed. Original T02 counts below are historical, superseded by this refresh.
+**T02R evidence:** The user authorized the definition refresh after e1ee6ff and reconfirmed XLS is required. `docs/evaluation.md` now records S-XLS/Q21–Q25, S-CSV-INJECTION/Q20, 21 in-scope questions, four historical exclusions and explicit scoring-readiness gates. Definitions/source integrity checks passed; no documents generated or new packages installed. Exact XLS tooling, binary cache verification and representative sample coverage remain T07A/T17 gates. T02R closeout/commit approved; T07 review is now authorized and in progress. Original T02 counts below are historical, superseded by this refresh.
+
+**T07 current work:** User approved the exact package and three process improvements. Bounded results were reviewed and approved for commit in `docs/benchmarks/tabular-text-parsers.md`: 40 original-file runs, sampled agreement and controls, with encrypted/VBA/full-scale gaps and the combined worker-budget overrun. No runtime adoption/application ingestion. Next proposed package is early T10 review; T07A XLS remains required.
+
+## Approved process refinement and execution priority — 2026-11-13
+
+The user approved all three improvements while authorizing the complete T07 package: consolidate settled SPEC decisions, bundle exact bounded-task permissions, and prioritize model feasibility plus the CSV-first slice. The T07 approval covers its three pins, fixtures, tests, measurements and specified budgets without another task-start question. Git commit, G2 adoption, scope changes and work exceeding approved artifacts/budgets still need explicit approval.
+
+Revised execution order after T07: **T10 → T11A → T07A → T08 → T09 → T11 → T12 → T16 → T17/G2 → T18–T34**, with T15 before T33. T11A uses fixed verified evidence to expose CPU-only chat limitations early; T11 later combines those settings with OCR/embedding contention after T09. No model provisioning is authorized by moving the task. T07A XLS and T08 MarkItDown remain required parser reviews before adoption. T16A chart evaluation or an explicit runtime-scope decision remains required at G2.
+
+T13/T14 optional developer-tool reviews move after the first CSV slice (or immediately before proposed tool use); they cannot block core architecture or a working answer path. T15 UI UX Pro Max stays a separate evaluation before frontend implementation, with manual design as a reviewed alternative. No tool is implicitly adopted, installed or declared evaluated. Core G2 approves the already selected minimal HTML/CSS/JavaScript approach; later design-aid evaluation cannot silently change that stack.
+
+This order prioritizes CSV upload → retrieval → local answer → citation → saved conversation. XLS, XLSX, native/scanned PDFs, lifecycle, privacy and full acceptance remain required later slices; a first CSV demo does not satisfy all Stage 1 criteria. Complete-model resource adoption still needs combined evidence, not early fixed-evidence timings alone.
 
 ## 1. Planning basis and current state
 
@@ -55,7 +67,7 @@ Status is recorded below and in `docs/decisions.md`. T01 records explicit answer
 | D06 | Approved timing: final speed/memory targets after initial benchmarks, before T17 adoption; bounded trial budgets first. Quality rubric/thresholds remain for T02/T16 | Initial measurements exploratory; adoption/acceptance requires agreed targets |
 | D07 | Representative non-sensitive samples, permission to use them locally, and safe versioned evaluation material | Fixture/rubric design and reproducible experiments |
 | D08 | Exact RTK and ponytail projects and intended benefits | Separate optional trials; ambiguity may be explicitly deferred |
-| D09 | Exact trial downloads/installations, versions, disk budget, model/language assets and setup internet access | Each provisioning action; plan approval is not installation permission |
+| D09 | Exact trial downloads/installations, versions, disk budget, model/language assets and setup internet access | Before the exact bounded trial package; one approval covers its named provisioning/fixture/execution steps, not unlisted artifacts |
 
 Already confirmed: both library and chat attachments are required; library references share stored bytes; deleting a chat must not silently delete library documents; library removal warns about dependent conversations and defines historical citation behavior. Do not reopen these as optional scope or promise forensic secure erasure.
 
@@ -66,14 +78,14 @@ Already confirmed: both library and chat attachments are required; library refer
 | G0 — Plan review | PLAN/TODO, open decisions and task order | Approve/revise plan and identify the next authorized task, normally T01 |
 | G1 — Each trial | Exact project/artifact/version, license/security review, download/install commands, fixture/method and resource budget | Authorize that bounded provisioning/trial before it runs |
 | G2 — Design/adoption | T17 architecture pack with T05–T16 evidence, selected components, contracts and lifecycle policy | Approve exact design/model/dependency choices before product implementation |
-| G3 — Each task | Actual tests/experiment results, review, docs/status updates and readable diff | Review completion, ask whether to commit, and authorize the next task separately |
+| G3 — Coherent package closeout | Actual checks/results, review, affected docs/status and readable diff | Review completion and explicitly approve commits; continue already approved tasks without redundant start permissions |
 | G4 — Acceptance | T50 demo and acceptance matrix with all evidence | Stage 1 sign-off; Stage 2 requires a separate explicit transition decision |
 
 Existing permissions persist for their approved scope; do not ask twice for the same action. A plan, draft ADR, passing test or standing rule is not permission to install a tool, choose a retention policy, commit, or begin an unapproved task.
 
-Work sequentially on one approved task. Independent parser/model investigations could technically be reordered once prerequisites are met, but this proposal does not authorize parallel agents or concurrent changes. Schema, shared contracts, API/UI integration and destructive lifecycle work remain sequential.
+Work sequentially through tasks named in an approved bounded package. Reordering outside that package or changing its budgets/artifacts needs review; no parallel agents are authorized. Schema, shared contracts, API/UI integration and destructive lifecycle work remain sequential.
 
-For each task, inspect current project state, state objective/criteria/dependencies/files, verify/read relevant skills, perform the bounded work, run appropriate checks, review, and update README/PLAN/TODO with actual evidence/blockers. Implementation uses incremental implementation and TDD; API/frontend skills when warranted; code review at completion; security review for uploads/parsing/trust boundaries; documentation/ADR guidance for consequential decisions. Never weaken tests to pass.
+For each approved task/package, inspect state and criteria, verify relevant skills, perform bounded work and checks, review, update TODO, and update README for the coherent result. Change PLAN for actual sequence/scope changes and decision records for consequential choices; avoid duplicating every transient status across all files. Implementation uses incremental implementation and TDD; API/frontend skills when warranted; code review at completion; security review for uploads/parsing/trust boundaries; documentation/ADR guidance for consequential decisions. Never weaken tests to pass.
 
 Each task targets one focused session and normally at most five substantive files; routine PLAN/TODO/README updates are additional. Split a task before execution if it proves larger. Spikes may use approved isolated local evaluation aids without adopting them into product runtime. Documentation-only tasks use consistency/link/diff checks, not fabricated application tests.
 
@@ -165,10 +177,10 @@ TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 
 
 | Milestone | Tasks in default execution order | Review outcome |
 |---|---|---|
-| M0 — Decisions/evaluations/design | T01 decisions; T02 fixtures/rubric; T03 environment/dependencies; T04 SkillSpector; T05 PDF; T02R corpus revision; T06 excluded; T07 XLSX/CSV; T07A XLS; T08 MarkItDown; T09 OCR; T10 embeddings; T11 chat; T12 storage; T13 RTK; T14 ponytail; T15 UI UX Pro Max; T16 grounding contract; T17 architecture | G1 trial approvals throughout; G2 design/component adoption before app code |
+| M0 — Decisions/evaluations/design | T01 decisions; T02 fixtures/rubric; T03 environment/dependencies; T04 SkillSpector; T05 PDF; T02R corpus revision; T06 excluded; T07 XLSX/CSV; T10 embeddings; T11A early chat; T07A XLS; T08 MarkItDown; T09 OCR; T11 combined chat; T12 storage; T16 grounding; T17 core architecture | G1 trial approvals throughout; G2 design/component adoption before app code |
 | M1 — Minimal foundations | T18 reproducible project; T19 local startup/config; T20 ownership persistence; T21 provenance contracts; T22 fixture harness | Tested foundations only; no complete future schema or unused modules |
 | M2 — First upload slice | T23 safe CSV attachment; T24 batch/status; T25 extraction/preview | User can upload and inspect traceable local text |
-| M3 — First answer slice | T26 chunk; T27 embed; T28 index; T29 retrieve; T30 grounded chat; T31 citations; T32 indicator; T33 browser flow; T34 saved chats | CSV upload → answer/abstention → citation → restart/reopen |
+| M3 — First answer slice | T26 chunk; T27 embed; T28 index; T29 retrieve; T30 grounded chat; T31 citations; T32 indicator; T15 UI aid review; T33 browser flow; T34 saved chats | CSV upload → answer/abstention → citation → restart/reopen |
 | M4 — Required format expansion | T35 native PDF; T36 scanned/mixed OCR; T37 XLS; T38 XLSX; T39 CSV robustness; T40 mixed-format integration | Four formats with table/image/OCR provenance and disclosed limitations |
 | M5 — Library and lifecycle | T41 library upload/list; T42 references/scope; T43 impact warnings; T44 document removal; T45 chat deletion | Shared bytes, safe scope, approved removal/retention and citations |
 | M6 — Acceptance | T46 security/recovery; T47 offline traffic; T48 quality/resource baseline; T49 setup/inventory/docs; T50 demo/sign-off | G4 evidence; no automatic Stage 2 transition |
@@ -176,9 +188,9 @@ TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 
 ```text
 G0 → T01 → T02 → T03 → G1 approvals for trials
 T02/T03 → T04 → T05; T02R → T07 → T07A; T05/T07/T07A → T08 → T09
-T02/T03 → T10 → T11 → T12
-T01/T03/T04 → T13/T14/T15
-Required trial evidence → T16 → T17 → G2
+T07 → T10 → T11A → T07A/T08/T09 → T11 → T12
+T34 → T13/T14 (or before tool use); T17 → T15 → T33
+Required parser/model/storage/grounding evidence → T16 → T17 → G2 (T13–T15 do not block core G2)
 G2 → T18 → T19 → T20 → T21 → T22
 T22 → T23 → T24 → T25 → T26 → T27 → T28 → T29
 T29 → T30 → T31 → T32 → T33 → T34
@@ -222,6 +234,6 @@ The CSV path proves the full pipeline before every parser is built. Each later f
 
 ## 11. Review and stopping point
 
-Review the task sequence, architecture proposal, nine decision areas, task sizes, and evaluation/adoption gates. The next proposed task after approval is **T01**, not application scaffolding or model download. No investigation, provisioning, product code or commit is authorized merely by the presence of this plan.
+Review actual bounded-package evidence and gaps. Next proposed package is **T10 read-only service/model/embedding review**, followed by T11A fixed-evidence chat feasibility. Exact model/service assets and trial budgets need approval before provisioning. No application scaffolding or runtime adoption is authorized merely by this plan.
 
-**Current progress:** T01–T03 and T05 complete; environment preparation brought forward from T18 was verified and committed in bb68c40. T04 optional SkillSpector is deferred at explicit user direction, with no scanner trial. Manual skill/script review remains required. T05 compared pypdf/pdfplumber locally after user authorization; results, limits and five passing tests are in `docs/benchmarks/pdf-parsers.md`. User accepted deferral of the unrun PyMuPDF empirical comparison and authorized the T05 commit (d8d12e7). The later explicit format amendment excludes T06 and changes Stage 1 to PDF/XLS/XLSX/CSV; the downstream task revision awaits review. SPEC now records the user-approved format amendment; the earlier PyMuPDF evaluation exception does not select a runtime parser. No application/model benchmark or runtime adoption occurred. Target stays 16 GB/CPU-only; T18 is not otherwise complete.
+**Current progress:** T01–T03/T02R/T05 complete, T04 deferred, T06 excluded. The user approved committing T07 bounded trial results and the three process improvements; remaining T07 acceptance coverage is still open. The report records encrypted/VBA/full-scale gaps and regression workers omitted from the trial counter. No application/model benchmark or runtime adoption occurred. Target stays 16 GB/CPU-only; T18 is not otherwise complete. TODO is the detailed status authority.

@@ -13,7 +13,7 @@ This file contains persistent, repository-wide working instructions for Codex. R
 ## Current approval state and stopping point
 
 - **Active stage: Stage 1 — Local Prototype. The user has approved `SPEC.md`.** Do not ask for approval of the unchanged specification again.
-- **PLAN.md and TODO.md are approved.** T01–T03 are complete; T04 concludes with user-approved SkillSpector deferral. T05 is complete with user-approved PyMuPDF comparison deferral, committed in d8d12e7. The user excluded DOCX/TXT entirely and approved PDF/XLS/XLSX/CSV scope, committed in e1ee6ff. T02R definition refresh is complete, reviewed and approved for commit; see `docs/evaluation.md`. T06 is excluded; T07 XLSX/CSV and separate T07A XLS remain unstarted. Revised downstream tasks, concrete provisioning/adoption and commits retain their gates. Target stays 16 GB/CPU-only. Record decisions in `docs/decisions.md`.
+- **PLAN.md and TODO.md are approved.** Current task status, approvals and evidence belong in TODO/PLAN and linked reports; keep this file focused on persistent rules. The approved format scope is PDF/XLS/XLSX/CSV, with DOCX/TXT excluded entirely. T07 and the three delivery-process improvements were explicitly authorized; later work remains within its recorded package gates.
 - Specification approval does not approve a plan, unresolved behavior, architecture/dependency/model selection, installation, application implementation, Git commit, or stage transition.
 - Documentation and planning requests may proceed within their explicitly authorized scope. Finish the requested documents and consistency/diff checks, then wait at the applicable approval gate. Do not use a documentation or planning request to begin provisioning or application coding.
 - When planning is requested, propose root-level `PLAN.md` and `TODO.md` using the verified planning skill. Include a first task to resolve blockers and separate architecture, dependency, parser, OCR, model, storage, and optional-tool evaluations before implementation. Present the plan for approval.
@@ -37,9 +37,9 @@ This file contains persistent, repository-wide working instructions for Codex. R
 
 Record explicit decisions before implementing dependent behavior. Compare alternatives and explain consequences; do not silently choose defaults for:
 
-- Maximum file size, files per upload/conversation, total library volume, and related processing limits.
-- Required OCR languages and language assets.
-- Whether semantic chart/diagram interpretation is needed in Stage 1 or traceable extraction/OCR is sufficient.
+- Unresolved enforcement/counting and derived-storage details under the already approved limits in SPEC; do not reopen settled size/count choices.
+- Exact English OCR assets/engine; English-only language scope is already approved.
+- Chart trial settings/thresholds and runtime adoption after the already approved bounded feasibility evaluation.
 - Document/conversation deletion and retention: originals, normalized outputs, embeddings, temporary artifacts, messages, quotations, and historical citations.
 - Final frontend approach, parsers, OCR engine, vector index, embedding/chat models, and substantial dependency/architecture/security changes.
 - Acceptable latency, memory and quality budgets, and representative evaluation samples when defining benchmarks.
@@ -67,10 +67,16 @@ Use skills as workflows, not mandatory application dependencies. Load only relev
 - Before editing, inspect relevant code, AGENTS/SPEC/README, and PLAN/TODO if present. Check actual workspace/Git state rather than relying on prior reports. State the task, acceptance criteria, prerequisites, and intended files.
 - Break implementation into small, ordered, independently testable tasks. Each TODO entry needs an identifier, objective, prerequisites, acceptance criteria, verification/evidence, and status.
 - Separate uncertain parser/OCR/model/storage investigations from implementation. Define representative fixtures, measurements, alternatives, and adoption gates; do not hide architecture choices inside coding tasks.
-- Work on one approved atomic task at a time. Do not start the next task, introduce scope, or modify the approved SPEC without the required explicit authorization.
-- Update existing PLAN/TODO with actual progress and blockers. Never mark work complete without acceptance evidence or recreate absent plans for an unrelated documentation edit.
+- Work sequentially on the tasks inside an approved bounded work package. A package identifies ordered task IDs, exact versions/artifacts, allowed downloads/installations/fixture generation, execution and resource budgets, checks and stop conditions. One approval authorizes its necessary steps; do not ask again for actions already covered. Ask before exceeding/changing that scope or starting an unapproved package. Scope amendments, runtime adoption, Git commits and stage transitions retain their explicit gates.
+- Update TODO with task evidence/status. Update README after a coherent feature/evaluation; update PLAN when sequence/scope changes and decision records for consequential choices. Do not duplicate every transient status across all documents. Never mark work complete without acceptance evidence or recreate absent plans for an unrelated documentation edit.
 - Compare alternatives and request approval before substantial dependency, architecture, security, or data-retention changes.
 - Preserve important decisions, active task state, blockers, and test results before context compaction. Verify `/status` and `/compact` availability in the active host; report unavailable commands rather than claiming they ran.
+
+## Delivery priorities
+
+- Prove CPU-only embedding/chat feasibility early using fixed, verified evidence before completing all optional-tool investigations. Combined OCR/model resource checks still precede final adoption.
+- Deliver the CSV upload → retrieval → local answer → citation → saved-conversation vertical slice before expanding product ingestion. XLS remains required and receives separate parser evidence.
+- Optional developer tools do not block core architecture or the first slice. Evaluate a tool before installing/relying on it; keep UI UX Pro Max's separate review before frontend implementation. No automatic adoption or removal of mandatory format/OCR/privacy acceptance follows from prioritization.
 
 ## Python, dependencies and architecture
 
@@ -106,10 +112,11 @@ Use skills as workflows, not mandatory application dependencies. Load only relev
 - Exclude `.venv/`, runtime `data/`, secrets, model assets, user documents, generated document artifacts, and local databases from Git. Version safe authored fixture definitions/manifests instead of private/generated document files.
 - Verify local/offline core operation at relevant milestones, including no required external traffic or runtime downloads. Stage 3 has the final strict disconnected-runtime gate; that does not relax Stage 1 local-processing/privacy requirements.
 - Run relevant checks and report actual commands/results, failures, and environment limits. Never claim tests passed, a capability works offline, or answers are accurate without evidence.
+- Include trial, negative-control and regression subprocesses in the same approved execution budget. A counter covering only one adapter is insufficient for a combined suite. Before a new combined run, verify a shared meter/stop boundary or use an approved explicit allocation; never silently reset an exhausted trial budget.
 
 ## Optional tools: evaluation before adoption
 
-When planning is authorized, create separate PLAN/TODO evaluation tasks before installing or relying on optional tools. Verify exact repository/version, license, scripts/permissions, outbound behavior, Windows support, and resource costs. Obtain trial-install approval, test a small local representative fixture, document results, and ask whether to adopt. Record unavailable/rejected/deferred outcomes honestly.
+When planning is authorized, create separate PLAN/TODO evaluation tasks before installing or relying on optional tools. Verify exact repository/version, license, scripts/permissions, outbound behavior, Windows support, and resource costs. Obtain one approval for the exact bounded trial package (installation, fixtures, execution and budgets), test local representative fixtures, document results, and separately review adoption. Do not request repeated approvals for covered steps. Record unavailable/rejected/deferred outcomes honestly.
 
 | Milestone | Candidate | Evaluation |
 |---|---|---|
@@ -126,7 +133,7 @@ When planning is authorized, create separate PLAN/TODO evaluation tasks before i
 
 - Inspect `git status` and existing diffs before changes; preserve user edits. If Git is absent, say so. Untracked files do not appear in ordinary `git diff`; use readable no-index comparisons or file review without staging implicitly.
 - Do not commit, push, tag, rewrite history, or perform destructive Git operations without explicit user approval. Editing files does not authorize staging or committing them.
-- After each task/feature: run relevant checks, review quality/security as applicable, update documentation and existing task records, summarize changed files and evidence/limits, show a readable diff or explain if Git is absent, and **ask whether to commit**.
+- At each coherent task/work-package closeout: run relevant checks and quality/security review, update TODO and affected documentation, summarize changed files/evidence/limits, show a readable diff, and **ask whether to commit**. Implementation increments within the approved package do not each require another task-start permission.
 - Never stage the whole workspace indiscriminately. An approved commit includes only reviewed files and no secrets, runtime data, model weights, user documents, or generated document artifacts.
 - Do not advance to Stage 2 until Stage 1 acceptance is demonstrated and the user explicitly approves the transition.
 
