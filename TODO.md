@@ -167,7 +167,7 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 
 ### T11A — Check chat feasibility early using fixed evidence
 
-**Status:** Benchmark execution complete across approved original/continuation epochs; all 96 planned slots have completed results, original timeout retained. Final 27 tests/Ruff pass; local human semantic review and any model adoption remain pending. **Prerequisites:** T02R, T03/T10 complete; original and continuation G1 packages approved. **Scope:** M.
+**Status:** Benchmark execution complete across approved original/continuation epochs; all 96 planned slots have completed results, original timeout retained. Final 27 tests/Ruff pass; user qualitatively accepted the local outputs on 2026-11-13. Structured semantic scores and model adoption remain pending. **Prerequisites:** T02R, T03/T10 complete; original and continuation G1 packages approved. **Scope:** M.
 **Objective:** Detect CPU-only generation quality/latency/RAM limitations before completing other parser/tool investigations.
 
 - [ ] Review exact small-model candidates/artifacts/licenses and run bounded fixed-evidence English questions with real CSV/PDF anchors; record context/settings/digest and abstention/citation behavior.
@@ -176,6 +176,8 @@ User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entire
 **Verification:** Fixed gold evidence/questions, retained failures and reproducible actual-machine measurements. Reuse approved artifacts/settings at T11; avoid duplicate runs absent changed conditions.
 **Evidence:** [T11A report](docs/benchmarks/chat-models.md): both pinned Apache-licensed models provisioned locally; all 96 planned request slots completed across 97 retained attempts, including the original timeout. Qwen2.5 completed-response median 10.566 s; Qwen3 14.211 s across sessions. The approved continuation ran only its 13 missing/interrupted Qwen3 cases, used 30/32 starts and 19/40 calls, downloaded nothing, and retained original hashes/ledgers. Final 27 tests and Ruff passed; owned process exit and later host/OS listener-table cleanup verified. Timeout diagnostics and bounded teardown fixes have executed/final-tested source snapshots. Local combined review has 35 output/failure groups; semantic correctness/citation support and strict 16-GB/combined/offline acceptance remain unscored/unverified. User explicitly approved the reviewed source/documentation commit on 2026-11-13 (“yes sir, i am good with that”). No runtime adoption, new dependencies or application code. Later Qwen2.5 3B licensing/candidate decision remains open.
 **Likely files:** That report and at most three local evaluation aids.
+
+**User review follow-up:** User review, 2026-11-13: in response to the local factual/citation review request, the user replied “I am good with it”. Record qualitative acceptance of the reviewed outputs; no per-answer grades, claim counts or citation-support measurements were supplied. Numeric semantic metrics remain unscored; this does not select a runtime model or waive PDF, strict-16-GB, combined OCR/model or offline acceptance. T11A source/evaluation documentation is committed in 0872c22. Next proposed task is T07A read-only XLS parser review; installation/trial and adoption retain their exact package gates.
 
 **Checkpoint CP-FEAS — T10/T11A:** Review CPU-only embedding/chat feasibility before more parser/tool investment. Models remain candidates until combined checks and G2 approval.
 

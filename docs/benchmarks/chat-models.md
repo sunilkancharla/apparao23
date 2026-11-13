@@ -2,6 +2,12 @@
 
 **Date:** 2026-11-13 (Asia/Calcutta). **Status:** Approved continuation completed all 13 missing/interrupted Qwen3 requests. Across both epochs, **all 96 planned slots have completed/schema-scope-valid results**, with **97 total attempts** retaining the original timeout. Final 27 tests and Ruff pass. Cleanup independently verified; semantic answer/citation review remains pending. Source/documentation commit explicitly approved on 2026-11-13; semantic review and runtime adoption remain separate gates. T10 is committed in `55d68f6`.
 
+## User review follow-up
+
+User review, 2026-11-13: in response to the local factual/citation review request, the user replied “I am good with it”. Record qualitative acceptance of the reviewed outputs; no per-answer grades, claim counts or citation-support measurements were supplied. Numeric semantic metrics remain unscored; this does not select a runtime model or waive PDF, strict-16-GB, combined OCR/model or offline acceptance. T11A source/evaluation documentation is committed in 0872c22.
+
+Earlier pending-review statements below describe the state before this reply. Structured semantic scores remain unfilled.
+
 ## Completed continuation and combined observations
 
 The user explicitly approved the documented **32-start/40-call/25-minute, no-download** continuation. New linked receipts are under `data/t11a/continuation-01/`; the original result, cases, ledger, failed attempt and source snapshot were not overwritten. The installed executable and every pinned Qwen3 layer were hash-verified again. There were **zero downloaded bytes and no dependency/environment/global changes**.
