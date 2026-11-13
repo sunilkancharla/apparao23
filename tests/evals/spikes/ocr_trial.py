@@ -30,6 +30,14 @@ CONTROLS = ("missing", "wrong", "truncated", "empty", "unreadable", "pixels",
             "deadline", "memory", "backend", "remote")
 
 
+def configure_run(run_id: str) -> None:
+    """Choose only reviewed run IDs; never reset a stopped run's ledger/seal."""
+    global RUN
+    if run_id not in {"manual-01", "manual-02"}:
+        raise ValueError("Unreviewed manual run ID")
+    RUN = ROOT / "data/t09-manual-ocr" / run_id
+
+
 def canonical_name(name: str) -> str:
     """Compare equivalent distribution spellings without relaxing version pins."""
     return re.sub(r"[-_.]+", "-", name).lower()
@@ -435,7 +443,9 @@ def prepare() -> None:
     (RUN / "proposed-pyproject.toml").write_text(offline_project(inventory, state["baseline"]),
                                                encoding="utf-8")
     launcher = Path(__file__).with_name("run_manual_ocr.ps1")
-    (RUN / "run.ps1").write_bytes(launcher.read_bytes())
+    launcher_text = launcher.read_text(encoding="utf-8").replace(
+        "[string]$RunId = 'manual-01'", f"[string]$RunId = '{RUN.name}'")
+    (RUN / "run.ps1").write_text(launcher_text, encoding="utf-8")
     files = [Path(__file__), Path(__file__).with_name("ocr_trial_fixtures.py"),
              Path(__file__).with_name("appcontainer_preflight.py"), launcher,
              RUN / "run.ps1", RUN / "proposed-pyproject.toml", RUN / "prepared-state.json",
@@ -582,6 +592,10 @@ def offline_main() -> None:
     """One local entry point; no preparation or execution is repeated implicitly."""
     from appcontainer_preflight import ExtendedLimits, Native, memory_ready
 
+    if RUN.name == "manual-02":
+        approved = json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
+        if approved.get("execution_approved") is not True:
+            raise RuntimeError("Continuation prepared, but execution allocation is not approved")
     if input("All external links disconnected; accept no filesystem confinement? Type OFFLINE: ") != "OFFLINE":
         raise RuntimeError("No disconnection attestation")
     ensure_disconnected()
@@ -741,11 +755,19 @@ def offline_main() -> None:
 
 
 if __name__ == "__main__":
-    if sys.argv[1:] == ["prepare"]:
+    arguments = sys.argv[1:]
+    if len(arguments) == 2 and arguments[0] in {"prepare", "offline"}:
+        configure_run(arguments[1])
+        arguments = arguments[:1]
+    if arguments == ["prepare"]:
         prepare()
-    elif sys.argv[1:] == ["offline"]:
+    elif arguments == ["offline"]:
         offline_main()
-    elif len(sys.argv) == 3 and sys.argv[1] == "worker":
-        worker(Path(sys.argv[2]))
+    elif len(arguments) == 2 and arguments[0] == "worker":
+        request_path = Path(arguments[1]).resolve()
+        configure_run(request_path.parent.parent.name)
+        from appcontainer_preflight import contained
+
+        worker(contained(RUN / "requests", request_path))
     else:
         raise SystemExit("Use only the reviewed prepare/offline handoff modes")

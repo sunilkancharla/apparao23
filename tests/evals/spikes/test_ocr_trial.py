@@ -25,6 +25,13 @@ class OCRContracts(unittest.TestCase):
         locked = {trial.canonical_name("pdfminer-six"): "20260107"}
         self.assertEqual(baseline, locked)
 
+    def test_fresh_run_selection_does_not_reuse_stopped_directory(self):
+        with patch.object(trial, "RUN"):
+            trial.configure_run("manual-02")
+            self.assertEqual(trial.RUN, trial.ROOT / "data/t09-manual-ocr/manual-02")
+            with self.assertRaises(ValueError):
+                trial.configure_run("../manual-01")
+
     def test_case_definitions_preserve_pdf_page_and_derivative_identity(self):
         cases = trial.case_definitions()
         self.assertEqual(len(cases), 10)

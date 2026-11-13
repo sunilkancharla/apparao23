@@ -24,6 +24,8 @@ The user approved the [manual disconnected synthetic OCR package](docs/proposals
 
 The [first manual run stopped](docs/benchmarks/manual-ocr-first-stop.md) after successful offline resolution, before installation or fixture creation: the runner compared `pdfminer.six` and `pdfminer-six` as different names. Name normalization is corrected; 13 contract tests and Ruff passed. Teardown was verified, original config/lock restored, and no OCR ran. The old handoff is stopped/invalidated; a fresh approved continuation is required, with prior counters retained.
 
+Repair committed in `6120666`. The user approved the [fresh manual-02 handoff](docs/proposals/manual-ocr-continuation.md), its separate 160-start allocation and source/handoff commit. It is sealed with explicit run selection (14 contract tests/Ruff passed); the execution gate is enabled only for the user's disconnected local start. No new native trial or installation occurred. Current restart state is saved in [the session checkpoint](docs/session-checkpoint.md).
+
 The dedicated project environment is `F:/document_assistant/.venv`, using Python 3.14.6 and local uv 0.13.8. Installed baseline: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5, with exact transitive versions in `uv.lock`. Global/user packages are not inherited. No application or selected runtime parser/OCR/index/model exists yet. The optional pdf-eval group installs pypdf 7.0.1, pdfplumber 0.11.10 and seven pinned dependencies locally for evaluation only; all baseline versions are unchanged. The approved tabular-eval group adds openpyxl 3.1.5, et-xmlfile 2.0.0 and defusedxml 0.7.1 for T07 evaluation only.
 
 ## Project documents

@@ -1,6 +1,8 @@
 # Manual offline OCR trial - local instructions
 
-**STOP NOTICE:** The first run stopped before installation because of a package-name comparison defect. [Diagnosis and tested repair](../benchmarks/manual-ocr-first-stop.md). Its ledger is not reusable, and its source seal no longer matches the corrected helper. The command below is historical until an explicitly approved fresh handoff is prepared; do not rerun/reset/reseal `manual-01`.
+**OLD RUN STOPPED:** The first run stopped before installation because of a package-name comparison defect. [Diagnosis and tested repair](../benchmarks/manual-ocr-first-stop.md). Do not rerun/reset/reseal `manual-01`; its ledger is not reusable. The approved fresh **manual-02** command below replaces it.
+
+**Active approved handoff:** [manual-02 continuation](manual-ocr-continuation.md) and its separate 160-start allocation are now explicitly approved. Use only the manual-02 command below. The stopped manual-01 instructions/state remain historical and must not be reused.
 
 **Prepared 2026-11-14 (Asia/Calcutta).** This is the user-operated portion of the approved [synthetic-only package](manual-disconnected-ocr-trial.md). Nothing has been installed/rendered/OCR-tested during connected preparation. The end-to-end offline path is unrun; contract tests, hashes and script syntax have been checked. A missing cache entry, Windows restriction or backend incompatibility stops the run, without downloads or retries.
 
@@ -15,7 +17,7 @@ Disconnect Wi-Fi, unplug Ethernet and disconnect tethering/other external links.
 ## One command after disconnecting
 
 ```powershell
-& 'F:\document_assistant\data\t09-manual-ocr\manual-01\run.ps1'
+& 'F:\document_assistant\data\t09-manual-ocr\manual-02\run.ps1'
 ```
 
 The runner uses the existing project environment and only verified cached wheels/assets. It performs offline resolution/install, preserves existing version pins, creates synthetic PDF/image fixtures, then pauses for your review. No pip fallback, package/model/font download, global install or network-setting change is permitted.
@@ -23,7 +25,7 @@ The runner uses the existing project environment and only verified cached wheels
 When prompted, open this **local** file in your browser or Explorer:
 
 ```text
-F:\document_assistant\data\t09-manual-ocr\manual-01\fixtures\contact-sheet.html
+F:\document_assistant\data\t09-manual-ocr\manual-02\fixtures\contact-sheet.html
 ```
 
 Check each image against its displayed expected text. M08 (rotated) and M09 (low contrast) deliberately test degraded input. If the ordinary readable cases are wrong/unreadable or page mappings look incorrect, decline readiness; do not change the expected text. Type `READY` in the terminal only after review. That pause is recorded separately from timed execution.
@@ -35,7 +37,7 @@ The fixed schedule then compares two English OCR engines, at most 60 comparison 
 Read the terminal and this local sanitized report:
 
 ```text
-F:\document_assistant\data\t09-manual-ocr\manual-01\summary.json
+F:\document_assistant\data\t09-manual-ocr\manual-02\summary.json
 ```
 
 Reconnect only after `teardown_verified` is `true` and `active_owned_children` is empty. `completed_pending_quality_review_no_adoption` means the schedule finished, not that an OCR engine passed all quality gates or is adopted. A stopped run is also valid evidence; keep its files/ledger and do not run again.

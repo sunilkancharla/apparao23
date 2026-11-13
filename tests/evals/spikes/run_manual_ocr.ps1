@@ -1,10 +1,14 @@
 # User-operated offline handoff. No downloads, Windows setting changes or OCR online.
+param([ValidateSet('manual-01','manual-02')][string]$RunId = 'manual-01')
 $ErrorActionPreference = 'Stop'
 $trialProjectRoot = 'F:\document_assistant'
-$trialRunRoot = Join-Path $trialProjectRoot 'data\t09-manual-ocr\manual-01'
+$trialRunRoot = Join-Path $trialProjectRoot ('data\t09-manual-ocr\' + $RunId)
 Set-Location -LiteralPath $trialProjectRoot
 $trialMeterPath = Join-Path $trialRunRoot 'meter.json'
 $trialMeter = Get-Content -Raw -Encoding UTF8 -LiteralPath $trialMeterPath | ConvertFrom-Json
+if ($RunId -eq 'manual-02' -and $trialMeter.execution_approved -ne $true) {
+    throw 'Continuation prepared but not approved for execution. Do not run or edit this gate.'
+}
 if ($trialMeter.PSObject.Properties.Name -contains 'offline_started') {
     throw 'This run already started offline. Do not reset or retry its ledger.'
 }
@@ -25,7 +29,7 @@ $trialNetwork = @{
 }
 $trialNetwork | ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 -LiteralPath (Join-Path $trialRunRoot 'local-network-metadata.json')
 & (Join-Path $trialProjectRoot '.venv\Scripts\python.exe') -I -S -B `
-    (Join-Path $trialProjectRoot 'tests\evals\spikes\ocr_trial.py') offline
+    (Join-Path $trialProjectRoot 'tests\evals\spikes\ocr_trial.py') offline $RunId
 $trialSummaryPath = Join-Path $trialRunRoot 'summary.json'
 if (Test-Path -LiteralPath $trialSummaryPath) {
     $trialSummary = Get-Content -Raw -Encoding UTF8 -LiteralPath $trialSummaryPath | ConvertFrom-Json
