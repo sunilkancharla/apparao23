@@ -2,6 +2,8 @@
 
 **Date:** 2026-11-13. **Status:** Read-only shortlist review complete; artifact selection, bounded trial and runtime adoption pending. The user authorized this review after accepting T08 non-adoption/empirical deferral. No OCR package/binary/model download, installation, import, execution, PDF rendering or fixture generation occurred.
 
+**Follow-up:** This shortlist is committed in `1337560`. The user authorized preparing the [bounded proposal](../proposals/ocr-trial.md) and [exact artifact inventory](../proposals/ocr-trial-artifacts.json). Further public metadata review identified tesserocr 2.13.0's Python 3.14 Windows wheel, whose upstream release reports bundled Tesseract 5.5.4/Leptonica 1.87.0; this offers a project-local alternative to the standalone installer gap below. Sixteen proposed new wheels and three English assets total 140,501,680 declared bytes. No binaries/models were fetched or installed. The proposal requests artifact inspection only first; native OCR execution remains separately gated on inspection findings and an agreed boundary. Earlier recommendations below describe the initial shortlist, not an adopted engine.
+
 ## Recommendation
 
 Keep **Tesseract and RapidOCR with ONNX Runtime CPU** as the comparison shortlist. Prefer a narrowly configured Tesseract subprocess as the initial engineering baseline if a reviewed, patched Windows binary can be provisioned entirely inside `.venv`. Its TSV output suits word/region provenance and the subprocess interface avoids a Python extension ABI dependency. This is an architectural proposal, not a measured performance preference or engine adoption.

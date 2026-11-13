@@ -145,10 +145,11 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T09 — Compare local OCR and scanned/mixed-PDF paths
 
-**Status:** Read-only OCR shortlist review complete; artifact review and exact trial proposal remain pending. No engine selected, installed or benchmarked. **Prerequisites:** T05, T08 (closed with approved trial deferral); D02/D03; rendering/OCR/language assets require exact G1 approval before provisioning. **Scope:** M.
+**Status:** Read-only shortlist committed in `1337560`; exact artifact inventory and bounded proposal prepared for review. Part A artifact-only inspection and proposal commit approved ("yes proceed"); Part B OCR execution is not ready for approval until its native boundary and inspection findings are resolved. No engine installed or benchmarked. **Prerequisites:** T05, T08 (closed with approved trial deferral); D02/D03; exact G1 gates remain binding. **Scope:** M.
 **Objective:** Measure a viable local OCR path without assuming language or chart semantics.
 
 - [x] Review Tesseract and RapidOCR CPU paths, English assets, source-level provenance, Windows compatibility evidence, dependencies/licenses, outbound initialization and provisioning gaps; record uncertainty rather than infer runtime readiness.
+- [x] Prepare [bounded proposal](docs/proposals/ocr-trial.md) and [artifact inventory](docs/proposals/ocr-trial-artifacts.json): 16 proposed new wheels plus three English assets, 140,501,680 declared bytes; no declared active-version conflicts in metadata-only closure. Include tesserocr 2.13.0's bundled patched engine, explicit missing English-data SHA-256, notice review, separate preparation/execution budgets and native-boundary stop gate. No downloads of those artifacts, installs or OCR runs; preparation is not execution approval.
 - [ ] Compare a Tesseract-based option with another viable Windows/CPU alternative on approved scans/mixed pages/languages; retain native/OCR distinction, page/region/image references and confidence/warnings where available.
 - [ ] Measure accuracy against ground truth, page time, peak RAM, renderer/language footprint and offline behavior; test native-parser/MarkItDown integration where viable and propose bounded processing settings.
 

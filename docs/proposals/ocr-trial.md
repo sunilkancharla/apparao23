@@ -1,0 +1,93 @@
+# T09 - Proposed bounded English OCR evaluation
+
+**Date:** 2026-11-13. **Status:** Part A artifact preparation and proposal commit explicitly approved on 2026-11-13 ("yes proceed"); Part B remains unapproved. The user approved committing the shortlist and preparing this proposal. That review is committed in `1337560`. No wheels, language data or model bytes have been fetched; no OCR package was installed/imported or run.
+
+## Requested decision and sequence
+
+Approve **Part A: artifact preparation and inspection only** first. It has exact candidate identities and a bounded download/inspection scope. It does not install packages or execute OCR/native modules. Part B below defines the proposed comparison, but is **not ready for execution approval** until the native execution boundary and artifact-inspection findings are resolved. This separation avoids another stopped document trial and makes the outstanding security decision explicit.
+
+1. Part A verifies artifacts, notices and model identity without importing them, and presents an installation-ready inventory.
+2. Review the Part A evidence and agree the native network/filesystem boundary before authorizing Part B installation and execution. No AppContainer, Windows Sandbox, firewall rule, OS feature, interpreter change or global installation is assumed.
+3. One subsequent approval of a finalized Part B package covers its test-first adapters, provisioning, fixtures, controls, measurements and teardown within the fixed budget. Runtime adoption and commits remain separate gates.
+
+The machine target remains Windows 11, 16 GB RAM and CPU only; actual host capacity does not change it. No user documents are needed for the proposed synthetic comparison.
+
+## Artifact identity and dependencies
+
+The [artifact inventory](ocr-trial-artifacts.json) supplies all **16 new wheel filenames, exact URLs, byte counts, SHA-256 values, versions, purposes and declared dependencies**, plus the three proposed language/model assets. Registry identities are not downloaded-byte verification. It records six already-installed reused dependencies; all other baseline/evaluation pins also remain unchanged.
+
+| Candidate / addition | Purpose and license evidence | Compatibility / review limit |
+|---|---|---|
+| tesserocr 2.13.0 | MIT binding; upstream release says wheels bundle Tesseract 5.5.4 and Leptonica 1.87.0 | Exact cp314 Windows x64 wheel, 24,071,055 bytes. Replaces the earlier proposed standalone executable for this trial only; it will run inside an owned Python worker, not the application process. |
+| RapidOCR 3.10.0 | Apache-2.0 wrapper; model ownership/notices separately reviewed | Universal wheel, 27,288,134 bytes; actual Python 3.14 behavior remains untested. |
+| ONNX Runtime CPU 1.31.1 | MIT metadata; bundled native notices still to inspect | Standard cp314 Windows x64 wheel, 15,268,752 bytes; no GPU runtime/provider package. |
+| OpenCV-headless 5.0.0.93 / NumPy 2.5.4 | Image preprocessing and arrays; Apache-2.0 / multiple bundled permissive notices declared | Native Windows wheels exist. OpenCV 5 is a major version; satisfying package constraints does not prove RapidOCR API compatibility. |
+| pyclipper 1.4.0 / Shapely 2.2.0 | Polygon clipping/geometry; MIT / BSD-3-Clause wrapper metadata | Inspect native components, including GEOS obligations; do not label every bundled library BSD from the wrapper metadata. |
+| PyYAML 6.0.3 / OmegaConf 2.4.0 | Configuration; MIT / tagged OmegaConf BSD-3-Clause LICENSE | No source build. The selected OmegaConf metadata has no declared ANTLR runtime dependency; do not import an older dependency graph by assumption. |
+| six 1.17.0 / tqdm 4.70.1 / colorlog 6.12.0 | Compatibility/progress/logging; MIT / MPL-2.0 AND MIT / MIT metadata | Keep local diagnostics free of document text. |
+| requests 2.34.2 / urllib3 2.8.0 | Required HTTP helpers; Apache-2.0 / MIT | Presence does not authorize runtime fetching. No optional SOCKS, compression, social/notebook extras. |
+| flatbuffers 25.12.19 / protobuf 7.36.2 | Runtime serialization; Apache-2.0 / BSD metadata | Pin protobuf's listed Windows ABI3 wheel, not its alternate universal wheel. |
+
+Sources: version-specific PyPI metadata URLs are embedded per wheel in the inventory; [tesserocr release](https://github.com/sirfz/tesserocr/releases), [tagged Windows build](https://raw.githubusercontent.com/sirfz/tesserocr/v2.13.0/.github/build-scripts/windows-install-tesseract.ps1), [OmegaConf license](https://raw.githubusercontent.com/omry/omegaconf/v2.4.0/LICENSE). The Tesseract build script uses conda-forge native dependencies and requests a non-GPL/LZO libarchive variant; this is upstream build evidence, not permission to install Conda or a complete wheel-license inventory. Inspect bundled notices before installation.
+
+Public metadata review followed active Windows/Python 3.14 requirements with extras disabled and preserved installed versions. It found no declared version conflicts and compatible wheel tags for the proposed closure. This is a manual metadata check, **not uv resolution, import testing, a full advisory audit or native-DLL compatibility proof**. No vulnerability entries appeared in those version metadata responses; that does not certify the graph.
+
+If Part B is approved later, propose an evaluation-only `ocr-eval` group through uv, scoped by markers to Windows AMD64/Python 3.14 so NumPy's Python >=3.12 requirement does not silently raise the project's >=3.11 baseline. Resolve without changing any existing version; unexpected dependencies, source builds, artifact substitution or baseline drift stop provisioning for review. Actual lock/manifest changes remain unperformed.
+
+## English assets
+
+- **Tesseract:** `tessdata_fast` tag 4.1.0 resolves to commit `65727574dfcd264acbb0c3e07860e4e9e9b22185`; immutable `eng.traineddata` URL, **4,113,088 bytes**, Git blob SHA-1 `bbef4675053b5b468cdb477053e28b1c698ba08e`. Apache-2.0. No expected SHA-256 was available in inspected metadata: verify size and the Git blob identity, record SHA-256 after download, and present it before Part B approval. Do not mislabel a Git identifier as SHA-256 or treat a newly computed digest as independent publisher authentication. No orientation/language extras. [Source metadata](https://api.github.com/repos/tesseract-ocr/tessdata_fast/contents/eng.traineddata?ref=4.1.0), [license](https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/4.1.0/LICENSE)
+- **RapidOCR detection:** `en_PP-OCRv3_det_mobile.onnx`, **2,421,707 bytes**, SHA-256 `ea07c15d38ac40cd69da3c493444ec75b44ff23840553ff8ba102c1219ed39c2`.
+- **RapidOCR recognition:** `en_PP-OCRv4_rec_mobile.onnx`, **7,653,044 bytes**, SHA-256 `e8770c967605983d1570cdf5352041dfb68fa0c21664f49f47b155abd3e0e318`.
+
+RapidOCR's tagged [model registry](https://raw.githubusercontent.com/RapidAI/RapidOCR/v3.10.0/python/rapidocr/default_models.yaml) supplies the versioned ModelScope URLs/hashes; ModelScope file metadata independently supplied matching hashes and sizes. These are the English paths, not default multilingual PP-OCRv6 assets. Inspect the exact upstream PaddleOCR attribution/license and whether recognition dictionary metadata is embedded; an extra dictionary/font/model download is outside this package and requires revision. A model-license notice covering default models is not sufficient by itself for these English artifacts. [Model notice](https://raw.githubusercontent.com/RapidAI/RapidOCR/v3.10.0/python/MODEL_LICENSES.md)
+
+The 16 wheels total **126,313,841 bytes**; the three assets total **14,187,839 bytes**; combined declared payload **140,501,680 bytes (133.99 MiB)**. Actual transfer includes metadata, redirects, failures and retries and must be metered separately. No installed-size or RAM estimate is asserted from compressed payload sizes.
+
+## Part A - exact preparation-only package for approval
+
+Allowed after approval:
+
+1. Create a fresh ignored receipt/artifact directory beneath `data/t09-artifacts/<unique-id>` and a project-local download cache beneath `.venv/.cache/ocr-review`. Do not reset any prior meter. Write reviewed standard-library-only download/ZIP-inspection helpers there; never execute downloaded scripts.
+2. Fetch only the inventory's 16 wheels and three assets, plus public metadata/license text needed to inspect those same artifacts. No package/model substitution, source archive, executable installer, dynamic dependency resolver or runtime download. Permit at most one retry per URL, counted within the total budget; any hash/size mismatch stops immediately without retry.
+3. Validate exact bytes and expected SHA-256 for wheels/ONNX assets; verify English data as described above. Validate archive paths, member counts, duplicate names and bounded decompressed bytes before reading wheel metadata/notices. Read only ZIP entries with standard-library code; no imports, native DLL loading, install hooks, bytecode execution, model inference or PDF/image decoding.
+4. Inventory native DLL names/versions available from metadata and bundled license/NOTICE/SBOM records, inspect entry points/startup/download paths, trace English model notices and report gaps. Source text is evidence; absence of an SBOM is not a security pass. Do not extract native libraries into importable application locations.
+5. Publish sanitized identities, sizes, notice obligations and advisory findings; keep archives/models ignored. Stop and present missing/incompatible notices/assets honestly. No changes to `pyproject.toml`, `uv.lock`, baseline packages, global directories/PATH or Windows settings in Part A.
+
+Part A limits: **256 MiB total downloaded response-body bytes** including failed/retried/metadata requests; **48 HTTP requests** including each redirect hop; **20 minutes elapsed** from the first preparation action; **16 total process starts including helpers, launcher children, checks and teardown**; **one network request/inspection at a time**; **512 MiB controller private memory**; **at least 4 GiB system RAM available**; **1 GiB additional local disk** including archives/metadata; **256 MiB decompressed bytes per wheel** and **20,000 members per wheel**. Header-only requests count toward requests. No claimed CPU/RAM execution guarantee follows from archive inspection. If a download length is missing, stream-count and enforce caps rather than trust headers.
+
+Maintain one append-only receipt/meter before every launch/request; every failed attempt remains charged. Tests of the preparation helper must use safe authored byte strings and mocked HTTP, share the 16-start allocation, and never run OCR. If adequate controller/descendant accounting cannot be established, stop before starting helpers. Exhaustion/failure pauses the package; do not silently reset, expand or switch tools.
+
+## Part B - conditional comparison design, not execution approval
+
+**Blocking decisions:** reviewed Part A results and English-data SHA-256 record; accepted native network/filesystem boundary; approved trial settings/quality gates below. Do not rerun T07A controls or change firewall/OS policy under this proposal. If no suitable execution boundary is agreed, no native import, PDF render, fixture decoding or OCR trial starts. Public metadata preparation is independent of that boundary.
+
+Proposed permitted work after final Part B approval: one evaluation adapter/test package (not application ingestion), exact uv provisioning in the project `.venv`, reuse of existing pypdf/Pillow/pypdfium2 pins, deterministic synthetic fixture materialization, tests and measurements, then teardown/reporting. No Ollama calls or user-document parsing; T11 later covers combined pressure. Proposed files: `tests/evals/spikes/ocr_trial.py`, `test_ocr_trial.py`, one shared-meter aid if justified, and affected documentation/dependency files.
+
+### Settings and comparable cases
+
+- One owned worker at a time; 300-DPI rendering; at most **12 million pixels per page**, **30 seconds per OCR worker**, **1.5 GiB Job commit per worker**, controller **512 MiB**, available system RAM **>=4 GiB**. Record render transforms and original page identity; reject over-budget pages without silently downsampling them.
+- Tesseract through tesserocr's worker: explicit local English data directory, `lang=eng`, LSTM-only engine, automatic page segmentation without OSD, one thread, no external user/system dictionary files or implicit engine discovery; retain the selected traineddata contents. Verify actual Tesseract 5.5.4/Leptonica 1.87.0 strings before scoring.
+- RapidOCR: explicit local English detector/recognizer files; no orientation classifier; explicit CPU provider, one intra-op and one inter-op thread; recognition threshold 0.5, `return_word_box=true`; detector maximum side 2000 with limit type `max`; no GPU provider, default model initialization, remote image/path input or fallback downloads. Exact backend API keys must match reviewed 3.10.0 source; unsupported settings stop readiness rather than being ignored.
+- Ten raster cases: all seven original pages from S-PDF-NATIVE (2), S-PDF-SCAN (2) and S-PDF-MIXED (3), plus three separately identified derivatives: rotated invoice, low-contrast invoice and a bounded revenue-table crop. Preserve original fixture gold; derivatives receive distinct IDs/transforms. No chart-reasoning score is inferred from recognizing labels.
+- Materialize using existing reviewed packages and bundled/standard PDF fonts, with deterministic parameters/hashes and a manifest of expected text/locations. No new font, fixture package or document content download. Freeze unreadability/low-contrast/rotation parameters and locally review resulting images before scoring; stop readiness if representative controls cannot be verified. Maximum **24 generated files**, **160 MiB total fixture bytes**.
+- Compare exactly the same ten raster inputs with each engine, **three fresh-process repetitions**: 60 OCR worker roots. First versus repeated launch is recorded; do not claim a cold OS file cache. Force-OCR native pages only for engine comparison; separate routing checks must skip OCR on adequate native text and preserve original mixed-page method/order without duplicate text.
+- Ten negative/control cases per engine (20 roots): missing data/model, wrong data/model, truncated raster, empty raster, unreadable page behavior, render-pixel refusal, deadline watchdog, worker-memory sentinel, unavailable engine/native assets, and attempted remote-input rejection. Use safe bounded sentinels, never destructive resource bombs. Network-denial verification belongs to the agreed boundary, not just URL rejection.
+
+### Shared budget, test-first work and outcomes
+
+Proposed single Part B allocation: **240 process starts total**, including launcher children/descendants, teardown and all tests. Allocation: 16 preflight/control slots, 8 provisioning slots, 16 fixture/render slots, 120 OCR slots for 60 worker roots plus launcher allowances, 40 negative slots for 20 roots plus allowances, 24 test-controller slots and 16 reserve. These sum to 240; reserves are not permission to rerun failed controls. Count actual descendants with a verified shared boundary; no adapter-local or pytest-only counter. Controller slots never authorize unmetered test workers. Old metered suites are not implicitly included or reset.
+
+Additional proposed limits: **20 minutes provisioning**, then **45 minutes total execution from the first test/controller**, **128 MiB outputs**, **1 GiB additional disk including fixture/results/cache**, **256 MiB total response-body transfer for Part B** (normally offline reuse; any necessary exact-artifact refetch remains charged). No model/inference API calls. Abort on hash/source drift, unexpected dependency, native-boundary/watchdog/accounting failure, missing readiness evidence or exhausted budget. Preserve partial results/failures; no automatic rerun.
+
+Write failing tests first for per-page method/provenance/transforms, missing assets/no auto-download, bounds and failure reporting; implement the smallest adapters; run focused tests/Ruff plus explicitly metered relevant regressions. Mock OCR in routine contract tests and label actual engine runs separately. Do not spend worker starts against prior T05/T07/T10/T11A ledgers or claim a whole-suite pass without a matching allocation.
+
+Proposed quality gates for review: exact invoice total `125.00`, native budget `24000`, revenue values `100`/`160` and original page/method identities; zero fabricated source locations or duplicated mixed-page passages; warning/qualification for unreadable controls; on manually verified readable English gold, CER <=0.05 and WER <=0.10 after declared whitespace-only normalization. Report raw counts and each case/engine, preserving digits/punctuation and failures. Do not pool unreadable controls into a readable-text denominator. Low-contrast/rotation failures remain visible rather than changing gold. Thirty seconds and memory caps are trial stop limits, not accepted product latency/memory targets.
+
+Report rasterization, initialization and OCR times separately, peak private memory/working set, system pressure, artifact/installed footprint, text/table/box correctness and confidence limitations. Recognition confidence cannot prove semantic support. Native/OCR page provenance and table relationships still need end-to-end product acceptance. T11 combined 16-GB CPU-only evidence and T17/G2 adoption remain required.
+
+## Review evidence and present limits
+
+Only public metadata/source text and HEAD responses were read. Ignored receipts are under `data/t09-review-01/`; no user content was sent externally. Successful closure inspection fetched 22 metadata responses totaling 12,508,558 bytes; an earlier metadata-only collection stopped at its cap before complete accounting, preserved in `initial-metadata-stop.json`. This preparation research is not a trial meter, installer run or performance result. The failure is not hidden or charged to an invented OCR execution count.
+
+Documentation/JSON identity/count/hash-format/link/whitespace checks are the applicable verification now. No Python dependency/source/fixture changes, OCR imports, benchmark scores or offline-runtime assurance are claimed. The user approved Part A and committing this proposal; this authorizes only the artifact preparation limits above. Part B remains unapproved.
