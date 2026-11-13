@@ -1,10 +1,13 @@
 """Offline-trial contracts with fake backends; never imports OCR/image packages."""
 
+import hashlib
 import json
 import tempfile
 import tomllib
 import unittest
+from enum import Enum
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 import ocr_trial as trial
@@ -29,6 +32,10 @@ class OCRContracts(unittest.TestCase):
         with patch.object(trial, "RUN"):
             trial.configure_run("manual-02")
             self.assertEqual(trial.RUN, trial.ROOT / "data/t09-manual-ocr/manual-02")
+            trial.configure_run("manual-03")
+            self.assertEqual(trial.RUN, trial.ROOT / "data/t09-manual-ocr/manual-03")
+            trial.configure_run("manual-04")
+            self.assertEqual(trial.RUN, trial.ROOT / "data/t09-manual-ocr/manual-04")
             with self.assertRaises(ValueError):
                 trial.configure_run("../manual-01")
 
@@ -39,6 +46,27 @@ class OCRContracts(unittest.TestCase):
         self.assertEqual(cases[2]["source_method"], "ocr")
         self.assertIn("transform", cases[-1])
         self.assertNotEqual(cases[-1]["id"], cases[1]["id"])
+
+    def test_fresh_continuation_reuses_only_exact_reviewed_project_and_versions(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            previous = root / "data/t09-manual-ocr/manual-02"
+            previous.mkdir(parents=True)
+            project = '[dependency-groups]\nocr-eval=[]\n[tool.uv]\nconstraint-dependencies=[]\n'
+            (root / "pyproject.toml").write_text(project, encoding="utf-8")
+            (previous / "proposed-pyproject.toml").write_text(project, encoding="utf-8")
+            digest = hashlib.sha256((previous / "proposed-pyproject.toml").read_bytes()).hexdigest()
+            (previous / "seal.json").write_text(json.dumps({
+                str((previous / "proposed-pyproject.toml").relative_to(root)): digest}))
+            (previous / "prepared-state.json").write_text(json.dumps({"baseline": {"base": "1"}}))
+            inventory = {"new_wheels": [{"name": "fake", "version": "2"}]}
+            with patch.object(trial, "ROOT", root), patch.object(trial, "RUN", root / "manual-03"):
+                self.assertEqual(trial.offline_project(inventory, {"base": "1", "fake": "2"}), project)
+                with self.assertRaises(RuntimeError):
+                    trial.offline_project(inventory, {"base": "1", "fake": "3"})
+                (root / "pyproject.toml").write_text(project + "# changed\n")
+                with self.assertRaises(RuntimeError):
+                    trial.offline_project(inventory, {"base": "1", "fake": "2"})
 
     def test_local_inputs_refuse_urls_escape_and_unsupported_files(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -78,7 +106,19 @@ class OCRContracts(unittest.TestCase):
         self.assertEqual([item["method"] for item in routed], ["native", "ocr", "native"])
 
     def test_rapid_configuration_is_local_cpu_only_and_disables_classifier(self):
-        config = trial.rapid_settings(Path("F:/local/assets"))
+        enums = SimpleNamespace(
+            OCRVersion=Enum("OCRVersion", {"PPOCRV4": "PP-OCRv4"}),
+            ModelType=Enum("ModelType", {"MOBILE": "mobile"}),
+            LangDet=Enum("LangDet", {"EN": "en"}),
+            LangRec=Enum("LangRec", {"EN": "en"}),
+            EngineType=Enum("EngineType", {"ONNXRUNTIME": "onnxruntime"}),
+        )
+        config = trial.rapid_settings(Path("F:/local/assets"), enums)
+        for section, language in (("Det", enums.LangDet.EN), ("Rec", enums.LangRec.EN)):
+            self.assertIs(config[f"{section}.ocr_version"], enums.OCRVersion.PPOCRV4)
+            self.assertIs(config[f"{section}.model_type"], enums.ModelType.MOBILE)
+            self.assertIs(config[f"{section}.engine_type"], enums.EngineType.ONNXRUNTIME)
+            self.assertIs(config[f"{section}.lang_type"], language)
         self.assertFalse(config["Global.use_cls"])
         self.assertFalse(config["EngineConfig.onnxruntime.use_cuda"])
         self.assertEqual(config["EngineConfig.onnxruntime.intra_op_num_threads"], 1)

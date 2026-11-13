@@ -1,3 +1,5 @@
+**Historical manual-02 package:** stopped after Wi-Fi reconnection; preserve its ledger. The active handoff is [manual-04](manual-ocr-fourth-run.md); manual-03 also stopped.
+
 # T09 - Prepared fresh manual OCR continuation
 
 **Date:** 2026-11-14 (Asia/Calcutta). **Status:** User explicitly approved the new 160-start continuation and its source/handoff commit ("yes continue please"), after repair commit `6120666`. The reviewed execution gate may now be enabled; offline prerequisites still apply. Approval is not an execution result.

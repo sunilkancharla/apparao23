@@ -1,12 +1,12 @@
 # User-operated offline handoff. No downloads, Windows setting changes or OCR online.
-param([ValidateSet('manual-01','manual-02')][string]$RunId = 'manual-01')
+param([ValidateSet('manual-01','manual-02','manual-03','manual-04')][string]$RunId = 'manual-01')
 $ErrorActionPreference = 'Stop'
 $trialProjectRoot = 'F:\document_assistant'
 $trialRunRoot = Join-Path $trialProjectRoot ('data\t09-manual-ocr\' + $RunId)
 Set-Location -LiteralPath $trialProjectRoot
 $trialMeterPath = Join-Path $trialRunRoot 'meter.json'
 $trialMeter = Get-Content -Raw -Encoding UTF8 -LiteralPath $trialMeterPath | ConvertFrom-Json
-if ($RunId -eq 'manual-02' -and $trialMeter.execution_approved -ne $true) {
+if ($RunId -in @('manual-02','manual-03','manual-04') -and $trialMeter.execution_approved -ne $true) {
     throw 'Continuation prepared but not approved for execution. Do not run or edit this gate.'
 }
 if ($trialMeter.PSObject.Properties.Name -contains 'offline_started') {

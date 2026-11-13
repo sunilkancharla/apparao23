@@ -1,27 +1,15 @@
-# Session checkpoint - 2026-11-14 (Asia/Calcutta)
+﻿# Session checkpoint — 2026-11-14 (Asia/Calcutta)
 
-## Goal and persistent scope
+Stage 1: Windows 11, 16 GB RAM, CPU only; PDF/XLSX/CSV. SPEC/PLAN/TODO approved. XLS deferred, DOCX/TXT excluded, SkillSpector deferred. No subagents authorized. Local Ollama/SQLite/browser application remains planned; evaluations do not adopt runtime components.
 
-Stage 1 local document assistant for Windows 11, 16 GB RAM, CPU only. Approved SPEC/PLAN/TODO; formats PDF/XLSX/CSV only. Legacy XLS deferred; DOCX/TXT excluded. One user/browser UI, local Ollama, SQLite; no complete application/UI yet. Early native-PDF/tabular and embedding/chat evaluations exist, with limitations and no runtime adoption. SkillSpector deferred; do not revisit. Read AGENTS/SPEC/README/PLAN/TODO before continuing. No subagents authorized.
+Manual-01 stopped on repaired name-alias comparison (104/240). Manual-02 installed exact approved OCR packages and completed 29 comparisons before user Wi-Fi reconnection (77/160). Manual-03 completed 30 Tesserocr comparisons, then first RapidOCR failed enum configuration (79/160). All teardown verified; stopped ledgers/seals are preserved, never reused. Raw OCR stays local. Native isolation diagnostics remain closed.
 
-## Current T09 state
+Enum repair now supplies RapidOCR's actual types offline; routine tests use fake stdlib enums. Version/model/language/engine values, exact assets and guards unchanged. Actual RapidOCR initialization/inference remains unvalidated. See docs/benchmarks/manual-ocr-third-stop.md.
 
-Windows native isolation investigation ended after AppContainer permission grants were denied. Do not reopen it by default. User accepted a disconnected, synthetic-only OCR trial without filesystem confinement; original exact manual package approved and proposal committed in `76db076`. Runner preparation committed in `c7709cd`.
+User explicitly approved reviewed changes commit and fresh manual-04 160-start package. Added only manual-04 routing and strict existing-config reuse. New selection regression failed before changes; 15 stdlib/fake tests passed (0.052 s); Ruff and PowerShell syntax passed. Static artifact/baseline verification generated fresh seal; no connected native import/render/install/OCR. Conservative shared preparation/closeout reservation 40/160; ledger links prior manual-03 hash/count. execution_approved=true authorizes user's disconnected start only. See docs/proposals/manual-ocr-fourth-run.md.
 
-The user ran manual-01 offline. Offline uv resolution succeeded (53 packages, 16 additions), then our checker falsely rejected installed `pdfminer.six` versus lock `pdfminer-six`; no installation/sync, fixture or OCR occurred. Teardown verified, no active worker, root pyproject/lock restored. Old ledger recorded 104/240 reservations and must remain untouched. Sanitized report: `data/t09-manual-ocr/manual-01/summary.json`; [diagnosis](benchmarks/manual-ocr-first-stop.md). Never read raw OCR/user document content into remote tools.
+After reviewing exact source/docs/project/lock diff, make the approved scoped commit and verify fresh seal/prior meter unchanged. Then hand off:
+`& 'F:\document_assistant\data\t09-manual-ocr\manual-04\run.ps1'`
+Type OFFLINE, locally review images, type READY, remain disconnected throughout until TEARDOWN VERIFIED: True and safe-to-reconnect message. No automatic native execution/retry by Codex. Inspect sanitized status only after user reports teardown/reconnection. Check Git for actual resulting commit; this checkpoint alone does not prove a commit or native run happened.
 
-Name canonicalization fix plus first-stop report committed as **`6120666`**. Exact versions remain required. Source checks case-insensitive runs of `.`, `_`, `-` as the same distribution separator. Its 13 regression/contract tests and Ruff passed; no native rerun.
-
-## Fresh handoff prepared, not approved to execute
-
-User approved preparing a fresh resealed handoff and requested chat compaction. Working source now supports explicit `manual-02` run selection (including worker request routing and PowerShell defaults), while retaining stopped manual-01. Added regression: **14 tests in 0.061 s**, Ruff passed, PowerShell syntax parsed. Standard-library-only preparation rehashed existing artifacts and generated `data/t09-manual-ocr/manual-02/run.ps1`, prepared state, proposed project file and source/config seal. No package installed/imported as OCR, PDF/image generated or native trial executed.
-
-The user subsequently explicitly approved the new [continuation package](proposals/manual-ocr-continuation.md), **160 total starts** including fresh preparation, and its source/handoff commit. This is not a reset of the prior 104. It retains exact cached artifacts, offline/manual/synthetic limits and 60 comparison/20 negative roots. Its ignored meter links the prior meter SHA/count; `execution_approved=true` is authorized for the user's disconnected local start only. Do not give the old run command or reset/reseal its state.
-
-Current closeout: OCR coordinator/test/PowerShell run-selection changes, README/TODO/handoff updates, continuation proposal and this checkpoint are approved for commit. Verify working diff/seal/ledger and create only that reviewed source commit. Then hand off `data/t09-manual-ocr/manual-02/run.ps1`. No automated native retry, installation or OCR is authorized while connected. User execution remains disconnected with local fixture review and teardown verification before reconnecting. If this checkpoint is read after closeout, inspect Git for the resulting commit and the sanitized manual-02 status before taking further action; never assume the user has run it.
-
-## Host, workspace and checks
-
-Tools expose no callable `/compact` or `/status` operation. Do not claim compaction ran. The user can use a host-provided command if available; this checkpoint preserves state independently. No goal mode is active/requested.
-
-Unrelated untracked `agents/`, `skills/`, `references/`, `images/` and reference/onboarding docs predate this task. Preserve them; never stage the whole workspace. `.venv/`, `data/`, samples/models/databases/generated artifacts remain ignored. Git writes require approved host escalation; source edits do not approve commits. Project installs stay inside `.venv`; no global/PATH/pip fallback. Native installation/OCR still awaits the user-run offline phase and explicit continuation approval; no accuracy/offline application claims yet.
+Preserve unrelated untracked agents/skills/references/images/onboarding docs. Commit only reviewed files, including approved offline-generated pyproject/lock evaluation changes; no runtime data/.venv/assets/user documents. Git writes need host escalation. No callable /compact or /status tool; do not claim invoked. No active goal. Engine adoption, subsequent packages and stage transition retain explicit gates.

@@ -761,3 +761,21 @@ After T07 closeout: T10 → T11A (early CPU feasibility) → T08 → T09 → T11
 ## Current handoff
 
 T01–T03/T02R/T05 complete; T04 deferred; T06 excluded. T02R is committed in 28ec7ad. The approved T07 package and three process improvements are committed in e8ec471; remaining coverage still needs follow-up before adoption. Coverage and budget limitations remain explicit rather than marking all T07 criteria complete. T10 provisioning and the approved continuation comparison are complete, with original trial limitations retained in the embedding report. T10 results are committed in 55d68f6; the approved T11A continuation completed all 96 planned slots across epochs, with the original timeout retained. Source/documentation commit explicitly approved; semantic review and model decisions remain open; no further inference is needed for this frozen schedule. No further experimental starts remain in the T10 allocation. XLS is now deferred outside Stage 1. No application ingestion or runtime adoption occurred.
+
+### T09 manual-03 handoff — approved continuation, 2026-11-14
+
+- [x] Record [manual-02 reconnection stop](docs/benchmarks/manual-ocr-second-stop.md): approved offline install/fixtures succeeded; 29/60 comparison results, zero controls; user confirmed Wi-Fi reconnection; teardown verified. Preserve 77/160 ledger and installed evaluation config/lock. No completed quality gate or adoption.
+- [x] Prepare explicitly approved [manual-03 package](docs/proposals/manual-ocr-third-run.md). Prerequisites: retained prior run/seal, exact cached inventory and unchanged installed/project versions. Acceptance: fresh ledger/seal, same 60/20 schedule and limits, no connected native execution, clear post-READY offline instructions. Evidence: new contracts initially failed; 15 passed in 0.071 s after test-fixture portability corrections; Ruff passed after import-order correction; PowerShell parsed; artifact/config hashes reverified. Fresh allocation 160, conservative preparation/closeout reservation 36; prior ledgers untouched. README/checkpoint and [handoff](docs/proposals/manual-ocr-handoff.md) updated. Source commit remains unapproved.
+- [ ] User executes manual-03 disconnected, reviews synthetic fixtures, remains offline after READY, verifies teardown, then reports sanitized status. No automated native retry; adoption and subsequent work retain gates.
+
+### T09 manual-03 stop and enum repair — 2026-11-14
+
+- [x] Inspect [sanitized stop evidence](docs/benchmarks/manual-ocr-third-stop.md): 30 Tesserocr comparisons, first RapidOCR worker failed enum configuration, zero controls, teardown verified/no active children, ledger 79/160 preserved.
+- [x] Correct configuration builder to accept actual library enums offline and fake enums in tests. Strengthened regression failed before repair; 15 passed in 0.118 s; Ruff passed after import-order correction. No connected native import, installation, OCR rerun or adoption. Prior prepared handoffs marked stopped; source commit remains gated.
+- [ ] Obtain approval of a fresh bounded native continuation before preparing/resealing another offline run; never reset manual-03. RapidOCR initialization/inference and all controls remain unvalidated.
+
+### T09 manual-04 — approved fresh continuation and scoped commit
+
+- [x] Record explicit user approval of reviewed runner/docs/evaluation config commit and fresh same-test 160-start continuation after enum repair.
+- [x] Prepare [manual-04 package](docs/proposals/manual-ocr-fourth-run.md): exact existing pins/assets/guards, new run ID/ledger/seal, prior manual-03 hash/count retained. Prerequisites verified statically; selection regression first failed, then 15 stdlib/fake tests passed in 0.052 s; Ruff/PowerShell syntax passed. Preparation/closeout conservatively reserved 40/160; no connected native OCR/import/render/install/download. Acceptance evidence: ignored seal/ledger, saved tests and current instructions; source commit approved, verify actual Git result.
+- [ ] User runs only manual-04 disconnected, reviews fixtures, stays offline after READY until verified teardown, then reports sanitized status. Actual RapidOCR initialization/inference, controls and quality remain pending. No automatic retry or adoption.

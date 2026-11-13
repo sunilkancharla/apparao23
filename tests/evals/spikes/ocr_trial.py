@@ -33,7 +33,7 @@ CONTROLS = ("missing", "wrong", "truncated", "empty", "unreadable", "pixels",
 def configure_run(run_id: str) -> None:
     """Choose only reviewed run IDs; never reset a stopped run's ledger/seal."""
     global RUN
-    if run_id not in {"manual-01", "manual-02"}:
+    if run_id not in {"manual-01", "manual-02", "manual-03", "manual-04"}:
         raise ValueError("Unreviewed manual run ID")
     RUN = ROOT / "data/t09-manual-ocr" / run_id
 
@@ -149,15 +149,19 @@ def route_pages(pages: list[tuple[str, str]], ocr) -> list[dict]:
             for index, (method, text) in enumerate(pages, 1)]
 
 
-def rapid_settings(assets: Path) -> dict:
-    """Exact source-reviewed RapidOCR 3.10 settings; no implicit model/font paths."""
+def rapid_settings(assets: Path, enums) -> dict:
+    """Use RapidOCR's enum types, injected to keep connected tests native-free."""
     return {"Global.use_cls": False, "Global.return_word_box": True,
             "Global.text_score": 0.5, "Global.max_side_len": 2000,
             "Det.model_path": str(assets / "en_PP-OCRv3_det_mobile.onnx"),
             "Rec.model_path": str(assets / "en_PP-OCRv4_rec_mobile.onnx"),
-            "Det.lang_type": "en", "Rec.lang_type": "en",
-            "Det.ocr_version": "PP-OCRv4", "Rec.ocr_version": "PP-OCRv4",
-            "Det.model_type": "mobile", "Rec.model_type": "mobile",
+            "Det.lang_type": enums.LangDet.EN, "Rec.lang_type": enums.LangRec.EN,
+            "Det.ocr_version": enums.OCRVersion.PPOCRV4,
+            "Rec.ocr_version": enums.OCRVersion.PPOCRV4,
+            "Det.model_type": enums.ModelType.MOBILE,
+            "Rec.model_type": enums.ModelType.MOBILE,
+            "Det.engine_type": enums.EngineType.ONNXRUNTIME,
+            "Rec.engine_type": enums.EngineType.ONNXRUNTIME,
             "Det.limit_side_len": 2000, "Det.limit_type": "max",
             "EngineConfig.onnxruntime.intra_op_num_threads": 1,
             "EngineConfig.onnxruntime.inter_op_num_threads": 1,
@@ -416,6 +420,19 @@ class OwnedRunner:
 def offline_project(inventory: dict, baseline: dict) -> str:
     """Prepare a pinned evaluation group without replacing existing project settings."""
     original = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    if RUN.name in {"manual-03", "manual-04"}:
+        # Reuse the completed offline installation, never append a second group.
+        previous = ROOT / "data/t09-manual-ocr/manual-02"
+        proposed = previous / "proposed-pyproject.toml"
+        prior_seal = json.loads((previous / "seal.json").read_bytes())
+        verify_blob(proposed.read_bytes(), proposed.stat().st_size,
+                    prior_seal[str(proposed.relative_to(ROOT))])
+        expected = json.loads((previous / "prepared-state.json").read_bytes())["baseline"]
+        expected |= {canonical_name(item["name"]): item["version"]
+                     for item in inventory["new_wheels"]}
+        if baseline != expected or original != proposed.read_text(encoding="utf-8"):
+            raise RuntimeError("Previously reviewed OCR project/installed versions changed")
+        return original
     if "ocr-eval" in original or "constraint-dependencies" in original:
         raise RuntimeError("Unexpected existing OCR group/constraints; review before editing")
     marker = "sys_platform == 'win32' and platform_machine == 'AMD64' and python_version == '3.14'"
@@ -494,6 +511,7 @@ def backend_result(engine: str, image: Path, assets: Path) -> dict:
                 "ocr_seconds": time.monotonic() - initialized, "warnings": []}
     import numpy as np
     from rapidocr import RapidOCR
+    from rapidocr.utils import typings
     from rapidocr.utils.download_file import DownloadFile
 
     def refuse_download(*_args, **_kwargs):
@@ -501,7 +519,7 @@ def backend_result(engine: str, image: Path, assets: Path) -> dict:
 
     DownloadFile.run = staticmethod(refuse_download)
 
-    settings = rapid_settings(assets)
+    settings = rapid_settings(assets, typings)
     ocr = RapidOCR(params=settings)
     initialized = time.monotonic()
     # Visualization/font APIs are intentionally never called.
@@ -592,7 +610,7 @@ def offline_main() -> None:
     """One local entry point; no preparation or execution is repeated implicitly."""
     from appcontainer_preflight import ExtendedLimits, Native, memory_ready
 
-    if RUN.name == "manual-02":
+    if RUN.name in {"manual-02", "manual-03", "manual-04"}:
         approved = json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
         if approved.get("execution_approved") is not True:
             raise RuntimeError("Continuation prepared, but execution allocation is not approved")
@@ -695,6 +713,8 @@ def offline_main() -> None:
         write_json(RUN / "meter.json", meter)
         ensure_disconnected()
         # Record this operational pause separately without resetting the run budget.
+        print("TESTING IN PROGRESS. Keep all external links disconnected until teardown is verified.",
+              flush=True)
         cases = {case["id"]: case for case in case_definitions()}
         for engine, case_id, repeat in comparison_schedule():
             label = f"{engine}-{case_id}-{repeat}"
