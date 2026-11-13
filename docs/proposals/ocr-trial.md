@@ -4,6 +4,8 @@
 
 **Actual disposition:** Proposal committed in `bf3b82e`; Part A subsequently stopped incomplete at the FlatBuffers missing-notice gate. See the [actual outcome](../benchmarks/ocr.md). Fourteen wheel hashes/sizes were verified, thirteen notice collections completed; 125,721,610 bytes/14 requests and all 16 conservative process slots consumed. No separate English assets fetched, installs or OCR imports/runs. The pre-run descriptions below are historical where superseded by that result; no automatic retry or Part B approval.
 
+**Continuation completed:** The separately approved exception/continuation is committed in `6491666`. All 16 wheels/three English assets now have verified identities, using a new meter and preserving the original stop. Ten preparation tests passed; no installation or OCR execution. See the [latest result](../benchmarks/ocr.md). Part B remains unapproved and must first resolve the native execution boundary. English traineddata's computed SHA-256 is `7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2`, recorded after verifying the original Git blob/size.
+
 ## Requested decision and sequence
 
 The original Part A below is historical and stopped; the following follow-up is proposed separately after the user's authorized license investigation.

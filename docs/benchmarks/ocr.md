@@ -1,5 +1,29 @@
 # T09 - Local English OCR source review
 
+## Approved Part A continuation outcome - 2026-11-13
+
+The user explicitly approved the companion-notice exception, artifact-only continuation and license-findings commit; that decision is committed in **`6491666`**. Artifact preparation completed across the preserved original run and this continuation: **all 16 wheel identities and all three English assets are verified**. Fourteen wheels were rehashed/reused from the old cache, without modification/redownload; only the two remaining wheels and three assets were downloaded. Nothing was installed, imported as an OCR/native model module, decoded/rendered as user documents or executed as inference. T09's actual OCR comparison and Part B remain incomplete/unapproved.
+
+Continuation evidence:
+
+- **10 preparation tests passed in 0.022 seconds**, following the retained expected red missing-module result and an initial 0.051-second passing run. Negative tests isolate wrong wheel name, wheel hash and companion-license bytes with otherwise valid inputs. Original archive/transfer guards and bounded binary-license XML tests pass. No parser/model tests, Ruff or consumed prior trial suite ran.
+- **14,856,592 actual response-body bytes / 12 HTTP requests**, including two artifact redirects and their 702 body bytes, public license/source responses and a retained 404. The five new artifacts account for exactly **14,780,070 bytes**. No artifact mismatch, substitution or transport retry occurred. Original run's 125,721,610 bytes/14 requests remain separately reported; the combined artifact-epoch transfer is 140,578,202 bytes, excluding earlier metadata/license investigations.
+- **26/32 conservative process slots** after final integrity/document checks, with wrappers/launchers included. Native-import boundaries remained enforced for Python preparation helpers using a one-process Windows Job and 512-MiB commit cap; no claim of native OCR network isolation follows. New meter/receipts are `data/t09-artifacts/part-a-02/`; new downloads are `.venv/.cache/ocr-review/part-a-02/`. The old meter's SHA-256 remained identical.
+- **80 collected notice records** include 79 bundled records and the one explicitly approved FlatBuffers companion notice. Two bundled Microsoft binary license documents were decoded through bounded XML for administrative review; no DOCX application support/dependency was added. Native inventory records **64 DLL/extension entries**, including repeated runtime components, not 64 independently verified library versions. Static collection does not certify every binary version or legal compatibility.
+- Material terms are preserved: Tesserocr bundles libiconv LGPL text and Microsoft runtime terms; Shapely includes GEOS LGPL terms; OpenCV includes bundled LGPL material; NumPy includes third-party license/exception texts. Wrapper MIT/BSD/Apache labels must not replace those bundled obligations. No package is adopted or cleared for unrestricted redistribution by this review.
+
+| English asset | Verified bytes | Recorded SHA-256 |
+|---|---:|---|
+| tessdata_fast 4.1.0 `eng.traineddata` | 4,113,088 | `7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2` |
+| English PP-OCRv3 detector ONNX | 2,421,707 | `ea07c15d38ac40cd69da3c493444ec75b44ff23840553ff8ba102c1219ed39c2` |
+| English PP-OCRv4 recognizer ONNX | 7,653,044 | `e8770c967605983d1570cdf5352041dfb68fa0c21664f49f47b155abd3e0e318` |
+
+English traineddata matched the pinned Git blob and size before recording SHA-256; that computed digest is not an independent publisher attestation. Static ONNX wire-format inspection found the recognizer's embedded `character` metadata (190 characters of serialized dictionary text; SHA-256 `5662df9d2d03f0e8ca0d3b0649d6acbab904b6a14b3d3521463c71c37c668ce3`). This is dictionary-presence evidence, not recognition accuracy or a tested runtime initialization path. No extra dictionary/model/font was fetched.
+
+Model provenance review: upstream [PaddleOCR v2.7.3 routing](https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/v2.7.3/paddleocr.py) identifies the corresponding English PP-OCRv3 detector and PP-OCRv4 recognizer sources. Its [LICENSE](https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/v2.7.3/LICENSE) is Apache-2.0; the RapidAI model repository API also declares Apache License 2.0. The attempted versioned ModelScope LICENSE URL returned 404 and is retained in `license-source-receipt.json`; upstream licensing evidence was inspected separately, not fabricated as a bundled model notice. RapidAI's exact converted hashes establish selected ONNX identity; conversion reproducibility and complete distribution obligations remain unverified. No Paddle archives or extra weights were downloaded.
+
+Closeout checks: complete artifact counts/hashes, old-meter immutability, preserved companion notice, native/notice counts, cumulative budgets, local document links and whitespace checked; installed-dependency/source/fixture files unchanged. Part A prepares inputs and notice evidence. **Next gate is an agreed native execution boundary and explicit Part B installation/trial approval**, with final license/component adoption still at its recorded gate. No Windows/firewall/PATH/global changes or application code were made.
+
 ## FlatBuffers upstream investigation - 2026-11-13
 
 The user approved committing the stop report and investigating the upstream license. The stop report is committed in `7c50144`. This follow-up is a read-only license/source investigation, **not a retry of Part A or use of its exhausted allocation**; no further wheel/model download, installation or package execution occurred. The old meter's SHA-256 was checked before/after and remained identical.

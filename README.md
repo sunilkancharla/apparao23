@@ -1,6 +1,6 @@
 # Document Assistant
 
-**Latest scope decision (2026-11-13):** Stage 1 supports PDF, XLSX and CSV only. Legacy XLS is deferred; DOCX/TXT remain excluded. T07A/T37 and XLS-specific evaluation definitions are inactive, with historical evidence and local samples preserved. T08 is closed with approved non-adoption/trial deferral. T09 Part A stopped incomplete at a missing bundled notice after partial artifact downloads; no OCR packages were installed or OCR runs performed.
+**Latest scope decision (2026-11-13):** Stage 1 supports PDF, XLSX and CSV only. Legacy XLS is deferred; DOCX/TXT remain excluded. T07A/T37 and XLS-specific evaluation definitions are inactive, with historical evidence and local samples preserved. T08 is closed with approved non-adoption/trial deferral. T09 artifact preparation is complete after its approved continuation; no OCR packages were installed or OCR runs performed. Part B remains gated.
 
 Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 16 GB RAM and CPU-only operation. SPEC, AGENTS, PLAN, TODO and T02's design/rubric are approved. T01–T03 and T05 are complete; T04 SkillSpector was explicitly deferred. T05 closes with approved PyMuPDF empirical-comparison deferral; runtime adoption remains pending.
 
@@ -55,6 +55,10 @@ For a rerun, choose a fresh unused path below `data/` for `--basetemp`; pytest c
 Optional shell activation: `.\.venv\Scripts\Activate.ps1` (not invoked during verification). Explicit paths work without activation. `pyproject.toml` keeps uv cache inside `.venv`, disables automatic Python downloads and uses copy link mode. Offline sync was checked with this environment/cache already present; fresh provisioning needs approved network downloads. `.gitignore` excludes `.venv`, originals, runtime data and generated document artifacts. See [setup details](docs/provisioning.md) for the hash-verified uv bootstrap and exact checks. Five PDF evaluation tests passed; no application tests or model benchmarks exist yet.
 
 ## Current evaluation and next step
+
+The approved continuation/license findings are committed in `6491666`. [OCR artifact preparation completed](docs/benchmarks/ocr.md): all 16 wheels and three English assets verified, with 14 cached wheels reused unchanged. Ten synthetic preparation tests passed. The continuation transferred 14,856,592 bytes across 12 requests, including redirects/license-source responses; the original stop and meter remain preserved. Native/bundled notice obligations are recorded, including the exact FlatBuffers companion notice. No installation, OCR import, rendering or inference occurred. Next: agree the native execution boundary and approve Part B before installation/measurement. T09's OCR comparison is still incomplete.
+
+**Earlier evaluation records (historical where superseded by the completed continuation above):**
 
 Stop report committed in `7c50144`. The authorized [FlatBuffers license investigation](docs/benchmarks/ocr.md) found upstream Apache-2.0 text and exact byte matches for all ten cached runtime Python files. Recommend preserving that pinned license alongside the unchanged wheel through an explicitly approved exception. A [new artifact-only continuation](docs/proposals/ocr-trial.md#proposed-part-a-continuation-after-flatbuffers-investigation) would reuse the 14 cached wheels and fetch only the remaining 14,780,070 artifact bytes under fresh limits. The user approved this exact exception, artifact-only continuation and findings commit; installation and OCR execution remain unapproved.
 
