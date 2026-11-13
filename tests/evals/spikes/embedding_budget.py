@@ -110,7 +110,9 @@ class Budget:
         state = self.read()
         if state["benchmark_started"] is None:
             raise BudgetExceeded("Benchmark has not started")
-        remaining = 1800 - (self.clock() - state["benchmark_started"])
+        remaining = state.get("limits", {}).get("benchmark_seconds", 1800) - (
+            self.clock() - state["benchmark_started"]
+        )
         if remaining <= 0:
             raise BudgetExceeded("Benchmark deadline")
         return remaining
