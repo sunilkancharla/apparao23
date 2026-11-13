@@ -2,6 +2,7 @@
 
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import python_startup_diagnostic as diagnostic
 
@@ -65,6 +66,25 @@ class DiagnosticPolicyTests(unittest.TestCase):
         self.assertFalse(diagnostic.owned_handles(None, None))
         self.assertTrue(diagnostic.owned_handles(12, 14))
         self.assertFalse(diagnostic.owned_handles(12, None))
+
+    def test_accounting_failure_is_written_before_stop(self):
+        recorded = []
+        result = {"row": "B", "source": "original", "pid": 123,
+                  "exit_code": 0, "accounting": {"total": 2, "active": 0}}
+        with (
+            patch.object(diagnostic, "write_receipt",
+                         side_effect=lambda name, value: recorded.append((name, value.copy()))),
+            self.assertRaisesRegex(RuntimeError, "Unexpected descendant"),
+        ):
+            diagnostic.record_completed_case(result)
+        self.assertEqual(recorded, [("case-B-original.json", result)])
+
+    def test_valid_case_is_written_and_returned(self):
+        result = {"row": "A", "source": "staged", "pid": 123,
+                  "exit_code": 0, "accounting": {"total": 1, "active": 0}}
+        with patch.object(diagnostic, "write_receipt") as writer:
+            self.assertEqual(diagnostic.record_completed_case(result), result)
+        writer.assert_called_once_with("case-A-staged.json", result)
 
 
 if __name__ == "__main__":

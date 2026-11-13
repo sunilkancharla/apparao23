@@ -2,6 +2,12 @@
 
 **Date:** 2026-11-13. **Authorization:** User approved the [eight-case diagnostic](../proposals/python-startup-diagnostic.md) and three-document proposal commit, recorded in `1658cdc`. **Outcome:** Two cases completed; a third reached the accounting stop. Five cases were not attempted. No retries or isolation/OCR execution.
 
+## Subsequent approved receipt repair
+
+The user approved committing these results and making the discussed changes. Results/helpers were committed in `c52151a`. The diagnostic now writes observed case PID, exit status, duration, launch settings and Job counts before checking the **unchanged** total=1/active=0 guard. It labels the early receipt `not_yet_validated`; marker parsing/classification occurs only after that guard passes. This preserves failure evidence without accepting the mismatched case or suppressing its exception.
+
+Two new synthetic tests first failed for the missing receipt function. After implementation/style fixes, **10 policy tests passed in 0.004 s**, and full Ruff passed on the helper/test pair. Tests confirm a mismatched count leaves a receipt and still raises, and a valid count preserves the normal result. Ignored unit-only receipts are `data/t09-startup-diagnostic/receipt-repair-01/`, using separate conservative test/check reservations (16 including closeout), without changing either old trial meter. These are synthetic unit checks, not a new native diagnostic allocation. No trial worker, network control, profile, permission change, repair of the runtime or OCR executed. Historical missing B-case details remain unavailable; this patch does not reconstruct them. Further native accounting investigation still needs a reviewed package.
+
 ## Observations
 
 | Case | Observed outcome | Limit |

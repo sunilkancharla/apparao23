@@ -12,6 +12,8 @@ The [AppContainer preflight](docs/benchmarks/appcontainer-preflight.md), subsequ
 
 The subsequently approved [startup diagnostic](docs/benchmarks/python-startup-diagnostic.md), proposed in `1658cdc`, confirmed both original and staged Python can run the basic marker probe. It stopped at a Job accounting discrepancy during the first extended-launch case; five cases remain unattempted and that failing case's full receipt is missing. Eight policy tests and Ruff passed, but the original failure's cause and isolation compatibility remain unresolved. No repair, automatic retry or OCR execution is authorized by this result.
 
+The user subsequently approved a receipt-handling repair: observed PID/exit/Job data is now saved before the unchanged safety guard raises. Ten synthetic policy tests and Ruff passed. No diagnostic case was rerun; this fixes future evidence capture and does not resolve the accounting discrepancy or authorize OCR execution.
+
 The dedicated project environment is `F:/document_assistant/.venv`, using Python 3.14.6 and local uv 0.13.8. Installed baseline: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5, with exact transitive versions in `uv.lock`. Global/user packages are not inherited. No application or selected runtime parser/OCR/index/model exists yet. The optional pdf-eval group installs pypdf 7.0.1, pdfplumber 0.11.10 and seven pinned dependencies locally for evaluation only; all baseline versions are unchanged. The approved tabular-eval group adds openpyxl 3.1.5, et-xmlfile 2.0.0 and defusedxml 0.7.1 for T07 evaluation only.
 
 ## Project documents

@@ -90,6 +90,15 @@ def owned_handles(process, thread) -> bool:
     return bool(process and thread)
 
 
+def record_completed_case(result: dict) -> dict:
+    """Preserve observed PID/exit/accounting before enforcing the unchanged guard."""
+    write_receipt(f"case-{result['row']}-{result['source']}.json", result)
+    accounting = result["accounting"]
+    if accounting["total"] != 1 or accounting["active"] != 0:
+        raise RuntimeError("Unexpected descendant or active worker")
+    return result
+
+
 def write_receipt(name: str, value: object) -> None:
     """Write bounded sanitized evidence only within the new run."""
     content = json.dumps(value, indent=2).encode()
@@ -210,16 +219,16 @@ def trial(native: Native, row: str, source: str, probe: Path) -> dict:
         code = w.DWORD()
         native.check(native.kernel.GetExitCodeProcess(process.process, ctypes.byref(code)))
         accounting = native.accounting(job)
-        if accounting["total"] != 1 or accounting["active"] != 0:
-            raise RuntimeError("Unexpected descendant or active worker")
-        output_limits()
-        marker = json.loads(output.read_text()) if output.exists() else None
         result = {"row": row, "source": source, "pid": process.pid,
                   "flags": f"0x{flags:08x}", "environment": values,
                   "exit_code": code.value, "exit_hex": f"0x{code.value:08x}",
                   "duration_seconds": time.monotonic() - started,
-                  "classification": classify(code.value, marker, executable),
-                  "marker": marker, "accounting": accounting, "timed_out": False}
+                  "classification": "not_yet_validated",
+                  "marker": None, "accounting": accounting, "timed_out": False}
+        record_completed_case(result)
+        output_limits()
+        marker = json.loads(output.read_text()) if output.exists() else None
+        result.update(classification=classify(code.value, marker, executable), marker=marker)
         write_receipt(f"case-{row}-{source}.json", result)
         return result
     finally:
