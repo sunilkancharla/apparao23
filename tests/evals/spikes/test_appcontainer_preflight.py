@@ -3,6 +3,7 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import appcontainer_preflight as preflight
 
@@ -61,6 +62,25 @@ class PolicyTests(unittest.TestCase):
                        "Lib/test/test_os.py", "Lib/__pycache__/os.pyc",
                        "../python.exe", "Scripts/other.exe"):
             self.assertFalse(preflight.runtime_member(Path(denied)))
+
+    def test_consolidated_flags_keep_extended_suspended_unicode_without_no_window(self):
+        self.assertEqual(preflight.worker_creation_flags(True), 0x00080404)
+        self.assertEqual(preflight.worker_creation_flags(False), 0x08080404)
+
+    def test_grants_require_enough_capacity_for_controls_and_cleanup(self):
+        preflight.check_grant_budget(20, 12, 96)
+        with self.assertRaises(RuntimeError):
+            preflight.check_grant_budget(70, 12, 96)
+
+    def test_consolidated_configuration_preserves_runtime_and_prior_run(self):
+        old_runtime = preflight.STAGE
+        with patch.object(preflight, "RUN"), patch.object(preflight, "RUN_ID"), \
+                patch.object(preflight, "CONSOLIDATED", False, create=True):
+            preflight.configure_consolidated()
+            self.assertEqual(preflight.RUN_ID, "consolidated-01")
+            self.assertEqual(preflight.RUN, preflight.ROOT / "data/t09-isolation/consolidated-01")
+            self.assertTrue(preflight.CONSOLIDATED)
+            self.assertEqual(preflight.STAGE, old_runtime)
 
 
 if __name__ == "__main__":

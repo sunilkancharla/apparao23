@@ -22,8 +22,48 @@ RUN_ID = "preflight-01"
 RUN = ROOT / "data/t09-appcontainer" / RUN_ID
 STAGE = ROOT / ".venv/tools/appcontainer-preflight" / RUN_ID
 BASE = Path("F:/Python/Python314")
+CONSOLIDATED = False
 ROOT_FILES = frozenset({"python.exe", "python3.dll", "python314.dll",
                         "vcruntime140.dll", "vcruntime140_1.dll", "LICENSE.txt"})
+
+
+def worker_creation_flags(consolidated: bool) -> int:
+    """Retain extended/suspended/Unicode creation, omit only no-window on opt-in."""
+    return 0x00080404 if consolidated else 0x08080404
+
+
+def configure_consolidated() -> None:
+    """Select a new ledger/profile while preserving the verified runtime bytes."""
+    global RUN_ID, RUN, CONSOLIDATED
+    RUN_ID = "consolidated-01"
+    RUN = ROOT / "data/t09-isolation" / RUN_ID
+    CONSOLIDATED = True
+
+
+def check_grant_budget(current: int, grants: int, limit: int) -> None:
+    """Keep capacity for every grant/removal, controls, label and closeout."""
+    if current + 2 * grants + 9 + 12 > limit:
+        raise RuntimeError("Insufficient combined capacity for grants/controls/cleanup")
+
+
+def verify_consolidated_inputs() -> dict:
+    """Rehash cached runtime and prior ledgers; never recopy or update them."""
+    baseline = json.loads((RUN / "baseline-identities.json").read_text(encoding="utf-8-sig"))
+    for name, expected in baseline.items():
+        if hashlib.sha256(contained(ROOT, ROOT / name).read_bytes()).hexdigest() != expected:
+            raise RuntimeError("Prior meter/config identity changed")
+    entries = json.loads((ROOT / "data/t09-appcontainer/preflight-01/runtime-manifest.json").read_bytes())
+    if len(entries) != 810 or len({entry["path"] for entry in entries}) != 810:
+        raise RuntimeError("Unexpected cached runtime manifest")
+    for entry in entries:
+        for root in (BASE, STAGE / "runtime"):
+            content = contained(root, root / entry["path"]).read_bytes()
+            if len(content) != entry["bytes"] or hashlib.sha256(content).hexdigest() != entry["sha256"]:
+                raise RuntimeError("Cached/original runtime identity drift")
+    receipt("verified-identities.json", {"baseline": baseline, "runtime_files": len(entries),
+            "runtime_bytes": sum(entry["bytes"] for entry in entries),
+            "helper_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()})
+    return baseline
 
 
 def regular_attributes(attributes: int) -> bool:
@@ -353,8 +393,13 @@ def acl_command(native: Native, *arguments: str) -> str:
     """Run one fixed Windows ACL utility with a charged native process slot."""
     reserve("owned run-path icacls operation", cleanup=arguments[1] == "/remove:g")
     utility = Path(os.environ["SystemRoot"]) / "System32/icacls.exe"
+    before = native.accounting(native.controller_job) if CONSOLIDATED else None
     result = subprocess.run([str(utility), *arguments], capture_output=True,
                             timeout=15, check=False)
+    if before is not None:
+        after = native.accounting(native.controller_job)
+        if after["total"] != before["total"] + 1 or after["active"] != 1:
+            raise RuntimeError("ACL utility controller accounting mismatch")
     if result.returncode:
         raise RuntimeError(f"icacls failed ({result.returncode}): "
                            + result.stdout.decode(errors="replace")[:1000])
@@ -449,6 +494,7 @@ def launch_worker(native: Native, sid, expected_sid: str, script: Path,
     child_policy = w.DWORD(1)  # PROCESS_CREATION_CHILD_PROCESS_RESTRICTED
     token = None
     started = time.monotonic()
+    controller_before = native.accounting(native.controller_job) if CONSOLIDATED else None
     try:
         size = ctypes.c_size_t()
         native.kernel.InitializeProcThreadAttributeList(None, 2, 0, ctypes.byref(size))
@@ -473,7 +519,7 @@ def launch_worker(native: Native, sid, expected_sid: str, script: Path,
             f"{key}={value}" for key, value in sorted(environment.items())) + "\0\0")
         native.check(native.kernel.CreateProcessW(
             str(executable), ctypes.create_unicode_buffer(command), None, None, False,
-            0x80000 | 0x4 | 0x400 | 0x8000000, block, str(RUN / "work"),
+            worker_creation_flags(CONSOLIDATED), block, str(RUN / "work"),
             ctypes.byref(startup), ctypes.byref(process)))
         if constrained:
             token = native.token(process.process)
@@ -500,11 +546,19 @@ def launch_worker(native: Native, sid, expected_sid: str, script: Path,
         accounting = native.accounting(job)
         result = {"mode": mode, "constrained": constrained, "token": token,
                       "exit_code": code.value, "timed_out": timed_out, "accounting": accounting}
+        if controller_before is not None:
+            result["controller_before"] = controller_before
+            result["controller_after"] = native.accounting(native.controller_job)
         receipt(f"worker-{mode}-{'restricted' if constrained else 'positive'}.json", result)
         if timed_out != expected_timeout or (not timed_out and code.value != 0):
             raise RuntimeError(f"Worker startup/control failed: {result}")
         if accounting["total"] != 1 or accounting["active"] != 0:
             raise RuntimeError("Unexpected descendant or unfinished worker")
+        if controller_before is not None and (
+            result["controller_after"]["total"] != controller_before["total"] + 1
+            or result["controller_after"]["active"] != 1
+        ):
+            raise RuntimeError("Worker controller accounting mismatch")
         return result
     finally:
         if process.process:
@@ -630,11 +684,14 @@ def execute(controller_job) -> None:
     from datetime import UTC, datetime
 
     native = Native()
+    if CONSOLIDATED:
+        native.controller_job = controller_job
     profile = f"DocumentAssistant.T09.{RUN_ID}"
     sid = ctypes.c_void_p()
     created = False
     changes = []
     listeners = []
+    baseline = None
     result = {"status": "in_progress", "profile_created": False}
     meter = json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
     if datetime.now(UTC) > datetime.fromisoformat(meter["deadline_utc"]):
@@ -650,6 +707,8 @@ def execute(controller_job) -> None:
     script = RUN / "inputs/worker.py"
     script.write_text(WORKER, encoding="utf-8")
     try:
+        if CONSOLIDATED:
+            baseline = verify_consolidated_inputs()
         # Positive controls run first; failure must stop before a profile is created.
         launch_worker(native, None, "", script, "startup", constrained=False)
         startup = json.loads((RUN / "work/startup.json").read_text())
@@ -714,6 +773,8 @@ def execute(controller_job) -> None:
         for ancestor in sorted(ancestors, key=lambda item: len(item.parts)):
             if ancestor not in {path for path, _ in grants}:
                 grants.insert(0, (ancestor, "traverse"))
+        current_meter = json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
+        check_grant_budget(current_meter["reserved"], len(grants), current_meter["limit"])
         for path, role in grants:
             contained(ROOT, path)
             before = security_text(path)
@@ -778,6 +839,12 @@ def execute(controller_job) -> None:
             native.advapi.FreeSid(sid)
         result["cleanup_errors"] = cleanup_errors
         result["controller_accounting"] = native.accounting(controller_job)
+        if baseline:
+            result["prior_identities_unchanged"] = all(
+                hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest
+                for name, digest in baseline.items())
+            if not result["prior_identities_unchanged"]:
+                cleanup_errors.append("Prior meter/config changed")
         receipt("result.json", result)
         print(json.dumps(result, indent=2))
     if result["status"] == "stopped" or cleanup_errors:
