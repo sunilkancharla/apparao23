@@ -10,6 +10,8 @@ The [OCR execution-boundary comparison](docs/proposals/ocr-trial.md#native-execu
 
 The [AppContainer preflight](docs/benchmarks/appcontainer-preflight.md), subsequently approved and proposed in `e6ecd5a`, stopped at the first unrestricted staged-Python startup (`0xC0000142`). Eight policy tests and Ruff passed; the existing runtime was copied/hashed under `.venv`, without changing global Python. No profile, permissions change, network control or OCR occurred. Isolation compatibility remains unverified; further execution requires a separately approved diagnostic package.
 
+The [startup diagnostic proposal](docs/proposals/python-startup-diagnostic.md) defines eight original/staged Python launch comparisons with a shared 48-slot allocation. Prepared at the user's request; no diagnostic implementation, launch, repair or additional isolation trial has been authorized or performed.
+
 The dedicated project environment is `F:/document_assistant/.venv`, using Python 3.14.6 and local uv 0.13.8. Installed baseline: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5, with exact transitive versions in `uv.lock`. Global/user packages are not inherited. No application or selected runtime parser/OCR/index/model exists yet. The optional pdf-eval group installs pypdf 7.0.1, pdfplumber 0.11.10 and seven pinned dependencies locally for evaluation only; all baseline versions are unchanged. The approved tabular-eval group adds openpyxl 3.1.5, et-xmlfile 2.0.0 and defusedxml 0.7.1 for T07 evaluation only.
 
 ## Project documents
