@@ -58,6 +58,8 @@ T01 acceptance is satisfied: D01/D02, D03 evaluation scope, D04 core deletion ru
 
 ## Approved allocation of remaining details
 
+**2026-11-14 - Synthetic OCR evaluation boundary:** After consolidated isolation result commit `ed4cb3a`, the user accepted a user-operated disconnected trial without filesystem confinement ("yes continue please") and authorized preparing its [bounded package](proposals/manual-disconnected-ocr-trial.md). Acceptance is limited to authored synthetic inputs on the local Windows account; it does not waive Stage 1 application privacy/security, authorize user documents, adopt OCR engines, approve provisioning/execution of the still-proposed package or reopen Windows isolation diagnostics. Exact package and Git approval gates remain.
+
 T03 host/baseline review is complete, with future model/OCR/tool artifacts still requiring individual G1 approval. T04 SkillSpector was explicitly deferred by the user (“then do not bother about it”); no scanner installation/trial. Use manual skill/script review. See `docs/benchmarks/skillspector.md`; do not revisit the optional scanner unless requested.
 
 Subsequent user direction overrides the earlier uv-only loose-tool proposal: use a dedicated project `.venv` and install the reviewed baseline here; the user will manage installations/uninstallations elsewhere. This explicitly brings environment preparation forward from T18. Verified setup is recorded in `docs/provisioning.md`; no global changes, application implementation, parser/OCR/model installation or commit was authorized/performed.

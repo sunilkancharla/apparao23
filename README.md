@@ -20,6 +20,8 @@ The approved [launch-flag comparison](docs/benchmarks/launch-flag-comparison.md)
 
 The user-authorized [consolidated isolation validation](docs/benchmarks/consolidated-isolation-validation.md) passed staged startup and all four native positive loopback paths without the no-window flag. It created its temporary profile, then stopped at a Windows permission-grant denial. Profile deletion succeeded; a read-only audit found no run SID on the 11 candidate grant targets, while the removal command failure remains recorded. Eleven policy tests and Ruff passed. Restricted controls/OCR were not reached; this diagnostic chain is closed pending the user's choice of an alternative.
 
+The user accepted the filesystem-confinement limitation of a manual disconnected synthetic-only trial. Its [bounded OCR package](docs/proposals/manual-disconnected-ocr-trial.md) is prepared for review: connected runner preparation, then user-operated offline installation/rendering/OCR in the existing `.venv`. No runner, installation or OCR execution exists under that proposal yet; product privacy/adoption gates remain.
+
 The dedicated project environment is `F:/document_assistant/.venv`, using Python 3.14.6 and local uv 0.13.8. Installed baseline: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5, with exact transitive versions in `uv.lock`. Global/user packages are not inherited. No application or selected runtime parser/OCR/index/model exists yet. The optional pdf-eval group installs pypdf 7.0.1, pdfplumber 0.11.10 and seven pinned dependencies locally for evaluation only; all baseline versions are unchanged. The approved tabular-eval group adds openpyxl 3.1.5, et-xmlfile 2.0.0 and defusedxml 0.7.1 for T07 evaluation only.
 
 ## Project documents

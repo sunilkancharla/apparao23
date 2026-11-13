@@ -107,6 +107,8 @@ Sources checked on 2026-11-13: Microsoft's [AppContainer isolation](https://lear
 
 ## Part B - conditional comparison design, not execution approval
 
+**Latest boundary decision (2026-11-14):** After the consolidated isolation permission stop, the user accepted the lack of filesystem confinement for a manual disconnected **synthetic-only** trial and requested its [exact replacement package](manual-disconnected-ocr-trial.md). This replaces the proposed native boundary only for that evaluation if its package is approved; it does not waive application privacy/security acceptance, authorize real documents or approve installation/execution by itself. The earlier Part B below remains historical comparison context where superseded; budgets are never pooled/reset across the old investigations.
+
 The user authorized the read-only feasibility review following `5374496`. Its [findings and exact proposed AppContainer preflight](ocr-appcontainer-preflight.md) identify the external base-interpreter dependency, a project-local staged-runtime alternative and temporary per-user profile side effects. No profile/ACL change, native control or OCR run is approved or performed by that review. Review the preflight before any boundary configuration; Part B retains the gates below.
 
 The user subsequently approved the preflight and proposal commit (`e6ecd5a`). That [preflight stopped](../benchmarks/appcontainer-preflight.md) at unrestricted staged-runtime startup (`0xC0000142`), before any profile/access grant/network control. This is not a passing boundary result or Part B approval; no automatic retry or additional diagnostic allocation.
