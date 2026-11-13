@@ -1,0 +1,29 @@
+# T09 - AppContainer preflight stopped at positive runtime startup
+
+**Date:** 2026-11-13. **Authorization:** User approved the [exact preflight](../proposals/ocr-appcontainer-preflight.md) and its four-document proposal commit, recorded in `e6ecd5a`. **Outcome:** Stopped; no AppContainer isolation or OCR readiness result. Do not automatically rerun, reset the ledger, broaden the runtime selection or change execution policy.
+
+## Observed result
+
+The controller created one **unrestricted positive-control** process using the staged Python, suspended process creation, the proposed minimal environment, child-process restriction and a one-process worker Job. Its token was not requested as an AppContainer (`constrained=false`). It exited with **3221225794 / `0xC0000142`**, without timeout or a worker result file. Windows defines that status as **`STATUS_DLL_INIT_FAILED`**; the code does not identify which DLL failed or why. [Microsoft NTSTATUS reference](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55)
+
+No AppContainer profile was created or requested, no ACL/mandatory-label change or loopback exemption was made, and no native network or file-denial controls ran. No OCR/native third-party module, model, PDF renderer or user document was loaded. The copied interpreter was launched, but it did not reach the authored startup-result write. Do not attribute the failure to AppContainer permissions: the AppContainer launch had not been reached.
+
+Possible causes include staged-runtime initialization requirements, the minimal launch environment/creation attributes, or host sandbox interaction. These are hypotheses, not findings. No diagnostic contrast or loader trace was authorized after the failed control, and none ran. Remaining integration code is unexecuted and needs further review before use; passing policy tests does not validate Win32 startup, ACL/profile cleanup or isolation behavior.
+
+## Preparation and checks
+
+- Expected initial RED: missing `appcontainer_preflight` module, preserved in `red-tests.txt`.
+- Eight synthetic safety tests passed after implementation, then after relevant edits. Final focused run: **8 tests in 0.007 s**. Covers path confinement, reparse flags, exact grant roles, cleanup process reserve, owned-profile cleanup policy, actual-token acceptance policy, inconclusive network-result rejection and runtime selection. These are policy tests, not actual AppContainer or ACL tests.
+- Ruff initially reported style/unused-import issues; those failures remain in receipts. Dictionary literal/import and UTC-alias fixes were followed by tests and a clean full Ruff check on the two new files. No tests were weakened or skipped.
+- Staged **810 files / 38,852,581 bytes**, using the approved root-file/Lib/DLLs selection, under `.venv/tools/appcontainer-preflight/preflight-01/runtime/`. Every copied file has a relative path, size and SHA-256 in the ignored manifest and its written bytes were rehashed against the source read. Original runtime files were read only; no global install or permission change. This is not a verified complete runtime closure.
+- The staging controller's kernel Job accounting reported total=1, active=1, terminated=0. The execution controller ended with total=2, active=1, terminated=0: itself plus the exited positive worker. The worker Job reported total=1, active=0, terminated=0. `terminated=0` is the Job's count, not a claim that the worker remained alive. Its process wait completed; no unexpected descendants were observed in these Jobs.
+- Shared ledger: **47/96 conservative process-slot reservations including final documentation closeout**. Includes wrappers, tests, Ruff, corrections and unused planned-controller reservations retained after a lint failure; it is not 47 kernel-observed starts. Additional helper work uses the approved reserve allocation rather than resetting category counters. Trial preparation occurred within its deadline (11:51:56 to 12:11:56 UTC); execution began about 11:59:45 UTC and stopped immediately at startup. No allocation is permission to restart after this stop.
+- **Zero trial downloads, external requests, Ollama calls or network-control attempts.** Separate public Microsoft error-code documentation was consulted after the stop without user content. No packages installed or dependency pins changed. The staged runtime and small synthetic markers/receipts remain ignored locally; no profile cleanup was needed and the controller recorded no cleanup errors.
+
+Ignored evidence: `data/t09-appcontainer/preflight-01/` contains `meter.json`, append-only `events.jsonl`, runtime manifest, red/green/style receipts, controller accounting, `worker-startup-positive.json`, `result.json` and `execution.txt`. No prior parser/model/artifact meter was reused or modified. The new helper/test files remain evaluation aids, not product functionality.
+
+## Review and next decision
+
+T09 remains incomplete; Part B and runtime adoption remain unapproved. The exact stop rule prevents another control run under this package, even though total budget remains. Do not download DLLs, modify global Python, disable host security, widen permissions or switch isolation mechanisms as an implicit repair.
+
+Recommended next work is a separately reviewed, tiny startup diagnostic package: compare the staged interpreter's launch requirements with the known working project interpreter and identify the failed initialization before attempting a profile. Define its exact commands, native process settings, permitted observations and shared budget before approval. No such diagnostic or additional profile trial has been run or approved. Git approval for the proposal does not authorize committing this result or the new helpers; present their limitations and ask separately.

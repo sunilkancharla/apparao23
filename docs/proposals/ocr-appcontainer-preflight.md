@@ -2,6 +2,8 @@
 
 **Date:** 2026-11-13. **Status:** User explicitly approved this bounded preflight and the four-document proposal commit ("yes please"). Execution evidence is recorded separately; approval is not a passing result. This is an evaluation boundary, not a selected product architecture. OCR Part B remains unapproved. Related [OCR proposal](ocr-trial.md) and [artifact results](../benchmarks/ocr.md).
 
+**Actual outcome:** Proposal committed in `e6ecd5a`; preflight stopped at the first unrestricted staged-Python startup with `0xC0000142`, before AppContainer profile creation, access grants or native network controls. [Evidence and limits](../benchmarks/appcontainer-preflight.md). No automatic retry; the proposed steps below are not a claim they ran.
+
 ## Findings from this workspace
 
 - `.venv/pyvenv.cfg` identifies Python 3.14.6 at `F:\Python\Python314`, with system site packages disabled. `.venv/Scripts/python.exe` is a 255,200-byte regular file, not a reparse point. The environment is project-local but its base interpreter is outside the project.
