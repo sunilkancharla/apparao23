@@ -2,6 +2,8 @@
 
 **Date:** 2026-11-14 (Asia/Calcutta). **Status:** User explicitly approved this exact comparison and its three-document proposal commit ("yes please"). Approval is not execution evidence. [Latest observed mismatch](../benchmarks/job-accounting-investigation.md).
 
+**Actual outcome:** Proposal committed in `2475ef8`; F1 and F2 passed marker/accounting checks. F3 (no-window alone) exited 0 with a marker but reproduced cumulative worker total=2; F4 was not attempted. [Results and limits](../benchmarks/launch-flag-comparison.md). No runtime flag adoption, isolation retry or OCR execution.
+
 ## Review finding
 
 The existing basic and extended cases change two factors together: `EXTENDED_STARTUPINFO_PRESENT` and `CREATE_NO_WINDOW`. Source review confirms the extended case adds both flags and uses STARTUPINFOEX with an initialized empty attribute list. The result therefore does not identify which factor, or their combination, is associated with the additional cumulative process count.

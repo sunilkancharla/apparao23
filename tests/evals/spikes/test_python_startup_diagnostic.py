@@ -119,6 +119,26 @@ class DiagnosticPolicyTests(unittest.TestCase):
             calls.append("next")
         self.assertEqual(calls, [])
 
+    def test_flag_matrix_separates_two_factors_in_order(self):
+        self.assertEqual(diagnostic.flag_matrix(), [
+            ("F1", 0x00000404, False), ("F2", 0x00080404, True),
+            ("F3", 0x08000404, False), ("F4", 0x08080404, True)])
+
+    def test_flag_override_is_original_only_and_cannot_enable_child_policy(self):
+        self.assertEqual(diagnostic.launch_settings("A", "original", "F2"),
+                         (0x00080404, True, False))
+        with self.assertRaises(ValueError):
+            diagnostic.launch_settings("A", "staged", "F2")
+        with self.assertRaises(ValueError):
+            diagnostic.launch_settings("C", "original", "F2")
+        with self.assertRaises(ValueError):
+            diagnostic.launch_settings("A", "original", "unknown")
+
+    def test_prior_launch_settings_are_unchanged(self):
+        self.assertEqual(diagnostic.launch_settings("A", "original"), (0x404, False, False))
+        self.assertEqual(diagnostic.launch_settings("B", "original"), (0x08080404, True, False))
+        self.assertEqual(diagnostic.launch_settings("C", "staged"), (0x08080404, True, True))
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

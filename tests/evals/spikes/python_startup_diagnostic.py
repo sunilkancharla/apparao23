@@ -40,6 +40,26 @@ def schedule() -> list[tuple[str, str]]:
     return [(row, source) for row in "ABCD" for source in ("original", "staged")]
 
 
+def flag_matrix() -> list[tuple[str, int, bool]]:
+    """The approved two-factor schedule, independent of previous row meanings."""
+    return [("F1", 0x00000404, False), ("F2", 0x00080404, True),
+            ("F3", 0x08000404, False), ("F4", 0x08080404, True)]
+
+
+def launch_settings(row: str, source: str, flag_case: str | None = None) -> tuple[int, bool, bool]:
+    """Opt-in flag comparisons cannot alter prior cases or request capabilities."""
+    if (row, source) not in schedule():
+        raise ValueError("Unknown launch row/source")
+    if flag_case is not None:
+        if row != "A" or source != "original":
+            raise ValueError("Flag comparisons require original-only baseline environment")
+        for name, flags, extended in flag_matrix():
+            if name == flag_case:
+                return flags, extended, False
+        raise ValueError("Unknown flag case")
+    return (0x08080404 if row in "BC" else 0x00000404, row in "BC", row == "C")
+
+
 def environment(row: str, interpreter: Path, work: Path, windows: str) -> dict[str, str]:
     """Build a fresh non-secret allowlist instead of inheriting host variables."""
     if row not in "ABCD" or len(row) != 1:
@@ -236,21 +256,20 @@ def output_limits() -> None:
 
 
 def trial(native: Native, row: str, source: str, probe: Path,
-          observer: AccountingObserver | None = None) -> dict:
+          observer: AccountingObserver | None = None, *, flag_case: str | None = None) -> dict:
     """Create exactly one suspended direct child and verify Job membership first."""
-    if (row, source) not in schedule():
-        raise ValueError("Unlisted trial")
+    flags, extended, restrict_child = launch_settings(row, source, flag_case)
+    label = flag_case or row
     memory_ready()
     executable = (BASE if source == "original" else STAGE / "runtime") / "python.exe"
-    output = safe_output(RUN, RUN / "outputs" / f"{row}-{source}.json")
+    output = safe_output(RUN, RUN / "outputs" / f"{label}-{source}.json")
     if output.exists():
         raise RuntimeError("Result collision; no retries")
     values = environment(row, executable.parent, RUN / "work", os.environ["SystemRoot"])
     block = ctypes.create_unicode_buffer("\0".join(
         f"{key}={value}" for key, value in sorted(values.items())) + "\0\0")
     startup = StartupEx()
-    startup.startup.cb = ctypes.sizeof(StartupEx if row in "BC" else Startup)
-    flags = 0x4 | 0x400  # suspended + Unicode environment for all rows
+    startup.startup.cb = ctypes.sizeof(StartupEx if extended else Startup)
     attributes = None
     process = ProcessInfo()
     job = native.job(1)
@@ -259,19 +278,18 @@ def trial(native: Native, row: str, source: str, probe: Path,
     try:
         if observer:
             observer("before_create", job, 0)
-        if row in "BC":
-            flags |= 0x80000 | 0x8000000
+        if extended:
             size = ctypes.c_size_t()
             native.kernel.InitializeProcThreadAttributeList(None, 1, 0, ctypes.byref(size))
             attributes = ctypes.create_string_buffer(size.value)
             native.check(native.kernel.InitializeProcThreadAttributeList(
                 attributes, 1, 0, ctypes.byref(size)))
             startup.attributes = ctypes.cast(attributes, ctypes.c_void_p)
-            if row == "C":
+            if restrict_child:
                 native.check(native.kernel.UpdateProcThreadAttribute(
                     attributes, 0, 0x2000E, ctypes.byref(child_policy),
                     ctypes.sizeof(child_policy), None, None))
-        charged_call(lambda: reserve(f"trial {row}-{source}"), lambda: native.check(
+        charged_call(lambda: reserve(f"trial {label}-{source}"), lambda: native.check(
             native.kernel.CreateProcessW(
                 str(executable), ctypes.create_unicode_buffer(command(executable, probe, output)),
                 None, None, False, flags, block, str(RUN / "work"),
@@ -299,7 +317,7 @@ def trial(native: Native, row: str, source: str, probe: Path,
         code = w.DWORD()
         native.check(native.kernel.GetExitCodeProcess(process.process, ctypes.byref(code)))
         accounting = native.accounting(job)
-        result = {"row": row, "source": source, "pid": process.pid,
+        result = {"row": label, "source": source, "pid": process.pid,
                   "flags": f"0x{flags:08x}", "environment": values,
                   "exit_code": code.value, "exit_hex": f"0x{code.value:08x}",
                   "duration_seconds": time.monotonic() - started,
@@ -310,13 +328,13 @@ def trial(native: Native, row: str, source: str, probe: Path,
             # Include marker state in forensic evidence before completion checks.
             output_limits()
             result["marker"] = json.loads(output.read_text()) if output.exists() else None
-            write_receipt(f"case-{row}-{source}.json", result)
+            write_receipt(f"case-{label}-{source}.json", result)
             observer("post_wait", job, process.pid)
         record_completed_case(result)
         output_limits()
         marker = json.loads(output.read_text()) if output.exists() else None
         result.update(classification=classify(code.value, marker, executable), marker=marker)
-        write_receipt(f"case-{row}-{source}.json", result)
+        write_receipt(f"case-{label}-{source}.json", result)
         return result
     finally:
         if owned_handles(process.process, process.thread):
@@ -372,10 +390,11 @@ def execute(controller_job) -> None:
         raise RuntimeError("Diagnostic stopped; see preserved result; no retry")
 
 
-def investigate_accounting(controller_job) -> None:
+def investigate_accounting(controller_job, *, compare_flags: bool = False) -> None:
     """Explicit opt-in to the separately approved, original-only two-case package."""
     global RUN
-    RUN = ROOT / "data/t09-job-accounting/accounting-01"
+    RUN = ROOT / ("data/t09-launch-flags/flags-01" if compare_flags
+                  else "data/t09-job-accounting/accounting-01")
     meter = json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
     if datetime.now(UTC) > datetime.fromisoformat(meter["deadline_utc"]):
         raise RuntimeError("Investigation preparation deadline exhausted")
@@ -403,16 +422,22 @@ def investigate_accounting(controller_job) -> None:
             safe_output(RUN, RUN / name).mkdir(exist_ok=False)
         probe = RUN / "inputs/probe.py"
         probe.write_text(PROBE, encoding="utf-8")
-        for index, row in enumerate("AB"):
-            observer = AccountingObserver(native, controller_job, row, index + 2)
+        cases = [(name, "A", name) for name, _, _ in flag_matrix()] if compare_flags else [
+            (row, row, None) for row in "AB"]
+        for index, (label, row, flag_case) in enumerate(cases):
+            observer = AccountingObserver(native, controller_job, label, index + 2)
             before = observer.job_state(controller_job)
-            write_receipt(f"controller-before-{row}.json", before)
+            write_receipt(f"controller-before-{label}.json", before)
             if before != {"total": index + 1, "active": 1, "terminated": 0,
                           "pids": [os.getpid()]}:
                 raise RuntimeError("Pre-case controller accounting mismatch")
-            result["attempted"].append(row + "-original")
-            result["completed"].append(trial(native, row, "original", probe, observer))
-        result["status"] = "two_cases_complete_no_isolation_claim"
+            result["attempted"].append(label + "-original")
+            completed = trial(native, row, "original", probe, observer, flag_case=flag_case)
+            result["completed"].append(completed)
+            if compare_flags and completed["classification"] != "started":
+                raise RuntimeError("Flag case failed startup readiness; stop schedule")
+        result["status"] = ("four_flag_cases_complete_no_isolation_claim" if compare_flags
+                            else "two_cases_complete_no_isolation_claim")
     except (OSError, RuntimeError, ValueError) as error:
         result["status"] = "safety_stop"
         result["error"] = f"{type(error).__name__}: {error}"
@@ -423,8 +448,7 @@ def investigate_accounting(controller_job) -> None:
         result["extra_observed_starts"] = extra
         for _ in range(extra):
             reserve("Observed extra kernel-accounted process; stop, not authorized new work")
-        for path in ("data/t09-appcontainer/preflight-01/meter.json",
-                     "data/t09-startup-diagnostic/diagnostic-01/meter.json"):
+        for path in (path for path in baseline if path.endswith("/meter.json")):
             if hashlib.sha256((ROOT / path).read_bytes()).hexdigest() != baseline[path]:
                 result["status"] = "safety_stop"
                 result["error"] = "Prior meter changed"
