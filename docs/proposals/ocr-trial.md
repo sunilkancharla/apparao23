@@ -85,6 +85,26 @@ Part A limits: **256 MiB total downloaded response-body bytes** including failed
 
 Maintain one append-only receipt/meter before every launch/request; every failed attempt remains charged. Tests of the preparation helper must use safe authored byte strings and mocked HTTP, share the 16-start allocation, and never run OCR. If adequate controller/descendant accounting cannot be established, stop before starting helpers. Exhaustion/failure pauses the package; do not silently reset, expand or switch tools.
 
+## Native execution boundary recommendation - pending decision
+
+**Status:** Documentation comparison only, prepared after the user requested the next step. Artifact results are committed in `44a8be8`. No boundary has been selected, configured or tested. Part B remains unapproved.
+
+The boundary must address two separate risks: native code making network requests, and native code reading/writing files outside its intended inputs/outputs. A Python request guard, a project-local virtual environment and a Windows Job resource limit do not together establish either restriction. The earlier TCP pending/UDP accepted observations remain inconclusive; they are not proof of delivery or enforced denial.
+
+| Option | Benefit | Cost and remaining limitation |
+|---|---|---|
+| AppContainer worker on the host - recommended direction for feasibility review | Windows provides file/registry and network access restrictions; potentially retains the existing host `.venv` and representative CPU measurements. | Python launcher, interpreter, DLL and asset access must be checked. A working design may need a profile and narrowly scoped access grants. None is authorized here; no compatibility or isolation success is claimed. |
+| Windows Sandbox with networking disabled | A separate environment with explicit network and mapped-folder configuration. | Availability is unverified; enabling a Windows feature or provisioning a separate environment needs approval and changes the agreed installation arrangement. Guest memory/virtualization overhead would qualify benchmark comparisons. Default networking and clipboard sharing must not be assumed disabled. |
+| User-disconnected host, synthetic fixtures only | Avoids a new virtualization environment and can exercise the current project environment without external connectivity while disconnected. | Requires a manual handoff because Codex connectivity may also stop. Does not restrict native file access under the Windows account; reconnection requires all workers to have stopped. This is a reduced trial requiring explicit acceptance, not equivalent isolation or approval to process user documents. |
+
+**Recommendation:** First assess AppContainer feasibility for the existing Windows/Python installation. Keep the target at 16 GB/CPU only. If it is impractical, present the evidence and ask whether to use a manually disconnected synthetic-only trial or a separately provisioned Sandbox. Do not automatically fall back or remove scanned-PDF OCR from Stage 1.
+
+The next assessment can inspect public documentation and existing local paths/configuration without importing OCR/native packages, executing network probes, installing anything, creating AppContainer profiles, changing ACLs/firewall/Windows features or reading user documents. Its deliverable is an exact proposed launcher/access map, controls and a shared process/time budget for a separately approved boundary preflight. No new execution allocation is granted by this recommendation; old trial meters remain untouched.
+
+Before any later OCR run, require evidence that the selected boundary can load the approved interpreter/assets, write only its designated outputs as designed, reject a controlled out-of-scope file access, and satisfy its agreed network-denial controls. Use synthetic sentinels and approved controlled endpoints, not private files or arbitrary external services. Capture descendant/resource accounting and teardown. Failed controls stop before fixture rendering/native OCR imports. A reduced disconnected option would explicitly record the missing file restriction rather than claim this control passed. Boundary validation, finalized Part B settings/budgets and runtime adoption remain distinct decisions.
+
+Sources checked on 2026-11-13: Microsoft's [AppContainer isolation](https://learn.microsoft.com/en-us/windows/win32/secauthz/appcontainer-isolation), [Job Objects](https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects) and [Windows Sandbox configuration](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file). These describe platform mechanisms; the recommendation and expected project compatibility are an assessment, not a measured result.
+
 ## Part B - conditional comparison design, not execution approval
 
 **Blocking decisions:** reviewed Part A results and English-data SHA-256 record; accepted native network/filesystem boundary; approved trial settings/quality gates below. Do not rerun T07A controls or change firewall/OS policy under this proposal. If no suitable execution boundary is agreed, no native import, PDF render, fixture decoding or OCR trial starts. Public metadata preparation is independent of that boundary.
