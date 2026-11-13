@@ -1,5 +1,7 @@
 # Manual offline OCR trial - local instructions
 
+**STOP NOTICE:** The first run stopped before installation because of a package-name comparison defect. [Diagnosis and tested repair](../benchmarks/manual-ocr-first-stop.md). Its ledger is not reusable, and its source seal no longer matches the corrected helper. The command below is historical until an explicitly approved fresh handoff is prepared; do not rerun/reset/reseal `manual-01`.
+
 **Prepared 2026-11-14 (Asia/Calcutta).** This is the user-operated portion of the approved [synthetic-only package](manual-disconnected-ocr-trial.md). Nothing has been installed/rendered/OCR-tested during connected preparation. The end-to-end offline path is unrun; contract tests, hashes and script syntax have been checked. A missing cache entry, Windows restriction or backend incompatibility stops the run, without downloads or retries.
 
 ## Before starting

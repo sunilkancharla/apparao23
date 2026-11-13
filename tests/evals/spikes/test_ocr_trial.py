@@ -18,6 +18,13 @@ class OCRContracts(unittest.TestCase):
         self.assertEqual(len(trial.control_schedule()), 20)
         self.assertEqual(len(set(trial.comparison_schedule())), 60)
 
+    def test_distribution_aliases_compare_as_the_same_pinned_package(self):
+        self.assertEqual(trial.canonical_name("pdfminer.six"), "pdfminer-six")
+        self.assertEqual(trial.canonical_name("PDFMINER__Six"), "pdfminer-six")
+        baseline = {trial.canonical_name("pdfminer.six"): "20260107"}
+        locked = {trial.canonical_name("pdfminer-six"): "20260107"}
+        self.assertEqual(baseline, locked)
+
     def test_case_definitions_preserve_pdf_page_and_derivative_identity(self):
         cases = trial.case_definitions()
         self.assertEqual(len(cases), 10)

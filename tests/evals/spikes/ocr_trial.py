@@ -10,6 +10,7 @@ import ctypes
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -27,6 +28,11 @@ INVENTORY_HASH = "9fb3c5225cb7f75052417cc6e582b96cf77867ba7d8b9b5bb0a2fa4c65fdb9
 CACHES = [ROOT / ".venv/.cache/ocr-review" / name for name in ("part-a-01", "part-a-02")]
 CONTROLS = ("missing", "wrong", "truncated", "empty", "unreadable", "pixels",
             "deadline", "memory", "backend", "remote")
+
+
+def canonical_name(name: str) -> str:
+    """Compare equivalent distribution spellings without relaxing version pins."""
+    return re.sub(r"[-_.]+", "-", name).lower()
 
 
 def case_definitions() -> list[dict]:
@@ -184,10 +190,10 @@ def verify_artifacts() -> dict:
         digest = item.get("sha256") or item["recorded_verified_sha256"]
         verify_blob(found[0].read_bytes(), item["bytes"], digest)
         selected[item["filename"]] = str(found[0])
-    baseline = {dist.metadata["Name"].lower().replace("_", "-"): dist.version
+    baseline = {canonical_name(dist.metadata["Name"]): dist.version
                 for dist in distributions(path=[str(SITE)])}
     for name, version in inventory["reused_versions"].items():
-        if baseline.get(name) != version:
+        if baseline.get(canonical_name(name)) != version:
             raise RuntimeError("Reused distribution mismatch: " + name)
     companion = ROOT / "data/t09-artifacts/part-a-02/flatbuffers-LICENSE.upstream.txt"
     verify_blob(companion.read_bytes(), 11358,
@@ -625,11 +631,12 @@ def offline_main() -> None:
                    slots=4, processes=4, memory=512 * 1024**2, seconds=600)
         generated_lock = (ROOT / "uv.lock").read_bytes()
         locked = tomllib.loads((ROOT / "uv.lock").read_text())
-        versions = {item["name"]: item["version"] for item in locked["package"]}
+        versions = {canonical_name(item["name"]): item["version"] for item in locked["package"]}
         for name, version in state["baseline"].items():
-            if name != "document-assistant" and versions.get(name) != version:
-                raise RuntimeError("Baseline lock version changed")
-        expected = {item["name"].lower().replace("_", "-"): item["version"]
+            if canonical_name(name) != "document-assistant" and versions.get(canonical_name(name)) != version:
+                raise RuntimeError(f"Baseline lock version changed: {name}, expected {version}, "
+                                   f"got {versions.get(canonical_name(name))}")
+        expected = {canonical_name(item["name"]): item["version"]
                     for item in inventory["new_wheels"]}
         if any(versions.get(name) != version for name, version in expected.items()):
             raise RuntimeError("OCR lock pins mismatch")
