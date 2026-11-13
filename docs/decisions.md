@@ -1,5 +1,11 @@
 # Stage 1 Decision Register
 
+## Format-scope decision — 2026-11-13
+
+User explicitly instructed “we will stick with - pdf, xls, xlsx, csv for this stage”. Approved Stage 1 formats are PDF/XLS/XLSX/CSV; DOCX/TXT are excluded entirely from Stage 1; later inclusion requires explicit user approval. The user clarified that DOCX/TXT must be excluded entirely from Stage 1 development, evaluation provisioning, fixture materialization and positive-support acceptance. They may be included in later stages only if the user explicitly requests it. This supersedes earlier five-format statements and the initial instruction to skip DOCX temporarily. SPEC and persistent rules are synchronized. Propose T02R corpus refresh, separate T07A XLS evaluation, CSV-first implementation and repurposed unstarted T37/T39 tasks; sequence changes await review. Do not add parser dependencies or claim XLS support yet. No formulas/macros/external relationships may execute. Limits, OCR, privacy and other approved behavior remain in force.
+
+T05 was committed as d8d12e7 under the prior explicit closeout/commit approval. The user subsequently approved committing the separate format-scope updates (“yes please”). This authorizes the reviewed documentation/evaluation-definition commit, not further task execution, provisioning or runtime adoption.
+
 ## Approval and current task
 
 The user approved AGENTS.md, PLAN.md and TODO.md and explicitly agreed to T01's downstream decision allocation (“yes please”). T01 is complete; the user approved T02's fixture/rubric design (“good”) and T03 read-only review proceeded. T03 inventory/dependency/provisioning reports are prepared; installations, downloads, adoption, commits and later tasks remain gated. SPEC's T01 clarification records approved product choices.

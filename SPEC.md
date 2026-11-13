@@ -10,7 +10,7 @@ Build a single-user, browser-based, local document-chat assistant with conversat
 - `uv` with local virtual environment; Ollama for CPU-capable local generation and embeddings; HTTPX for local API requests.
 - SQLite for metadata/chat history; local retrieval index/vector storage to be selected after benchmarks.
 - Format-specific parsers and/or MarkItDown, local OCR engine for scanned PDFs, pytest and Ruff.
-- Support PDF, DOCX, XLSX, CSV and TXT; both conversation attachments and reusable library.
+- Support PDF, XLS, XLSX and CSV; both conversation attachments and reusable library. DOCX and TXT are excluded entirely from Stage 1.
 - File size/count limits, OCR languages, deletion behavior and advanced image interpretation remain open decisions.
 
 ## Commands
@@ -49,7 +49,7 @@ document_chat/
   app/
     main.py                 # FastAPI entry point
     api/                    # HTTP routes and validation
-    ingestion/              # PDF, Word, spreadsheet, CSV, TXT, OCR
+    ingestion/              # PDF, XLS/XLSX, CSV, OCR
     retrieval/              # chunks, embeddings, search, citations
     chat/                   # Ollama orchestration and conversation context
     storage/                # documents, library, chat history
@@ -90,7 +90,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 ### FR-01 — Upload and validate files
 - Allow upload of one file or multiple files in one operation.
-- Initial candidate formats: PDF, DOCX, XLSX, CSV, and TXT.
+- Stage 1 supported formats: PDF, XLS, XLSX and CSV. DOC/DOCX, TXT, XLSM, XLSB and other unlisted formats are outside this stage.
 - Validate extension, detected content type where feasible, file size, and parseability.
 - Reject unsupported, corrupt, password-protected, or oversized files with a clear error.
 - Prevent path traversal and unsafe filename handling.
@@ -98,7 +98,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 ### FR-02 — Extract and normalize content
 - Extract text while preserving useful structure and metadata.
-- Preserve PDF page numbers; spreadsheet sheet names and row/column context; CSV row/column context; DOCX headings/paragraphs/tables where possible; TXT line or section context.
+- Preserve PDF page numbers, XLS/XLSX sheet names and cell/range/row/column context, and CSV record/column context with physical-line spans where available.
 - Do not flatten tables into ambiguous text without recording their structure.
 - Store original files separately from normalized extraction output.
 - Record parser name/version and extraction warnings for troubleshooting.
@@ -168,7 +168,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 ## Testing Strategy
 
 - Unit and API tests: file validation, parsing, OCR/page provenance, table/cell metadata, chunking, indexing/deletion, retrieval, citations, evidence indicator and saved chats.
-- Mock Ollama for routine tests; add local manual smoke tests for text PDF, scanned PDF, DOCX, XLSX, CSV, TXT, unsupported questions, multi-file questions, and restart persistence.
+- Mock Ollama for routine tests; add local manual smoke tests for text PDF, scanned PDF, XLS, XLSX, CSV, unsupported questions, multi-file questions, and restart persistence.
 - Benchmark memory, CPU latency, extraction fidelity, source-location correctness and local-only traffic.
 
 ## Boundaries
@@ -196,7 +196,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 |---|---|---|
 | Before writing implementation tasks | `@spec-driven-development`, then `@planning-and-task-breakdown` | Review this stage's SPEC, resolve blocking questions, then create atomic PLAN/TODO tasks. |
 | Before accepting third-party Agent Skills or external tool instructions | **SkillSpector** | Evaluate as a skill-security inspection option: review skill contents, scripts, permissions, trust boundaries, and any external calls. Do not treat its report as a security guarantee; verify availability and usage before adoption. |
-| During document ingestion/parser spike | **Microsoft MarkItDown** | Compare against format-specific libraries on PDF, DOCX, XLSX, CSV, TXT, scanned PDFs and tables. Measure extraction fidelity, provenance, OCR compatibility, installation size and offline operation. |
+| During document ingestion/parser spike | **Microsoft MarkItDown** | Compare against format-specific libraries on PDF, XLS, XLSX, CSV, scanned PDFs and tables. Record unsupported formats rather than assuming coverage. Measure extraction fidelity, provenance, OCR compatibility, installation size and offline operation. |
 | When deciding on UI implementation | **UI UX Pro Max** | Try as a design/workflow aid for accessibility, upload flows, citation previews and chat UX. Review generated assets/code and check licensing; not a required runtime dependency. |
 | When implementing and testing tasks | `@incremental-implementation`, `@test-driven-development`, `@code-review-and-quality` | Apply one relevant skill at a time; run tests and review changes before requesting commit approval. |
 | When Codex context grows or a task boundary is reached | Codex `/status`, `/compact` | Check usage/status and compact only after saving important decisions, active tasks, and test results in repository files. |
@@ -205,7 +205,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 ### Stage 1 tool trials
 
-1. **Before parser implementation:** benchmark MarkItDown versus PyMuPDF, python-docx, openpyxl/CSV parsers and local OCR on a representative fixture set. Compare page/sheet/row provenance, tables, scanned pages and images; select the smallest adequate combination.
+1. **Before parser implementation:** compare MarkItDown with the evaluated PDF alternatives, separate XLS/XLSX candidates, standard-library CSV and local OCR on a representative fixture set. Compare page/sheet/cell/row provenance, tables, scanned pages and images; select the smallest adequate combination. The user accepted deferral of PyMuPDF's empirical comparison at T05 closeout; its metadata review is not a benchmark.
 2. **Before trusting downloaded Agent Skills:** try SkillSpector as an additional review, then manually inspect any shell scripts, file access and outbound requests.
 3. **During first web UI implementation:** trial UI UX Pro Max for layouts and accessibility; review output before use.
 4. **During Codex setup:** try `/status` to inspect the session and `/compact` only at sensible task boundaries. Review RTK and ponytail only after identifying their exact projects and proposed benefits.
@@ -223,6 +223,14 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 This section incorporates the user's clarifications and supersedes conflicting provisional assumptions elsewhere in this draft.
 
+### Approved format-scope amendment — 2026-11-13
+
+The user further clarified that DOCX and TXT are excluded entirely from Stage 1 development. Do not plan or implement their parsers, install their dependencies, generate their fixtures, benchmark their extraction or include their positive-support cases in Stage 1 acceptance. Later-stage inclusion is optional and requires a new explicit user decision. Unsupported-format rejection checks may still use these extensions.
+
+The user instructed: “we will stick with - pdf, xls, xlsx, csv for this stage”. This explicitly replaces the earlier five-format scope. Support PDF (native/scanned/mixed), legacy binary XLS, XLSX and CSV across uploads, library, retrieval, citations and acceptance. DOCX and TXT are excluded entirely from Stage 1. Their existing fixture/question definitions remain historical design material and must not enter active Stage 1 scores.
+
+Evaluate XLS separately from XLSX. Preserve sheet/cell/range provenance and available stored values; never execute workbook formulas, VBA/macros, embedded code or external relationships. Disclose missing cached values and unsupported features. Existing rejection rules for encrypted/password-protected, corrupt and unsupported files remain applicable. This approves the format scope, not a parser choice or installation. Limits, English OCR, local inference, chart evaluation and other approved requirements remain in force.
+
 ### Confirmed product and deployment decisions
 - **Stage 1 is single-user:** one person uses the application locally during the prototype. Do not build multi-user authentication or authorization in Stage 1.
 - **Initial interface:** a local web application accessed through a browser.
@@ -235,7 +243,7 @@ This section incorporates the user's clarifications and supersedes conflicting p
 - **Integrations/actions:** MCP and external business actions are deferred; they are not part of the initial stages unless a later approved requirement makes them necessary.
 
 ### Stage 1 additions and clarifications
-1. The initial file list is PDF, DOCX, XLSX, CSV, and TXT. Confirm whether legacy DOC/XLS, PPTX, email formats, and other office formats are required before adding parsers.
+1. The active Stage 1 file list is PDF, XLS, XLSX and CSV. DOC/DOCX, TXT, PPTX, email and other unlisted formats are excluded from Stage 1; later support requires explicit user approval. Legacy XLS is explicitly included and requires its own parser/dependency evaluation rather than treating it as XLSX.
 2. Add OCR as a candidate dependency for scanned PDF pages. Before installation, compare local OCR options for Windows support, language coverage, accuracy, license, installation size, and offline operation.
 3. The extraction pipeline must distinguish native PDF text from OCR-derived text and retain page-level provenance and extraction confidence/warnings where available.
 4. For PDF tables, preserve row/column relationships where practical; retain a link to the original page/table region. For embedded images, preserve the source page and image reference. Stage 1 may index OCR text extracted from images, but advanced image/chart reasoning is not guaranteed.

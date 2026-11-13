@@ -1,5 +1,8 @@
 # Stage 1 Fixture and Evaluation Design
 
+**Scope amendment (2026-11-13):** Active Stage 1 formats are PDF/XLS/XLSX/CSV. This document and JSON files preserve the original T02 design as history. S-TXT/S-DOCX/S-INJECTION and Q07–Q09/Q17 are explicitly excluded from Stage 1 scoring and materialization in the JSON metadata; the TXT-based S-INJECTION/Q17 must move to an in-scope artifact and be reverified before scoring. No new score denominator or XLS ground truth is approved yet. Proposed T02R will add XLS coverage and replace the excluded TXT injection scenario with an in-scope definition before T07/T07A trials. Earlier DOCX/TXT/five-format references below describe the original design. JSON now records these scope exclusions; the corpus still needs T02R review before scoring.
+
+
 **Status:** T02 design and initial rubric/gates approved by the user (“good”). Fixture generation, parser/model trials, application tests and benchmarks have not run. Detailed T16 refinement and individual trial approvals remain required; approval is not a measured pass.
 
 ## Purpose and artifacts

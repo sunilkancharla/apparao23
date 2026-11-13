@@ -175,7 +175,9 @@
         ]
       },
       "ground_truth_status": "reviewed_authored_definition; artifact_render_verification_pending",
-      "pipeline_run_status": "not_run"
+      "pipeline_run_status": "not_run",
+      "stage1_in_scope": false,
+      "stage1_exclusion_reason": "Uses a DOCX/TXT fixture excluded entirely from Stage 1 development and acceptance."
     },
     {
       "id": "Q08",
@@ -189,7 +191,9 @@
         "evidence": []
       },
       "ground_truth_status": "reviewed_authored_definition; artifact_render_verification_pending",
-      "pipeline_run_status": "not_run"
+      "pipeline_run_status": "not_run",
+      "stage1_in_scope": false,
+      "stage1_exclusion_reason": "Uses a DOCX/TXT fixture excluded entirely from Stage 1 development and acceptance."
     },
     {
       "id": "Q09",
@@ -213,7 +217,9 @@
         ]
       },
       "ground_truth_status": "reviewed_authored_definition; artifact_render_verification_pending",
-      "pipeline_run_status": "not_run"
+      "pipeline_run_status": "not_run",
+      "stage1_in_scope": false,
+      "stage1_exclusion_reason": "Uses a DOCX/TXT fixture excluded entirely from Stage 1 development and acceptance."
     },
     {
       "id": "Q10",
@@ -421,7 +427,9 @@
         ]
       },
       "ground_truth_status": "reviewed_authored_definition; artifact_render_verification_pending",
-      "pipeline_run_status": "not_run"
+      "pipeline_run_status": "not_run",
+      "stage1_in_scope": false,
+      "stage1_exclusion_reason": "Uses a DOCX/TXT fixture excluded entirely from Stage 1 development and acceptance."
     },
     {
       "id": "Q18",
@@ -476,5 +484,14 @@
       "ground_truth_status": "reviewed_authored_definition; artifact_render_verification_pending",
       "pipeline_run_status": "not_run"
     }
-  ]
+  ],
+  "stage1_scope": {
+    "excluded_question_ids": [
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q17"
+    ],
+    "policy": "Do not score excluded questions in Stage 1; retain original ground truth for history. Replace the TXT-based injection scenario under T02R before enabling its successor."
+  }
 }

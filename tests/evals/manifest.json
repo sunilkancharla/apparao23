@@ -150,8 +150,9 @@
         "anchors": "1-based original lines",
         "warnings": []
       },
-      "state": "definition_only; materialize temporarily in T22, verify rendered/serialized artifacts before scoring",
-      "scoring_eligible": false
+      "state": "excluded_from_stage1; historical definition only; do not materialize",
+      "scoring_eligible": false,
+      "stage1_in_scope": false
     },
     {
       "id": "S-DOCX",
@@ -179,8 +180,9 @@
       "expected": {
         "anchors": "heading Delivery plan; table 1, row 2, column Date; no invented page number"
       },
-      "state": "definition_only; materialize temporarily in T22, verify rendered/serialized artifacts before scoring",
-      "scoring_eligible": false
+      "state": "excluded_from_stage1; historical definition only; do not materialize",
+      "scoring_eligible": false,
+      "stage1_in_scope": false
     },
     {
       "id": "S-PDF-NATIVE",
@@ -371,8 +373,9 @@
         "no_execution": true,
         "anchor": "line 1"
       },
-      "state": "definition_only; materialize temporarily in T22, verify rendered/serialized artifacts before scoring",
-      "scoring_eligible": false
+      "state": "excluded_from_stage1; historical definition only; do not materialize",
+      "scoring_eligible": false,
+      "stage1_in_scope": false
     },
     {
       "id": "S-CHART",
@@ -531,5 +534,23 @@
     "Supplied PDF native/scanned/table/chart features and page anchors remain unverified; approved parser/manual inspection required later.",
     "No xl/charts/chartN.xml parts were found in the four supplied workbooks; this is not proof that embedded images or other diagrams are absent.",
     "S-CHART is a trial design, not an implemented feature or proven local model capability."
-  ]
+  ],
+  "stage1_scope": {
+    "formats": [
+      "PDF",
+      "XLS",
+      "XLSX",
+      "CSV"
+    ],
+    "excluded_formats": [
+      "DOCX",
+      "TXT"
+    ],
+    "excluded_fixture_ids": [
+      "S-DOCX",
+      "S-INJECTION",
+      "S-TXT"
+    ],
+    "policy": "Excluded definitions are historical only: do not materialize or score in Stage 1. Later support requires explicit user approval. XLS coverage and in-scope injection replacement await T02R."
+  }
 }

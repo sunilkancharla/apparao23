@@ -2,11 +2,27 @@
 
 **Status:** T01–T03 and T05 complete; T04 explicitly deferred. T05 closes with approved PyMuPDF comparison deferral. **Prepared:** 2026-11-13 (Asia/Calcutta).
 
-**Authority:** Approved SPEC, AGENTS and PLAN. T04 closes by user-approved optional-tool deferral; T05 permissive trial was authorized after licensing review; T06–T50 and proposed T16A are unstarted.
+**Authority:** Approved SPEC, AGENTS and PLAN. T04 closes by user-approved optional-tool deferral; T05 permissive trial was authorized after licensing review; T06 is excluded from Stage 1; T07–T50 and proposed T02R/T07A/T16A are unstarted.
+
+## Proposed scope-alignment revision — 2026-11-13
+
+User approved PDF/XLS/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely from Stage 1; later inclusion requires explicit user approval. T05 is committed in d8d12e7. Completed task history and original fixture ground truth are retained. The following changes are proposed for review: T02R active-corpus refresh, T06 exclusion, T07 XLSX/CSV, new T07A XLS, CSV-first T23–T34, T37 XLS and T39 CSV robustness. No new trial or installation is authorized by this revision.
+
+### T02R — Align active evaluation coverage with the four-format scope
+
+**Status:** Proposed; first next task after review. **Prerequisites:** Approved format amendment and reviewed task revision. **Scope:** M, definition-only.
+**Objective:** Keep scores and fixture coverage faithful to PDF/XLS/XLSX/CSV without losing historical ground truth.
+
+- [ ] Keep DOCX/TXT fixture/question definitions excluded from Stage 1; exclude them from active scoring and materialization and migrate the injection scenario to an in-scope artifact without changing its expected safety behavior.
+- [ ] Specify an XLS fixture with sheet/cell/merged-header/stored-value anchors and invalid/protected/macro/external-link cases; document missing real XLS samples and an approved materialization path before trials. Reuse checked CSV questions for the first vertical slice.
+
+**Verification:** Validate JSON references, active/excluded selection and format coverage; review new gold anchors and scoring denominators. No document generation, dependency installation or model evaluation.
+**Evidence:** Pending — revised manifest/questions/evaluation design and consistency checks.
+**Likely files:** `tests/evals/manifest.json`, `tests/evals/questions.json`, `docs/evaluation.md`.
 
 ## Checklist conventions and completion rules
 
-- User authorized T03 closeout and read-only T04 review, then explicitly declined SkillSpector. T05 review and permissive trial were authorized. Replying “ok, next step please” to the explicit closeout/commit question approves PyMuPDF comparison deferral, the T05 commit and T06 review. G1–G4 and D01–D09 still govern later work; no runtime adoption or T06 installation is authorized.
+- User authorized T03 closeout and read-only T04 review, then explicitly declined SkillSpector. T05 review and permissive trial were authorized. Replying “ok, next step please” to the explicit closeout/commit question approves PyMuPDF comparison deferral, the T05 commit and initially T06 review; later user instructions supersede that next step by excluding DOCX/TXT from Stage 1 and revising formats. G1–G4 and D01–D09 still govern later work; no runtime adoption or T06 installation is authorized.
 - Record explicit task authorization before starting, then work on one task at a time. All required prerequisites/decisions must be satisfied. Plan approval alone does not authorize installs, trials, component adoption, commits, or every subsequent task.
 - Every task includes G3: relevant skill verification, actual evidence, quality/security review as applicable, README/PLAN/TODO updates, readable diff, commit question, and next-task authorization. Existing permission persists for its approved scope.
 - Scope S means normally 1–2 substantive files; M means 3–5, plus routine README/PLAN/TODO updates. Likely paths are proposals, not instructions to create empty modules. Re-split before work if a task exceeds one focused session/five substantive files.
@@ -81,38 +97,42 @@
 **Evidence:** `docs/benchmarks/pdf-parsers.md`: nine trial packages installed only in project .venv, baseline pins unchanged; 24 final sample runs, 48/48 limited fact checks, five passing tests, memory/timeout/socket-denial controls, offline frozen sync/lock checks and warning/layout/OCR limits. No runtime adoption. Real-report table coverage and full-report resources remain gaps; T08/T09/T17 must address them before adoption. Resource/offline evidence is bounded by the host sandbox, not a final disconnected application gate. User accepted closeout/deferral and authorized its commit on 2026-11-13.
 **Likely files:** That report and at most three bounded evaluation files under `tests/evals/spikes/`.
 
-### T06 — Compare DOCX parsers
+### T06 — Retired: DOCX excluded from Stage 1
 
-**Status:** Proposed. **Prerequisites:** T02–T04; exact trial approved under G1. **Scope:** M.
-**Objective:** Find a local structural extraction path with honest Word citation anchors.
+**Status:** Removed from Stage 1 scope at the user's explicit request; not completed or awaiting execution. This identifier is retained only to preserve task history. There are no Stage 1 acceptance criteria, files, dependencies, installation or trial actions for this task. Any later-stage DOCX/TXT support requires a new user-approved scope and plan.
 
-- [ ] Compare python-docx and a justified alternative/no-extra-package option on headings, paragraphs, tables and available image/structural references without invented pagination.
-- [ ] Test corrupt/unsupported/protected inputs and external relationships without macro/code execution or remote fetches; record provenance fidelity, license, footprint/time/RAM and offline limits.
+**Checkpoint CP02 — T04–T06:** Proposed. Review skill trust and PDF closeout; record DOCX exclusion and four-format revision, especially locations, licenses and local-only paths. Apply G3; approve the next trial separately.
 
-**Verification:** Match output against golden DOCX anchors/table structure and inspect security/error paths.
-**Evidence:** Pending — `docs/benchmarks/docx-parsers.md` and reproducible local comparison.
-**Likely files:** That report and at most two evaluation files.
+### T07 — Compare XLSX and CSV extraction baselines
 
-**Checkpoint CP02 — T04–T06:** Proposed. Review skill trust and PDF/DOCX evidence, especially locations, licenses and local-only paths. Apply G3; approve the next trial separately.
-
-### T07 — Compare XLSX, CSV and TXT extraction baselines
-
-**Status:** Proposed. **Prerequisites:** T02–T04; exact trial approved under G1. **Scope:** M, bounded shared fixture trial.
+**Status:** Proposed. **Prerequisites:** T02–T04, T02R; exact trial approved under G1. **Scope:** M, bounded shared fixture trial.
 **Objective:** Establish structured local tabular/text baselines with minimal dependencies.
 
-- [ ] Compare viable XLSX handling including openpyxl as a candidate with standard-library CSV/TXT paths; retain sheets/cells/rows/columns/headers/lines, quoted cells and encoding warnings.
+- [ ] Compare viable XLSX handling including openpyxl as a candidate with standard-library CSV paths; retain sheets/cells/records/columns/headers/physical-line spans, quoted cells and encoding warnings.
 - [ ] Evaluate merged headers, formula/cached values without execution, external links, protected/invalid inputs and approved memory boundaries; record fidelity, resource, license and offline tradeoffs.
 
-**Verification:** Compare expected cell/range/line anchors and values on the fixed small corpus; disclose missing cached values and unsupported encodings.
+**Verification:** Compare expected cell/range/record and physical-line anchors and values on the fixed small corpus; disclose missing cached values and unsupported encodings.
 **Evidence:** Pending — `docs/benchmarks/tabular-text-parsers.md` and local measurements.
 **Likely files:** That report and at most three evaluation files.
 
+### T07A — Compare legacy XLS parsers
+
+**Status:** Proposed. **Prerequisites:** T02R, T03–T04, T07; exact trial provisioned only after G1 approval. **Scope:** M.
+**Objective:** Establish a local binary XLS extraction path independently of XLSX.
+
+- [ ] Review a bounded candidate shortlist, including license, maintenance/advisories, Windows/Python compatibility, native/transitive dependencies, footprint and offline behavior; compare against a justified alternative before choosing.
+- [ ] Use fixed golden sheets/cells/stored values, merged/header context and date types; measure time/RAM, errors/protected/invalid files and honest missing-cache warnings. Never execute formulas, macros, embedded content or external links; reject mislabeled unsupported workbooks.
+
+**Verification:** Bounded local comparison with fixture hashes, golden value/anchor checks and negative/network/resource controls. No runtime adoption inferred.
+**Evidence:** Pending — `docs/benchmarks/xls-parsers.md`, exact trial proposal and measured comparison. Real XLS sample coverage is currently unverified.
+**Likely files:** That report and at most three evaluation aids.
+
 ### T08 — Evaluate Microsoft MarkItDown against format-specific baselines
 
-**Status:** Proposed. **Prerequisites:** T05–T07; exact MarkItDown configuration/install approved under G1. **Scope:** M.
+**Status:** Proposed. **Prerequisites:** T05, T07, T07A; T06 explicitly excluded; exact MarkItDown configuration/install approved under G1. **Scope:** M.
 **Objective:** Determine whether MarkItDown improves the project enough to justify dependencies and provenance tradeoffs.
 
-- [ ] Compare identical PDF/DOCX/XLSX/CSV/TXT samples for fidelity, tables, page/sheet/row anchors, scans/images, OCR integration needs, time/RAM and install footprint against T05–T07.
+- [ ] Compare identical PDF/XLS/XLSX/CSV samples for fidelity, tables, page/sheet/row anchors, scans/images, OCR integration needs, time/RAM and install footprint against T05/T07/T07A.
 - [ ] Inspect plugin/LLM/remote-processing paths and verify the trial stays local; document limitations and ask adopt/reject, with OCR integration measurements completed in T09.
 
 **Verification:** Produce side-by-side results and manually trace output to original locations; no cloud text/image conversion paths allowed.
@@ -131,7 +151,7 @@
 **Evidence:** Pending — `docs/benchmarks/ocr.md`, artifact/licenses and adoption proposal.
 **Likely files:** That report and at most three local evaluation files.
 
-**Checkpoint CP03 — T07–T09:** Proposed. Review the five-format comparison and OCR evidence/languages/visual limits. Record tool decisions; no parser product code before G2. Apply G3.
+**Checkpoint CP03 — T07–T09:** Proposed. Review the four-format comparison and any unsupported XLS path and OCR evidence/languages/visual limits. Record tool decisions; no parser product code before G2. Apply G3.
 
 ### T10 — Benchmark local Ollama embedding candidates
 
@@ -211,7 +231,7 @@
 
 ### T16 — Specify retrieval, citations and evidence-support contracts
 
-**Status:** Proposed. **Prerequisites:** T02, T05–T12; D04/D06. **Scope:** M, design only.
+**Status:** Proposed. **Prerequisites:** T02/T02R, T05, T07/T07A and T08–T12 (T06 excluded); D04/D06. **Scope:** M, design only.
 **Objective:** Define measurable grounding behavior and truthful support signals before coding.
 
 - [ ] Specify source-aware chunks, selected-document retrieval, bounded evidence/history, ambiguity/no-evidence handling, citation IDs/location/quote checks and removed-source behavior with expected cases.
@@ -303,14 +323,14 @@
 
 **Checkpoint CP08 — T20–T22:** Proposed. Review ownership/provenance/fixture integrity and relevant tests/Ruff before first upload. Apply G3.
 
-## M2 — First usable upload slice: TXT
+## M2 — First usable upload slice: CSV
 
-### T23 — Upload a validated TXT conversation attachment
+### T23 — Upload a validated CSV conversation attachment
 
 **Status:** Proposed. **Prerequisites:** T22; D01 and T17 upload/security policy. **Scope:** M.
 **Objective:** Provide a safe API path from one local upload to a stored original/reference.
 
-- [ ] Validate TXT extension/content/size/parseability as feasible; use safe server-controlled storage identity, separate display filename and the configured data root under the correct conversation reference.
+- [ ] Validate CSV extension/content/size/parseability as feasible; use safe server-controlled storage identity, separate display filename and the configured data root under the correct conversation reference.
 - [ ] Reject invalid/unsupported/oversized/traversal/unsafe Windows filename cases with useful errors; clean partial/temporary artifacts without exposing paths or sensitive content.
 
 **Verification:** Test-first upload/API/file-boundary tests including mismatches, boundary sizes and interrupted writes; local valid/invalid API smoke and security review.
@@ -329,19 +349,19 @@
 **Evidence:** Pending — batch/status/error/recovery results.
 **Likely files:** `app/api/uploads.py`, `app/ingestion/processing.py`, `app/storage/documents.py`, `tests/integration/test_processing_status.py`.
 
-### T25 — Extract and preview TXT with line provenance
+### T25 — Extract and preview CSV with record/column provenance
 
 **Status:** Proposed. **Prerequisites:** T24, T21. **Scope:** M.
-**Objective:** Complete original upload → normalized text → safe source-passage preview.
+**Objective:** Complete original upload → structured CSV records → safe source preview.
 
-- [ ] Extract approved text/encoding behavior with deterministic line/passages, hash/version/warnings and explicit empty/invalid-content errors; store normalized output separately from originals.
+- [ ] Extract approved CSV dialect/encoding behavior with deterministic record/header/column anchors and physical-line spans (including quoted multiline cells), hash/version/warnings and explicit empty/invalid-content errors; store normalized output separately from originals.
 - [ ] Preview bounded escaped text through document IDs and selected references, not arbitrary filesystem paths; disclose any unavailable precision.
 
-**Verification:** Test-first line/encoding/empty-input/preview escaping/path/scope cases and a local upload-to-source walkthrough.
-**Evidence:** Pending — TXT provenance/preview tests and trace to original lines.
-**Likely files:** `app/ingestion/text.py`, `app/api/sources.py`, `app/storage/extractions.py`, `tests/unit/test_text_extraction.py`, `tests/integration/test_source_preview.py`.
+**Verification:** Test-first record/column/quoted-multiline/encoding/empty-input/preview escaping/path/scope cases and a local upload-to-source walkthrough.
+**Evidence:** Pending — CSV provenance/preview tests and trace to original records/columns and physical lines.
+**Likely files:** `app/ingestion/csv.py`, `app/api/sources.py`, `app/storage/extractions.py`, `tests/unit/test_csv_extraction.py`, `tests/integration/test_source_preview.py`.
 
-**Checkpoint CP09 — T23–T25:** Proposed. Demonstrate valid/bad/batch TXT upload, honest status and traceable local preview; review failure cleanup/privacy. Apply G3.
+**Checkpoint CP09 — T23–T25:** Proposed. Demonstrate valid/bad/batch CSV upload, honest status and traceable local preview; review failure cleanup/privacy. Apply G3.
 
 ## M3 — First complete grounded-answer path
 
@@ -415,7 +435,7 @@
 - [ ] Allow only citation IDs in the answer's supplied evidence; derive real filenames/locations from stored provenance and reject fabricated IDs/quotes/pages/sheets/rows.
 - [ ] Expose bounded escaped previews through scoped IDs and approved missing/removed-source behavior; disclose coarse location precision without arbitrary local-file access.
 
-**Verification:** Test-first allowlist/location/quote/preview-scope/XSS cases and manually trace a TXT answer to original lines.
+**Verification:** Test-first allowlist/location/quote/preview-scope/XSS cases and manually trace a CSV answer to original records/columns.
 **Evidence:** Pending — citation/preview tests and source trace examples; no claim of full semantic verification.
 **Likely files:** `app/chat/citations.py`, `app/api/sources.py`, `app/chat/service.py`, `tests/unit/test_citations.py`, `tests/security/test_source_preview.py`.
 
@@ -433,7 +453,7 @@
 **Evidence:** Pending — indicator tests and reviewed examples/text.
 **Likely files:** `app/chat/evidence.py`, `app/chat/service.py`, `tests/unit/test_evidence_indicator.py`.
 
-### T33 — Deliver the local browser TXT chat flow
+### T33 — Deliver the local browser CSV chat flow
 
 **Status:** Proposed. **Prerequisites:** T32; T15 conclusion and T17 approved UI approach. **Scope:** M.
 **Objective:** Let the user upload, ask, read support signals and inspect sources through a minimal browser interface.
@@ -441,7 +461,7 @@
 - [ ] Connect existing upload/status/chat/source operations with selected-document context, per-file processing, loading/empty/success/warning/error states and safely rendered untrusted text; serve all assets locally.
 - [ ] Implement keyboard/focus/label/contrast behavior, evidence explanations and citation previews from the approved design without adding an unapproved framework or build system.
 
-**Verification:** Local browser TXT end-to-end and keyboard/error walkthrough, output-escaping/API regression and asset/network inspection; automation tools only if separately reviewed/approved.
+**Verification:** Local browser CSV end-to-end and keyboard/error walkthrough, output-escaping/API regression and asset/network inspection; automation tools only if separately reviewed/approved.
 **Evidence:** Pending — browser checklist and relevant automated checks.
 **Likely files:** `app/static/index.html`, `app/static/app.js`, `app/static/styles.css`, `app/main.py`, `tests/integration/test_ui_routes.py`; adjust only for an approved frontend alternative.
 
@@ -457,7 +477,7 @@
 **Evidence:** Pending — saved-chat tests and actual restored-context observation.
 **Likely files:** `app/storage/conversations.py`, `app/api/conversations.py`, `app/static/app.js`, `tests/integration/test_saved_conversations.py`.
 
-**Checkpoint CP12 — T32–T34:** Proposed. Demo full TXT upload → answer/citation/indicator → restart/reopen, including accessibility and error paths. Apply G3 before format expansion.
+**Checkpoint CP12 — T32–T34:** Proposed. Demo full CSV upload → answer/citation/indicator → restart/reopen, including accessibility and error paths. Apply G3 before format expansion.
 
 ## M4 — Add each remaining format through the working path
 
@@ -485,19 +505,19 @@
 **Evidence:** Pending — OCR integration/provenance tests, warning examples and measured local smoke.
 **Likely files:** `app/ingestion/ocr.py`, `app/ingestion/pdf.py`, `app/ingestion/processing.py`, `tests/unit/test_ocr.py`, `tests/integration/test_scanned_pdf_flow.py`.
 
-### T37 — Support DOCX structural citations
+### T37 — Support legacy XLS sheet and cell citations
 
-**Status:** Proposed. **Prerequisites:** T36; approved T06/T08/T17 parser selection. **Scope:** M.
-**Objective:** Answer Word-document questions using real headings/paragraphs/tables rather than fabricated pages.
+**Status:** Proposed replacement of the unstarted DOCX slot, awaiting task-revision review. **Prerequisites:** T36; approved T07A/T08/T17 XLS selection. **Scope:** M.
+**Objective:** Extend the working pipeline to binary XLS with real sheet/cell anchors.
 
-- [ ] Preserve useful headings, paragraph/table-cell anchors, available image references and extraction warnings; report protected/unsupported/corrupt inputs and coarse location limits explicitly.
-- [ ] Complete upload/index/answer/source-preview flow without executing macros/scripts or fetching external relationships.
+- [ ] Preserve sheets/cells/ranges, table/header relationships, stored values/date types and parser/version warnings under approved budgets; never calculate formulas or execute macros/embedded content or fetch links.
+- [ ] Complete upload/index/answer/preview; reject corrupt/protected/mismatched inputs and expose unsupported features or missing cached values clearly.
 
-**Verification:** Golden DOCX structure/table/anchor and malicious-link tests plus a local grounded-answer/citation walkthrough.
-**Evidence:** Pending — DOCX tests and source-location smoke.
-**Likely files:** `app/ingestion/docx.py`, `app/ingestion/processing.py`, `tests/unit/test_docx_extraction.py`, `tests/integration/test_docx_flow.py`.
+**Verification:** Golden workbook/table/value/anchor and negative/security/resource tests, plus a local cited-answer walkthrough.
+**Evidence:** Pending — XLS tests and source-location smoke; XLSX success is not XLS evidence.
+**Likely files:** `app/ingestion/xls.py`, `app/ingestion/processing.py`, `tests/unit/test_xls_extraction.py`, `tests/integration/test_xls_flow.py`.
 
-**Checkpoint CP13 — T35–T37:** Proposed. Review native/scanned/mixed PDF and DOCX demos, especially tables/images/OCR anchors, limits and security. Run relevant regressions; apply G3.
+**Checkpoint CP13 — T35–T37:** Proposed. Review native/scanned/mixed PDF and XLS demos, especially table/image/OCR and sheet/cell anchors, limits and security. Run relevant regressions; apply G3.
 
 ### T38 — Support XLSX sheet and cell provenance
 
@@ -511,10 +531,10 @@
 **Evidence:** Pending — spreadsheet provenance/security tests and local smoke.
 **Likely files:** `app/ingestion/xlsx.py`, `app/ingestion/processing.py`, `tests/unit/test_xlsx_extraction.py`, `tests/integration/test_xlsx_flow.py`.
 
-### T39 — Support CSV row and column provenance
+### T39 — Harden CSV provenance and mixed-workflow behavior
 
 **Status:** Proposed. **Prerequisites:** T38; approved T07/T08/T17 CSV/encoding policy. **Scope:** M.
-**Objective:** Keep delimited tabular evidence interpretable through retrieval and citations.
+**Objective:** Extend the existing T23–T34 CSV path with remaining evaluated dialect, encoding and resource edge cases; avoid rebuilding that parser.
 
 - [ ] Preserve original row/column/header meaning for approved dialects/encodings, quoted/multiline cells and warnings; never execute formula-like cell text.
 - [ ] Complete upload/index/table-question/preview flow with correct anchors and clear malformed/unsupported/resource errors.
@@ -525,11 +545,11 @@
 
 ### T40 — Verify the integrated mixed-format workflow
 
-**Status:** Proposed. **Prerequisites:** T39 and all five format slices. **Scope:** M, bounded integration verification.
+**Status:** Proposed. **Prerequisites:** T39 and all four format slices. **Scope:** M, bounded integration verification.
 **Objective:** Demonstrate cross-format answers and partial-failure handling without metadata loss.
 
 - [ ] Run a mixed batch with valid/corrupt/protected/unsupported/oversized samples and verify per-file statuses, originals/outputs, warnings, deduplication and retry behavior.
-- [ ] Ask approved multi-file/table/ambiguous/unsupported questions, restart/reopen, and trace every citation to expected page/sheet/cell/paragraph/line; no unrelated-file retrieval or invented precision.
+- [ ] Ask approved multi-file/table/ambiguous/unsupported questions, restart/reopen, and trace every citation to expected page/sheet/cell/record/column and physical-line span; no unrelated-file retrieval or invented precision.
 
 **Verification:** Parameterized integration/smoke matrix plus relevant regression suite; larger findings become separately proposed tasks rather than hidden extra scope.
 **Evidence:** Pending — `docs/benchmarks/format-integration.md`, reproducible matrix and remaining limits.
@@ -542,7 +562,7 @@
 ### T41 — Upload and list reusable library documents
 
 **Status:** Proposed. **Prerequisites:** T40, T20; approved D04 ownership. **Scope:** M.
-**Objective:** Reuse the validated five-format ingestion path for a persistent local library.
+**Objective:** Reuse the validated four-format ingestion path for a persistent local library.
 
 - [ ] Upload/list library documents with per-file status/warnings/metadata and approved original/output/index identity reuse; do not duplicate unchanged indexed content.
 - [ ] Distinguish reusable documents from exclusive chat attachments in API/UI; library upload or deduplication must not silently change unrelated attachment ownership.
@@ -622,7 +642,7 @@
 **Status:** Proposed. **Prerequisites:** T46; approved assets already provisioned. **Scope:** M.
 **Objective:** Demonstrate local core operation without external services/assets or silent downloads.
 
-- [ ] Cold-start with local assets and external network unavailable/blocked, then exercise five formats/OCR, library/chat, citations, restart and deletion using local Ollama; separately verify useful missing-asset failures.
+- [ ] Cold-start with local assets and external network unavailable/blocked, then exercise four formats/OCR, library/chat, citations, restart and deletion using local Ollama; separately verify useful missing-asset failures.
 - [ ] Observe browser/app/OCR/Ollama network/log behavior with approved tooling, distinguish loopback from external traffic and record no remote fallback/telemetry/assets/download requirements plus observation limits.
 
 **Verification:** Repeat documented offline smoke without sending sample content remotely or changing machine-wide settings without permission; any new monitoring tool needs its own reviewed trial approval.
@@ -685,4 +705,4 @@
 
 ## Current handoff
 
-The plan/T02 design are approved; **T01–T03 and T05 complete; T04 deferred at user request**. Baseline setup was verified and committed in bb68c40. T05 results and limitations are in `docs/benchmarks/pdf-parsers.md`; user accepted PyMuPDF empirical-comparison deferral and authorized the T05 commit plus T06 review. No application implementation/runtime parser adoption occurred. Further provisioning/adoption remains gated.
+The plan/T02 design are approved; **T01–T03 and T05 complete; T04 deferred at user request**. Baseline setup was verified and committed in bb68c40. T05 results and limitations are in `docs/benchmarks/pdf-parsers.md`; user accepted PyMuPDF empirical-comparison deferral and authorized the T05 commit (d8d12e7). The subsequent explicit format amendment excludes T06; the proposed T02R/T07/T07A sequence and CSV-first/XLS task changes await review. No application implementation/runtime parser adoption occurred. Further provisioning/adoption remains gated.

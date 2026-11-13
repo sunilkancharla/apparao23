@@ -11,7 +11,7 @@ The dedicated project environment is `F:/document_assistant/.venv`, using Python
 - [SPEC.md](SPEC.md): user-approved Stage 1 requirements and acceptance criteria.
 - [AGENTS.md](AGENTS.md): persistent development and approval rules.
 - [PLAN.md](PLAN.md): proposed architecture, open decisions, evaluation milestones and acceptance mapping.
-- [TODO.md](TODO.md): 50 approved planned tasks plus proposed investigation T16A, with prerequisites, acceptance criteria and evidence requirements.
+- [TODO.md](TODO.md): the original 50 task IDs, with DOCX excluded from Stage 1 and proposed scope-alignment tasks T02R/T07A plus investigation T16A, with prerequisites, acceptance criteria and evidence requirements.
 - [Decision register](docs/decisions.md): confirmed choices, approved downstream review points and sample inspection evidence.
 - [Evaluation design](docs/evaluation.md): fixture coverage, inspection limits, scoring definitions and proposed quality gates.
 - [Environment inventory](docs/benchmarks/environment.md), [dependency review](docs/dependencies.md) and [provisioning proposals](docs/provisioning.md): T03 findings and approval boundaries.
@@ -21,7 +21,7 @@ T01–T03 are complete and T04 is deferred. No further installation, experiment,
 
 ## Planned functionality
 
-The approved scope calls for local Ollama generation/embeddings, a browser UI, PDF/DOCX/XLSX/CSV/TXT ingestion, scanned-PDF OCR, conversation attachments, a reusable library, saved chats, citations, and an evidence-support indicator. These are requirements, not implemented capabilities.
+The approved scope calls for local Ollama generation/embeddings, a browser UI, PDF/XLS/XLSX/CSV ingestion, scanned-PDF OCR, conversation attachments, a reusable library, saved chats, citations, and an evidence-support indicator. These are requirements, not implemented capabilities.
 
 ## Setup and verification
 
@@ -51,6 +51,8 @@ For a rerun, choose a fresh unused path below `data/` for `--basetemp`; pytest c
 Optional shell activation: `.\.venv\Scripts\Activate.ps1` (not invoked during verification). Explicit paths work without activation. `pyproject.toml` keeps uv cache inside `.venv`, disables automatic Python downloads and uses copy link mode. Offline sync was checked with this environment/cache already present; fresh provisioning needs approved network downloads. `.gitignore` excludes `.venv`, originals, runtime data and generated document artifacts. See [setup details](docs/provisioning.md) for the hash-verified uv bootstrap and exact checks. Five PDF evaluation tests passed; no application tests or model benchmarks exist yet.
 
 ## Next step
+
+The user replaced the earlier format list on 2026-11-13: PDF, XLS, XLSX and CSV only for Stage 1; DOCX and TXT are excluded entirely from Stage 1; later inclusion requires explicit user approval. T05 is committed in `d8d12e7`. The separate scope revision proposes T02R to refresh the active evaluation corpus, T07 for XLSX/CSV and T07A for legacy XLS. CSV replaces TXT as the first end-to-end slice. The user approved committing the scope updates; next-task execution and provisioning retain their gates. No XLS parser or new installation is claimed.
 
 T03 host/baseline review is complete. T04 SkillSpector concludes with explicit user-approved deferral; no scanner trial or installation occurred. Manual skill/script review remains the fallback. T05 is complete. The [PDF evaluation report](docs/benchmarks/pdf-parsers.md) records the authorized pypdf/pdfplumber trial: 24 bounded real-sample runs, five passing evaluation tests, native/table/image controls and known layout/OCR gaps. User accepted deferral of the unrun PyMuPDF empirical comparison and authorized the T05 commit. No runtime parser was selected.
 
