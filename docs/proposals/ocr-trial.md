@@ -6,6 +6,29 @@
 
 ## Requested decision and sequence
 
+The original Part A below is historical and stopped; the following follow-up is proposed separately after the user's authorized license investigation.
+
+## Proposed Part A continuation after FlatBuffers investigation
+
+**Status:** Exact companion-notice exception, artifact-only continuation and findings commit explicitly approved on 2026-11-13 ("I approve that, proceed to next step"). Original stop committed in `7c50144`; original meter/cache/receipts remain preserved. This does not authorize installation or Part B. [Investigation and exact source match](../benchmarks/ocr.md#flatbuffers-upstream-investigation---2026-11-13)
+
+Requested narrow exception: for **only** FlatBuffers wheel SHA-256 `7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4`, allow a separately preserved LICENSE from source commit `7e163021e59cca4f8e1e35a7c828b5c6b7915953`, SHA-256 `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`, 11,358 bytes. All 10 runtime Python files matched that source byte-for-byte in the investigation. Require both identities and retain original source headers; any mismatch stops. Every other missing-notice case still stops. Preserve the original wheel unchanged and record the companion notice's origin rather than implying it was bundled.
+
+Allowed only after approval of this continuation:
+
+1. Create a **new** `data/t09-artifacts/part-a-02/` ledger/receipts and `.venv/.cache/ocr-review/part-a-02/` cache for new bytes. Rehash and reuse the original 14 cached wheels **without redownloading or modifying** them. Do not run the stopped helper against its old ledger.
+2. Prepare a reviewed standard-library-only inspector with test-first checks for this exact exception, rejecting wrong wheel/notice hashes and any unapproved missing-notice case. Retain original-name/duplicate/expansion guards. Distinguish binary notice documents from text and do not print binary contents. Inspect bounded nested XML in bundled license documents only as administrative notice material; this adds no DOCX application support or dependencies. No downloaded code/native library/model executes.
+3. Preserve/reuse the already fetched upstream companion LICENSE and source-comparison evidence after rehashing. Complete notice/metadata/native-component review on cached wheels; hashes and located notices alone are not full license/security clearance. Record unresolved notices/redistribution restrictions and stop if they cannot be resolved within approved source/license inspection.
+4. Fetch only the **two remaining originally pinned wheels** (protobuf 7.36.2 Windows ABI3 and urllib3 2.8.0) plus the **three originally pinned English assets**; URLs/sizes/hashes remain exactly those in [the original inventory](ocr-trial-artifacts.json). Additional declared artifact payload is **14,780,070 bytes**, excluding public metadata/license responses. No replacement package/version, new model/dictionary/font, installer, source build or resolver. Permit at most one transport retry per URL, charged; hash/size/source mismatch stops immediately without retry.
+5. Validate remaining assets, record English traineddata's computed SHA-256 after checking its declared size/Git blob, statically inspect ONNX dictionary metadata, and review exact English model notices. Record actual byte identities and missing coverage; no native import, PDF/image decode/rendering, inference, fixture generation, `uv sync`, install or dependency-file change.
+6. Produce the complete sanitized artifact/notice inventory or a preserved partial stop. No adoption or complete distribution-license/security assurance is inferred. The native network/filesystem boundary remains a separate Part B prerequisite.
+
+New combined allocation: **32 total process starts including PowerShell hosts, Python launchers/interpreters, descendant allowances, tests, checks and teardown** (12 helper/test slots, 8 transfer slots, 8 inspection/review slots, 4 closeout slots); **32 HTTP requests including redirects/retries**; **32 MiB actual response-body transfer** including failed/metadata/license responses; **20 minutes from first continuation action**; **one request/inspection at a time**; **512 MiB controller private commit**, **>=4 GiB available system RAM**; **512 MiB additional disk** beyond unchanged cached bytes; **256 MiB decompressed bytes/20,000 entries per wheel**, **8 MiB per notice** and **8 MiB/200 members per nested license archive**. Existing Part A bytes/processes remain reported separately, never reset or silently pooled into a fresh run. Establish the one-process Job boundary before helper imports; reserve/count wrapper processes before launching. Stop on missing boundaries, scope drift, failures or exhaustion; no automatic new allocation.
+
+One approval covers the above preparation/inspection steps, necessary tests and documentation within this exact scope. Git commits and all installation/OCR execution retain their separate gates. If the companion-notice exception is declined, retain the current stop and compare a separately reviewed packaging alternative; do not bypass the guard.
+
+## Original requested decision and sequence (historical)
+
 Approve **Part A: artifact preparation and inspection only** first. It has exact candidate identities and a bounded download/inspection scope. It does not install packages or execute OCR/native modules. Part B below defines the proposed comparison, but is **not ready for execution approval** until the native execution boundary and artifact-inspection findings are resolved. This separation avoids another stopped document trial and makes the outstanding security decision explicit.
 
 1. Part A verifies artifacts, notices and model identity without importing them, and presents an installation-ready inventory.

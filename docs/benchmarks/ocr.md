@@ -1,5 +1,17 @@
 # T09 - Local English OCR source review
 
+## FlatBuffers upstream investigation - 2026-11-13
+
+The user approved committing the stop report and investigating the upstream license. The stop report is committed in `7c50144`. This follow-up is a read-only license/source investigation, **not a retry of Part A or use of its exhausted allocation**; no further wheel/model download, installation or package execution occurred. The old meter's SHA-256 was checked before/after and remained identical.
+
+Findings: the pinned upstream [LICENSE](https://raw.githubusercontent.com/google/flatbuffers/7e163021e59cca4f8e1e35a7c828b5c6b7915953/LICENSE) is Apache-2.0, **11,358 bytes**, SHA-256 `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`. Release v25.12.19 resolves to commit `7e163021e59cca4f8e1e35a7c828b5c6b7915953`. Its repository-root listing contains LICENSE and no root NOTICE/COPYING entry. [Release](https://github.com/google/flatbuffers/releases/tag/v25.12.19), [root listing](https://api.github.com/repos/google/flatbuffers/contents?ref=7e163021e59cca4f8e1e35a7c828b5c6b7915953)
+
+All **10 Python runtime files** in the cached, hash-verified FlatBuffers wheel are **byte-identical** to `python/flatbuffers/` at that exact source commit; no newline normalization was needed. The wheel metadata declares Apache 2.0 but includes no License-File entry or located full notice file. Upstream's [setup.py](https://raw.githubusercontent.com/google/flatbuffers/7e163021e59cca4f8e1e35a7c828b5c6b7915953/python/setup.py) declares that license without explicitly naming a license file, while the full license is outside the Python package directory. This is consistent with a packaging omission; the build itself was not reproduced and the comparison is not publisher-build attestation.
+
+Recommendation: approve an **exact-wheel exception** that accompanies the unchanged wheel with this pinned upstream LICENSE and preserves the runtime files' copyright/license headers. Keep the missing-bundled-notice finding visible. Do not repackage the wheel, change its hash/RECORD, declare unrestricted redistribution or disable notice checks for other packages. Apache-2.0 carries notice/preservation conditions; complete native/runtime/model obligations are still separate. The [proposed Part A continuation](../proposals/ocr-trial.md#proposed-part-a-continuation-after-flatbuffers-investigation) makes this narrow exception and a new allocation reviewable; The user subsequently explicitly approved this exact exception, artifact-only continuation and findings commit; installation and Part B remain unapproved.
+
+Evidence: `data/t09-flatbuffers-license-01/receipt.json` and fetched public source/license bytes; 13 requests, 152,244 response-body bytes, no failed source comparison. All 10 runtime source comparisons and the unchanged-old-meter check passed. No OCR tests or model inference ran. This investigates license provenance without completing the remaining Part A artifact/notice review or resolving Part B's native execution boundary.
+
 ## Part A actual outcome - 2026-11-13
 
 The user approved Part A artifact preparation and the proposal commit ("yes proceed"); the proposal is committed in `bf3b82e`. Part A **stopped incomplete** at the pinned `flatbuffers-25.12.19-py2.py3-none-any.whl`: the archive contained no located license/NOTICE/COPYING/SBOM material under the inspected names. Registry Apache-2.0 metadata is not a substitute for the missing bundled notice review. No package substitution, retry or continuation followed this stop.
