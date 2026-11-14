@@ -251,3 +251,7 @@ The resource diagnostic repair and combined-03 stop reports are committed in `28
 ## Approved monitoring repair after combined-04 stop
 
 Combined-04 results are committed in `74fb75a`; its matrix stopped before scored answers and its allocation is closed. The user approved the [bounded monitor repair](docs/proposals/combined-monitor-cadence-repair.md): preserve the 250-ms hard ceiling, account for check work in the 100-ms cadence, and measure actual reading/scan intervals. T11-M1–M4 in TODO may proceed within a fresh 32-start/ten-minute fake-only allocation. The five proposal documents' commit is approved; later source/results commits remain gated. No native continuation or timing-limit relaxation is authorized.
+
+## Approved combined-05 continuation
+
+The monitor repair is committed in `0b345d5` after 34 passing fake tests. The user approved the [combined-05 package](docs/proposals/combined-ocr-model-fifth-run.md) and committing its five proposal documents: repeat the fixed matrix with that repair and all existing ceilings, using a fresh linked allocation. Ordered tasks T11-C5-1–C5-6 may proceed within the bounded package; native execution remains the disconnected user-run step. No download or later source/results commit is approved. The earlier repair allocation is closed.

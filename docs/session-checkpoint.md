@@ -1,4 +1,14 @@
-# Latest checkpoint — fake monitor cadence repair complete, 2026-11-14
+# Latest checkpoint — combined-05 package approved, 2026-11-14
+
+User explicitly approved combined05 package and committing its five proposal documents. Fresh shared allocation data/t11/combined-05 starts with16 conservative preparation reservations covering inspection/initialization/proposal Git/baseline reads, links12 prior records. Proceed test-first selector changes then cached static seal and independent readiness verification, same existing limits and committed cadence repair. No connected nativeOCR/model inference, download or new fixtures. Later source/results commits remain gated. Old native runs/fake allocations stay closed. Earlier proposal checkpoint below historical.
+
+# Earlier checkpoint — combined-05 proposal pending approval, 2026-11-14
+
+User approved eight repair/report files committed as0b345d5. Then requested next offline-trial proposal: created docs/proposals/combined-ocr-model-fifth-run.md and updated PLAN/TODO/README/checkpoint only. T11-C5-1–C5-6 await package approval. Same160starts/128API/30minactiveprep/75minofflineepoch and all memory/disk/CPU/250ms limits; repaired work-aware100ms cadence plus stricter actual reading/scan checks retained. Twelve prior records to link: combined04's ten prior records plus its closedmeter60/160/sevenAPI and completedcadencerepair24/32/335.938s. Exact existing models/OCR/synthetic/frozen evidence; no downloads or new fixtures.
+
+No combined05 directory/ledger/seal/runner/selector or source changes; no tests/native workload run during proposal writing. Documentation link/diff checks before review. Five proposal documents uncommitted; request package approval and separate explicit proposal commit approval. No Git approval inferred for later source/results. All old native runs/diagnostic allocations closed; unchanged stopped handoff remains only historical instructions. No source/threshold/asset change or product adoption. Preserve unrelated untracked content and raw-output privacy. Earlier checkpoints below historical.
+
+# Earlier checkpoint — fake monitor cadence repair complete, 2026-11-14
 
 Final allocation closed at24/32starts,335.938active seconds. Final old combined04/resource-closeout hashes unchanged; document links and whitespace passed. Exact receipt in data/t11/monitor-cadence-repair-01/budget.json. No further execution needed in this closed package. Eight reviewed repair/report files await commit approval.
 

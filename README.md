@@ -6,7 +6,9 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
-**Latest repair:** [monitor cadence evidence](docs/benchmarks/combined-monitor-cadence-repair.md) records 34 passing fake tests, Ruff and source review. The observer subtracts check work from its 100-ms target wait and measures start/reading/collection/TCP/storage/iteration intervals against the unchanged 250-ms ceiling. Proposal documents are committed in `fd3361b`; source/results commit approval is pending. No native trial ran, and all old runners remain closed.
+**Latest repair:** [monitor cadence evidence](docs/benchmarks/combined-monitor-cadence-repair.md) records 34 passing fake tests, Ruff and source review; the eight source/report files are committed in `0b345d5`. The observer subtracts check work from its 100-ms target wait and measures start/reading/collection/TCP/storage/iteration intervals against the unchanged 250-ms ceiling. No native trial ran, and all old runners remain closed.
+
+**Next approved work:** [combined-05](docs/proposals/combined-ocr-model-fifth-run.md), using the repaired monitor and unchanged experiment/limits. The user approved the bounded preparation/offline package and its five proposal documents' commit. Preparation is in progress; no executable handoff is ready yet.
 
 **Latest result:** [combined-04 stopped](docs/benchmarks/combined-ocr-model-fourth-stop.md) because a monitoring interval took 259.0546 ms, exceeding the 250-ms guard. The other memory readings in that packet were within limits. Four controls passed; two embedding attempts and zero scored chat responses were recorded. Owned cleanup was verified. Preparation is committed in `7ca4ee3`; result documentation awaits commit approval. All old runners are closed. Review the monitoring contract before proposing another trial; no policy change or new run is authorized. Earlier readiness/preparation statements below are historical.
 
