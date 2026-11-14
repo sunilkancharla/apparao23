@@ -1,6 +1,6 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-**Current bounded package (2026-11-14):** OCR manual-04 completed and results committed in 94f3e46; the user approved T11 combined feasibility implementation, offline testing and scoped reviewed commit. [combined-01](docs/proposals/combined-ocr-model-trial.md) preparation is complete; actual native execution awaits the disconnected user handoff. T09 quality/rotation/provenance and remaining T11/G2 adoption gates stay open. Earlier progress snapshots below are historical.
+**Current bounded package (2026-11-14):** OCR manual-04 completed and results committed in 94f3e46; the user approved T11 combined feasibility implementation, offline testing and scoped reviewed commit. Combined-01 stopped on a deadline schema mismatch with verified teardown. Combined-02 also stopped at its first sentinel with FileNotFoundError and verified teardown. The approved [fake-only storage diagnostic](docs/benchmarks/combined-storage-diagnostic.md) is complete; the approved [live storage repair](docs/benchmarks/combined-storage-repair.md) passed24 fake contracts and its scoped commit is authorized. Any fresh native continuation remains gated. T09 quality/rotation/provenance and remaining T11/G2 adoption gates stay open. Earlier progress snapshots below are historical.
 
 ## Latest approved scope - PDF/XLSX/CSV
 

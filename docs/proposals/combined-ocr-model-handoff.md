@@ -1,6 +1,8 @@
+**STOPPED — DO NOT RUN COMBINED-02 AGAIN.** FileNotFoundError occurred at the first sentinel; cleanup was verified. See [saved stop evidence](../benchmarks/combined-ocr-model-second-stop.md). The exact missing file is unconfirmed; diagnostics must precede another native attempt. Instructions below are historical.
+
 # Approved combined OCR/model trial: local offline instructions
 
-**Fresh run:** `combined-01`, under the [approved package](combined-ocr-model-trial.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. No old OCR/T10/T11A command or ledger may be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
+**Fresh run:** `combined-02`, under the [approved fresh continuation](combined-ocr-model-continuation.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
 
 ## Before starting
 
@@ -13,7 +15,7 @@ Disconnect Wi-Fi, unplug Ethernet, and disconnect tethering and every external l
 ## One command after disconnecting
 
 ```powershell
-& 'F:\document_assistant\data\t11\combined-01\run.ps1'
+& 'F:\document_assistant\data\t11\combined-02\run.ps1'
 ```
 
 Type `OFFLINE` at the attestation prompt. **There is no new READY prompt**: sealed-asset verification, owned-server startup, controls and the fixed schedule proceed automatically. Large cached weights are rehashed first; this can be quiet for a while. Do not reconnect to ask for progress.
@@ -25,7 +27,7 @@ Wait for final status, **`TEARDOWN VERIFIED: True`**, and the message saying you
 After verified cleanup, reconnect and report the final status. The local sanitized report is:
 
 ```text
-F:\document_assistant\data\t11\combined-01\summary.json
+F:\document_assistant\data\t11\combined-02\summary.json
 ```
 
 `completed_pending_local_semantic_review_no_adoption` means the fixed schedule finished; it is not proof of factual/citation correctness or adoption. `stopped_no_automatic_retry` means preserve all receipts and report the stop, without rerunning/resetting/resealing.
@@ -38,4 +40,4 @@ Do not reconnect for remote help while owned trial work may still be active. Mis
 
 ## Local answer review after completion
 
-Open `F:\document_assistant\data\t11\combined-01\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
+Open `F:\document_assistant\data\t11\combined-02\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.

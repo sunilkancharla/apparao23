@@ -225,11 +225,16 @@ class Supervisor:
         return list(result.ids[: result.listed])
 
     def storage(self):
-        from appcontainer_preflight import bounded_tree_bytes
-
-        bounded_tree_bytes(core.RUN, 512 * 1024**2)
-        bounded_tree_bytes(core.RUN / "raw", 32 * 1024**2)
-        bounded_tree_bytes(core.RUN / "answers", 8 * 1024**2)
+        for area, path, cap in (
+            ("run", core.RUN, 512 * 1024**2),
+            ("raw", core.RUN / "raw", 32 * 1024**2),
+            ("answers", core.RUN / "answers", 8 * 1024**2),
+        ):
+            try:
+                core.live_tree_bytes(path, cap)
+            except OSError as error:
+                error.trial_storage_area = area
+                raise
 
     def check_failure(self):
         if self.failed.is_set():
@@ -310,7 +315,13 @@ class Supervisor:
                 self.sample(now - previous)
                 previous = now
             except Exception as error:  # noqa: BLE001 - thread boundary must stop all owned work.
-                self.fail(type(error).__name__ + ": " + str(error)[:160])
+                if isinstance(error, OSError):
+                    self.filesystem_failure = core.record_filesystem_error(
+                        error, core.RUN
+                    )
+                    self.fail(type(error).__name__ + ": filesystem inspection boundary")
+                else:
+                    self.fail(type(error).__name__ + ": " + str(error)[:160])
                 break
             self.stop.wait(0.1)
 
@@ -725,12 +736,20 @@ def offline_main():
         )
         if type(error) is RuntimeError:
             summary["stop_reason"] = str(error)[:240]
+        if field := core.state_error_field(error):
+            summary["missing_state_field"] = field
+        if isinstance(error, OSError):
+            summary["filesystem_failure"] = core.record_filesystem_error(
+                error, core.RUN
+            )
         if supervisor:
             supervisor.fail("Controlled execution stopped")
     finally:
         try:
             if supervisor:
                 summary["supervisor_failure"] = supervisor.failure
+                if failure := getattr(supervisor, "filesystem_failure", None):
+                    summary.setdefault("filesystem_failure", failure)
                 settled = supervisor.close()
                 summary.update(settled)
                 core.write_json(

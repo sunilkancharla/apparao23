@@ -811,3 +811,24 @@ Work paused at user's request to preserve daily token allowance. [Exact restart 
 - [x] Preserve initial connected seal as seal.pre-review.json and regenerate only the never-started source/asset seal. Native roots/API calls remain0 and offline_started unset; preparation48 plus report16 conservatively reserved64/160. Final hash/link/PowerShell/diff review and approved scoped commit complete the handoff; actual native behavior still awaits disconnected user run. Historical pause/not-ready entries above describe the earlier source epoch, not approval to run an old seal.
 
 - [x] Final resumed handoff review passed: all142 sealed files and prior-ledger hashes verified, PowerShell/relative links/diff checks passed; active preparation1453.6s excluding user pause. Combined API/native counts0, offline epoch not started. Proceed with previously approved scoped commit, then provide only the combined-01 disconnected command. No runtime/adoption claim.
+
+### T11 combined-01 stop and approved combined-02 continuation
+
+- [x] Preserve [combined-01 stop](docs/benchmarks/combined-ocr-model-first-stop.md): KeyError at first deadline sentinel, five metadata calls, zero completed controls/comparisons, teardown verified, old ledger75/160 unchanged.
+- [x] User approved shared-deadline repair/tests and a fresh same-limit160-start run. Regression executes the actual reused OCR polling loop with fake Win32 calls: exact KeyError reproduced, normal cutoff and expiry agreement verified after fix. One timestamp supplies numeric/ISO cutoffs, with no guard extension. Explicit combined-02 CLI selection and shared module identity prevent old-command redirection; known missing-key diagnostics withhold untrusted keys.
+- [x] Final18 stdlib/fake tests passed1.099s; Ruff passed. Rehashed143 source/asset/prior-ledger files without new dependencies/downloads, rendering or native OCR/model calls. Fresh [continuation](docs/proposals/combined-ocr-model-continuation.md)/[handoff](docs/proposals/combined-ocr-model-handoff.md) prepared; conservative32 preparation+8closeout=40/160,zeroAPI/native roots/offline start. Final seal/format/PowerShell/link/diff checks required before handoff. Repair/results documentation commit remains unapproved.
+- [ ] User executes only combined-02 disconnected and reports sanitized result after verified teardown; never rerun/reset combined-01. Actual combined behavior, semantic quality and adoption remain unproven.
+
+- [x] Final combined-02 readiness verified: all143 sealed identities, unchanged stopped ledger, PowerShell syntax/format/link/diff checks passed; no new native/API attempt. Current handoff is ready for the already approved disconnected user run. No Git commit created; ask separately before committing reviewed source/notes.
+
+### Approved fake-only storage diagnostic completed — 2026-11-14
+
+- [x] Reproduce both atomic-state replacement and temporary deletion after scan enumeration through actual Supervisor.storage/unchanged strict helper. Historical combined-02 missing path remains unconfirmed; [diagnostic report](docs/benchmarks/combined-storage-diagnostic.md) separates evidence from hypothesis.
+- [x] Add sanitized filesystem/source diagnostics and local-only exact-path receipt, keeping quota/permission/reparse/missing-entry refusals unchanged. New regressions initially failed;21 stdlib/fake tests passed1.511s,Ruff passed. Diagnostic20/24 conservative starts inclcloseout,within10min,four cleanup slots;zero OCR/model/API/download/install,stopped native ledger hash unchanged. No live-scan repair or new offline run adopted/approved. Commit remains gated.
+- [ ] Review proposed live-run counting policy/fake-worker repair before any fresh native package. Do not rerun combined-02 or share private error receipts.
+
+### Approved live storage repair and reviewed commit — 2026-11-14
+
+- [x] Implement separate live-run counter: handle already-removed descendants, preserve strict original helper, unchanged caps, required-root/type/identity, permission and reparse/link refusals. Actual historical missing path remains unknown. See [repair evidence](docs/benchmarks/combined-storage-repair.md).
+- [x] New fake contracts failed before implementation;24 tests passed1.262s,Ruff passed after import separator correction. Both atomic rename/deletion scenarios still fail under strict helper and succeed under live counter. No native OCR/model/API/download/install; stopped native ledger hash unchanged. Repair allocation conservatively22/24 inclscoped Git closeout,10minute limit,two cleanup slots. User explicitly approved reviewed fixes/diagnostic/source/docs commit; verify actual Git result.
+- [ ] Propose a fresh native continuation for separate approval; do not run/reset/reseal combined-01/02. Fake success does not close native feasibility, quality or adoption gates.

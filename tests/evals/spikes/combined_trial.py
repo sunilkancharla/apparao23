@@ -5,13 +5,15 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import stat
 import sys
 import threading
 import time
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-RUN = ROOT / "data/t11/combined-01"
+RUN = ROOT / "data/t11/combined-02"
 PRIOR = ROOT / "data/t09-manual-ocr/manual-04"
 SPIKES = Path(__file__).resolve().parent
 sys.path.insert(0, str(SPIKES))
@@ -35,6 +37,172 @@ MODELS = {
 EXECUTABLE = ROOT / ".venv/tools/ollama/0.40.16/ollama.exe"
 PYTHON = Path("F:/Python/Python314/python.exe")
 _MUTEX = threading.RLock()
+
+
+def configure_run(run_id: str) -> None:
+    """Select only the newly approved allocation; old commands must not redirect."""
+    global RUN
+    if run_id != "combined-02":
+        raise ValueError("Unapproved or stopped combined run ID")
+    RUN = ROOT / "data/t11" / run_id
+
+
+def state_error_field(error: BaseException) -> str | None:
+    """Expose known meter keys only, never arbitrary exception/document content."""
+    allowed = {
+        "execution_deadline",
+        "execution_deadline_utc",
+        "offline_started",
+        "limits",
+        "categories",
+        "processes",
+        "calls",
+    }
+    if isinstance(error, KeyError) and error.args and isinstance(error.args[0], str):
+        return error.args[0] if error.args[0] in allowed else None
+    return None
+
+
+def live_tree_bytes(root: Path, cap: int) -> int:
+    """Observe live storage, tolerating vanished descendants but never missing roots.
+
+    This is a sampled guard, not a kernel disk quota or filesystem confinement.
+    Static/isolation trials retain their original strict counter.
+    """
+    from appcontainer_preflight import regular_attributes
+
+    if cap < 0:
+        raise ValueError("Negative storage cap")
+
+    def directory_info(path: Path):
+        info = path.lstat()
+        if (
+            not regular_attributes(getattr(info, "st_file_attributes", 0))
+            or stat.S_ISLNK(info.st_mode)
+            or not stat.S_ISDIR(info.st_mode)
+        ):
+            raise RuntimeError("Unsafe or non-directory live storage root")
+        return info
+
+    original = directory_info(root)
+
+    def walk_error(error: OSError) -> None:
+        if isinstance(error, FileNotFoundError) and error.filename:
+            try:
+                relative = Path(error.filename).absolute().relative_to(root.absolute())
+            except ValueError:
+                raise error from None
+            if relative.parts and ".." not in relative.parts:
+                return  # The enumerated descendant no longer occupies storage.
+        raise error
+
+    total = 0
+    for current, directories, files in os.walk(
+        root, followlinks=False, onerror=walk_error
+    ):
+        current_path = Path(current)
+        try:
+            directory_info(current_path)
+        except FileNotFoundError:
+            if current_path == root:
+                raise
+            directories.clear()
+            continue
+        for name in [*directories, *files]:
+            item = current_path / name
+            try:
+                info = item.lstat()
+            except FileNotFoundError:
+                if name in directories:
+                    directories.remove(name)
+                continue
+            if not regular_attributes(
+                getattr(info, "st_file_attributes", 0)
+            ) or stat.S_ISLNK(info.st_mode):
+                raise RuntimeError("Unexpected live storage reparse point/link")
+            if name in directories and not stat.S_ISDIR(info.st_mode):
+                raise RuntimeError("Live directory type changed during scan")
+            if stat.S_ISREG(info.st_mode):
+                total += info.st_size
+                if total > cap:
+                    raise RuntimeError("Live storage disk cap exceeded")
+    final = directory_info(root)
+    if (original.st_dev, original.st_ino) != (final.st_dev, final.st_ino):
+        raise RuntimeError("Live storage root replaced during scan")
+    return total
+
+
+def filesystem_diagnostic(error: OSError, root: Path) -> dict:
+    """Classify file failures without exposing untrusted filenames or messages."""
+    area = getattr(error, "trial_storage_area", "unclassified")
+    if area not in {"run", "raw", "answers"}:
+        area = "unclassified"
+    kind = "unknown-or-outside-run"
+    try:
+        relative = Path(error.filename).resolve().relative_to(root.resolve())
+        if relative.name in {
+            "meter.json.tmp",
+            "summary.json.tmp",
+            "filesystem-error-local.json.tmp",
+        }:
+            kind = "atomic-state-temporary-file"
+        elif relative.parts and relative.parts[0] in {"temp", "runtime-home"}:
+            kind = "runtime-temporary-entry"
+        else:
+            kind = "unlisted-run-entry"
+    except (OSError, TypeError, ValueError):
+        pass  # Diagnostic classification must not replace the original failure.
+    source = None
+    owned = {
+        SPIKES / name
+        for name in (
+            "combined_trial.py",
+            "combined_native.py",
+            "ocr_trial.py",
+            "appcontainer_preflight.py",
+        )
+    }
+    trace = error.__traceback__
+    while trace:
+        if Path(trace.tb_frame.f_code.co_filename) in owned:
+            source = {
+                "module": Path(trace.tb_frame.f_code.co_filename).name,
+                "function": trace.tb_frame.f_code.co_name,
+                "line": trace.tb_lineno,
+            }
+        trace = trace.tb_next
+    return {
+        "error_type": type(error).__name__,
+        "errno": error.errno,
+        "winerror": getattr(error, "winerror", None),
+        "storage_area": area,
+        "entry_kind": kind,
+        "source": source,
+    }
+
+
+def record_filesystem_error(error: OSError, root: Path) -> dict:
+    """Keep exact paths in an ignored local receipt, sanitized metadata in reports."""
+    public = filesystem_diagnostic(error, root)
+    with _MUTEX:
+        try:
+            write_json(
+                root / "filesystem-error-local.json",
+                {
+                    "diagnostic": public,
+                    "filename": str(error.filename)
+                    if error.filename is not None
+                    else None,
+                    "filename2": str(error.filename2)
+                    if error.filename2 is not None
+                    else None,
+                },
+            )
+        except OSError:
+            public["local_detail_saved"] = False
+        else:
+            public["local_detail_saved"] = True
+    return public
 
 
 def initial_state() -> dict:
@@ -124,8 +292,12 @@ class Ledger:
             state = self.read()
             if state["offline_started"] or state.get("execution_approved") is not True:
                 raise RuntimeError("Run already started or unapproved")
-            state["offline_started"] = self.clock()
-            state["execution_deadline"] = self.clock() + 4500
+            started = self.clock()
+            deadline = datetime.fromtimestamp(started + 4500, UTC)
+            state["offline_started"] = started
+            state["execution_deadline"] = deadline.timestamp()
+            # The reused OCR polling loop consumes ISO UTC; both views share one cutoff.
+            state["execution_deadline_utc"] = deadline.isoformat()
             write_json(self.path, state)
 
     def remaining(self) -> float:
@@ -373,6 +545,9 @@ Write-Host 'Disconnect Wi-Fi, Ethernet, tethering and every external link. Keep 
 & 'F:\\Python\\Python314\\python.exe' -I -S -B tests/evals/spikes/combined_trial.py offline
 if ($LASTEXITCODE -ne 0) { Write-Host 'Inspect local summary; remain disconnected unless teardown is verified.' }
 """
+    launcher = launcher.replace(
+        "combined_trial.py offline", "combined_trial.py offline " + RUN.name
+    )
     (RUN / "run.ps1").write_text(launcher, encoding="utf-8")
     files.append(RUN / "run.ps1")
     hashes = {str(path.relative_to(ROOT)): digest(path) for path in set(files)}
@@ -399,15 +574,24 @@ def verify_seal() -> None:
 
 
 if __name__ == "__main__":
-    if sys.argv[1:] == ["prepare"]:
+    # Keep the selected allocation identical in the CLI and lazily imported native adapter.
+    sys.modules["combined_trial"] = sys.modules[__name__]
+    arguments = sys.argv[1:]
+    if len(arguments) == 2 and arguments[0] in {"prepare", "offline"}:
+        configure_run(arguments[1])
+    elif len(arguments) == 2 and arguments[0] == "worker":
+        configure_run(Path(arguments[1]).parent.parent.name)
+    else:
+        raise SystemExit(
+            "Expected prepare/offline combined-02 or worker <local request>"
+        )
+    if arguments[0] == "prepare":
         prepare()
-    elif sys.argv[1:] == ["offline"]:
+    elif arguments[0] == "offline":
         from combined_native import offline_main
 
         offline_main()
-    elif len(sys.argv) == 3 and sys.argv[1] == "worker":
+    else:
         from combined_native import worker
 
         worker(Path(sys.argv[2]))
-    else:
-        raise SystemExit("Expected prepare, offline or worker <sealed local request>")
