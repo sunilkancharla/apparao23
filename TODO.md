@@ -1,5 +1,9 @@
 # Stage 1 Atomic Task Checklist
 
+## Latest T12 outcome — startup failure, successor review needed
+
+Preparation committed `d5e8c68`. [Startup-stop evidence](docs/benchmarks/sqlite-vec-runtime-startup-stop.md): OFFLINE attestation followed by preparation time refusal before Runner construction; no native epoch, test worker, load or measurements. B1–B3 preparation evidence remains historical; B4 stopped before workload, B5 native cleanup unexercised, B6 partial-stop documentation recorded. Runtime-01 must not be retried despite its stale ready meter. Proposed next package must correct active-time/human-wait separation and pre-worker terminal reporting with test-first regression coverage, preserve old state, and explicitly account for the failed launcher/controller starts. Follow-up execution and this documentation's commit remain separately gated. The launch-ready wording below is superseded.
+
 ## T12 PartB runtime comparison — approved, resume at B1
 
 The user explicitly approved the [exact package](docs/proposals/sqlite-vec-runtime-comparison.md), including the execution boundary and five planning documents' commit, and requested a durable checkpoint. T12-BP proposal is complete. B1–B6 remain unstarted; resume B1 with recorded approval/bookkeeping, then complete covered steps without asking again. Later preparation/source/results commits retain separate gates.

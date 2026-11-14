@@ -1,4 +1,12 @@
-# Latest checkpoint — T12 B1–B3 prepared; user-run B4 next
+# Latest checkpoint — T12 runtime-01 startup stopped; no rerun
+
+**Closeout approval:** User answered "yes please" to committing the six failure/checkpoint documents and preparing a correction package for review. Commit only those six documents; the resulting commit ID is in Git. This approval authorizes planning the successor, not implementing or executing it. The pending-commit wording below is historical once that commit exists.
+
+Preparation committed `d5e8c68`. User attested OFFLINE and reported `Preparation time boundary` at `charge("workers", 2, ...)`, before Runner construction. Read-only meter/directory inspection: statusready, native epoch/deadline null, workers0, original56reservations, no summary/requests/results. Actual failed launcher/controller starts were not saved by the failing charge; carry that discrepancy explicitly into any reviewed successor. No native test worker or extension load reached. Controller exited on traceback; reconnect is permitted after the launcher returns to its prompt. CIM process inventory was denied; do not claim independent live process verification.
+
+[Failure record](benchmarks/sqlite-vec-runtime-startup-stop.md) explains wall-clock preparation timing erroneously including human handoff waiting and startup failure outside try/finally. Runtime-01 is logically stopped despite stale ready meter; never retry/reset/reseal or change its sources/assets/state. Handoff withdrawn. No performance/native compatibility result. Documentation-only closeout; no code/tests/native runs/install/download/commit. Next separately review a fresh bounded correction package: active preparation accounting versus waiting, durable pre-worker failure cleanup, fake-time regression tests and independent fresh seal with explicit prior/failed-start accounting. Existing artifact/workload/resource/adoption boundaries stay binding. Results-documentation commit approval pending; preserve unrelated untracked files and all old allocations.
+
+# Earlier checkpoint — T12 B1–B3 prepared; user-run B4 next
 
 **Preparation commit approval:** The user explicitly approved these ten reviewed preparation files with "yes please". All24sealed identities still match and the native epoch is unset. Commit only the three evaluation files and seven preparation/progress documents; existing reporting reservations cover this approved Git closeout, so do not reset or double-charge the meter. Resulting commit identifier is recorded in Git. Next is the already approved user-operated disconnected B4; never load the DLL from connected Codex. Older pending-commit statements below are historical.
 

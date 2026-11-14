@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Latest outcome — T12 runtime startup stop
+
+Preparation committed `d5e8c68`; runtime-01 stopped before any worker/extension load because the preparation timer counted human handoff waiting. [Failure evidence and proposed correction](docs/benchmarks/sqlite-vec-runtime-startup-stop.md) supersede the launch invitation below. Preserve the stale ready meter and all sealed files; no retry/reset/reseal. Review a fresh bounded timing/startup-reporting correction package before implementation or another native trial. T12/G2 remain open; earlier preparation statements are historical.
+
 ## Current execution point — T12 B1–B3 statically complete
 
 [Preparation](docs/benchmarks/sqlite-vec-runtime-preparation.md) records10passing fake tests/Ruff, verified DLL-only staging with notices,24sealed identities/seven unchanged prior records,56/96reservations and724.167active seconds. No native loading or benchmark ran while connected. B4 is the already approved user-operated [disconnected trial](docs/proposals/sqlite-vec-runtime-handoff.md); maintain all recorded limits and preserve partial stops. Preparation source/results commit approval pending; T12/G2 remain open.

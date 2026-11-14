@@ -1,5 +1,7 @@
 # T12 PartB — approved standalone disconnected instructions
 
+**STOP — runtime-01 has failed at startup. Do not run it again.** The preparation timer incorrectly counted human handoff waiting; the user-reported exception occurred before any test worker or extension load. See the [startup-stop record](../benchmarks/sqlite-vec-runtime-startup-stop.md). If this exact traceback has returned to the PowerShell prompt, the controller exited without creating trial workers and reconnection is permitted. The instructions below are retained as historical evidence, not an active launch invitation. Preserve all sealed inputs and receipts; a corrected successor package needs separate review.
+
 **Ready for the approved user-operated run only.** [Static preparation](../benchmarks/sqlite-vec-runtime-preparation.md) verified24sealed identities, seven unchanged prior records, fixture hashes and launcher syntax. Runtime compatibility is not yet verified. This package stages the exact cached DLL and accepted notices; no Python package is installed.
 
 ## Before starting
