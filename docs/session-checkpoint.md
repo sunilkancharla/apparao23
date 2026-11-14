@@ -1,4 +1,10 @@
-# Latest checkpoint — combined-07 completed; local semantic review pending
+# Latest checkpoint — combined-07 local semantic review accepted
+
+**Commit and continuation approval:** User said "Commit and proceed", approving the five acceptance-document files and preparing the next model/OCR selection recommendation. Commit only the reviewed acceptance files before creating that proposal. This does not itself select runtime dependencies or authorize application coding/new native execution. The acceptance commit identifier is recorded in Git.
+
+The user explicitly confirmed "i confirm they are good" after the request to review all36combined-07answers/citations locally. Record qualitative user acceptance of that evaluation set; no specific errors reported, no numeric accuracy score/independent grading/broader quality guarantee. Results previously committedb225d57. T11-C7-6 now complete; package C7-1–6 closed. Updated report/PLAN/TODO/README/checkpoint only (five acceptance-document files); commit approval pending. Native meters/seals/raw outputs unchanged, all runs remain closed. Runtime model/OCR adoption, physical16GB validation, broader OCR/rotation/privacy acceptance and product implementation retain their gates. Next prepare a separate adoption decision for review when requested. Preserve unrelated untracked content. Earlier pending-review statements below are historical.
+
+# Earlier checkpoint — combined-07 completed; local semantic review pending
 
 **Results commit approval:** The user answered "yes please" to the explicit six-document commit request. Commit only PLAN/README/TODO, the combined handoff, this checkpoint and the new combined-07 results report. The reply approves the commit, not factual/citation acceptance. Keep the completed native meter/seal unchanged; local review remains pending. The commit identifier is recorded in Git; earlier pending-commit statements below are historical.
 

@@ -1,4 +1,8 @@
-# Combined-07 completed — local semantic review pending
+# Combined-07 completed — local semantic review accepted
+
+## User review acceptance
+
+After being asked to review all 36 answers and citations in the local combined-07 review page, the user confirmed: "i confirm they are good". Record this as qualitative acceptance of that completed evaluation set. No specific factual errors or unsupported citations were reported. This is user review evidence, not an independently graded accuracy score or a guarantee for other documents. T11-C7-6 is complete. Results were committed in `b225d57`; this acceptance note awaits separate commit approval. Runtime model/OCR adoption and remaining Stage 1 acceptance decisions remain separate. Earlier pending-review statements below describe the status before this confirmation.
 
 ## Outcome
 

@@ -1,6 +1,6 @@
 # Stage 1 Atomic Task Checklist
 
-## Approved combined-07 continuation — static preparation complete
+## Completed combined-07 continuation — user review accepted
 
 300-ms implementation/results committed in `c47dfda`; the exact [combined-07 package](docs/proposals/combined-ocr-model-seventh-run.md) and proposal commit `1dddbcb` are approved. All old native allocations remain closed.
 
@@ -9,7 +9,7 @@
 - [x] **T11-C7-3 — Static preparation/readiness.** [Evidence](docs/benchmarks/combined-ocr-model-seventh-preparation.md):158sealed identities,18prior hashes, PowerShell syntax and independent rehash passed;389.808active seconds, zero API/native attempts, offline epoch unset. [Handoff](docs/proposals/combined-ocr-model-handoff.md) ready.
 - [x] **T11-C7-4 — Disconnected user-run trial.** [Results](docs/benchmarks/combined-ocr-model-seventh-results.md): four controls,36completed responses,44embedding attempts,24positive overlaps/OCR quality gates and36schema/scope checks passed. Meter96/160,125/128API; allocation closed.
 - [x] **T11-C7-5 — Owned teardown.** Verified true, zero active owned children, process reaped/listener released, exit0 and explicit safe reconnect confirmed.
-- [ ] **T11-C7-6 — Results/local review.** Sanitized results, latency/resource metrics,18unchanged prior hashes and factual documentation saved. User must review all36answers/citations locally in combined-07/review.html; semantic acceptance/adoption not inferred. Results-document commit approval pending; preparation committed1428cfd.
+- [x] **T11-C7-6 — Results/local review.** Results committed in `b225d57`; user confirmed "i confirm they are good" in response to the all36answers/citations review request. [Qualitative acceptance](docs/benchmarks/combined-ocr-model-seventh-results.md) recorded; no numerical accuracy score or runtime adoption inferred. Acceptance-note commit approval pending.
 
 The separate local review of combined-06 S01–S15 remains pending; no semantic acceptance, runtime adoption or new native execution approval is inferred from this proposal request.
 

@@ -2,7 +2,7 @@
 
 ## Latest outcome — combined-07 completed
 
-[Native results](docs/benchmarks/combined-ocr-model-seventh-results.md) confirm all36answers, four controls and24positive OCR/chat overlaps, with verified owned teardown. T11-C7-4/5 are complete; C7-6 factual reporting is saved but user semantic review remains pending. All native allocations are closed; no rerun or new package is authorized. Next review all36answers/citations locally before model/OCR adoption decisions. The approved16-GB target and other unresolved acceptance gates remain unchanged. Results-document commit approval is separate.
+[Native results](docs/benchmarks/combined-ocr-model-seventh-results.md) confirm all36answers, four controls and24positive OCR/chat overlaps, with verified owned teardown. Results committed in `b225d57`; the user subsequently confirmed all36answers/citations are good. T11-C7-1–6 are complete, including qualitative local review. Next prepare the model/OCR adoption decision for separate review; no adoption, new package, native rerun or stage transition is authorized by this acceptance. Physical16-GB validation and other unresolved acceptance gates remain open. Acceptance-note commit approval is separate.
 
 ## Current approved package — combined-07 (2026-11-14)
 
