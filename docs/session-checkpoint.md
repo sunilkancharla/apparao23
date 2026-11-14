@@ -1,4 +1,14 @@
-# Latest checkpoint — combined-05 atomic replacement denied, 2026-11-14
+# Latest checkpoint — state-file investigation approved, 2026-11-14
+
+User approved exact32-start/ten-active-minute synthetic package and committing five proposal documents. Fresh data/t11/state-write-investigation-01 reserves32starts upfront, links oldcombined05 meter/cadencerepair hashes. Execute synthetic success/denial/concurrency/fixture-onlyWindowsHandle/accounting controls and optional operation-role diagnostics only; no writerpolicy/permission/timing/nativeworkload changes. Later investigation source/results commit remains gated. Earlier proposal state below historical.
+
+# Earlier checkpoint — state-file investigation proposal pending, 2026-11-14
+
+Combined05 stop results committeddbe607a under explicit approval. User asked continue: read-only source review plus five proposal-document edits only. New docs/proposals/combined-state-write-investigation.md proposes32starts/ten-active-minutes standard-library synthetic investigation. Leads: ledger usesprocess-localRLock,observe_native writes evenunchanged,write_json usesfixedtmp;OCR OwnedRunner.run directlyreadsmeter outsidecombinedlock. Controls alreadyfinished at historicalembeddingfailure, so readergap isnotproof of cause. Exact Windows5atomicreplacement cause remainsunresolved; no private-pathreceipt read.
+
+T11-SW1–SW4 pendingapproval: fresh allocation/hashlinks, boundedscalarJSON fixtures64KiBeach/8MiBtotal/32writes percase/twotestthreads, deterministicwrite/replacefailure/concurrencycontrols, oneownedfixture CreateFileWsharinghandlecase, accountingfailclosed/restartrefusal tests, optionaldiagnostic-onlyknown-role/operationstageinstrumentation, fullfakes/Ruff/report. No retry/locking/writefrequency/OCRreader/permission/timingpolicyrepair, downloads/models/OCR/API or native trial. No runtimeallocation/test/codechange created during proposal writing. RootPLAN/TODO/README/checkpointupdated; links/diff checked before review. Request package and separatefive-documentcommitapproval. Oldcommands closed,rawoutputs/privatepathsremainlocal; preserve unrelateduntrackedfiles. Earlier checkpointsbelowhistorical.
+
+# Earlier checkpoint — combined-05 atomic replacement denied, 2026-11-14
 
 User approved preparation commit and reported combined05 stop. Eight reviewed prep files committed888f184; source bytes matched seal. Sanitized summary/meter inspected:phase frozen-corpus-embeddings,allfour controlschecked,threeembeddingattempts,zerochats,ReadError following supervisor PermissionError:filesystem inspection boundary. Diagnostic errno13/winerror5,storage_areaunclassified,entrykindatomic-state-temporary-file,sourcecombined_trial.py/write_json/line231=os.replace(temporary,path). Thus actual failing operation is state replacement, not proof of a storage-scan or sampling failure. Exact private path not inspected. No resource_failure packet reported; no native timing/full-load success claim. File-lock/access cause unresolved; external handle or writer contention is hypothesis only.
 

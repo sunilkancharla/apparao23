@@ -255,3 +255,7 @@ Combined-04 results are committed in `74fb75a`; its matrix stopped before scored
 ## Approved combined-05 continuation
 
 The monitor repair is committed in `0b345d5` after 34 passing fake tests. The user approved the [combined-05 package](docs/proposals/combined-ocr-model-fifth-run.md) and committing its five proposal documents: repeat the fixed matrix with that repair and all existing ceilings, using a fresh linked allocation. Ordered tasks T11-C5-1–C5-6 may proceed within the bounded package; native execution remains the disconnected user-run step. No download or later source/results commit is approved. The earlier repair allocation is closed.
+
+## Approved state-file investigation after combined-05 stop
+
+Combined-05 preparation/results are committed in `888f184`/`dbe607a`; its allocation is closed. The user approved the [diagnostic package](docs/proposals/combined-state-write-investigation.md) and its five proposal documents' commit. T11-SW1–SW4 may proceed within32starts/ten-active-minutes using synthetic JSON and one fixture-only Windows sharing-handle case. Source leads remain unproven historical causes. No writer-policy repair, permission change, timing relaxation or new native trial is authorized; later source/results commits remain gated.
