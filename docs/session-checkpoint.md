@@ -1,4 +1,12 @@
-# Latest checkpoint — 300-ms fake implementation complete, 2026-11-14
+# Latest checkpoint — combined-07 proposal awaiting approval, 2026-11-14
+
+**Subsequent approval:** The user approved the exact combined-07 package and five proposal documents' commit with "yes please". Proceed with a fresh counted allocation, proposal commit, test-first routing/static preparation and independent readiness checks. Native execution remains the later user-operated disconnected step inside this package; do not start it while connected. Later preparation/results commits retain separate gates. Older pending-approval wording below is historical.
+
+Eight 300-ms implementation/results files committed in c47dfda after explicit approval; tracked tree clean before this documentation work, unrelated untracked content preserved. User requested the next offline proposal. Created docs/proposals/combined-ocr-model-seventh-run.md and updated root PLAN/TODO/README/checkpoint only. Proposed T11-C7-1–6: fresh160starts/128API,30active preparation minutes/one75-minute disconnected epoch; same cached identities/settings/frozen36-answer matrix, all memory/other caps unchanged, committed300-ms ceiling/100-ms desired cadence. Link18prior records:06's15 plus its closed meter/seal and monitor-300ms-01 closed budget32/32/267.056s. Preserve all old bytes/counters; source mismatch never permits resealing06.
+
+Package and five-document commit approval pending. No combined-07 directory/ledger/selector/seal/runner/source changes, tests or native workload created. Proposed source scope only combined routing and its tests, existing seal inventory retained; full combined/OCR fake suites/static rehash precede any runnable handoff. Later preparation/results commits retain separate gate. Manual disconnected execution without filesystem confinement needs this fresh package approval; do not issue old commands. Local06 S01–S15 semantic review remains pending independently, no factual acceptance inferred. Final proposal link/diff review before handoff; preserve raw/private data locality and unrelated content. Earlier checkpoints below are historical.
+
+# Earlier checkpoint — 300-ms fake implementation complete, 2026-11-14
 
 **Commit approval and closeout:** The user explicitly approved committing the eight reviewed implementation/results files with "yes please". The allocation closed at32/32reservations and267.056active seconds; prior combined-06 meter/seal hashes, documentation links and whitespace checks passed. Commit only those eight files; leave runtime receipts and unrelated untracked content untouched. This approval does not authorize a fresh native run. The resulting commit identifier is available in Git; older pending-approval wording below is historical.
 

@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current proposal — combined-07 (2026-11-14)
+
+The 300-ms policy/results are committed in `c47dfda`. The requested [combined-07 proposal](docs/proposals/combined-ocr-model-seventh-run.md) defines T11-C7-1–6: a fresh shared160-start/128-API allocation, test-first routing, cached sealed preparation, one user-operated75-minute disconnected trial and sanitized closeout. Preparation is capped at30active minutes; all memory/other limits and the frozen experiment remain unchanged. Eighteen prior records must be preserved. Package and five proposal documents' commit approval are pending; no new runtime directory/source changes or execution occurred. S01–S15 semantic review remains pending. Older snapshots below are historical.
+
 ## Current package — 300-ms monitor policy (2026-11-14)
 
 Combined-06 preparation/partial results are committed in `eeda648`; all native allocations remain closed. The user approved the [300-ms policy package](docs/proposals/combined-monitor-300ms.md) and proposal commit `7586f68`. T11-T300-1–4 implementation/verification is recorded in the [results](docs/benchmarks/combined-monitor-300ms.md):61passing fake contracts, focused lint/format, one ceiling shared by both guards; memory limits and100-ms cadence unchanged. Shared32-start/ten-minute boundary applies through final closeout. Implementation/results commit and a new native package remain separate gates. S01–S15 local semantic review remains pending. Earlier package snapshots below are historical.

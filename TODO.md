@@ -1,5 +1,18 @@
 # Stage 1 Atomic Task Checklist
 
+## Pending approval — combined-07 continuation
+
+300-ms implementation/results committed in `c47dfda`. Exact scope, prerequisites, limits and verification are in the [combined-07 proposal](docs/proposals/combined-ocr-model-seventh-run.md). No task below has started and all old native allocations remain closed.
+
+- [ ] **T11-C7-1 — Fresh allocation/baseline.** Requires exact package approval; reserve initial starts, link/reverify18prior records and committed policy. Evidence: new shared ledger and unchanged prior hashes/counters.
+- [ ] **T11-C7-2 — Routing test-first.** Requires C7-1; accept only07, refuse old/no-ID/traversal/worker routes. Evidence: red/green full combined/OCR fake suites and focused lint/format; unchanged300-ms policy/seal inventory.
+- [ ] **T11-C7-3 — Static preparation/readiness.** Requires C7-2; verify exact cached identities, source seal including OCR tests, PowerShell syntax, links/diff/counters/time. Evidence: independent readiness report before runnable handoff; zero connected native inference/download.
+- [ ] **T11-C7-4 — Disconnected user-run trial.** Requires C7-3; disconnect all external links and attest OFFLINE. Evidence: four controls/fixed36-answer matrix or explicit partial stop under shared160starts/128API/75minutes; no retry.
+- [ ] **T11-C7-5 — Owned teardown.** Requires execution start; zero active owned children, reaped process and released listener before safe reconnect. Evidence: sanitized teardown receipt; uncertain cleanup means remain offline.
+- [ ] **T11-C7-6 — Results/local review.** Requires verified teardown/reconnection; report actual attempts/missing coverage/resource metrics, request local factual/citation review, update docs and ask separately before preparation/results commit.
+
+The separate local review of combined-06 S01–S15 remains pending; no semantic acceptance, runtime adoption or new native execution approval is inferred from this proposal request.
+
 ## Completed fake verification — 300-ms monitoring package
 
 Combined-06 preparation/partial results committed in `eeda648`; all old allocations remain closed. User approved this exact package and proposal commit `7586f68`. [Results](docs/benchmarks/combined-monitor-300ms.md) record61passing tests, lint/format and limitations; [proposal](docs/proposals/combined-monitor-300ms.md) retains exact scope/budgets.
