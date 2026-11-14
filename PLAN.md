@@ -1,5 +1,11 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Proposed next package — T12-C startup correction
+
+**Approval recorded:** User said "please proceed" to the exact package/execution boundary and five-document commit. Fresh runtime-02 meter reserves8preparation starts for initialization/design/review/Git; proceed sequentially C1–C6 within limits. Later implementation/results commit remains separately gated. Earlier pending-approval wording is historical.
+
+Failure closeout committed `8353db0`. Review [T12-C1–C6](docs/proposals/sqlite-vec-runtime-startup-correction.md): active preparation versus handoff waiting, startup terminal reporting, test-first successor harness and a fresh sealed32/1000comparison. Proposes a new96-start allocation with the existing time/resource/artifact/SQL boundaries and explicit prior/failed-launch accounting. Runtime-01 remains untouched; no replacement implementation or allocation exists. Package/execution-boundary and five-document commit approvals pending. Sequence: design/accounting review → failing regressions → minimal correction → independent readiness → user disconnected run/cleanup → factual results. No product adoption or stage transition.
+
 ## Latest outcome — T12 runtime startup stop
 
 Preparation committed `d5e8c68`; runtime-01 stopped before any worker/extension load because the preparation timer counted human handoff waiting. [Failure evidence and proposed correction](docs/benchmarks/sqlite-vec-runtime-startup-stop.md) supersede the launch invitation below. Preserve the stale ready meter and all sealed files; no retry/reset/reseal. Review a fresh bounded timing/startup-reporting correction package before implementation or another native trial. T12/G2 remain open; earlier preparation statements are historical.

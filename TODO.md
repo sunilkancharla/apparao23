@@ -1,5 +1,18 @@
 # Stage 1 Atomic Task Checklist
 
+## Proposed T12-C — awaiting package approval
+
+**Approved:** User said "please proceed" to the exact package/boundary and five planning documents' commit. Runtime-02 meter initialized with8preparation reservations before inspection/Git. C1 review is in progress; later source/results commit remains gated. Earlier approval-pending wording is historical.
+
+Failure closeout committed `8353db0`. Each task's prerequisites, acceptance and evidence are specified in the [bounded correction package](docs/proposals/sqlite-vec-runtime-startup-correction.md); all six are unstarted. Existing runtime-01 files/state stay unchanged.
+
+- [ ] **T12-C1 — Review and initialize.** Requires package approval; verify exact artifacts/old hashes, fresh roots and durable accounting/design before coding.
+- [ ] **T12-C2 — Failing regressions.** Requires C1; fake-clock waiting/exhaustion and startup-error/terminal-state tests expose the defects without native loading.
+- [ ] **T12-C3 — Minimal correction.** Requires C2; successor passes targeted and inherited security/scope/resource regressions plus Ruff; review diff against original.
+- [ ] **T12-C4 — Independent readiness.** Requires C3; exact staging, fixture/interpreter/source hashes, seal, delayed-start fake validation and launcher syntax; save real counters/no-load evidence.
+- [ ] **T12-C5 — Offline run and cleanup.** Requires C4; user-operated single epoch under all limits, preserved success/stop and truthful owned teardown; no retry.
+- [ ] **T12-C6 — Results/review.** Requires C5; sanitized findings, prior-hash/counter checks, documentation/checkpoint, readable diff and separate source/results commit request.
+
 ## Latest T12 outcome — startup failure, successor review needed
 
 Preparation committed `d5e8c68`. [Startup-stop evidence](docs/benchmarks/sqlite-vec-runtime-startup-stop.md): OFFLINE attestation followed by preparation time refusal before Runner construction; no native epoch, test worker, load or measurements. B1–B3 preparation evidence remains historical; B4 stopped before workload, B5 native cleanup unexercised, B6 partial-stop documentation recorded. Runtime-01 must not be retried despite its stale ready meter. Proposed next package must correct active-time/human-wait separation and pre-worker terminal reporting with test-first regression coverage, preserve old state, and explicitly account for the failed launcher/controller starts. Follow-up execution and this documentation's commit remain separately gated. The launch-ready wording below is superseded.

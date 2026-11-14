@@ -6,6 +6,10 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**T12-C approved:** The user approved the exact correction/replacement package, additional96-start allocation, disconnected no-filesystem-confinement boundary and five planning documents' commit. Initial review/accounting is underway; no successor code or native run yet. The following proposed/pending wording is historical.
+
+**Next proposal ready:** Failure notes are committed as `8353db0`. The [T12-C correction package](docs/proposals/sqlite-vec-runtime-startup-correction.md) proposes fixing preparation-time accounting and startup reporting, then a fresh bounded comparison with the same assets and limits. Package and planning-document commit approvals are pending; no replacement code or trial has begun.
+
 **T12 trial stopped before testing:** The offline launcher failed because its preparation timer incorrectly included the user's waiting time. No test worker or extension load started. [Failure record](docs/benchmarks/sqlite-vec-runtime-startup-stop.md) preserves the evidence and proposed correction; do not rerun the old launcher. A fresh correction package needs review before another trial. Earlier launch-ready statements below are historical; no native comparison result or adoption is established.
 
 **T12 runtime preparation ready:** [B1–B3 evidence](docs/benchmarks/sqlite-vec-runtime-preparation.md) records10passing fake tests/Ruff, exact project-local DLL/notices staging and24verified sealed identities. No DLL was loaded or package installed. The [approved standalone offline handoff](docs/proposals/sqlite-vec-runtime-handoff.md) is ready for the user-operated trial; actual native compatibility/results remain unverified. Shared reservations56/96; earlier unstarted/proposed statements below are historical.
