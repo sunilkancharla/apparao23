@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## Pending approval — 300-ms monitoring package
+
+Combined-06 preparation/partial results committed in `eeda648`; all old allocations remain closed. User requested a concrete proposal, not native execution. Exact prerequisites, budgets, acceptance and verification are in the [300-ms proposal](docs/proposals/combined-monitor-300ms.md).
+
+- [ ] **T11-T300-1 — Establish fake allocation.** Requires exact package approval; reserve initial starts and hash-link closed combined-06 meter/seal. Verify baseline and shared32-start/ten-active-minute boundary before tests.
+- [ ] **T11-T300-2 — Demonstrate changed contract first.** Requires T300-1; failing deterministic tests cover287.7155/300-ms acceptance and300.001-ms refusal for every timing field, with invalid inputs and memory controls intact. Evidence: red test result.
+- [ ] **T11-T300-3 — Implement consistent ceiling.** Requires T300-2; one0.300s constant for both guard functions and diagnostics, unchanged100-ms cadence and all other checks. Evidence: green fake observer/sample and guard tests.
+- [ ] **T11-T300-4 — Verify and close out.** Requires T300-3; full combined/OCR fake suites, focused Ruff/format and security/diff review; preserve old hashes, report actual budget/time, update factual docs and request separate commit approval. No new native runner.
+
+The proposal is documentation only; none of these tasks has run. Local S01–S15 factual/citation review remains pending; no accuracy acceptance is inferred. Earlier approval/status entries below are historical where superseded.
+
 ## Latest approved scope amendment - XLS deferred
 
 User direction on 2026-11-13 limits Stage 1 to PDF/XLSX/CSV. T07A and T37 are excluded/deferred, not completed; their historical evidence and unchecked criteria remain below. S-XLS/Q21-Q25 and XLS-specific negative controls are excluded from active evaluation. T08 is closed with user-approved non-adoption and empirical-trial deferral; T09 read-only review is authorized. T16/T17 bypass T07A; T38 follows T36. No further XLS trial, isolation setup, installation or implementation is authorized. Verification: JSON scope/reference/count checks and historical ground-truth comparison passed; Git whitespace checks passed. Documentation/selection metadata only, no execution or dependency changes. Earlier scope/approval entries below are historical where superseded.

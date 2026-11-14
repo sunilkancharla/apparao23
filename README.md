@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Current proposal:** Combined-06 preparation/partial results are committed in `eeda648`. The requested [300-ms monitoring proposal](docs/proposals/combined-monitor-300ms.md) is ready for review: consistent300-ms timing ceiling, unchanged memory limits and100-ms target cadence, then bounded fake-only verification. Code still enforces250ms. No new run is prepared or authorized; combined-06 and all older runs remain closed. The15completed answers still need local factual/citation review. Older snapshots below describe their respective milestones.
+
 **Latest repair:** [monitor cadence evidence](docs/benchmarks/combined-monitor-cadence-repair.md) records 34 passing fake tests, Ruff and source review; the eight source/report files are committed in `0b345d5`. The observer subtracts check work from its 100-ms target wait and measures start/reading/collection/TCP/storage/iteration intervals against the unchanged 250-ms ceiling. No native trial ran, and all old runners remain closed.
 
 **Latest run:** [combined-05 stopped](docs/benchmarks/combined-ocr-model-fifth-stop.md) when Windows denied replacing a local state file. Four controls passed; three embedding attempts and zero scored chats were recorded. Owned teardown was verified. Preparation/results are committed in `888f184`/`dbe607a`. The specific file-lock/access cause is unresolved; all runners are closed.

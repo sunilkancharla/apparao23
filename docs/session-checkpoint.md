@@ -1,4 +1,12 @@
-# Latest checkpoint — combined-06 preparation/results commit approved, 2026-11-14
+# Latest checkpoint — 300-ms monitoring proposal ready for review, 2026-11-14
+
+**Subsequent approval:** The user approved the exact 32-start/ten-minute fake-only package and five proposal documents' commit with "yes continue please". Fresh monitor-300ms-01 allocation reserves16 initial starts (including inspection/initialization/Git/red-test work), with16 protected for verification/closeout; prior combined-06 meter/seal hashes retained. Proceed test-first in the two approved source/test files. Later implementation/results commit and any new native run remain separate gates. Older pending-approval wording below is historical.
+
+Combined-06's nine preparation/source/result files were committed in `eeda648`; tracked tree was clean before this documentation work, unrelated untracked content preserved. User asked about300ms then authorized preparing the proposal. New docs/proposals/combined-monitor-300ms.md plus PLAN/TODO/README/checkpoint only: recommend consistent300ms across six timing fields and resource sampling_gap,100ms target and all memory/other caps unchanged. Proposed T11-T300-1–4 fake-only32starts/ten-active-minutes allocation; no code, ledger, tests, native runner, downloads or installs created. Package/policy and separate Git commit approval pending. New native run needs a subsequent bounded approval, never rerun/reseal06. Do not interpret the request for this proposal as approving arbitrary execution.
+
+Use committed sanitized stop evidence:287.7155ms reading_gap, only timing violation in packet;15completed answers/nine positive overlaps, incomplete36-slot matrix/Qwen3 not reached. Full native completion is not guaranteed by300ms. Keep raw answers local; S01–S15 semantic review remains pending. Review proposal links/diff before final handoff. Earlier checkpoints below are historical.
+
+# Earlier checkpoint — combined-06 preparation/results commit approved, 2026-11-14
 
 The user explicitly said "you can commit", approving the nine reviewed combined-06 preparation/source/results files. Working source hashes match the executed seal. Stage only the explicit nine-file list; exclude runtime data and unrelated content. This approval does not authorize a retry, timing change, new native allocation or semantic-accuracy claim. Local S01–S15 answer/citation review remains pending; combined-06 and all old commands stay closed. The commit identifier is recorded in Git. Earlier approval-state statements below are historical.
 

@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current proposal — 300-ms monitor policy (2026-11-14)
+
+Combined-06 preparation/partial results are committed in `eeda648`; all native allocations remain closed. At the user's request, the [300-ms policy proposal](docs/proposals/combined-monitor-300ms.md) defines T11-T300-1–4: fresh allocation, test-first guard change, fake observer regressions and documented closeout. Proposed budget32shared starts/ten active minutes; no native execution, installation or downloads. Consistent300-ms timing ceiling and implementation package await approval; memory limits and100-ms target cadence remain unchanged. New native execution needs its own later package. S01–S15 local semantic review remains pending. Earlier package snapshots below are historical.
+
 **Current bounded package (2026-11-14):** OCR manual-04 completed and results committed in 94f3e46; the user approved T11 combined feasibility implementation, offline testing and scoped reviewed commit. Combined-01 stopped on a deadline schema mismatch with verified teardown. Combined-02 also stopped at its first sentinel with FileNotFoundError and verified teardown. The approved [fake-only storage diagnostic](docs/benchmarks/combined-storage-diagnostic.md) is complete; the approved [live storage repair](docs/benchmarks/combined-storage-repair.md) passed24 fake contracts and its scoped commit is authorized. The user approved [combined-03](docs/proposals/combined-ocr-model-third-run.md) with unchanged models/schedule/limits and a new160-start allocation; native execution remains the disconnected user-operated phase. T09 quality/rotation/provenance and remaining T11/G2 adoption gates stay open. Earlier progress snapshots below are historical.
 
 ## Latest approved scope - PDF/XLSX/CSV
