@@ -1,4 +1,16 @@
-# Current checkpoint — combined-03 approved preparation, 2026-11-14
+# Latest checkpoint — resource diagnostics repaired, 2026-11-14
+
+User approved the fake-only 24-start/10-minute repair. Completed with exactly 24 conservatively counted shell/interpreter/Ruff/rg/Git inspection starts, no OCR/model/API/download activity. All 28 contracts passed in 1.435 s after test-first failures; Ruff lint and format passed. Three evaluation scripts now identify the particular resource guard, retain only whitelisted scalar measurements/limits in resource-failure.json before fail-closed teardown, and copy the packet into the final summary after supervisor cleanup. Receipt-write failure still stops. No thresholds changed. See docs/benchmarks/combined-resource-diagnostic.md and local data/t11/resource-diagnostic-01/closeout.json.
+
+HEAD remains d9a2792. Repair and combined-03 result documentation are uncommitted; ask for scoped commit approval. No new native package approved, no selector/seal/run-script preparation, and no old run may execute. The exact historical combined-03 trigger remains unknown. All allocated process starts are consumed: do not launch more checks in this package. Source diff was reviewed before the final single lint correction; final tests/lint/format passed. Documentation consistency was reviewed directly; no additional shell checks were launched. Preserve unrelated untracked content. The prior checkpoint below is historical.
+
+# Earlier checkpoint — combined-03 resource stop, 2026-11-14
+
+User approved preparation commit; created d9a2792 with only eight reviewed source/docs files, source/handoff hashes matched executed seal. During commit work user reported combined03 stop. All four timeout/memory controls checked; phase frozen-corpus-embeddings,three embedding attempts,zero scored responses. ReadError followed supervisor RuntimeError:Memory/headroom/sampling boundary. Teardown verified,zero active children,server reaped/port released. Preserve meter56/160,eightAPI,fiveexplicit roots,nine extra descendants. No rerun/reseal/reset of started runs.
+
+66 saved successful samples show minimum freeRAM8.9483GiB,maxcontroller30.129MiB,maxowned/jobcommit0.37677GiB,maxgap0.18481s. Offending sample NOT SAVED: check_resources raises before samples.append. Exact guard trigger unknown; samplinggap plausible, not confirmed. Do not relax limits or claim memory passed at failure. See docs/benchmarks/combined-ocr-model-third-stop.md. Proposed fake-only24starts/10min telemetry repair would retain failed sample/distinct guard reason with unchanged limits; NOT APPROVED yet. No new native package/source telemetry edits. New stop report/handoff/checkpoint/results docs are uncommitted; preparation commit approval does not include these later results. Earlier preparation checkpoint is history only.
+
+# Earlier combined-03 preparation
 
 Read AGENTS/SPEC/PLAN/TODO. Stage1 Windows11/16GB CPUonly PDF/XLSX/CSV; XLSdeferred,DOCX/TXT excluded. No subagents,SkillSpector or reopened AppContainer investigation. No product/runtime adoption. Raw documents/prompts/OCR/images/answers/vectors/private error paths staylocal and must not be printed into tools.
 

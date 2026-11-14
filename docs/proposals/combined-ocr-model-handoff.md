@@ -1,3 +1,5 @@
+**STOPPED — DO NOT RUN COMBINED-03 AGAIN.** All four controls completed, then a resource boundary stopped corpus embedding. Teardown was verified. See [stop evidence](../benchmarks/combined-ocr-model-third-stop.md). The violating resource sample was not retained; no new native continuation is approved. Instructions below are historical.
+
 # Approved combined OCR/model trial: local offline instructions
 
 **Fresh run:** `combined-03`, under the [approved fresh continuation](combined-ocr-model-third-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01, combined-02 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
@@ -39,3 +41,6 @@ Do not reconnect for remote help while owned trial work may still be active. Mis
 ## Local answer review after completion
 
 Open `F:\document_assistant\data\t11\combined-03\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
+# Resource diagnostic repair completed — 2026-11-14
+
+The fake-only repair passed 28 tests and Ruff checks; see [evidence](../benchmarks/combined-resource-diagnostic.md). It preserves every existing resource limit and retains future failing scalar measurements before shutdown. This does not recover the combined-03 failing measurement or authorize another native trial. All previous commands remain stopped; no current executable handoff is available.

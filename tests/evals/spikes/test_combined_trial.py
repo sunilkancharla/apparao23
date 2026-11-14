@@ -18,6 +18,98 @@ import combined_trial as trial
 class CombinedContracts(unittest.TestCase):
     """Exercise failure paths before allowing an offline handoff."""
 
+    def test_resource_guard_reports_each_exact_boundary_and_keeps_edges(self):
+        edge = {
+            "available_physical": 4 * 1024**3,
+            "controller_private": 512 * 1024**2,
+            "owned_private": 8 * 1024**3,
+            "peak_job": 8 * 1024**3,
+        }
+        trial.check_resources(edge, 0.25)
+        for field, value, reason in (
+            ("available_physical", 4 * 1024**3 - 1, "available_physical"),
+            ("controller_private", 512 * 1024**2 + 1, "controller_private"),
+            ("owned_private", 8 * 1024**3 + 1, "owned_private"),
+            ("peak_job", 8 * 1024**3 + 1, "peak_job"),
+            ("sampling_gap", 0.250001, "sampling_gap"),
+        ):
+            with self.subTest(field=field):
+                snapshot = {**edge, field: value, "secret": "must not escape"}
+                with self.assertRaises(trial.ResourceBoundary) as raised:
+                    trial.check_resources(
+                        snapshot, value if field == "sampling_gap" else 0.25
+                    )
+                self.assertIn(reason, raised.exception.diagnostic["violations"])
+                self.assertNotIn("secret", raised.exception.diagnostic["measurement"])
+
+    def test_failed_resource_reading_is_durable_before_owned_teardown(self):
+        snapshot = {
+            "available_physical": 4 * 1024**3,
+            "controller_private": 1,
+            "owned_private": 2,
+            "peak_job": 3,
+            "secret": "private content",
+        }
+        supervisor = object.__new__(native.Supervisor)
+        supervisor.samples = []
+        with (
+            tempfile.TemporaryDirectory() as root,
+            patch.object(trial, "RUN", Path(root)),
+        ):
+            with self.assertRaises(trial.ResourceBoundary):
+                supervisor.check_resource_sample(snapshot, 0.3)
+            receipt = json.loads((Path(root) / "resource-failure.json").read_text())
+            self.assertEqual(receipt, supervisor.resource_failure)
+            self.assertEqual(receipt["violations"], ["sampling_gap"])
+            self.assertEqual(receipt["measurement"]["sampling_gap"], 0.3)
+            self.assertNotIn("private content", json.dumps(receipt))
+
+    def test_resource_receipt_write_failure_still_stops(self):
+        supervisor = object.__new__(native.Supervisor)
+        snapshot = {
+            "available_physical": 0,
+            "controller_private": 1,
+            "owned_private": 2,
+            "peak_job": 3,
+        }
+        with (
+            patch.object(trial, "write_json", side_effect=PermissionError),
+            self.assertRaises(PermissionError),
+        ):
+            supervisor.check_resource_sample(snapshot, 0.1)
+        self.assertEqual(
+            supervisor.resource_failure["violations"], ["available_physical"]
+        )
+
+    def test_observer_saves_resource_packet_before_fail_closed_callback(self):
+        import threading
+
+        supervisor = object.__new__(native.Supervisor)
+        supervisor.stop = threading.Event()
+        snapshot = {
+            "available_physical": 0,
+            "controller_private": 1,
+            "owned_private": 2,
+            "peak_job": 3,
+        }
+        supervisor.sample = lambda gap: supervisor.check_resource_sample(snapshot, gap)
+        failures = []
+        with (
+            tempfile.TemporaryDirectory() as root,
+            patch.object(trial, "RUN", Path(root)),
+        ):
+
+            def fail(reason):
+                receipt = json.loads((Path(root) / "resource-failure.json").read_text())
+                self.assertEqual(receipt["violations"], ["available_physical"])
+                failures.append(reason)
+
+            supervisor.fail = fail
+            supervisor.observe()
+        self.assertEqual(
+            failures, ["ResourceBoundary: Resource boundary: available_physical"]
+        )
+
     def ledger(self, root, **changes):
         state = trial.initial_state()
         state.update(changes)

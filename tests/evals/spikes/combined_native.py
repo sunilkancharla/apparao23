@@ -146,6 +146,7 @@ class Supervisor:
         self.failed, self.stop = threading.Event(), threading.Event()
         self.failure, self.thread, self.process = None, None, None
         self.samples = []
+        self.resource_failure = None
         self.inference_threads = []
         self.root_job, self.server = None, None
         self.runner = None
@@ -302,10 +303,20 @@ class Supervisor:
             "peak_job": peak.peak_job,
             "sampling_gap": gap,
         }
-        core.check_resources(observation, gap)
+        self.check_resource_sample(observation, gap)
         self.server._check_tcp()
         self.storage()
         self.samples.append(observation)
+
+    def check_resource_sample(self, observation, gap):
+        """Save the violating scalar packet before the observer stops owned work."""
+        try:
+            core.check_resources(observation, gap)
+        except core.ResourceBoundary as error:
+            self.resource_failure = error.diagnostic
+            # A receipt failure also propagates to the same fail-closed observer.
+            core.write_json(core.RUN / "resource-failure.json", self.resource_failure)
+            raise
 
     def observe(self):
         previous = time.monotonic()
@@ -752,6 +763,8 @@ def offline_main():
                     summary.setdefault("filesystem_failure", failure)
                 settled = supervisor.close()
                 summary.update(settled)
+                if failure := getattr(supervisor, "resource_failure", None):
+                    summary["resource_failure"] = failure
                 core.write_json(
                     core.RUN / "memory-observations.json", supervisor.samples
                 )

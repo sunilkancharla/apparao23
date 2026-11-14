@@ -340,15 +340,38 @@ def schedule() -> list[dict]:
     return output
 
 
+class ResourceBoundary(RuntimeError):
+    """Carry only scalar resource measurements and fixed guard identifiers."""
+
+    def __init__(self, diagnostic: dict):
+        self.diagnostic = diagnostic
+        super().__init__("Resource boundary: " + ", ".join(diagnostic["violations"]))
+
+
 def check_resources(snapshot: dict, gap: float) -> None:
     """Enforce sampled headroom/commit bounds and the promised sampling interval."""
-    if (
-        snapshot["available_physical"] < 4 * 1024**3
-        or snapshot["controller_private"] > 512 * 1024**2
-        or max(snapshot["owned_private"], snapshot["peak_job"]) > 8 * 1024**3
-        or gap > 0.25
-    ):
-        raise RuntimeError("Memory/headroom/sampling boundary")
+    limits = {
+        "available_physical": 4 * 1024**3,
+        "controller_private": 512 * 1024**2,
+        "owned_private": 8 * 1024**3,
+        "peak_job": 8 * 1024**3,
+        "sampling_gap": 0.25,
+    }
+    measurement = {key: snapshot[key] for key in limits if key != "sampling_gap"}
+    measurement["sampling_gap"] = gap
+    violations = [
+        key
+        for key, limit in limits.items()
+        if (
+            measurement[key] < limit
+            if key == "available_physical"
+            else measurement[key] > limit
+        )
+    ]
+    if violations:
+        raise ResourceBoundary(
+            {"violations": violations, "measurement": measurement, "limits": limits}
+        )
 
 
 def overlap(chat: tuple[float, float], ocr: tuple[float, float]) -> float:

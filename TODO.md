@@ -840,3 +840,10 @@ Work paused at user's request to preserve daily token allowance. [Exact restart 
 - [ ] User runs current [combined-03 handoff](docs/proposals/combined-ocr-model-handoff.md) disconnected; typeOFFLINE,no READY prompt,remain offline through verified teardown. No automatic retry or engine/model adoption.
 
 - [x] Final combined-03 readiness:146 sealed identities/all seven prior records verified unchanged; PowerShell/link/format/diff checks passed,within active-preparation limit. No native/API attempt. Validated current handoff ready; source/docs commit still unapproved.
+
+### Combined-03 executed stop — 2026-11-14
+
+- [x] Preparation source committed as d9a2792 under explicit user approval; executed source/handoff hashes matched seal. Later results remain uncommitted.
+- [x] Record [resource-boundary stop](docs/benchmarks/combined-ocr-model-third-stop.md): allfour controls checked,three corpus embedding attempts,zero scored answers;teardown verified. Preserve56/160,eightAPI,fiveroots,nineextras. Resource guard stopped server; ReadError is downstream. Saved66 good observations do not include offending sample, so exact memory/headroom/gap trigger unknown.
+- [x] User approved the fake-only 24-start/10-minute resource diagnostic repair. Completed four new regression tests and all 28 fake contracts (1.435 s); Ruff lint/format passed. Exact guard names, scalar measurements and unchanged limits are saved before shutdown, with summary propagation after cleanup. See [repair evidence](docs/benchmarks/combined-resource-diagnostic.md). No model/OCR/API/download activity; no new native allocation. Do not run old handoffs.
+- [ ] Review and approve a scoped commit of the resource diagnostic repair and combined-03 stop reports. A fresh native trial remains separately gated.
