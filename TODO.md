@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T12 PartB runtime comparison — approved, resume at B1
+
+The user explicitly approved the [exact package](docs/proposals/sqlite-vec-runtime-comparison.md), including the execution boundary and five planning documents' commit, and requested a durable checkpoint. T12-BP proposal is complete. B1–B6 remain unstarted; resume B1 with recorded approval/bookkeeping, then complete covered steps without asking again. Later preparation/source/results commits retain separate gates.
+
+- [ ] **T12-B1 — Fresh allocation/contract.** Requires exact package approval; seven prior hashes, pinned assets, fixed SQL/function surface and measurement/resource contract recorded before counted preparation.
+- [ ] **T12-B2 — Test-first harness/adapters.** Requires B1; red/green fake correctness/refusal/routing/transaction tests; no connected DLL import/loading; at most three new evaluation files.
+- [ ] **T12-B3 — Staging/readiness.** Requires B2; project-venv DLL/notices and selected32/1000fixture hashes verified, source/interpreter/PowerShell seal and independent no-load/counter checks before handoff.
+- [ ] **T12-B4 — Disconnected A/B trial.** Requires B3 and user OFFLINE attestation; scoped native checks, four real crash/reopen cases per adapter and fixed measurements, or preserved partial stop; old10kclosed.
+- [ ] **T12-B5 — Owned teardown.** Requires execution start; no active owned worker/descendant, final cleanup/safe reconnect message; no retry/reset/reseal.
+- [ ] **T12-B6 — Results/adoption review gate.** Requires verified teardown/reconnection; factual paired metrics/limitations/counters/hash checks, documentation and separate commit request. T12 larger-scale/G2 gates remain open.
+
 ## Companion-notice exception accepted — empirical package not approved
 
 - [x] **T12-N1 — Exact-wheel notice decision.** User said "i do accept" after static-review commit `3092aeb`. [Decision](docs/decisions.md) accepts pinned MIT/Apache companion texts for this unchanged wheel only; missing bundled notices and provenance/runtime unknowns remain recorded.

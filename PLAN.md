@@ -1,5 +1,11 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current proposal — T12 disconnected runtime comparison
+
+**Approval recorded:** The user approved the exact96-start package, DLL-only staging and manual disconnected execution without filesystem confinement, plus these five planning documents' commit. Resume T12-B1 from [the saved checkpoint](docs/session-checkpoint.md), then proceed sequentially through the covered preparation tasks without repeated task-start approvals. No implementation or staging has begun. Carry forward the checkpoint's conservative bookkeeping reservations within the shared limits.
+
+Companion-notice acceptance committed `48cdf72`. The [PartB proposal](docs/proposals/sqlite-vec-runtime-comparison.md) requests96shared starts,30active preparation minutes and one45-minute user-operated disconnected epoch, with cached DLL/notices staged inside project `.venv`, no Python-package install/download. Compare fresh A/B32/1000-row synthetic fixtures, scoped/tied reference rankings, both adapters' actual crash/reopen controls and resource/footprint timing. The old10k timeout remains closed. Explicit no-filesystem-confinement acceptance and exact package/five-document commit approval pending. No new source, cache staging, allocation or load occurred.
+
 ## Latest decision — exact-wheel companion notices accepted
 
 The user accepted the [narrow companion-notice exception](docs/decisions.md) after artifact-review commit `3092aeb`. Preserve the exact wheel and both pinned upstream texts unchanged; retain all binary/runtime limitations. Next prepare a concrete project-local empirical comparison proposal for separate approval, including installation/loading boundary, frozen data/reference checks and fresh budgets. No empirical execution or G2 adoption is authorized by notice acceptance. Earlier pending-notice statements below are historical.

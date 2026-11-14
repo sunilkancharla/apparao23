@@ -1,4 +1,32 @@
-# Latest checkpoint — exact-wheel companion notices accepted
+# Resume checkpoint — T12 PartB approved; start at B1
+
+## Approval and exact resume action
+
+The user explicitly said: "yes do the commit please, and i am approving the package, including the execution boundary and also maintain the checkpoints as i am running out of my codex token limit for this session". This approves the exact docs/proposals/sqlite-vec-runtime-comparison.md package, DLL-only staging and manual physically disconnected native execution without filesystem confinement, plus committing these five planning files. Do not re-request unchanged package/notice/boundary approval. Later preparation/source/results commits retain their separate explicit gates.
+
+Resume at **T12-B1**: read actual AGENTS/SPEC/PLAN/TODO/worktree state and the approved proposal, establish the fresh shared allocation and initial hashes/contract, then test-first B2/static staging/sealed independent readiness B3. Only after successful readiness provide the approved user-operated offline handoff for B4. Never load/import the DLL while connected. No implementation/source/fixture/cache staging/runtime allocation/runner has been created in this approval/checkpoint turn. No application runtime adoption is approved.
+
+## Carry-forward bookkeeping and limits
+
+Conservatively reserve **12preparation starts and120active preparation seconds** for this approval inspection/Git/checkpoint closeout. These reservations belong to the96-start/1800-second connected-preparation package; carry them into the initial ledger, do not reset them on resume. Category ceilings remain prep24/fake-tests16/native-workers32/reporting16/protected-cleanup8. Remaining preparation allowance after this reserve is12starts/1680active seconds. This is an advance conservative reservation, not a measured native process count. The interval awaiting the next human session is excluded; do not begin a45-minute offline epoch until actual OFFLINE attestation.
+
+Fresh ignored `data/t12/sqlite-vec-runtime-01/` and `.venv/.cache/sqlite-vec-review/part-b-01/` must still be absent at resume or be investigated rather than overwritten. Hash-link seven prior records: closed baseline/artifact budgets plus three baseline source/fixture files and two artifact inspector sources. Reuse only verified cached wheel/DLL/MIT/Apache identities from the proposal; all old allocations/source/fixtures remain unchanged. Stage only DLL and two notices under the new project-venv cache, no Python-distribution installation/uv lock change/download/wrapper or NumPy import. At most three new authored evaluation files; no product modules.
+
+Runtime: one45-minute physically disconnected epoch;120sworker,2GiBaggregate/controller512MiB/free4GiB,controller+oneworker,100mscadence/300msboundary,512MiBrunoutputs+1MiBstage. Fresh A/B32/1000rows only,12queries/4passes,cosine/ref1e-6/stableties/eligiblefilterbeforetopK and both adapters' four actual crash/reopen cases. Old10ktimeout staysclosed. Record explicit SQL/function allowlist before sealing; unsupported filtering/ties/native behaviour stops, never weakens scope. No filesystem confinement: user must remain disconnected through owned teardown and explicit safe reconnect.
+
+## Saved Git state and next gate
+
+Prior commits: baselinea54b38b, artifact3092aeb, companion-notice acceptance48cdf72. This turn commits only PLAN/README/TODO/runtimeproposal/checkpoint; resulting commit hash is in Git. Tracked changes should be clean after commit; preserve unrelated untracked agents/skills/references/images and documentation. No need to rerun closed trials or repeat their tests to resume. T12largerscale/productretention/physical16GB and T17/G2 remain open. This checkpoint is a handoff, not task completion or a `/compact` claim. Earlier snapshots below are historical.
+
+# Earlier checkpoint — T12 PartB runtime proposal ready for review
+
+User requested proceeding after companion-notice acceptance commit48cdf72. Prepared docs/proposals/sqlite-vec-runtime-comparison.md plusPLAN/TODO/README/checkpoint only. Proposed96starts categoriesprep24/faketests16/nativeworkers32/report16/cleanup8;30minconnectedprep/one45minofflineepoch,120sworker,2GiBaggregate/controller512MiB/free4GiB,activecontroller+1worker,100mscadence/300msboundary,512MiBoutputs+1MiBstagedassets,zeroHTTP/modelAPI/OCR/download. Exactcachedwheel/DLL/MIT/Apache identities fromreview,stageDLL+noticesonlyunder.venv/.cache/sqlite-vec-review/part-b-01;noPythonpackageinstall/uvlockchange/wrapperorNumPyimport. Partofrequestedapproval,notyetdone.
+
+Freshdata/t12/sqlite-vec-runtime-01proposedonly;link7priorrecords(2closedbudgets+3baselinesources+2inspectorsources),sealexactassets/interpreter/sources/selectedfixtureidentities. FreshpairedA/B32and1000rows only,12queries/4passes/reference1e-6/stableties/eligiblefilterbeforetopK,8realcrashcases+separatereopens. Old10kclosednotrerun;nooptimizationorimplicitdeadlineincrease. Cachedsourceinspectionallowed;attemptedpublicupstreamtestfetchinproposalunavailable,compatibilitynotinferred. Connectedfake/staticprepnoDLLload;lateruserOFFLINEattestation/no filesystemconfinement required throughverifiedteardown/safereconnect. ProposedSQLauthorizerdeniesATTACH/DETACH/load_extension/optionalFSstaticpointerfunctions;surfaceexplicitlyreviewedbeforeseal. Runtimeunsupportedqueryisafinding,notpermissiontoweakenfilter/ties.
+
+Package and five-document commit approval pending. No allocation/source/cache staging/fixture/handoff/install/load created. T12largerscale/privacy/productretention/physical16GB/G2gatesremainopen. Preserveallclosedoldstate/unrelateduntrackedcontent. Finalproposalchecks beforehandoff. Earliercheckpointsbelowhistorical.
+
+# Earlier checkpoint — exact-wheel companion notices accepted
 
 **Acceptance-note commit approval:** User answered "yes please" to the explicit six-document commit request. Commit only decisions/artifact report/PLAN/TODO/README/checkpoint; exclude all runtime/downloaded/unrelated content. The resulting commit identifier is recorded in Git. This approval does not authorize installation, loading or a new empirical package; older pending-commit wording below is historical.
 
