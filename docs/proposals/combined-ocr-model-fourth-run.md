@@ -65,4 +65,8 @@ Stop on reconnect, unexpected egress/download, identity drift, GPU use, residenc
 
 The user approved this exact fresh package, including its limits and the disconnected/no-filesystem-confinement arrangement. A future sampling-policy change, model/OCR adoption, production latency/quality budgets, rotated-output resolution, broader OCR/grounding acceptance and remaining Stage 1 architecture decisions stay separately gated. This trial does not resolve them automatically.
 
-Package approval authorizes the necessary bounded selector changes, fake verification, static preparation, disconnected user-run trial and sanitized results documentation. The accompanying explicit commit approval covers the five proposal documents only. Later source/results commits, limit relaxation, additional trials and Stage 2 transition remain separate gates. No executable command is supplied until preparation passes and the actual new handoff is ready.
+Package approval authorizes the necessary bounded selector changes, fake verification, static preparation, disconnected user-run trial and sanitized results documentation. The accompanying explicit commit approval covers the five proposal documents only. Later source/results commits, limit relaxation, additional trials and Stage 2 transition remain separate gates.
+
+## Completed static preparation
+
+Proposal documents committed as `473d24a`. [Preparation evidence](../benchmarks/combined-ocr-model-fourth-preparation.md) records test-first selector changes, 28 passing fake contracts (2.150 s), passing Ruff/PowerShell syntax and final rehash of 149 sealed identities with ten prior records unchanged. Final preparation check: 250.468 s, 36/160 reservations (28 preparation/eight reporting), zero API/native attempts, offline epoch unset. The [new handoff](combined-ocr-model-handoff.md) is ready for the already approved disconnected user-run step. New preparation source/documentation commit remains gated.

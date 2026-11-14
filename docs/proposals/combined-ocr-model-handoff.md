@@ -1,8 +1,8 @@
-**STOPPED — DO NOT RUN COMBINED-03 AGAIN.** All four controls completed, then a resource boundary stopped corpus embedding. Teardown was verified. See [stop evidence](../benchmarks/combined-ocr-model-third-stop.md). The violating resource sample was not retained; no new native continuation is approved. Instructions below are historical.
+**COMBINED-04 — static readiness verified.** The user approved the [fresh package](combined-ocr-model-fourth-run.md); [preparation evidence](../benchmarks/combined-ocr-model-fourth-preparation.md) records 28 passing fake tests, 149 verified identities and ten unchanged prior records. Combined-01/02/03 remain stopped and must never run again. Combined-03's [historical trigger](../benchmarks/combined-ocr-model-third-stop.md) remains unknown; the new run uses repaired resource diagnostics with every existing limit unchanged.
 
 # Approved combined OCR/model trial: local offline instructions
 
-**Fresh run:** `combined-03`, under the [approved fresh continuation](combined-ocr-model-third-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01, combined-02 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
+**Fresh run:** `combined-04`, under the [approved fresh continuation](combined-ocr-model-fourth-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01, combined-02, combined-03 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
 
 ## Before starting
 
@@ -15,7 +15,7 @@ Disconnect Wi-Fi, unplug Ethernet, and disconnect tethering and every external l
 ## One command after disconnecting
 
 ```powershell
-& 'F:\document_assistant\data\t11\combined-03\run.ps1'
+& 'F:\document_assistant\data\t11\combined-04\run.ps1'
 ```
 
 Type `OFFLINE` at the attestation prompt. **There is no new READY prompt**: sealed-asset verification, owned-server startup, controls and the fixed schedule proceed automatically. Large cached weights are rehashed first; this can be quiet for a while. Do not reconnect to ask for progress.
@@ -27,7 +27,7 @@ Wait for final status, **`TEARDOWN VERIFIED: True`**, and the message saying you
 After verified cleanup, reconnect and report the final status. The local sanitized report is:
 
 ```text
-F:\document_assistant\data\t11\combined-03\summary.json
+F:\document_assistant\data\t11\combined-04\summary.json
 ```
 
 `completed_pending_local_semantic_review_no_adoption` means the fixed schedule finished; it is not proof of factual/citation correctness or adoption. `stopped_no_automatic_retry` means preserve all receipts and report the stop, without rerunning/resetting/resealing.
@@ -40,7 +40,8 @@ Do not reconnect for remote help while owned trial work may still be active. Mis
 
 ## Local answer review after completion
 
-Open `F:\document_assistant\data\t11\combined-03\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
-# Resource diagnostic repair completed — 2026-11-14
+Open `F:\document_assistant\data\t11\combined-04\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
 
-The fake-only repair passed 28 tests and Ruff checks; see [evidence](../benchmarks/combined-resource-diagnostic.md). It preserves every existing resource limit and retains future failing scalar measurements before shutdown. This does not recover the combined-03 failing measurement or authorize another native trial. All previous commands remain stopped; no current executable handoff is available.
+## Resource diagnostic repair — 2026-11-14
+
+The fake-only repair passed 28 tests and Ruff checks; see [evidence](../benchmarks/combined-resource-diagnostic.md). It preserves every existing resource limit and retains future failing scalar measurements before shutdown where disk permits. The combined-04 package has separate approval. A gap greater than 0.25 seconds still stops execution; do not change the limit or retry if that occurs. Share only the sanitized summary after verified teardown and reconnection.

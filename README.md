@@ -6,7 +6,7 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
-**Next approved work:** [combined-04](docs/proposals/combined-ocr-model-fourth-run.md) repeats the fixed combined evaluation with the repaired diagnostics and unchanged limits. The repair/results are committed in `28844cb`. The user approved the bounded preparation/offline package and committing its proposal documents. Preparation is next; no new runner is ready yet. Earlier uncommitted/preparation statements below are historical.
+**Ready for the user-run offline trial:** [combined-04 instructions](docs/proposals/combined-ocr-model-handoff.md). The approved proposal documents are committed in `473d24a`; [preparation](docs/benchmarks/combined-ocr-model-fourth-preparation.md) passed 28 fake tests, Ruff, PowerShell syntax and final rehash of 149 identities/ten prior records. The fresh ledger reserves 36/160 starts, with zero API/native attempts and no offline start. Existing limits are unchanged. New selector/preparation source and documentation await their own commit approval. Earlier uncommitted/preparation statements below are historical.
 
 The approved [resource diagnostics repair](docs/benchmarks/combined-resource-diagnostic.md) is complete: 28 fake tests passed in 1.435 s, with Ruff lint and format checks passing. Future resource stops retain the failing scalar measurements and specific guard names before owned-work shutdown. Limits remain unchanged. No native trial ran; combined-03 remains stopped and its historical trigger remains unknown. These changes await commit approval.
 
