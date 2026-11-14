@@ -41,4 +41,6 @@ The write-denial tests use injected failures as deterministic regression control
 
 ## Remaining decision
 
+**Subsequent completion:** Proposal documents committed `4a2261e`. [Investigation evidence](../benchmarks/combined-state-write-investigation.md) records40passing tests in3.464s and the observed Windows5/errno13 replacement refusal with controlled Windows and ordinary Python readers. Writer semantics remain unchanged; safe operation/role diagnostics only. Investigation source/results commit and any repair/native continuation remain separately gated. The initial package approval request below is historical.
+
 Approve or amend this exact synthetic investigation, including the fixture-only Windows handle case and32-start/ten-minute ceiling. Its findings would inform a separately reviewed minimal repair. No retry policy, permission change, in-place file rewrite, ledger reset, timing change, model/OCR adoption, product feature or native trial is included. The five proposal documents may be explicitly approved for commit alongside the package; later investigation source/results commits remain a separate gate.

@@ -172,8 +172,14 @@ def filesystem_diagnostic(error: OSError, root: Path) -> dict:
                 "line": trace.tb_lineno,
             }
         trace = trace.tb_next
+    operation = getattr(error, "trial_state_operation", None)
+    role = getattr(error, "trial_state_role", None)
     return {
         "error_type": type(error).__name__,
+        "state_operation": operation if operation in {"write", "replace"} else None,
+        "state_role": role
+        if role in {"meter", "summary", "filesystem-diagnostic", "other"}
+        else None,
         "errno": error.errno,
         "winerror": getattr(error, "winerror", None),
         "storage_area": area,
@@ -225,10 +231,23 @@ def initial_state() -> dict:
 def write_json(path: Path, value: object) -> None:
     """Replace one local checkpoint atomically; startup refuses unfinished writes."""
     temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(
-        json.dumps(value, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-    os.replace(temporary, path)
+    role = {
+        "meter.json": "meter",
+        "summary.json": "summary",
+        "filesystem-error-local.json": "filesystem-diagnostic",
+    }.get(path.name, "other")
+    try:
+        temporary.write_text(
+            json.dumps(value, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+    except OSError as error:
+        error.trial_state_operation, error.trial_state_role = "write", role
+        raise
+    try:
+        os.replace(temporary, path)
+    except OSError as error:
+        error.trial_state_operation, error.trial_state_role = "replace", role
+        raise
 
 
 class Ledger:

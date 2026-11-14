@@ -1,4 +1,12 @@
-# Latest checkpoint — state-file investigation approved, 2026-11-14
+# Latest checkpoint — synthetic state-file investigation complete, 2026-11-14
+
+Final package closed29/32starts,466.578active seconds; oldcombined05/cadencehashes unchanged, links/whitespacepassed. Receipt data/t11/state-write-investigation-01/budget.json. No additional execution needed; sevenreviewedsource/reportfiles awaitcommitapproval.
+
+Five proposal docs committed4a2261e. Exact approved32start/600s diagnostic package completed syntheticcases: WindowsCreateFileW no-delete-share reader AND ordinaryPythonreader both blocked replacement withwinerror5/errno13; closinghandles restoredwrites. Same-destination fixedtmp interleaving producedFileNotFoundError,distinctdestinations succeeded. Failed reservation/API persistence prevented simulatedwork; leftovertmp refusedstartup; unchangeddescendantobservation stillwrites,changedcountpersisted. Historiccombined05 exactlockinghandle/destination remainsunknown; no privateerrorreceipt/rawoutput read.
+
+Only combined_trial.py safe state_operation(write/replace)/knownstate_role diagnostic tagging and test_combined_trial.py sixnew syntheticmethods changed. No locks/retries/writefrequency/OCRreader/permissions/timing/nativeadapter/routing policy changes. Red40tests3errors; final40passed3.464s,Rufflint/formatpassed. Windowscaseexecuted onthishost,allownhandlesclosed/threadsfinished;bootstrapfixturescontainedinnewallocation. Finaloldcombined05/cadencehashes/link/diff/budget checks closepackage. Newbenchmarkdocs/benchmarks/combined-state-write-investigation.md,README/TODO/checkpoint/proposalupdated; seveninvestigationsource/reportfiles awaitcommitapproval. Recommendnextseparatelyapproved minimalownedreader/writercoordination includingOCRpolling plusunchangedwrite suppression; no implementation/nativecontinuationapproved. Oldnative/fakeallocationsremainclosed,unrelateduntrackedfilespreserved. Earliercheckpointsbelowhistorical.
+
+# Earlier checkpoint — state-file investigation approved, 2026-11-14
 
 User approved exact32-start/ten-active-minute synthetic package and committing five proposal documents. Fresh data/t11/state-write-investigation-01 reserves32starts upfront, links oldcombined05 meter/cadencerepair hashes. Execute synthetic success/denial/concurrency/fixture-onlyWindowsHandle/accounting controls and optional operation-role diagnostics only; no writerpolicy/permission/timing/nativeworkload changes. Later investigation source/results commit remains gated. Earlier proposal state below historical.
 

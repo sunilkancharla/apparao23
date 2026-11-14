@@ -18,6 +18,179 @@ import combined_trial as trial
 class CombinedContracts(unittest.TestCase):
     """Exercise failure paths before allowing an offline handoff."""
 
+    def test_state_write_operation_diagnostics_and_last_good_bytes(self):
+        for operation in ("write", "replace"):
+            with (
+                self.subTest(operation=operation),
+                tempfile.TemporaryDirectory() as root,
+            ):
+                path = Path(root) / "summary.json"
+                trial.write_json(path, {"version": 1})
+                original = path.read_bytes()
+                denied = PermissionError(13, "synthetic denial", str(path))
+                target = (
+                    patch.object(Path, "write_text", side_effect=denied)
+                    if operation == "write"
+                    else patch.object(trial.os, "replace", side_effect=denied)
+                )
+                with target, self.assertRaises(PermissionError) as caught:
+                    trial.write_json(path, {"version": 2})
+                diagnostic = trial.filesystem_diagnostic(caught.exception, Path(root))
+                self.assertEqual(diagnostic["state_operation"], operation)
+                self.assertEqual(diagnostic["state_role"], "summary")
+                self.assertEqual(path.read_bytes(), original)
+                self.assertNotIn(root, json.dumps(diagnostic))
+
+    def test_failed_accounting_persistence_prevents_simulated_work(self):
+        for action in ("reserve", "call"):
+            with self.subTest(action=action), tempfile.TemporaryDirectory() as root:
+                ledger = self.ledger(
+                    root, offline_started=1000, execution_deadline=2000
+                )
+                original = ledger.path.read_bytes()
+                work = []
+                with (
+                    patch.object(
+                        trial.os, "replace", side_effect=PermissionError(13, "denied")
+                    ),
+                    self.assertRaises(PermissionError),
+                ):
+                    if action == "reserve":
+                        ledger.reserve("controller", 1, "synthetic launch")
+                    else:
+                        ledger.call()
+                    work.append("started")
+                self.assertEqual(work, [])
+                self.assertEqual(ledger.path.read_bytes(), original)
+                self.assertTrue(ledger.path.with_suffix(".json.tmp").exists())
+                with self.assertRaises(RuntimeError):
+                    trial.Ledger(ledger.path)
+
+    def test_fixed_temporary_path_same_and_distinct_destination_interleavings(self):
+        import threading
+
+        for same in (True, False):
+            with self.subTest(same=same), tempfile.TemporaryDirectory() as root:
+                first = Path(root) / "first.json"
+                second = first if same else Path(root) / "second.json"
+                ready, release = threading.Event(), threading.Event()
+                errors = []
+                replace = trial.os.replace
+
+                def controlled(
+                    source, destination, ready=ready, release=release, replace=replace
+                ):
+                    if threading.current_thread().name == "state-investigation-writer":
+                        ready.set()
+                        if not release.wait(2):
+                            raise TimeoutError("Synthetic writer gate")
+                    return replace(source, destination)
+
+                def write_first(first=first, errors=errors):
+                    try:
+                        trial.write_json(first, {"writer": 1})
+                    except OSError as error:
+                        errors.append(type(error).__name__)
+
+                writer = threading.Thread(
+                    target=write_first, name="state-investigation-writer", daemon=True
+                )
+                with patch.object(trial.os, "replace", controlled):
+                    writer.start()
+                    try:
+                        self.assertTrue(ready.wait(2))
+                        trial.write_json(second, {"writer": 2})
+                    finally:
+                        release.set()
+                        writer.join(2)
+                self.assertFalse(writer.is_alive())
+                self.assertEqual(errors, ["FileNotFoundError"] if same else [])
+                self.assertEqual(json.loads(second.read_text()), {"writer": 2})
+                if not same:
+                    self.assertEqual(json.loads(first.read_text()), {"writer": 1})
+
+    def test_current_descendant_noop_still_writes_and_changed_count_persists(self):
+        with tempfile.TemporaryDirectory() as root:
+            ledger = self.ledger(root)
+            with patch.object(trial, "write_json", wraps=trial.write_json) as writes:
+                ledger.observe_native(3)
+                first = ledger.read()
+                ledger.observe_native(3)
+                self.assertEqual(first, ledger.read())
+                self.assertEqual(writes.call_count, 2)
+                ledger.observe_native(4)
+            self.assertEqual(ledger.read()["processes"], 4)
+            self.assertEqual(ledger.read()["native_observed"], 4)
+
+    @unittest.skipUnless(sys.platform == "win32", "Windows sharing-mode fixture")
+    def test_owned_windows_reader_blocks_replace_until_handle_closed(self):
+        import ctypes
+        from ctypes import wintypes as w
+
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        kernel.CreateFileW.argtypes = [
+            w.LPCWSTR,
+            w.DWORD,
+            w.DWORD,
+            ctypes.c_void_p,
+            w.DWORD,
+            w.DWORD,
+            w.HANDLE,
+        ]
+        kernel.CreateFileW.restype = w.HANDLE
+        kernel.CloseHandle.argtypes = [w.HANDLE]
+        kernel.CloseHandle.restype = w.BOOL
+        with tempfile.TemporaryDirectory() as root:
+            path = Path(root) / "summary.json"
+            trial.write_json(path, {"version": 1})
+            handle = kernel.CreateFileW(str(path), 0x80000000, 3, None, 3, 0x80, None)
+            self.assertNotEqual(handle, ctypes.c_void_p(-1).value)
+            try:
+                with self.assertRaises(PermissionError) as caught:
+                    trial.write_json(path, {"version": 2})
+                self.assertEqual(json.loads(path.read_text()), {"version": 1})
+                print(
+                    json.dumps(
+                        {
+                            "fixture": "owned_no_delete_share_reader",
+                            "winerror": caught.exception.winerror,
+                            "errno": caught.exception.errno,
+                        }
+                    )
+                )
+            finally:
+                self.assertTrue(kernel.CloseHandle(handle))
+            trial.write_json(path, {"version": 2})
+            self.assertEqual(json.loads(path.read_text()), {"version": 2})
+
+            # Characterize the ordinary reader used by the polling code too.
+            with path.open("r", encoding="utf-8") as reader:
+                self.assertEqual(json.load(reader), {"version": 2})
+                try:
+                    trial.write_json(path, {"version": 3})
+                except PermissionError as error:
+                    self.assertEqual(json.loads(path.read_text()), {"version": 2})
+                    outcome = {
+                        "denied": True,
+                        "winerror": error.winerror,
+                        "errno": error.errno,
+                    }
+                else:
+                    self.assertEqual(json.loads(path.read_text()), {"version": 3})
+                    outcome = {"denied": False, "winerror": None, "errno": None}
+            print(json.dumps({"fixture": "owned_standard_python_reader", **outcome}))
+            trial.write_json(path, {"version": 4})
+            self.assertEqual(json.loads(path.read_text()), {"version": 4})
+
+    def test_state_error_roles_do_not_echo_untrusted_attributes(self):
+        error = PermissionError(13, "private content")
+        error.trial_state_operation = "private operation"
+        error.trial_state_role = "private path"
+        diagnostic = trial.filesystem_diagnostic(error, Path("."))
+        self.assertIsNone(diagnostic["state_operation"])
+        self.assertIsNone(diagnostic["state_role"])
+        self.assertNotIn("private", json.dumps(diagnostic))
+
     def timed_supervisor(self, work=0.02, tcp=0, storage=0, cycles=1, delay=0):
         clock = SimpleNamespace(value=1.0)
         waits, phases, failures = [], [], []
