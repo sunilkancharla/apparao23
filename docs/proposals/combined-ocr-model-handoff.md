@@ -1,4 +1,4 @@
-**COMBINED-04 — static readiness verified.** The user approved the [fresh package](combined-ocr-model-fourth-run.md); [preparation evidence](../benchmarks/combined-ocr-model-fourth-preparation.md) records 28 passing fake tests, 149 verified identities and ten unchanged prior records. Combined-01/02/03 remain stopped and must never run again. Combined-03's [historical trigger](../benchmarks/combined-ocr-model-third-stop.md) remains unknown; the new run uses repaired resource diagnostics with every existing limit unchanged.
+**STOPPED — DO NOT RUN COMBINED-04 AGAIN.** A 259.0546-ms sampling interval exceeded the 250-ms limit during corpus embedding; [stop evidence](../benchmarks/combined-ocr-model-fourth-stop.md) records the exact scalar packet and verified teardown. All four controls passed, but no scored chat responses ran. Combined-01/02/03/04 remain closed. No monitoring-policy change or further native allocation is approved. All instructions below are historical.
 
 # Approved combined OCR/model trial: local offline instructions
 
