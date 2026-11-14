@@ -1,8 +1,8 @@
-**STOPPED — DO NOT RUN COMBINED-04 AGAIN.** A 259.0546-ms sampling interval exceeded the 250-ms limit during corpus embedding; [stop evidence](../benchmarks/combined-ocr-model-fourth-stop.md) records the exact scalar packet and verified teardown. All four controls passed, but no scored chat responses ran. Combined-01/02/03/04 remain closed. No monitoring-policy change or further native allocation is approved. All instructions below are historical.
+**COMBINED-05 — static readiness verified.** The user approved the [fresh package](combined-ocr-model-fifth-run.md); [preparation evidence](../benchmarks/combined-ocr-model-fifth-preparation.md) records34passing fake tests,151reverified identities and12unchanged prior records. The committed monitoring repair and all safety limits are preserved. Combined-01/02/03/04 remain closed and must never run again. The historical [combined-04 stop](../benchmarks/combined-ocr-model-fourth-stop.md) is not a successful combined evaluation.
 
 # Approved combined OCR/model trial: local offline instructions
 
-**Fresh run:** `combined-04`, under the [approved fresh continuation](combined-ocr-model-fourth-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01, combined-02, combined-03 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
+**Fresh run:** `combined-05`, under the [approved fresh continuation](combined-ocr-model-fifth-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01, combined-02, combined-03, combined-04 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
 
 ## Before starting
 
@@ -15,7 +15,7 @@ Disconnect Wi-Fi, unplug Ethernet, and disconnect tethering and every external l
 ## One command after disconnecting
 
 ```powershell
-& 'F:\document_assistant\data\t11\combined-04\run.ps1'
+& 'F:\document_assistant\data\t11\combined-05\run.ps1'
 ```
 
 Type `OFFLINE` at the attestation prompt. **There is no new READY prompt**: sealed-asset verification, owned-server startup, controls and the fixed schedule proceed automatically. Large cached weights are rehashed first; this can be quiet for a while. Do not reconnect to ask for progress.
@@ -27,7 +27,7 @@ Wait for final status, **`TEARDOWN VERIFIED: True`**, and the message saying you
 After verified cleanup, reconnect and report the final status. The local sanitized report is:
 
 ```text
-F:\document_assistant\data\t11\combined-04\summary.json
+F:\document_assistant\data\t11\combined-05\summary.json
 ```
 
 `completed_pending_local_semantic_review_no_adoption` means the fixed schedule finished; it is not proof of factual/citation correctness or adoption. `stopped_no_automatic_retry` means preserve all receipts and report the stop, without rerunning/resetting/resealing.
@@ -40,8 +40,8 @@ Do not reconnect for remote help while owned trial work may still be active. Mis
 
 ## Local answer review after completion
 
-Open `F:\document_assistant\data\t11\combined-04\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
+Open `F:\document_assistant\data\t11\combined-05\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
 
 ## Resource diagnostic repair — 2026-11-14
 
-The fake-only repair passed 28 tests and Ruff checks; see [evidence](../benchmarks/combined-resource-diagnostic.md). It preserves every existing resource limit and retains future failing scalar measurements before shutdown where disk permits. The combined-04 package has separate approval. A gap greater than 0.25 seconds still stops execution; do not change the limit or retry if that occurs. Share only the sanitized summary after verified teardown and reconnection.
+The original [diagnostic repair](../benchmarks/combined-resource-diagnostic.md) preserves failing scalar readings. The committed [cadence repair](../benchmarks/combined-monitor-cadence-repair.md) accounts for check work in the desired 100-ms cadence and enforces the same 250-ms ceiling for start/reading/collection/TCP/storage/iteration intervals. The combined-05 package has separate approval. A timing violation still stops execution; do not change the limit or retry if that occurs. Share only the sanitized summary after verified teardown and reconnection.

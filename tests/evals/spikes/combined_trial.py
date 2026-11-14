@@ -14,7 +14,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-RUN = ROOT / "data/t11/combined-04"
+RUN = ROOT / "data/t11/combined-05"
 PRIOR = ROOT / "data/t09-manual-ocr/manual-04"
 SPIKES = Path(__file__).resolve().parent
 sys.path.insert(0, str(SPIKES))
@@ -43,7 +43,7 @@ _MUTEX = threading.RLock()
 def configure_run(run_id: str) -> None:
     """Select only the newly approved allocation; old commands must not redirect."""
     global RUN
-    if run_id != "combined-04":
+    if run_id != "combined-05":
         raise ValueError("Unapproved or stopped combined run ID")
     RUN = ROOT / "data/t11" / run_id
 
@@ -650,7 +650,7 @@ if __name__ == "__main__":
         configure_run(Path(arguments[1]).parent.parent.name)
     else:
         raise SystemExit(
-            "Expected prepare/offline combined-04 or worker <local request>"
+            "Expected prepare/offline combined-05 or worker <local request>"
         )
     if arguments[0] == "prepare":
         prepare()

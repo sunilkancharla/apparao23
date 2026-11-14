@@ -1,4 +1,10 @@
-# Latest checkpoint — combined-05 package approved, 2026-11-14
+# Latest checkpoint — combined-05 ready for user-run offline trial, 2026-11-14
+
+Approved five proposal documents committed79a2dea. T11-C5-1/2/3 completed: fresh shared allocation16initial+12prep+8report=36/160, no API/native roots/descendants/offline epoch. Twelve prior records hash-linked/reverified unchanged. Only combined_trial.py run selection/default/CLI hint and test_combined_trial.py fresh/old-command tests changed; native adapter/cadence/thresholds unchanged. Two expected red selector errors, then34fake tests passed1.774s,Ruff lint/format passed. Static seal151identities rehashed independently;PowerShell syntax passed. Readinessreceipt data/t11/combined-05/readiness.json records199.696elapsedseconds/36reservations. Final document links/diff check accompanies handoff. No connected nativeOCR/model import/inference,install/download/render,product adoption or extra timing policy.
+
+Ready command only after user disconnects every external link: `& 'F:\document_assistant\data\t11\combined-05\run.ps1'`. TypeOFFLINE,noREADY,remainoffline until TEARDOWN VERIFIED:True AND safe-to-reconnect message. Exact synthetic-only/no-filesystem-confinement boundary approved; old01–04/diagnostic commands remain closed. Same75min/128API/160starts/8GiB/250ms limits. Do not retry/reset/reseal on stop. After verified teardown/reconnection inspect sanitized summary only; raw outputs remain local. Eight preparation source/report files await separate commit approval; proposal commit approval did not include them. Preserve unrelated untracked files. Previous checkpoints below historical.
+
+# Earlier checkpoint — combined-05 package approved, 2026-11-14
 
 User explicitly approved combined05 package and committing its five proposal documents. Fresh shared allocation data/t11/combined-05 starts with16 conservative preparation reservations covering inspection/initialization/proposal Git/baseline reads, links12 prior records. Proceed test-first selector changes then cached static seal and independent readiness verification, same existing limits and committed cadence repair. No connected nativeOCR/model inference, download or new fixtures. Later source/results commits remain gated. Old native runs/fake allocations stay closed. Earlier proposal checkpoint below historical.
 
