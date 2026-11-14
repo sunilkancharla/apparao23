@@ -69,3 +69,7 @@ Write actual findings to `docs/benchmarks/sqlite-vec-artifact-review.md` with li
 Possible disposition: suitable to propose an exact-artifact empirical trial; blocked pending a specific provenance/license/runtime decision; or unavailable/rejected with reasons. None completes T12's paired comparison or approves runtime adoption. The existing10000-row timeout stays recorded; do not rerun or extend that baseline during this review. Product retention/limits and physical16GB acceptance remain unchanged.
 
 **Requested approval:** this exact32-start/20-minute artifact-only package, including bounded public retrieval and static inspection, plus a separate explicit decision to commit these five planning documents. Installation, lockfile changes, importing/loading/running wheel contents, additional artifacts, performance trials and G2 adoption remain outside scope.
+
+## Actual artifact-only outcome
+
+Approved proposal committed `dcb70be`. [Review evidence](../benchmarks/sqlite-vec-artifact-review.md) records11passing synthetic tests, exact wheel/RECORD/AMD64 DLL checks, immutable upstream commit and matching helper AST. Local meter:10requests,641244actual body bytes,3176398reserved bytes. No bundled notices were found; a narrowly scoped companion-notice decision remains pending along with binary/runtime review gaps. No installation, import/loading or performance experiment occurred. This review does not authorize that next package. Later source/results commit remains separately gated.

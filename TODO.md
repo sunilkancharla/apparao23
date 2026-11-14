@@ -1,14 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
-## sqlite-vec Windows artifact review — approval pending
+## sqlite-vec Windows artifact review — completed with notice blocker
 
-[Exact package](docs/proposals/sqlite-vec-artifact-review.md) prepared after T12 baseline commit `a54b38b`. No artifact has been retrieved or loaded for this proposal; T12 remains incomplete.
+[Exact package](docs/proposals/sqlite-vec-artifact-review.md) approved and committed `dcb70be`. [Results](docs/benchmarks/sqlite-vec-artifact-review.md) record static inspection only; nothing was installed/imported/loaded. T12 remains incomplete.
 
-- [ ] **T12-V1 — Counted allocation/meter.** Requires exact package approval; initial reservations/prior hashes/resource boundary and durable request/byte ceilings verified with local fakes.
-- [ ] **T12-V2 — Inspector test-first.** Requires V1; synthetic path/archive/hash/RECORD/PE-offset and interrupted-transfer failures prevent simulated progression; minimal stdlib inspector green.
-- [ ] **T12-V3 — Exact wheel retrieval.** Requires V2; pinned292804bytes/SHA verified, actual/reserved body bytes and every HTTP attempt counted, capped archive/RECORD inventory saved.
-- [ ] **T12-V4 — Static review only.** Requires V3; loader/metadata/notices/native imports and source-identity findings documented without installation/import/loading; unknowns remain explicit.
-- [ ] **T12-V5 — Closeout/disposition.** Requires V4 or recorded stop; checks/prior hashes/elapsed/counters saved, factual report/docs updated, separate source/results commit request. No empirical comparison/adoption implied.
+- [x] **T12-V1 — Counted allocation/meter.** Fresh allocation/prior hashes and512MiB/single-process boundary; durable HTTP attempt/byte accounting tested.
+- [x] **T12-V2 — Inspector test-first.** Missing-inspector red,9then11passes0.051s; scoped archive/RECORD/stream/PE controls and Ruff/format passed.
+- [x] **T12-V3 — Exact wheel retrieval.**292804bytes/SHA match; six-file RECORD/expanded caps passed;10requests/641244actual body bytes and3176398reserved bytes persisted.
+- [x] **T12-V4 — Static review only.** AMD64/import/export/loader inventory and pinned commit recorded; helper AST matches upstream. No bundled notices; binary provenance/runtime unknowns retained. No installation/loading.
+- [x] **T12-V5 — Closeout/disposition.** Findings/blocked-next-step documented, final prior hashes/counters/elapsed/disk/diff checks saved. Separate source/results commit request; no empirical comparison/adoption.
 
 ## T12 storage proposal ready — package approval pending
 

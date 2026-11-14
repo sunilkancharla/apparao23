@@ -1,4 +1,16 @@
-# Latest checkpoint — sqlite-vec artifact-only proposal ready
+# Latest checkpoint — sqlite-vec static review complete; notice decision pending
+
+**Source/results commit approval:** User explicitly said "yes proceed with the commit", approving the eight reviewed artifact-inspection files. Both source hashes match the closed receipt. Stage only the two evaluation files and six result/progress documents; exclude downloaded artifacts/runtime data and unrelated untracked content. Commit identifier is recorded in Git. Companion-notice exception, installation/loading and any new empirical package remain unapproved; older pending-commit statements below are historical.
+
+Final closeout28/32reservations,488.918active seconds,649331output bytes before budgetrewrite;priorhashes/links/whitespacepassed;budgetclosed_static_review_notice_decision_pending. Categoryprep8/inspection12/reporting8/cleanup0. Finaltestimportplacementsupportsdiscovery;11tests passed0.071safterthatadjustment, Ruffnotrepeatedafterimport-onlyedit. Sourcehashessaved. No furtherexecutioninclosedallocation.
+
+User approved package/commit; proposaldcb70be. Two authored evalfiles sqlite_vec_artifact.py/test_sqlite_vec_artifact.py only. Initialmissingmodule red;9then11tests passed0.051s;Rufflint/formatpassedafterregexaliasfix. Singleprocess512MiBWindowsjob+120swatchdog before untrustedparse. Approved host-escalated connected publicfetch10attempts/641244actualbodybytes/3176398reserved≤8MiB, no browserfallback/retry. Exactwheel292804bytesSHA4a28dc12fa4b53d7b1dced22da2488fade444e96b5d16fd2d698cd670675cf32;6files291964expanded;fullRECORDpasses. DLL289280bytesSHAfcf98662a7ad9dce394b96a88f91032047823831b951c76636787c312a6476e6,AMD64PE32+,normalimportKERNEL32.dll,3sqliteinitexports. No wheelimport/load/install orbaseline/model/OCR/APIexecution.
+
+Upstreamv0.1.9resolvede9f598abfa0c06b328d8fe5da9c3760cce74be10.7sourcefilesfetchedimmutable,helperportionASTequal. Generatedloadercallsconn.load_extension(packagepath)withoutenable/disable,optionalnumpy.typingimportcouldinitializenumpy. No license/NOTICE/COPYINGfilesinwheel;upstreamMIT/Apachetexts pinned hashes in docs/benchmarks/sqlite-vec-artifact-review.md. Missingnoticeexception NOTapproved; proposednarrowcompanionpolicyforthisexactunchangedwheelonlyneedsuserdecision. Binary/sourcebuildprovenance/Authenticode/CPU/runtimecompatibility/loadedRAM/outboundandfileconfinementunknown. File/dynamicAPIimports aren'tproofactualbehaviour. Next reviewcompanionnoticesandseparateexactartifactempiricalpackage,notimmediateinstall/loading.
+
+Eight source/results files awaitcommit:2evalfiles,newbenchmarkreport,README/PLAN/TODO/proposal/checkpoint. Finalbudget/priorhash/disk/link/diffcloseout in data/t12/sqlite-vec-artifact-01/budget.json. Alloldbaseline/trialsclosedunchanged;T12pairedcomparison/productretention/16GB/G2gatesopen. Preserveunrelateduntrackedcontent. Earliercheckpointsbelowhistorical.
+
+# Earlier checkpoint — sqlite-vec artifact-only proposal ready
 
 **Subsequent approval:** User approved the exact artifact-only package and five planning documents' commit with "yes continue please". Reserve initial8preparation starts before inspection/initialization/Git; establish fresh allocation, commit proposals, implement/test inspector and execute only metered static review. At most32starts/20active minutes,20HTTPattempts/8MiB response bodies. No wheel import/install/loading. Later source/results commit remains gated.
 

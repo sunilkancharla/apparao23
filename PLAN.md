@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Latest outcome — sqlite-vec artifact-only review
+
+Approved proposal committed `dcb70be`. [Static review](docs/benchmarks/sqlite-vec-artifact-review.md) completed with11passing inspector tests, exact wheel/RECORD/AMD64/source identities and metered10HTTPattempts/641244body bytes. Missing bundled notices block progression pending a narrow companion-notice decision; static findings do not approve runtime loading or establish binary/source reproducibility. No dependency/environment or baseline changes. Next review that decision before any separate empirical package. T12/G2 remain open; source/results commit approval pending.
+
 ## Current proposal — exact sqlite-vec artifact review
 
 T12 partial source/results committed `a54b38b`. The [artifact-only package](docs/proposals/sqlite-vec-artifact-review.md) proposes32shared starts/20active minutes,20HTTP attempts/8MiB response bodies with local metering, the exact292804-byte Windowswheel/SHA, bounded ZIP/RECORD/loader/license/PE inspection and synthetic negative controls. No installation, extension import/loading, model/OCR execution or baseline rerun. T12-V1–V5 and five planning documents' commit await approval; no artifacts/code/allocation created. Static review cannot establish runtime safety or comparison performance.

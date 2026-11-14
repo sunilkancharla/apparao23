@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Artifact review completed:** [sqlite-vec Windows static findings](docs/benchmarks/sqlite-vec-artifact-review.md) verify the pinned wheel, six-file RECORD inventory, AMD64 DLL and immutable upstream source. Eleven synthetic inspector tests passed. No bundled license/notice files were found; a companion-notice decision is needed before a separately approved runtime trial. No installation, wrapper import or DLL loading occurred. Locally metered retrieval used10attempts/641244body bytes.
+
 **Next proposed review:** [Exact sqlite-vec Windows artifact inspection](docs/proposals/sqlite-vec-artifact-review.md) defines locally metered retrieval, archive/hash/notice/loader/DLL checks and a strict no-install/no-load boundary. It awaits package approval; no wheel has been downloaded. T12 partial results are committed in `a54b38b`.
 
 **T12 partial result:** [SQLite baseline evidence](docs/benchmarks/storage-index.md) records11passing focused tests, four actual crash/reopen cases and completed32/1000-vector measurements. The10000-vector worker hit its120-second deadline; cleanup was verified and the run is closed. No index was adopted or extension installed. Optional sqlite-vec review identified a Windows wheel but left binary/provenance and exact browser-byte accounting gaps. Next decision is a bounded artifact-only review, not another baseline run.
