@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**T12 runtime preparation ready:** [B1–B3 evidence](docs/benchmarks/sqlite-vec-runtime-preparation.md) records10passing fake tests/Ruff, exact project-local DLL/notices staging and24verified sealed identities. No DLL was loaded or package installed. The [approved standalone offline handoff](docs/proposals/sqlite-vec-runtime-handoff.md) is ready for the user-operated trial; actual native compatibility/results remain unverified. Shared reservations56/96; earlier unstarted/proposed statements below are historical.
+
 **Next approved experiment:** The user approved [T12 runtime comparison](docs/proposals/sqlite-vec-runtime-comparison.md), including cached project-local DLL/notices staging and the manual disconnected execution boundary. It compares32/1000synthetic vectors and crash/reopen checks. Work resumes at T12-B1 from [the checkpoint](docs/session-checkpoint.md); no implementation, installation, staging or DLL loading has begun. Companion-notice acceptance is committed in `48cdf72`.
 
 **Companion notices accepted:** The user approved the [exact-wheel exception](docs/decisions.md) for keeping pinned upstream MIT/Apache texts alongside the reviewed sqlite-vec wheel. The bundled-notice omission stays documented. Installation/loading, empirical comparison and final adoption still require their respective approvals; next prepare the bounded comparison proposal. Artifact-review source/results are committed in `3092aeb`.

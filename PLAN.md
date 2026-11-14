@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — T12 B1–B3 statically complete
+
+[Preparation](docs/benchmarks/sqlite-vec-runtime-preparation.md) records10passing fake tests/Ruff, verified DLL-only staging with notices,24sealed identities/seven unchanged prior records,56/96reservations and724.167active seconds. No native loading or benchmark ran while connected. B4 is the already approved user-operated [disconnected trial](docs/proposals/sqlite-vec-runtime-handoff.md); maintain all recorded limits and preserve partial stops. Preparation source/results commit approval pending; T12/G2 remain open.
+
 ## Current proposal — T12 disconnected runtime comparison
 
 **Approval recorded:** The user approved the exact96-start package, DLL-only staging and manual disconnected execution without filesystem confinement, plus these five planning documents' commit. Resume T12-B1 from [the saved checkpoint](docs/session-checkpoint.md), then proceed sequentially through the covered preparation tasks without repeated task-start approvals. No implementation or staging has begun. Carry forward the checkpoint's conservative bookkeeping reservations within the shared limits.
