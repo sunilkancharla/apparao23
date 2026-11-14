@@ -66,61 +66,158 @@ class CombinedContracts(unittest.TestCase):
                 with self.assertRaises(RuntimeError):
                     trial.Ledger(ledger.path)
 
-    def test_fixed_temporary_path_same_and_distinct_destination_interleavings(self):
+    def coordinated_state_case(self, reader=False, same=True):
+        """Gate actual file access while a second owned writer attempts the lock."""
         import threading
 
-        for same in (True, False):
-            with self.subTest(same=same), tempfile.TemporaryDirectory() as root:
-                first = Path(root) / "first.json"
-                second = first if same else Path(root) / "second.json"
-                ready, release = threading.Event(), threading.Event()
-                errors = []
-                replace = trial.os.replace
+        with tempfile.TemporaryDirectory() as root:
+            ledger = self.ledger(root)
+            first = ledger.path
+            second = first if same else Path(root) / "other.json"
+            ready, release, attempted, done = (threading.Event() for _ in range(4))
+            gate, errors = threading.RLock(), []
+            replace, read_text = trial.os.replace, Path.read_text
 
-                def controlled(
-                    source, destination, ready=ready, release=release, replace=replace
+            class TracedLock:
+                def __enter__(self):
+                    if threading.current_thread().name == "coord-second":
+                        attempted.set()
+                    gate.acquire()
+
+                def __exit__(self, *args):
+                    gate.release()
+
+            def pause():
+                ready.set()
+                if not release.wait(2):
+                    raise TimeoutError("Synthetic coordination gate")
+
+            def controlled_replace(source, destination):
+                if not reader and threading.current_thread().name == "coord-first":
+                    pause()
+                return replace(source, destination)
+
+            def controlled_read(path, *args, **kwargs):
+                if (
+                    reader
+                    and path == first
+                    and threading.current_thread().name == "coord-first"
                 ):
-                    if threading.current_thread().name == "state-investigation-writer":
-                        ready.set()
-                        if not release.wait(2):
-                            raise TimeoutError("Synthetic writer gate")
-                    return replace(source, destination)
+                    with path.open("r", encoding="utf-8-sig") as handle:
+                        pause()
+                        return handle.read()
+                return read_text(path, *args, **kwargs)
 
-                def write_first(first=first, errors=errors):
-                    try:
+            def run_first():
+                try:
+                    if reader:
+                        ledger.read()
+                    else:
                         trial.write_json(first, {"writer": 1})
-                    except OSError as error:
-                        errors.append(type(error).__name__)
+                except (OSError, ValueError) as error:
+                    errors.append(type(error).__name__)
 
-                writer = threading.Thread(
-                    target=write_first, name="state-investigation-writer", daemon=True
-                )
-                with patch.object(trial.os, "replace", controlled):
-                    writer.start()
-                    try:
-                        self.assertTrue(ready.wait(2))
-                        trial.write_json(second, {"writer": 2})
-                    finally:
-                        release.set()
-                        writer.join(2)
-                self.assertFalse(writer.is_alive())
-                self.assertEqual(errors, ["FileNotFoundError"] if same else [])
-                self.assertEqual(json.loads(second.read_text()), {"writer": 2})
-                if not same:
-                    self.assertEqual(json.loads(first.read_text()), {"writer": 1})
+            def run_second():
+                try:
+                    trial.write_json(second, {"writer": 2})
+                except (OSError, ValueError) as error:
+                    errors.append(type(error).__name__)
+                finally:
+                    done.set()
 
-    def test_current_descendant_noop_still_writes_and_changed_count_persists(self):
+            first_thread = threading.Thread(
+                target=run_first, name="coord-first", daemon=True
+            )
+            second_thread = threading.Thread(
+                target=run_second, name="coord-second", daemon=True
+            )
+            with (
+                patch.object(trial, "_MUTEX", TracedLock()),
+                patch.object(trial.os, "replace", controlled_replace),
+                patch.object(Path, "read_text", controlled_read),
+            ):
+                first_thread.start()
+                try:
+                    self.assertTrue(ready.wait(2))
+                    second_thread.start()
+                    self.assertTrue(attempted.wait(2))
+                    self.assertFalse(done.is_set())
+                finally:
+                    release.set()
+                    first_thread.join(2)
+                    if second_thread.ident is not None:
+                        second_thread.join(2)
+            self.assertFalse(first_thread.is_alive())
+            self.assertFalse(second_thread.is_alive())
+            self.assertEqual(errors, [])
+            self.assertEqual(json.loads(second.read_text()), {"writer": 2})
+
+    def test_owned_same_and_distinct_destination_writers_are_serialized(self):
+        self.coordinated_state_case(same=True)
+        self.coordinated_state_case(same=False)
+
+    def test_owned_reader_closes_before_writer_replaces(self):
+        self.coordinated_state_case(reader=True)
+
+    def test_descendant_noop_skips_replace_and_changed_count_persists(self):
         with tempfile.TemporaryDirectory() as root:
             ledger = self.ledger(root)
             with patch.object(trial, "write_json", wraps=trial.write_json) as writes:
                 ledger.observe_native(3)
                 first = ledger.read()
-                ledger.observe_native(3)
+                with patch.object(trial.os, "replace", side_effect=PermissionError):
+                    ledger.observe_native(3)
                 self.assertEqual(first, ledger.read())
-                self.assertEqual(writes.call_count, 2)
+                self.assertEqual(writes.call_count, 1)
                 ledger.observe_native(4)
             self.assertEqual(ledger.read()["processes"], 4)
             self.assertEqual(ledger.read()["native_observed"], 4)
+
+    def test_highwater_change_without_extra_and_unchanged_overshoot(self):
+        with tempfile.TemporaryDirectory() as root:
+            ledger = self.ledger(root)
+            ledger.reserve("controller", 1, "root", native=True)
+            ledger.observe_native(1)
+            ledger.reserve("controller", 1, "another root", native=True)
+            ledger.observe_native(2)
+            self.assertEqual(ledger.read()["native_observed"], 2)
+            self.assertEqual(ledger.read()["native_extra"], 0)
+            with self.assertRaises(RuntimeError):
+                ledger.observe_native(200)
+
+            with (
+                patch.object(trial.os, "replace", side_effect=PermissionError),
+                self.assertRaises(RuntimeError),
+            ):
+                ledger.observe_native(200)
+
+    def test_changed_descendant_persistence_failure_keeps_last_good_state(self):
+        with tempfile.TemporaryDirectory() as root:
+            ledger = self.ledger(root)
+            ledger.observe_native(3)
+            original = ledger.path.read_bytes()
+            with (
+                patch.object(trial.os, "replace", side_effect=PermissionError),
+                self.assertRaises(PermissionError),
+            ):
+                ledger.observe_native(4)
+            self.assertEqual(ledger.path.read_bytes(), original)
+            with self.assertRaises(RuntimeError):
+                trial.Ledger(ledger.path)
+
+    def test_combined_ocr_reader_binding_uses_ledger_and_short_storage_callbacks(self):
+        events = []
+        ledger = SimpleNamespace(read=lambda: {"source": "ledger"})
+        supervisor = SimpleNamespace(
+            check_failure=lambda: events.append("failure"),
+            storage=lambda: events.append("storage"),
+        )
+        runner = native.make_ocr_runner(
+            SimpleNamespace(OwnedRunner=object), ledger, supervisor
+        )
+        self.assertEqual(runner.read_global_meter(), {"source": "ledger"})
+        runner.check_storage(full=True)
+        self.assertEqual(events, ["failure", "storage"])
 
     @unittest.skipUnless(sys.platform == "win32", "Windows sharing-mode fixture")
     def test_owned_windows_reader_blocks_replace_until_handle_closed(self):
@@ -574,6 +671,13 @@ class CombinedContracts(unittest.TestCase):
                 )
                 runner.children, runner.controller_job = [], None
                 runner.check_storage = lambda **kwargs: None
+                reads = []
+
+                def read_meter():
+                    reads.append(True)
+                    return ledger.read()
+
+                runner.read_global_meter = read_meter
                 with (
                     patch.object(ocr, "RUN", folder),
                     patch.object(ocr, "datetime", ControlledDate),
@@ -585,7 +689,12 @@ class CombinedContracts(unittest.TestCase):
                         lambda *a: {"private_observed": 1, "working_peak": 1},
                     ),
                 ):
-                    return runner.run(["fake-owned-worker"], "contract")
+                    try:
+                        return runner.run(["fake-owned-worker"], "contract")
+                    finally:
+                        self.assertTrue(
+                            reads, "Actual OCR polling must use the reader hook"
+                        )
 
             self.assertFalse(exercise_poll()["timed_out"])
             state = ledger.read()

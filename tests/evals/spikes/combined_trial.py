@@ -230,6 +230,12 @@ def initial_state() -> dict:
 
 def write_json(path: Path, value: object) -> None:
     """Replace one local checkpoint atomically; startup refuses unfinished writes."""
+    with _MUTEX:
+        _write_json_locked(path, value)
+
+
+def _write_json_locked(path: Path, value: object) -> None:
+    """Write once while the caller holds the shared reentrant state lock."""
     temporary = path.with_suffix(path.suffix + ".tmp")
     role = {
         "meter.json": "meter",
@@ -298,11 +304,13 @@ class Ledger:
             state = self.read()
             extra = max(state["native_extra"], total - state["native_roots"], 0)
             delta = extra - state["native_extra"]
-            state["native_observed"] = max(total, state["native_observed"])
-            state["native_extra"] = extra
-            state["categories"]["supervisor"] += delta
-            state["processes"] += delta
-            write_json(self.path, state)
+            observed = max(total, state["native_observed"])
+            if observed != state["native_observed"] or extra != state["native_extra"]:
+                state["native_observed"] = observed
+                state["native_extra"] = extra
+                state["categories"]["supervisor"] += delta
+                state["processes"] += delta
+                write_json(self.path, state)
             if state["processes"] > 144 or state["categories"]["supervisor"] > 36:
                 raise RuntimeError("Observed descendant/process allowance")
 

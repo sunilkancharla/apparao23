@@ -14,6 +14,7 @@ import time
 from contextlib import contextmanager
 from ctypes import wintypes as w
 from pathlib import Path
+from types import ModuleType
 
 import combined_trial as core
 
@@ -133,6 +134,22 @@ class API:
         return response
 
 
+def make_ocr_runner(
+    ocr: ModuleType, ledger: core.Ledger, supervisor: Supervisor
+) -> object:
+    """Bind short combined state reads without coupling the legacy OCR module."""
+
+    class OCRRunner(ocr.OwnedRunner):
+        def read_global_meter(self):
+            return ledger.read()
+
+        def check_storage(self, **options):
+            supervisor.check_failure()
+            supervisor.storage()
+
+    return OCRRunner()
+
+
 class Supervisor:
     """Own aggregate/job limits before launch; observe all descendants together."""
 
@@ -201,12 +218,7 @@ class Supervisor:
             "ocr", slots, label, native=True
         )
 
-        class OCRRunner(ocr.OwnedRunner):
-            def check_storage(_, **options):
-                self.check_failure()
-                self.storage()
-
-        self.runner = OCRRunner()
+        self.runner = make_ocr_runner(ocr, ledger, self)
 
     def pids(self, handle):
         class Processes(ctypes.Structure):

@@ -16,6 +16,19 @@ import ocr_trial as trial
 class OCRContracts(unittest.TestCase):
     """Test scope, provenance, budgets and scoring before any native execution."""
 
+    def test_default_meter_reader_preserves_legacy_parse_and_errors(self):
+        runner = object.__new__(trial.OwnedRunner)
+        with tempfile.TemporaryDirectory() as root, patch.object(trial, "RUN", Path(root)):
+            path = Path(root) / "meter.json"
+            path.write_text(json.dumps({"execution_deadline_utc": "fixed"}), encoding="utf-8")
+            self.assertEqual(runner.read_global_meter(), {"execution_deadline_utc": "fixed"})
+            path.write_text("invalid", encoding="utf-8")
+            with self.assertRaises(json.JSONDecodeError):
+                runner.read_global_meter()
+            path.unlink()
+            with self.assertRaises(FileNotFoundError):
+                runner.read_global_meter()
+
     def test_schedule_has_sixty_comparisons_and_twenty_controls(self):
         self.assertEqual(len(trial.comparison_schedule()), 60)
         self.assertEqual(len(trial.control_schedule()), 20)

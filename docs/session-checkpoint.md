@@ -1,4 +1,12 @@
-# Latest checkpoint — state coordination repair approved, 2026-11-14
+# Latest checkpoint — synthetic state coordination repair complete, 2026-11-14
+
+Final allocation closed32/40starts,604.971active seconds; oldcombined05/investigationhashes unchanged, links/whitespacepassed. Exactreceipt data/t11/state-coordination-repair-01/budget.json. No furtherexecutionneeded inthisclosedpackage. Tenreviewedrepair/reportfilesawaitcommitapproval.
+
+Proposal commit2a65871. Approved40-start/900s package implemented sharedexistingRLock aroundcorewriter, no-op descendant replacement suppression, narrow OCR read_global_meter hook/default and combinedfactory overrideLedger.read. Check overshoot every observation; changedhighwater/newovershootpersistfirst. Onlyshortfileaccesslocked, no sleeps/HTTP/inference/workerwaits. Atomicreplacement/failuretags/tmprefusal/allcaps250ms/network/ownership/cleanup preserved. Five source/test files changed; no retries/permissions/dependencies or unrelatedlegacyformatting.
+
+Red59tests3failures4errors; final60tests(44combined/16OCR)passed2.534s; allfive files Ruff-clean,legacybaseline0; threecombinedfilesformatpassed. Actualfile/eventtests prove serialization and threadcompletion, no-opdeniedreplacement skipswrite, changeddenialpreservesstate, new/unchangedovershoot refused; actualpollhook/default/errorcontractscovered. ExternalWindows/PythonreadersstilldenyWindows5/errno13; historicalhandleunknown. Source/privacydiff reviewed. Finalbudget/oldhash/link/whitespacechecksclose data/t11/state-coordination-repair-01. Tenrepair/reportfilesawaitcommitapproval. No nativeOCR/model/API/install/download/render, oldtrialreset/reseal or newrun. Preserveunrelateduntrackedfiles/rawprivacy. Earliercheckpointsbelowhistorical.
+
+# Earlier checkpoint — state coordination repair approved, 2026-11-14
 
 User approved exact40-start/900-active-second synthetic implementation package and five proposal documents' commit. Fresh data/t11/state-coordination-repair-01 reserves40starts before firstinspection/init,linksclosedcombined05/investigationhashes. Proceed shortsharedRLock writer/combinedOCRreadhook/defaultfallback/no-opdescendantrepair test-first; bothcombined/OCRfake suites andlegacyRuffbaselinecomparisonrequired. No nativeworkload/permissions/retries/timingrelaxation. Later repairsource/resultscommit remains gated. Earlierproposalcheckpointbelowhistorical.
 

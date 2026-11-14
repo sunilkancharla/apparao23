@@ -283,6 +283,10 @@ def process_memory(handle) -> dict:
 class OwnedRunner:
     """Own one bounded Job per subprocess; no no-window flag or shell commands."""
 
+    def read_global_meter(self) -> dict:
+        """Read the legacy meter; combined callers override only this short read."""
+        return json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
+
     def __init__(self, controller_job=None):
         from appcontainer_preflight import Native
 
@@ -359,7 +363,7 @@ class OwnedRunner:
                     raise RuntimeError("Controller private-commit stop limit")
                 ensure_disconnected()
                 self.check_storage()
-                global_meter = json.loads((RUN / "meter.json").read_text(encoding="utf-8-sig"))
+                global_meter = self.read_global_meter()
                 if datetime.now(UTC) > datetime.fromisoformat(global_meter["execution_deadline_utc"]):
                     raise RuntimeError("Shared offline execution/provisioning deadline")
                 if time.monotonic() - started >= seconds:

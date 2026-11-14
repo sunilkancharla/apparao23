@@ -55,4 +55,6 @@ Update the earlier characterization test that expected unchanged observations to
 
 ## Approval and next gate
 
+**Subsequent completion:** The user approved this exact synthetic package and proposal documents committed `2a65871`. [Repair evidence](../benchmarks/combined-state-coordination-repair.md) records60passing combined/OCR contracts in2.534s, clean five-file lint and the declared lock/hook/no-op behavior with unchanged safety limits. Source/results commit and native continuation remain separately gated. The original approval request below is historical.
+
 Approve or amend the exact40-start/15-active-minute synthetic implementation package, including its small legacy OCR hook/default compatibility review. That authorizes its necessary test-first changes and verification, not a native trial, retry policy, timing/permission change, dependency/runtime adoption or product feature. The five proposal documents can be explicitly approved for commit in the same reply; later repair source/results commits retain their own gate. A subsequent native trial would need a new reviewed allocation/identity/seal and disconnected handoff. Combined-05 must never be rerun.
