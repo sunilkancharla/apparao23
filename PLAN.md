@@ -243,3 +243,7 @@ The CSV path proves the full pipeline before every parser is built. Each later f
 Review actual bounded-package evidence and gaps. Next proposed package is **T10 read-only service/model/embedding review**, followed by T11A fixed-evidence chat feasibility. Exact model/service assets and trial budgets need approval before provisioning. No application scaffolding or runtime adoption is authorized merely by this plan.
 
 **Current progress:** T01–T03/T02R/T05 complete, T04 deferred, T06 excluded. The user approved committing T07 bounded trial results and the three process improvements; remaining T07 acceptance coverage is still open. The report records encrypted/VBA/full-scale gaps and regression workers omitted from the trial counter. No application/model benchmark or runtime adoption occurred. Target stays 16 GB/CPU-only; T18 is not otherwise complete. TODO is the detailed status authority.
+
+## Approved T11 combined-04 continuation — 2026-11-14
+
+The resource diagnostic repair and combined-03 stop reports are committed in `28844cb`. The user approved the [combined-04 package](docs/proposals/combined-ocr-model-fourth-run.md) and committing its five proposal documents: same evaluation and limits, fresh linked allocation and repaired reporting. Ordered tasks T11-C4-1 through T11-C4-6 are in TODO. Bounded preparation and the disconnected user-run trial may proceed; later source/results commits remain gated. Earlier execution/status statements above are historical where superseded by current TODO and checkpoint evidence.

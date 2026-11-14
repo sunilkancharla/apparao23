@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Next approved work:** [combined-04](docs/proposals/combined-ocr-model-fourth-run.md) repeats the fixed combined evaluation with the repaired diagnostics and unchanged limits. The repair/results are committed in `28844cb`. The user approved the bounded preparation/offline package and committing its proposal documents. Preparation is next; no new runner is ready yet. Earlier uncommitted/preparation statements below are historical.
+
 The approved [resource diagnostics repair](docs/benchmarks/combined-resource-diagnostic.md) is complete: 28 fake tests passed in 1.435 s, with Ruff lint and format checks passing. Future resource stops retain the failing scalar measurements and specific guard names before owned-work shutdown. Limits remain unchanged. No native trial ran; combined-03 remains stopped and its historical trigger remains unknown. These changes await commit approval.
 
 **Latest run:** Combined-03 preparation is committed in d9a2792. The user-run trial passed allfour safety controls, then stopped on a resource boundary during corpus embeddings; [evidence](docs/benchmarks/combined-ocr-model-third-stop.md) confirms verified cleanup. The failed sample was not retained, so the exact boundary is unknown. No old combined command may run; telemetry repair and any next native trial need approval.

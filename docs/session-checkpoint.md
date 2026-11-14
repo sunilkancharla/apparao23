@@ -1,4 +1,12 @@
-# Latest checkpoint — resource diagnostics repaired, 2026-11-14
+# Latest checkpoint — combined-04 approved, 2026-11-14
+
+The user explicitly approved "Agents.md and commit and the next plan": unchanged AGENTS acknowledged, exact combined-04 bounded package approved, and the five proposal documents approved for commit. Proceed with shared allocation, test-first selector changes, cached static preparation and verified disconnected handoff; no connected native inference/downloads. The accompanying Git approval covers proposal documents, not later source/results. Old runs and consumed fake-test allocation stay closed. Previous proposal checkpoint below is historical.
+
+# Earlier checkpoint — combined-04 proposal pending approval, 2026-11-14
+
+User approved committing the diagnostics repair and combined-03 result reports; committed nine files as 28844cb. Subsequent "yes proceed" authorizes preparing the combined-04 proposal only, as stated in the preceding request. Created docs/proposals/combined-ocr-model-fourth-run.md and updated PLAN/TODO/README/checkpoint. Same experiment and all limits, including the 0.25s sampling stop; no sampling-policy change. Proposed fresh 160-start/128-API allocation, 30min active preparation/75min offline execution, exact existing artifacts, no downloads. T11-C4-1 through C4-6 remain pending package approval. No source/selector changes, new runtime directory, ledger, seal or runner have been prepared. No current executable handoff; old runs stay closed. Proposal/docs are uncommitted pending explicit Git approval. Preserve unrelated untracked content. This documentation-only work does not reopen or charge the consumed fake-test allocation. Earlier checkpoint states below are historical.
+
+# Earlier checkpoint — resource diagnostics repaired, 2026-11-14
 
 User approved the fake-only 24-start/10-minute repair. Completed with exactly 24 conservatively counted shell/interpreter/Ruff/rg/Git inspection starts, no OCR/model/API/download activity. All 28 contracts passed in 1.435 s after test-first failures; Ruff lint and format passed. Three evaluation scripts now identify the particular resource guard, retain only whitelisted scalar measurements/limits in resource-failure.json before fail-closed teardown, and copy the packet into the final summary after supervisor cleanup. Receipt-write failure still stops. No thresholds changed. See docs/benchmarks/combined-resource-diagnostic.md and local data/t11/resource-diagnostic-01/closeout.json.
 
