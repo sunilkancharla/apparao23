@@ -1,4 +1,4 @@
-**COMBINED-05 — static readiness verified.** The user approved the [fresh package](combined-ocr-model-fifth-run.md); [preparation evidence](../benchmarks/combined-ocr-model-fifth-preparation.md) records34passing fake tests,151reverified identities and12unchanged prior records. The committed monitoring repair and all safety limits are preserved. Combined-01/02/03/04 remain closed and must never run again. The historical [combined-04 stop](../benchmarks/combined-ocr-model-fourth-stop.md) is not a successful combined evaluation.
+**STOPPED — DO NOT RUN COMBINED-05 AGAIN.** Windows denied atomic state-file replacement during corpus embedding. [Stop evidence](../benchmarks/combined-ocr-model-fifth-stop.md) records verified teardown, four passed controls and zero scored chats. Preserve all partial/temporary state and do not reset/reseal/retry. Combined-01/02/03/04/05 remain closed. No new investigation, repair or native allocation is approved. Instructions below are historical.
 
 # Approved combined OCR/model trial: local offline instructions
 
