@@ -1,12 +1,14 @@
-**STOPPED — DO NOT RUN COMBINED-05 AGAIN.** Windows denied atomic state-file replacement during corpus embedding. [Stop evidence](../benchmarks/combined-ocr-model-fifth-stop.md) records verified teardown, four passed controls and zero scored chats. Preserve all partial/temporary state and do not reset/reseal/retry. Combined-01/02/03/04/05 remain closed. No new investigation, repair or native allocation is approved. Instructions below are historical.
+**STOPPED — DO NOT RUN COMBINED-06 AGAIN.** Fifteen cases completed before S16 stopped on a287.7155-ms completed-reading gap above250ms. [Partial evidence](../benchmarks/combined-ocr-model-sixth-stop.md) records nine measured OCR/chat overlaps and verified cleanup. No new timing policy or native allocation is approved. Preserve all receipts; never retry/reset/reseal. All combined-01 through06commands are closed. Instructions below are historical; local answer review may proceed after verified cleanup.
 
 # Approved combined OCR/model trial: local offline instructions
 
-**Fresh run:** `combined-05`, under the [approved fresh continuation](combined-ocr-model-fifth-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01, combined-02, combined-03, combined-04 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
+**Fresh run:** `combined-06`, under the [approved fresh continuation](combined-ocr-model-sixth-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01 through combined-05 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
 
 ## Before starting
 
 Save these instructions locally. Keep project source/configuration/assets unchanged: the runner verifies its seal. Close heavy applications; at least 4 GiB available RAM is required. Use ordinary local PowerShell, without elevation, policy changes or edits to bypass stops.
+
+Close editor/viewer tabs or live watchers on the new trial's state files before starting. This reduces possible external file handles; it does not identify the historical locking process or guarantee success. Do not change permissions or protections.
 
 This trial has **no filesystem confinement**: native packages have your Windows account's file access. It uses only the prior synthetic M02/M03/M04 images and the frozen T10/T11A benchmark packets, not additional samples/private documents. Their earlier local review remains applicable. It does not change image orientation or resolve the rotated-output discrepancy.
 
@@ -15,7 +17,7 @@ Disconnect Wi-Fi, unplug Ethernet, and disconnect tethering and every external l
 ## One command after disconnecting
 
 ```powershell
-& 'F:\document_assistant\data\t11\combined-05\run.ps1'
+& 'F:\document_assistant\data\t11\combined-06\run.ps1'
 ```
 
 Type `OFFLINE` at the attestation prompt. **There is no new READY prompt**: sealed-asset verification, owned-server startup, controls and the fixed schedule proceed automatically. Large cached weights are rehashed first; this can be quiet for a while. Do not reconnect to ask for progress.
@@ -27,7 +29,7 @@ Wait for final status, **`TEARDOWN VERIFIED: True`**, and the message saying you
 After verified cleanup, reconnect and report the final status. The local sanitized report is:
 
 ```text
-F:\document_assistant\data\t11\combined-05\summary.json
+F:\document_assistant\data\t11\combined-06\summary.json
 ```
 
 `completed_pending_local_semantic_review_no_adoption` means the fixed schedule finished; it is not proof of factual/citation correctness or adoption. `stopped_no_automatic_retry` means preserve all receipts and report the stop, without rerunning/resetting/resealing.
@@ -40,8 +42,8 @@ Do not reconnect for remote help while owned trial work may still be active. Mis
 
 ## Local answer review after completion
 
-Open `F:\document_assistant\data\t11\combined-05\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
+Open `F:\document_assistant\data\t11\combined-06\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
 
 ## Resource diagnostic repair — 2026-11-14
 
-The original [diagnostic repair](../benchmarks/combined-resource-diagnostic.md) preserves failing scalar readings. The committed [cadence repair](../benchmarks/combined-monitor-cadence-repair.md) accounts for check work in the desired 100-ms cadence and enforces the same 250-ms ceiling for start/reading/collection/TCP/storage/iteration intervals. The combined-05 package has separate approval. A timing violation still stops execution; do not change the limit or retry if that occurs. Share only the sanitized summary after verified teardown and reconnection.
+The original [diagnostic repair](../benchmarks/combined-resource-diagnostic.md) preserves failing scalar readings. The committed [cadence repair](../benchmarks/combined-monitor-cadence-repair.md) accounts for check work in the desired 100-ms cadence with the same 250-ms ceiling. The [state coordination repair](../benchmarks/combined-state-coordination-repair.md) coordinates owned core writers/OCR meter reads and skips unchanged descendant-state writes; external access denial still stops. Combined-06 has separate package approval. Never change limits or retry a stopped run. Share only the sanitized summary after verified teardown and reconnection.

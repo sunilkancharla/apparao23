@@ -14,7 +14,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-RUN = ROOT / "data/t11/combined-05"
+RUN = ROOT / "data/t11/combined-06"
 PRIOR = ROOT / "data/t09-manual-ocr/manual-04"
 SPIKES = Path(__file__).resolve().parent
 sys.path.insert(0, str(SPIKES))
@@ -38,12 +38,24 @@ MODELS = {
 EXECUTABLE = ROOT / ".venv/tools/ollama/0.40.16/ollama.exe"
 PYTHON = Path("F:/Python/Python314/python.exe")
 _MUTEX = threading.RLock()
+SEALED_SOURCES = (
+    "combined_trial.py",
+    "combined_native.py",
+    "test_combined_trial.py",
+    "test_ocr_trial.py",
+    "ocr_trial.py",
+    "appcontainer_preflight.py",
+    "chat_trial.py",
+    "embedding_trial.py",
+    "embedding_budget.py",
+    "chat_cases.json",
+)
 
 
 def configure_run(run_id: str) -> None:
     """Select only the newly approved allocation; old commands must not redirect."""
     global RUN
-    if run_id != "combined-05":
+    if run_id != "combined-06":
         raise ValueError("Unapproved or stopped combined run ID")
     RUN = ROOT / "data/t11" / run_id
 
@@ -569,20 +581,7 @@ def prepare() -> None:
         ROOT / "uv.lock",
         ROOT / ".venv/pyvenv.cfg",
     ]
-    files += [
-        SPIKES / name
-        for name in (
-            "combined_trial.py",
-            "combined_native.py",
-            "test_combined_trial.py",
-            "ocr_trial.py",
-            "appcontainer_preflight.py",
-            "chat_trial.py",
-            "embedding_trial.py",
-            "embedding_budget.py",
-            "chat_cases.json",
-        )
-    ]
+    files += [SPIKES / name for name in SEALED_SOURCES]
     files += [Path(path) for path in state["artifacts"].values()]
     files += [
         ROOT / "docs/proposals/ocr-trial-artifacts.json",
@@ -677,7 +676,7 @@ if __name__ == "__main__":
         configure_run(Path(arguments[1]).parent.parent.name)
     else:
         raise SystemExit(
-            "Expected prepare/offline combined-05 or worker <local request>"
+            "Expected prepare/offline combined-06 or worker <local request>"
         )
     if arguments[0] == "prepare":
         prepare()

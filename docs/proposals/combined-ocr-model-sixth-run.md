@@ -63,4 +63,8 @@ Stop on reconnect/egress/download, identity drift, GPU use, residency/overlap fa
 
 ## Approval requested
 
-Approve or amend this exact fresh160-start/128-API package with unchanged artifacts/experiment/limits, bounded routing/seal preparation and disconnected user-run execution. Package approval also covers sanitized result documentation, not an additional repair, further native trial, product implementation, runtime adoption or stage transition. The five proposal documents may be explicitly approved for commit in the same reply; later preparation source/results commits retain their separate gate. No runnable command will be issued before readiness checks succeed.
+The user approved this exact fresh160-start/128-API package and the five proposal documents' commit (`a7732ab`). This covers unchanged artifacts/experiment/limits, bounded routing/seal preparation, disconnected user-run execution and sanitized result documentation. Additional repairs, further native trials, product implementation, runtime adoption, stage transition and later preparation source/results commits retain separate gates.
+
+## Completed static preparation
+
+[Preparation evidence](../benchmarks/combined-ocr-model-sixth-preparation.md) records61passing tests in1.882s, five-file lint/combined formatting, independent rehash of155sealed identities/15unchanged prior records and verified standalone OCR-test inclusion. PowerShell syntax passed. Readiness230.021elapsed seconds,36/160reservations (28preparation/eightreport),zeroAPI/native attempts,offline epoch unset. The [new handoff](combined-ocr-model-handoff.md) is ready for the already approved disconnected user-run step; new preparation source/documentation commit approval remains pending.
