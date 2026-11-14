@@ -1,4 +1,12 @@
-# Latest checkpoint — model/OCR recommendation ready for review
+# Latest checkpoint — T12 storage evaluation proposal ready
+
+**Subsequent approval:** User explicitly approved PartA and the five planning documents' commit. Initial16preparation starts reserved before first package inspection; establish fresh storage-baseline-01, link old records, commit proposals, proceed test-first within64starts/45active minutes and exact caps. No optional extension/model/OCR execution or product adoption. Later implementation/results commit remains gated.
+
+User requested proceeding after shortlist commit48f0333. Created docs/proposals/storage-index-evaluation.md and updated PLAN/TODO/README/checkpoint only. PartA proposed64shared starts/45active minutes, standard-librarySQLite/f32BLOB exact scoped cosine baseline, synthetic32/1000/10000rows with12queries/first+3repeated passes, actual owned process termination/reopen and reference/version/reconciliation checks. Worker2GiB aggregate/controller512MiB/free4GiB/120s timeout/disk512MiB;100ms target/300ms monitor. Optional sqlite-vec0.1.9 reviewed as candidate using public primary pages: WindowsAMD64wheel exists, registry placeholders/no-provenance finding, no installation/loading approved. PartA public source/metadata review40requests/8MiB; separate exact-artifact PartB needed before extension execution/comparison. No models/OCR/API/raw old vectors/user samples, downloads/installations/native trial/code/fixtures/databases created in this proposal turn.
+
+Package and five-document commit approval pending. T12-P proposal deliverable prepared, existingT12notcomplete; synthetic lifecycle tests do not choose product retention. Product D01/D04 details and final resource/scale/quality budgets stay open; retain settled100MB/10files/1GB and shared-library invariants. Final adoption T17/G2; chart/OCR/parser/16GB gates retained. Next review proposal/PartA approval. All old native ledgers/seals closed/unchanged; preserve unrelated untracked content. Earlier checkpoints below historical.
+
+# Earlier checkpoint — model/OCR recommendation ready for review
 
 **Subsequent approval:** User answered "yes commit" to the explicit shortlist/five-document commit request. Qwen2.5/Nomic/Tesserocr are approved preferred candidates for subsequent design/evaluation; T11-SEL complete. Commit only model-ocr-selection proposal, PLAN/TODO/README/checkpoint. No G2 adoption, storage execution, provisioning or application implementation authorized. T12-P storage proposal is next. Commit identifier is recorded in Git; older pending-approval statements below are historical.
 

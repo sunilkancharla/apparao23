@@ -1,5 +1,18 @@
 # Stage 1 Atomic Task Checklist
 
+## T12 storage proposal ready — package approval pending
+
+[Concrete proposal](docs/proposals/storage-index-evaluation.md) prepared; T12-P deliverable ready for review, not execution authorization. Shortlist committed `48f0333`; no storage runtime selected. Original T12 remains incomplete until reviewed comparison/outcome and consistency evidence.
+
+- [ ] **T12-A1 — Allocation/fixture contract.** Requires exact PartA approval; counted fresh allocation, unchanged prior identities, SQLite/hardware and frozen workload recorded.
+- [ ] **T12-A2 — Failing correctness tests.** Requires A1; validation, scope, reference/dedup/version and crash-outcome cases demonstrably fail before implementation.
+- [ ] **T12-A3 — Minimal evaluation adapter.** Requires A2; green reference rankings and lifecycle/integrity controls, including actual owned termination/reopen; at most three authored evaluation files.
+- [ ] **T12-A4 — Measure baseline.** Requires A3; frozen32/1000/10000-row workloads and12queries, first/three repeated passes, elapsed/RAM/disk/counters recorded or partial stop preserved.
+- [ ] **T12-A5 — Optional candidate review.** Requires A1; exact sqlite-vec0.1.9 source/artifact/licensing/security/Windows/outbound/footprint review, no installation or native extension loading.
+- [ ] **T12-A6 — Closeout/review.** Requires A4/A5; focused regressions/Ruff/privacy/diff and owned cleanup/hash checks, factual report and separate commit request within64starts/45minutes.
+
+Each entry's exact criteria/budgets are in the proposal. Product retention decisions, optional-extension empirical comparison and G2 adoption remain separate gates.
+
 ## Model/OCR shortlist — approved
 
 Combined-07 acceptance committed `69a01b4`. [Recommendation](docs/proposals/model-ocr-selection.md) and alternatives are documented; no runtime selection has been made.

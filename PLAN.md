@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current proposal — T12 local storage evaluation
+
+Shortlist approved/committed `48f0333`. The [T12 proposal](docs/proposals/storage-index-evaluation.md) compares a standard-library SQLite/vector baseline with an optional sqlite-vec0.1.9 candidate. Proposed PartA:64shared starts/45active minutes, synthetic32/1000/10000-row768-dimensional vectors, scoped ranking/ownership/versioning, actual process-crash/reopen tests and resource/disk measurements; optional dependency review without installation/execution. PartB needs exact artifact review and separate approval. Product retention/derived-storage/latency decisions stay open; synthetic operations do not settle them. Package and five-document commit approval pending. No code, fixture, database or trial allocation created.
+
 ## Current recommendation — model/OCR shortlist
 
 **Approval recorded:** The user accepted the three preferred candidates and approved the five-document commit with "yes commit". T11-SEL is complete; T12-P remains next. Earlier pending-shortlist wording below is superseded by this decision, without changing the T17/G2 adoption gate.
