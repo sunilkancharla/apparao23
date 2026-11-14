@@ -1,5 +1,9 @@
 # sqlite-vec0.1.9 Windows artifact — static review complete, adoption blocked
 
+## Subsequent notice decision
+
+After commit `3092aeb`, the user accepted the exact-wheel companion-notice proposal with "i do accept". [Decision record](../decisions.md) limits this to the unchanged reviewed wheel and the pinned upstream MIT/Apache texts identified below, preserved together for any later approved local evaluation. The missing-bundled-notices finding remains; no wheel was modified, installed or loaded. Binary provenance/runtime unknowns and empirical/G2 gates remain open. Earlier notice-decision/commit-pending statements below describe the pre-acceptance state. Acceptance-document commit approval is pending.
+
 ## Outcome and authority
 
 The user approved the [artifact-only package](../proposals/sqlite-vec-artifact-review.md); its five planning documents were committed in `dcb70be`. The exact wheel was retrieved and inspected under the reviewed standard-library Windows process boundary. **No package was installed/imported, no DLL/SQLite extension was loaded, and no model/OCR/baseline trial was run.** Only new inspector/test source and documentation changed; global/project dependencies and prior trials remained untouched.

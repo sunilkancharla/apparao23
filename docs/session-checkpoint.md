@@ -1,4 +1,10 @@
-# Latest checkpoint — sqlite-vec static review complete; notice decision pending
+# Latest checkpoint — exact-wheel companion notices accepted
+
+**Acceptance-note commit approval:** User answered "yes please" to the explicit six-document commit request. Commit only decisions/artifact report/PLAN/TODO/README/checkpoint; exclude all runtime/downloaded/unrelated content. The resulting commit identifier is recorded in Git. This approval does not authorize installation, loading or a new empirical package; older pending-commit wording below is historical.
+
+User said "i do accept" to the explicit companion-notice decision after artifact-review commit3092aeb. Recorded docs/decisions.md narrow exception: unchangedsqlite_vec-0.1.9-py3-none-win_amd64.whlSHA4a28dc12fa4b53d7b1dced22da2488fade444e96b5d16fd2d698cd670675cf32 with both pinnedMIT/Apachetexts fromcommite9f598abfa0c06b328d8fe5da9c3760cce74be10;keepomissionvisible,norepackage/blanketexception/binaryprovenance/redistributionguarantee. Sixdocs updated:decisions,artifactreport,PLAN/TODO/README/checkpoint. Commitapprovalpending;no source/artifact/venv/ledgerchanges. No install/import/load/newempiricalexecution orG2adoptionauthorized. Next prepareT12-BP exactprojectlocalcomparisonproposal whenrequested,withfreshbudgetsandloading/securityboundary;oldbaseline10ktimeout/closedallocationsunchanged. Earlierpendingnoticestatementsbelowhistorical.
+
+# Earlier checkpoint — sqlite-vec static review complete; notice decision pending
 
 **Source/results commit approval:** User explicitly said "yes proceed with the commit", approving the eight reviewed artifact-inspection files. Both source hashes match the closed receipt. Stage only the two evaluation files and six result/progress documents; exclude downloaded artifacts/runtime data and unrelated untracked content. Commit identifier is recorded in Git. Companion-notice exception, installation/loading and any new empirical package remain unapproved; older pending-commit statements below are historical.
 

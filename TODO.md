@@ -1,5 +1,12 @@
 # Stage 1 Atomic Task Checklist
 
+## Companion-notice exception accepted — empirical package not approved
+
+- [x] **T12-N1 — Exact-wheel notice decision.** User said "i do accept" after static-review commit `3092aeb`. [Decision](docs/decisions.md) accepts pinned MIT/Apache companion texts for this unchanged wheel only; missing bundled notices and provenance/runtime unknowns remain recorded.
+- [ ] **T12-BP — Prepare empirical comparison package.** Prerequisite: N1. Objective: present exact project-local provisioning/loading boundary, shared budgets, frozen baseline/reference workload and correctness/recovery/privacy controls. Acceptance: concrete reviewed proposal before installation/loading; no implicit baseline retry or timeout extension. Evidence: package and later explicit approval; T12/G2 remain open.
+
+Acceptance-note commit approval is pending; no artifact or runtime state changed.
+
 ## sqlite-vec Windows artifact review — completed with notice blocker
 
 [Exact package](docs/proposals/sqlite-vec-artifact-review.md) approved and committed `dcb70be`. [Results](docs/benchmarks/sqlite-vec-artifact-review.md) record static inspection only; nothing was installed/imported/loaded. T12 remains incomplete.

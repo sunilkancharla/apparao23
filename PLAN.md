@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Latest decision — exact-wheel companion notices accepted
+
+The user accepted the [narrow companion-notice exception](docs/decisions.md) after artifact-review commit `3092aeb`. Preserve the exact wheel and both pinned upstream texts unchanged; retain all binary/runtime limitations. Next prepare a concrete project-local empirical comparison proposal for separate approval, including installation/loading boundary, frozen data/reference checks and fresh budgets. No empirical execution or G2 adoption is authorized by notice acceptance. Earlier pending-notice statements below are historical.
+
 ## Latest outcome — sqlite-vec artifact-only review
 
 Approved proposal committed `dcb70be`. [Static review](docs/benchmarks/sqlite-vec-artifact-review.md) completed with11passing inspector tests, exact wheel/RECORD/AMD64/source identities and metered10HTTPattempts/641244body bytes. Missing bundled notices block progression pending a narrow companion-notice decision; static findings do not approve runtime loading or establish binary/source reproducibility. No dependency/environment or baseline changes. Next review that decision before any separate empirical package. T12/G2 remain open; source/results commit approval pending.

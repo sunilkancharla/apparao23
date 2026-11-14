@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Companion notices accepted:** The user approved the [exact-wheel exception](docs/decisions.md) for keeping pinned upstream MIT/Apache texts alongside the reviewed sqlite-vec wheel. The bundled-notice omission stays documented. Installation/loading, empirical comparison and final adoption still require their respective approvals; next prepare the bounded comparison proposal. Artifact-review source/results are committed in `3092aeb`.
+
 **Artifact review completed:** [sqlite-vec Windows static findings](docs/benchmarks/sqlite-vec-artifact-review.md) verify the pinned wheel, six-file RECORD inventory, AMD64 DLL and immutable upstream source. Eleven synthetic inspector tests passed. No bundled license/notice files were found; a companion-notice decision is needed before a separately approved runtime trial. No installation, wrapper import or DLL loading occurred. Locally metered retrieval used10attempts/641244body bytes.
 
 **Next proposed review:** [Exact sqlite-vec Windows artifact inspection](docs/proposals/sqlite-vec-artifact-review.md) defines locally metered retrieval, archive/hash/notice/loader/DLL checks and a strict no-install/no-load boundary. It awaits package approval; no wheel has been downloaded. T12 partial results are committed in `a54b38b`.

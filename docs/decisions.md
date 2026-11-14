@@ -1,5 +1,9 @@
 # Stage 1 Decision Register
 
+## sqlite-vec exact-wheel companion notices — accepted
+
+Following static-review commit `3092aeb`, the user explicitly said "i do accept" to using the pinned upstream license texts as companion notices for the exact reviewed Windows wheel. This narrow exception applies only to `sqlite_vec-0.1.9-py3-none-win_amd64.whl`, SHA-256 `4a28dc12fa4b53d7b1dced22da2488fade444e96b5d16fd2d698cd670675cf32`, with unchanged bytes and the MIT/Apache texts from upstream commit `e9f598abfa0c06b328d8fe5da9c3760cce74be10` identified in the [artifact report](benchmarks/sqlite-vec-artifact-review.md). Preserve both pinned texts alongside the artifact/any later explicitly approved local evaluation and keep the missing-bundled-notices finding visible. No repackaging, blanket exception for other artifacts, binary/source-build equivalence, unrestricted redistribution or legal clearance is inferred. This records the notice decision only: installation, wrapper import, DLL/SQLite loading, a new empirical package and G2 adoption remain separately gated.
+
 ## MarkItDown non-adoption and trial deferral - 2026-11-13
 
 The user replied "okay, proceed" to the concrete proposal to defer the empirical MarkItDown trial, commit the source/dependency review and start T09 local OCR review. Accept non-adoption of MarkItDown for Stage 1 and close T08 with that evaluation exception. This selects no runtime parser, waives no OCR/provenance/privacy requirement, and authorizes no OCR installation or benchmark. See [review](benchmarks/markitdown.md).
