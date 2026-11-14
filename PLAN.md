@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current proposal — exact sqlite-vec artifact review
+
+T12 partial source/results committed `a54b38b`. The [artifact-only package](docs/proposals/sqlite-vec-artifact-review.md) proposes32shared starts/20active minutes,20HTTP attempts/8MiB response bodies with local metering, the exact292804-byte Windowswheel/SHA, bounded ZIP/RECORD/loader/license/PE inspection and synthetic negative controls. No installation, extension import/loading, model/OCR execution or baseline rerun. T12-V1–V5 and five planning documents' commit await approval; no artifacts/code/allocation created. Static review cannot establish runtime safety or comparison performance.
+
 ## Latest T12 outcome — partial baseline, no adoption
 
 Approved proposal committed `976455c`. [PartA evidence](docs/benchmarks/storage-index.md):11focused tests, mutation detection, four actual crash/reopen cases,32/1000-row measurements;10000-row worker timed out at120seconds with verified cleanup. The single allocation is closed without retry. Optional candidate review identified exact registry wheel identity but did not establish binary/source provenance, runtime safety or browser transport-byte accounting. T12 remains incomplete; next review an exact-wheel artifact-only package with local byte metering. No extension installation or G2 adoption authorized.

@@ -1,4 +1,12 @@
-# Latest checkpoint — T12 PartA partial results; allocation closed
+# Latest checkpoint — sqlite-vec artifact-only proposal ready
+
+**Subsequent approval:** User approved the exact artifact-only package and five planning documents' commit with "yes continue please". Reserve initial8preparation starts before inspection/initialization/Git; establish fresh allocation, commit proposals, implement/test inspector and execute only metered static review. At most32starts/20active minutes,20HTTPattempts/8MiB response bodies. No wheel import/install/loading. Later source/results commit remains gated.
+
+User explicitly requested the next bounded review before installation/loading. T12 baseline/source partial results committeda54b38b. Created docs/proposals/sqlite-vec-artifact-review.md plus PLAN/TODO/README/checkpoint only. Proposed T12-V1–V5:32starts/20active minutes; exactsqlite_vec-0.1.9-py3-none-win_amd64.whl292804bytes/SHA4a28dc12fa4b53d7b1dced22da2488fade444e96b5d16fd2d698cd670675cf32; fixed publicwheel/metadata/GitHubref-resolvedcommit/source URLs;20HTTPattempts/8MiBresponse-body cap with durable local accounting includingfailures/redirects,nobrowserfallback. StaticZIP/RECORD/loader/notices/PE inspection only; no code import/loading/install/lockchanges/newperformance/nativeOCR/model/userdata.512MiB/120sinspectionboundary,32MiBoutput,128members/16MiBexpanded/8MiBmember/100:1ratio; tinyfakecontrols included.
+
+Package and five-document commit approval pending. No runtimeallocation/inspector/fixtures/wheel/download/report created. PreserveoldclosedT12budget/sourcehashes; no10000rowrerun/timeoutincrease. Missingprovenance/notice/runtimeevidence mustremainfindings,notadoption. FinalG2/productretention/16GBgatesopen;nextreviewexactproposal. Preserveunrelateduntrackedcontent. Earliercheckpointsbelowhistorical.
+
+# Earlier checkpoint — T12 PartA partial results; allocation closed
 
 **Source/results commit approval:** The user explicitly approved the nine reviewed T12 files with "yes please". Three authored source hashes still match the closed receipt. Stage only the three evaluation files and six result/progress documents; leave runtime receipts and unrelated content untouched. Commit identifier is recorded in Git. This does not authorize an artifact download, extension installation/loading, native rerun or adoption; older pending-commit statements below are historical.
 

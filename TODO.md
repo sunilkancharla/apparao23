@@ -1,5 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
+## sqlite-vec Windows artifact review — approval pending
+
+[Exact package](docs/proposals/sqlite-vec-artifact-review.md) prepared after T12 baseline commit `a54b38b`. No artifact has been retrieved or loaded for this proposal; T12 remains incomplete.
+
+- [ ] **T12-V1 — Counted allocation/meter.** Requires exact package approval; initial reservations/prior hashes/resource boundary and durable request/byte ceilings verified with local fakes.
+- [ ] **T12-V2 — Inspector test-first.** Requires V1; synthetic path/archive/hash/RECORD/PE-offset and interrupted-transfer failures prevent simulated progression; minimal stdlib inspector green.
+- [ ] **T12-V3 — Exact wheel retrieval.** Requires V2; pinned292804bytes/SHA verified, actual/reserved body bytes and every HTTP attempt counted, capped archive/RECORD inventory saved.
+- [ ] **T12-V4 — Static review only.** Requires V3; loader/metadata/notices/native imports and source-identity findings documented without installation/import/loading; unknowns remain explicit.
+- [ ] **T12-V5 — Closeout/disposition.** Requires V4 or recorded stop; checks/prior hashes/elapsed/counters saved, factual report/docs updated, separate source/results commit request. No empirical comparison/adoption implied.
+
 ## T12 storage proposal ready — package approval pending
 
 **Subsequent approval/outcome:** The user approved PartA and proposal commit `976455c`. [Results](docs/benchmarks/storage-index.md) supersede the original unstarted labels below. Allocation closed after the10000-row worker timeout; no automatic retry or adoption. The T12-P proposal deliverable is complete.
