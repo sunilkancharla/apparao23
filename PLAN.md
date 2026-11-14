@@ -1,5 +1,7 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+**Current bounded package (2026-11-14):** OCR manual-04 completed and results committed in 94f3e46; the user approved T11 combined feasibility implementation, offline testing and scoped reviewed commit. [combined-01](docs/proposals/combined-ocr-model-trial.md) preparation is complete; actual native execution awaits the disconnected user handoff. T09 quality/rotation/provenance and remaining T11/G2 adoption gates stay open. Earlier progress snapshots below are historical.
+
 ## Latest approved scope - PDF/XLSX/CSV
 
 The user deferred legacy XLS on 2026-11-13. T07A and T37 are excluded from Stage 1, with their earlier evidence retained. T08 now depends on T05/T07; T16/T17 and acceptance no longer depend on XLS evaluation or implementation. T38 follows T36, bypassing T37. T08 closes with user-approved non-adoption and empirical-trial deferral; the T09 read-only OCR review is authorized. OCR execution/install/adoption remain gated. Earlier format-amendment and T02R paragraphs below describe historical decisions superseded by this amendment.

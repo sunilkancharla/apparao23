@@ -1,0 +1,413 @@
+"""Shared accounting and static preparation for the approved T11 experiment."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import sys
+import threading
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[3]
+RUN = ROOT / "data/t11/combined-01"
+PRIOR = ROOT / "data/t09-manual-ocr/manual-04"
+SPIKES = Path(__file__).resolve().parent
+sys.path.insert(0, str(SPIKES))
+CATEGORIES = {
+    "preparation": 48,
+    "controller": 16,
+    "ocr": 28,
+    "supervisor": 36,
+    "report": 16,
+    "cleanup": 16,
+}
+CHAT_MODELS = {
+    "qwen2.5:1.5b-instruct-q4_K_M": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+    "qwen3:1.7b-q4_K_M": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+}
+EMBED = "nomic-embed-text:v1.5"
+MODELS = {
+    EMBED: "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    **CHAT_MODELS,
+}
+EXECUTABLE = ROOT / ".venv/tools/ollama/0.40.16/ollama.exe"
+PYTHON = Path("F:/Python/Python314/python.exe")
+_MUTEX = threading.RLock()
+
+
+def initial_state() -> dict:
+    """Describe an empty test ledger, never overwrite an existing allocation."""
+    return {
+        "processes": 0,
+        "calls": 0,
+        "native_roots": 0,
+        "native_extra": 0,
+        "native_observed": 0,
+        "execution_approved": True,
+        "offline_started": None,
+        "limits": dict(CATEGORIES),
+        "categories": {key: 0 for key in CATEGORIES},
+        "events": [],
+    }
+
+
+def write_json(path: Path, value: object) -> None:
+    """Replace one local checkpoint atomically; startup refuses unfinished writes."""
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(
+        json.dumps(value, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    os.replace(temporary, path)
+
+
+class Ledger:
+    """Serialize all controller/thread reservations in one persistent allocation."""
+
+    def __init__(self, path: Path, clock=time.time):
+        self.path, self.clock = path, clock
+        if path.with_suffix(path.suffix + ".tmp").exists():
+            raise RuntimeError("Unfinished meter write; no restart")
+        if self.read()["limits"] != CATEGORIES:
+            raise RuntimeError("Approved category limits changed")
+
+    def read(self) -> dict:
+        """Read only; a missing ledger is a failure, never implicit permission."""
+        with _MUTEX:
+            return json.loads(self.path.read_text(encoding="utf-8-sig"))
+
+    def reserve(
+        self, category: str, count: int, reason: str, *, native=False, cleanup=False
+    ):
+        """Reserve before launch, preserving cleanup and explicit category ceilings."""
+        with _MUTEX:
+            state = self.read()
+            if (
+                category not in CATEGORIES
+                or count < 1
+                or state["categories"][category] + count > CATEGORIES[category]
+                or state["processes"] + count > (160 if cleanup else 144)
+                or (category == "cleanup" and not cleanup)
+            ):
+                raise RuntimeError("Shared process/category/cleanup budget")
+            state["categories"][category] += count
+            state["processes"] += count
+            state["native_roots"] += count if native else 0
+            state["events"].append(
+                {
+                    "category": category,
+                    "count": count,
+                    "reason": reason,
+                    "at": self.clock(),
+                }
+            )
+            write_json(self.path, state)
+
+    def observe_native(self, total: int) -> None:
+        """Persist cumulative extra descendants before rejecting overshoot."""
+        with _MUTEX:
+            state = self.read()
+            extra = max(state["native_extra"], total - state["native_roots"], 0)
+            delta = extra - state["native_extra"]
+            state["native_observed"] = max(total, state["native_observed"])
+            state["native_extra"] = extra
+            state["categories"]["supervisor"] += delta
+            state["processes"] += delta
+            write_json(self.path, state)
+            if state["processes"] > 144 or state["categories"]["supervisor"] > 36:
+                raise RuntimeError("Observed descendant/process allowance")
+
+    def start(self) -> None:
+        """Start exactly once, after sealed prerequisites and offline attestation."""
+        with _MUTEX:
+            state = self.read()
+            if state["offline_started"] or state.get("execution_approved") is not True:
+                raise RuntimeError("Run already started or unapproved")
+            state["offline_started"] = self.clock()
+            state["execution_deadline"] = self.clock() + 4500
+            write_json(self.path, state)
+
+    def remaining(self) -> float:
+        """Bound the shared active execution epoch, including failures/cleanup."""
+        state = self.read()
+        if not state["offline_started"] or state["execution_deadline"] <= self.clock():
+            raise RuntimeError("Shared execution deadline/not started")
+        return state["execution_deadline"] - self.clock()
+
+    def call(self) -> None:
+        """Charge each loopback attempt once, even if transport/model work fails."""
+        with _MUTEX:
+            self.remaining()
+            state = self.read()
+            if state["calls"] >= 128:
+                raise RuntimeError("Shared API allowance")
+            state["calls"] += 1
+            write_json(self.path, state)
+
+
+def schedule() -> list[dict]:
+    """Freeze 36 chat attempts, of which 24 overlap a single OCR worker."""
+    output, ocr_count = [], 0
+    for model in CHAT_MODELS:
+        for engine in (None, "tesserocr", "rapidocr"):
+            for case in ("C01", "C03", "C08"):
+                for repetition in range(2):
+                    ocr_case = ("M02", "M03", "M04")[ocr_count % 3] if engine else None
+                    ocr_count += bool(engine)
+                    output.append(
+                        {
+                            "id": f"S{len(output) + 1:02}",
+                            "model": model,
+                            "engine": engine,
+                            "case": case,
+                            "repeat": repetition,
+                            "ocr_case": ocr_case,
+                        }
+                    )
+    return output
+
+
+def check_resources(snapshot: dict, gap: float) -> None:
+    """Enforce sampled headroom/commit bounds and the promised sampling interval."""
+    if (
+        snapshot["available_physical"] < 4 * 1024**3
+        or snapshot["controller_private"] > 512 * 1024**2
+        or max(snapshot["owned_private"], snapshot["peak_job"]) > 8 * 1024**3
+        or gap > 0.25
+    ):
+        raise RuntimeError("Memory/headroom/sampling boundary")
+
+
+def overlap(chat: tuple[float, float], ocr: tuple[float, float]) -> float:
+    """Measure actual in-flight intersection; scheduling intent is not evidence."""
+    return max(0, min(chat[1], ocr[1]) - max(chat[0], ocr[0]))
+
+
+def teardown_ok(
+    active_children: int, reaped: bool, port_free: bool, thread_alive: bool
+) -> bool:
+    """A report may permit reconnection only after every owned activity ended."""
+    return active_children == 0 and reaped and port_free and not thread_alive
+
+
+def digest(path: Path) -> str:
+    """Hash large weights incrementally without importing model/native packages."""
+    value = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            value.update(chunk)
+    return value.hexdigest()
+
+
+def verify_file(root: Path, name: str, expected: str) -> Path:
+    """Refuse URLs, traversal and identity drift before opening approved inputs."""
+    from appcontainer_preflight import contained
+
+    if ":" in name or Path(name).is_absolute():
+        raise ValueError("Only contained local asset paths")
+    path = contained(root, root / name)
+    if digest(path) != expected:
+        raise RuntimeError("Asset hash mismatch")
+    return path
+
+
+def validate_residency(response: dict, required: list[str]) -> None:
+    """Require exact loaded identities/CPU/context; eviction is an incomplete trial."""
+    models = response.get("models", [])
+    by_name = {model["name"]: model for model in models}
+    if len(models) != len(by_name) or set(by_name) != set(required) or len(models) > 2:
+        raise RuntimeError("Required model residency changed")
+    for name in required:
+        model = by_name[name]
+        if (
+            model.get("digest", "").removeprefix("sha256:") != MODELS[name]
+            or model.get("size_vram") != 0
+            or model.get("context_length") != 2048
+        ):
+            raise RuntimeError("Loaded model identity/CPU/context mismatch")
+
+
+def reconcile_questions(frozen: list[dict], questions: dict) -> None:
+    """Reconcile later scope flags without changing selected wording or gold."""
+    for case in frozen:
+        current = questions[case["question_id"]]
+        if (
+            case["question"] != current["question"]
+            or case["original_expected"] != current["expected"]
+        ):
+            raise RuntimeError("Selected question wording/gold changed")
+
+
+def freeze_inputs() -> dict:
+    """Reuse only frozen local evidence; never reopen sample_files or raw answers."""
+    cases_path = ROOT / "data/t11a/run-01/cases.json"
+    if (
+        digest(cases_path)
+        != "b394ff771cafd6072a3c4f7ed65ceec274fece3394c2a8aaf81f322e278c4ed9"
+    ):
+        raise RuntimeError("Frozen case identity changed")
+    cases = json.loads(cases_path.read_bytes())
+    corpus_path = ROOT / "data/t10/run-01/corpus.json"
+    corpus = json.loads(corpus_path.read_bytes())
+    if (
+        cases["source_sha256"] != corpus["source_hashes"]
+        or len(corpus["passages"]) != 32
+        or digest(SPIKES / "chat_cases.json") != cases["definitions_sha256"]
+    ):
+        raise RuntimeError("Frozen evidence/definition identity changed")
+    selected = [case for case in cases["cases"] if case["id"] in {"C01", "C03", "C08"}]
+    question_path = ROOT / "tests/evals/questions.json"
+    questions = {
+        q["id"]: q for q in json.loads(question_path.read_bytes())["questions"]
+    }
+    reconcile_questions(selected, questions)
+    if len(selected) != 3 or next(c for c in selected if c["id"] == "C08")["evidence"]:
+        raise RuntimeError("Case coverage/empty-evidence control changed")
+    return {
+        "cases": selected,
+        "corpus": corpus,
+        "question_identity": {
+            "historical_file_sha256": cases["question_sha256"],
+            "current_file_sha256": digest(question_path),
+            "selected_wording_and_gold_equal": True,
+        },
+        "source_files": [cases_path, corpus_path, question_path],
+    }
+
+
+def prepare() -> None:
+    """Static connected preparation: stdlib hashes only, never native inference."""
+    import ocr_trial as ocr
+
+    ledger = Ledger(RUN / "meter.json")
+    if ledger.read()["offline_started"] or (RUN / "seal.json").exists():
+        raise RuntimeError("Do not reseal or restart a prepared run")
+    state = ocr.verify_artifacts()
+    if state != json.loads((PRIOR / "prepared-state.json").read_bytes()):
+        raise RuntimeError("Installed OCR baseline/project changed")
+    prior = json.loads((PRIOR / "summary.json").read_bytes())
+    if (
+        prior["status"] != "completed_pending_quality_review_no_adoption"
+        or not prior["teardown_verified"]
+    ):
+        raise RuntimeError("Prior OCR trial incomplete/cleanup unknown")
+    inputs = freeze_inputs()
+    write_json(
+        RUN / "inputs.json", {k: v for k, v in inputs.items() if k != "source_files"}
+    )
+    files = [
+        *inputs["source_files"],
+        RUN / "inputs.json",
+        ROOT / "pyproject.toml",
+        ROOT / "uv.lock",
+        ROOT / ".venv/pyvenv.cfg",
+    ]
+    files += [
+        SPIKES / name
+        for name in (
+            "combined_trial.py",
+            "combined_native.py",
+            "test_combined_trial.py",
+            "ocr_trial.py",
+            "appcontainer_preflight.py",
+            "chat_trial.py",
+            "embedding_trial.py",
+            "embedding_budget.py",
+            "chat_cases.json",
+        )
+    ]
+    files += [Path(path) for path in state["artifacts"].values()]
+    files += [
+        ROOT / "docs/proposals/ocr-trial-artifacts.json",
+        Path(state["flatbuffers_companion"]),
+    ]
+    fixture_manifest = PRIOR / "fixtures/manifest.json"
+    manifest = json.loads(fixture_manifest.read_bytes())
+    files.append(fixture_manifest)
+    for case_id in ("M02", "M03", "M04"):
+        entry = next(
+            row for row in manifest["files"] if row["filename"] == case_id + ".png"
+        )
+        files.append(
+            verify_file(PRIOR / "fixtures", entry["filename"], entry["sha256"])
+        )
+    for model, expected in MODELS.items():
+        name, tag = model.split(":", 1)
+        manifest_path = (
+            ROOT / "data/ollama/models/manifests-v2/ollama.com/library" / name / tag
+        )
+        if digest(manifest_path) != expected:
+            raise RuntimeError("Pinned model manifest drift")
+        model_manifest = json.loads(manifest_path.read_bytes())
+        files.append(manifest_path)
+        for layer in [model_manifest["config"], *model_manifest["layers"]]:
+            sha = layer["digest"].removeprefix("sha256:")
+            blob = verify_file(ROOT / "data/ollama/models/blobs", "sha256-" + sha, sha)
+            if blob.stat().st_size != layer["size"]:
+                raise RuntimeError("Model layer size changed")
+            files.append(blob)
+    if (
+        digest(EXECUTABLE)
+        != "4ccefcbfecc50fb6526471adabbc20869dd614e29e351120b15083cb174b0b8a"
+    ):
+        raise RuntimeError("Pinned executable drift")
+    files += [path for path in EXECUTABLE.parent.rglob("*") if path.is_file()]
+    # Runtime metadata is local configuration, not proof of available model weights.
+    files += [
+        path
+        for path in (ROOT / "data/ollama/models/metadata").rglob("*")
+        if path.is_file()
+    ]
+    prior_hashes = {}
+    for name, path in ledger.read()["prior_ledgers"].items():
+        file = ROOT / path
+        prior_hashes[name] = {"path": path, "sha256": digest(file)}
+        files.append(file)
+    write_json(RUN / "prior-ledgers.json", prior_hashes)
+    files.append(RUN / "prior-ledgers.json")
+    launcher = """# Approved combined synthetic-only trial; no filesystem confinement.
+$ErrorActionPreference = 'Stop'
+Set-Location -LiteralPath 'F:\\document_assistant'
+Write-Host 'Disconnect Wi-Fi, Ethernet, tethering and every external link. Keep disconnected until teardown is verified.'
+& 'F:\\Python\\Python314\\python.exe' -I -S -B tests/evals/spikes/combined_trial.py offline
+if ($LASTEXITCODE -ne 0) { Write-Host 'Inspect local summary; remain disconnected unless teardown is verified.' }
+"""
+    (RUN / "run.ps1").write_text(launcher, encoding="utf-8")
+    files.append(RUN / "run.ps1")
+    hashes = {str(path.relative_to(ROOT)): digest(path) for path in set(files)}
+    external = {
+        str(path): digest(path) for path in (PYTHON, PYTHON.with_name("python314.dll"))
+    }
+    write_json(RUN / "seal.json", {"files": hashes, "python": external})
+    print(
+        f"Static preparation verified {len(hashes)} sealed files; no native import/run or download."
+    )
+
+
+def verify_seal() -> None:
+    """Recheck immutable source/assets before starting any native process."""
+    seal = json.loads((RUN / "seal.json").read_bytes())
+    for name, expected in seal["files"].items():
+        verify_file(ROOT, name, expected)
+    for name, expected in seal["python"].items():
+        if (
+            Path(name) not in {PYTHON, PYTHON.with_name("python314.dll")}
+            or digest(Path(name)) != expected
+        ):
+            raise RuntimeError("Interpreter identity changed")
+
+
+if __name__ == "__main__":
+    if sys.argv[1:] == ["prepare"]:
+        prepare()
+    elif sys.argv[1:] == ["offline"]:
+        from combined_native import offline_main
+
+        offline_main()
+    elif len(sys.argv) == 3 and sys.argv[1] == "worker":
+        from combined_native import worker
+
+        worker(Path(sys.argv[2]))
+    else:
+        raise SystemExit("Expected prepare, offline or worker <sealed local request>")

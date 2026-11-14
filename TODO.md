@@ -787,3 +787,27 @@ T01–T03/T02R/T05 complete; T04 deferred; T06 excluded. T02R is committed in 28
 - [ ] Decide remaining rotation/representative quality acceptance and prepare a separately reviewed T11 combined OCR/model resource package before further native execution/adoption. No engine adopted, no completed application/offline acceptance claimed.
 
 - [x] User approved the manual-04 results commit and preparation of the next proposal. Rechecked rotated M08: all six measurements retain high text error/numeric mismatch; record user's positive visual assessment separately, with discrepancy open for local output review. No raw OCR output exposed, gold modified or native rerun. Shared result/Git closeout now 144/160; preserve 16 cleanup slots. Next proposal preparation does not authorize execution/adoption.
+
+### T11 combined feasibility proposal — not execution approval
+
+- [x] Prepare [bounded combined OCR/model proposal](docs/proposals/combined-ocr-model-trial.md), after approved OCR results commit 94f3e46. Documentation only: existing Nomic plus two chat candidates, two evaluated OCR engines, 36 chat/44 embedding attempts, 24 overlap OCR roots and four sentinels; proposed 160 starts/128 API attempts, 75-minute execution, conservative 8-GiB owned-workload cap, physical disconnection. Scope does not close T09/entire T11, select runtime engines, change gold or resolve rotated discrepancy. No installation or native run; proposal remains unapproved/uncommitted.
+- [ ] User approves/amends exact candidate/schedule/resource/manual-boundary package before any helper implementation, preparation or execution. Separate proposal/source Git gate and runtime-adoption gate remain.
+
+### T11-P1/P2 — approved combined-01 preparation
+
+- [x] Record explicit approval of bounded implementation/offline testing and scoped reviewed commit. Implement only three authored evaluation files; no product code, dependencies, downloads or model adoption.
+- [x] Test-first shared process/category/API meter, overshoot persistence, memory/deadline/ownership/residency, actual header/worker overlap, endpoint refusals and failed-request cleanup evidence. Initial 10 core contracts failed/passed; native interval regression fixed; selected-question reconciliation regression added. Final 14 passed in 1.197 s; Ruff lint/format passed. See [preparation report](docs/benchmarks/combined-ocr-model-preparation.md).
+- [x] Reconcile historical question-file scope edit without changing any selected wording/gold; freeze old/current file hashes and exact prior case identities. Static preparation verified 142 sealed files and reused local immutable assets/fixtures. Full 48-slot preparation reservation; zero combined native/API attempts; prior ledgers unchanged. PowerShell syntax/hash/diff closeout required before final handoff. Source/docs commit approved; verify actual Git result.
+- [ ] T11-P3–P5: user runs [combined-01](docs/proposals/combined-ocr-model-handoff.md) disconnected; remain offline until verified teardown. No new READY prompt or automatic retry. All combined native/resource/residency/quality outcomes remain unproven.
+- [ ] T11-P6: after user reports teardown/reconnection, inspect sanitized summary only; retain raw local semantic review and partial/failure evidence. No engine/model adoption or full T09/T11 closure implied.
+
+### USER PAUSE — 2026-11-14
+
+Work paused at user's request to preserve daily token allowance. [Exact restart checkpoint](docs/session-checkpoint.md) records source/evidence/budgets and next steps. Current combined handoff is NOT READY: ownership regression added/guard implemented, but final Ruff stops at B023 test closures;15-test green validation and final reseal/quality review/commit remain pending. Earlier14-test/142-file preparation evidence is historical; the current seal is stale. No combined native/model/OCR execution, install or download occurred. Do not run any combined command until resumed work validates and reseals it. Preserve the56/160 ledger reservation, zeroAPI/native roots and original counters; user pause time is logged separately.
+
+### T11 resumed final validation — 2026-11-14
+
+- [x] User resumed from checkpoint; preserve original budgets/prior ledger links and exclude recorded user-pause time from active preparation. Ownership guard implemented and regression validated for owned versus recycled unrelated PIDs; test closures bound explicitly. Final15 stdlib/fake contracts passed0.713s; Ruff lint/format passed. No OCR/model import/inference, installation, rendering or download.
+- [x] Preserve initial connected seal as seal.pre-review.json and regenerate only the never-started source/asset seal. Native roots/API calls remain0 and offline_started unset; preparation48 plus report16 conservatively reserved64/160. Final hash/link/PowerShell/diff review and approved scoped commit complete the handoff; actual native behavior still awaits disconnected user run. Historical pause/not-ready entries above describe the earlier source epoch, not approval to run an old seal.
+
+- [x] Final resumed handoff review passed: all142 sealed files and prior-ledger hashes verified, PowerShell/relative links/diff checks passed; active preparation1453.6s excluding user pause. Combined API/native counts0, offline epoch not started. Proceed with previously approved scoped commit, then provide only the combined-01 disconnected command. No runtime/adoption claim.
