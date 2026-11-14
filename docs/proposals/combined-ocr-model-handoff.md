@@ -1,4 +1,4 @@
-**READY FOR THE APPROVED COMBINED-07 USER RUN.** Static preparation verified158sealed identities,18unchanged prior records and zero API/native attempts. [Preparation evidence](../benchmarks/combined-ocr-model-seventh-preparation.md) records the checks. Combined-01 through combined-06 are closed forever; never rerun/reset/reseal them.
+**COMPLETED — DO NOT RUN COMBINED-07 AGAIN.** All36responses and four controls completed; teardown verified true and safe reconnection confirmed. [Results](../benchmarks/combined-ocr-model-seventh-results.md) record24positive OCR/chat overlaps and pending local semantic review. All combined-01 through07runs are closed. Commands below are historical; open the completed review page locally rather than rerunning.
 
 # Approved combined OCR/model trial: local offline instructions
 

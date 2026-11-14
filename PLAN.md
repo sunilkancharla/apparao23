@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Latest outcome — combined-07 completed
+
+[Native results](docs/benchmarks/combined-ocr-model-seventh-results.md) confirm all36answers, four controls and24positive OCR/chat overlaps, with verified owned teardown. T11-C7-4/5 are complete; C7-6 factual reporting is saved but user semantic review remains pending. All native allocations are closed; no rerun or new package is authorized. Next review all36answers/citations locally before model/OCR adoption decisions. The approved16-GB target and other unresolved acceptance gates remain unchanged. Results-document commit approval is separate.
+
 ## Current approved package — combined-07 (2026-11-14)
 
 The [combined-07 package](docs/proposals/combined-ocr-model-seventh-run.md) and proposal commit `1dddbcb` are approved. T11-C7-1–3 static preparation is complete: expected red routing errors,61green combined/OCR tests, Ruff checks,158sealed identities,18unchanged prior records,44/160reservations, zero API/native attempts and offline epoch unset. [Evidence](docs/benchmarks/combined-ocr-model-seventh-preparation.md) and the [standalone handoff](docs/proposals/combined-ocr-model-handoff.md) are ready for T11-C7-4's user-operated disconnected run. Preparation source/results commit approval remains separate; S01–S15 semantic review remains pending. Older snapshots below are historical.

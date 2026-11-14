@@ -7,9 +7,9 @@
 - [x] **T11-C7-1 — Fresh allocation/baseline.** Fresh ledger reserved44/160 starts and linked18prior records; initial hashes/counters and committed300-ms policy verified.
 - [x] **T11-C7-2 — Routing test-first.** Expected red61-test run had two routing errors; minimal07-only change produced61passes in1.589s. Five-file lint/three-file format passed; policy/seal inventory unchanged.
 - [x] **T11-C7-3 — Static preparation/readiness.** [Evidence](docs/benchmarks/combined-ocr-model-seventh-preparation.md):158sealed identities,18prior hashes, PowerShell syntax and independent rehash passed;389.808active seconds, zero API/native attempts, offline epoch unset. [Handoff](docs/proposals/combined-ocr-model-handoff.md) ready.
-- [ ] **T11-C7-4 — Disconnected user-run trial.** Requires C7-3; disconnect all external links and attest OFFLINE. Evidence: four controls/fixed36-answer matrix or explicit partial stop under shared160starts/128API/75minutes; no retry.
-- [ ] **T11-C7-5 — Owned teardown.** Requires execution start; zero active owned children, reaped process and released listener before safe reconnect. Evidence: sanitized teardown receipt; uncertain cleanup means remain offline.
-- [ ] **T11-C7-6 — Results/local review.** Requires verified teardown/reconnection; report actual attempts/missing coverage/resource metrics, request local factual/citation review, update docs and ask separately before preparation/results commit.
+- [x] **T11-C7-4 — Disconnected user-run trial.** [Results](docs/benchmarks/combined-ocr-model-seventh-results.md): four controls,36completed responses,44embedding attempts,24positive overlaps/OCR quality gates and36schema/scope checks passed. Meter96/160,125/128API; allocation closed.
+- [x] **T11-C7-5 — Owned teardown.** Verified true, zero active owned children, process reaped/listener released, exit0 and explicit safe reconnect confirmed.
+- [ ] **T11-C7-6 — Results/local review.** Sanitized results, latency/resource metrics,18unchanged prior hashes and factual documentation saved. User must review all36answers/citations locally in combined-07/review.html; semantic acceptance/adoption not inferred. Results-document commit approval pending; preparation committed1428cfd.
 
 The separate local review of combined-06 S01–S15 remains pending; no semantic acceptance, runtime adoption or new native execution approval is inferred from this proposal request.
 
