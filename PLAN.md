@@ -259,3 +259,7 @@ The monitor repair is committed in `0b345d5` after 34 passing fake tests. The us
 ## Approved state-file investigation after combined-05 stop
 
 Combined-05 preparation/results are committed in `888f184`/`dbe607a`; its allocation is closed. The user approved the [diagnostic package](docs/proposals/combined-state-write-investigation.md) and its five proposal documents' commit. T11-SW1–SW4 may proceed within32starts/ten-active-minutes using synthetic JSON and one fixture-only Windows sharing-handle case. Source leads remain unproven historical causes. No writer-policy repair, permission change, timing relaxation or new native trial is authorized; later source/results commits remain gated.
+
+## Approved state coordination repair
+
+Investigation source/results committed `612378a`. User approved the [minimal repair package](docs/proposals/combined-state-coordination-repair.md) and its five proposal documents' commit: share the existing lock across core writers/combined OCR reads, suppress only unchanged descendant state writes and preserve atomic failure/accounting/timing behavior. T11-SR1–SR4 may proceed within40starts/15active minutes, up to five existing source/test files and both fake suites. Later repair source/results commits and any native continuation remain gated.

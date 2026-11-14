@@ -1,4 +1,14 @@
-# Latest checkpoint — synthetic state-file investigation complete, 2026-11-14
+# Latest checkpoint — state coordination repair approved, 2026-11-14
+
+User approved exact40-start/900-active-second synthetic implementation package and five proposal documents' commit. Fresh data/t11/state-coordination-repair-01 reserves40starts before firstinspection/init,linksclosedcombined05/investigationhashes. Proceed shortsharedRLock writer/combinedOCRreadhook/defaultfallback/no-opdescendantrepair test-first; bothcombined/OCRfake suites andlegacyRuffbaselinecomparisonrequired. No nativeworkload/permissions/retries/timingrelaxation. Later repairsource/resultscommit remains gated. Earlierproposalcheckpointbelowhistorical.
+
+# Earlier checkpoint — state coordination repair proposal pending, 2026-11-14
+
+User approved seven investigation files committed612378a. Asked next step: prepared docs/proposals/combined-state-coordination-repair.md and updated rootPLAN/TODO/README/checkpoint only. T11-SR1–SR4 pendingapproval for40starts/15active minutes synthetic implementation/verification, up tofive existingfiles including narrowOCRmeter-readerhook withunchangedstandalonefallback, fullcombined/OCRfakes. RecommendexistingRLock aroundcorewriter,combinedOCRreadviaLedger.read,andno-opdescendantwritesuppression onlywhenallpersistedvaluesunchanged. Checkovershooteverytime,persistchangedcountsandnewovershootfirst; preserveatomicreplace/failurepropagation/leftovertmprefusal/timing/privacy/ownership. No retries/permissions/dependencies/nativeworkload orcrossprocessguarantee. Externalreaderdenialstillmuststop;historicalhandleunknown.
+
+No source/runtimeallocation/repair/tests/native trial created during proposal writing. Five proposal docs uncommitted; checklinks/diff then request package and separate explicitproposalcommitapproval. Largerfakeallowance coverslegacyhookandtwosuites,notnativebudgetincrease. Alloldtrial/diagnosticcommandsclosed;no repeatedruns/reset/reseal. Preserveunrelateduntrackedfiles/rawprivacy. Earliercheckpointsbelowhistorical.
+
+# Earlier checkpoint — synthetic state-file investigation complete, 2026-11-14
 
 Final package closed29/32starts,466.578active seconds; oldcombined05/cadencehashes unchanged, links/whitespacepassed. Receipt data/t11/state-write-investigation-01/budget.json. No additional execution needed; sevenreviewedsource/reportfiles awaitcommitapproval.
 
