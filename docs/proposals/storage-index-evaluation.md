@@ -62,3 +62,7 @@ Decisions still needed before product storage/lifecycle implementation:
 3. Representative product chunk volume and acceptable query/index/recovery time/memory targets after exploratory measurements. Synthetic10000vectors do not prove support for the approved maximum file/library sizes or physical16GB end-to-end acceptance.
 
 **Requested decision:** approve or amend this64-start/45-minute PartA package and its experimental scales/resource caps. This covers baseline evaluation code/tests and bounded public optional-dependency review, with zero installation or native model/OCR execution. OptionB installation/comparison, product retention, runtime adoption and product coding remain separately gated. The five proposal documents' commit may be explicitly approved together with the package.
+
+## Actual PartA outcome
+
+Package approved and proposal committed `976455c`. [Evidence](../benchmarks/storage-index.md) records11passing focused tests and mutation detection, four real termination/reopen cases,32/1000-row measurements and a10000-row120-second worker timeout. Teardown verified; allocation closed, never retry/reset. Public optional review remained incomplete for binary/provenance and exact browser transport-byte accounting; no wheel was downloaded/loaded. T12 and G2 remain open. Later source/results commit and any exact-wheel review/PartB execution require separate approval.

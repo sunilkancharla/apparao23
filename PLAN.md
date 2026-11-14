@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Latest T12 outcome — partial baseline, no adoption
+
+Approved proposal committed `976455c`. [PartA evidence](docs/benchmarks/storage-index.md):11focused tests, mutation detection, four actual crash/reopen cases,32/1000-row measurements;10000-row worker timed out at120seconds with verified cleanup. The single allocation is closed without retry. Optional candidate review identified exact registry wheel identity but did not establish binary/source provenance, runtime safety or browser transport-byte accounting. T12 remains incomplete; next review an exact-wheel artifact-only package with local byte metering. No extension installation or G2 adoption authorized.
+
 ## Current proposal — T12 local storage evaluation
 
 Shortlist approved/committed `48f0333`. The [T12 proposal](docs/proposals/storage-index-evaluation.md) compares a standard-library SQLite/vector baseline with an optional sqlite-vec0.1.9 candidate. Proposed PartA:64shared starts/45active minutes, synthetic32/1000/10000-row768-dimensional vectors, scoped ranking/ownership/versioning, actual process-crash/reopen tests and resource/disk measurements; optional dependency review without installation/execution. PartB needs exact artifact review and separate approval. Product retention/derived-storage/latency decisions stay open; synthetic operations do not settle them. Package and five-document commit approval pending. No code, fixture, database or trial allocation created.

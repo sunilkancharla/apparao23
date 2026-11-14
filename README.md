@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**T12 partial result:** [SQLite baseline evidence](docs/benchmarks/storage-index.md) records11passing focused tests, four actual crash/reopen cases and completed32/1000-vector measurements. The10000-vector worker hit its120-second deadline; cleanup was verified and the run is closed. No index was adopted or extension installed. Optional sqlite-vec review identified a Windows wheel but left binary/provenance and exact browser-byte accounting gaps. Next decision is a bounded artifact-only review, not another baseline run.
+
 **Next proposed task:** [T12 storage evaluation](docs/proposals/storage-index-evaluation.md) defines a synthetic SQLite baseline for search, saved references, deletion and crash recovery, plus review of an optional vector extension. It awaits package approval; no storage implementation or new dependency exists. The approved model/OCR shortlist is committed in `48f0333`.
 
 **Approved shortlist:** The user accepted [Qwen2.5 for local chat, Nomic for embeddings and Tesserocr for English OCR](docs/proposals/model-ocr-selection.md) as preferred candidates for subsequent design/evaluation. Final runtime adoption and application implementation remain gated. Combined-07 acceptance is committed in `69a01b4`. Storage and grounding design precede final architecture adoption.

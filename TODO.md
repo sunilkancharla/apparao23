@@ -2,6 +2,15 @@
 
 ## T12 storage proposal ready — package approval pending
 
+**Subsequent approval/outcome:** The user approved PartA and proposal commit `976455c`. [Results](docs/benchmarks/storage-index.md) supersede the original unstarted labels below. Allocation closed after the10000-row worker timeout; no automatic retry or adoption. The T12-P proposal deliverable is complete.
+
+- [x] **T12-A1 — Baseline setup.** Fresh counted allocation, prior hashes and frozen fixture contract recorded; Python/SQLite/compiler options identified. Actual physical-memory CIM inventory was denied; target16GB validation remains open.
+- [x] **T12-A2 — Test-first contracts.** Initial missing-adapter red, then9/11passing contracts; wrong-ranking mutation caught, final11passed0.924s.
+- [x] **T12-A3 — Evaluation adapter/basic crash checks.** Three authored evaluation files; real SQLite/file tests and four actual owned-termination/separate-reopen cases passed. Automatic reconciliation and power-loss durability not claimed.
+- [ ] **T12-A4 — Scale coverage partial.**32/1000rows completed48ranking comparisons each;10000-row worker exceeded120seconds, no accepted metric/completion. Run closed.
+- [ ] **T12-A5 — Optional review partial.** Exact sqlite-vec0.1.9 Windows wheel registry identity recorded; no binary download/loading. Source/notice review and file-access finding saved; immutable provenance, native/runtime review and exact browser-byte accounting incomplete.
+- [x] **T12-A6 — Closeout.** Focused regressions/mutation/Ruff and teardown verified; evidence/docs saved with explicit gaps, final budget/hash/diff closeout recorded locally. Ask separately before source/results commit. T12 remains incomplete.
+
 [Concrete proposal](docs/proposals/storage-index-evaluation.md) prepared; T12-P deliverable ready for review, not execution authorization. Shortlist committed `48f0333`; no storage runtime selected. Original T12 remains incomplete until reviewed comparison/outcome and consistency evidence.
 
 - [ ] **T12-A1 — Allocation/fixture contract.** Requires exact PartA approval; counted fresh allocation, unchanged prior identities, SQLite/hardware and frozen workload recorded.
