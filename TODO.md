@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## Model/OCR shortlist — approved
+
+Combined-07 acceptance committed `69a01b4`. [Recommendation](docs/proposals/model-ocr-selection.md) and alternatives are documented; no runtime selection has been made.
+
+- [x] **T11-SEL — Review preferred candidates.** User answered "yes commit" to the explicit shortlist/commit request. Qwen2.5/Nomic/Tesserocr accepted as preferred design/evaluation candidates with the documented limitations; T17/G2 remains required for runtime adoption.
+- [ ] **T12-P — Prepare storage evaluation package.** Prerequisite: shortlist review and applicable unresolved lifecycle/scale decisions. Objective: compare simple local storage with a justified index alternative. Acceptance: exact alternatives/artifacts, representative fixtures, ranking/persistence/recovery/deletion/versioning checks and shared execution/resource budgets presented before trial approval. Evidence: concrete T12 proposal; no implicit installation or implementation.
+
+These entries refine the existing T12/T17 sequence; they do not complete or waive those tasks. The user approved committing the five recommendation documents.
+
 ## Completed combined-07 continuation — user review accepted
 
 300-ms implementation/results committed in `c47dfda`; the exact [combined-07 package](docs/proposals/combined-ocr-model-seventh-run.md) and proposal commit `1dddbcb` are approved. All old native allocations remain closed.

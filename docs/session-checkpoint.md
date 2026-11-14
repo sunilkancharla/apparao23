@@ -1,4 +1,12 @@
-# Latest checkpoint — combined-07 local semantic review accepted
+# Latest checkpoint — model/OCR recommendation ready for review
+
+**Subsequent approval:** User answered "yes commit" to the explicit shortlist/five-document commit request. Qwen2.5/Nomic/Tesserocr are approved preferred candidates for subsequent design/evaluation; T11-SEL complete. Commit only model-ocr-selection proposal, PLAN/TODO/README/checkpoint. No G2 adoption, storage execution, provisioning or application implementation authorized. T12-P storage proposal is next. Commit identifier is recorded in Git; older pending-approval statements below are historical.
+
+User said "Commit and proceed". Five combined-07 acceptance documents committed `69a01b4`. Prepared only docs/proposals/model-ocr-selection.md plus PLAN/TODO/README/checkpoint. Recommend preferred candidates Qwen2.5:1.5b-instruct-q4_K_M, nomic-embed-text:v1.5 and Tesserocr2.13.0 with evaluated native versions/pinned English asset. Saved evidence only; no fresh inference/assets/code/dependency changes/private content. Explicitly a shortlist for design/evaluation, not T17/G2 runtime adoption. User shortlist decision and five-document commit approval pending.
+
+Next T12 storage/index proposal, then T16 contracts/T17G2; preserve existing chart/OCR/parser/retention and physical16GB acceptance prerequisites. No storage engine/default, threshold, new native trial or application slice authorized. All old runs closed; original ledgers/seals unchanged. Combined07 user acceptance is qualitative36-answer/citation review, not numerical accuracy or full Stage1 acceptance. Preserve unrelated untracked content. Final links/whitespace checks before handoff. Earlier checkpoints below historical.
+
+# Earlier checkpoint — combined-07 local semantic review accepted
 
 **Commit and continuation approval:** User said "Commit and proceed", approving the five acceptance-document files and preparing the next model/OCR selection recommendation. Commit only the reviewed acceptance files before creating that proposal. This does not itself select runtime dependencies or authorize application coding/new native execution. The acceptance commit identifier is recorded in Git.
 

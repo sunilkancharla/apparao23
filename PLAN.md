@@ -1,5 +1,11 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current recommendation — model/OCR shortlist
+
+**Approval recorded:** The user accepted the three preferred candidates and approved the five-document commit with "yes commit". T11-SEL is complete; T12-P remains next. Earlier pending-shortlist wording below is superseded by this decision, without changing the T17/G2 adoption gate.
+
+Combined-07 user acceptance is committed in `69a01b4`. The [model/OCR recommendation](docs/proposals/model-ocr-selection.md) proposes Qwen2.5 1.5B Q4_K_M, Nomic v1.5 and Tesserocr2.13.0 with the evaluated pinned English/native assets as preferred candidates. Shortlist approval is pending and does not replace T17/G2 adoption. Next core sequence is T12 storage evaluation → T16 grounding contracts → T17 architecture/adoption, retaining OCR/parser/chart/retention and physical16-GB gates. No new code, execution or provisioning is authorized by this recommendation.
+
 ## Latest outcome — combined-07 completed
 
 [Native results](docs/benchmarks/combined-ocr-model-seventh-results.md) confirm all36answers, four controls and24positive OCR/chat overlaps, with verified owned teardown. Results committed in `b225d57`; the user subsequently confirmed all36answers/citations are good. T11-C7-1–6 are complete, including qualitative local review. Next prepare the model/OCR adoption decision for separate review; no adoption, new package, native rerun or stage transition is authorized by this acceptance. Physical16-GB validation and other unresolved acceptance gates remain open. Acceptance-note commit approval is separate.

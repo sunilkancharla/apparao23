@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Approved shortlist:** The user accepted [Qwen2.5 for local chat, Nomic for embeddings and Tesserocr for English OCR](docs/proposals/model-ocr-selection.md) as preferred candidates for subsequent design/evaluation. Final runtime adoption and application implementation remain gated. Combined-07 acceptance is committed in `69a01b4`. Storage and grounding design precede final architecture adoption.
+
 **Local review accepted:** After the combined-07 results commit `b225d57`, the user confirmed the36answers and citations are good. This closes the combined-07 evaluation package with qualitative user acceptance. Model/OCR adoption remains a separate decision, and physical16-GB performance remains unproven. Earlier pending-review statements below are historical.
 
 **Latest completed evaluation:** [Combined-07 results](docs/benchmarks/combined-ocr-model-seventh-results.md) confirm all36answers, four controls and24OCR/chat overlaps completed with verified cleanup. Automated schema/citation-scope checks passed; factual/citation review is pending locally. The300-ms policy held, with a maximum saved reading gap296.536ms. Meter96/160,125/128API; all runs are closed. This run used a machine reporting19.911GiB RAM, so physical16-GB performance remains unproven. Earlier readiness/commit statements below are historical.
