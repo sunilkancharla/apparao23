@@ -832,3 +832,11 @@ Work paused at user's request to preserve daily token allowance. [Exact restart 
 - [x] Implement separate live-run counter: handle already-removed descendants, preserve strict original helper, unchanged caps, required-root/type/identity, permission and reparse/link refusals. Actual historical missing path remains unknown. See [repair evidence](docs/benchmarks/combined-storage-repair.md).
 - [x] New fake contracts failed before implementation;24 tests passed1.262s,Ruff passed after import separator correction. Both atomic rename/deletion scenarios still fail under strict helper and succeed under live counter. No native OCR/model/API/download/install; stopped native ledger hash unchanged. Repair allocation conservatively22/24 inclscoped Git closeout,10minute limit,two cleanup slots. User explicitly approved reviewed fixes/diagnostic/source/docs commit; verify actual Git result.
 - [ ] Propose a fresh native continuation for separate approval; do not run/reset/reseal combined-01/02. Fake success does not close native feasibility, quality or adoption gates.
+
+### Approved combined-03 preparation — 2026-11-14
+
+- [x] User approved fresh combined-03 with same exact experiment/limits and new160-start allocation after repair commit e55a2b7. Preserve combined01/02 and fake diagnostic/repair epochs; new ledger hash-links all seven prior records, no counter reset or native-started reseal.
+- [x] Select only combined-03 in CLI/controller/worker. Tests first failed,then24 stdlib/fake contracts passed1.539s; Ruff lint/format passed. Cached-only static preparation/verification creates fresh seal without inference/OCR/model import/render/install/download. Conservative32preparation+8report=40/160; native/API counters0,offline epoch unset. Final identity/PowerShell/link/diff checks precede handoff. New source commit remains unapproved.
+- [ ] User runs current [combined-03 handoff](docs/proposals/combined-ocr-model-handoff.md) disconnected; typeOFFLINE,no READY prompt,remain offline through verified teardown. No automatic retry or engine/model adoption.
+
+- [x] Final combined-03 readiness:146 sealed identities/all seven prior records verified unchanged; PowerShell/link/format/diff checks passed,within active-preparation limit. No native/API attempt. Validated current handoff ready; source/docs commit still unapproved.
