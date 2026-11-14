@@ -1,12 +1,12 @@
 # Stage 1 Atomic Task Checklist
 
-## Pending approval — combined-07 continuation
+## Approved combined-07 continuation — static preparation complete
 
-300-ms implementation/results committed in `c47dfda`. Exact scope, prerequisites, limits and verification are in the [combined-07 proposal](docs/proposals/combined-ocr-model-seventh-run.md). No task below has started and all old native allocations remain closed.
+300-ms implementation/results committed in `c47dfda`; the exact [combined-07 package](docs/proposals/combined-ocr-model-seventh-run.md) and proposal commit `1dddbcb` are approved. All old native allocations remain closed.
 
-- [ ] **T11-C7-1 — Fresh allocation/baseline.** Requires exact package approval; reserve initial starts, link/reverify18prior records and committed policy. Evidence: new shared ledger and unchanged prior hashes/counters.
-- [ ] **T11-C7-2 — Routing test-first.** Requires C7-1; accept only07, refuse old/no-ID/traversal/worker routes. Evidence: red/green full combined/OCR fake suites and focused lint/format; unchanged300-ms policy/seal inventory.
-- [ ] **T11-C7-3 — Static preparation/readiness.** Requires C7-2; verify exact cached identities, source seal including OCR tests, PowerShell syntax, links/diff/counters/time. Evidence: independent readiness report before runnable handoff; zero connected native inference/download.
+- [x] **T11-C7-1 — Fresh allocation/baseline.** Fresh ledger reserved44/160 starts and linked18prior records; initial hashes/counters and committed300-ms policy verified.
+- [x] **T11-C7-2 — Routing test-first.** Expected red61-test run had two routing errors; minimal07-only change produced61passes in1.589s. Five-file lint/three-file format passed; policy/seal inventory unchanged.
+- [x] **T11-C7-3 — Static preparation/readiness.** [Evidence](docs/benchmarks/combined-ocr-model-seventh-preparation.md):158sealed identities,18prior hashes, PowerShell syntax and independent rehash passed;389.808active seconds, zero API/native attempts, offline epoch unset. [Handoff](docs/proposals/combined-ocr-model-handoff.md) ready.
 - [ ] **T11-C7-4 — Disconnected user-run trial.** Requires C7-3; disconnect all external links and attest OFFLINE. Evidence: four controls/fixed36-answer matrix or explicit partial stop under shared160starts/128API/75minutes; no retry.
 - [ ] **T11-C7-5 — Owned teardown.** Requires execution start; zero active owned children, reaped process and released listener before safe reconnect. Evidence: sanitized teardown receipt; uncertain cleanup means remain offline.
 - [ ] **T11-C7-6 — Results/local review.** Requires verified teardown/reconnection; report actual attempts/missing coverage/resource metrics, request local factual/citation review, update docs and ask separately before preparation/results commit.

@@ -719,15 +719,16 @@ class CombinedContracts(unittest.TestCase):
 
     def test_fresh_run_selection_and_sanitized_key_diagnostics(self):
         with patch.object(trial, "RUN"):
-            trial.configure_run("combined-06")
-            self.assertEqual(trial.RUN, trial.ROOT / "data/t11/combined-06")
+            trial.configure_run("combined-07")
+            self.assertEqual(trial.RUN, trial.ROOT / "data/t11/combined-07")
             for name in (
                 "combined-01",
                 "combined-02",
                 "combined-03",
                 "combined-04",
                 "combined-05",
-                "../combined-06",
+                "combined-06",
+                "../combined-07",
                 "unapproved",
             ):
                 with self.assertRaises(ValueError):
@@ -748,8 +749,8 @@ class CombinedContracts(unittest.TestCase):
 
         stub = SimpleNamespace(offline_main=observe, worker=observe)
         for arguments in (
-            ["offline", "combined-06"],
-            ["worker", str(trial.ROOT / "data/t11/combined-06/requests/S01.json")],
+            ["offline", "combined-07"],
+            ["worker", str(trial.ROOT / "data/t11/combined-07/requests/S01.json")],
         ):
             with (
                 patch.dict(sys.modules, {"combined_native": stub}),
@@ -760,15 +761,21 @@ class CombinedContracts(unittest.TestCase):
                 runpy.run_path(
                     str(trial.SPIKES / "combined_trial.py"), run_name="__main__"
                 )
-        self.assertEqual(observed, [trial.ROOT / "data/t11/combined-06"] * 2)
+        self.assertEqual(observed, [trial.ROOT / "data/t11/combined-07"] * 2)
         for arguments in (
             ["offline"],
+            ["offline", "combined-01"],
+            ["worker", str(trial.ROOT / "data/t11/combined-01/requests/S01.json")],
+            ["offline", "combined-02"],
+            ["worker", str(trial.ROOT / "data/t11/combined-02/requests/S01.json")],
             ["offline", "combined-03"],
             ["worker", str(trial.ROOT / "data/t11/combined-03/requests/S01.json")],
             ["offline", "combined-04"],
             ["worker", str(trial.ROOT / "data/t11/combined-04/requests/S01.json")],
             ["offline", "combined-05"],
             ["worker", str(trial.ROOT / "data/t11/combined-05/requests/S01.json")],
+            ["offline", "combined-06"],
+            ["worker", str(trial.ROOT / "data/t11/combined-06/requests/S01.json")],
         ):
             with (
                 patch.dict(sys.modules, {"combined_native": stub}),

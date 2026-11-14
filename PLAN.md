@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current proposal — combined-07 (2026-11-14)
+## Current approved package — combined-07 (2026-11-14)
 
-The 300-ms policy/results are committed in `c47dfda`. The requested [combined-07 proposal](docs/proposals/combined-ocr-model-seventh-run.md) defines T11-C7-1–6: a fresh shared160-start/128-API allocation, test-first routing, cached sealed preparation, one user-operated75-minute disconnected trial and sanitized closeout. Preparation is capped at30active minutes; all memory/other limits and the frozen experiment remain unchanged. Eighteen prior records must be preserved. Package and five proposal documents' commit approval are pending; no new runtime directory/source changes or execution occurred. S01–S15 semantic review remains pending. Older snapshots below are historical.
+The [combined-07 package](docs/proposals/combined-ocr-model-seventh-run.md) and proposal commit `1dddbcb` are approved. T11-C7-1–3 static preparation is complete: expected red routing errors,61green combined/OCR tests, Ruff checks,158sealed identities,18unchanged prior records,44/160reservations, zero API/native attempts and offline epoch unset. [Evidence](docs/benchmarks/combined-ocr-model-seventh-preparation.md) and the [standalone handoff](docs/proposals/combined-ocr-model-handoff.md) are ready for T11-C7-4's user-operated disconnected run. Preparation source/results commit approval remains separate; S01–S15 semantic review remains pending. Older snapshots below are historical.
 
 ## Current package — 300-ms monitor policy (2026-11-14)
 

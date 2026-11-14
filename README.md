@@ -6,7 +6,7 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
-**Next proposed evaluation:** The [combined-07 package](docs/proposals/combined-ocr-model-seventh-run.md) would repeat the frozen experiment with the committed300-ms ceiling and unchanged memory limits. It awaits package/commit approval; no new runner or runtime allocation exists. Combined-01–06 remain closed. The300-ms implementation/results were committed in `c47dfda`; earlier pending-commit statements below are historical.
+**Next approved evaluation:** [Combined-07 preparation](docs/benchmarks/combined-ocr-model-seventh-preparation.md) passed61fake contracts and static verification of158sealed identities/18prior records. Its [standalone offline handoff](docs/proposals/combined-ocr-model-handoff.md) is ready for the user-operated run with the committed300-ms ceiling and unchanged memory limits. Preparation used44/160reservations and zero API/native attempts. Combined-01–06 remain closed; preparation source/results await separate commit approval.
 
 **Current monitoring policy:** The approved [300-ms change](docs/benchmarks/combined-monitor-300ms.md) passed61combined/OCR fake tests, focused Ruff lint and formatting. Both monitoring guards use one300-ms ceiling; memory limits and the100-ms target cadence remain unchanged. Proposal documents are committed in `7586f68`; implementation/results await separate commit approval. No new native run is prepared or authorized; combined-06 and all older runs remain closed. Its15completed answers still need local factual/citation review. Older snapshots below describe their respective milestones.
 

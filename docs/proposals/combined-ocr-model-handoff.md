@@ -1,8 +1,8 @@
-**STOPPED — DO NOT RUN COMBINED-06 AGAIN.** Fifteen cases completed before S16 stopped on a287.7155-ms completed-reading gap above250ms. [Partial evidence](../benchmarks/combined-ocr-model-sixth-stop.md) records nine measured OCR/chat overlaps and verified cleanup. No new timing policy or native allocation is approved. Preserve all receipts; never retry/reset/reseal. All combined-01 through06commands are closed. Instructions below are historical; local answer review may proceed after verified cleanup.
+**READY FOR THE APPROVED COMBINED-07 USER RUN.** Static preparation verified158sealed identities,18unchanged prior records and zero API/native attempts. [Preparation evidence](../benchmarks/combined-ocr-model-seventh-preparation.md) records the checks. Combined-01 through combined-06 are closed forever; never rerun/reset/reseal them.
 
 # Approved combined OCR/model trial: local offline instructions
 
-**Fresh run:** `combined-06`, under the [approved fresh continuation](combined-ocr-model-sixth-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01 through combined-05 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
+**Fresh run:** `combined-07`, under the [approved continuation](combined-ocr-model-seventh-run.md). This is a synthetic/frozen-evidence feasibility test, not an application or engine adoption. Do not run combined-01 through combined-06 or any old OCR/T10/T11A command; their ledgers may not be restarted. Existing models/packages are reused; missing/drifted assets stop without downloads.
 
 ## Before starting
 
@@ -17,7 +17,7 @@ Disconnect Wi-Fi, unplug Ethernet, and disconnect tethering and every external l
 ## One command after disconnecting
 
 ```powershell
-& 'F:\document_assistant\data\t11\combined-06\run.ps1'
+& 'F:\document_assistant\data\t11\combined-07\run.ps1'
 ```
 
 Type `OFFLINE` at the attestation prompt. **There is no new READY prompt**: sealed-asset verification, owned-server startup, controls and the fixed schedule proceed automatically. Large cached weights are rehashed first; this can be quiet for a while. Do not reconnect to ask for progress.
@@ -29,7 +29,7 @@ Wait for final status, **`TEARDOWN VERIFIED: True`**, and the message saying you
 After verified cleanup, reconnect and report the final status. The local sanitized report is:
 
 ```text
-F:\document_assistant\data\t11\combined-06\summary.json
+F:\document_assistant\data\t11\combined-07\summary.json
 ```
 
 `completed_pending_local_semantic_review_no_adoption` means the fixed schedule finished; it is not proof of factual/citation correctness or adoption. `stopped_no_automatic_retry` means preserve all receipts and report the stop, without rerunning/resetting/resealing.
@@ -42,8 +42,8 @@ Do not reconnect for remote help while owned trial work may still be active. Mis
 
 ## Local answer review after completion
 
-Open `F:\document_assistant\data\t11\combined-06\review.html` locally. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
+Open `F:\document_assistant\data\t11\combined-07\review.html` locally after completion. Compare answers/refusals and each citation against the frozen case evidence and gold. Raw answers, prompts, OCR text/images and vectors remain local; do not paste them into Codex. Only sanitized status/metrics and your qualitative assessment should be shared. No cloud evaluator is used.
 
 ## Resource diagnostic repair — 2026-11-14
 
-The original [diagnostic repair](../benchmarks/combined-resource-diagnostic.md) preserves failing scalar readings. The committed [cadence repair](../benchmarks/combined-monitor-cadence-repair.md) accounts for check work in the desired 100-ms cadence with the same 250-ms ceiling. The [state coordination repair](../benchmarks/combined-state-coordination-repair.md) coordinates owned core writers/OCR meter reads and skips unchanged descendant-state writes; external access denial still stops. Combined-06 has separate package approval. Never change limits or retry a stopped run. Share only the sanitized summary after verified teardown and reconnection.
+The original [diagnostic repair](../benchmarks/combined-resource-diagnostic.md) preserves failing scalar readings. The committed [cadence repair](../benchmarks/combined-monitor-cadence-repair.md) accounts for check work in the desired100-ms cadence; the approved [policy change](../benchmarks/combined-monitor-300ms.md) sets one300-ms ceiling. The [state coordination repair](../benchmarks/combined-state-coordination-repair.md) coordinates owned core writers/OCR meter reads and skips unchanged descendant-state writes; external access denial still stops. Never change limits or retry a stopped run. Share only the sanitized summary after verified teardown and reconnection.
