@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import os
 import stat
 import sys
@@ -348,8 +349,51 @@ class ResourceBoundary(RuntimeError):
         super().__init__("Resource boundary: " + ", ".join(diagnostic["violations"]))
 
 
+def validate_interval(value: float) -> None:
+    """Refuse invalid elapsed times rather than allowing NaN to bypass a guard."""
+    if (
+        isinstance(value, bool)
+        or not isinstance(value, (int, float))
+        or not math.isfinite(value)
+        or value < 0
+    ):
+        raise ValueError("Invalid monitor interval")
+
+
+def cadence_wait(elapsed: float) -> float:
+    """Wait only the remainder of the existing 100-ms desired cadence."""
+    validate_interval(elapsed)
+    return max(0.0, 0.1 - elapsed)
+
+
+def check_timing(timing: dict) -> None:
+    """Enforce the unchanged ceiling on explicitly named measured intervals."""
+    allowed = {
+        "loop_start_gap",
+        "reading_gap",
+        "collection_seconds",
+        "tcp_seconds",
+        "storage_seconds",
+        "iteration_seconds",
+    }
+    if not timing.keys() <= allowed:
+        raise ValueError("Unknown monitor timing field")
+    for value in timing.values():
+        validate_interval(value)
+    violations = [key for key, value in timing.items() if value > 0.25]
+    if violations:
+        raise ResourceBoundary(
+            {
+                "violations": violations,
+                "measurement": dict(timing),
+                "limits": {key: 0.25 for key in timing},
+            }
+        )
+
+
 def check_resources(snapshot: dict, gap: float) -> None:
     """Enforce sampled headroom/commit bounds and the promised sampling interval."""
+    validate_interval(gap)
     limits = {
         "available_physical": 4 * 1024**3,
         "controller_private": 512 * 1024**2,

@@ -146,6 +146,7 @@ class Supervisor:
         self.failed, self.stop = threading.Event(), threading.Event()
         self.failure, self.thread, self.process = None, None, None
         self.samples = []
+        self.last_resource_at = None
         self.resource_failure = None
         self.inference_threads = []
         self.root_job, self.server = None, None
@@ -264,7 +265,8 @@ class Supervisor:
                 finally:
                     self.native.kernel.CloseHandle(handle)
 
-    def sample(self, gap=0):
+    def collect_resources(self):
+        """Collect sequential OS readings and retain every existing precondition."""
         from appcontainer_preflight import ExtendedLimits
         from embedding_budget import memory_snapshot
 
@@ -295,27 +297,73 @@ class Supervisor:
                 self.root_job, 9, ctypes.byref(peak), ctypes.sizeof(peak), None
             )
         )
-        observation = {
-            "at": time.monotonic(),
+        return {
             **counters,
             "processes": owned,
             "owned_private": sum(p["private_observed"] for p in owned),
             "peak_job": peak.peak_job,
-            "sampling_gap": gap,
         }
+
+    def sample(self, gap=0):
+        """Measure collection and complete scan intervals, including startup samples."""
+        started = time.monotonic()
+        self.collection_times = {}
+        timing = {"loop_start_gap": gap}
+        self.check_timing_sample(timing)
+        observation = self.collect_resources()
+        collected = time.monotonic()
+        self.collection_times = {"started": started, "ended": collected}
+        previous = getattr(self, "last_resource_at", None)
+        timing.update(
+            collection_seconds=collected - started,
+            reading_gap=0 if previous is None else collected - previous,
+        )
+        observation.update(
+            at=collected,
+            collection_started=started,
+            collection_ended=collected,
+            sampling_gap=gap,
+        )
         self.check_resource_sample(observation, gap)
+        self.check_timing_sample(timing)
+        self.last_resource_at = collected
         self.server._check_tcp()
+        tcp_ended = time.monotonic()
+        timing.update(
+            tcp_seconds=tcp_ended - collected, iteration_seconds=tcp_ended - started
+        )
+        self.check_timing_sample(timing)
         self.storage()
+        ended = time.monotonic()
+        timing.update(
+            storage_seconds=ended - tcp_ended, iteration_seconds=ended - started
+        )
+        self.check_timing_sample(timing)
+        observation["timing"] = dict(timing)
         self.samples.append(observation)
+
+    def save_resource_failure(self, error):
+        """Persist the sanitized packet before the observer stops owned work."""
+        self.resource_failure = error.diagnostic
+        core.write_json(core.RUN / "resource-failure.json", self.resource_failure)
+
+    def check_timing_sample(self, timing):
+        """Apply timing checks through the same durable fail-closed receipt path."""
+        try:
+            core.check_timing(timing)
+        except core.ResourceBoundary as error:
+            if times := getattr(self, "collection_times", None):
+                error.diagnostic["collection_timestamps"] = dict(times)
+            self.save_resource_failure(error)
+            raise
 
     def check_resource_sample(self, observation, gap):
         """Save the violating scalar packet before the observer stops owned work."""
         try:
             core.check_resources(observation, gap)
         except core.ResourceBoundary as error:
-            self.resource_failure = error.diagnostic
             # A receipt failure also propagates to the same fail-closed observer.
-            core.write_json(core.RUN / "resource-failure.json", self.resource_failure)
+            self.save_resource_failure(error)
             raise
 
     def observe(self):
@@ -324,6 +372,11 @@ class Supervisor:
             try:
                 now = time.monotonic()
                 self.sample(now - previous)
+                elapsed = time.monotonic() - now
+                self.check_timing_sample({"iteration_seconds": elapsed})
+                wait = core.cadence_wait(elapsed)
+                if self.samples:
+                    self.samples[-1]["requested_wait"] = wait
                 previous = now
             except Exception as error:  # noqa: BLE001 - thread boundary must stop all owned work.
                 if isinstance(error, OSError):
@@ -334,7 +387,7 @@ class Supervisor:
                 else:
                     self.fail(type(error).__name__ + ": " + str(error)[:160])
                 break
-            self.stop.wait(0.1)
+            self.stop.wait(wait)
 
     def server_listener_owned(self):
         """Read listener PIDs, refusing any service not in the owned server job."""

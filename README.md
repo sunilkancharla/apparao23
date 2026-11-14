@@ -6,7 +6,7 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
-**Next approved work:** [monitor cadence repair](docs/proposals/combined-monitor-cadence-repair.md) retains the 250-ms hard stop, accounts for check time in scheduling and adds accurate timing checks. The user approved the 32-start/ten-active-minute fake-only package and committing its proposal documents. Combined-04 results are committed in `74fb75a`, and all old runners remain closed. No native continuation or larger timing limit is authorized.
+**Latest repair:** [monitor cadence evidence](docs/benchmarks/combined-monitor-cadence-repair.md) records 34 passing fake tests, Ruff and source review. The observer subtracts check work from its 100-ms target wait and measures start/reading/collection/TCP/storage/iteration intervals against the unchanged 250-ms ceiling. Proposal documents are committed in `fd3361b`; source/results commit approval is pending. No native trial ran, and all old runners remain closed.
 
 **Latest result:** [combined-04 stopped](docs/benchmarks/combined-ocr-model-fourth-stop.md) because a monitoring interval took 259.0546 ms, exceeding the 250-ms guard. The other memory readings in that packet were within limits. Four controls passed; two embedding attempts and zero scored chat responses were recorded. Owned cleanup was verified. Preparation is committed in `7ca4ee3`; result documentation awaits commit approval. All old runners are closed. Review the monitoring contract before proposing another trial; no policy change or new run is authorized. Earlier readiness/preparation statements below are historical.
 

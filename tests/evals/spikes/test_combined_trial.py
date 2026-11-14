@@ -18,6 +18,151 @@ import combined_trial as trial
 class CombinedContracts(unittest.TestCase):
     """Exercise failure paths before allowing an offline handoff."""
 
+    def timed_supervisor(self, work=0.02, tcp=0, storage=0, cycles=1, delay=0):
+        clock = SimpleNamespace(value=1.0)
+        waits, phases, failures = [], [], []
+        supervisor = object.__new__(native.Supervisor)
+        supervisor.samples = []
+        supervisor.resource_failure = None
+
+        def advance(label, seconds):
+            phases.append(label)
+            clock.value += seconds
+
+        def collect():
+            advance("collection", work)
+            return {
+                "available_physical": 8 * 1024**3,
+                "controller_private": 1,
+                "owned_private": 2,
+                "peak_job": 3,
+            }
+
+        def wait(seconds):
+            waits.append(seconds)
+            clock.value += seconds + delay
+
+        supervisor.collect_resources = collect
+        supervisor.server = SimpleNamespace(_check_tcp=lambda: advance("tcp", tcp))
+        supervisor.storage = lambda: advance("storage", storage)
+        supervisor.stop = SimpleNamespace(
+            is_set=lambda: len(waits) >= cycles, wait=wait
+        )
+        supervisor.fail = failures.append
+        return supervisor, clock, waits, phases, failures
+
+    def test_work_aware_cadence_and_wait_cancellation(self):
+        for work, expected in ((0.02, 0.08), (0.15, 0)):
+            with self.subTest(work=work):
+                supervisor, clock, waits, phases, failures = self.timed_supervisor(work)
+                with patch.object(
+                    native.time, "monotonic", lambda clock=clock: clock.value
+                ):
+                    supervisor.observe()
+                self.assertEqual(failures, [])
+                self.assertEqual(phases, ["collection", "tcp", "storage"])
+                self.assertEqual(len(waits), 1)
+                self.assertAlmostEqual(waits[0], expected)
+                self.assertAlmostEqual(
+                    supervisor.samples[0]["timing"]["collection_seconds"], work
+                )
+
+    def test_current_phase_and_reading_gap_failures_are_retained(self):
+        for options, expected in (
+            ({"work": 0.251}, "collection_seconds"),
+            ({"tcp": 0.251}, "tcp_seconds"),
+            ({"storage": 0.251}, "storage_seconds"),
+            ({"work": 0.15, "tcp": 0.11}, "iteration_seconds"),
+            ({"work": 0.02}, "reading_gap"),
+        ):
+            with self.subTest(expected=expected), tempfile.TemporaryDirectory() as root:
+                supervisor, clock, waits, _phases, failures = self.timed_supervisor(
+                    **options
+                )
+                if expected == "reading_gap":
+                    supervisor.last_resource_at = clock.value - 0.249
+                with (
+                    patch.object(trial, "RUN", Path(root)),
+                    patch.object(
+                        native.time, "monotonic", lambda clock=clock: clock.value
+                    ),
+                ):
+                    supervisor.observe()
+                    receipt = json.loads(
+                        (Path(root) / "resource-failure.json").read_text()
+                    )
+                self.assertIn(expected, receipt["violations"])
+                self.assertEqual(receipt, supervisor.resource_failure)
+                self.assertEqual(
+                    set(receipt["collection_timestamps"]), {"started", "ended"}
+                )
+                self.assertEqual(len(failures), 1)
+                self.assertEqual(waits, [])
+                self.assertEqual(supervisor.samples, [])
+
+    def test_late_wake_stops_before_another_collection(self):
+        supervisor, clock, waits, phases, failures = self.timed_supervisor(
+            cycles=2, delay=0.2
+        )
+        with (
+            tempfile.TemporaryDirectory() as root,
+            patch.object(trial, "RUN", Path(root)),
+            patch.object(native.time, "monotonic", lambda: clock.value),
+        ):
+            supervisor.observe()
+        self.assertEqual(phases, ["collection", "tcp", "storage"])
+        self.assertEqual(len(waits), 1)
+        self.assertEqual(len(failures), 1)
+        self.assertIn("loop_start_gap", supervisor.resource_failure["violations"])
+
+    def test_timing_edges_invalid_inputs_and_direct_first_sample(self):
+        for key in (
+            "loop_start_gap",
+            "reading_gap",
+            "collection_seconds",
+            "tcp_seconds",
+            "storage_seconds",
+            "iteration_seconds",
+        ):
+            trial.check_timing({key: 0.25})
+            with self.assertRaises(trial.ResourceBoundary):
+                trial.check_timing({key: 0.250001})
+            for invalid in (-0.1, float("inf"), float("nan")):
+                with self.assertRaises((ValueError, trial.ResourceBoundary)):
+                    trial.check_timing({key: invalid})
+                with self.assertRaises(ValueError):
+                    trial.cadence_wait(invalid)
+        supervisor, clock, _, phases, _ = self.timed_supervisor(work=0.25)
+        with patch.object(native.time, "monotonic", lambda: clock.value):
+            supervisor.sample()
+        self.assertEqual(phases, ["collection", "tcp", "storage"])
+        self.assertEqual(supervisor.samples[0]["timing"]["reading_gap"], 0)
+        self.assertEqual(supervisor.samples[0]["collection_started"], 1)
+        self.assertEqual(supervisor.samples[0]["collection_ended"], 1.25)
+
+    def test_backwards_collection_clock_is_not_a_successful_sample(self):
+        supervisor, clock, waits, _, failures = self.timed_supervisor(work=-0.01)
+        with patch.object(native.time, "monotonic", lambda: clock.value):
+            supervisor.observe()
+        self.assertEqual(len(failures), 1)
+        self.assertEqual(waits, [])
+        self.assertEqual(supervisor.samples, [])
+        with self.assertRaises(ValueError):
+            trial.check_timing({"untrusted text": 1})
+
+    def test_timing_receipt_failure_remains_fail_closed(self):
+        supervisor, clock, waits, _, failures = self.timed_supervisor(work=0.251)
+        with (
+            tempfile.TemporaryDirectory() as root,
+            patch.object(trial, "RUN", Path(root)),
+            patch.object(native.time, "monotonic", lambda: clock.value),
+            patch.object(trial, "write_json", side_effect=PermissionError),
+        ):
+            supervisor.observe()
+        self.assertEqual(len(failures), 1)
+        self.assertEqual(waits, [])
+        self.assertIn("collection_seconds", supervisor.resource_failure["violations"])
+
     def test_resource_guard_reports_each_exact_boundary_and_keeps_edges(self):
         edge = {
             "available_physical": 4 * 1024**3,

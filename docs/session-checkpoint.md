@@ -1,4 +1,12 @@
-# Latest checkpoint — monitor cadence repair approved, 2026-11-14
+# Latest checkpoint — fake monitor cadence repair complete, 2026-11-14
+
+Final allocation closed at24/32starts,335.938active seconds. Final old combined04/resource-closeout hashes unchanged; document links and whitespace passed. Exact receipt in data/t11/monitor-cadence-repair-01/budget.json. No further execution needed in this closed package. Eight reviewed repair/report files await commit approval.
+
+Proposal five-file commit fd3361b. Completed authorized fake-only repair in combined_trial.py/combined_native.py/test_combined_trial.py. Observer wait=max(0,0.1-iterationwork); hard250ms preserved for loopstarts plus new collection/reading-gap/TCP/storage/fulliteration checks. Sequential resource collection and existing disconnection/ledger/memory/TCP/storage checks preserved. Success packets include collection timestamps and timing/requestedwait; timing failures retain sanitized durations/limits/available collection timestamps before fail-closed teardown. Receipt write errors/backwards/nonfinite timing stillstop. No extra monitor thread, scheduling privilege, assets/dependencies or model changes.
+
+Six new tests exercise real observer/sample control flow with fake clock/collection/network/storage boundaries. Initial33-test red run:3failures/7errors. Final34tests passed2.164s,Ruff lint/format passed. Source diff reviewed; final shared-budget/old-hash/link/whitespace checks close package. Local data/t11/monitor-cadence-repair-01/budget.json reserves32 starts/600active seconds, links old combined04 meter and resource closeout. Closeout records final count/elapsed. No nativeOCR/model/API/download/install/render or real timing benchmark. New source/results docs remain uncommitted; request separate commit approval. No new native run/ledger/seal/handoff; all old commands staySTOPPED. Strict memory/hardware/semantic/runtime adoption remain open. Earlier checkpoints below historical; preserve unrelated untracked content/raw privacy.
+
+# Earlier checkpoint — monitor cadence repair approved, 2026-11-14
 
 User explicitly approved committing the five proposal documents and implementing the exact32-start/ten-active-minute fake-only package. Fresh data/t11/monitor-cadence-repair-01 allocation reserves all32 starts including inspection/initialization/Git/tests/checks; hash-links closed combined04 meter and resource diagnostic completion receipt. No timing-limit relaxation/native trial/downloads. Proceed test-first within three existing source files; later source/results commit requires separate approval. Earlier proposal status below is historical.
 

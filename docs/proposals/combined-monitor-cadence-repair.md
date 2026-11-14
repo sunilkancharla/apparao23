@@ -47,4 +47,6 @@ Required clock cases: 20-ms work followed by an 80-ms wait, 150-ms work with zer
 
 ## Decision requested
 
+**Subsequent approval and completion:** The user approved the exact fake-only package and the five proposal documents' commit (`fd3361b`). The [completed repair evidence](../benchmarks/combined-monitor-cadence-repair.md) records 34 passing fake tests in 2.164 s, Ruff and preserved limits. A separate source/results commit and any native continuation remain unapproved. The original approval request below is historical.
+
 Approve or amend the 32-start/ten-minute fake-only repair, with the 250-ms ceiling preserved and all old native runs closed. The proposed timing fields and stricter completed-reading/scan checks are part of that exact package. Approval would not authorize any larger interval, native run, runtime adoption or stage transition. Git commit remains a separate explicit decision; the five proposal documents can be approved for commit together with the package if desired.
