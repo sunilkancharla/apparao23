@@ -247,3 +247,7 @@ Review actual bounded-package evidence and gaps. Next proposed package is **T10 
 ## Approved T11 combined-04 continuation — 2026-11-14
 
 The resource diagnostic repair and combined-03 stop reports are committed in `28844cb`. The user approved the [combined-04 package](docs/proposals/combined-ocr-model-fourth-run.md) and committing its five proposal documents: same evaluation and limits, fresh linked allocation and repaired reporting. Ordered tasks T11-C4-1 through T11-C4-6 are in TODO. Bounded preparation and the disconnected user-run trial may proceed; later source/results commits remain gated. Earlier execution/status statements above are historical where superseded by current TODO and checkpoint evidence.
+
+## Approved monitoring repair after combined-04 stop
+
+Combined-04 results are committed in `74fb75a`; its matrix stopped before scored answers and its allocation is closed. The user approved the [bounded monitor repair](docs/proposals/combined-monitor-cadence-repair.md): preserve the 250-ms hard ceiling, account for check work in the 100-ms cadence, and measure actual reading/scan intervals. T11-M1–M4 in TODO may proceed within a fresh 32-start/ten-minute fake-only allocation. The five proposal documents' commit is approved; later source/results commits remain gated. No native continuation or timing-limit relaxation is authorized.

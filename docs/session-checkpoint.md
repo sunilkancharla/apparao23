@@ -1,4 +1,14 @@
-# Latest checkpoint — combined-04 sampling-gap stop, 2026-11-14
+# Latest checkpoint — monitor cadence repair approved, 2026-11-14
+
+User explicitly approved committing the five proposal documents and implementing the exact32-start/ten-active-minute fake-only package. Fresh data/t11/monitor-cadence-repair-01 allocation reserves all32 starts including inspection/initialization/Git/tests/checks; hash-links closed combined04 meter and resource diagnostic completion receipt. No timing-limit relaxation/native trial/downloads. Proceed test-first within three existing source files; later source/results commit requires separate approval. Earlier proposal status below is historical.
+
+# Earlier checkpoint — monitor cadence proposal awaiting approval, 2026-11-14
+
+Combined04 result documents committed as74fb75a under explicit user approval. User then said continue: performed static monitor review only, no source changes or workload. Findings: observe measures loop-start gap before current resource reading; sample completes all memory/TCP/storage work then observe unconditionally waits100ms. Current gap is not a completed-reading interval; actual phase costs and scheduling cause remain unmeasured. Proposed docs/proposals/combined-monitor-cadence-repair.md recommends retaining hard250ms, subtracting work from target100ms wait, recording real reading/iteration/phase times and enforcing the same ceiling for completed-reading/scan durations. No larger gap or new native run recommended without a separate decision.
+
+Created proposal and updated root PLAN/TODO/README/checkpoint. T11-M1–M4 pending approval for exact32starts/ten-active-minutes fake-only package, three existing source files maximum, no OCR/model/API/download/render/native trial. Fake clock edge cases and observer integration specified; no implementation or tests performed in this documentation-only review. No new runtime allocation. Proposal docs uncommitted; ask for package and five-document commit approval. Old started/consumed ledgers untouched, native handoff remains STOPPED. Preserve unrelated untracked content and raw-output privacy. Previous checkpoints below are historical.
+
+# Earlier checkpoint — combined-04 sampling-gap stop, 2026-11-14
 
 Preparation committed as7ca4ee3 (eight reviewed files). User then ran combined04 disconnected and reported stopped_no_automatic_retry with verified teardown. Sanitized summary/meter/resource-failure inspected: allfour controls checked,phase frozen-corpus-embeddings,twoembeddingattempts,zerochatresponses. Exact supervisor failure ResourceBoundary:sampling_gap. Durable receipt matches final summary:gap0.2590545999992173s >0.25s;available9583943680bytes(8.925743GiB),controller30949376bytes(29.515625MiB),owned402964480bytes(384.296875MiB),peakjob403410944bytes(384.722656MiB). Onlygap violated; no full-load memory-feasibility conclusion. Gap cause unproven; cannot retrospectively diagnose combined03.
 
