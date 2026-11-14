@@ -263,3 +263,7 @@ Combined-05 preparation/results are committed in `888f184`/`dbe607a`; its alloca
 ## Approved state coordination repair
 
 Investigation source/results committed `612378a`. User approved the [minimal repair package](docs/proposals/combined-state-coordination-repair.md) and its five proposal documents' commit: share the existing lock across core writers/combined OCR reads, suppress only unchanged descendant state writes and preserve atomic failure/accounting/timing behavior. T11-SR1–SR4 may proceed within40starts/15active minutes, up to five existing source/test files and both fake suites. Later repair source/results commits and any native continuation remain gated.
+
+## Approved combined-06 continuation
+
+State coordination repair is committed `92f3b67` after60passing combined/OCR tests. The user approved the [combined-06 package](docs/proposals/combined-ocr-model-sixth-run.md) and committing its five proposal documents: fixed experiment, both repairs, unchanged limits and a fresh allocation linking15prior records. T11-C6-1–C6-6 may proceed within the package. Both fake suites precede handoff; standalone OCR tests join the seal inventory. Native execution remains the disconnected user-run step; later source/results commits remain gated.

@@ -1,4 +1,14 @@
-# Latest checkpoint — synthetic state coordination repair complete, 2026-11-14
+# Latest checkpoint — combined-06 package approved, 2026-11-14
+
+User explicitly approved the exact combined-06 package and five proposal documents' commit. Fresh shared allocation data/t11/combined-06 starts with16 preparation reservations covering inspection/initialization/proposal Git/baseline reads and links15prior records. Proceed test-first routing/seal inventory, both fake suites and cached static preparation/readiness. Preserve committed repair policies and every limit. No connected native inference/download/render or new fixtures; later preparation source/results commit remains gated. Earlier proposal checkpoint below is historical.
+
+# Earlier checkpoint — combined-06 proposal awaiting approval, 2026-11-14
+
+Ten state coordination repair/report files were committed as `92f3b67` under explicit approval. The user requested the next trial proposal: only docs/proposals/combined-ocr-model-sixth-run.md and root PLAN/TODO/README/checkpoint were edited. T11-C6-1–C6-6 await approval: fresh 160 starts/128 API attempts, 30 active preparation minutes, one 75-minute offline epoch, unchanged 250-ms/resource caps, exact existing models/OCR/synthetic/frozen evidence and both committed repairs. Fifteen prior records to link: combined-05's twelve plus its closed meter (52/160, eight API attempts; last persisted counts may be incomplete), state-write investigation (29/32, 466.578 s) and state coordination repair (32/40, 604.971 s). Both combined/OCR fake suites precede handoff; the proposed seal also includes the standalone OCR contract test.
+
+No combined-06 directory, ledger, seal, selector, runner, source changes, tests or native workload were created. Proposed source scope is combined routing/seal inventory and its tests; repair policies stay unchanged. Manual disconnection without filesystem confinement needs this fresh package approval; old commands remain closed. Close new state-file tabs/watchers before any future user start to reduce external handles; this neither identifies the historical cause nor changes permissions. Package and five-document commit approval are pending; later preparation/results commits retain their separate gate. Check links/diff before review; preserve unrelated untracked files and raw-output privacy. Earlier checkpoints below are historical.
+
+# Earlier checkpoint — synthetic state coordination repair complete, 2026-11-14
 
 Final allocation closed32/40starts,604.971active seconds; oldcombined05/investigationhashes unchanged, links/whitespacepassed. Exactreceipt data/t11/state-coordination-repair-01/budget.json. No furtherexecutionneeded inthisclosedpackage. Tenreviewedrepair/reportfilesawaitcommitapproval.
 
