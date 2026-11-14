@@ -322,7 +322,7 @@ class CombinedContracts(unittest.TestCase):
         return supervisor, clock, waits, phases, failures
 
     def test_work_aware_cadence_and_wait_cancellation(self):
-        for work, expected in ((0.02, 0.08), (0.15, 0)):
+        for work, expected in ((0.02, 0.08), (0.15, 0), (0.2877155000169296, 0)):
             with self.subTest(work=work):
                 supervisor, clock, waits, phases, failures = self.timed_supervisor(work)
                 with patch.object(
@@ -339,10 +339,10 @@ class CombinedContracts(unittest.TestCase):
 
     def test_current_phase_and_reading_gap_failures_are_retained(self):
         for options, expected in (
-            ({"work": 0.251}, "collection_seconds"),
-            ({"tcp": 0.251}, "tcp_seconds"),
-            ({"storage": 0.251}, "storage_seconds"),
-            ({"work": 0.15, "tcp": 0.11}, "iteration_seconds"),
+            ({"work": 0.300001}, "collection_seconds"),
+            ({"tcp": 0.300001}, "tcp_seconds"),
+            ({"storage": 0.300001}, "storage_seconds"),
+            ({"work": 0.15, "tcp": 0.16}, "iteration_seconds"),
             ({"work": 0.02}, "reading_gap"),
         ):
             with self.subTest(expected=expected), tempfile.TemporaryDirectory() as root:
@@ -350,7 +350,7 @@ class CombinedContracts(unittest.TestCase):
                     **options
                 )
                 if expected == "reading_gap":
-                    supervisor.last_resource_at = clock.value - 0.249
+                    supervisor.last_resource_at = clock.value - 0.299
                 with (
                     patch.object(trial, "RUN", Path(root)),
                     patch.object(
@@ -372,7 +372,7 @@ class CombinedContracts(unittest.TestCase):
 
     def test_late_wake_stops_before_another_collection(self):
         supervisor, clock, waits, phases, failures = self.timed_supervisor(
-            cycles=2, delay=0.2
+            cycles=2, delay=0.21
         )
         with (
             tempfile.TemporaryDirectory() as root,
@@ -394,21 +394,23 @@ class CombinedContracts(unittest.TestCase):
             "storage_seconds",
             "iteration_seconds",
         ):
-            trial.check_timing({key: 0.25})
+            for accepted in (0.25, 0.251, 0.2877155000169296, 0.3):
+                trial.check_timing({key: accepted})
             with self.assertRaises(trial.ResourceBoundary):
-                trial.check_timing({key: 0.250001})
-            for invalid in (-0.1, float("inf"), float("nan")):
+                trial.check_timing({key: 0.300001})
+            for invalid in (-0.1, True, None, "0.3", float("inf"), float("nan")):
                 with self.assertRaises((ValueError, trial.ResourceBoundary)):
                     trial.check_timing({key: invalid})
                 with self.assertRaises(ValueError):
                     trial.cadence_wait(invalid)
-        supervisor, clock, _, phases, _ = self.timed_supervisor(work=0.25)
+        supervisor, clock, _, phases, _ = self.timed_supervisor(work=0.3)
+        clock.value = 0.0
         with patch.object(native.time, "monotonic", lambda: clock.value):
             supervisor.sample()
         self.assertEqual(phases, ["collection", "tcp", "storage"])
         self.assertEqual(supervisor.samples[0]["timing"]["reading_gap"], 0)
-        self.assertEqual(supervisor.samples[0]["collection_started"], 1)
-        self.assertEqual(supervisor.samples[0]["collection_ended"], 1.25)
+        self.assertEqual(supervisor.samples[0]["collection_started"], 0)
+        self.assertEqual(supervisor.samples[0]["collection_ended"], 0.3)
 
     def test_backwards_collection_clock_is_not_a_successful_sample(self):
         supervisor, clock, waits, _, failures = self.timed_supervisor(work=-0.01)
@@ -421,7 +423,7 @@ class CombinedContracts(unittest.TestCase):
             trial.check_timing({"untrusted text": 1})
 
     def test_timing_receipt_failure_remains_fail_closed(self):
-        supervisor, clock, waits, _, failures = self.timed_supervisor(work=0.251)
+        supervisor, clock, waits, _, failures = self.timed_supervisor(work=0.300001)
         with (
             tempfile.TemporaryDirectory() as root,
             patch.object(trial, "RUN", Path(root)),
@@ -440,19 +442,23 @@ class CombinedContracts(unittest.TestCase):
             "owned_private": 8 * 1024**3,
             "peak_job": 8 * 1024**3,
         }
-        trial.check_resources(edge, 0.25)
+        for accepted in (0.25, 0.251, 0.2877155000169296, 0.3):
+            trial.check_resources(edge, accepted)
+        for invalid in (-0.1, True, None, "0.3", float("inf"), float("nan")):
+            with self.assertRaises(ValueError):
+                trial.check_resources(edge, invalid)
         for field, value, reason in (
             ("available_physical", 4 * 1024**3 - 1, "available_physical"),
             ("controller_private", 512 * 1024**2 + 1, "controller_private"),
             ("owned_private", 8 * 1024**3 + 1, "owned_private"),
             ("peak_job", 8 * 1024**3 + 1, "peak_job"),
-            ("sampling_gap", 0.250001, "sampling_gap"),
+            ("sampling_gap", 0.300001, "sampling_gap"),
         ):
             with self.subTest(field=field):
                 snapshot = {**edge, field: value, "secret": "must not escape"}
                 with self.assertRaises(trial.ResourceBoundary) as raised:
                     trial.check_resources(
-                        snapshot, value if field == "sampling_gap" else 0.25
+                        snapshot, value if field == "sampling_gap" else 0.3
                     )
                 self.assertIn(reason, raised.exception.diagnostic["violations"])
                 self.assertNotIn("secret", raised.exception.diagnostic["measurement"])
@@ -472,11 +478,12 @@ class CombinedContracts(unittest.TestCase):
             patch.object(trial, "RUN", Path(root)),
         ):
             with self.assertRaises(trial.ResourceBoundary):
-                supervisor.check_resource_sample(snapshot, 0.3)
+                supervisor.check_resource_sample(snapshot, 0.300001)
             receipt = json.loads((Path(root) / "resource-failure.json").read_text())
             self.assertEqual(receipt, supervisor.resource_failure)
             self.assertEqual(receipt["violations"], ["sampling_gap"])
-            self.assertEqual(receipt["measurement"]["sampling_gap"], 0.3)
+            self.assertEqual(receipt["measurement"]["sampling_gap"], 0.300001)
+            self.assertEqual(receipt["limits"]["sampling_gap"], 0.3)
             self.assertNotIn("private content", json.dumps(receipt))
 
     def test_resource_receipt_write_failure_still_stops(self):
@@ -1007,7 +1014,7 @@ class CombinedContracts(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             trial.check_resources(good | {"available_physical": 1}, 0.1)
         with self.assertRaises(RuntimeError):
-            trial.check_resources(good, 0.251)
+            trial.check_resources(good, 0.300001)
         with tempfile.TemporaryDirectory() as root:
             ledger = self.ledger(root, offline_started=1, execution_deadline=999)
             with self.assertRaises(RuntimeError):

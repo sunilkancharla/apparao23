@@ -1,15 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
-## Pending approval — 300-ms monitoring package
+## Completed fake verification — 300-ms monitoring package
 
-Combined-06 preparation/partial results committed in `eeda648`; all old allocations remain closed. User requested a concrete proposal, not native execution. Exact prerequisites, budgets, acceptance and verification are in the [300-ms proposal](docs/proposals/combined-monitor-300ms.md).
+Combined-06 preparation/partial results committed in `eeda648`; all old allocations remain closed. User approved this exact package and proposal commit `7586f68`. [Results](docs/benchmarks/combined-monitor-300ms.md) record61passing tests, lint/format and limitations; [proposal](docs/proposals/combined-monitor-300ms.md) retains exact scope/budgets.
 
-- [ ] **T11-T300-1 — Establish fake allocation.** Requires exact package approval; reserve initial starts and hash-link closed combined-06 meter/seal. Verify baseline and shared32-start/ten-active-minute boundary before tests.
-- [ ] **T11-T300-2 — Demonstrate changed contract first.** Requires T300-1; failing deterministic tests cover287.7155/300-ms acceptance and300.001-ms refusal for every timing field, with invalid inputs and memory controls intact. Evidence: red test result.
-- [ ] **T11-T300-3 — Implement consistent ceiling.** Requires T300-2; one0.300s constant for both guard functions and diagnostics, unchanged100-ms cadence and all other checks. Evidence: green fake observer/sample and guard tests.
-- [ ] **T11-T300-4 — Verify and close out.** Requires T300-3; full combined/OCR fake suites, focused Ruff/format and security/diff review; preserve old hashes, report actual budget/time, update factual docs and request separate commit approval. No new native runner.
+- [x] **T11-T300-1 — Establish fake allocation.** Approved fresh monitor-300ms-01 allocation;16initial starts reserved, combined-06 meter/seal hash-linked, shared32-start/600s boundary checked before green verification.
+- [x] **T11-T300-2 — Demonstrate changed contract first.** Red61tests/2.145s: one failure/two errors against the250-ms policy and old diagnostic limit.
+- [x] **T11-T300-3 — Implement consistent ceiling.** One0.300s constant supplies both guards/diagnostics;61tests passed1.901s, unchanged memory/100-ms cadence, invalid-input and observer-stop controls retained.
+- [x] **T11-T300-4 — Verify and close out.** Full combined/OCR fake suites and focused Ruff/format passed; source/privacy review completed. Final budget/prior-hash/link/diff closeout recorded in the local receipt; separate implementation/results commit approval requested. No new native runner.
 
-The proposal is documentation only; none of these tasks has run. Local S01–S15 factual/citation review remains pending; no accuracy acceptance is inferred. Earlier approval/status entries below are historical where superseded.
+Local S01–S15 factual/citation review remains pending; no accuracy acceptance is inferred. A new native package needs explicit approval after these results. Earlier approval/status entries below are historical where superseded.
 
 ## Latest approved scope amendment - XLS deferred
 

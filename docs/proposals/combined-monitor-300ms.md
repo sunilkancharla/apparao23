@@ -46,3 +46,7 @@ The completed S01–S15 local semantic review is still pending and is independen
 After fake verification, propose a **separate fresh native run** with exact cached identities, shared process/API/time budgets, the approved300-ms policy, frozen experiment, new source seal and disconnected user-operated execution. No runnable command is provided now. Native feasibility/adoption requires actual results and user review;300ms may still be exceeded. Git staging/commit, new native package, further limit changes and stage transition require their separate explicit approvals under [AGENTS](../../AGENTS.md).
 
 **Requested decision:** approve the consistent300-ms policy and this exact32-start/ten-minute fake-only implementation package. Proposal-document commit approval can be given separately; no commit is inferred from approving the package.
+
+## Approved implementation outcome
+
+The user approved the package and five-document commit, saved as `7586f68`. [Implementation evidence](../benchmarks/combined-monitor-300ms.md) records61passing fake contracts in1.901s after the expected red result; focused Ruff lint/format passed. One300-ms constant now supplies both guards and diagnostic limits. No native run or other limit change occurred. The requested-decision paragraph above is historical; later implementation/results commit and fresh native package remain separately gated.

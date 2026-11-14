@@ -1,4 +1,12 @@
-# Latest checkpoint — 300-ms monitoring proposal ready for review, 2026-11-14
+# Latest checkpoint — 300-ms fake implementation complete, 2026-11-14
+
+**Commit approval and closeout:** The user explicitly approved committing the eight reviewed implementation/results files with "yes please". The allocation closed at32/32reservations and267.056active seconds; prior combined-06 meter/seal hashes, documentation links and whitespace checks passed. Commit only those eight files; leave runtime receipts and unrelated untracked content untouched. This approval does not authorize a fresh native run. The resulting commit identifier is available in Git; older pending-approval wording below is historical.
+
+The user approved the exact fake-only package and five planning documents' commit, now7586f68. Only combined_trial.py and test_combined_trial.py changed: MONITOR_LIMIT_SECONDS=0.300 for both guards/diagnostic limits;100-ms cadence, all memory/other controls unchanged. Red61tests2.145s (one failure/two errors), then61passed1.901s. Focused Ruff lint/format passed after one whitespace-only formatter fix; no native adapter/OCR source changes. Existing bounded bootstrap used fresh ignored monitor-300ms-01 fixtures and512MiB/single-process Job limit. Shared budget conservatively32/32reservations; final elapsed/hashes in its budget.json. Closed combined-06 meter/seal hashes checked before closeout; final check required with documentation links/diff. No native/model/API/install/download/render or private/raw output access.
+
+Eight implementation/results files await separate commit approval: two source/test files, new docs/benchmarks/combined-monitor-300ms.md, README/PLAN/TODO/checkpoint and proposal outcome. Old ledgers/seals/commands remain closed, never reset/reseal/rerun06. Its15answers still need local semantic review. Next step after review/commit is a separately approved fresh native package with300-ms policy; none is prepared or authorized yet. Broader feasibility/adoption and target16GB constraints remain open. Preserve unrelated untracked content. Earlier checkpoints below are historical.
+
+# Earlier checkpoint — 300-ms monitoring proposal ready for review, 2026-11-14
 
 **Subsequent approval:** The user approved the exact 32-start/ten-minute fake-only package and five proposal documents' commit with "yes continue please". Fresh monitor-300ms-01 allocation reserves16 initial starts (including inspection/initialization/Git/red-test work), with16 protected for verification/closeout; prior combined-06 meter/seal hashes retained. Proceed test-first in the two approved source/test files. Later implementation/results commit and any new native run remain separate gates. Older pending-approval wording below is historical.
 

@@ -38,6 +38,7 @@ MODELS = {
 EXECUTABLE = ROOT / ".venv/tools/ollama/0.40.16/ollama.exe"
 PYTHON = Path("F:/Python/Python314/python.exe")
 _MUTEX = threading.RLock()
+MONITOR_LIMIT_SECONDS = 0.300
 SEALED_SOURCES = (
     "combined_trial.py",
     "combined_native.py",
@@ -406,7 +407,7 @@ def cadence_wait(elapsed: float) -> float:
 
 
 def check_timing(timing: dict) -> None:
-    """Enforce the unchanged ceiling on explicitly named measured intervals."""
+    """Enforce the approved ceiling on explicitly named measured intervals."""
     allowed = {
         "loop_start_gap",
         "reading_gap",
@@ -419,13 +420,13 @@ def check_timing(timing: dict) -> None:
         raise ValueError("Unknown monitor timing field")
     for value in timing.values():
         validate_interval(value)
-    violations = [key for key, value in timing.items() if value > 0.25]
+    violations = [key for key, value in timing.items() if value > MONITOR_LIMIT_SECONDS]
     if violations:
         raise ResourceBoundary(
             {
                 "violations": violations,
                 "measurement": dict(timing),
-                "limits": {key: 0.25 for key in timing},
+                "limits": {key: MONITOR_LIMIT_SECONDS for key in timing},
             }
         )
 
@@ -438,7 +439,7 @@ def check_resources(snapshot: dict, gap: float) -> None:
         "controller_private": 512 * 1024**2,
         "owned_private": 8 * 1024**3,
         "peak_job": 8 * 1024**3,
-        "sampling_gap": 0.25,
+        "sampling_gap": MONITOR_LIMIT_SECONDS,
     }
     measurement = {key: snapshot[key] for key in limits if key != "sampling_gap"}
     measurement["sampling_gap"] = gap
