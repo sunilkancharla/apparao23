@@ -10,6 +10,8 @@ After reviewing MarkItDown v0.1.9 source/dependencies, the user accepted non-ado
 
 ## Approved T16 storage and retention clarifications
 
+**Approved chart-evaluation sequencing decision:** after T16 review commit `cdbb975`, the user explicitly chose "Defer chart trial until after first CSV flow". Schedule T16A after the first usable CSV upload-to-saved-chat flow (T34). This satisfies the prior chart-trial-or-explicit-deferral gate for T17/G2; the evaluation remains tracked and must precede any chart-interpretation adoption/claim. No chart support is promised in the first CSV flow. PDF/XLSX/CSV, scanned-PDF OCR, local processing and all other adoption/acceptance requirements remain unchanged. Earlier statements requiring chart evaluation before G2 are superseded only by this explicit timing deferral.
+
 The user explicitly selected the following choices during T16 design review. These settle the corresponding earlier open points without adopting the draft retrieval settings, runtime components or G2 architecture:
 
 - Use decimal MB=1,000,000 bytes and GB=1,000,000,000 bytes. Count attached document references, including library references, toward the approved10-file conversation limit. Identical stored library originals count once against the approved1GB library-original budget; reference identities remain distinct.
@@ -207,7 +209,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 - Reservation/concurrent-write and database/journal/temp accounting under the approved byte/counting and5GB processed/1GB temporary budgets; aggregate conversation-original storage policy remains unspecified.
 - Detached-reference, temporary-file and physical cleanup/reconciliation/retry mechanics, preserving the approved chat-history deletion, unavailable-source display and shared/library rules.
-- Chart/diagram sample types, trial budgets/thresholds and runtime adoption after the approved feasibility evaluation.
+- Chart/diagram sample types, trial budgets/thresholds and runtime adoption after the approved feasibility evaluation, now explicitly deferred until after the first usable CSV flow/T34; no chart-support claim before separate adoption.
 - Exact parser/OCR/model/index artifacts, performance/context/concurrency budgets and final architecture after evaluation. English-only OCR and minimal HTML/CSS/JavaScript are already approved.
 
 ## Agent Skills and Tool Evaluation Checkpoints

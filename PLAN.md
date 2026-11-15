@@ -1,6 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — T16 static review complete; T17 prerequisites next
+## Current execution point — T17 readiness prepared; chart timing resolved
+
+T16 review updates committed as `cdbb975`. The user explicitly deferred the chart/diagram trial until after the first usable CSV flow/T34; the pre-G2 timing gate is satisfied by that deferral, while the evaluation/adoption requirement remains tracked. No other format, OCR, privacy, target-machine or acceptance requirement changes.
+
+[T17 architecture readiness](docs/proposals/t17-architecture-readiness.md) provides the existing candidate inventory, concrete architecture direction, settled decisions and A01–A08 remaining readiness gaps. The proposed T17-A1–A6 static package will turn these into an actual proposed ADR/contracts/dependency inventory for G2 review; it does not authorize product code, installation, native/model/parser execution or new research/trials. Exact package and nine readiness/status-document commit approvals are requested separately. T16 is complete as static design; runtime adoption and detailed accounting/context/resource acceptance remain open. Earlier pending-chart/T16-commit wording below is historical.
+
+## Earlier execution point — completed T16 review
 
 Drafts committed as `486fd1b`; the user then approved R01 as a provisional validation baseline and R02/R08 indicator/recovery design. Together with the prior R03–R07 policy choices, this completes the T16-1–6 static package. [Review findings and clarifications](docs/retrieval-design.md#static-review-outcome-after-draft-commit486fd1b) separate ranked retrieval from supplied evidence, preserve error precedence and require durable deletion intent plus publication/reference coordination. No executable code, fixture/score changes, tests or runtime trials were introduced.
 

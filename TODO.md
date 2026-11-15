@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17 readiness — chart timing resolved; concrete static package proposed
+
+T16 review committed `cdbb975`. User explicitly deferred chart feasibility until after first usable CSV flow/T34; keep T16A/Q18/Q19 coverage tracked with no early chart-support claim. [T17 readiness](docs/proposals/t17-architecture-readiness.md) records candidate inventory, settled decisions, A01–A08 gaps and exact task acceptance/verification. Nine readiness/status documents await separate commit approval; T17-A package approval pending. No product implementation, installation/research/trial or G2 adoption.
+
+- [ ] **T17-A1 — Reconcile evidence and identities.** Requires exact package approval; produce candidate-to-artifact/notice/report inventory and classify A01–A08 decisions/design/validation/freshness gaps.
+- [ ] **T17-A2 — Specify contracts.** Requires A1; define data/network/API/reference/ownership/quota/deletion/publication boundaries and explicit accounting choices; verify shared-content/quota-full/crash/scope-race walkthroughs.
+- [ ] **T17-A3 — Resolve context/resource readiness.** Requires A1–A2; present model-fit, concurrency/latency/memory/privacy choices and separately bounded research/validation needs; no byte-as-token or native-confinement claims.
+- [ ] **T17-A4 — Proposed architecture ADR.** Requires A1–A3; write concrete diagram/alternatives/inventory/constraints and acceptance matrix, with blockers visible; no empty modules or implicit selections.
+- [ ] **T17-A5 — Static review.** Requires A4; trace SPEC/T16/decisions to contracts and check security/quality, links/IDs/diff; preserve original facts, scopes and adoption gates.
+- [ ] **T17-A6 — G2 readiness/handoff.** Requires A5; present the actual pack and remaining decisions; record G2 only after explicit approval and prerequisite satisfaction, otherwise specific blockers; separate commit and T18 authorization.
+
 ## T16 — static package complete; runtime/G2 requirements remain open
 
 Drafts committed `486fd1b`. User explicitly retained R01 as provisional and approved R02/R08 design after the static review; R03–R07 were already decided. [Review outcome](docs/retrieval-design.md#static-review-outcome-after-draft-commit486fd1b) clarifies packing metrics, error-state precedence and durable deletion/concurrent-publication ordering. No executable tests, code, fixtures, scores or runtime activity. Nine review-update docs await separate commit approval; T17 details, chart gate, final validation/resources and G2 remain open. Earlier pending-review notes below are historical.
@@ -435,7 +446,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T17 — Present architecture and component-adoption decision pack
 
-**Additional review prerequisite:** Resolve the approved chart-evaluation scope through the proposed T16A investigation below or an explicit user-approved deferral before architecture adoption.
+**Chart timing prerequisite resolved:** The user explicitly deferred T16A until after the first usable CSV flow/T34. The prior trial-or-deferral gate is satisfied by that timing decision; chart evaluation/adoption remains tracked before any chart-support claim. Other T17 prerequisites remain unchanged.
 
 **Status:** Proposed. **Prerequisites:** T01/T02/T02R/T03/T05/T07/T08/T09/T10/T11A/T11/T12/T16, T04 approved deferral, and chart-scope prerequisite above; all core blocking decisions resolved. T06 excluded; T13/T14 are scheduled after the first slice or before use; T15 remains required before T33, not core G2. **Scope:** M, review only.
 **Objective:** Obtain G2 approval of exact components and interfaces before application implementation.
@@ -886,8 +897,8 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T16A — Proposed local data-chart/diagram feasibility investigation
 
-**Status:** Proposed addition following approval of the evaluation scope; not authorized to run. **Prerequisites:** T02–T03, T09, T11; agreed ground truth/thresholds/budget and exact G1 provisioning. **Scope:** M.
-**Objective:** Evaluate the approved chart scope before T17 component adoption without promising runtime visual support.
+**Status:** Explicitly deferred by the user until after first usable CSV flow/T34; evaluation scope preserved, not authorized to run. **Prerequisites:** T34 plus T02–T03, T09, T11; agreed ground truth/thresholds/budget and exact G1 provisioning. **Scope:** M.
+**Objective:** Evaluate the approved chart scope after the first CSV slice and before any chart-interpretation adoption/claim; no runtime visual-support promise. The user's timing deferral satisfies the pre-G2 chart gate only.
 
 - [ ] Compare structured source data/labels/OCR with an approved local visual candidate on agreed English-labelled trends/comparisons/values/relationships; verify real chart/page/sheet citations, approximate-value disclosure and abstention against manual ground truth.
 - [ ] Measure correctness/grounding/citation support, cold/warm latency and total memory pressure on the target machine; present supported types/failures and an adopt/narrow/defer decision before proposing implementation tasks.

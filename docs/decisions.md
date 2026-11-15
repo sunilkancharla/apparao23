@@ -1,5 +1,11 @@
 # Stage 1 Decision Register
 
+## Chart feasibility timing — deferred until after the first CSV flow
+
+After T16 review commit `cdbb975`, the user explicitly answered "Defer chart trial until after first CSV flow (recommended)" to the chart-trial-or-deferral gate. Move T16A after T34, preserving the approved feasibility scope, fixture ground truth and separate adoption decision. This is an explicit narrow waiver of pre-G2 trial timing, not a chart-support claim, deletion of evaluation coverage or waiver of PDF/XLSX/CSV, scanned-PDF OCR, local-processing or other adoption/acceptance requirements. Do not ask for this unchanged deferral again. See [readiness assessment](proposals/t17-architecture-readiness.md) and [chart scope](proposals/chart-interpretation.md).
+
+T16's nine review-update documents are committed as `cdbb975`. T17 readiness preparation is authorized; the concrete T17-A static package is proposed for review. G2 and product implementation remain unapproved, with A01–A08 adoption/accounting/context/resource/validation gaps recorded.
+
 ## T16 review directions approved — static package complete
 
 Drafts committed as `486fd1b` under the user's explicit nine-file Git approval; the same request authorized the remaining static review. The user then explicitly selected all three recommendations:

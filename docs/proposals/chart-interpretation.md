@@ -1,5 +1,7 @@
 # Proposed Stage 1 clarification — data charts and diagrams
 
+**Latest timing decision — approved deferral:** after T16 review commit `cdbb975`, the user explicitly selected "Defer chart trial until after first CSV flow". T16A now follows T34; it is not a pre-G2 trial blocker. The approved feasibility scope and separate runtime-adoption gate remain binding, with no chart-interpretation promise in the first CSV flow. PDF/XLSX/CSV and scanned-PDF OCR requirements remain unchanged. Earlier pre-T17 timing below is historical; no dependency/model/trial or implementation is authorized by the deferral.
+
 **Status:** Evaluation scope approved by the user (“1 ok”); incorporated in SPEC's T01 clarification. T16A proposes the investigation details. Task execution, dependency selection, installation and runtime implementation remain separately gated.
 
 ## Requested outcome
