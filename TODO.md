@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-A — fake-only accounting prerequisite complete
+
+User approved the R1-D commit (`3f7591a`) and exact fake-only R1-A package. [Results](docs/benchmarks/public-source-accounting-results.md):18tests/Ruff pass, weakened second-control mutation caught, two new typed successor aids, all48units prepaid with12protected stop units. No real workers/HTTP/install/candidate execution. Earlier sources/closed ledgers preserved. Extra Windows process remains unexplained; G2 remains open.
+
+- [x] **R1-A1:** Prepay complete finite block manifest; retain failures/reservations, protect cleanup.
+- [x] **R1-A2:** Test-first terminal admission, exhaustion, category/discovery charging and per-control verdicts.
+- [x] **R1-A3:** Verify receipt failure paths, Ruff and targeted mutation; no trial workers.
+- [x] **R1-A4:** Review hashes/links/diff and closeout; results commit approval remains separate.
+
+Next: prepare separately approved instrumented launcher validation; no real/public retry is authorized. Older R1-A-pending and review-commit-pending entries below are historical.
+
 ## T17-R1-D — static diagnosis complete; R1-A proposed
 
 User requested the next static review after R1-S commit `832bb06`. [Findings and exact R1-A proposal](docs/benchmarks/public-source-static-diagnosis.md) identify incomplete workflow accounting, a reachable second-control false-success path, missing terminal-status admission checks and conflated cleanup/count verdicts. Additional process identity remains unknown. No tests/workers/network/helper execution or closed-ledger edits occurred.

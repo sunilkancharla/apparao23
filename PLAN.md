@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-A fake-only prerequisite complete
+
+Static review committed `3f7591a`; user approved R1-A. [Fake-control results](docs/benchmarks/public-source-accounting-results.md) record18passing tests/Ruff and a caught second-control mutation, with a fresh fully prepaid48-unit allocation/12protected stop units. Admission, accounting and independent verdict policies are tested as a single-writer prototype, without real launcher/network execution. Next prepare an instrumented launcher validation package before any fresh public review; unexplained process identity and G2 gaps remain open. Results/source commit needs separate approval. Earlier pending R1-A/review-commit notes below are historical.
+
 ## Current execution point — R1-D static review complete
 
 R1 closeout and partial repair are committed as `986305d` and `832bb06`. The user requested static launcher/accounting diagnosis. [Review findings](docs/benchmarks/public-source-static-diagnosis.md) leave the extra process unexplained and identify specific admission/accounting/completion defects. Recommended order is the separately proposed **R1-A fake-only accounting/verdict package**, then a separately approved instrumented launcher check if needed, then fresh public research. No helper/tests/workers/network/installation ran in this static review; old allocations remain closed. G2 remains open. Review-document commit and R1-A approval are separate. Earlier execution-point notes below are historical.
