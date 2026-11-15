@@ -1,15 +1,19 @@
 # Stage 1 Atomic Task Checklist
 
-## T17 readiness — chart timing resolved; concrete static package proposed
+## T17-A — static pack prepared; G2 not approved
+
+User authorized all six tasks after readiness commit `e9d107e`. [Proposed ADR](docs/ADR/0001-stage1-architecture.md), [contracts](docs/contracts.md), [inventory](docs/dependencies.md#t17-a1--static-reconciliation-and-proposed-runtime-set) and [handoff](docs/provisioning.md#t17-static-pack--provisioning-and-validation-handoff) are written. Explicit user policy/target decisions are in SPEC/decisions. Static review includes52installed name/version pairs matching lock and manual invariant traces; no runtime tests or new scores. Eleven design/status files await separate commit approval; T17 overall/G2 remains open for the stated evidence gaps. Earlier proposed-package notes below are historical.
 
 T16 review committed `cdbb975`. User explicitly deferred chart feasibility until after first usable CSV flow/T34; keep T16A/Q18/Q19 coverage tracked with no early chart-support claim. [T17 readiness](docs/proposals/t17-architecture-readiness.md) records candidate inventory, settled decisions, A01–A08 gaps and exact task acceptance/verification. Nine readiness/status documents await separate commit approval; T17-A package approval pending. No product implementation, installation/research/trial or G2 adoption.
 
-- [ ] **T17-A1 — Reconcile evidence and identities.** Requires exact package approval; produce candidate-to-artifact/notice/report inventory and classify A01–A08 decisions/design/validation/freshness gaps.
-- [ ] **T17-A2 — Specify contracts.** Requires A1; define data/network/API/reference/ownership/quota/deletion/publication boundaries and explicit accounting choices; verify shared-content/quota-full/crash/scope-race walkthroughs.
-- [ ] **T17-A3 — Resolve context/resource readiness.** Requires A1–A2; present model-fit, concurrency/latency/memory/privacy choices and separately bounded research/validation needs; no byte-as-token or native-confinement claims.
-- [ ] **T17-A4 — Proposed architecture ADR.** Requires A1–A3; write concrete diagram/alternatives/inventory/constraints and acceptance matrix, with blockers visible; no empty modules or implicit selections.
-- [ ] **T17-A5 — Static review.** Requires A4; trace SPEC/T16/decisions to contracts and check security/quality, links/IDs/diff; preserve original facts, scopes and adoption gates.
-- [ ] **T17-A6 — G2 readiness/handoff.** Requires A5; present the actual pack and remaining decisions; record G2 only after explicit approval and prerequisite satisfaction, otherwise specific blockers; separate commit and T18 authorization.
+- [x] **T17-A1 — Reconcile evidence and identities.** Inventory links exact wheel/DLL/model/asset identities/notices/reports;52installed name/version pairs match53lock records; no imports or payload-integrity/security clearance inferred. A01–A08 gap classification retained.
+- [x] **T17-A2 — Specify contracts.** C01–C06 define proposed network/API/reference/ownership/quota/idempotency/deletion/publication rules. User-approved class split/10GB cap/minimal-record retention recorded; shared/full-disk/crash/retry/race cases manually traced.
+- [x] **T17-A3 — Context/resource readiness.** C07 records approved validation targets and explicit unresolved token/template-fit, representative/16GB/native-trust gaps. Proposed R1public review has exact finite limits; no execution/adoption implied.
+- [x] **T17-A4 — Proposed architecture ADR.** ADR0001 contains concrete diagram/components/alternatives/contracts and a readiness/acceptance matrix, with outstanding gates; no app skeleton/schema or silent component selection.
+- [x] **T17-A5 — Static review.** Separate quality/security pass traced scope/version/quota/idempotency/deletion/fit/indicator boundaries to SPEC/T16; local metadata/links/hash/diff checks and manual negative traces, no runtime proof or second-agent review claimed.
+- [x] **T17-A6 — G2 readiness/handoff.** Actual pack and unresolved freshness/fit/resource/native-trust/representative-validation gates presented; ADR remains Proposed, G2/T18 not approved. Eleven-file commit requested separately; no stage transition.
+
+**Next proposed boundary:** R1public-source/advisory/notice and pinned-runtime input-fit method review in provisioning; unapproved, no new allocation/requests/aids. Native validation requires a subsequent exact package. Chart T16A stays after T34.
 
 ## T16 — static package complete; runtime/G2 requirements remain open
 

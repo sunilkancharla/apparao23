@@ -1,6 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — T17 readiness prepared; chart timing resolved
+## Current execution point — T17-A static pack prepared; G2 evidence gaps visible
+
+The user authorized T17-A1–A6 after readiness commit `e9d107e`. Concrete [architecture ADR](docs/ADR/0001-stage1-architecture.md), [C01–C08 contracts](docs/contracts.md), [dependency inventory](docs/dependencies.md#t17-a1--static-reconciliation-and-proposed-runtime-set) and [provisioning handoff](docs/provisioning.md#t17-static-pack--provisioning-and-validation-handoff) are prepared. All52installed metadata name/version pairs match the53-record lock; exact cached/report identities and historical limitations retained. User explicitly approved the quota classification,10GB conversation-only-original cap, resource/latency validation targets and minimal content-free deleted-target records; SPEC/decisions updated.
+
+T17-A is complete as static design/review, not G2. Current advisory/native-notice freshness, trustworthy model-input fit, target-resource feasibility/representative parser/OCR/scale and exact native trust acceptance remain adoption gaps. The ADR is Proposed and T17/T18 remain gated. Recommend the separately bounded [R1public-source review](docs/provisioning.md#proposed-follow-up-r1--public-source-refresh-and-input-fit-method-review), then a concrete native-fit validation package only if warranted. No outbound/native/API/server/install/source/fixture/lock/environment change occurred. Eleven design/status files await separate commit approval. Earlier readiness-pending wording below is historical.
+
+## Earlier execution point — T17 readiness proposal
 
 T16 review updates committed as `cdbb975`. The user explicitly deferred the chart/diagram trial until after the first usable CSV flow/T34; the pre-G2 timing gate is satisfied by that deferral, while the evaluation/adoption requirement remains tracked. No other format, OCR, privacy, target-machine or acceptance requirement changes.
 

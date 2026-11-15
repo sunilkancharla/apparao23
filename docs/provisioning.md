@@ -1,5 +1,32 @@
 # T03 Provisioning Proposals
 
+## T17 static pack — provisioning and validation handoff
+
+**No provisioning or runtime validation was executed in T17-A.** The existing project environment and assets are retained. Static checks matched all52installed distribution name/version metadata pairs against53lock records including the project; `.venv` configuration disables inherited system packages. This is not an import, vulnerability audit or proof of fresh-install reproducibility. [T17 inventory](dependencies.md#t17-a1--static-reconciliation-and-proposed-runtime-set) records exact hashes and runtime-versus-evaluation recommendations.
+
+When G2 and the relevant implementation/provisioning package are approved, T18 should reconcile the existing setup rather than reinstall Python, alter global packages/PATH or treat evaluation groups as final runtime dependencies. Any pyproject/lock/runtime group change needs the approved exact component inventory. Missing cache/wheel/model/native bytes stop; no startup sync/pull/download or unapproved build. Preserve cached notices and exact interpreter/wheel/model/template/language identities, and recheck selected hashes before loading in a separately authorized boundary.
+
+| Readiness work | Current evidence | Exact follow-up boundary |
+|---|---|---|
+| Public dependency/native-notice/advisory refresh | Existing Nov13reviews and exact local identities; no outbound request in T17-A | New public-source-only request/byte/time-budgeted review, no document content, installation or automatic upgrades; report relevant reachability and notice gaps |
+| Model-input fit | R01bytes/context are provisional; no verified pre-generation token/template-fit method | First identify a viable exact local method/runtime API from pinned public sources; separately approve any artifact/dependency/native validation, over-limit/truncation controls and shared budgets. A byte guard or returned token count is insufficient |
+| Resource/latency acceptance | User approved one heavy job,30s warm,90s hard,8GiB total owned/4GiB available targets; prior host had~19.911GiB | Fresh exact validation package covering controls and teardown; establish physical16GB or an explicitly approved limited proxy method without silently declaring physical-target acceptance |
+| Parser/OCR and storage behavior | Existing small native/table/OCR/recovery reports with disclosed limits | Representative safe authored scans/layouts/rotation/multi-file, quota expansion and persistence/recovery controls under an approved package, or explicit limitation decisions before dependent adoption |
+| Application security/native boundary | Proposed C01/C07 guards; prior native trials synthetic-only with no filesystem confinement | Explicit architecture/native trust review; do not infer private-document execution permission or product confinement from those trials |
+| First usable flow | No implemented startup/app command | After G2/T18authorization, test-first CSV upload→index→local answer→citation→saved chat/restart; mock routine Ollama tests; separate actual offline smoke budget |
+
+No application startup command is validated. Existing historical evaluation commands below are not permission to rerun closed allocations. Do not introduce new trial directories, handoffs or counters until an exact package is approved. The chart trial is deferred until after T34 and remains separately gated; required scanned-PDF OCR and XLSX acceptance are not deferred by that decision. Optional-tool review timing stays unchanged.
+
+### Proposed follow-up R1 — public-source refresh and input-fit method review
+
+**Not approved or executed.** This is the next recommended boundary, not an extension of T17-A's zero-outbound permission. Purpose: identify relevant advisories/notice gaps for the pinned proposed runtime set and inspect the pinned Ollama public source/API/template surface for a viable input-fit method before proposing native validation. Do not silently upgrade anything or treat a failed source lookup as clearance.
+
+Proposed limits: one fresh research-only allocation; at most24shared tool/subprocess starts (including preparation/checks/reports and four reserved stop/cleanup slots),32HTTPattempts including redirects/failures,8MiB cumulative decoded response bodies,15minutes active work and2MiB sanitized authored/receipt output. Each body is streamed with a per-response1MiB cap and a20-second total monotonic request/body deadline, not merely a resettable socket-read timeout; stop on any exhausted boundary. One HTTP helper at a time, capped at512MiB with at least4GiB available RAM; no candidate native load/inference, child native tool/model/parser, binary/model/wheel download, install or execution. Human approval waits are excluded before starting; retain conservative charged work across interruptions, with no reset/retry of an exhausted allocation. A transport method unable to enforce/count these limits cannot be used without revising the proposal.
+
+Allow public HTTPS official upstream pages/source/notice/advisory endpoints only on `github.com`, `raw.githubusercontent.com`, `docs.ollama.com`, `openpyxl.readthedocs.io` and `pypi.org`. Fixed targets are the proposed FastAPI/Starlette/Pydantic/Uvicorn/HTTPX, pdfplumber/pdfminer/PDFium/Pillow, openpyxl/XML, Tesserocr/Tesseract/Leptonica, sqlite-vec and Ollama versions identified in the inventory. GitHub API is allowed only as `api.github.com` for those exact upstream repositories. Redirects consume attempts and must stay on this allowlist. No credentials/private repositories/user filenames, document text, prompts, answers or embeddings enter queries/requests. Public source text is read, never executed.
+
+At most two small research aids may be authored after R1approval, inspected/tested with local fake HTTP before network use; controls share the same allocation. Persist only safe URL/size/hash/status/counter receipts and sanitized findings, not private project data. Outputs update dependency/ADR fit-and-freshness matrices; a method recommendation still needs separate adoption/native-validation approval. Partial/unavailable findings remain explicit. This limited review is not an exhaustive vulnerability audit or legal certification. R1Git permission and any subsequent native trial remain separate gates.
+
 **Status:** Dedicated `.venv` baseline installed and verified at the user's request. The historical proposals below are superseded where indicated; parser/OCR/model/service provisioning remains gated.
 
 ## Current verified setup

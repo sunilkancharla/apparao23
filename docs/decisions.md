@@ -1,5 +1,16 @@
 # Stage 1 Decision Register
 
+## T17-A policy decisions — explicitly approved during static design
+
+The user approved T17-A1–A6 with "I approve and proceed further" after readiness commit `e9d107e`. Four policy/target questions were separately answered with their recommended options:
+
+- Metadata/history/index databases and retained journals count as processed data under5GB; upload staging/render scratch/temp copies count against1GB temporary; no silent eviction.
+- Conversation-only originals have a10GB aggregate cap, charged once per stored content hash, separate from1GB library originals and preserving100MB/file/10references limits.
+- Validation targets: one heavy job at a time, warm complete answers≤30s,90s hard answer timeout, aggregate owned app/workers/Ollama≤8GiB and available RAM≥4GiB;16GB CPU-only target unchanged. These are not achieved results or permission for a new trial.
+- Minimal deleted-target records may retain opaque IDs, deletion/cleanup status and retry-key digests, never document/chat text or quotations; charge against5GB and retain until an explicitly approved maintenance policy removes them. No arbitrary TTL/automatic pruning.
+
+Recorded in SPEC and [C03–C07](contracts.md). The [proposed architecture ADR](ADR/0001-stage1-architecture.md) is still Proposed. Package authorization and these decisions do not approve its remaining mechanism/default/component choices, native trust boundary, installation, current-security claims, new research/validation or G2. Advisory/native-notice freshness, verified model-input fit, target-resource feasibility and representative parser/OCR/scale limitations remain visible adoption gates.
+
 ## Chart feasibility timing — deferred until after the first CSV flow
 
 After T16 review commit `cdbb975`, the user explicitly answered "Defer chart trial until after first CSV flow (recommended)" to the chart-trial-or-deferral gate. Move T16A after T34, preserving the approved feasibility scope, fixture ground truth and separate adoption decision. This is an explicit narrow waiver of pre-G2 trial timing, not a chart-support claim, deletion of evaluation coverage or waiver of PDF/XLSX/CSV, scanned-PDF OCR, local-processing or other adoption/acceptance requirements. Do not ask for this unchanged deferral again. See [readiness assessment](proposals/t17-architecture-readiness.md) and [chart scope](proposals/chart-interpretation.md).

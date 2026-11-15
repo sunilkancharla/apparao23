@@ -10,6 +10,13 @@ After reviewing MarkItDown v0.1.9 source/dependencies, the user accepted non-ado
 
 ## Approved T16 storage and retention clarifications
 
+**Approved T17-A policy and validation-target decisions:** during the static architecture package, the user explicitly chose the following. These settle their earlier open points without approving G2 or execution:
+
+- Count metadata, saved-chat/history and index databases plus retained journals against the5GB processed-data cap; charge upload staging, render scratch and temporary copies against1GB temporary data. No silent eviction.
+- Allow10GB (10,000,000,000bytes) aggregate **conversation-only originals**, once per stored content hash. The1GB library-original cap remains separate;100MB/file and10references/conversation/upload are unchanged. Exact class-transition/reservation implementation remains a proposed T17 contract.
+- Validation targets: one heavy job at a time; warm complete answers within30seconds;90-second hard answer timeout; at most8GiB total across owned app/workers/Ollama processes; at least4GiB available RAM on the unchanged16GB CPU-only target. These are targets to validate, not achieved results, runtime defaults or trial permission.
+- After deletion, retain only minimal content-free records (opaque IDs, deletion/cleanup status and retry-key digests) to prevent old retries recreating items. Count them against5GB and retain them until an explicitly approved maintenance policy removes them. They must not retain document text, messages or quotations; no arbitrary expiry or automatic pruning is approved.
+
 **Approved chart-evaluation sequencing decision:** after T16 review commit `cdbb975`, the user explicitly chose "Defer chart trial until after first CSV flow". Schedule T16A after the first usable CSV upload-to-saved-chat flow (T34). This satisfies the prior chart-trial-or-explicit-deferral gate for T17/G2; the evaluation remains tracked and must precede any chart-interpretation adoption/claim. No chart support is promised in the first CSV flow. PDF/XLSX/CSV, scanned-PDF OCR, local processing and all other adoption/acceptance requirements remain unchanged. Earlier statements requiring chart evaluation before G2 are superseded only by this explicit timing deferral.
 
 The user explicitly selected the following choices during T16 design review. These settle the corresponding earlier open points without adopting the draft retrieval settings, runtime components or G2 architecture:
@@ -207,7 +214,7 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 ## Open Questions
 
-- Reservation/concurrent-write and database/journal/temp accounting under the approved byte/counting and5GB processed/1GB temporary budgets; aggregate conversation-original storage policy remains unspecified.
+- Exact growth/reservation/concurrency and journal/class-transition implementation under the approved accounting split and1GB library/10GB conversation-only originals/5GB processed/1GB temporary caps; no silent eviction or cap changes.
 - Detached-reference, temporary-file and physical cleanup/reconciliation/retry mechanics, preserving the approved chat-history deletion, unavailable-source display and shared/library rules.
 - Chart/diagram sample types, trial budgets/thresholds and runtime adoption after the approved feasibility evaluation, now explicitly deferred until after the first usable CSV flow/T34; no chart-support claim before separate adoption.
 - Exact parser/OCR/model/index artifacts, performance/context/concurrency budgets and final architecture after evaluation. English-only OCR and minimal HTML/CSS/JavaScript are already approved.
