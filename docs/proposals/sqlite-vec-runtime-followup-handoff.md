@@ -1,6 +1,6 @@
 # T12-C — replacement offline trial instructions
 
-**READY for the approved user-operated offline trial.** The user approved the one-time accounting recovery, original evidence was preserved, and final readiness.json records1372.729conservative preparation seconds/56reservations,30verified sealed identities/13prior records, no open segment and no native epoch. No native trial has started. Keep all sealed source/assets unchanged and follow the disconnection instructions below.
+**CLOSED — do not run runtime-02 again.** The user-operated native trial stopped because the SQL authorizer refused the required MATCH function. Teardown and receipt persistence were verified; reconnection is permitted. [Partial results](../benchmarks/sqlite-vec-runtime-followup-results.md) record both controls/four A recovery pairs completed, B recovery incomplete and zero measurements. Preserve all sealed sources/assets and receipts. The instructions below are historical evidence, not a launch invitation. A reviewed successor package is required before changing permissions or another trial.
 
 These instructions apply only to **sqlite-vec-runtime-02** after final static readiness. The [correction report](../benchmarks/sqlite-vec-runtime-startup-correction.md) records21passing tests,30sealed identities,13unchanged prior records and a successful14-day delayed-handoff fake gate. Actual native compatibility remains unverified. Runtime-01 is withdrawn; do not run its launcher again.
 

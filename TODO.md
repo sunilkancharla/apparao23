@@ -1,6 +1,8 @@
 # Stage 1 Atomic Task Checklist
 
-## T12-C — C1–C4 complete; user offline trial next
+## T12-C — partial native trial closed; findings recorded
+
+The user ran runtime-02; [results](docs/benchmarks/sqlite-vec-runtime-followup-results.md) confirm both sentinels/four A recovery pairs completed, B recovered search refused MATCH, zero measurements and verified teardown/persistence.70/96reservations; all30sealed identities/13prior records unchanged. C5 closed as partial stop, C6 findings documented; full T12/adoption remain open. Do not retry/reset/reseal or edit permission lists. Next decision: results-documentation commit and a focused successor proposal. Earlier ready/pending-run wording below is historical.
 
 **Final approval/readiness:** User approved the one-time accounting exception and ten-file commit. Exact original meter preserved; final readiness1372.729conservative seconds/56reservations/no open segment/no native epoch;30sealed identities/13prior hashes still match. No repeated tests or native work. Earlier blocked/unstarted wording below is historical.
 
@@ -16,8 +18,8 @@ Failure closeout committed `8353db0`. Each task's prerequisites, acceptance and 
 - [x] **T12-C2 — Failing regressions.** Two initial errors reproduced preparation-age refusal and missing terminal receipt; no native loading.
 - [x] **T12-C3 — Minimal correction.**21tests passed2.006s; final Ruff lint/format passed. Reviewed successor diff,15original definitions and real worker-launch AST unchanged; contract differs only by run ID.
 - [x] **T12-C4 — Independent readiness.**30sealed identities/13prior hashes, exact stage/interpreter/fixtures/launcher and14-day full-schedule fake gate passed; explicit one-time recovery approved with originalmeter preserved. Final readiness.json1372.729conservative seconds/56reservations, no open segment/native epoch. Approved ten-file commit; actual C5/C6 pending.
-- [ ] **T12-C5 — Offline run and cleanup.** Requires C4; user-operated single epoch under all limits, preserved success/stop and truthful owned teardown; no retry.
-- [ ] **T12-C6 — Results/review.** Requires C5; sanitized findings, prior-hash/counter checks, documentation/checkpoint, readable diff and separate source/results commit request.
+- [x] **T12-C5 — Offline run and cleanup.** User-operated runtime-02 stopped on first B recovered MATCH query; both controls/four A recovery pairs complete, native correctness/performance incomplete. Teardown/persistence true, meterclosed; no retry.
+- [x] **T12-C6 — Results/review.** Sanitized partial findings,70/96counters,73resource samples and30seal/13prior-hash checks recorded; documentation/checkpoint updated and results commit requested separately. No adoption/new execution approval.
 
 ## Latest T12 outcome — startup failure, successor review needed
 

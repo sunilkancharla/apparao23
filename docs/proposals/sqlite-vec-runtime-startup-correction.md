@@ -1,5 +1,7 @@
 # T12-C — Proposed startup correction and fresh comparison
 
+**Latest outcome: runtime-02 closed after native permission refusal.** [Actual partial results](../benchmarks/sqlite-vec-runtime-followup-results.md): sentinels and four A recovery pairs completed; first B recovered search refused MATCH because the fixed allowlist omitted it; no performance measurements. Owned teardown/receipt persistence verified,70/96reservations,30sealed identities/13prior records unchanged. No retry/reset/reseal or silent permission widening. C5 partial-stop/cleanup and C6 findings are recorded; review a focused successor package before implementation/execution. Earlier ready/no-native statements describe prior preparation, not current state.
+
 **Current state (2026-11-16): recovery approved and final readiness passed.** User said "yes i do approve, you can proceed" to the one-time accounting exception and ten-file commit. The original meter was preserved byte-for-byte with its hash; accounting-recovery.json records the provisional settlement, resumed work and limitations. Final readiness.json records1372.729conservatively charged preparation seconds including180reserved for final documentation/Git,56/96process reservations,30unchanged sealed identities/13prior records, no open segment and no native epoch. No source/asset edits, reseal, test repetition or new allocation. C4 complete; next is the already approved user-operated disconnected C5. Earlier blocked/proposed wording below is historical.
 
 ## One-time interrupted-segment accounting decision — approved

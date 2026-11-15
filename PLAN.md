@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Latest outcome — native MATCH permission refusal; trial closed
+
+The user ran runtime-02 from960fa7c. [Partial native results](docs/benchmarks/sqlite-vec-runtime-followup-results.md) record both controls/four A recovery pairs completed, then B-before-commit reopened search blocked by the manifest's missing MATCH permission. Teardown and receipt persistence verified;70/96reservations, no paired performance measurements, all30sealed identities/13prior records unchanged. C5 partial stop/cleanup and C6 findings recorded; no adoption or implicit continuation. Withdrawn handoff stays closed. Next review a focused allowlist/query-contract successor proposal before code changes or a new native allocation; results-documentation commit remains separately gated. Earlier ready/pending-user-run wording is historical.
+
 ## Current execution point — C4 ready; C5 user offline trial next
 
 User explicitly approved the one-time accounting recovery and ten-file commit. Original meter preserved; final readiness records1372.729conservative preparation seconds including180for documentation/Git,56/96reservations,30sealed identities/13prior records unchanged, no open segment/native epoch. No source edits/reseal or test repetition. C1–C4 complete; next follow the [approved offline handoff](docs/proposals/sqlite-vec-runtime-followup-handoff.md), then C6 actual findings. [Preparation report](docs/benchmarks/sqlite-vec-runtime-startup-correction.md) retains21-test/static evidence and accounting limitations. Earlier blocked statuses are historical; runtime-01 stays withdrawn and no adoption is inferred.

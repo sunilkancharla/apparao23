@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Latest trial safely stopped:** [Native partial results](docs/benchmarks/sqlite-vec-runtime-followup-results.md) show both safety controls and four baseline recovery cases passed. The extension loaded, but its recovered search was blocked because the permission list omitted MATCH. Cleanup was verified; no speed comparisons ran. The trial is closed—do not rerun its launcher. A focused permission/test correction needs a new reviewed package. Earlier launch-ready/preparation-only statements below are historical; no runtime adoption is established.
+
 **Ready for the user-run offline comparison:** The user approved the one-time accounting recovery and preparation commit. [Final evidence](docs/benchmarks/sqlite-vec-runtime-startup-correction.md) retains21passing tests and30sealed identities/13prior records unchanged; readiness is frozen within the original limits. Follow the [new offline instructions](docs/proposals/sqlite-vec-runtime-followup-handoff.md). No candidate extension has been loaded and no native comparison has run. Earlier blocked statuses are historical; do not use runtime-01.
 
 **Current checkpoint:** The timing correction passed21tests and static review; all30sealed identities/13prior records still match after the session interruption. Final offline readiness is withheld because a preparation-time segment was left open. A [narrow accounting recovery](docs/proposals/sqlite-vec-runtime-startup-correction.md) is ready for decision. No extension load or real comparison has started; do not run the new launcher yet. Earlier ready-next wording is historical.
