@@ -2,7 +2,7 @@
 
 ## Status and authority
 
-**Draft for user review, not implemented or adopted.** The user authorized the static T16 package after proposal commit `cc08343`. This document specifies proposed behavior and settings; it does not approve unresolved policy choices, models, dependencies, new execution or G2. The approved [SPEC](../SPEC.md) remains authoritative. See [package scope](proposals/t16-grounding-contracts.md), [evaluation contract](evaluation.md#t16-draft--support-indicators-and-grounding-review) and [decision register](decisions.md).
+**T16 static review complete; design directions approved, not implemented or adopted at G2.** The user authorized the static package after proposal commit `cc08343`; drafts were committed as `486fd1b`. The user then explicitly retained R01 as a provisional validation baseline and approved R02 indicator and R08 recovery design, following the earlier R03–R07 policy decisions. Runtime components, final performance/context validation, detailed T17 mechanics and G2 remain open. The approved [SPEC](../SPEC.md) remains authoritative. See [package scope](proposals/t16-grounding-contracts.md), [evaluation contract](evaluation.md#t16-draft--support-indicators-and-grounding-review) and [decision register](decisions.md).
 
 Stage 1 stays local, English-only, Windows 11 / 16 GB / CPU-only, supporting PDF, XLSX and CSV. XLS remains deferred; DOCX/TXT are excluded. SQLite plus the exact reviewed sqlite-vec artifact is preferred, not adopted. The existing baseline is a benchmark comparator, not an automatic fallback. No application exists yet.
 
@@ -37,16 +37,16 @@ Separate content identity from reference ownership. Equal bytes can share stored
 
 Preserve the complete normalized extraction separately from bounded retrieval chunks. For tables, repeat headers and row keys with their own provenance, not as if they were adjacent source text. Split wide records by coherent column groups while repeating keys/units and retaining all original locations. A value cannot lose its header, unit, period or row label merely to fit a chunk.
 
-### Proposed initial settings — require review
+### Initial settings — approved as a provisional validation baseline
 
-These conservative starting settings are design proposals, not benchmark-derived capacity guarantees or approved product limits. They do not change upload/library limits.
+The user explicitly retained the draft's small-context settings as a provisional validation baseline. These are not final product defaults, benchmark-derived capacity guarantees or permission for a new run. Model-input fit and representative multi-file checks are required before final adoption. Upload/library limits do not change.
 
 | Setting | Proposal | Reason / alternative |
 |---|---|---|
 | Prose chunk size | Target 600 UTF-8 bytes; maximum 800 including repeated labels | Small evidence blocks for the measured small-model context; larger chunks may retain more context but require new context/quality validation |
 | Prose overlap | At most 120 UTF-8 bytes at an existing sentence/paragraph boundary; zero if no complete boundary fits | Avoid arbitrary partial tokens/values; shared overlap must not count as independent evidence |
 | Structured overlap | No arbitrary character overlap; repeat header/key context explicitly | Preserve relationships instead of flattening rows |
-| Retrieval count | Top 5 distinct eligible chunks, fewer if fewer exist or the evidence budget is exhausted | Carries forward recall@5 comparisons; does not guarantee both files fit a multi-file question |
+| Retrieval count | Retrieve top 5 distinct eligible chunks, fewer if the scope is smaller; supply only the complete evidence that fits the separate input budget | Record ranked and supplied sets separately; recall@5 alone does not guarantee both files reach a multi-file answer |
 | Evidence text | At most 2,000 UTF-8 bytes including labels/anchors | Pack complete source units/fragments in rank order; disclose omitted candidates; never silently cut off a value or quote |
 | Current question | At most 512 UTF-8 bytes in the proposed initial request contract | Reject an overlong question with a clear limit message; do not truncate its meaning |
 | Conversation history | At most the two latest complete user/assistant turn pairs, bounded to 500 UTF-8 bytes and remaining input space | Drop oldest complete pairs first; no model-generated summary introduced as evidence |
@@ -62,8 +62,8 @@ An individual source unit larger than the chunk limit needs a source-aware split
 1. Resolve the conversation and explicitly selected attachment/library **references** server-side. Omitted selection means use the saved selection, not every library document; an explicitly empty selection yields no document evidence. Unknown/unrelated references fail the request rather than silently broadening it. The selection is visible to the user.
 2. Resolve references to ready, current, non-deleted source/extraction/index versions. Detect missing/corrupt originals and unavailable extraction before retrieval. Block affected sources and disclose the limitation. A deduplicated content hash never grants another conversation access.
 3. Apply eligibility **before** ranking. Rank within that set with the adopted metric/version; do not query all attachments and hide disallowed hits afterward. Stable chunk IDs break exact distance ties. Validate finite vectors, dimensions and model/prefix identity.
-4. Resolve and pack only eligible chunks into a per-answer evidence manifest. Each entry has an opaque response-local evidence ID, document/extraction identity, allowed locations, text spans and warnings. Deduplicate repeated overlap without merging separate source ownership or fabricating contiguous quotations.
-5. Pack complete evidence plus mandatory policy/question, then optional history within the adopted input budget. Recheck source/reference versions before generation and before publishing citations. A concurrent change requires a visible source-changed result, not automatic use of stale evidence or an unapproved regeneration loop.
+4. Retain a scoped ranked-candidate record and a separate manifest of evidence actually supplied to the model. Candidate IDs dropped during packing are not valid response citation IDs. Resolve and pack only eligible chunks into the supplied manifest; each entry has an opaque response-local evidence ID, document/extraction identity, allowed locations, text spans and warnings. Deduplicate repeated overlap without merging separate source ownership or fabricating contiguous quotations. Record omitted candidates and required-anchor omissions separately so retrieval success cannot conceal missing model input.
+5. Pack complete evidence plus mandatory policy/question, then optional history within the adopted input budget. Recheck source/reference versions before generation; answer persistence/publication must use an atomic current-version/reference check coordinated with deletion/selection changes. A check followed by an unguarded publish leaves a race and is insufficient. A concurrent change requires a visible source-changed result, not automatic use of stale evidence or an unapproved regeneration loop. The exact transaction/coordination mechanism is a T17 contract.
 6. A similarity score orders candidates; it is not a truth or answerability threshold. Do not turn cosine distance into confidence. If required facts are absent, conflicting, truncated or unreadable, narrow the answer or abstain as below.
 
 Multi-file questions require all necessary source anchors. Rank order alone cannot establish completeness. If only one required source fits, answer that part with an explicit missing-part limitation or ask the user to narrow the request; do not present it as a complete combined answer. Additional retrieval passes, rerankers or model calls require an adopted bounded policy and are not implicit here.
@@ -95,7 +95,14 @@ The existing library warning/block and preservation of shared content are bindin
 
 Source availability is separate from retention of old message text. Missing/corrupt/deleting sources must not supply new answers or live previews. Retained messages or snapshots, if approved, are historical content and must not be silently reintroduced into new evidence/history. A tombstone preserves identity/status only and is not a copy of source text. Preview checks need current state even if a browser kept an old citation ID.
 
-The proposed interrupted-deletion approach first makes deleted references unavailable to retrieval/previews, then completes exclusive cleanup with durable pending status and restart reconciliation. Surviving references keep their required bytes/index entries. Never report physical removal complete before it is verified. Exact transaction, reference-count/reservation, rollback/retry, temporary-artifact and reconciliation rules remain T17 contracts; no background cleanup implementation or secure erasure is asserted.
+The user approved durably recording deletion and blocking retrieval/previews before removing exclusive data, with bounded restart cleanup and an honest pending state. The design sequence is:
+
+1. Validate the request and the referenced-library block. In one metadata transaction, mark the deleted references unavailable, advance their version/revision and record the exclusive-cleanup intent. Commit before removing any bytes. A failure before this commit leaves the prior state intact; no success is reported.
+2. Coordinate cleanup with new reference creation and answer publication for the same content. Revalidate surviving references before destructive work; a stale refcount alone cannot authorize removal. Only server-owned, verified paths below the configured data root may be cleaned. Preserve bytes/index entries needed by any surviving reference.
+3. Remove approved exclusive originals/messages/quotations/processed data and persist cleanup progress. File operations are not atomic with SQLite; restart reconciliation therefore operates from the durable intent, within adopted time/process/disk boundaries, without broad directory deletion or unbounded retries.
+4. Show `cleanup pending` after logical deletion until required physical cleanup is verified. Record sanitized failure/pending state on interruption; never report physical removal complete early. Subsequent retrieval/previews remain blocked for deleted references even if bytes still exist.
+
+The exact transaction/locking, quota reservation, duplicate-request, rollback/retry and temporary-artifact mechanics remain T17 contracts. No background cleanup implementation, adopted execution budget or secure-erasure guarantee is asserted. Retained historical-answer display follows the separately approved R04 policy; it does not revive a deleted conversation.
 
 ## Requirement and negative-case walkthrough
 
@@ -128,18 +135,30 @@ This is a manual contract walkthrough against authored definitions, not a model/
 
 | Decision | Recommended proposal | Alternative / practical consequence | Status |
 |---|---|---|---|
-| R01: bounded retrieval/context | Review the numerical starting settings above, top5 and source-aware splits; establish token-fit validation at T17 before use | Larger contexts/chunks or more passes need explicit memory/latency/quality validation; byte bounds alone are insufficient | Proposed, not measured/adopted |
-| R02: support wording / quality | Use observable states in evaluation design, no user-facing correctness percentage; retain initial aggregate targets with explicit scoring definitions | Semantic verification needs a separately evaluated local process, not a renamed validity check | Proposed for contract approval |
+| R01: bounded retrieval/context | Retain the small-context settings above, top5 and source-aware splits as a provisional validation baseline; establish token-fit and representative multi-file validation before adoption | Larger contexts/chunks or more passes need explicit memory/latency/quality validation; byte bounds alone are insufficient | **Provisional baseline explicitly approved**; no runtime trial or final product default adopted |
+| R02: support wording / quality | Use observable states, "Citations checked; meaning not independently verified", missing-evidence/OCR/partial warnings and no user-facing correctness percentage; retain existing internal targets | Semantic verification needs a separately evaluated local process, not a renamed validity check | **Indicator design explicitly approved**; runtime behavior and semantic scores not demonstrated |
 | R03: delete conversation history | Delete messages/quotations and exclusive processed data with the chat; preserve surviving shared/library references | Recoverable-history alternative was not selected; temporary cleanup mechanics still need definition | **Approved by explicit user reply**; existing exclusive-original rule remains binding |
 | R04: old answer with unavailable source | Keep saved answer text, mark source unavailable, block previews and exclude it from new answers; do not create an extra quote snapshot | Hiding affected quotations was not selected | **Approved by explicit user reply**; referenced-library deletion stays blocked |
 | R05: byte units / counting | Decimal MB=1,000,000bytes and GB=1,000,000,000bytes; count attached document references, including library references, toward conversation10 | Binary units/unique-content-only conversation counting were not selected; reservation and duplicate-request mechanics still need specification | **Units/reference-counting direction approved**; implementation mechanics remain T17 work |
 | R06: library originals / dedup | Charge the1GB library-original budget once per unique stored library content hash; references still count separately toward conversation10 | Per-item logical-byte charging was not selected | **Approved by explicit user reply**; shared identities remain distinct |
 | R07: derived/temp caps | **5,000,000,000bytes processed data and1,000,000,000bytes temporary processing files**, with a clear stop at either cap | Smaller2GB/512MB alternative was not selected; automatic eviction is not approved | **Cap values/clear-stop behavior approved**; classification, reservation/concurrent-write and recovery accounting remain T17 work |
-| R08: deletion recovery | Hide deleted references from retrieval immediately and persist pending exclusive cleanup until verified; on restart reconcile within an approved resource boundary | Fully synchronous cleanup is simpler to describe but may block the UI and still needs crash recovery | Proposed; exact T17 lifecycle transaction/retry contract unresolved |
+| R08: deletion recovery | Durably record logical deletion/cleanup intent before removing exclusive data; block retrieval/previews; resume bounded cleanup after interruption and show pending until verified | Synchronous physical cleanup was not selected; exact transaction/coordination/retry details still need T17 design | **Recovery design explicitly approved**; no physical-deletion implementation or execution budget adopted |
 
 The5GB processed budget covers the agreed extracted text, embeddings, indexes and previews; it is not an overall data-directory cap or RAM allocation. The1GB library-original budget does not impose an aggregate cap on all saved-conversation originals. Database/history/journal and in-flight expansion classification, quota reservations, duplicate-request semantics and overall original-storage policy still require explicit T17 review. No cap is claimed sufficient for every allowed upload; storage-full behavior must preserve consistent state and explain the limit rather than silently reducing the approved file-size limit.
 
-No further storage benchmark is proposed by default. R01/R02/R08 still require contract review; R03–R07 record only the explicit choices just made. Final resource/latency targets, larger-scale acceptance, physical16GB validation, exact parser/OCR/model/index adoption, chart scope and full G2 remain separate gates. Missing decisions block final approval of their dependent behavior; they do not prevent completing independent static drafts.
+No further storage benchmark is proposed by default. R01–R08 now record explicit design/policy directions, with R01 deliberately provisional. Final resource/latency targets, larger-scale acceptance, physical16GB validation, exact parser/OCR/model/index adoption, chart scope and full G2 remain separate gates. Detailed T17 mechanics and representative validation are prerequisites for adoption, not hidden implementation choices.
+
+## Static review outcome after draft commit486fd1b
+
+The user authorized review with the draft commit. Review identified the following ambiguities in the committed prose and corrected them without changing executable code, approved limits or initial aggregate quality targets:
+
+| Review finding | Clarification and manual negative trace |
+|---|---|
+| Retrieval versus supplied evidence was ambiguous | Keep pre-packing recall@5 separate from supplied-evidence recall. If both Q03 sources rank in top5 but one is omitted by the input budget, retrieval may pass while supplied-evidence coverage/completeness fails; a dropped candidate cannot be cited |
+| No-evidence wording could mask a failed stage | No-evidence applies only to a successful pre-generation check with no usable source; applicable scope/request, incomplete-generation and citation failures take precedence and remain in diagnostics |
+| A pending cleanup state alone did not define crash-safe ordering | Commit logical deletion and cleanup intent before unlinking bytes; coordinate concurrent references/publication. A crash between commit and removal leaves retrieval blocked and cleanup pending, preserving shared data |
+
+Recommendation: carry the approved R02/R08 designs and provisional R01 baseline into T17, with the visible prerequisites above. This closes the T16 static review, not G2 or any upstream runtime acceptance. No dynamic race/recovery/model test was run; the traces describe future test obligations.
 
 ## Static verification and handoff
 

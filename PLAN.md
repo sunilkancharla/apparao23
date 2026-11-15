@@ -1,6 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — T16 drafts ready for policy/contract review
+## Current execution point — T16 static review complete; T17 prerequisites next
+
+Drafts committed as `486fd1b`; the user then approved R01 as a provisional validation baseline and R02/R08 indicator/recovery design. Together with the prior R03–R07 policy choices, this completes the T16-1–6 static package. [Review findings and clarifications](docs/retrieval-design.md#static-review-outcome-after-draft-commit486fd1b) separate ranked retrieval from supplied evidence, preserve error precedence and require durable deletion intent plus publication/reference coordination. No executable code, fixture/score changes, tests or runtime trials were introduced.
+
+Next is T17 readiness review and its concrete approval package: exact architecture/components, token-fit/multi-file validation, detailed accounting/concurrency/recovery and resource/latency acceptance. T16A chart feasibility or explicit user-approved deferral remains a G2 prerequisite. Larger-scale/physical16GB acceptance and final component adoption are not inferred from T16 completion. Nine review-update documents await separate commit approval. Earlier pending-T16-review sections below are historical.
+
+## Earlier execution point — T16 draft handoff
 
 The user authorized the exact static package after proposal commit `cc08343`. T16-1–4 are drafted in [retrieval design](docs/retrieval-design.md) and [evaluation design](docs/evaluation.md#t16-draft--support-indicators-and-grounding-review): prerequisite gaps, source-aware chunks/scope/context, answers/citations, observable support states and claim-level evaluation. Existing fixture facts, IDs and scoring flags are unchanged; there are16active/9excluded questions and zero scoring-eligible questions. Definition JSON/hash and local document checks passed; no runtime test or new benchmark was run.
 

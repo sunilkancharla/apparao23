@@ -1,6 +1,8 @@
 # Stage 1 Atomic Task Checklist
 
-## T16 — drafting authorized; contracts and policy review pending
+## T16 — static package complete; runtime/G2 requirements remain open
+
+Drafts committed `486fd1b`. User explicitly retained R01 as provisional and approved R02/R08 design after the static review; R03–R07 were already decided. [Review outcome](docs/retrieval-design.md#static-review-outcome-after-draft-commit486fd1b) clarifies packing metrics, error-state precedence and durable deletion/concurrent-publication ordering. No executable tests, code, fixtures, scores or runtime activity. Nine review-update docs await separate commit approval; T17 details, chart gate, final validation/resources and G2 remain open. Earlier pending-review notes below are historical.
 
 The user authorized the package with "please proceed" after commit `cc08343`. [Retrieval design](docs/retrieval-design.md) and [evaluation draft](docs/evaluation.md#t16-draft--support-indicators-and-grounding-review) provide acceptance evidence for T16-1–4. Definition hashes/JSON/IDs/scope/flags and local links checked; no question/manifest change, scoring run or runtime execution. R03–R07 explicit retention/counting/5GB processed/1GB temporary choices are recorded in SPEC/decisions; T16-5 remaining contract approval is pending and the T16-6 checkpoint is saved. Nine draft/status files await separate commit approval. Earlier proposed-package notes below are historical.
 
@@ -10,8 +12,8 @@ User approved the recommended storage direction after results commit `18be917`; 
 - [x] **T16-2 — Retrieval and context contract draft.** Source/format-aware chunks, pre-ranking selected-reference scope, version identity, history isolation and bounded proposed settings specified. Manual format/table/isolation/input-boundary walkthrough complete; token-fit validation remains an adoption prerequisite.
 - [x] **T16-3 — Answer/citation contract draft.** Stable source/version/anchor/quote checks, calculation/ambiguity/abstention, hostile-input handling and unavailable-source alternatives specified. Q01–Q06/Q10–Q16/Q18–Q20 and T16-E01–E07 manually traced as design cases, not executed tests.
 - [x] **T16-4 — Support/evaluation contract draft.** Observable-state truth table and per-claim metrics preserve initial gates, hard failures and N/A/fixed denominators. No correctness probability or semantic-support inference from valid IDs. All25question definitions retain original scoring flags/facts/hashes.
-- [ ] **T16-5 — Contract/policy review, partly decided.** R03–R07 explicit chat deletion, unavailable-source display, decimal/reference/library accounting and5GB processed/1GB temporary choices recorded in SPEC/decisions. R01/R02/R08 proposals and T17 reservation/recovery/context-fit/resource/adoption requirements remain open. Static review complete; do not infer final contract approval from policy replies.
-- [ ] **T16-6 — Final closeout, checkpoint saved.** Draft outcomes/blockers/review evidence recorded; nine-file draft commit approval requested separately. Finish final approved-contract status after T16-5 decisions; G2/T17 prerequisites remain open.
+- [x] **T16-5 — Contract/policy review.** R03–R07 recorded; user explicitly retained R01 as a provisional baseline and approved R02/R08 indicator/recovery design. Static review corrected ranked-versus-supplied evidence metrics, error precedence and durability/race ambiguities. T17 mechanics, representative validation and G2 remain explicit prerequisites.
+- [x] **T16-6 — Static closeout/checkpoint.** Approved directions, review corrections, static verification and remaining T17/G2/scale/16GB/chart/resource requirements recorded; readable review-update diff and separate nine-file commit request prepared. No runtime implementation/adoption or new execution budget inferred.
 
 These refine the existing T16 design task below; they do not replace its final acceptance or close incomplete T12/T16A/T17 work.
 

@@ -1,5 +1,15 @@
 # Stage 1 Decision Register
 
+## T16 review directions approved — static package complete
+
+Drafts committed as `486fd1b` under the user's explicit nine-file Git approval; the same request authorized the remaining static review. The user then explicitly selected all three recommendations:
+
+- **R01:** keep the draft's small-context settings as a provisional validation baseline, requiring model-input fit and representative multi-file checks before final adoption. No new trial or final product defaults are approved.
+- **R02:** approve "Citations checked; meaning not independently verified", missing-evidence/OCR/partial warnings and no correctness percentage derived from citation validity; preserve existing internal targets.
+- **R08:** approve durable deletion records and retrieval/preview blocking before exclusive cleanup, with bounded restart recovery and pending status until verified; preserve shared/library data.
+
+The [static review](retrieval-design.md#static-review-outcome-after-draft-commit486fd1b) clarified pre-packing versus supplied-evidence metrics, error/no-evidence precedence and crash-safe cleanup/publication ordering. These are design corrections, not executed tests, new numeric quality thresholds or component adoption. R03–R07 policy choices below remain unchanged. T16-1–6 static work is complete; T17 detailed contracts, chart feasibility/explicit deferral, final performance/scale/physical16GB acceptance and G2 remain open. Review-update commit approval is separate from the already consumed draft commit approval.
+
 ## T16 storage/retention choices approved — contract review remains
 
 The user explicitly selected the recommended options in two sets of T16 questions:

@@ -2,26 +2,26 @@
 
 ## T16 draft — support indicators and grounding review
 
-**Design draft, pending user contract/threshold decisions; no new scores or runtime evaluation.** T16 was authorized after proposal commit `cc08343`. The [retrieval contract](retrieval-design.md) specifies scope, provenance, bounded input, citations, calculations and unresolved lifecycle policies. Existing facts, IDs, active/excluded scope and scoring flags in the manifest/questions remain unchanged. The approved initial gates below are carried forward; this section proposes precise interpretation, not achieved accuracy or an automatic threshold change.
+**T16 indicator design approved; no new scores, runtime implementation or G2 adoption.** Drafts were committed as `486fd1b`; the user then approved R02 wording/warnings/no correctness percentage, retained R01 as a provisional baseline and approved R08 recovery design. The [retrieval contract](retrieval-design.md) records those directions and remaining T17 mechanics. Existing facts, IDs, active/excluded scope and scoring flags remain unchanged. Initial quality targets are carried forward, not claimed achieved or automatically changed. Clarifications below distinguish pre-packing retrieval from evidence actually supplied to generation.
 
 ### User-facing support indicator
 
 The initial indicator reports observable retrieval/citation checks and limitations. It must not show "95% correct", "high confidence", "verified answer" or a semantic-support grade inferred from valid IDs, cosine distance or model self-assessment. OCR confidence is an engine observation about recognized text, not answer correctness. Local human evaluation labels remain internal and are not silently reused as a live-answer guarantee.
 
-Proposed states, checked in this order where applicable:
+Approved observable-state design, with applicable hard failures taking precedence over a successful no-evidence result:
 
 | Observed condition | State / example wording | Required handling |
 |---|---|---|
 | Scope/source-version integrity fails or request processing errors | `unavailable` — "Evidence could not be checked" | Refuse affected retrieval/previews and do not publish a completed grounded answer |
-| No usable evidence in the selected scope | `no_evidence` — "No usable evidence in selected documents" | Abstain or ask for a source/clarification; never search unrelated attachments automatically |
 | Context fit is unverified/truncated, response is malformed, output limit reached or generation lacks a final completion record | `incomplete` — "Answer incomplete" | Mark the response incomplete; no completed-answer status or successful latency score |
 | A cited ID/location/quote is invalid or outside the supplied manifest | `citation_problem` — "Citation could not be validated" | Refuse completed grounded-answer status; no silent repair or uncounted retry |
+| Successful pre-generation checks find no usable selected evidence; generation is not attempted | `no_evidence` — "No usable evidence in selected documents" | Abstain or ask for a source/clarification; never search unrelated attachments automatically; do not relabel a failed stage as no-evidence |
 | Supplied citations resolve but one or more factual text blocks lack a citation | `citations_missing` — "Some statements have no citation" | Identify missing structural coverage; factual support still unverified; whether safe partial text is shown remains a T17 contract |
 | Supplied citations/quotes all resolve and every declared factual block has at least one citation | `citations_resolved` — "Citations checked; meaning not independently verified" | Permit only this structural description, never a claim that every factual assertion is supported |
 
 Warnings are an independent list and remain visible with any state: OCR/low recognition quality, coarse location, omitted evidence, partial answer, source conflict, unavailable selected source or missing formula cache. A structurally valid partial answer can have `citations_resolved` plus a partial-answer warning; this is not a complete-answer success. A missing source that is required for an answer prevents a complete answer even when other sources remain usable. A clarification or refusal with no factual document claims has citation coverage N/A, not100%; do not invent citations merely to produce a badge. Pure question-only clarification should be labelled as clarification, not a checked factual answer.
 
-The truth table is a proposal for UI/API design, not an implemented classifier. Model-declared factual blocks and attached citations can omit hidden assertions or attach an irrelevant source. Therefore automatic block coverage is only a structural check, never the internal factual-claim coverage metric. Model-generated "all supported" labels are untrusted. Initial UI wording avoids a coverage percentage; T17 must define the exact safe response schema and rendering.
+The truth table is an approved design direction, not an implemented classifier. Evaluate predicates only at applicable stages: a model call is unnecessary after a successful no-evidence decision, so its absent completion metadata is not a generation failure. When generation was attempted, errors/incompleteness cannot be hidden by an empty result set. Preserve every detected failure/warning even when one state has display precedence. Model-declared factual blocks and citations can omit hidden assertions or attach irrelevant sources; automatic block coverage is only structural, never the internal factual-claim metric. Model-generated "all supported" labels are untrusted. T17 must define the exact safe schema/rendering and stage-state transitions.
 
 ### Claim-level evaluation and denominators
 
@@ -31,8 +31,9 @@ For each claim, retain source anchors/citation links and label semantic support 
 
 | Measure | Numerator / denominator and failure behavior |
 |---|---|
-| Retrieval recall@5 | Required gold evidence units retrieved in the selected top5 / all required gold units for enabled answerable questions; map by provenance, not generated chunk IDs; count duplicated overlaps once |
-| Retrieval precision@5 | Relevant returned evidence units / returned units, with per-unit relevance grades2/1/0 retained; report actual returned count; never pad a short scope with hidden documents |
+| Retrieval recall@5, before packing | Required gold evidence units covered by the scoped ranked top5 / all required gold units for enabled answerable questions; map by provenance, not generated chunk IDs; count duplicated overlaps once and require all necessary spans/headers for each gold unit |
+| Returned-set precision, up to5 | Relevant returned chunks / actual returned chunks before packing, with grades2/1/0 retained; disclose actual count; this variable-denominator measure is not fixed-denominator precision@5 when fewer than5 chunks exist |
+| Supplied-evidence recall, after packing | Required gold units completely present in the actual model-input manifest / all required gold units; record omitted candidate IDs/anchors and packing limits separately; do not cite evidence dropped before generation |
 | Structural citation validity | Valid claim/citation/location links / all emitted links; every emitted link must satisfy scope/manifest/version/location/quote rules; any invalid ID/location/quote is a hard failure regardless of aggregate |
 | Semantic citation correctness | Fully supporting claim/citation/location links / all emitted links; invalid, partial, irrelevant or contradicted links are not numerator successes; repeated identical links within one claim count once |
 | Semantic citation coverage | Factual claims with the required supporting citation or citation combination / all factual claims requiring source support; one multi-source claim needs all required sources |
@@ -52,6 +53,7 @@ Preserve the initial deterministic hard gates and proposed aggregate targets: re
 | Q02 states2024=352361,2025=350764 and calculated decrease1597, all anchored to R09 line2 and independently checked | Three atomic claims can be supported; the change is a calculation, not a quoted cell. All required input anchors must remain attached |
 | The same answer adds "a management decision caused it" with an otherwise valid R09 citation | The new causal claim is unsupported; structural citation validity can pass while groundedness, semantic citation correctness and coverage decrease. The indicator cannot say "verified answer" |
 | Q03 cites only R08 output and omits R09 workers | Partial/incomplete response, not fully correct; multi-source evidence coverage is incomplete even if the single citation resolves |
+| Q03 retrieves both sources in top5 but packs only R08 | Pre-packing retrieval can succeed; supplied-evidence recall/completeness remains incomplete. A citation to unpacked R09 is invalid for that answer, even if R09 was a valid retrieval candidate |
 | Q06 correctly says the files do not establish a management cause | Successful unsupported behavior; no fictitious document claim or citation needed; empty claim/citation denominators are N/A |
 | Q12 unreadable page, Q15 missing formula cache | Warn/abstain for the unavailable fact; no fabricated OCR text or executed formula; cite the limitation's actual location if it exists |
 | Q16 points value20 to data record2 spanning physical lines3–4 | Pass the definition-level provenance walkthrough; an invented single-line anchor fails even if the value is right |
@@ -59,6 +61,7 @@ Preserve the initial deterministic hard gates and proposed aggregate targets: re
 | T16-E03 valid citation but unsupported "budget doubled" | Citation may resolve; semantic support fails on review; no high-support indicator may be inferred from resolution |
 | T16-E04 old citation points to a missing/deleted/unselected source | No new evidence/preview. For a missing/corrupt source in a retained chat, keep saved answer readable with an unavailable-source label and exclude it from new answers, as explicitly approved; current selection still governs previews |
 | T16-E06 response stops at output token limit or prompt-fit proof is absent | Incomplete/readiness refusal, not a completed grounded answer or fast latency success |
+| A failed model call is followed by an empty evidence/result packet | Preserve the failure/incomplete state; do not convert it to a successful no-evidence refusal. Conversely, genuine pre-generation no-evidence requires no model call |
 
 These are manual design traces, not newly generated model outputs or executed product tests. No new question IDs/fixtures are necessary: use the16active questions plus named T16 design cases in the retrieval contract. Q18/Q19 remain active chart definitions with T16A readiness/adoption gaps; do not relabel them excluded or passing to improve results. The nine historical exclusions remain excluded. Static checks verify links, unchanged definition hashes, scope/flag counts and preservation of thresholds; future acceptance requires a separately authorized executable harness and ready artifacts.
 

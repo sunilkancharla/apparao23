@@ -17,6 +17,12 @@ The user explicitly selected the following choices during T16 design review. The
 - Deleting a conversation also deletes its messages, quotations and exclusively owned processed data, while preserving library/shared content and surviving references. The existing exclusive-attachment deletion rule remains binding.
 - If a source in a retained chat becomes missing or corrupt, keep the saved answer readable, label its source unavailable and exclude that historical answer/source from new answers. Referenced-library deletion remains blocked. No additional quotation snapshot is authorized.
 
+The user also approved the following T16 review directions after draft commit `486fd1b`:
+
+- Keep R01's small-context settings in `docs/retrieval-design.md` as a **provisional validation baseline**, including top5, maximum800-byte chunks,2,000-byte evidence and3,000-byte serialized input. Model-input fit and representative multi-file checks are required before final adoption. This is not a new trial authorization or a final product-context limit.
+- Approve R02's indicator design: "Citations checked; meaning not independently verified", with missing-evidence/OCR/partial-answer warnings and no citation-validity-based correctness percentage. Existing internal quality targets remain unchanged; runtime implementation and semantic accuracy are not claimed.
+- Approve R08's recovery design: durably record deletion and block retrieval/previews before removing exclusive data; after interruption, resume bounded cleanup and display cleanup pending until removal is verified, preserving shared/library content. Exact coordination, resource bounds and recovery implementation remain T17/G2 contracts.
+
 Exact reservation/concurrent-write accounting, database/journal/temp classification, interruption/reconciliation, retry and physical cleanup verification remain design requirements for T17. No secure-erasure guarantee follows from logical deletion. Detailed decision evidence is recorded in `docs/decisions.md` and `docs/retrieval-design.md`.
 
 ## Objective
