@@ -1,4 +1,14 @@
-# Latest checkpoint — T12-D native trial completed; results commit/adoption decisions next
+# Latest checkpoint — preferred storage recorded; concrete T16 package awaiting review
+
+**Proposal commit authorized:** The user replied "yes, proceed with the commits", explicitly approving the six reviewed proposal/status documents. Stage only that exact list; the resulting commit ID is recorded in Git. This commit adds no contract implementation, retention decision, runtime adoption or new trial permission. Earlier pending-commit wording describes the pre-approval state.
+
+Results commit `18be917` contains the approved seven T12-D result documents. The user then approved proceeding with the recommended sequence: record sqlite-vec as preferred candidate, resolve remaining storage/retention details, T16 contracts, then T17/G2 and the CSV-first implementation. Preference is recorded in docs/decisions.md; final runtime adoption and D01/D04 are not approved by that reply.
+
+Prepared docs/proposals/t16-grounding-contracts.md and updated PLAN/TODO/README/decisions/checkpoint only (six files). Exact proposed T16-1–6 package is static design: retrieval/context, answers/citations, observable support states, preserved initial rubric and review of lifecycle/storage alternatives. Explicitly proposes drafting with upstream gap register; final prerequisites/G2 still apply. No executable code, fixture generation, dependency/download/native/model/parser/API/server work, runtime data edits, new budget/epoch or old-run retry. No scoring flags or quality/retention limits changed. Existing questions/manifest and SPEC untouched. Package and these six proposal/status documents' commit await approval; later contract commits separate.
+
+Next: user reviews exact package; after approval finish covered design tasks without per-edit/test permission. Draft policies/thresholds require actual decisions before dependent contract approval. T16A chart trial or explicit deferral, scale/physical16GB, final performance and G2 remain open. No subagents or callable /compact/status action used. Preserve unrelated untracked files and all sealed sources/assets/closed allocations. Earlier pending-results-commit and native-handoff checkpoints below are historical.
+
+# Earlier checkpoint — T12-D native trial completed; results commit/adoption decisions next
 
 **Results commit authorized:** The user said "yes, proceed with the commits", approving the seven reviewed result documents. Commit only that explicit file list; the resulting commit ID is recorded in Git. Earlier pending-commit wording describes the pre-approval checkpoint. Runtime adoption and the next work package remain separate decisions.
 

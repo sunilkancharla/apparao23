@@ -1,5 +1,18 @@
 # Stage 1 Atomic Task Checklist
 
+## T16 preparation — candidate preference recorded; exact design package proposed
+
+User approved the recommended storage direction after results commit `18be917`; [decision register](docs/decisions.md) records sqlite-vec as preferred candidate, not adopted runtime. [Package](docs/proposals/t16-grounding-contracts.md) defines each task's objective, prerequisites, acceptance and evidence. Six proposal/status documents are prepared; exact package/commit approval pending. Full upstream acceptance and D01/D04/D06 decisions remain visible; no native trial or product implementation is authorized.
+
+- [ ] **T16-1 — Map evidence and blockers.** Requires package approval; trace completed evaluations, deferrals and unresolved decisions to contract prerequisites. Evidence: retrieval-design gap table.
+- [ ] **T16-2 — Retrieval and context contract.** Requires T16-1; draft source-aware chunks, selected-reference scope and bounded context/settings with explicit proposed status. Verify format/location, table and isolation walkthroughs.
+- [ ] **T16-3 — Answers and citations.** Requires T16-2; specify support/ambiguity/abstention, stable anchors/quotes and missing-source alternatives. Verify the package's supported/unsupported/multi-file/injection examples.
+- [ ] **T16-4 — Support signals and rubric.** Requires T16-3; define observable indicator states and per-claim metrics without a correctness probability. Verify truth table, existing scope/denominators and proposed threshold refinements.
+- [ ] **T16-5 — Contract/policy review.** Requires T16-2–4; present D01/D04 and remaining quality/context choices without silently selecting them. Verify requirement/negative-case matrix, links/diff and any necessary JSON checks; record actual decisions.
+- [ ] **T16-6 — Closeout and checkpoint.** Requires T16-5; distinguish drafted/approved/blocked outcomes, show reviewed changes and request a separate contract commit. Evidence: updated status and remaining T17/G2 prerequisites.
+
+These refine the existing T16 design task below; they do not replace its final acceptance or close incomplete T12/T16A/T17 work.
+
 ## T12-D — bounded evaluation complete; adoption remains gated
 
 [Native results](docs/benchmarks/sqlite-vec-match-results.md): preparation commit `e4db995`, completed user-operated runtime-03, verified teardown/persistence,72/96reservations,37sealed identities/20prior records unchanged. Both controls, four B recovery pairs and four paired measurements completed;192ranking/distance checks passed. No retry, runtime adoption or full T12 acceptance. Results-documentation commit awaits approval. Earlier approval/readiness notes below describe history.

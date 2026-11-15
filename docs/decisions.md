@@ -1,5 +1,11 @@
 # Stage 1 Decision Register
 
+## Storage preferred candidate — approved direction, adoption pending
+
+After reviewing the committed T12-D results (`18be917`), the user replied "yes proceed please" to the recommendation to record SQLite plus the exact reviewed sqlite-vec0.1.9 Windows artifact as the preferred candidate, resolve storage/retention details and prepare T16 before G2. Record that preference only. It does not approve installing/loading the artifact in an application, native query optimization, new benchmarks, reduced upload/library limits or final runtime adoption.
+
+The [comparison](benchmarks/sqlite-vec-match-results.md) supports lower measured search latency with matching synthetic reference results, at the cost of larger files and several higher update costs. Preserve pinned companion notices, the exact-artifact restrictions and the binary/source-provenance limitations. The baseline remains a comparator, not a silently selected fallback. Final storage/adoption, scale/performance and D01/D04 details remain for review. The [T16 package](proposals/t16-grounding-contracts.md) is proposed for static contract drafting; no unresolved lifecycle policy is selected by this preference.
+
 ## sqlite-vec exact-wheel companion notices — accepted
 
 Following static-review commit `3092aeb`, the user explicitly said "i do accept" to using the pinned upstream license texts as companion notices for the exact reviewed Windows wheel. This narrow exception applies only to `sqlite_vec-0.1.9-py3-none-win_amd64.whl`, SHA-256 `4a28dc12fa4b53d7b1dced22da2488fade444e96b5d16fd2d698cd670675cf32`, with unchanged bytes and the MIT/Apache texts from upstream commit `e9f598abfa0c06b328d8fe5da9c3760cce74be10` identified in the [artifact report](benchmarks/sqlite-vec-artifact-review.md). Preserve both pinned texts alongside the artifact/any later explicitly approved local evaluation and keep the missing-bundled-notices finding visible. No repackaging, blanket exception for other artifacts, binary/source-build equivalence, unrestricted redistribution or legal clearance is inferred. This records the notice decision only: installation, wrapper import, DLL/SQLite loading, a new empirical package and G2 adoption remain separately gated.

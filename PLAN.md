@@ -1,6 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — T12-D completed; storage adoption review next
+## Current execution point — storage preference recorded; T16 design package proposed
+
+T12-D results committed as `18be917`. The user approved the recommended direction: SQLite plus the exact reviewed sqlite-vec artifact is the preferred storage candidate, with final adoption at G2. [Decision register](docs/decisions.md) records the preference and measured trade-offs; D01/D04, target-scale/16GB/performance and architecture acceptance remain open.
+
+Review the concrete [T16 static design package](docs/proposals/t16-grounding-contracts.md). T16-1–6 will map remaining prerequisites, draft retrieval/context/citation/support contracts, preserve the approved rubric and present explicit storage/retention choices. Drafting with a gap register is proposed; upstream final-acceptance prerequisites are not waived. No installation, native/model/parser execution, product implementation or new trial is included. Exact package and six proposal/status-document commit approvals are requested separately; the user's preference is already recorded and need not be approved again.
+
+## Earlier execution point — completed T12-D review
 
 Preparation committed as `e4db995`. The user completed runtime-03 with verified teardown and receipt persistence. [Native results](docs/benchmarks/sqlite-vec-match-results.md) confirm both controls, four B crash/reopen pairs and all four paired A/B measurements passed;192ranking/distance checks matched the independent reference. All37sealed identities and20prior records remain unchanged. The meter is closed at72/96reservations. D1–D6 are complete as this bounded evaluation; no retry or adoption is implied.
 
