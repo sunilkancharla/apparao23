@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-D static review complete
+
+R1 closeout and partial repair are committed as `986305d` and `832bb06`. The user requested static launcher/accounting diagnosis. [Review findings](docs/benchmarks/public-source-static-diagnosis.md) leave the extra process unexplained and identify specific admission/accounting/completion defects. Recommended order is the separately proposed **R1-A fake-only accounting/verdict package**, then a separately approved instrumented launcher check if needed, then fresh public research. No helper/tests/workers/network/installation ran in this static review; old allocations remain closed. G2 remains open. Review-document commit and R1-A approval are separate. Earlier execution-point notes below are historical.
+
 ## Current execution point — design pack committed; R1startup stop preserved
 
 Committed the approved11-file architecture/policy pack as `dbd9137`. The user approved R1; its new helper failed before any HTTP because the initialized ledger omitted `pending_bytes`, then the job-close adapter lacked `observe_native`. [Stop report](docs/benchmarks/public-source-review-stop.md):0requests/0bytes/0sources, closed allocation, original meter and readiness/source history preserved. Nine fake tests passed but missed this real initializer/close-protocol integration. No network-blocking or advisory finding is inferred.

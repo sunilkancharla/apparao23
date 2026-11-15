@@ -1,5 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-D — static diagnosis complete; R1-A proposed
+
+User requested the next static review after R1-S commit `832bb06`. [Findings and exact R1-A proposal](docs/benchmarks/public-source-static-diagnosis.md) identify incomplete workflow accounting, a reachable second-control false-success path, missing terminal-status admission checks and conflated cleanup/count verdicts. Additional process identity remains unknown. No tests/workers/network/helper execution or closed-ledger edits occurred.
+
+- [x] **R1-D1:** Review committed launcher/accounting paths and sanitized receipts; record confirmed facts and unknowns.
+- [x] **R1-D2:** Trace failure/admission branches; propose fake-only accounting/verdict prerequisite with finite shared limits.
+- [ ] **R1-A:** Await exact package approval before authoring/running successor controls; not permission for workers or public research.
+
+Static review documents await separate commit approval. Earlier source/results-pending wording below is historical; those files are committed in `832bb06`.
+
 ## T17-R1-S — approved repair stopped; integration incomplete
 
 User approved R1 closeout commit (`986305d`) and no-network repair. [Results](docs/benchmarks/public-source-repair-results.md): two successor aids;13regressions/Ruff pass; cleanup mutation detected. First real control exited0 but kernel counted2processes, not1; active0/direct child reaped/handle closed, receipt persisted despite accounting exception. No second worker, HTTP or retry. Source/results commit and further diagnosis require approval. Earlier pending R1-S approval wording is historical.
