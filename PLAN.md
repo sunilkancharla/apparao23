@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-L proposal prepared, not executed
+
+R1-A source/results committed `bcdb9c4`. User requested preparation of the next step. [R1-L proposal](docs/proposals/public-source-launcher-validation.md) specifies official declaration checks, test-first observation aids and at most two owned stdlib controls, with stage/identity evidence and a fully shared finite allocation. Expected count remains one; extra-process identity is unresolved. This turn changes documentation only. Proposal commit and exact package/execution-boundary approvals are pending; no helper, research, worker or runtime adoption is authorized by this proposal. Earlier pending R1-A commit notes below are historical.
+
 ## Current execution point — R1-A fake-only prerequisite complete
 
 Static review committed `3f7591a`; user approved R1-A. [Fake-control results](docs/benchmarks/public-source-accounting-results.md) record18passing tests/Ruff and a caught second-control mutation, with a fresh fully prepaid48-unit allocation/12protected stop units. Admission, accounting and independent verdict policies are tested as a single-writer prototype, without real launcher/network execution. Next prepare an instrumented launcher validation package before any fresh public review; unexplained process identity and G2 gaps remain open. Results/source commit needs separate approval. Earlier pending R1-A/review-commit notes below are historical.

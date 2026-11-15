@@ -1,5 +1,17 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-L — instrumented launcher proposal prepared
+
+R1-A committed `bcdb9c4`. User requested the next proposal. [Exact package](docs/proposals/public-source-launcher-validation.md) defines prerequisites, acceptance/evidence and stop conditions for each task below; source preparation/research/execution await approval. Proposal-document links/diff checked; no trial allocation or code changes.
+
+- [ ] **R1-L1:** Freeze fresh80-unit/1,200-second allocation and preservation identities after approval.
+- [ ] **R1-L2:** Verify official Windows/Python declarations and bounded event/identity method before any launch.
+- [ ] **R1-L3:** Test-first two new successor aids; fake regressions and Ruff before real controls.
+- [ ] **R1-L4:** At most two sequential owned stdlib controls with explicit identity/accounting/resource limits; stop on first ambiguity.
+- [ ] **R1-L5:** Review distinct verdicts and shared charges, close and checkpoint; results commit separately gated.
+
+The proposed connected synthetic execution boundary explicitly claims no filesystem/network confinement; it is not candidate/application native approval. Commit and package approval pending. Earlier R1-A-results-pending notes below are historical.
+
 ## T17-R1-A — fake-only accounting prerequisite complete
 
 User approved the R1-D commit (`3f7591a`) and exact fake-only R1-A package. [Results](docs/benchmarks/public-source-accounting-results.md):18tests/Ruff pass, weakened second-control mutation caught, two new typed successor aids, all48units prepaid with12protected stop units. No real workers/HTTP/install/candidate execution. Earlier sources/closed ledgers preserved. Extra Windows process remains unexplained; G2 remains open.
