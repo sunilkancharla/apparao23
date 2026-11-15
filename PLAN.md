@@ -1,5 +1,17 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — C4 ready; C5 user offline trial next
+
+User explicitly approved the one-time accounting recovery and ten-file commit. Original meter preserved; final readiness records1372.729conservative preparation seconds including180for documentation/Git,56/96reservations,30sealed identities/13prior records unchanged, no open segment/native epoch. No source edits/reseal or test repetition. C1–C4 complete; next follow the [approved offline handoff](docs/proposals/sqlite-vec-runtime-followup-handoff.md), then C6 actual findings. [Preparation report](docs/benchmarks/sqlite-vec-runtime-startup-correction.md) retains21-test/static evidence and accounting limitations. Earlier blocked statuses are historical; runtime-01 stays withdrawn and no adoption is inferred.
+
+## Resume boundary — interrupted preparation accounting
+
+On2026-11-16,30sealed identities/13prior records still match and21tests/static review remain valid. C4 final freeze was interrupted with an open active segment; the approved design requires refusal of uncertain continuation. [Concrete one-time accounting recovery](docs/proposals/sqlite-vec-runtime-startup-correction.md) proposes842provisional earlier seconds plus separately recorded resumed/finalization work under unchanged1800seconds/96starts. No settlement, readiness, timer reset, new allocation or native run has occurred. Review that narrow exception before C4; retain C5/C6/package/adoption gates. The handoff is withheld; earlier final-freeze-next wording is historical.
+
+## Current execution point — T12-C correction and static review complete
+
+Approved package committed `aef0b25`. [Correction evidence](docs/benchmarks/sqlite-vec-runtime-startup-correction.md): two initial regressions reproduced both defects;21tests/Ruff passed; original worker/search/workload contracts preserved;30sealed identities/13prior records and independently regenerated fixtures checked. A14-day delayed handoff completed the full fake schedule without changing actual state. C1–C3 complete; C4 independent review passed but final readiness freeze was not completed. Resolve the interrupted accounting decision before completing C4 or issuing the [user-run offline handoff](docs/proposals/sqlite-vec-runtime-followup-handoff.md); C5/C6 remain pending. No native evidence/adoption yet. Runtime-01 remains untouched and withdrawn; source/preparation-results commit is separately gated. Earlier proposal/resume statements are historical.
+
 ## Proposed next package — T12-C startup correction
 
 **Approval recorded:** User said "please proceed" to the exact package/execution boundary and five-document commit. Fresh runtime-02 meter reserves8preparation starts for initialization/design/review/Git; proceed sequentially C1–C6 within limits. Later implementation/results commit remains separately gated. Earlier pending-approval wording is historical.

@@ -1,15 +1,21 @@
 # Stage 1 Atomic Task Checklist
 
-## Proposed T12-C — awaiting package approval
+## T12-C — C1–C4 complete; user offline trial next
+
+**Final approval/readiness:** User approved the one-time accounting exception and ten-file commit. Exact original meter preserved; final readiness1372.729conservative seconds/56reservations/no open segment/no native epoch;30sealed identities/13prior hashes still match. No repeated tests or native work. Earlier blocked/unstarted wording below is historical.
+
+**Resume boundary (2026-11-16):** All30sealed identities/13prior records rechecked unchanged;21tests remain valid and were not repeated. C4 is blocked by an open interrupted preparation segment. [Proposed one-time settlement](docs/proposals/sqlite-vec-runtime-startup-correction.md):842provisional earlier seconds plus current/future accounted active work, preserving30-minute/96-start limits. Await explicit exception and separate ten-file commit approval; no source/meter/asset edits, reset/reseal/new allocation or native execution. Offline handoff withheld until final readiness.
+
+[Preparation evidence](docs/benchmarks/sqlite-vec-runtime-startup-correction.md) and [new handoff](docs/proposals/sqlite-vec-runtime-followup-handoff.md) supersede earlier unstarted wording. Planning approval committed `aef0b25`. Native trial/results and runtime adoption remain unproven.
 
 **Approved:** User said "please proceed" to the exact package/boundary and five planning documents' commit. Runtime-02 meter initialized with8preparation reservations before inspection/Git. C1 review is in progress; later source/results commit remains gated. Earlier approval-pending wording is historical.
 
-Failure closeout committed `8353db0`. Each task's prerequisites, acceptance and evidence are specified in the [bounded correction package](docs/proposals/sqlite-vec-runtime-startup-correction.md); all six are unstarted. Existing runtime-01 files/state stay unchanged.
+Failure closeout committed `8353db0`. Each task's prerequisites, acceptance and evidence are specified in the [bounded correction package](docs/proposals/sqlite-vec-runtime-startup-correction.md); current completion is recorded in the checklist below. Existing runtime-01 files/state stay unchanged.
 
-- [ ] **T12-C1 — Review and initialize.** Requires package approval; verify exact artifacts/old hashes, fresh roots and durable accounting/design before coding.
-- [ ] **T12-C2 — Failing regressions.** Requires C1; fake-clock waiting/exhaustion and startup-error/terminal-state tests expose the defects without native loading.
-- [ ] **T12-C3 — Minimal correction.** Requires C2; successor passes targeted and inherited security/scope/resource regressions plus Ruff; review diff against original.
-- [ ] **T12-C4 — Independent readiness.** Requires C3; exact staging, fixture/interpreter/source hashes, seal, delayed-start fake validation and launcher syntax; save real counters/no-load evidence.
+- [x] **T12-C1 — Review and initialize.** Approvedaef0b25; fresh meter, original24seal identities/13prior records verified, historical56reservations+2failedlaunch starts preserved separately; fixed contract before coding.
+- [x] **T12-C2 — Failing regressions.** Two initial errors reproduced preparation-age refusal and missing terminal receipt; no native loading.
+- [x] **T12-C3 — Minimal correction.**21tests passed2.006s; final Ruff lint/format passed. Reviewed successor diff,15original definitions and real worker-launch AST unchanged; contract differs only by run ID.
+- [x] **T12-C4 — Independent readiness.**30sealed identities/13prior hashes, exact stage/interpreter/fixtures/launcher and14-day full-schedule fake gate passed; explicit one-time recovery approved with originalmeter preserved. Final readiness.json1372.729conservative seconds/56reservations, no open segment/native epoch. Approved ten-file commit; actual C5/C6 pending.
 - [ ] **T12-C5 — Offline run and cleanup.** Requires C4; user-operated single epoch under all limits, preserved success/stop and truthful owned teardown; no retry.
 - [ ] **T12-C6 — Results/review.** Requires C5; sanitized findings, prior-hash/counter checks, documentation/checkpoint, readable diff and separate source/results commit request.
 

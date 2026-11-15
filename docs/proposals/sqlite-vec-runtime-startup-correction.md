@@ -1,5 +1,22 @@
 # T12-C — Proposed startup correction and fresh comparison
 
+**Current state (2026-11-16): recovery approved and final readiness passed.** User said "yes i do approve, you can proceed" to the one-time accounting exception and ten-file commit. The original meter was preserved byte-for-byte with its hash; accounting-recovery.json records the provisional settlement, resumed work and limitations. Final readiness.json records1372.729conservatively charged preparation seconds including180reserved for final documentation/Git,56/96process reservations,30unchanged sealed identities/13prior records, no open segment and no native epoch. No source/asset edits, reseal, test repetition or new allocation. C4 complete; next is the already approved user-operated disconnected C5. Earlier blocked/proposed wording below is historical.
+
+## One-time interrupted-segment accounting decision — approved
+
+The approved design explicitly says: "An interrupted open segment has uncertain consumption: refuse continuation rather than discarding its time." On resume the meter still shows preparing,520.4182321000242completed active seconds, and an open segment beginning2026-11-14T16:02:53.0334547Z. The last durable prior-session checkpoint write was2026-11-14T16:06:14.1829429Z, a201.1494882-second window. File timestamps are supporting evidence, not proof that every later moment was idle. The native epoch/deadline remain null and native worker reservations0. The previous21-test and static-review results remain valid; no tests were repeated.
+
+Propose a **one-time explicit accounting exception**, without changing sealed code/assets/workload/limits or starting another trial:
+
+1. Preserve an exact copy/hash of the current meter and its open-segment evidence before any settlement. Do not overwrite the original audit evidence.
+2. Provisionally settle earlier preparation at **842seconds**, rounded upward from520.4182321+201.1494882+120seconds of uncertainty allowance. This is a user-accepted conservative allocation, not a measured proof of idle time; retain that limitation. Exclude the remaining session/human waiting interval only with this explicit decision.
+3. Add the current resume's inspection/documentation-review duration from its separate `interruption-review.json` receipt, and all subsequent active finalization work. Keep the original1800-second preparation cap and96-start/category caps. Human approval waiting is excluded; do not leave a new active segment running across that wait. If the remaining allowance cannot cover finalization or an identity changes, stop rather than extend it.
+4. Complete only C4 final diff/link/hash checks, accounted readiness freeze and checkpoint. Reuse the unchanged30-file seal; no source edits, reseal, installation, additional tests or new allocation. C5 stays the already approved user-operated disconnected trial, after readiness; C6 and adoption/commit gates stay unchanged.
+
+Alternative: decline this evidence-based accounting exception, preserve runtime-02 as unready, and separately review a fresh allocation later. No automatic restart/reset is authorized. Approval to continue ordinary work does not silently waive this explicit interrupted-segment rule.
+
+**Requested decision:** approve the one-time842-second provisional settlement plus separately recorded resumed/finalization work, under unchanged limits; separately approve the ten reviewed preparation files' commit. No native run or new code will proceed before the accounting decision.
+
 **Status: approved for T12-C1–C6, the exact execution boundary and five planning documents' commit.** The user answered "please proceed" to the explicit package/additional96-start/no-filesystem-confinement/commit request. Failure closeout is committed as `8353db0`. A fresh meter reserves8preparation starts before initialization/review/Git; no successor code, staged assets or launcher exists yet. Complete covered steps without repeated task-start approvals. Later source/results commits and runtime adoption retain separate gates. Requested-approval wording below is historical.
 
 ## Objective and boundaries
@@ -49,3 +66,7 @@ Use verified local incremental-implementation, test-driven-development, security
 Create factual preparation/results reports and a new standalone handoff only when evidence exists. Current changes are this proposal plus root PLAN/TODO, README and checkpoint. Documentation needs consistency/link/whitespace checks; no fabricated application tests. Implementation, stage transition and runtime storage adoption remain unapproved. Physical16GB validation, larger-scale capacity, grounding and retention/G2 decisions remain open.
 
 **Decision requested:** approve T12-C1–C6 as this one bounded correction/replacement package, including the additional96-start allocation, exact cached DLL-only staging and manual disconnected native trial without filesystem confinement. Separately approve committing these five planning documents. One package approval covers its necessary edits, tests, staging and reviewed user handoff; it does not approve subsequent source/results commits or runtime adoption.
+
+## Actual correction and independent review
+
+Approval committed `aef0b25`. [Preparation report](../benchmarks/sqlite-vec-runtime-startup-correction.md) records two initial failing regressions,21passing final tests/Ruff, preserved native launch/search/SQL/workload logic, exact stage/seal30identities/13prior records and independently regenerated32/1000fixture hashes. A shadow allocation completed a14-day-future full fake handoff using the actual seal/assets without modifying the real meter. No candidate load/install/download/native epoch. Final readiness/accounted active time is saved in runtime-02/readiness.json before the [new standalone handoff](sqlite-vec-runtime-followup-handoff.md). C5/C6 actual trial/results remain pending; separate ten-file source/preparation commit approval is required. Original runtime-01 stays stopped and unchanged.

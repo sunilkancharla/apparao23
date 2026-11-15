@@ -6,6 +6,12 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Ready for the user-run offline comparison:** The user approved the one-time accounting recovery and preparation commit. [Final evidence](docs/benchmarks/sqlite-vec-runtime-startup-correction.md) retains21passing tests and30sealed identities/13prior records unchanged; readiness is frozen within the original limits. Follow the [new offline instructions](docs/proposals/sqlite-vec-runtime-followup-handoff.md). No candidate extension has been loaded and no native comparison has run. Earlier blocked statuses are historical; do not use runtime-01.
+
+**Current checkpoint:** The timing correction passed21tests and static review; all30sealed identities/13prior records still match after the session interruption. Final offline readiness is withheld because a preparation-time segment was left open. A [narrow accounting recovery](docs/proposals/sqlite-vec-runtime-startup-correction.md) is ready for decision. No extension load or real comparison has started; do not run the new launcher yet. Earlier ready-next wording is historical.
+
+**T12-C correction verified in local tests:** [Evidence](docs/benchmarks/sqlite-vec-runtime-startup-correction.md) records21passing tests/Ruff,30sealed identities/13prior records and a full fake schedule14days after preparation. Waiting no longer exhausts the preparation timer; startup failures now reach terminal reporting. The [fresh offline instructions](docs/proposals/sqlite-vec-runtime-followup-handoff.md) apply after final readiness is recorded. No candidate extension has been loaded; actual comparison/results remain the next approved user-run step. Preparation source/results commit approval is separate. Earlier proposal and launch-ready statuses are historical.
+
 **T12-C approved:** The user approved the exact correction/replacement package, additional96-start allocation, disconnected no-filesystem-confinement boundary and five planning documents' commit. Initial review/accounting is underway; no successor code or native run yet. The following proposed/pending wording is historical.
 
 **Next proposal ready:** Failure notes are committed as `8353db0`. The [T12-C correction package](docs/proposals/sqlite-vec-runtime-startup-correction.md) proposes fixing preparation-time accounting and startup reporting, then a fresh bounded comparison with the same assets and limits. Package and planning-document commit approvals are pending; no replacement code or trial has begun.
