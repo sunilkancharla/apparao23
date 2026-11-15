@@ -1,5 +1,11 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — T12-D ready; user offline trial next
+
+D4 final freeze passed:1501.289conservative preparation seconds,56/96reservations,37seal/20prior identities verified, all five paid blocks closed/no native epoch. Proceed with already approved user-operated D5 via the handoff below; native correctness/adoption remain untested. Ten-file source/preparation commit approval is separate.
+
+Approved package committed `5a82a70`. [Preparation](docs/benchmarks/sqlite-vec-match-preparation.md): exactMATCHred regression,29passing tests/Ruff,24original definitions preserved after name normalization,37sealed identities/20prior hashes/independentfixtures/launcher verified. An actual-source SQLite permission gate and14-day shadow fake schedule passed; native correctness remains untested. D1–D3 complete; D4 independent checks passed and final readiness is recorded in runtime-03/readiness.json before [user offline handoff](docs/proposals/sqlite-vec-match-handoff.md).56/96reservations and four fully prepaid blocks retain original limits; source/preparation commit separate. Next D5 user trial, D6 actual findings. Older pending-package statements are historical.
+
 ## Proposed next package — T12-D MATCH authorization correction
 
 **Approved:** User explicitly approved both the exact package/execution boundary and five planning documents' commit. Runtime-03 meter initialized with12preparation reservations and300seconds prepaid before inspection/review/Git. Proceed D1–D6 sequentially within limits; later source/results commit remains separately gated. Earlier pending-approval wording is historical.

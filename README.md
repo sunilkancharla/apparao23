@@ -6,6 +6,10 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**T12-D ready for the approved offline trial:**29tests passed;37sealed identities/20prior records verified, final preparation accounting is within limits and all paid blocks are closed. Follow the [runtime-03 offline instructions](docs/proposals/sqlite-vec-match-handoff.md). No extension load or native comparison occurred during connected preparation. The ten source/preparation files await separate commit approval; earlier final-freeze-pending wording below is historical.
+
+**MATCH correction tested:** [T12-D evidence](docs/benchmarks/sqlite-vec-match-preparation.md) records29passing tests and real SQLite authorization of the full query, with dangerous functions still denied.37sealed identities/20prior records match; a delayed-handoff simulation passed. The [new offline instructions](docs/proposals/sqlite-vec-match-handoff.md) apply once final readiness is frozen. No candidate extension was loaded during connected work; native search/recovery/comparison remain the next approved user-run step. Preparation-source commit requires separate approval; earlier proposed/unstarted wording is historical.
+
 **T12-D approved:** The user approved the exact MATCH-correction package, new96-start allocation, prepaid preparation blocks, remaining schedule, disconnected no-filesystem-confinement boundary and five planning documents' commit. Initial review/accounting is underway; no successor source or native execution yet. Earlier pending-approval wording below is historical.
 
 **Focused correction proposed:** Native results are committed as `4146d7c`. The [T12-D package](docs/proposals/sqlite-vec-match-correction.md) proposes adding only MATCH to the permission list, testing the full SQL authorization path and running the remaining recovery/comparison checks under fresh limits. It includes prepaid preparation blocks for session pauses. Package/execution-boundary and five planning documents' commit approvals are pending; no code or new trial has begun. Old launchers remain withdrawn.

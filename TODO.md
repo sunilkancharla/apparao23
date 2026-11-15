@@ -1,15 +1,17 @@
 # Stage 1 Atomic Task Checklist
 
-## T12-D — focused successor proposed; approval pending
+## T12-D — D1–D4 complete; user offline trial next
+
+[Preparation evidence](docs/benchmarks/sqlite-vec-match-preparation.md) supersedes earlier unstarted wording. Package approved in5a82a70;29tests/Ruff and37seal/20prior identities pass. Actual native trial remains pending; separate preparation-source commit approval required.
 
 **Approved:** User said "I do approve both" to the exact package/boundary and five-document commit request. Fresh meter reserves12preparation starts and debits first300-second external block before review/Git. D1 review is underway; later source/results commit separate. Earlier pending-approval wording is historical.
 
 Runtime-02 results committed `4146d7c`. [Package](docs/proposals/sqlite-vec-match-correction.md) defines each task's prerequisites/acceptance/evidence and exact artifacts/security/resource/schedule scope. All D tasks are unstarted; no new allocation or source edits. Five planning documents' commit approval is separate.
 
-- [ ] **T12-D1 — Review and allocate.** Requires exact package approval; verify20prior records/assets/interpreter, fixed one-function/schedule contract and prepaid block/process accounting before code.
-- [ ] **T12-D2 — Failing positive SQL test.** Requires D1; reproduce MATCH denial with real stdlib callbacks/exact statement and harmless test-only stub; preserve negative controls.
-- [ ] **T12-D3 — Minimal correction.** Requires D2; at most3successor files, only declared changes; targeted/inherited tests, bounded pause/exhaustion controls, Ruff and source review.
-- [ ] **T12-D4 — Independent readiness.** Requires D3; safe exact staging, regenerated fixtures, full seal/launcher/callback checks, closed preparation blocks, actual counters and no-load evidence before handoff.
+- [x] **T12-D1 — Review and allocate.** Approved5a82a70; original30seal/20prior records verified, fixed permission/schedule/accounting reviewed; process/time reservations before work.
+- [x] **T12-D2 — Failing positive SQL test.** ExactMATCHdenial reproduced; positive full SQL/callback gate passes addingonlymatch; prior-contract/defineddangerous-function denials verified.
+- [x] **T12-D3 — Minimal correction.** Three new evalfiles;29tests0.610s/Ruffpassed, prepaidblock pause/exhaustion/closed-native-admission controls,24originaldefinitions preserved by reviewed AST comparison.
+- [x] **T12-D4 — Independent readiness.**37seal/20prior/fixture/source-query/launcher checks and14-day fullfake gate passed. Finalreadiness1501.289conservative seconds/56reservations, five paid blocks closed/no internal marker/native epoch; handoff ready. Ten-file source/preparation commit approval separate.
 - [ ] **T12-D5 — Offline remaining trial.** Requires D4; new sentinels/B recovery/paired measurements in14owned workers, or preserved stop; verified actual cleanup, no retry.
 - [ ] **T12-D6 — Results and checkpoint.** Requires D5 cleanup/reconnection; factual findings/counters/hash checks, documentation, readable diff and separate commit request; no runtime adoption.
 
