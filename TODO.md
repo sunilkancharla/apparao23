@@ -1,6 +1,8 @@
 # Stage 1 Atomic Task Checklist
 
-## T12-D — D1–D4 complete; user offline trial next
+## T12-D — bounded evaluation complete; adoption remains gated
+
+[Native results](docs/benchmarks/sqlite-vec-match-results.md): preparation commit `e4db995`, completed user-operated runtime-03, verified teardown/persistence,72/96reservations,37sealed identities/20prior records unchanged. Both controls, four B recovery pairs and four paired measurements completed;192ranking/distance checks passed. No retry, runtime adoption or full T12 acceptance. Results-documentation commit awaits approval. Earlier approval/readiness notes below describe history.
 
 [Preparation evidence](docs/benchmarks/sqlite-vec-match-preparation.md) supersedes earlier unstarted wording. Package approved in5a82a70;29tests/Ruff and37seal/20prior identities pass. Actual native trial remains pending; separate preparation-source commit approval required.
 
@@ -12,8 +14,8 @@ Runtime-02 results committed `4146d7c`. [Package](docs/proposals/sqlite-vec-matc
 - [x] **T12-D2 — Failing positive SQL test.** ExactMATCHdenial reproduced; positive full SQL/callback gate passes addingonlymatch; prior-contract/defineddangerous-function denials verified.
 - [x] **T12-D3 — Minimal correction.** Three new evalfiles;29tests0.610s/Ruffpassed, prepaidblock pause/exhaustion/closed-native-admission controls,24originaldefinitions preserved by reviewed AST comparison.
 - [x] **T12-D4 — Independent readiness.**37seal/20prior/fixture/source-query/launcher checks and14-day fullfake gate passed. Finalreadiness1501.289conservative seconds/56reservations, five paid blocks closed/no internal marker/native epoch; handoff ready. Ten-file source/preparation commit approval separate.
-- [ ] **T12-D5 — Offline remaining trial.** Requires D4; new sentinels/B recovery/paired measurements in14owned workers, or preserved stop; verified actual cleanup, no retry.
-- [ ] **T12-D6 — Results and checkpoint.** Requires D5 cleanup/reconnection; factual findings/counters/hash checks, documentation, readable diff and separate commit request; no runtime adoption.
+- [x] **T12-D5 — Offline remaining trial.** User completed both sentinels, four B recovery pairs and A/B32/1000measurements in14owned workers; verified actual cleanup/persistence and closed meter. No retry.
+- [x] **T12-D6 — Results and checkpoint.** Sanitized metrics/counters reviewed;37seal/20prior rehashes unchanged. Results/report/handoff/README/PLAN/checkpoint updated and documentation diff checked. Separate results commit and runtime-adoption decisions remain gated.
 
 ## T12-C — partial native trial closed; findings recorded
 

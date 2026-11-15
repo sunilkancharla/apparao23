@@ -1,6 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — T12-D ready; user offline trial next
+## Current execution point — T12-D completed; storage adoption review next
+
+Preparation committed as `e4db995`. The user completed runtime-03 with verified teardown and receipt persistence. [Native results](docs/benchmarks/sqlite-vec-match-results.md) confirm both controls, four B crash/reopen pairs and all four paired A/B measurements passed;192ranking/distance checks matched the independent reference. All37sealed identities and20prior records remain unchanged. The meter is closed at72/96reservations. D1–D6 are complete as this bounded evaluation; no retry or adoption is implied.
+
+At1000vectors, pooled median search time was477.963ms for A and282.300ms for B, with larger B files and higher update costs. Review the trade-offs before selecting runtime storage, then agree the next T16 grounding package and T17/G2 prerequisites. Full T12 acceptance, product implementation, derived-storage/retention decisions, larger-scale capacity and physical16GB validation remain open. Results-documentation commit requires separate approval. Earlier readiness/proposal sections below are historical.
+
+## Earlier execution point — T12-D readiness
 
 D4 final freeze passed:1501.289conservative preparation seconds,56/96reservations,37seal/20prior identities verified, all five paid blocks closed/no native epoch. Proceed with already approved user-operated D5 via the handoff below; native correctness/adoption remain untested. Ten-file source/preparation commit approval is separate.
 

@@ -1,5 +1,7 @@
 # T12-D — runtime-03 offline instructions
 
+**CLOSED — completed; do not run this launcher again.** The user completed the approved schedule with `completed_pending_review_no_adoption`, verified teardown and receipt persistence. [Reviewed native results](../benchmarks/sqlite-vec-match-results.md) record both controls, four B recovery pairs, four paired measurements and unchanged37seal/20prior identities. Runtime adoption remains gated. All instructions below are retained solely as historical evidence.
+
 **READY for the already approved user-operated trial.** Final readiness.json records37verified sealed identities/20prior records,1501.289conservative preparation seconds,56reservations, five closed paid blocks and no native epoch. No additional task-start approval is needed. Preserve source/assets; do not retry this allocation after a stop.
 
 Use only after final `readiness.json` confirms static readiness. [Preparation evidence](../benchmarks/sqlite-vec-match-preparation.md) records29passing tests,37sealed identities/20prior records and real SQLite MATCH authorization checks. Native vector-search correctness remains unverified. Runtime-01 and runtime-02 are closed; never run their launchers again.

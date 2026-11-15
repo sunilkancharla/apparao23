@@ -1,4 +1,14 @@
-# Latest checkpoint — T12-D ready; preparation commit approval and user trial next
+# Latest checkpoint — T12-D native trial completed; results commit/adoption decisions next
+
+**Results commit authorized:** The user said "yes, proceed with the commits", approving the seven reviewed result documents. Commit only that explicit file list; the resulting commit ID is recorded in Git. Earlier pending-commit wording describes the pre-approval checkpoint. Runtime adoption and the next work package remain separate decisions.
+
+Preparation committed `e4db995` under explicit user approval. User ran runtime-03 disconnected and reported completed_pending_review_no_adoption, RECEIPT PERSISTED:True, TEARDOWN VERIFIED:True and safe reconnect. Sanitized summary/meter reviewed after cleanup: both controls, four B crash/reopen pairs and four A/B32/1000benchmark workers completed;14ownedworkers+2handoff reservations.192ranking/distance checks matched independent reference. Prior four A recovery pairs remain runtime-02 history. No new source edits/tests/native execution/install/download/retry/reset/reseal.
+
+Rehashed all37sealed identities and20prior records unchanged. Meterclosed72/96(prep24/tests16/workers16/report16/cleanup0); prep1501.2886612000293seconds, five prepaidblocksclosedfull; nativeepoch/deadline preserved.512samples:minfree10684911616bytes,maxcontroller19693568,maxjob53579776,maxdisk37986608,maxgap0.13617339998017997s,maxiteration0.056344900047406554s. No exact terminalelapsed persisted. Pooled query mediansms A32=21.840/B32=9.914/A1000=477.963/B1000=282.300. Samefrozenhashes,48rankchecksperworker; B largerDB/higher updatecosts, fixedA-before-B/cachebias and no10ktrial retained.
+
+Report docs/benchmarks/sqlite-vec-match-results.md; updated PLAN/TODO/README/proposal/handoff/checkpoint. D1–D6 boundedpackage complete; fullT12/runtimeadoption/T16/T17/G2/16GB/scale/lifecycle requirements stillopen. Recommend storage trade-off/adoption review before next groundingpackage; no next package or native run approved. Seven resultdocs await separate commitapproval. SourcepreparationGitapproval does notcoverresults. Do not runclosedlauncher/readrawDBvectors/private-pathreceipts into tools; keep unrelateduntrackedfiles. Earlier checkpoints belowhistorical. No callable /compact or /status action invoked.
+
+# Earlier checkpoint — T12-D ready; preparation commit approval and user trial next
 
 **Preparation commit approval:** User said "yes please commit and proceed to the offline trial", explicitly approving the ten reviewed source/preparation files. Stage only their exact allowlist; result commit ID is in Git. Use the remaining115.146788active seconds recorded in preparation-closeout.json for this Git closeout, excluding human approval waiting; no new block/debit/reset or repeated tests. Recheck sealed identities and ready/unstarted state afterward, then give the user the already approved offline handoff. Codex must not run native workers while connected. Earlier pending-source-commit wording below is historical once committed.
 

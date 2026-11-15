@@ -1,5 +1,7 @@
 # T12-D — MATCH permission correction and remaining comparison
 
+**Completed bounded package:** D1–D6 finished; preparation committed as `e4db995`. [Reviewed native results](../benchmarks/sqlite-vec-match-results.md) confirm the complete14-worker schedule, verified teardown/persistence,192ranking/distance checks,72/96reservations and37seal/20prior identities unchanged. Runtime-03 is closed without retry; [handoff](sqlite-vec-match-handoff.md) withdrawn. Source/contract/assets remain unchanged. Runtime adoption and results-documentation commit need separate decisions. All proposed, unstarted and pending-run wording below is historical.
+
 **Status: approved for T12-D1–D6, its exact execution boundary and five planning documents' commit.** User answered "I do approve both" to the explicit package/boundary and commit request. Results are committed as `4146d7c`. Fresh runtime-03 meter reserves12preparation starts and fully debits the first300-second external work block before initialization/review/Git. No successor source/staged assets/native work yet. Complete covered steps without repeated task-start approvals. Later source/results commits and runtime adoption retain separate gates; requested-decision wording below is historical.
 
 ## Objective and fixed scope
