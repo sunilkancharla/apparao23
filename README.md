@@ -6,6 +6,10 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**T12-D approved:** The user approved the exact MATCH-correction package, new96-start allocation, prepaid preparation blocks, remaining schedule, disconnected no-filesystem-confinement boundary and five planning documents' commit. Initial review/accounting is underway; no successor source or native execution yet. Earlier pending-approval wording below is historical.
+
+**Focused correction proposed:** Native results are committed as `4146d7c`. The [T12-D package](docs/proposals/sqlite-vec-match-correction.md) proposes adding only MATCH to the permission list, testing the full SQL authorization path and running the remaining recovery/comparison checks under fresh limits. It includes prepaid preparation blocks for session pauses. Package/execution-boundary and five planning documents' commit approvals are pending; no code or new trial has begun. Old launchers remain withdrawn.
+
 **Latest trial safely stopped:** [Native partial results](docs/benchmarks/sqlite-vec-runtime-followup-results.md) show both safety controls and four baseline recovery cases passed. The extension loaded, but its recovered search was blocked because the permission list omitted MATCH. Cleanup was verified; no speed comparisons ran. The trial is closed—do not rerun its launcher. A focused permission/test correction needs a new reviewed package. Earlier launch-ready/preparation-only statements below are historical; no runtime adoption is established.
 
 **Ready for the user-run offline comparison:** The user approved the one-time accounting recovery and preparation commit. [Final evidence](docs/benchmarks/sqlite-vec-runtime-startup-correction.md) retains21passing tests and30sealed identities/13prior records unchanged; readiness is frozen within the original limits. Follow the [new offline instructions](docs/proposals/sqlite-vec-runtime-followup-handoff.md). No candidate extension has been loaded and no native comparison has run. Earlier blocked statuses are historical; do not use runtime-01.

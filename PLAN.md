@@ -1,5 +1,11 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Proposed next package — T12-D MATCH authorization correction
+
+**Approved:** User explicitly approved both the exact package/execution boundary and five planning documents' commit. Runtime-03 meter initialized with12preparation reservations and300seconds prepaid before inspection/review/Git. Proceed D1–D6 sequentially within limits; later source/results commit remains separately gated. Earlier pending-approval wording is historical.
+
+Native partial results committed `4146d7c`. Review [T12-D1–D6](docs/proposals/sqlite-vec-match-correction.md): exact single-function MATCH permission, test-first full SQL authorization/negative controls, fresh successor and independent readiness, then remaining B recovery and A/B32/1000measurements. Proposes96new starts with unchanged resource/native limits; prepaid external preparation blocks avoid uncertain idle-time accounting.14owned workers+2handoff reservations; prior four A recovery pairs carried forward without repetition. No allocation/code/tests/staging/installation/load has begun. Exact package/security boundary and five planning documents' commit await approval; old trials stay closed and adoption stays gated.
+
 ## Latest outcome — native MATCH permission refusal; trial closed
 
 The user ran runtime-02 from960fa7c. [Partial native results](docs/benchmarks/sqlite-vec-runtime-followup-results.md) record both controls/four A recovery pairs completed, then B-before-commit reopened search blocked by the manifest's missing MATCH permission. Teardown and receipt persistence verified;70/96reservations, no paired performance measurements, all30sealed identities/13prior records unchanged. C5 partial stop/cleanup and C6 findings recorded; no adoption or implicit continuation. Withdrawn handoff stays closed. Next review a focused allowlist/query-contract successor proposal before code changes or a new native allocation; results-documentation commit remains separately gated. Earlier ready/pending-user-run wording is historical.

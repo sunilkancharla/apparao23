@@ -1,5 +1,18 @@
 # Stage 1 Atomic Task Checklist
 
+## T12-D — focused successor proposed; approval pending
+
+**Approved:** User said "I do approve both" to the exact package/boundary and five-document commit request. Fresh meter reserves12preparation starts and debits first300-second external block before review/Git. D1 review is underway; later source/results commit separate. Earlier pending-approval wording is historical.
+
+Runtime-02 results committed `4146d7c`. [Package](docs/proposals/sqlite-vec-match-correction.md) defines each task's prerequisites/acceptance/evidence and exact artifacts/security/resource/schedule scope. All D tasks are unstarted; no new allocation or source edits. Five planning documents' commit approval is separate.
+
+- [ ] **T12-D1 — Review and allocate.** Requires exact package approval; verify20prior records/assets/interpreter, fixed one-function/schedule contract and prepaid block/process accounting before code.
+- [ ] **T12-D2 — Failing positive SQL test.** Requires D1; reproduce MATCH denial with real stdlib callbacks/exact statement and harmless test-only stub; preserve negative controls.
+- [ ] **T12-D3 — Minimal correction.** Requires D2; at most3successor files, only declared changes; targeted/inherited tests, bounded pause/exhaustion controls, Ruff and source review.
+- [ ] **T12-D4 — Independent readiness.** Requires D3; safe exact staging, regenerated fixtures, full seal/launcher/callback checks, closed preparation blocks, actual counters and no-load evidence before handoff.
+- [ ] **T12-D5 — Offline remaining trial.** Requires D4; new sentinels/B recovery/paired measurements in14owned workers, or preserved stop; verified actual cleanup, no retry.
+- [ ] **T12-D6 — Results and checkpoint.** Requires D5 cleanup/reconnection; factual findings/counters/hash checks, documentation, readable diff and separate commit request; no runtime adoption.
+
 ## T12-C — partial native trial closed; findings recorded
 
 The user ran runtime-02; [results](docs/benchmarks/sqlite-vec-runtime-followup-results.md) confirm both sentinels/four A recovery pairs completed, B recovered search refused MATCH, zero measurements and verified teardown/persistence.70/96reservations; all30sealed identities/13prior records unchanged. C5 closed as partial stop, C6 findings documented; full T12/adoption remain open. Do not retry/reset/reseal or edit permission lists. Next decision: results-documentation commit and a focused successor proposal. Earlier ready/pending-run wording below is historical.
