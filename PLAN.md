@@ -1,6 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — T17-A static pack prepared; G2 evidence gaps visible
+## Current execution point — design pack committed; R1startup stop preserved
+
+Committed the approved11-file architecture/policy pack as `dbd9137`. The user approved R1; its new helper failed before any HTTP because the initialized ledger omitted `pending_bytes`, then the job-close adapter lacked `observe_native`. [Stop report](docs/benchmarks/public-source-review-stop.md):0requests/0bytes/0sources, closed allocation, original meter and readiness/source history preserved. Nine fake tests passed but missed this real initializer/close-protocol integration. No network-blocking or advisory finding is inferred.
+
+Recommend the exact [R1-Sintegration repair](docs/provisioning.md#proposed-r1-s--startup-and-cleanup-integration-repair), zero network/candidate execution, before a separately approved fresh public review. Current helper/command must not rerun or be silently resealed. G2 remains open. Eleven source/stop-report/status files await separate commit approval; no repair or new allocation approved. Earlier proposed/ready-public-review wording below is historical.
+
+## Earlier execution point — static T17pack
 
 The user authorized T17-A1–A6 after readiness commit `e9d107e`. Concrete [architecture ADR](docs/ADR/0001-stage1-architecture.md), [C01–C08 contracts](docs/contracts.md), [dependency inventory](docs/dependencies.md#t17-a1--static-reconciliation-and-proposed-runtime-set) and [provisioning handoff](docs/provisioning.md#t17-static-pack--provisioning-and-validation-handoff) are prepared. All52installed metadata name/version pairs match the53-record lock; exact cached/report identities and historical limitations retained. User explicitly approved the quota classification,10GB conversation-only-original cap, resource/latency validation targets and minimal content-free deleted-target records; SPEC/decisions updated.
 

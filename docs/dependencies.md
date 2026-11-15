@@ -2,6 +2,8 @@
 
 ## T17-A1 — static reconciliation and proposed runtime set
 
+**R1freshness update:** the approved public-source helper stopped before its first HTTP request. [Failure evidence](benchmarks/public-source-review-stop.md) identifies local ledger/cleanup-adapter bugs, not upstream security findings. Existing inventory below is unchanged; no current advisory/notice refresh or clearance occurred. G2 freshness remains open.
+
 **Prepared under the approved T17-A static package; G2 adoption pending.** Local metadata (not imports) confirms52installed distribution records and53lock package records, including the project. All52installed name/version pairs match the lock. This does not verify installed payload bytes against every wheel/RECORD. Earlier36-package counts below are historical. No package was installed, upgraded, removed or loaded during this check. The existing `.venv/pyvenv.cfg` records Python3.14.6 and `include-system-site-packages=false`; this is configuration evidence, not a fresh binary/runtime compatibility test.
 
 | Role / proposed selection | Recorded exact identity | License / dependency / resource and offline evidence | Adoption gap |

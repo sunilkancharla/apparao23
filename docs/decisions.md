@@ -1,5 +1,9 @@
 # Stage 1 Decision Register
 
+## T17-A commit and R1 approval — attempt closed, no research/adoption finding
+
+The user answered "yes, i do approve all" to the exact11-file commit and R1public-source package. Committed architecture/policies as `dbd9137`. R1was attempted under a fresh allocation and stopped before HTTP on authored initializer/cleanup-adapter defects, not network or upstream evidence. [Stop report](benchmarks/public-source-review-stop.md) records the preserved state and unperformed research. No retry, field/counter reset, new repair package or G2 approval is inferred; R1-Srequires a separate explicit decision. Prior storage/retention/resource/format/chart decisions remain unchanged.
+
 ## T17-A policy decisions — explicitly approved during static design
 
 The user approved T17-A1–A6 with "I approve and proceed further" after readiness commit `e9d107e`. Four policy/target questions were separately answered with their recommended options:

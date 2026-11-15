@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1 — closed startup failure; research incomplete
+
+User approved R1 and the architecture commit (`dbd9137`). [Stop evidence](docs/benchmarks/public-source-review-stop.md): worker `pending_bytes` KeyError before HTTP; controller missing `observe_native` during job close. Zero requests/bytes/sources. Cleanup code path and terminal exceptions reviewed, no independent process inventory or invented resource peaks. Nine fake tests passed but did not exercise real ledger construction/full cleanup integration. Closed meter900/900conservative seconds,24reservations; no retry/reset. Eleven source/results/status files await separate Git approval.
+
+- [x] R1allocation/two authored aids/fake controls and corrected pre-fetch readiness; original readiness retained.
+- [x] Preserve startup failure, original meter hash, closed-state receipt and explicit teardown-evidence limits.
+- [ ] Public-source/advisory/notice refresh and input-fit method review: **not performed**, G2 gaps unchanged.
+- [ ] Proposed R1-Sno-network startup/cleanup integration repair: exact scope/budget in provisioning; approval pending, no new allocation/source successor.
+
 ## T17-A — static pack prepared; G2 not approved
 
 User authorized all six tasks after readiness commit `e9d107e`. [Proposed ADR](docs/ADR/0001-stage1-architecture.md), [contracts](docs/contracts.md), [inventory](docs/dependencies.md#t17-a1--static-reconciliation-and-proposed-runtime-set) and [handoff](docs/provisioning.md#t17-static-pack--provisioning-and-validation-handoff) are written. Explicit user policy/target decisions are in SPEC/decisions. Static review includes52installed name/version pairs matching lock and manual invariant traces; no runtime tests or new scores. Eleven design/status files await separate commit approval; T17 overall/G2 remains open for the stated evidence gaps. Earlier proposed-package notes below are historical.
