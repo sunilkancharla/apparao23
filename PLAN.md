@@ -1,6 +1,12 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — storage preference recorded; T16 design package proposed
+## Current execution point — T16 drafts ready for policy/contract review
+
+The user authorized the exact static package after proposal commit `cc08343`. T16-1–4 are drafted in [retrieval design](docs/retrieval-design.md) and [evaluation design](docs/evaluation.md#t16-draft--support-indicators-and-grounding-review): prerequisite gaps, source-aware chunks/scope/context, answers/citations, observable support states and claim-level evaluation. Existing fixture facts, IDs and scoring flags are unchanged; there are16active/9excluded questions and zero scoring-eligible questions. Definition JSON/hash and local document checks passed; no runtime test or new benchmark was run.
+
+T16-5 review material and T16-6 checkpoint are ready. The user explicitly approved R03–R07 retention/display/counting directions and5GB processed/1GB temporary disk caps with a clear stop, synchronized into SPEC and the decision register. R01/R02/R08 context/indicator/recovery proposals and remaining T17 accounting/performance/adoption mechanics await review. Nine draft/status documents await separate commit approval. No G2, runtime adoption, upstream acceptance waiver or product implementation. Earlier package-pending wording below is historical.
+
+## Earlier execution point — T16 proposal
 
 T12-D results committed as `18be917`. The user approved the recommended direction: SQLite plus the exact reviewed sqlite-vec artifact is the preferred storage candidate, with final adoption at G2. [Decision register](docs/decisions.md) records the preference and measured trade-offs; D01/D04, target-scale/16GB/performance and architecture acceptance remain open.
 

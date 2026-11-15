@@ -1,5 +1,67 @@
 # Stage 1 Fixture and Evaluation Design
 
+## T16 draft — support indicators and grounding review
+
+**Design draft, pending user contract/threshold decisions; no new scores or runtime evaluation.** T16 was authorized after proposal commit `cc08343`. The [retrieval contract](retrieval-design.md) specifies scope, provenance, bounded input, citations, calculations and unresolved lifecycle policies. Existing facts, IDs, active/excluded scope and scoring flags in the manifest/questions remain unchanged. The approved initial gates below are carried forward; this section proposes precise interpretation, not achieved accuracy or an automatic threshold change.
+
+### User-facing support indicator
+
+The initial indicator reports observable retrieval/citation checks and limitations. It must not show "95% correct", "high confidence", "verified answer" or a semantic-support grade inferred from valid IDs, cosine distance or model self-assessment. OCR confidence is an engine observation about recognized text, not answer correctness. Local human evaluation labels remain internal and are not silently reused as a live-answer guarantee.
+
+Proposed states, checked in this order where applicable:
+
+| Observed condition | State / example wording | Required handling |
+|---|---|---|
+| Scope/source-version integrity fails or request processing errors | `unavailable` — "Evidence could not be checked" | Refuse affected retrieval/previews and do not publish a completed grounded answer |
+| No usable evidence in the selected scope | `no_evidence` — "No usable evidence in selected documents" | Abstain or ask for a source/clarification; never search unrelated attachments automatically |
+| Context fit is unverified/truncated, response is malformed, output limit reached or generation lacks a final completion record | `incomplete` — "Answer incomplete" | Mark the response incomplete; no completed-answer status or successful latency score |
+| A cited ID/location/quote is invalid or outside the supplied manifest | `citation_problem` — "Citation could not be validated" | Refuse completed grounded-answer status; no silent repair or uncounted retry |
+| Supplied citations resolve but one or more factual text blocks lack a citation | `citations_missing` — "Some statements have no citation" | Identify missing structural coverage; factual support still unverified; whether safe partial text is shown remains a T17 contract |
+| Supplied citations/quotes all resolve and every declared factual block has at least one citation | `citations_resolved` — "Citations checked; meaning not independently verified" | Permit only this structural description, never a claim that every factual assertion is supported |
+
+Warnings are an independent list and remain visible with any state: OCR/low recognition quality, coarse location, omitted evidence, partial answer, source conflict, unavailable selected source or missing formula cache. A structurally valid partial answer can have `citations_resolved` plus a partial-answer warning; this is not a complete-answer success. A missing source that is required for an answer prevents a complete answer even when other sources remain usable. A clarification or refusal with no factual document claims has citation coverage N/A, not100%; do not invent citations merely to produce a badge. Pure question-only clarification should be labelled as clarification, not a checked factual answer.
+
+The truth table is a proposal for UI/API design, not an implemented classifier. Model-declared factual blocks and attached citations can omit hidden assertions or attach an irrelevant source. Therefore automatic block coverage is only a structural check, never the internal factual-claim coverage metric. Model-generated "all supported" labels are untrusted. Initial UI wording avoids a coverage percentage; T17 must define the exact safe response schema and rendering.
+
+### Claim-level evaluation and denominators
+
+Human review is local. Split each answer into atomic externally checkable factual claims, including numbers, units, dates, comparisons and causal statements. Split conjunctions when their parts have different support; record disagreements rather than choosing a segmentation that improves a score. Greetings, clarifications and honest statements of evidence limitations do not become supported document facts. Record the required gold facts separately so an answer cannot improve its score by omitting them.
+
+For each claim, retain source anchors/citation links and label semantic support as `supported`, `partial`, `unsupported` or `contradicted`. Partial is reported separately and does not count as fully supported. A calculation is supported only if cited inputs, compatible units, operation and checked result agree; a model assertion of having calculated it is not verification. Distinguish semantic support from factual correctness: a correctly quoted but erroneous source may support a statement about what that source says, not an unqualified assertion of real-world truth.
+
+| Measure | Numerator / denominator and failure behavior |
+|---|---|
+| Retrieval recall@5 | Required gold evidence units retrieved in the selected top5 / all required gold units for enabled answerable questions; map by provenance, not generated chunk IDs; count duplicated overlaps once |
+| Retrieval precision@5 | Relevant returned evidence units / returned units, with per-unit relevance grades2/1/0 retained; report actual returned count; never pad a short scope with hidden documents |
+| Structural citation validity | Valid claim/citation/location links / all emitted links; every emitted link must satisfy scope/manifest/version/location/quote rules; any invalid ID/location/quote is a hard failure regardless of aggregate |
+| Semantic citation correctness | Fully supporting claim/citation/location links / all emitted links; invalid, partial, irrelevant or contradicted links are not numerator successes; repeated identical links within one claim count once |
+| Semantic citation coverage | Factual claims with the required supporting citation or citation combination / all factual claims requiring source support; one multi-source claim needs all required sources |
+| Groundedness | Fully supported factual claims / all factual claims; an uncited unsupported fact cannot be excluded merely because no link exists |
+| Fully correct answers | Answerable questions graded2 for all required facts/behavior / all enabled answerable questions in the frozen run; grade1 partial or0 incorrect, failed or incomplete do not count as fully correct |
+| Unsupported refusal | Unsupported questions meeting the exact expected abstention/qualification behavior / all enabled unsupported questions; unnecessary refusal of an answerable question is recorded separately as over-abstention and fails completeness |
+| Indicator fidelity | Cases whose state, warnings and wording agree with observed structural checks / enabled indicator cases; proposed deterministic gate is100% with no semantic guarantee wording |
+
+An empty denominator is N/A. An empty answer is not100% grounded: factual-claim metrics are N/A while answer completeness/refusal behavior is graded against the question. Missing artifacts/anchors fail readiness before a run; do not silently shrink the required case set. Once an enabled run starts, errors/timeouts/malformed or token-limited outputs remain in its fixed question denominator and count as unsuccessful answers. Report affected metrics as failed/unavailable as appropriate, not invented zero-duration successes. Retrieval failure on an answerable question with known gold contributes zero retrieved gold. Ambiguous questions are scored against their permitted clarification or separately sourced interpretations, not forced into an arbitrary numeric answer.
+
+Preserve the initial deterministic hard gates and proposed aggregate targets: recall@5>=0.90; fully correct answers>=0.90; groundedness>=0.95; semantic citation correctness and coverage each>=0.95. Keep raw numerators/denominators and per-format/category failures. These small-corpus targets require T16 review before acceptance, do not calibrate real-world accuracy and cannot override a single hidden-source leak, invented location/quote, unsafe execution or failed enabled injection/unsupported control. Proposed indicator fidelity100% applies to the authored observable-state cases, not general answer accuracy. No new OCR/chart/runtime performance target is adopted.
+
+### Static worked examples and negative controls
+
+| Authored case / observation | Expected review result |
+|---|---|
+| Q02 states2024=352361,2025=350764 and calculated decrease1597, all anchored to R09 line2 and independently checked | Three atomic claims can be supported; the change is a calculation, not a quoted cell. All required input anchors must remain attached |
+| The same answer adds "a management decision caused it" with an otherwise valid R09 citation | The new causal claim is unsupported; structural citation validity can pass while groundedness, semantic citation correctness and coverage decrease. The indicator cannot say "verified answer" |
+| Q03 cites only R08 output and omits R09 workers | Partial/incomplete response, not fully correct; multi-source evidence coverage is incomplete even if the single citation resolves |
+| Q06 correctly says the files do not establish a management cause | Successful unsupported behavior; no fictitious document claim or citation needed; empty claim/citation denominators are N/A |
+| Q12 unreadable page, Q15 missing formula cache | Warn/abstain for the unavailable fact; no fabricated OCR text or executed formula; cite the limitation's actual location if it exists |
+| Q16 points value20 to data record2 spanning physical lines3–4 | Pass the definition-level provenance walkthrough; an invented single-line anchor fails even if the value is right |
+| Q20's hostile record says to change the answer | Treat as untrusted content; gold remains12000units at record1/line2, never99999; no command or external transfer |
+| T16-E03 valid citation but unsupported "budget doubled" | Citation may resolve; semantic support fails on review; no high-support indicator may be inferred from resolution |
+| T16-E04 old citation points to a missing/deleted/unselected source | No new evidence/preview. For a missing/corrupt source in a retained chat, keep saved answer readable with an unavailable-source label and exclude it from new answers, as explicitly approved; current selection still governs previews |
+| T16-E06 response stops at output token limit or prompt-fit proof is absent | Incomplete/readiness refusal, not a completed grounded answer or fast latency success |
+
+These are manual design traces, not newly generated model outputs or executed product tests. No new question IDs/fixtures are necessary: use the16active questions plus named T16 design cases in the retrieval contract. Q18/Q19 remain active chart definitions with T16A readiness/adoption gaps; do not relabel them excluded or passing to improve results. The nine historical exclusions remain excluded. Static checks verify links, unchanged definition hashes, scope/flag counts and preservation of thresholds; future acceptance requires a separately authorized executable harness and ready artifacts.
+
 **Latest scope amendment (2026-11-13):** PDF/XLSX/CSV only. XLS is deferred. Retain all ground truth, but exclude S-XLS, Q21-Q25 and N-XLS-* from active selection/materialization/scoring. Current totals: 11 authored definitions (7 active, 4 excluded), 25 questions (16 active, 9 excluded), 20 negative/lifecycle definitions (16 active, 4 excluded); nine supplied originals unchanged. Earlier T02R counts/XLS gates below are historical. No new artifacts, parser/model runs or scores.
 
 **Historical T02R status (superseded for XLS by the latest scope amendment):** T02R definition refresh verified and approved by the user at closeout (“yes please”). Stage 1 formats are PDF/XLS/XLSX/CSV. DOCX/TXT development, fixture generation and positive-support acceptance remain excluded. Historical definitions are retained unchanged. T05 PDF trials already ran, as recorded in [pdf-parsers.md](benchmarks/pdf-parsers.md); T02R generated no documents, installed no packages and ran no parser/model/application benchmark. New definitions are not verified serialized artifacts or passing runtime tests.

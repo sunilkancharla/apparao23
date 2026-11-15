@@ -2,6 +2,10 @@
 
 ## Status and purpose
 
+**Authorized for static drafting:** after proposal commit `cc08343`, the user said "please proceed". T16-1–4 drafts are now prepared in [retrieval design](../retrieval-design.md) and [evaluation design](../evaluation.md#t16-draft--support-indicators-and-grounding-review). T16-5 review and final T16-6 closeout await the user's policy/contract decisions; checkpoint and review material are ready. No settings, retention policy, runtime component or G2 adoption is approved merely by authorization to draft. Earlier proposed/requested-approval wording below describes the original package review.
+
+**Policy replies recorded:** the user separately approved chat-message/quotation/exclusive-processed-data deletion, keeping unavailable-source historical answers with a label/exclusion from new answers, decimal units/reference/unique-library-byte accounting and5GB processed/1GB temporary caps with a clear stop. These are synchronized into SPEC, decision register and retrieval choices R03–R07. Only those explicit requirements were added to SPEC; no unapproved contract settings were promoted. T16-5 review remains open for R01/R02/R08 and T17 mechanics. Nine draft/status files, including the necessary SPEC clarification, await a new commit decision; proposal commit `cc08343` does not cover them. No new execution scope was added.
+
 Proposed for review, documentation only. The user approved proceeding with the suggested sequence and recording sqlite-vec as the preferred candidate. This document makes the next package concrete; it does not claim final storage adoption, new benchmark permission, G2 approval or approval of unresolved retention policies.
 
 Storage results are committed as `18be917`. The preferred candidate is SQLite metadata/history with the exact reviewed sqlite-vec0.1.9 Windows artifact for vector search, retaining its pinned companion notices and provenance limitations. The plain SQLite/Python approach remains the measured comparator, not an automatic runtime fallback. See [results](../benchmarks/sqlite-vec-match-results.md) and [decision register](../decisions.md).

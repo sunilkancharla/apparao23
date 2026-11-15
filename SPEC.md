@@ -8,6 +8,17 @@ The user explicitly directed: "leave the .xls files from our context" and use PD
 
 After reviewing MarkItDown v0.1.9 source/dependencies, the user accepted non-adoption and deferral of its empirical comparison, approved committing the review and authorized T09 read-only OCR review. Earlier MarkItDown comparison requirements below are subject to this exception. No measured MarkItDown quality/performance or runtime parser selection is implied. PDF/XLSX/CSV provenance, local OCR and privacy acceptance remain required. Evidence: `docs/benchmarks/markitdown.md`.
 
+## Approved T16 storage and retention clarifications
+
+The user explicitly selected the following choices during T16 design review. These settle the corresponding earlier open points without adopting the draft retrieval settings, runtime components or G2 architecture:
+
+- Use decimal MB=1,000,000 bytes and GB=1,000,000,000 bytes. Count attached document references, including library references, toward the approved10-file conversation limit. Identical stored library originals count once against the approved1GB library-original budget; reference identities remain distinct.
+- Allow **5GB (5,000,000,000 bytes) processed data** for extracted text, embeddings, indexes and previews, plus **1GB (1,000,000,000 bytes) temporary processing files**. Stop processing clearly at either cap. These are disk budgets, not RAM targets or validated capacity guarantees; the approved100MB/file,10files/upload/conversation and1GB library-original limits remain unchanged.
+- Deleting a conversation also deletes its messages, quotations and exclusively owned processed data, while preserving library/shared content and surviving references. The existing exclusive-attachment deletion rule remains binding.
+- If a source in a retained chat becomes missing or corrupt, keep the saved answer readable, label its source unavailable and exclude that historical answer/source from new answers. Referenced-library deletion remains blocked. No additional quotation snapshot is authorized.
+
+Exact reservation/concurrent-write accounting, database/journal/temp classification, interruption/reconciliation, retry and physical cleanup verification remain design requirements for T17. No secure-erasure guarantee follows from logical deletion. Detailed decision evidence is recorded in `docs/decisions.md` and `docs/retrieval-design.md`.
+
 ## Objective
 
 Build a single-user, browser-based, local document-chat assistant with conversation attachments, a reusable document library, scanned-PDF OCR, grounded citations, saved chats, and an evidence indicator. The target machine is Windows 11 with 16 GB RAM and no dedicated GPU.
@@ -25,13 +36,13 @@ Build a single-user, browser-based, local document-chat assistant with conversat
 
 Current approved requirements; do not ask for these decisions again. Remaining details are listed under Open Questions.
 
-- **Limits:** 100 MB per file, 10 files per upload/conversation, and 1 GB of library originals. Derived-data/storage budgets and exact enforcement/counting details are reviewed before implementation. Benchmark findings do not silently reduce these approved limits.
+- **Limits:** 100 MB per file, 10 files per upload/conversation, and 1 GB of library originals. The approved T16 clarification above defines decimal units, reference/library counting and5GB processed/1GB temporary budgets; remaining enforcement/recovery details are reviewed before implementation. Benchmark findings do not silently reduce approved limits.
 - **OCR:** English only.
 - **Frontend:** Minimal locally served HTML/CSS/JavaScript. Use Design 1 as the primary landing-page reference and Design 2 for chat, citations and the evidence panel. A frontend framework requires separate review/approval.
 - **Performance decision timing:** Set final speed/memory targets after initial local benchmarks, before model/architecture adoption. Agree bounded trial budgets first; initial measurements are exploratory. Quality/evaluation thresholds need agreement before applicable acceptance evaluations.
-- **Chat deletion:** Delete the conversation's exclusive attachments; preserve reusable library documents and content still required by other references. Historical citation/message and derived-artifact retention details remain to be settled.
+- **Chat deletion:** Delete its exclusive attachments, messages, quotations and exclusively owned processed data; preserve reusable library documents and content still required by other references. The approved T16 clarification above defines unavailable-source historical display; exact cleanup/recovery mechanics remain for T17.
 - **Data charts/diagrams:** Approve a bounded local feasibility evaluation before deciding runtime support. Use an agreed English-labelled sample set to assess trends, comparisons, labelled values and data-diagram relationships, with real document/page/chart-region or sheet references where available. Compare structured data/labels/OCR with a local visual approach only after exact trial provisioning is approved. Check against manual ground truth, disclose approximate readings and abstain when unsupported. Measure correctness/grounding, citation support, cold/warm latency and total memory pressure on the target CPU-only 16 GB machine. Exact types, thresholds and trial budget are agreed first. No universal visual-understanding guarantee, cloud processing or automatic model/dependency adoption is authorized. The reviewed detail is in `docs/proposals/chart-interpretation.md`; runtime implementation/acceptance tasks require a separate adoption decision after results.
-- **Referenced library deletion:** Warn and block deletion while saved conversations reference the library document. This interim Stage 1 rule is approved. SQLite history and document IDs/references remain Stage 1 requirements; more advanced deletion/citation handling may be considered later. Historical citation/message, detached-reference and derived-artifact retention details must be agreed before lifecycle implementation.
+- **Referenced library deletion:** Warn and block deletion while saved conversations reference the library document. This interim Stage 1 rule is approved. SQLite history and document IDs/references remain Stage 1 requirements; more advanced deletion/citation handling may be considered later. Apply the approved T16 retention/display choices; detached-reference, temporary-artifact and physical cleanup/recovery details must be defined before lifecycle implementation.
 
 ## Commands and actual setup
 
@@ -188,8 +199,8 @@ The application uses a locally running Ollama model. The prototype is intended t
 
 ## Open Questions
 
-- Exact byte conversion, counting/dedup rules and derived/temporary storage budgets under the approved limits.
-- Historical message/citation, detached-reference, derived-artifact and temporary-file retention, preserving approved deletion rules.
+- Reservation/concurrent-write and database/journal/temp accounting under the approved byte/counting and5GB processed/1GB temporary budgets; aggregate conversation-original storage policy remains unspecified.
+- Detached-reference, temporary-file and physical cleanup/reconciliation/retry mechanics, preserving the approved chat-history deletion, unavailable-source display and shared/library rules.
 - Chart/diagram sample types, trial budgets/thresholds and runtime adoption after the approved feasibility evaluation.
 - Exact parser/OCR/model/index artifacts, performance/context/concurrency budgets and final architecture after evaluation. English-only OCR and minimal HTML/CSS/JavaScript are already approved.
 

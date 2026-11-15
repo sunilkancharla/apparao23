@@ -1,5 +1,22 @@
 # Stage 1 Decision Register
 
+## T16 storage/retention choices approved — contract review remains
+
+The user explicitly selected the recommended options in two sets of T16 questions:
+
+- Delete the chat's messages, quotations and exclusive processed data with the chat, preserving library/shared content and surviving references.
+- For missing/corrupt sources in a chat that is kept, retain the saved answer, label its source unavailable and exclude it from new answers. Referenced-library deletion remains blocked; no extra source snapshot is approved.
+- Use decimal MB/GB; count attached document references, including library references, toward the10-file conversation limit; identical library originals count once toward the1GB library-original budget while reference identities remain distinct.
+- Allow **5GB processed data (5,000,000,000bytes)** and **1GB temporary processing files (1,000,000,000bytes)**. Stop processing clearly when either cap is reached. These are disk caps, not RAM limits or measured capacity guarantees. Existing100MB/file,10files/upload/conversation and1GB library-original limits remain unchanged.
+
+These explicit requirements are synchronized into [SPEC](../SPEC.md#approved-t16-storage-and-retention-clarifications) and retrieval choices R03–R07. R01 chunk/context settings, R02 indicator/quality interpretation and R08 interruption/reconciliation remain draft contracts for review. Database/history/journal/temp classification, exact reservation/concurrency/duplicate-request mechanics and aggregate saved-conversation-original storage policy remain T17 requirements; no unspecified cap or eviction policy is inferred.
+
+## T16 static design authorized — drafts prepared
+
+The user said "please proceed" after proposal commit `cc08343`, authorizing the bounded [T16 static design package](proposals/t16-grounding-contracts.md), including explicit upstream gap tracking. Draft [retrieval/citation](retrieval-design.md) and [support/evaluation](evaluation.md#t16-draft--support-indicators-and-grounding-review) contracts are ready for review. Package authorization alone approves drafting; the explicit policy decisions above were obtained separately. No executable code, new fixtures, scoring eligibility, installation, native/model/parser execution, runtime adoption, G2 or trial permission is introduced.
+
+Review the remaining proposed choices R01/R02/R08 in retrieval design. R03–R07 now reflect the explicit policy replies above, with remaining implementation mechanics identified. Context-fit validation and final performance/quality/component adoption still require review. Existing original-file deletion, shared/library preservation and referenced-library blocking remain approved and unchanged.
+
 ## Storage preferred candidate — approved direction, adoption pending
 
 After reviewing the committed T12-D results (`18be917`), the user replied "yes proceed please" to the recommendation to record SQLite plus the exact reviewed sqlite-vec0.1.9 Windows artifact as the preferred candidate, resolve storage/retention details and prepare T16 before G2. Record that preference only. It does not approve installing/loading the artifact in an application, native query optimization, new benchmarks, reduced upload/library limits or final runtime adoption.

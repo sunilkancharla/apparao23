@@ -1,15 +1,17 @@
 # Stage 1 Atomic Task Checklist
 
-## T16 preparation — candidate preference recorded; exact design package proposed
+## T16 — drafting authorized; contracts and policy review pending
+
+The user authorized the package with "please proceed" after commit `cc08343`. [Retrieval design](docs/retrieval-design.md) and [evaluation draft](docs/evaluation.md#t16-draft--support-indicators-and-grounding-review) provide acceptance evidence for T16-1–4. Definition hashes/JSON/IDs/scope/flags and local links checked; no question/manifest change, scoring run or runtime execution. R03–R07 explicit retention/counting/5GB processed/1GB temporary choices are recorded in SPEC/decisions; T16-5 remaining contract approval is pending and the T16-6 checkpoint is saved. Nine draft/status files await separate commit approval. Earlier proposed-package notes below are historical.
 
 User approved the recommended storage direction after results commit `18be917`; [decision register](docs/decisions.md) records sqlite-vec as preferred candidate, not adopted runtime. [Package](docs/proposals/t16-grounding-contracts.md) defines each task's objective, prerequisites, acceptance and evidence. Six proposal/status documents are prepared; exact package/commit approval pending. Full upstream acceptance and D01/D04/D06 decisions remain visible; no native trial or product implementation is authorized.
 
-- [ ] **T16-1 — Map evidence and blockers.** Requires package approval; trace completed evaluations, deferrals and unresolved decisions to contract prerequisites. Evidence: retrieval-design gap table.
-- [ ] **T16-2 — Retrieval and context contract.** Requires T16-1; draft source-aware chunks, selected-reference scope and bounded context/settings with explicit proposed status. Verify format/location, table and isolation walkthroughs.
-- [ ] **T16-3 — Answers and citations.** Requires T16-2; specify support/ambiguity/abstention, stable anchors/quotes and missing-source alternatives. Verify the package's supported/unsupported/multi-file/injection examples.
-- [ ] **T16-4 — Support signals and rubric.** Requires T16-3; define observable indicator states and per-claim metrics without a correctness probability. Verify truth table, existing scope/denominators and proposed threshold refinements.
-- [ ] **T16-5 — Contract/policy review.** Requires T16-2–4; present D01/D04 and remaining quality/context choices without silently selecting them. Verify requirement/negative-case matrix, links/diff and any necessary JSON checks; record actual decisions.
-- [ ] **T16-6 — Closeout and checkpoint.** Requires T16-5; distinguish drafted/approved/blocked outcomes, show reviewed changes and request a separate contract commit. Evidence: updated status and remaining T17/G2 prerequisites.
+- [x] **T16-1 — Map evidence and blockers.** Package authorized; retrieval-design gap table separates observed results/approved deferrals from T12/16GB/scale/policy/chart/adoption prerequisites.
+- [x] **T16-2 — Retrieval and context contract draft.** Source/format-aware chunks, pre-ranking selected-reference scope, version identity, history isolation and bounded proposed settings specified. Manual format/table/isolation/input-boundary walkthrough complete; token-fit validation remains an adoption prerequisite.
+- [x] **T16-3 — Answer/citation contract draft.** Stable source/version/anchor/quote checks, calculation/ambiguity/abstention, hostile-input handling and unavailable-source alternatives specified. Q01–Q06/Q10–Q16/Q18–Q20 and T16-E01–E07 manually traced as design cases, not executed tests.
+- [x] **T16-4 — Support/evaluation contract draft.** Observable-state truth table and per-claim metrics preserve initial gates, hard failures and N/A/fixed denominators. No correctness probability or semantic-support inference from valid IDs. All25question definitions retain original scoring flags/facts/hashes.
+- [ ] **T16-5 — Contract/policy review, partly decided.** R03–R07 explicit chat deletion, unavailable-source display, decimal/reference/library accounting and5GB processed/1GB temporary choices recorded in SPEC/decisions. R01/R02/R08 proposals and T17 reservation/recovery/context-fit/resource/adoption requirements remain open. Static review complete; do not infer final contract approval from policy replies.
+- [ ] **T16-6 — Final closeout, checkpoint saved.** Draft outcomes/blockers/review evidence recorded; nine-file draft commit approval requested separately. Finish final approved-contract status after T16-5 decisions; G2/T17 prerequisites remain open.
 
 These refine the existing T16 design task below; they do not replace its final acceptance or close incomplete T12/T16A/T17 work.
 
