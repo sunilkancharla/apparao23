@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-S — approved repair stopped; integration incomplete
+
+User approved R1 closeout commit (`986305d`) and no-network repair. [Results](docs/benchmarks/public-source-repair-results.md): two successor aids;13regressions/Ruff pass; cleanup mutation detected. First real control exited0 but kernel counted2processes, not1; active0/direct child reaped/handle closed, receipt persisted despite accounting exception. No second worker, HTTP or retry. Source/results commit and further diagnosis require approval. Earlier pending R1-S approval wording is historical.
+
+- [x] Reproduce real initializer/full-close defects and add successor/fake regressions.
+- [x] Run bounded owned startup control; preserve unexpected count and cleanup receipt.
+- [ ] Complete clean/forced-failure real pair — stopped on unexpected count; no retry.
+- [x] Review, document and checkpoint partial outcome without adoption claims.
+
 ## T17-R1 — closed startup failure; research incomplete
 
 User approved R1 and the architecture commit (`dbd9137`). [Stop evidence](docs/benchmarks/public-source-review-stop.md): worker `pending_bytes` KeyError before HTTP; controller missing `observe_native` during job close. Zero requests/bytes/sources. Cleanup code path and terminal exceptions reviewed, no independent process inventory or invented resource peaks. Nine fake tests passed but did not exercise real ledger construction/full cleanup integration. Closed meter900/900conservative seconds,24reservations; no retry/reset. Eleven source/results/status files await separate Git approval.
