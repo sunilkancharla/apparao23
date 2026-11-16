@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-I — effective-limit/owned-image proposal prepared
+
+R1-L committed `91d6433`; user requested the next proposal. [Exact R1-I scope](docs/proposals/public-source-owned-identity.md) records prerequisites, acceptance, evidence and stop conditions for each task. Documentation only: no code, research, fresh allocation or trial. Five proposal/status files await commit approval; the package/connected synthetic observation boundary is unapproved.
+
+- [ ] **R1-I1:** Freeze fresh64-unit/900-second allocation and preservation identities after approval.
+- [ ] **R1-I2:** Verify required declarations, test readback/capture ordering and failure/deadline cases, run R1-A regressions/Ruff before launch.
+- [ ] **R1-I3:** At most one direct stdlib worker; capture effective settings and bounded owned images before count rejection; no retry.
+- [ ] **R1-I4:** Review separate identity/count/limit/cleanup verdicts, preserve charges/evidence, close and checkpoint; results commit separately gated.
+
+Count2is not an adopted baseline; identifying an image does not explain a limit discrepancy. Earlier R1-L source/results-commit-pending entries below are historical.
+
 ## T17-R1-L — investigation closed, unresolved after resume
 
 User approved exact package/connected synthetic boundary; five proposal docs committed `c023f37`. [Results](docs/benchmarks/public-source-launcher-results.md):28fake tests/Ruff pass; first real control count0before assignment,1after assignment,2after resume with2active despite requested limit1. Two notification identifier values captured, additional image unknown. Stopped before second worker. Owned termination/wait/four closes succeeded, final active0. Ten prior identities preserved. Expected count remains one; no retry/adoption.

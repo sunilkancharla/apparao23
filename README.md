@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Focused follow-up proposed:** R1-L results are committed as `91d6433`. [R1-I](docs/proposals/public-source-owned-identity.md) proposes one synthetic worker with limit readback and owned-image capture before a count mismatch stops it. This is documentation only; the second executable and limit discrepancy remain unresolved. Expected count remains1. Proposal commit and exact execution package/boundary await approval; no app/native adoption is implied. Earlier pending R1-L commit wording below is historical.
+
 **Launcher investigation stopped after resume:** Proposal committed `c023f37`; approved probe passed28fake tests/Ruff. The first worker's count was1after assignment and2after resume, with2active despite a requested cap1. It stopped before the second control; owned cleanup reached active0 and all handle closes succeeded. [Results](docs/benchmarks/public-source-launcher-results.md) preserve the evidence and missing second-image/effective-limit observations. No successful real pair or app/native adoption is claimed; G2 remains open. Earlier pending proposal wording below is historical.
 
 **Launcher proposal prepared:** R1-A is committed as `bcdb9c4`. The [next package](docs/proposals/public-source-launcher-validation.md) proposes declaration checks and stage-by-stage identity/accounting evidence before and after assignment/resume, with at most two controlled standard-library workers. Expected count stays one. This proposal has not been executed; no fresh research or worker ran. Package, execution boundary and proposal commit await approval; G2 remains open. Earlier pending R1-A commit wording below is historical.

@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-I proposal prepared
+
+R1-L source/results committed `91d6433`. User requested the next proposal. [R1-I](docs/proposals/public-source-owned-identity.md) narrows the follow-up to one synthetic worker, effective-limit readback and bounded handle-based owned-image capture before count rejection. Expected count remains1; no trial/source changes ran here. Exact64-unit/900-second package, brief diagnostic observation window and connected synthetic boundary require approval, as does the five-file proposal commit. Older R1-L results-pending notes below are historical.
+
 ## Current execution point — R1-L closed unresolved
 
 Proposal committed `c023f37`; user approved exact connected synthetic package. [Instrumented results](docs/benchmarks/public-source-launcher-results.md) narrow the count change to after resume:1before,2after, including2active despite the requested cap1. First control stopped; second not started. Cleanup verified separately;28fake tests/Ruff and10preservation hashes passed. Next propose effective-limit readback and extra owned-identity capture before another real worker, under a new allocation. No current retry, count-baseline change, public review or G2 adoption. Seven source/result/status files await separate commit approval. Earlier proposal/approval-pending notes below are historical.
