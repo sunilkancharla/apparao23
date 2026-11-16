@@ -1,5 +1,11 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+**Direction decision (2026-11-16):** User approved standalone route C and the five comparison/status files for commit. Prepare its bounded validation-design package; no research, installation, native trial or runtime adoption is authorized by this direction decision. Earlier pending-direction notes below are historical.
+
+## Current execution point — integration comparison ready for direction decision
+
+IF-QC findings committed `17e0e70`. [IF-CD comparison](docs/proposals/input-fit-counting-integration-comparison.md) uses existing evidence only; compares owned-runtime bridge(A) with external ownership handoff(B), defines a proposed prepare/measure/admit/generate/release contract and identifies unresolved lease/resource/authentication details. After the user asked about a separate tokenizer, retain standalone route C as the preferred production direction, conditional on existing parity gates; A/B are possible validation/integration mechanisms, not assumed production dependencies. IF-CD1/2 document review complete; CD3 awaits explicit C/A/B/alternative direction. No new research/package allocation/code/build/install/trial or adoption. Five comparison/status documents await commit approval. Earlier pending notes below are historical.
+
 ## Current execution point — IF-QC reviewed; counting integration decision needed
 
 Approved continuation/proposal commit `fa670fa`. [Findings](docs/benchmarks/input-fit-oracle-review-continuation.md): accounting-before-output succeeded,30entry identities preserved; five web calls/twenty targets included two404s, six/24reservations retained. No trustworthy complete counting interface established for the present external-controller design. Conditional dependency review skipped under the approved stop rule. Recommend comparing a narrow owned-runtime counting bridge against an external ownership handoff before further dependency work; runtime/build/architecture choice requires user decision. Seven findings/status files await separate commit approval; no next package prepared or approved. No installation/native/model activity or G2/app approval. Earlier pending notes below are historical.

@@ -1,4 +1,16 @@
-# Latest checkpoint — IF-QC source review complete; integration direction pending
+# Latest checkpoint — IF-QC committed; integration comparison ready
+
+Update2026-11-16: user approved all after the explicit standalone recommendation. Record route C direction approval and five-file comparison commit approval; prepare its bounded independent-validation design package next, without research/install/native execution or runtime adoption. Earlier pending-direction language below is historical.
+
+User approved seven IF-QC findings/status files and preparing the bridge-versus-handoff comparison. Exact allowlist/index/whitespace commit `17e0e70` succeeded. IF-QC remains closed with fivecalls20targets/30preservation hashes/373links,318.21seconds/607,584artifact upper/49,152reporting reservations and documented closeout reporting-order deviation. No retrospective compliance claim or new execution under that allocation.
+
+Prepared docs/proposals/input-fit-counting-integration-comparison.md plus PLAN/TODO/README/thischeckpoint (five files) from existing evidence only. Actual comparison produced, not another proposal to compare later. A=owned-runtime bridge with explicit custom-build/provenance/native maintenance cost; B=external trusted handoff with unproven model lifetime. Proposed prepare/measure/admit/generate/release contract holds exact identity, one-use request binding, special-token/context/output rules and cancellation/replay/drift failures. Lease duration/state caps/authentication/resource details remain decisions, no invented defaults/adoption. After the user asked why not a separate tokenizer, revised the comparison to retain standalone route C as preferred for production, conditional on exact rendering/token/context/parity proof. A/B may provide a validation reference without being per-request production counting dependencies; no custom build presumed necessary. No gate waived. CD1/CD2 document tasks complete; CD3 user direction C/A/B/alternative pending.
+
+No new web research, runtime allocation, helper/source/test, model/API/service, candidate import/install/compile/trial or architecture adoption. Five documents await separate commit approval. After direction choice, prepare exact next package; do not execute it automatically. Frozen findings/parity/sources/closed receipts and unrelated untracked files preserved. G2/app/stage gates unchanged; no subagents/skill scripts/goal/status/compact invocation.
+
+Comparison preparation checks: five-file scope, local link resolution, empty staged index and tracked/new-file whitespace passed. No application tests/research/trial needed for this document-only comparison. User's tokenizer question incorporated without adopting software or relaxing exact validation; five documents remain uncommitted.
+
+# Earlier checkpoint — IF-QC source review complete; integration direction pending
 
 User approved IF-QC/full five-document proposal commit `fa670fa`. Corrected first invocation captured DateTimeOffset UTC and created exclusive fresh root data/t17/input-fit-oracle-review-02, durable meter/full64units(48normal16protected)/research/reporting reservations before any inspection or stdout. Subsequent shell calls precharged4096bytes before bounded scalar output; initial4096also covers Git output. Thirty prior sources/reports/receipts frozen before research, including all IF-Q post-stop records without retrospective entry-compliance claims. No new helper/source/test/worker/native service/model/API/install or fixture.
 

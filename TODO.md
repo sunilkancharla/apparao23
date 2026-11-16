@@ -1,5 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-CD — integration comparison prepared
+
+IF-QC findings committed `17e0e70`; [comparison and proposed contract](docs/proposals/input-fit-counting-integration-comparison.md) use existing evidence without new execution.
+
+- [x] **IF-CD1:** Compare standalone counting versus bridge/external handoff, distinguishing production counter from validation reference: ownership/model lifetime, prompt/special-token fidelity, privacy, build/dependency maintenance and unmeasured resource cost. Verification: existing pinned findings, no new feasibility claims.
+- [x] **IF-CD2:** Draft common prepare/measure/admit/generate/release contract with one-use identity-bound admission, replay/drift/cancellation refusal and explicit unresolved lifetime/cap/authentication decisions. Verification: consistency with preflight/frozen parity requirements; no contract adopted.
+- [x] **IF-CD3:** User approved recommended C(standalone counter with independent validation design) on2026-11-16 and the comparison commit. Prepare the exact bounded follow-up package for separate approval; no research/build/install/trial or runtime adoption inferred.
+
+Five comparison/status files await separate commit approval. All prior runtime allocations remain closed.
+
 ## T17-IF-QC — bounded source review completed; direction pending
 
 Approved proposal committed `fa670fa`. [Findings](docs/benchmarks/input-fit-oracle-review-continuation.md) retain the unresolved independent counting contract and compare three directions. No runtime/architecture choice inferred.
