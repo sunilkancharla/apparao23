@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-I committed; host preflight/direct controller proposed
+## Current execution point — IF-J synthetic comparison completed
 
-IF-I source/results committed `c94d6da`. [IF-J proposal](docs/proposals/windows-identity-direct-controller.md) starts with limited read-only policy/language-mode and no-process capability checks, then test-first bootstrap reuse of the unchanged probe in fresh02 and at most one direct literal-controller trial. No execution-policy modification, old run reuse or model read. Exact64-unit/1,200-second/1MiB package, changed invocation boundary and five-document commit await approval. No new allocation, preflight, aid or trial has started; G2/app remain open. Older pending-results wording below is historical.
+Approved IF-J/proposal commit `a084243`. Host capability preflight passed without policy changes;22fake tests/Ruff and a caught root-admission mutation preceded one successful synthetic probe. [Results](docs/benchmarks/windows-identity-direct-results.md) show a path/fstat ctime difference after a same-file edit; the earlier metadata refusal's exact field remains unknown. Owned exit0/reapedtrue. No guard/model/native/G2 changes. Recommend separately proposed stable-identity/same-API mutation correction before another metadata attempt. Seven source/results files await separate commit approval; older pending wording below is historical.
 
 ## Current execution point — IF-I host-policy stop before probe
 

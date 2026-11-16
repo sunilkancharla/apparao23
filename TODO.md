@@ -1,15 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-J — host preflight and direct-controller proposal
+## T17-IF-J — completed synthetic comparison; guard unchanged
 
-IF-I source/results committed `c94d6da`. [Exact IF-J scope/boundary/acceptance](docs/proposals/windows-identity-direct-controller.md) awaits package and five-document commit approval. No host-policy inspection, new allocation/code/fixture/process or trial occurred during preparation.
+User approved the [exact IF-J package](docs/proposals/windows-identity-direct-controller.md)/boundary and proposal commit `a084243`. [Results](docs/benchmarks/windows-identity-direct-results.md) retain actual comparisons and limitations. Old IF-I/IF-R sources and evidence remain unchanged.
 
-- [ ] **IF-J1:** After approval, persist64-unit/1,200-second/1MiB allocation/preservation, then limited host-policy/language-mode/no-process capability preflight. Acceptance: durable evidence or stop before implementation.
-- [ ] **IF-J2:** After J1, test-first new bootstrap binds verified unchanged probe/persistence to fresh02 and enforces one-shot admission. Acceptance: red, passing new+existing14fake tests/Ruff, caught mutation and unchanged old hashes.
-- [ ] **IF-J3:** After J2/seals/review, one direct literal-controller synthetic trial. Acceptance: exact field snapshots or partial stop, bounded fixture/read/stat operations and retained full result/verified owned exit.
-- [ ] **IF-J4:** After J3 or stop, review observations without guard adoption, update evidence/checkpoint, check preservation/links/diff/budgets and request separate results commit.
+- [x] **IF-J1:** Full64-unit/1,200-second/1MiB clock/manifest and13preservation hashes. Preflight all policy scopesUndefined/FullLanguage; direct marker and Process object construction/disposal passed, no policy changed.
+- [x] **IF-J2:** Expected import-error red;22fake tests0.005s/Ruff passed, root-admission mutation caught0.002s; old probe/tests unchanged. New bootstrap binds both probe/persistence to fresh02 and enforces claim/clock/output admission.
+- [x] **IF-J3:** Sole probe completed, exit0/reapedtrue/0.3430525s; one32-byte fixture,16stat operations,64actual/130charged read bytes. Original identity matched; after controlled edit only cross-API ctime differed. Exact fields/full result saved; no timeout/retry.
+- [x] **IF-J4:** Observations versus unknown earlier cause documented; checkpoint/hash/link/diff/output/time closeout retained. Seven source/results files require separate commit approval; no guard adoption.
 
-No saved-script/policy bypass, managed-restriction override, old trial retry, guard change, model/private-content read, evaluated native call or G2/application adoption. Host permission denial stops; no alternative route.
+No execution-policy change, old trial retry, guard change, model/private-content read, evaluated native call or G2/application adoption. Current allocation closed; proposed stable-identity/same-API mutation correction and any renewed metadata trial require a new concrete package.
 
 ## T17-IF-I — controls passed; host refused controller before execution
 
