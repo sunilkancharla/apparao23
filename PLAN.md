@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-J committed; targeted metadata correction proposed
+
+IF-J source/results committed `6f1e007`. [IF-K package](docs/proposals/metadata-identity-correction.md) proposes six-field cross-API compatibility checks plus seven-field same-API mutation checks, test-first regression/mutation review and one fresh nine-file metadata-only worker. Preserve old sources/closed records and expected hashes/size/path/reparse/read caps. Exact80-unit/1,200-second/2MiB package, comparison/execution boundary and five-document commit await approval. No new aid/allocation/guard/metadata attempt yet; adapter/native/G2/app gates remain open. Older pending-results wording below is historical.
+
 ## Current execution point — IF-J synthetic comparison completed
 
 Approved IF-J/proposal commit `a084243`. Host capability preflight passed without policy changes;22fake tests/Ruff and a caught root-admission mutation preceded one successful synthetic probe. [Results](docs/benchmarks/windows-identity-direct-results.md) show a path/fstat ctime difference after a same-file edit; the earlier metadata refusal's exact field remains unknown. Owned exit0/reapedtrue. No guard/model/native/G2 changes. Recommend separately proposed stable-identity/same-API mutation correction before another metadata attempt. Seven source/results files await separate commit approval; older pending wording below is historical.

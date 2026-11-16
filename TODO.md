@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-K — targeted metadata-reader correction proposed
+
+IF-J source/results committed `6f1e007`. [Exact scope, comparison policy, artifacts, budgets and acceptance](docs/proposals/metadata-identity-correction.md) await package/boundary and five-document commit approval. No new source/allocation/tests/guard change/metadata attempt exists; old source and closed evidence remain untouched.
+
+- [ ] **IF-K1:** After approval, persist80-unit/1,200-second/2MiB accounting and freeze prior IF-R/I/J source/receipt/rules/spec/lock hashes; verify manifest before optional preparation.
+- [ ] **IF-K2:** After K1, test-first two-file successor; six cross-API fields plus seven same-API fields, unchanged expected size/hash/path/type/caps and named diagnostics. Acceptance: meaningful red, new+20legacy fake tests/Ruff and caught mutation.
+- [ ] **IF-K3:** After K2/seals/review, one fresh nine-file metadata-only worker using direct owned controller. Acceptance: pinned verification/findings or partial stop, durable per-file identity progress, full tool result and verified owned exit.
+- [ ] **IF-K4:** After K3 or stop, review facts versus runtime unknowns without adoption, update reports/checkpoint, verify preservation/links/diff/budgets and request separate results commit.
+
+Cross-API ctime-only disagreement may proceed only under the explicitly proposed policy; same-API timestamp mutation still refuses. No model/native/private-content/network/install/adapter/G2/app authorization; no old run reset or retry.
+
 ## T17-IF-J — completed synthetic comparison; guard unchanged
 
 User approved the [exact IF-J package](docs/proposals/windows-identity-direct-controller.md)/boundary and proposal commit `a084243`. [Results](docs/benchmarks/windows-identity-direct-results.md) retain actual comparisons and limitations. Old IF-I/IF-R sources and evidence remain unchanged.
