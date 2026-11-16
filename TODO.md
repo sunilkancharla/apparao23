@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-P — accounting-options review complete; detached probe proposed
+
+User requested the next static/public-reference assessment after `4847f1b`. [Assessment](docs/benchmarks/public-source-process-options.md) separates the observed basename from documented console behavior and recommends testing `DETACHED_PROCESS` before permitting auxiliaries. Three primary-source web calls; no runtime/source/ledger changes. No count-policy adoption or documented console-host limit exemption claimed. Five documents await commit approval; exact R1-DT package awaits approval.
+
+- [ ] **R1-DT1:** Freeze fresh64-unit/900-second manifest and preservation hashes after approval.
+- [ ] **R1-DT2:** Test-first detached/suspended/Unicode configuration and forbidden flags; retain readback/ownership/deadline regressions and Ruff.
+- [ ] **R1-DT3:** At most one sealed stdlib attempt; expected count1/exit0/empty owned job, no retry or fallback.
+- [ ] **R1-DT4:** Review independent verdicts and full charges, close/checkpoint and request separate results commit.
+
+Task prerequisites/acceptance/evidence and connected synthetic boundary are specified in the linked proposal. Advisory freshness can use a separate read-only web research package; no new research beyond this options assessment is approved. Older R1-I results-commit-pending entries below are historical.
+
 ## T17-R1-I — identity evidence captured; operational count still fails
 
 User approved exact package/boundary; five proposal docs committed `7fae685`. [Results](docs/benchmarks/public-source-owned-identity-results.md):30fake tests/Ruff pass. One real attempt captured owned `python.exe` and `conhost.exe` handles/images/creation IDs before count rejection; all three limit readbacks retained active cap1/memory512MiB. Ready accounting2/2 remains unexplained; no count adoption. Cleanup active0/direct reaped/five closes succeeded, capture about1.42ms. Fourteen prior identities/six seals preserved; no retry.

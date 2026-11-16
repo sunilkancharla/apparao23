@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-P assessment complete; R1-DT proposed
+
+R1-I source/results committed `4847f1b`. User requested the static/public-reference accounting assessment. [Options and exact R1-DT proposal](docs/benchmarks/public-source-process-options.md) recommend one detached stdlib launch before any helper allowance, keeping expected count1 and all accounting. Three web-tool calls reviewed primary Windows/Python evidence; no code, trial, tests or closed-state change. Five assessment/status documents and the64-unit/900-second connected synthetic package require separate approval. Advisory research can use built-in read-only web tools under its own package rather than depend on this launcher; G2 remains open. Older R1-I results-pending notes below are historical.
+
 ## Current execution point — R1-I evidence captured, count policy unresolved
 
 Proposal committed `7fae685`; approved single attempt captured owned `conhost.exe` alongside `python.exe` before rejection. [Results](docs/benchmarks/public-source-owned-identity-results.md):30fake tests/Ruff; requested limit readback passed at all stages, but ready count2/active2 still failed expected1. Cleanup independently verified; no retry or automatic process-policy change. Next prepare a static/public-reference accounting-options assessment before choosing any broader auxiliary-process allowance. Seven source/result/status files await separate commit approval; G2 remains open. Older pending-package notes below are historical.
