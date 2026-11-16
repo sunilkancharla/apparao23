@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-N — static artifact reconciliation proposed
+
+IF-M findings committed `2275acc`. [Exact IF-N package](docs/proposals/input-fit-tokenizer-static-reconciliation.md) proposes2wheels/11data assets, explicit unverified-publisher-digest acquisition policy, test-first stdlib aid and shared execution/download limits. Package/five-document commit await approval; no new allocation/code/acquisition.
+
+- [ ] **IF-N1:** After approval, persist128-unit/1,800-second/32MiB shared reservations, HTTP/web caps, clock and preservation manifest. Acceptance: durable precharge before optional work; old epochs remain closed.
+- [ ] **IF-N2:** After N1, build only2authored stdlib aid/test files test-first. Acceptance: failing controls then focused tests/Ruff/caught mutation; fake transports and ZIP/path/identity/budget/receipt guards; within6test/2Ruff invocation caps.
+- [ ] **IF-N3:** After N2, one bounded static acquisition/inspection of exact2wheels/11assets, public release-source/dependency reconciliation. Acceptance: verified wheel hashes/METADATA/RECORD, exact asset byte manifest with honest attestation gaps, version/graph findings, exit/teardown receipts; no installation/import.
+- [ ] **IF-N4:** After N3 or bounded stop, document findings and remaining parity/adoption blockers, verify preservation/links/diff/resources and save checkpoint. Acceptance: separate source/results commit request, no inferred runtime/G2 adoption.
+
 ## T17-IF-M — bounded review closed; partial manifest / no adoption
 
 User approved [IF-M](docs/proposals/input-fit-tokenizer-manifest-review.md) and proposal commit `6b67433`. [Findings](docs/benchmarks/input-fit-tokenizer-manifest-review.md) and [validation design](docs/proposals/input-fit-tokenizer-parity-validation.md) distinguish completed bounded review from unresolved acquisition/runtime prerequisites.
