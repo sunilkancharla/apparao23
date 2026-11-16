@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF — preflight design drafted; IF-S review proposed
+
+R1-W findings committed `197eb6e`. The [draft and exact IF-S package](docs/proposals/input-fit-preflight-design.md) contain the admission contract, adapter alternatives, per-task prerequisites/acceptance/evidence and future test cases. Draft preparation was documentation only, using existing reports; no new research, allocation, metadata extraction, dependency execution, tests or installation occurred.
+
+- [ ] **IF-S1:** After package approval, initialize prepaid64-unit/900-second accounting and freeze safely bounded public metadata/source identities.
+- [ ] **IF-S2:** After S1, inspect existing cached model/config/template metadata, distinguish observed/inferred/missing parity and identify serializer/context/output unknowns.
+- [ ] **IF-S3:** After S2, compare concrete adapter dependency/trust costs plus remaining native inventory gaps; recommend a decision without silent adoption.
+- [ ] **IF-S4:** After S3 or bounded partial stop, document findings and verify links/diff/preservation, close and request results commit separately.
+
+Five draft/status documents and IF-S approval are requested separately. No native calls, internal port use, new tokenizer, runtime modification or G2 application coding is authorized. Older R1-W commit-pending entries below are historical.
+
 ## T17-R1-W — bounded review finished; adoption gaps remain
 
 User approved the exact package/transport-boundary change and five-file proposal commit `780bad2`. [Findings](docs/benchmarks/public-source-web-review.md):12visible web calls/48targets used the24-unit research block; no software execution, installs or changes to selected pins. Specific Starlette/pdfminer/Pillow fixed-range comparisons are favorable, but full advisory/native-notice coverage is incomplete. No verified public exact count-only interface; matching rendered-template/tokenizer preflight remains to design and validate.

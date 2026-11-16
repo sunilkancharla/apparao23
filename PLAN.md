@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-W committed; input-fit design drafted
+
+Findings committed `197eb6e`. The [input-fit preflight draft](docs/proposals/input-fit-preflight-design.md) defines immutable count/generation identity, exact input/output-headroom admission, bounded R01 packing, fail-closed outcomes and future test cases. Its IF-S1–S4 package proposes metadata-only local adapter review before selection or native validation. No tokenizer, internal endpoint access or application implementation is selected/authorized. Draft and five-document commit await review; all old research allocations stay closed. Earlier findings-commit-pending wording below is historical.
+
 ## Current execution point — R1-W bounded review finished with gaps
 
 Approved proposal committed `780bad2`. [R1-W findings](docs/benchmarks/public-source-web-review.md) record12visible web calls/48targets, selected advisory fixed-version comparisons, partial native-notice evidence and pinned Ollama rendering/tokenizer limitations. The24-unit research block is consumed; no further research/retry in this allocation. No installs/native runs or adoption. Next recommend a bounded static exact-input-preflight integration design and remaining-evidence inventory; no such new package is approved yet. Findings and affected documentation await separate commit approval; G2/application implementation remain open. Older proposal-pending wording below is historical.
