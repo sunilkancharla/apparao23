@@ -1,5 +1,17 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-L — investigation closed, unresolved after resume
+
+User approved exact package/connected synthetic boundary; five proposal docs committed `c023f37`. [Results](docs/benchmarks/public-source-launcher-results.md):28fake tests/Ruff pass; first real control count0before assignment,1after assignment,2after resume with2active despite requested limit1. Two notification identifier values captured, additional image unknown. Stopped before second worker. Owned termination/wait/four closes succeeded, final active0. Ten prior identities preserved. Expected count remains one; no retry/adoption.
+
+- [x] **R1-L1:** Fresh prepaid80-unit allocation; setup-sum failure retained/charged, conservative120s setup debit.
+- [x] **R1-L2:** Five official-reference calls; reviewed declarations, independent x64 layout decoder and event limitations.
+- [x] **R1-L3:** Test-first successor, actual controller fake failure case,28tests/Ruff passing.
+- [ ] **R1-L4:** Successful real pair — **not achieved**; first control stopped, second not run.
+- [x] **R1-L5:** Preserve raw evidence, review limits/identity gaps, close unresolved and checkpoint; source/results commit pending.
+
+Next proposal must address effective-limit readback and extra owned identity capture before rejection/teardown. No further worker or public research approved. Earlier proposed/package-pending entries below are historical.
+
 ## T17-R1-L — instrumented launcher proposal prepared
 
 R1-A committed `bcdb9c4`. User requested the next proposal. [Exact package](docs/proposals/public-source-launcher-validation.md) defines prerequisites, acceptance/evidence and stop conditions for each task below; source preparation/research/execution await approval. Proposal-document links/diff checked; no trial allocation or code changes.

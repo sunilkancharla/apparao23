@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-L closed unresolved
+
+Proposal committed `c023f37`; user approved exact connected synthetic package. [Instrumented results](docs/benchmarks/public-source-launcher-results.md) narrow the count change to after resume:1before,2after, including2active despite the requested cap1. First control stopped; second not started. Cleanup verified separately;28fake tests/Ruff and10preservation hashes passed. Next propose effective-limit readback and extra owned-identity capture before another real worker, under a new allocation. No current retry, count-baseline change, public review or G2 adoption. Seven source/result/status files await separate commit approval. Earlier proposal/approval-pending notes below are historical.
+
 ## Current execution point — R1-L proposal prepared, not executed
 
 R1-A source/results committed `bcdb9c4`. User requested preparation of the next step. [R1-L proposal](docs/proposals/public-source-launcher-validation.md) specifies official declaration checks, test-first observation aids and at most two owned stdlib controls, with stage/identity evidence and a fully shared finite allocation. Expected count remains one; extra-process identity is unresolved. This turn changes documentation only. Proposal commit and exact package/execution-boundary approvals are pending; no helper, research, worker or runtime adoption is authorized by this proposal. Earlier pending R1-A commit notes below are historical.
