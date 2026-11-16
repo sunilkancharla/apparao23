@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-I evidence captured, count policy unresolved
+
+Proposal committed `7fae685`; approved single attempt captured owned `conhost.exe` alongside `python.exe` before rejection. [Results](docs/benchmarks/public-source-owned-identity-results.md):30fake tests/Ruff; requested limit readback passed at all stages, but ready count2/active2 still failed expected1. Cleanup independently verified; no retry or automatic process-policy change. Next prepare a static/public-reference accounting-options assessment before choosing any broader auxiliary-process allowance. Seven source/result/status files await separate commit approval; G2 remains open. Older pending-package notes below are historical.
+
 ## Current execution point — R1-I proposal prepared
 
 R1-L source/results committed `91d6433`. User requested the next proposal. [R1-I](docs/proposals/public-source-owned-identity.md) narrows the follow-up to one synthetic worker, effective-limit readback and bounded handle-based owned-image capture before count rejection. Expected count remains1; no trial/source changes ran here. Exact64-unit/900-second package, brief diagnostic observation window and connected synthetic boundary require approval, as does the five-file proposal commit. Older R1-L results-pending notes below are historical.

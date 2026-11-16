@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-I — identity evidence captured; operational count still fails
+
+User approved exact package/boundary; five proposal docs committed `7fae685`. [Results](docs/benchmarks/public-source-owned-identity-results.md):30fake tests/Ruff pass. One real attempt captured owned `python.exe` and `conhost.exe` handles/images/creation IDs before count rejection; all three limit readbacks retained active cap1/memory512MiB. Ready accounting2/2 remains unexplained; no count adoption. Cleanup active0/direct reaped/five closes succeeded, capture about1.42ms. Fourteen prior identities/six seals preserved; no retry.
+
+- [x] **R1-I1:** Fresh64-unit/900s allocation and persistent clock/manifest before preparation.
+- [x] **R1-I2:** One official-reference call; test-first readback/identity/deadline controls;30tests/Ruff pass.
+- [x] **R1-I3:** Single diagnostic attempt; bounded owned-image/limit evidence captured. Operational single-worker acceptance **failed**.
+- [x] **R1-I4:** Separate verdicts and preservation review; close/checkpoint with results commit pending.
+
+Next prepare a static/public-reference assessment of accounting options for the observed auxiliary executable; no broader process policy, further runtime or G2 adoption approved. Older R1-I-package-pending notes below are historical.
+
 ## T17-R1-I — effective-limit/owned-image proposal prepared
 
 R1-L committed `91d6433`; user requested the next proposal. [Exact R1-I scope](docs/proposals/public-source-owned-identity.md) records prerequisites, acceptance, evidence and stop conditions for each task. Documentation only: no code, research, fresh allocation or trial. Five proposal/status files await commit approval; the package/connected synthetic observation boundary is unapproved.
