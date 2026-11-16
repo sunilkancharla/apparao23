@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-Q — proposed oracle-first source review
+
+IF-P results committed `2fa113c`. [IF-Q proposal](docs/proposals/input-fit-oracle-dependency-review.md) defines prerequisites, acceptance, verification, exact evidence and shared limits. Package and five-document commit await approval.
+
+- [ ] **IF-Q1:** After approval, persist fresh64-unit/1,200-second/2MiB allocation, research/reporting counters and direct preservation hashes. Verify absent new root and immutable closed evidence.
+- [ ] **IF-Q2:** After Q1, within six calls/twenty-four targets, document pinned actual-runtime chat/embedding reference, complete render/token/special-token/context/output contract and ownership. Verify primary file/symbol citations; stop for user direction if actionable route remains unsupported.
+- [ ] **IF-Q3 (conditional):** Only after supported Q2 route, use remaining six calls/twenty-four targets to review exact applicable runtime graph/native notices/advisories/source-release/offline gaps, maximum20distribution names. Evidence table distinguishes verified, partial and blocked; no version selection/install.
+- [ ] **IF-Q4:** After Q2 stop or Q3 completion, record feasible/blocked/unknown verdict, alternatives and next decision; update findings/status, check links/diff/preservation/budgets, request separate findings commit. No runtime trial or adoption.
+
 ## T17-IF-P — remaining-asset continuation completed; no adoption
 
 User approved [IF-P](docs/proposals/input-fit-remaining-assets-continuation.md) and proposal commit `2533f27`. [Findings](docs/benchmarks/input-fit-remaining-assets.md) distinguish acquired byte identities from unverified runtime/native suitability.

@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-P committed; IF-Q proposed
+
+IF-P's nine reviewed files committed as `2fa113c`. [IF-Q](docs/proposals/input-fit-oracle-dependency-review.md) proposes a source-only feasibility check for an independent runtime counting reference before conditional dependency/native/provenance closure. Ordered Q1 allocation → Q2 oracle contract → Q3 conditional graph review → Q4 findings/decision. If Q2 cannot establish an actionable route within six calls/twenty-four targets, skip dependency expansion and present alternatives. Full package:64prepaid units/1,200seconds/2MiB, twelve web calls/forty-eight targets, bounded reporting. Package and five-document commit await approval; no research, installation or native execution started. G2/application implementation remains gated. Earlier pending wording below is historical.
+
 ## Current execution point — IF-P remaining files acquired; runtime gates open
 
 Approved IF-P/proposal commit `2533f27`. [Findings](docs/benchmarks/input-fit-remaining-assets.md):14tests/final lint/format passed, narrow-request mutation caught; one worker acquired all ten remaining files/5,414,338bytes with size/Git identities and observed SHA256.22HTTPtransactions/1,896operation packets/zero failures; exit0/reaped/0active descendants in24.4665316s. Previous successes/closed receipts preserved, no reporting overrun. Nine reviewed source/findings/status files await separate commit approval. Recommend dependency/native-notice/provenance and runtime-oracle review before installation/parity; no next package prepared/approved. G2/app/adoption remain open. Older pending wording below is historical.
