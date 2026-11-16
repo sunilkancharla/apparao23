@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-M — acquisition manifest and parity design proposed
+
+IF-L findings committed `6a06493`; user approved the standalone direction for preparing this package. [Exact IF-M boundary](docs/proposals/input-fit-tokenizer-manifest-review.md) defines candidates, metadata-only operations, budgets and stop rules. Package and five proposal/status documents' commit await approval. No fresh allocation, research, acquisition or runtime action.
+
+- [ ] **IF-M1:** After approval, persist 80-unit/1,200-second/2MiB shared accounting, 16-call/48-target ledger and specified preservation hashes before optional research. Acceptance: durable reservations and unchanged closed epochs.
+- [ ] **IF-M2:** After M1, resolve fixed publisher snapshots/asset metadata and at most12 runtime distribution candidates. Acceptance: exact version/revision/file/URL/size/hash evidence, marker/lock constraints and explicit missing-byte-verification status; no substitution/download/install.
+- [ ] **IF-M3:** After M2 or bounded stop, document license/native/advisory/local-loading gaps and exact parity/failure/resource test matrix. Acceptance: concrete future oracle/ownership/provisioning gates, preserved 2,048/192 and R01 settings; no inferred safety or adoption.
+- [ ] **IF-M4:** After M3, close with evidence/manifest/validation design, preservation/link/diff/budget checks and checkpoint. Acceptance: ready-for-next-gate or explicit blockers; separate results-commit request.
+
 ## T17-IF-L — source review/comparison completed; no adapter adoption
 
 User approved the [exact IF-L package](docs/proposals/input-fit-adapter-review.md) and proposal commit `0a3a709`. [Evidence](docs/benchmarks/input-fit-adapter-source-review.md) and [comparison](docs/proposals/input-fit-adapter-comparison.md) record a conditional recommendation and unresolved artifact/runtime parity.

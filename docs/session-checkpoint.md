@@ -1,4 +1,12 @@
-# Latest checkpoint — IF-L comparison complete; results commit/direction pending
+# Latest checkpoint — IF-L committed; standalone direction approved; IF-M proposed
+
+User approved all reviewed IF-L documents and the recommended direction for preparing the next package. Exact eight-file allowlist/index/whitespace commit `6a06493`. Direction is runtime-rendered text plus matching pinned standalone tokenizer, conditional on exact validation; no Tokenizers/dependency selection, installation, native/runtime trial or G2 adoption. IF-L and all earlier epochs stay closed.
+
+Prepared `docs/proposals/input-fit-tokenizer-manifest-review.md` plus PLAN/TODO/README/this checkpoint (five documents). IF-M1–M4 proposes fixed candidate/public publisher metadata review, exact acquisition manifest and parity-validation design. Tokenizers0.23.3 regular ABI3 Windows candidate/hash and Qwen/Nomic historical full config commits must be reconciled; no silent version/revision fallback. At most12 distribution names,16 web calls/48 targets,80 prepaid units(60normal/20protected),1,200active seconds/2MiB. No full tokenizer/vocab/wheel/weights/archive downloads, installs, resolver/candidate/helper execution, fixtures, model-store/private reads, API/model/service calls or app implementation. Future full-byte verification/provisioning/oracle/native parity remain explicit gates.
+
+No fresh data root, meter, research or executable was created during proposal preparation. Package and five-document commit await approval. Relevant planning/documentation/security/review skills used as local workflows; no skill scripts/subagents. Checked306local links,11prior preservation hashes, tracked whitespace and new proposal trailing whitespace; no application tests needed for documentation. IF-L meter SHA2568701923fab4cd7822a4517e5bbfc95c57294e1be9a1ae656a271f2548bf1fb86; research ledger5466ef8027921ec062de1f5ecd18a6c075556c3a4e26e2a75c52ae4bc1900310. Host /status and /compact not invoked. Preserve unrelated untracked assets and all old source/receipts.
+
+# Earlier checkpoint — IF-L comparison complete; results commit/direction pending
 
 User approved exact IF-L/five proposaldocs committed `0a3a709`. Fresh data/t17/input-fit-adapter-review-01 persisted64units48normal16protected/1200s/2MiB,11oldrules/spec/lock/source/receipt hashes andfull12call/32targetprecharge beforeoptionalresearch. Relevantdocs/security/review skills used,no scripts/subagents. Exactly12functionswrappers+12webcalls=24researchunits/32explicitrequests consumed,ledger/referenceURLmap research-ledger.json; nofurtherresearch/retry. Firstresponse mistakenlylong,remaining11medium; deviationdisclosed. Providerinternalfetch/byte/redirect/RAMopaque,noenforcementclaim.
 

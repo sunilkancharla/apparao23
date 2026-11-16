@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-L comparison prepared; direction decision pending
+## Current execution point — standalone direction approved; IF-M proposed
 
-Approved IF-L/proposal commit `0a3a709`. [Primary-source review](docs/benchmarks/input-fit-adapter-source-review.md) used12web calls/32targets; [comparison](docs/proposals/input-fit-adapter-comparison.md) conditionally recommends runtime-rendered text plus a matching standalone tokenizer, retaining internal runner access as an alternative with extra ownership gates. No adapter/dependency installed/selected/native executed. Eight reviewed source/design/status documents await separate commit approval and an explicit direction decision before a concrete artifact/parity package. G2/app remain open; older pending wording below is historical.
+IF-L findings/comparison committed `6a06493`; the user approved the runtime-rendered text plus matching standalone-tokenizer direction for package preparation. [IF-M](docs/proposals/input-fit-tokenizer-manifest-review.md) proposes exact asset/dependency metadata review and a parity-validation design: 16 web calls/48 targets, 80 prepaid units/1,200 seconds/2MiB. No full asset/binary download, installation, candidate execution or model call. Package and five proposal/status documents' commit await approval; no new allocation/research exists. Exact dependencies/runtime adoption and G2/app remain open. Older pending wording below is historical.
 
 ## Current execution point — IF-K metadata inspection completed
 
