@@ -1,15 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-K — targeted metadata-reader correction proposed
+## T17-IF-K — completed pinned metadata inspection
 
-IF-J source/results committed `6f1e007`. [Exact scope, comparison policy, artifacts, budgets and acceptance](docs/proposals/metadata-identity-correction.md) await package/boundary and five-document commit approval. No new source/allocation/tests/guard change/metadata attempt exists; old source and closed evidence remain untouched.
+User approved the [exact IF-K comparison/execution package](docs/proposals/metadata-identity-correction.md) and proposal commit `c4dff2d`. [Results](docs/benchmarks/metadata-identity-correction-results.md) record all nine verified files and remaining runtime/input-fit gaps. Old sources and closed evidence remain untouched.
 
-- [ ] **IF-K1:** After approval, persist80-unit/1,200-second/2MiB accounting and freeze prior IF-R/I/J source/receipt/rules/spec/lock hashes; verify manifest before optional preparation.
-- [ ] **IF-K2:** After K1, test-first two-file successor; six cross-API fields plus seven same-API fields, unchanged expected size/hash/path/type/caps and named diagnostics. Acceptance: meaningful red, new+20legacy fake tests/Ruff and caught mutation.
-- [ ] **IF-K3:** After K2/seals/review, one fresh nine-file metadata-only worker using direct owned controller. Acceptance: pinned verification/findings or partial stop, durable per-file identity progress, full tool result and verified owned exit.
-- [ ] **IF-K4:** After K3 or stop, review facts versus runtime unknowns without adoption, update reports/checkpoint, verify preservation/links/diff/budgets and request separate results commit.
+- [x] **IF-K1:** Full80-unit/1,200-second/2MiB clock/manifest and16preservation identities persisted before optional preparation.
+- [x] **IF-K2:** Expected missing-import red;30fake tests0.063s/Ruff passed; same-API ctime mutation caught0.005s. Two new aids only; six cross-API/seven same-API fields, hash/size/path/type/read caps and named diagnostics preserved.
+- [x] **IF-K3:** Sole worker verified all9files/26,739actual/589,833charged bytes; allshowed cross-API ctime difference and passed same-API checks. Exit0/reapedtrue/0.7618728s, stdout33/stderr0. Full result/observations/raw public findings local; no retry/native/model execution.
+- [x] **IF-K4:** Config/template/parameter/license findings and adapter alternatives/unknowns documented, dependency/design refs and checkpoint updated; preservation/links/diff/budgets closed. Nine source/results files require separate commit approval.
 
-Cross-API ctime-only disagreement may proceed only under the explicitly proposed policy; same-API timestamp mutation still refuses. No model/native/private-content/network/install/adapter/G2/app authorization; no old run reset or retry.
+Cross-API ctime-only disagreement proceeded under the explicitly approved investigation policy; same-API timestamp mutation still refuses. No model/native/private-content/network/install/adapter/G2/app adoption; no old run reset/retry. Allocation closed; adapter-design comparison requires a concrete new package.
 
 ## T17-IF-J — completed synthetic comparison; guard unchanged
 

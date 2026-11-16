@@ -1,5 +1,9 @@
 # T17-IF — exact input-fit preflight design
 
+## Evidence update — IF-K completed
+
+The [IF-K inspection](../benchmarks/metadata-identity-correction-results.md), approved under proposal commit `c4dff2d`, now verifies all nine selected public metadata files. Qwen has separate system/template layers with role/message/tool-related fields and im-start/im-end markers; Nomic parameters declare num_ctx8192. These facts inform an adapter-design comparison but do not prove actual rendering, prefix/tokenizer/special-token parity, effective context or192-token output reservation. Provisional settings and this draft contract remain unchanged; no adapter/internal-runner/model execution is adopted. Earlier IF-S incomplete-layer evidence below is historical where superseded by IF-K verification.
+
 ## Status and purpose
 
 Draft for review, prepared after approval to commit the R1-W findings and proceed. Findings are committed as `197eb6e`. This document makes the proposed admission contract and next static investigation concrete; it does not select a tokenizer, grant internal-runner access or authorize implementation/inference. The [R1-W report](../benchmarks/public-source-web-review.md) is the evidence base. No additional public research was performed here; its closed allocation remains unchanged.

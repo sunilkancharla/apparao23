@@ -1,4 +1,14 @@
-# Latest checkpoint — IF-J committed; IF-K targeted correction proposal pending
+# Latest checkpoint — IF-K completed; nine metadata files verified; results commit pending
+
+User approved exact IF-K/comparison/execution/five-doccommit `c4dff2d`. Fresh data/t17/input-fit-corrected-01 persisted80units64normal16protected/1200s/2MiB and16oldsource/spec/lock/closedreceipt hashes beforeoptionalwork. Relevantimplementation/TDD/security/review/docs skills used, no scripts/subagents. Two new input_fit_metadata_corrected.py/test_input_fit_metadata_corrected.py only; exactoldhelper2d47...04204 hashverified/compilednonmain forfinitepath/type/receipt/inventory, nooldreader/controller/main. Expectedmissingimportred;30fake tests0.063s/Ruffformattedclean; sameAPIctimemutationcaught0.005s. Newreader6crossAPIfields,7sameAPI inclctime, expectedhash/size/path/reparse/caps, namedstats/differences/refusals.
+
+ReviewedliteralPowerShell submitteddirectly,controller.txt archived,4artifactssealed; one-shotcontroller/workerclaims. Sole basePython PID33352 exit0/reapedtrue,elapsed0.7618728s,stdout33/stderr0. All9pinnedpublicmetadatafiles verified sizes/hashes,26739actualbytes/589833conservativecharge; allcrossAPIctimedifferedwhileothers/sameAPIpassed. No weights/model/tokenizer/native/userdata/network/service/install/inference, no retry or policychange. Fullresult execution.json; namedprogress progress.json; rawpublicfindings findings.json local/separate fromlogs; safe selectedsummary review-summary.json. PriorIF-R exactfieldunrecordedstillunknown; currentguardcompatibilityconfirmedforcurrentfiles.
+
+Verifiedconfigfacts:qwen2/1.5B/Q4_K_M, nomic-bert/137M/F16;bothdeclaregguf/amd64/linux(notruntimevalidation). QwentemplatefieldsMessages,System,Prompt,Response,Role,Content,Tools/ToolCalls/Function/Arguments/Name;im-start/endmarkers;separatesystem68bytes. Nomicparams num_ctx8192 artifactonly; bothlicensesApacheLicenseVersion2markers,nolegal/nativeclearance. Noexacttokenizer/renderer/context/outputreservation/prefixparity,16GBacceptanceorG2/appadoption. Recommend concreteboundedadapter-designcomparison beforeprovision/nativevalidation; notapprovedhere.
+
+Report docs/benchmarks/metadata-identity-correction-results.md plus2aids/dependencies/inputfitdesign/PLAN/TODO/README/thischeckpoint=nine reviewed source/results files await separatecommitapproval. NewsourceSHA6a3681d07ba0c8b22e526141702f7f8dab3ae165f02c6dd3d00086b227e89dfb/tests96f2ba6dd47c996b67ccae65e23548a7a74c4d0df1d84ce99ab676ba1f5de05a. Closedmeterstoreselapsed/output/links/16preservedhashes/4seals; allphaseallocationsretained,noresets/activeworkers. Preserveunrelatedassets; nohostcompact/statusinvoked.
+
+# Earlier checkpoint — IF-J committed; IF-K targeted correction proposal pending
 
 User approved all seven IF-J source/results/proceeding, exactallowlist/index/seal/whitespace commit `6f1e007`. Old IF-J/I/R source/meters/receipts untouched. Planning/documentation skills reapplied; no scripts/subagents. Prepared docs/proposals/metadata-identity-correction.md plus PLAN/TODO/README/thischeckpoint=fiveproposal/statusfiles. No new aids/root/meter/tests/guard/metadata reads created.
 

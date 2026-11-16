@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-J committed; targeted metadata correction proposed
+## Current execution point — IF-K metadata inspection completed
 
-IF-J source/results committed `6f1e007`. [IF-K package](docs/proposals/metadata-identity-correction.md) proposes six-field cross-API compatibility checks plus seven-field same-API mutation checks, test-first regression/mutation review and one fresh nine-file metadata-only worker. Preserve old sources/closed records and expected hashes/size/path/reparse/read caps. Exact80-unit/1,200-second/2MiB package, comparison/execution boundary and five-document commit await approval. No new aid/allocation/guard/metadata attempt yet; adapter/native/G2/app gates remain open. Older pending-results wording below is historical.
+Approved IF-K/proposal commit `c4dff2d`. Successor reader passed30fake tests/Ruff and caught a same-API ctime mutation. One worker verified all9pinned metadata files/26,739bytes and exited0/reapedtrue; old sources/records and model files unchanged. [Results](docs/benchmarks/metadata-identity-correction-results.md) distinguish verified config/template/license facts from unproven renderer/tokenizer/context/output parity. Nine source/results files await separate commit approval. Next recommend a concrete bounded adapter-design comparison; no new adapter/native/G2/app package approved. Earlier pending wording below is historical.
 
 ## Current execution point — IF-J synthetic comparison completed
 
