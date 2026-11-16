@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-K committed; bounded adapter comparison proposed
+
+IF-K source/results committed `bc6f677`. [IF-L package](docs/proposals/input-fit-adapter-review.md) proposes primary-source review and a concrete renderer/tokenizer-versus-owned-runtime comparison, with exact parity/dependency/trust/ownership/validation requirements. At most12visible web calls/32targets,64prepaid units/1,200seconds/2MiB; no implementation, asset installation, model/native/API execution or adoption. Package and five-document commit await approval; no new allocation/research/comparison result exists. G2/app remain open; older pending-results wording below is historical.
+
 ## Current execution point — IF-K metadata inspection completed
 
 Approved IF-K/proposal commit `c4dff2d`. Successor reader passed30fake tests/Ruff and caught a same-API ctime mutation. One worker verified all9pinned metadata files/26,739bytes and exited0/reapedtrue; old sources/records and model files unchanged. [Results](docs/benchmarks/metadata-identity-correction-results.md) distinguish verified config/template/license facts from unproven renderer/tokenizer/context/output parity. Nine source/results files await separate commit approval. Next recommend a concrete bounded adapter-design comparison; no new adapter/native/G2/app package approved. Earlier pending wording below is historical.
