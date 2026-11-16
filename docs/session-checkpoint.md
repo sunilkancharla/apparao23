@@ -1,4 +1,12 @@
-# Latest checkpoint — IF-R committed; synthetic IF-I proposal pending
+# Latest checkpoint — IF-I blocked by saved-script policy; results commit pending
+
+User approved exact IF-I package/boundary/five proposal-status files, committed `16d6f97`. Fresh data/t17/windows-identity-01 persisted full48units36normal12protected/900s/1MiB and11preservation identities before optional work. Two new windows_file_identity.py/test_windows_file_identity.py only; relevant implementation/TDD/security/review/docs skills reused/read. Expected importerror red;14fake tests0.010s/Ruff lint passed/formatted; caught in-memory fielddifference mutation0.002s. No realcontrolfixtures/children. One docstring correction after checks, no behavior change.
+
+Generated ignored run.ps1 reviewed fixed basePython/retainedProcess/10swait5skillreap. Its single invocation was refused beforeexecution: PSSecurityException/UnauthorizedAccess “running scripts disabled”, tool exit1/0.7626465s. Fullresult execution.json retained; no active session lost. Script never reached seals/claim/processcreation. ready.json,attempt.claim,controller.json,fixture.bin,receipt.json absent; meterprobe_attempts0, no probe/stat/read or ownedchild, no teardown needed. Original fileidentity difference unresolved, no model/native/runtime error claim. No policyinspection/change/bypass/escalation/alternateinvocation/retry; entireallocationclosed. Existing IF-R aids and receipts untouched.
+
+Report docs/benchmarks/windows-file-identity-results.md plus two aids,PLAN,TODO,README,thischeckpoint=seven reviewed files await separatecommitapproval. Full36normal reservations retained; protectedonlyfinalreport/preservation; closedmeterstoreselapsed/output/hash/linkcounts. Recommend establishing hostpermitted controller invocation before fresh separatelyapproved synthetictrial; no such package prepared/approvednow. No oldguardrepair/modelstore/privatecontent/service/network/install/candidatecalls/G2/appadoption. Sourcecomparisonlogic onlyfakevalidated, no actualWindowsstatfields collected. Preserveunrelatedassets; /compact and /status notinvoked.
+
+# Earlier checkpoint — IF-R committed; synthetic IF-I proposal pending
 
 User approved all eight reviewed IF-R source/results files and proceeding. Exactallowlist/index/source-seal/whitespace checks then commit `9a72136`; closed IF-R meter/progress/ready/controller/execution unchanged. No metadata retry/real fixture/native call/new allocation. Planning/documentation skills read; no skill scripts/subagents. Prepared docs/proposals/windows-file-identity-investigation.md plus PLAN/TODO/README/thischeckpoint=fiveproposal/statusfiles.
 

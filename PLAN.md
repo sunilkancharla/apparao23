@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-R committed; synthetic identity investigation proposed
+## Current execution point — IF-I host-policy stop before probe
 
-IF-R source/results committed `9a72136`. [IF-I proposal](docs/proposals/windows-file-identity-investigation.md) isolates the Windows path/open-handle comparison using one tiny synthetic file, test-first snapshots and one owned bounded probe. No old guard/source/meter changes or renewed model-metadata read. Exact48-unit/900-second/1MiB package and five-document commit await approval; no fresh allocation, aid, fixture or probe created. Input-fit/native trust/G2/app gates remain open. Earlier results-commit-pending wording below is historical.
+User approved IF-I and proposal commit `16d6f97`. Two new stdlib aids passed14fake tests/Ruff and caught a mutation. The host rejected the saved PowerShell controller with PSSecurityException before it executed; no seal, fixture, probe or real stat observations. [Results](docs/benchmarks/windows-file-identity-results.md). Allocation closed without retry, policy change, guard repair or model read. Recommend a permitted controller invocation before any separately approved fresh synthetic run. Seven source/results files await separate commit approval; input-fit/native trust/G2/app gates remain open. Older pending statements below are historical.
 
 ## Current execution point — IF-R partial stop; owned child reaped
 
