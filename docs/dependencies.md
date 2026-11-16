@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-P — remaining publisher data identified; no installation
+
+[Continuation findings](benchmarks/input-fit-remaining-assets.md), approved proposal `2533f27`, add exact bytes/SHA256 and matching Git identities for ten remaining Qwen/Nomic data assets, preserving the earlier two wheels/Qwen tokenizer. All eleven listed publisher files are acquired; locally computed SHA256 is not independent publisher attestation or cached-GGUF parity. No candidate imports/installations. Dependency graph, native notices/advisories/ABI/offline behavior, source-to-release reconciliation and runtime counting oracle remain open; prior package evidence stays immutable.
+
 ## T17-IF-N — wheel bytes verified; no installation/adoption
 
 [Static findings](benchmarks/input-fit-tokenizer-static-review.md), approved proposal `b8ebed3`, verify both approved wheel hashes and all RECORD entries. Actual Tokenizers0.23.3/Hub2.4.0METADATA confirms the previously reviewed direct ranges; full graph remains open. Tokenizers contains one `.pyd` and no license/notice scan match; native notice/ABI/advisory reconciliation remains unverified. Hub includes LICENSE/console metadata and actual2.4.0wheel version; source-workflow provenance remains open. OneQwen tokenizer data file identified,10assets unacquired after bookkeeping PermissionError. No imports/installations/lock changes; no native or G2 clearance.

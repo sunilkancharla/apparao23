@@ -1,5 +1,9 @@
 # T17-IF — exact input-fit preflight design
 
+## Evidence update — IF-P static data acquisition completed
+
+[IF-P findings](../benchmarks/input-fit-remaining-assets.md), approved proposal `2533f27`, identify all ten remaining publisher data files with exact observed SHA256/size and matching Git blobs. Earlier artifacts were preserved, not reloaded. This closes the missing-file acquisition task only: no tokenizer/model execution, trustworthy counting oracle, runtime/native/dependency adoption or proof of input/output headroom. This contract, provisional limits and G2 boundary remain unchanged.
+
 ## Evidence update — IF-N partial static review
 
 [IF-N findings](../benchmarks/input-fit-tokenizer-static-review.md), approved proposal commit `b8ebed3`, verify two wheel identities/RECORD metadata and oneQwen asset's observed SHA256/Git identity. A durable-accounting PermissionError stopped acquisition; no retry. Ten remaining assets, source/native/graph trust and actual rendering/token-count/usable-context/output reservation remain unverified. No candidate code was loaded and no preflight adapter is adopted; provisional limits unchanged.

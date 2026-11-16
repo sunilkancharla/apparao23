@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-O committed; IF-P remaining-file continuation proposed
+## Current execution point — IF-P remaining files acquired; runtime gates open
 
-IF-O aids/findings committed `a13e8b2`. [IF-P proposal](docs/proposals/input-fit-remaining-assets-continuation.md) defines diagnostic-enabled static acquisition of exactly ten missing revision-pinned data files, reusing verified local authored primitives with narrower policy. No wheel/Qwen-tokenizer redownload or old-run reopening. Limits:112prepaid units/1,800seconds/16MiB artifacts,40HTTP transactions/8MiB payloads+4MiB metadata,16KiB per reporting invocation/128KiB aggregate; six suites/four Ruff runs/one worker. Package/five-document commit await approval; no new code/root/download. Installation/native parity/G2/app adoption remain open. Older pending wording below is historical.
+Approved IF-P/proposal commit `2533f27`. [Findings](docs/benchmarks/input-fit-remaining-assets.md):14tests/final lint/format passed, narrow-request mutation caught; one worker acquired all ten remaining files/5,414,338bytes with size/Git identities and observed SHA256.22HTTPtransactions/1,896operation packets/zero failures; exit0/reaped/0active descendants in24.4665316s. Previous successes/closed receipts preserved, no reporting overrun. Nine reviewed source/findings/status files await separate commit approval. Recommend dependency/native-notice/provenance and runtime-oracle review before installation/parity; no next package prepared/approved. G2/app/adoption remain open. Older pending wording below is historical.
 
 ## Current execution point — IF-K metadata inspection completed
 

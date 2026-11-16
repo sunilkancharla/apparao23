@@ -1,13 +1,13 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-P — diagnostic remaining-asset continuation proposed
+## T17-IF-P — remaining-asset continuation completed; no adoption
 
-IF-O aids/findings committed `a13e8b2`. [Exact IF-P boundary](docs/proposals/input-fit-remaining-assets-continuation.md) defines ten files, local authored-module reuse, diagnostic-only persistence change and narrower transport/reporting/resource caps. Package/five-document commit await approval. No new source, root, fixture, ledger, download or worker.
+User approved [IF-P](docs/proposals/input-fit-remaining-assets-continuation.md) and proposal commit `2533f27`. [Findings](docs/benchmarks/input-fit-remaining-assets.md) distinguish acquired byte identities from unverified runtime/native suitability.
 
-- [ ] **IF-P1:** After approval, persist112-unit/1,800-second/16MiB shared reservations, reporting/HTTP caps and preservation manifest. Acceptance: complete precharge before optional work; old epochs/payload identities unchanged.
-- [ ] **IF-P2:** After P1, implement only2authored wrapper/test files test-first. Acceptance: per-stage diagnostics and strict inherited URL/redirect/body/output/reporting constraints, no retries, caught guard mutation and final lint/format checks; six suites/four Ruff cap.
-- [ ] **IF-P3:** After P2, one supervised static continuation for exactly ten missing pinned assets. Acceptance: verified byte/size/Git/LFS observations or explicit partial stop, independent operation/HTTP/reporting receipts and verified teardown; no previous successes reacquired or candidates loaded.
-- [ ] **IF-P4:** After P3 or bounded stop, combine identity references without editing frozen evidence, update current findings/status, verify preservation/link/diff/time/output and request source/results commit separately. Acceptance: no inferred installation/runtime/parity/G2 adoption.
+- [x] **IF-P1:** Persisted112-unit/1,800-second/16MiB shared allocation, separate controlled-reporting counter and31preservation hashes before optional work; old runs untouched.
+- [x] **IF-P2:** Missing-module red, final14tests1.784s, final lint/format passed. Weakening40request limit caused intended test failure; original bytes restored. Five suites/four Ruff invocations; only2new authored files, verified local helper import with narrower policies.
+- [x] **IF-P3:** All ten files/5,414,338payload bytes size/Git-identified and SHA256-recorded.22HTTP/5,420,008received bytes/1,896operation packets/0failures. PID33748exit0/reaped/0active descendants,24.4665316s. No earlier successes reacquired, no candidates loaded/retries.
+- [x] **IF-P4:** Combined-reference manifest, current findings/checkpoint and preservation/link/diff/time/artifact/reporting closeout recorded; frozen evidence unchanged. Nine source/findings/status files await separate commit approval. Dependency/native/provenance/runtime-oracle next package not prepared/approved; no installation/G2 adoption inferred.
 
 ## T17-IF-O — synthetic persistence investigation completed
 
