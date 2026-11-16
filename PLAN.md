@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-N partial static evidence; persistence stop
+## Current execution point — IF-N committed; IF-O persistence investigation proposed
 
-Approved IF-N/proposal commit `b8ebed3`. [Static findings](docs/benchmarks/input-fit-tokenizer-static-review.md):18tests/final lint passed (user approved one extra Ruff check), integrity mutation caught; one worker verified2wheels/oneQwen asset, then stopped with PermissionError during ninth-precharge persistence. Exit1/reaped/zero active descendants;8observed HTTP events/9conservative reservations retained, no retry. Remaining10assets/graph/native trust/parity unready. Nine reviewed source/results/status files await separate commit approval; recommend a synthetic-only persistence investigation before another acquisition, not prepared/approved. No installation/runtime/G2/app adoption. Older pending wording below is historical.
+IF-N aids/findings committed `1770d69`. [IF-O proposal](docs/proposals/receipt-persistence-investigation.md) defines a synthetic-only per-operation persistence investigation: test-first aid, one Windows probe, baseline/shared-handle/independent-positive/existing-pending controls, at most131attempts. Limits:96prepaid units/1,200seconds/2MiB; six focused suites/four Ruff invocations; one120-second worker/30-second teardown. Explicit ctypes scope is CreateFileW/CloseHandle for controlled file locking. Package/five-document commit await approval; no new code, cases, allocation or probe. No download retry/writer repair/installation/runtime/G2/app adoption. Older pending wording below is historical.
 
 ## Current execution point — IF-K metadata inspection completed
 

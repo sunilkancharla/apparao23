@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-O — synthetic persistence investigation proposed
+
+IF-N aids/findings committed `1770d69`. [Exact IF-O boundary](docs/proposals/receipt-persistence-investigation.md) defines operations, cases, Windows handle APIs and shared limits. Package/five-document commit await approval. No new source, root, fixture, ledger, probe or acquisition retry.
+
+- [ ] **IF-O1:** After approval, persist96-unit/1,200-second/2MiB reservations, fixed131-attempt ceiling and old-evidence preservation hashes before optional work. Acceptance: durable independent accounting; old epochs remain closed.
+- [ ] **IF-O2:** After O1, add only2authored diagnostic aid/test files test-first. Acceptance: per-stage failures/diagnostic errors/path and budget controls, caught guard mutation, final lint/format checks; within six suites/four Ruff invocations.
+- [ ] **IF-O3:** After O2, one synthetic Windows probe with baseline, denied-delete-sharing replacement, independent positive and existing-pending controls. Acceptance: accurate operation/error metadata, retained failed bytes, verified handle/process teardown; no retry or historical-cause overclaim.
+- [ ] **IF-O4:** After O3 or bounded stop, report observations/hypotheses and preservation/link/diff/resource checks, update checkpoint and request source/results commit separately. Acceptance: no implied writer repair/acquisition/runtime adoption.
+
 ## T17-IF-N — partial static review closed; no adoption
 
 User approved [IF-N](docs/proposals/input-fit-tokenizer-static-reconciliation.md), proposal commit `b8ebed3`, then explicitly one additional Ruff check with all other limits unchanged. [Findings](docs/benchmarks/input-fit-tokenizer-static-review.md) record partial static success and the preserved permission stop.
