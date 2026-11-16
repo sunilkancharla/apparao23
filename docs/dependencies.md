@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-N — wheel bytes verified; no installation/adoption
+
+[Static findings](benchmarks/input-fit-tokenizer-static-review.md), approved proposal `b8ebed3`, verify both approved wheel hashes and all RECORD entries. Actual Tokenizers0.23.3/Hub2.4.0METADATA confirms the previously reviewed direct ranges; full graph remains open. Tokenizers contains one `.pyd` and no license/notice scan match; native notice/ABI/advisory reconciliation remains unverified. Hub includes LICENSE/console metadata and actual2.4.0wheel version; source-workflow provenance remains open. OneQwen tokenizer data file identified,10assets unacquired after bookkeeping PermissionError. No imports/installations/lock changes; no native or G2 clearance.
+
 ## T17-IF-M — partial tokenizer manifest; installation blocked
 
 Approved proposal committed `6b67433`. [Review](benchmarks/input-fit-tokenizer-manifest-review.md) confirms Tokenizers0.23.3registry candidate/hash and historical Qwen/Nomic listings, but per-asset hashes/exact sizes and full payload/native trust are missing. Hub2.4.0's displayed publishing commit declares2.4.0.dev0; reconciliation precedes treating its source requirements as final release metadata. HTTPX2/hf-xet and other source-declared transitives are not selected; existing HTTPX/lock unchanged. No install/import/model execution. [Parity requirements](proposals/input-fit-tokenizer-parity-validation.md) remain design only; G2 open.

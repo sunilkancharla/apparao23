@@ -1,5 +1,9 @@
 # T17-IF — exact input-fit preflight design
 
+## Evidence update — IF-N partial static review
+
+[IF-N findings](../benchmarks/input-fit-tokenizer-static-review.md), approved proposal commit `b8ebed3`, verify two wheel identities/RECORD metadata and oneQwen asset's observed SHA256/Git identity. A durable-accounting PermissionError stopped acquisition; no retry. Ten remaining assets, source/native/graph trust and actual rendering/token-count/usable-context/output reservation remain unverified. No candidate code was loaded and no preflight adapter is adopted; provisional limits unchanged.
+
 ## Evidence update — IF-M partial manifest and parity requirements
 
 Approved proposal commit `6b67433` produced a [metadata review](../benchmarks/input-fit-tokenizer-manifest-review.md) and [validation matrix](input-fit-tokenizer-parity-validation.md). Historical publisher asset listings and candidate registry hashes are recorded, but Hub release/source-version reconciliation, exact acquisition bytes/graph/payload trust and a trustworthy runtime oracle remain blockers. No executable trial, dependency/runtime adoption or admission proof; this contract and provisional limits remain unchanged.

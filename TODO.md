@@ -1,13 +1,13 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-N — static artifact reconciliation proposed
+## T17-IF-N — partial static review closed; no adoption
 
-IF-M findings committed `2275acc`. [Exact IF-N package](docs/proposals/input-fit-tokenizer-static-reconciliation.md) proposes2wheels/11data assets, explicit unverified-publisher-digest acquisition policy, test-first stdlib aid and shared execution/download limits. Package/five-document commit await approval; no new allocation/code/acquisition.
+User approved [IF-N](docs/proposals/input-fit-tokenizer-static-reconciliation.md), proposal commit `b8ebed3`, then explicitly one additional Ruff check with all other limits unchanged. [Findings](docs/benchmarks/input-fit-tokenizer-static-review.md) record partial static success and the preserved permission stop.
 
-- [ ] **IF-N1:** After approval, persist128-unit/1,800-second/32MiB shared reservations, HTTP/web caps, clock and preservation manifest. Acceptance: durable precharge before optional work; old epochs remain closed.
-- [ ] **IF-N2:** After N1, build only2authored stdlib aid/test files test-first. Acceptance: failing controls then focused tests/Ruff/caught mutation; fake transports and ZIP/path/identity/budget/receipt guards; within6test/2Ruff invocation caps.
-- [ ] **IF-N3:** After N2, one bounded static acquisition/inspection of exact2wheels/11assets, public release-source/dependency reconciliation. Acceptance: verified wheel hashes/METADATA/RECORD, exact asset byte manifest with honest attestation gaps, version/graph findings, exit/teardown receipts; no installation/import.
-- [ ] **IF-N4:** After N3 or bounded stop, document findings and remaining parity/adoption blockers, verify preservation/links/diff/resources and save checkpoint. Acceptance: separate source/results commit request, no inferred runtime/G2 adoption.
+- [x] **IF-N1:** Persisted128-unit/1,800-second/32MiB shared allocation and19preservation hashes before optional work; old epochs untouched.
+- [x] **IF-N2:** Expected missing-module red,18fake tests/final lint passed; RECORD mutation caught and original bytes restored. Five focused suites; third Ruff invocation separately approved. Failed `-c` command charged, no test/source effect. Two new authored aids only.
+- [x] **IF-N3 (bounded attempt closed, partial):** Two exact wheels verified/RECORD-inspected and oneQwen tokenizer asset Git-identified/hashed;10assets not acquired. PermissionError stopped ninth precharge save before transport. PID53448exit1/reaped/0active descendants. Actual8HTTP/9conservative precharges/10,811,431received bytes; no retry. Source/release/graph/native/parity gaps remain.
+- [x] **IF-N4:** Findings/checkpoint/dependency/preflight references and preservation/link/diff/time/output closeout recorded; prior parity design kept byte-identical. Nine source/results/status documents await separate commit approval; synthetic-only persistence investigation not prepared/approved.
 
 ## T17-IF-M — bounded review closed; partial manifest / no adoption
 
