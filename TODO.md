@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-DT — detached stdlib validation complete
+
+Assessment committed `3dddbc8`; user approved the exact single-attempt package. [Results](docs/benchmarks/public-source-detached-results.md):33tests/Ruff pass; old-flag mutation caught; one real detached worker had ready count1, exit0, accepted limit/identity checks and final active0/four successful closes. No conhost/additional association observed, no expected-count increase, no retry. Seventeen prior hashes/eight seals preserved; results commit pending.
+
+- [x] **R1-DT1:** Fresh prepaid64-unit manifest/clock and preservation identities.
+- [x] **R1-DT2:** Test-first exact detached/suspended/Unicode flags, rejected combinations, actual-controller fake boundary, retained regressions/Ruff and mutation.
+- [x] **R1-DT3:** One sealed stdlib attempt passed all required count/limits/identity/exit/resource/cleanup checks.
+- [x] **R1-DT4:** Review, preserve and close completed without runtime adoption; separate source/results commit request.
+
+Next prepare read-only official public-source/advisory/notice and input-fit-method review via built-in web tools. No further launcher trial for this exact question or candidate/native/app adoption is implied. Older R1-DT-package-pending entries below are historical.
+
 ## T17-R1-P — accounting-options review complete; detached probe proposed
 
 User requested the next static/public-reference assessment after `4847f1b`. [Assessment](docs/benchmarks/public-source-process-options.md) separates the observed basename from documented console behavior and recommends testing `DETACHED_PROCESS` before permitting auxiliaries. Three primary-source web calls; no runtime/source/ledger changes. No count-policy adoption or documented console-host limit exemption claimed. Five documents await commit approval; exact R1-DT package awaits approval.
