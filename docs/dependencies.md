@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-R — no new metadata verified
+
+Approved proposal committed `dee832a`. The stdlib inspection aid passed20fake controls/Ruff, but its sole real child refused the first open-handle/path identity comparison before reading content. Exit/reap verified; no retry or installation. [Partial results](benchmarks/input-fit-inspection-results.md) retain unknown differing stat fields. Prior IF-S manifest verification remains historical; layer metadata, exact tokenizer/rendering fit, native notices/advisories and G2 remain unresolved. No dependency or model adoption follows.
+
 ## T17-IF-S — manifest identities verified; layer inspection incomplete
 
 Design committed `145278f`. The [partial static review](benchmarks/input-fit-static-review.md) reverified both selected model manifest hashes and recorded declared config/template/system/parameter/license identities. A layer-inspection shell stalled and was stopped with exit verified; referenced-layer verification did not finish. No dependency/model execution, installation, adapter selection or G2 adoption occurred. Template/tokenizer parity and R1-W native/vendor freshness gaps remain open.

@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-S committed; bounded correction proposed
+## Current execution point — IF-R partial stop; owned child reaped
 
-Partial findings committed `f1b62d4`. The [IF-R correction](docs/proposals/input-fit-inspection-correction.md) proposes two test-first stdlib aids, finite checked paths, durable per-file progress, full result retention and one owned metadata child with timeout/reap verification. Exact80-unit/1,200-second package and five-document commit await approval. No repair, fixture, child or new allocation has started; previous IF-S remains closed. Model input-fit/adapter/G2/application gates remain open. Earlier findings-commit-pending wording below is historical.
+User approved the exact IF-R package and proposal commit `dee832a`. Two aids passed20focused fake tests/Ruff and caught a mutation. The sole real metadata child refused the first open-handle/path identity comparison before content read; exit/reap verified. [Evidence](docs/benchmarks/input-fit-inspection-results.md). Allocation closed without retry or new metadata verification. Recommend separately bounded synthetic Windows stat/handle comparison before proposing another metadata read; no follow-up implementation is approved. Eight source/results files await separate commit approval. Model input-fit/adapter/G2/application gates remain open; older pending wording below is historical.
 
 ## Current execution point — IF-S partial review; inspection stopped safely
 

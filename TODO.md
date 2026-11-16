@@ -1,15 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-R — inspection correction proposed
+## T17-IF-R — partial inspection closed; identity refusal retained
 
-IF-S partial findings committed `f1b62d4`. [Exact IF-R package](docs/proposals/input-fit-inspection-correction.md) defines scope, artifacts, per-task acceptance and shared stops. The old shell's stall cause remains unproven; no repair or retry is claimed. Five proposal/status files and package await approval.
+User approved the [exact IF-R package](docs/proposals/input-fit-inspection-correction.md) and five-document proposal commit `dee832a`. [Results](docs/benchmarks/input-fit-inspection-results.md) record passing fake controls and one safely stopped real child. The old IF-S shell's stall cause remains unproven.
 
-- [ ] **IF-R1:** After approval, prepay fresh80-unit/1,200-second accounting and preserve old ledgers/source/spec/lock identities.
-- [ ] **IF-R2:** After R1, test-first finite path/read/progress and owned-controller handling in two new stdlib aids; focused tests/Ruff and caught mutation required.
-- [ ] **IF-R3:** After R2/sealing, one actual public-metadata child only; verify nine fixed files or close partial, retain full result and verify exact owned-child reap.
-- [ ] **IF-R4:** After R3 or stop, assess evidence without runtime adoption, check docs/hash/budgets, close and request results commit separately.
+- [x] **IF-R1:** Prepaid80-unit/1,200-second allocation, eight preservation hashes and full phase manifest persisted before optional work.
+- [x] **IF-R2:** Expected import-error red,20passing fake tests (reviewed run0.033s), Ruff passed; in-memory second-attempt mutation caught. Two stdlib aids only; no generated fixtures.
+- [ ] **IF-R3:** Partial stop, no retry: sole child exit1/reapedtrue in0.4796101s; first file refused at open-handle/path identity comparison before content read.0verified bytes,65,537conservatively charged. No layers verified; exact differing stat field unknown.
+- [x] **IF-R4:** Partial evidence, limitations, recommendation and checkpoint documented; closeout checks and durable accounting preserved. Eight source/results files require separate commit approval.
 
-No code, fixtures, metadata reads, child, installation or new allocation were created during proposal preparation. Proposed connected stdlib/public-metadata boundary has no filesystem/outbound confinement or kernel RAM-cap claim. No native candidate calls, tokenizer selection or G2 application authorization. Older IF-S pending-commit entries below are historical.
+No retry, further metadata attempt, synthetic identity follow-up or runtime adoption is authorized. Connected stdlib/public-metadata boundary has no filesystem/outbound confinement or kernel RAM-cap claim. No native candidate calls, installation, tokenizer selection or G2 application authorization. Older pending entries below are historical.
 
 ## T17-IF-S — partial review closed; missing metadata remains
 
