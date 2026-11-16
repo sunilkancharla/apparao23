@@ -2,6 +2,8 @@
 
 ## Status
 
+**R1-W bounded source review:** approved proposal committed `780bad2`; [findings](../benchmarks/public-source-web-review.md) add selected advisory/fixed-version and notice evidence, but leave complete native/vendor freshness and exact input-fit validation open. Pinned Ollama source has truncation/rendering controls and an internal runner tokenizer; no stable application-facing exact count-only contract or template/token parity has been validated. Recommend a separate static preflight-integration design, with no new architecture/dependency/runtime adoption. This ADR remains Proposed and G2 open. Historical zero-HTTP wording below concerns the original failed helper.
+
 **Research follow-up stopped before HTTP:** architecture pack committed `dbd9137`; approved R1attempt is closed with0requests/0sources because of local startup/close-adapter defects. [Stop report](../benchmarks/public-source-review-stop.md) preserves evidence and proposes a separate no-network integration repair. Nothing in this attempt resolves the freshness/input-fit/native-trust/resource gates below; G2 remains open.
 
 **Proposed for G2; not accepted.** Prepared under user-approved T17-A1–A6 after readiness commit `e9d107e`. This is a concrete design/adoption pack, not application implementation. Settled SPEC/T16/T17 policy choices below are approved individually; they do not imply approval of this ADR, components or a native execution boundary. [Contracts](../contracts.md), [component inventory](../dependencies.md#t17-a1--static-reconciliation-and-proposed-runtime-set) and [provisioning gates](../provisioning.md#t17-static-pack--provisioning-and-validation-handoff) are part of the pack.

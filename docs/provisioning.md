@@ -17,6 +17,10 @@ When G2 and the relevant implementation/provisioning package are approved, T18 s
 
 No application startup command is validated. Existing historical evaluation commands below are not permission to rerun closed allocations. Do not introduce new trial directories, handoffs or counters until an exact package is approved. The chart trial is deferred until after T34 and remains separately gated; required scanned-PDF OCR and XLSX acceptance are not deferred by that decision. Optional-tool review timing stays unchanged.
 
+### R1-W public-source review — bounded findings, no provisioning
+
+The approved read-only web package, proposal committed `780bad2`, produced a [partial freshness/input-fit report](benchmarks/public-source-web-review.md). Twelve visible calls/48targets consumed the prepaid research block without using the old HTTP helper. Selected fixed-version comparisons and wrapper/notice evidence are recorded; complete native/vendor coverage and exact pre-generation template/tokenizer parity remain unresolved. No installs, downloads, services, parser/OCR/model/extension calls or pin changes occurred. Next recommend a bounded static preflight-integration design and missing-evidence inventory before any separate synthetic validation or G2 decision. Earlier R1 limits/repair proposals below are historical and do not authorize retries.
+
 ### Proposed follow-up R1 — public-source refresh and input-fit method review
 
 **Approved, attempted and closed on a startup failure:** the user said "yes, i do approve all" to the11-file commit and R1package; design pack committed `dbd9137`. [Stop evidence](benchmarks/public-source-review-stop.md) records missing initial-meter field and incomplete close-callback adapter, zero HTTP/bytes and preserved cleanup/accounting evidence. No public-source research result exists. The old command/allocation is withdrawn; no retry/reset. Original proposed limits below remain historical scope, not fresh permission.

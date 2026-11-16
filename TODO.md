@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-W — bounded review finished; adoption gaps remain
+
+User approved the exact package/transport-boundary change and five-file proposal commit `780bad2`. [Findings](docs/benchmarks/public-source-web-review.md):12visible web calls/48targets used the24-unit research block; no software execution, installs or changes to selected pins. Specific Starlette/pdfminer/Pillow fixed-range comparisons are favorable, but full advisory/native-notice coverage is incomplete. No verified public exact count-only interface; matching rendered-template/tokenizer preflight remains to design and validate.
+
+- [x] **R1-W1:** Fresh64-unit manifest/clock and16preservation identities captured before optional inspection; lock transitive versions read without imports.
+- [x] **R1-W2:** Bounded partial advisory/notice review documented with direct upstream sources, version applicability and unavailable/unreviewed gaps. Full G2 freshness remains open.
+- [x] **R1-W3:** Pinned-source method alternatives reviewed; recommend matching-template/tokenizer design, retain exact fit/output-headroom blocker and provisional settings.
+- [x] **R1-W4:** Findings/status/freshness documents prepared for consistency, link, whitespace and preservation closeout; no adoption; results commit requested separately. Final check receipt remains in the local closed accounting record.
+
+Next recommendation: prepare the bounded static preflight-integration design and missing-evidence inventory after a new package decision. No tokenizer addition, internal-port use, native validation, G2/application implementation or further web research is implied. Older approval-pending entries below are historical.
+
 ## T17-R1-W — public-source review proposed
 
 R1-DT source/results committed `c6e8952`. [Exact R1-W proposal](docs/proposals/public-source-web-review.md) defines prerequisites, per-task acceptance/evidence, fixed candidate identities and stop conditions. No web research, fresh allocation, dependency execution or installation has started. Package and five proposal/status files' commit await approval.

@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-R1-W — bounded public-source freshness update
+
+Approved proposal committed `780bad2`. The [2026-11-16 UTC review](benchmarks/public-source-web-review.md) examined specific Starlette/pdfminer/Pillow advisories whose listed fixed versions are at or below the recorded pins, plus selected native license sources and pinned Ollama input-fit behavior. Coverage is partial: full runtime/transitive/native advisory and notice reconciliation is still open, and no exact application-facing count-only preflight was validated. Existing pins/artifacts remain unchanged. No security clearance, installation, execution or G2 adoption follows. Earlier zero-research statements below describe the historical R1/T17-A attempts.
+
 ## T17-A1 — static reconciliation and proposed runtime set
 
 **R1freshness update:** the approved public-source helper stopped before its first HTTP request. [Failure evidence](benchmarks/public-source-review-stop.md) identifies local ledger/cleanup-adapter bugs, not upstream security findings. Existing inventory below is unchanged; no current advisory/notice refresh or clearance occurred. G2 freshness remains open.

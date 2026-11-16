@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-W bounded review finished with gaps
+
+Approved proposal committed `780bad2`. [R1-W findings](docs/benchmarks/public-source-web-review.md) record12visible web calls/48targets, selected advisory fixed-version comparisons, partial native-notice evidence and pinned Ollama rendering/tokenizer limitations. The24-unit research block is consumed; no further research/retry in this allocation. No installs/native runs or adoption. Next recommend a bounded static exact-input-preflight integration design and remaining-evidence inventory; no such new package is approved yet. Findings and affected documentation await separate commit approval; G2/application implementation remain open. Older proposal-pending wording below is historical.
+
 ## Current execution point — R1-DT committed; R1-W review proposed
 
 Detached-validation source/results committed `c6e8952`. The next [R1-W package](docs/proposals/public-source-web-review.md) proposes read-only official advisory/native-notice and pinned Ollama input-fit research through built-in web tools. It explicitly replaces unenforceable historical HTTP/byte/helper bounds with visible tool/target and local-work budgets. Proposal only: no research or execution started. Package and five-document commit approval are requested; G2 and application implementation remain open. Earlier results-commit-pending wording below is historical.

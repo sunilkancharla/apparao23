@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Public-source review finished with gaps:** Proposal committed `780bad2`. The [bounded review](docs/benchmarks/public-source-web-review.md) records selected dependency advisory fixes and license evidence. Ollama's input handling still needs an exact template/tokenizer check before adoption; complete native notice/security review also remains open. Twelve web calls/48targets were reviewed without installing or running software. Findings await commit approval; the document-chat app is not implemented. Earlier proposal-pending wording below is historical.
+
 **Detached-test results committed; public review proposed:** Commit `c6e8952` preserves the successful single-worker validation and its limits. The [next review proposal](docs/proposals/public-source-web-review.md) covers public dependency advisories, native license notices and Ollama input-size handling through read-only web tools. Approval is pending; no new research, installation or runtime adoption has occurred. The document-chat app is still not implemented. Earlier pending-commit notes below are historical.
 
 **Detached stdlib validation passed:** Assessment committed `3dddbc8`. The approved R1-DT attempt had one owned `python.exe`, normal exit0 and verified cleanup; no extra association appeared. [Results](docs/benchmarks/public-source-detached-results.md) record33passing tests/Ruff and a caught old-flag mutation. This verifies the small synthetic probe, not candidate/app runtime adoption. Next prepare the public-source review using read-only web tools; G2 remains open. Earlier proposed-test wording below is historical.
