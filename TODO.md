@@ -1,13 +1,13 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-O — synthetic persistence investigation proposed
+## T17-IF-O — synthetic persistence investigation completed
 
-IF-N aids/findings committed `1770d69`. [Exact IF-O boundary](docs/proposals/receipt-persistence-investigation.md) defines operations, cases, Windows handle APIs and shared limits. Package/five-document commit await approval. No new source, root, fixture, ledger, probe or acquisition retry.
+User approved [IF-O](docs/proposals/receipt-persistence-investigation.md) and proposal commit `3b43968`. [Findings](docs/benchmarks/receipt-persistence-investigation.md) distinguish the controlled replacement failure from the unresolved historical cause.
 
-- [ ] **IF-O1:** After approval, persist96-unit/1,200-second/2MiB reservations, fixed131-attempt ceiling and old-evidence preservation hashes before optional work. Acceptance: durable independent accounting; old epochs remain closed.
-- [ ] **IF-O2:** After O1, add only2authored diagnostic aid/test files test-first. Acceptance: per-stage failures/diagnostic errors/path and budget controls, caught guard mutation, final lint/format checks; within six suites/four Ruff invocations.
-- [ ] **IF-O3:** After O2, one synthetic Windows probe with baseline, denied-delete-sharing replacement, independent positive and existing-pending controls. Acceptance: accurate operation/error metadata, retained failed bytes, verified handle/process teardown; no retry or historical-cause overclaim.
-- [ ] **IF-O4:** After O3 or bounded stop, report observations/hypotheses and preservation/link/diff/resource checks, update checkpoint and request source/results commit separately. Acceptance: no implied writer repair/acquisition/runtime adoption.
+- [x] **IF-O1:** Persisted96-unit/1,200-second/2MiB reservation and23preservation hashes before optional work; old epochs untouched.
+- [x] **IF-O2:** Missing-module red, final10tests1.920s, final lint/format passed; failure-guard mutation produced7expected failures then original bytes restored. Five suites/four Ruff invocations within caps; two authored aids only.
+- [x] **IF-O3:** One probe completed131attempts/1,695journal packets:128baseline successes, controlled replace_target PermissionError/errno13/winerror5, independent positive success and stale-pending open refusal. Handle closed; PID372exit0/reaped/0active descendants,6.3475043s. No old-run retry or historical-cause claim.
+- [x] **IF-O4:** Findings/checkpoint and preservation/link/diff/time/project-output closeout recorded; excessive reporting stdout documented as a budget deviation. Seven source/findings/status files await separate commit approval. Diagnostic-enabled remaining-assets continuation not prepared/approved; no writer/adoption decision inferred.
 
 ## T17-IF-N — partial static review closed; no adoption
 

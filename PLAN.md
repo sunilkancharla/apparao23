@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-N committed; IF-O persistence investigation proposed
+## Current execution point — IF-O synthetic investigation completed
 
-IF-N aids/findings committed `1770d69`. [IF-O proposal](docs/proposals/receipt-persistence-investigation.md) defines a synthetic-only per-operation persistence investigation: test-first aid, one Windows probe, baseline/shared-handle/independent-positive/existing-pending controls, at most131attempts. Limits:96prepaid units/1,200seconds/2MiB; six focused suites/four Ruff invocations; one120-second worker/30-second teardown. Explicit ctypes scope is CreateFileW/CloseHandle for controlled file locking. Package/five-document commit await approval; no new code, cases, allocation or probe. No download retry/writer repair/installation/runtime/G2/app adoption. Older pending wording below is historical.
+Approved IF-O/proposal commit `3b43968`. [Findings](docs/benchmarks/receipt-persistence-investigation.md):10tests/final lint/format passed; failure-guard mutation caught; one probe completed131attempts, all four controls as expected, handle/process teardown verified. Controlled target locking produced PermissionError at replace_target/errno13/winerror5; the historical IF-N cause remains unproved. Seven source/findings/status files await separate commit approval. Recommend preparing a diagnostic-enabled continuation for the ten remaining assets, not yet prepared/approved. No old-run retry, installation, writer repair or G2/app/runtime adoption. Older pending wording below is historical.
 
 ## Current execution point — IF-K metadata inspection completed
 
