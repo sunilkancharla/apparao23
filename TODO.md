@@ -1,13 +1,13 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-L — bounded counting-adapter review proposed
+## T17-IF-L — source review/comparison completed; no adapter adoption
 
-IF-K source/results committed `bc6f677`. [Exact IF-L package](docs/proposals/input-fit-adapter-review.md) defines eligible primary sources, call/target and shared budgets, evidence requirements and adoption boundaries. Package/five-document commit await approval. No new allocation, web research, executable, asset or runtime operation created.
+User approved the [exact IF-L package](docs/proposals/input-fit-adapter-review.md) and proposal commit `0a3a709`. [Evidence](docs/benchmarks/input-fit-adapter-source-review.md) and [comparison](docs/proposals/input-fit-adapter-comparison.md) record a conditional recommendation and unresolved artifact/runtime parity.
 
-- [ ] **IF-L1:** After approval, persist64-unit/1,200-second/2MiB accounting and12call/32target caps; freeze IF-K/selected previous source/spec/lock/closed evidence hashes before optional work.
-- [ ] **IF-L2:** After L1, bounded official-source review of pinned Ollama operations, matching Qwen/Nomic tokenizer provenance and minimal implementation metadata. Acceptance: linked revisions/publishers, charged call/target ledger and honest gaps; no code/assets executed.
-- [ ] **IF-L3:** After L2 or research-cap stop, compare exact rendering/count/context/output parity, dependencies/native trust, ownership/offline costs and later validation requirements. Acceptance: concrete recommendation or retained blocker, without selection/adoption.
-- [ ] **IF-L4:** After L3, review source support/unchanged settings, update findings/design/checkpoint, verify preservation/links/diff/time/output budgets and request separate results commit.
+- [x] **IF-L1:** Full64-unit/1,200-second/2MiB clock/manifest,11preservation hashes and12calls/32targets prepaid before research; no refunds.
+- [x] **IF-L2:** Completed12visible calls/32targets over pinned runtime/publisher model/config/Tokenizers metadata, including full observed config commit IDs and a Windows0.23.3ABI3wheel candidate/hash. Full tokenizer assets/GGUF parity, transitives/advisories and runtime behavior remain unverified; research cap closed.
+- [x] **IF-L3:** Draft comparison recommends runtime-rendered text plus pinned matching standalone tokenizer for the next exact artifact/parity design, conditionally; internal route needs endpoint handoff proof. Operation/failure/ownership/future test/resource requirements documented, no selection/adoption.
+- [x] **IF-L4:** Evidence links, unchanged settings, checkpoint/preservation/diff/time/output closeout recorded. Eight source/design/status documents await separate commit approval; direction choice remains a user decision.
 
 No full tokenizer/weight download, private content, native/model/API/service/inference, installation, prototype/fixture/worker, G2/app or scope change. Adapter choice and runtime-validation provisioning remain separate explicit decisions.
 

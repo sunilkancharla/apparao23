@@ -1,5 +1,9 @@
 # T17-IF — exact input-fit preflight design
 
+## Evidence update — IF-L comparison prepared
+
+The [source review](../benchmarks/input-fit-adapter-source-review.md) and [adapter comparison](input-fit-adapter-comparison.md), under approved proposal commit `0a3a709`, distinguish public rendering from exact counting, special-token policies and owned internal operations. A standalone tokenizer candidate has registry provenance metadata, but asset/GGUF/rendering parity and output/EOS accounting remain unproved. Conditional direction recommendation awaits user decision; no adapter, dependency or runtime is adopted and this contract/provisional limits remain unchanged.
+
 ## Evidence update — IF-K completed
 
 The [IF-K inspection](../benchmarks/metadata-identity-correction-results.md), approved under proposal commit `c4dff2d`, now verifies all nine selected public metadata files. Qwen has separate system/template layers with role/message/tool-related fields and im-start/im-end markers; Nomic parameters declare num_ctx8192. These facts inform an adapter-design comparison but do not prove actual rendering, prefix/tokenizer/special-token parity, effective context or192-token output reservation. Provisional settings and this draft contract remain unchanged; no adapter/internal-runner/model execution is adopted. Earlier IF-S incomplete-layer evidence below is historical where superseded by IF-K verification.

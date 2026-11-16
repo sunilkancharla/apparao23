@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-L — tokenizer candidate identified; not selected
+
+[Source review](benchmarks/input-fit-adapter-source-review.md) records Tokenizers0.23.3registry metadata, a regular WindowsABI3wheel/hash, Apache2.0source license and a declared hub dependency/native extension. No payload/transitive/advisory/import/offline/parity test occurred and no package was installed. Exact asset/GGUF matching and rendering/context/output semantics remain open. [Comparison](proposals/input-fit-adapter-comparison.md) conditionally recommends a standalone direction for later artifact/parity planning, not dependency/runtime/G2 adoption.
+
 ## T17-IF-K — cached public metadata verified
 
 Approved proposal committed `c4dff2d`; [completed inspection](benchmarks/metadata-identity-correction-results.md) verifies both manifests and seven config/system/template/parameter/license layers,26,739bytes, with expected hashes and stable same-API observations. Configs declare qwen2/1.5B/Q4_K_M and nomic-bert/137M/F16; Nomic parameters contain num_ctx8192, an artifact declaration rather than measured runtime context. Both license layers contain Apache License/Version2.0 markers; native/vendor/transitive notice/advisory reconciliation remains open. No weights/tokenizer/native loads, new dependencies or G2 adoption. Prior incomplete-layer reports below remain historical; exact rendering/counting/context/output parity is still unverified.
