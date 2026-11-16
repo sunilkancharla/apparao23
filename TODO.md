@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-J — host preflight and direct-controller proposal
+
+IF-I source/results committed `c94d6da`. [Exact IF-J scope/boundary/acceptance](docs/proposals/windows-identity-direct-controller.md) awaits package and five-document commit approval. No host-policy inspection, new allocation/code/fixture/process or trial occurred during preparation.
+
+- [ ] **IF-J1:** After approval, persist64-unit/1,200-second/1MiB allocation/preservation, then limited host-policy/language-mode/no-process capability preflight. Acceptance: durable evidence or stop before implementation.
+- [ ] **IF-J2:** After J1, test-first new bootstrap binds verified unchanged probe/persistence to fresh02 and enforces one-shot admission. Acceptance: red, passing new+existing14fake tests/Ruff, caught mutation and unchanged old hashes.
+- [ ] **IF-J3:** After J2/seals/review, one direct literal-controller synthetic trial. Acceptance: exact field snapshots or partial stop, bounded fixture/read/stat operations and retained full result/verified owned exit.
+- [ ] **IF-J4:** After J3 or stop, review observations without guard adoption, update evidence/checkpoint, check preservation/links/diff/budgets and request separate results commit.
+
+No saved-script/policy bypass, managed-restriction override, old trial retry, guard change, model/private-content read, evaluated native call or G2/application adoption. Host permission denial stops; no alternative route.
+
 ## T17-IF-I — controls passed; host refused controller before execution
 
 User approved the [exact package](docs/proposals/windows-file-identity-investigation.md) and proposal commit `16d6f97`. [Partial results](docs/benchmarks/windows-file-identity-results.md) distinguish passing fake controls from zero real stat observations. Old IF-R remains closed and unchanged.

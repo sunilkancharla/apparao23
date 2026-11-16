@@ -1,4 +1,12 @@
-# Latest checkpoint — IF-I blocked by saved-script policy; results commit pending
+# Latest checkpoint — IF-I committed; IF-J host-aware proposal pending
+
+User approved all seven IF-I source/results files/proceeding. Exactallowlist/index/sourcehash/whitespace commit `c94d6da`; old IF-I/IF-R aids/meters/receipts untouched. Planning/documentation skills reapplied; no scripts/subagents. Prepared docs/proposals/windows-identity-direct-controller.md plus PLAN/TODO/README/thischeckpoint=fiveproposal/statusfiles. No newallocation/hostpolicyinspection/capabilitytrial/code/fixture/probe created.
+
+IF-J1–J4 proposes limited Get-ExecutionPolicy-List/language-mode and direct literalmarker/Process-object construction-disposal withoutstart, after fresh accounting; refusal stops beforeimplementation. Then two new followup bootstrap/test aids reuse exact hashverified oldprobe with RUN bound onlyfresh data/t17/windows-identity-02, avoidingoldmain and preservingboth oldsources. New+existing14faketests/Ruff/admissionmutation beforeone actual direct literalPowerShellcontroller withfixedbasePython/retainedProcess/10swait5skillreap/fullresult. No Invoke-Expression/ScriptBlock.Create/savedscriptinvoke/Set-ExecutionPolicy/Bypass/Unblock/globalchanges; nativehostpermissiondenialstops,noalternateroute. Exactnewinvocationboundary requiresapproval.
+
+Proposed64prepaidunits48normal16protected(init4/preflight4/TDD12/green8/trial8/report4/close8/protected16),1200s,1MiBnewoutput; one64bytefixture/4KiBreads/32stats; >=60s/headroombeforelaunch. Protectedonlystop/report, no retries/resets. Connectedsyntheticstdlibonly/noFS-outboundconfinement/kernelRAMcap. No modelstore/privatecontent/nativecandidate/network/service/install/guardrepair/adoption/G2/appwork. Exactpackage/boundary andfive-doccommitpending; laterresultsGit and guard/newmetadata decisions separate. Preserve unrelatedassets; nohostcompact/status invoked.
+
+# Earlier checkpoint — IF-I blocked by saved-script policy; results commit pending
 
 User approved exact IF-I package/boundary/five proposal-status files, committed `16d6f97`. Fresh data/t17/windows-identity-01 persisted full48units36normal12protected/900s/1MiB and11preservation identities before optional work. Two new windows_file_identity.py/test_windows_file_identity.py only; relevant implementation/TDD/security/review/docs skills reused/read. Expected importerror red;14fake tests0.010s/Ruff lint passed/formatted; caught in-memory fielddifference mutation0.002s. No realcontrolfixtures/children. One docstring correction after checks, no behavior change.
 

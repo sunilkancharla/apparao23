@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-I committed; host preflight/direct controller proposed
+
+IF-I source/results committed `c94d6da`. [IF-J proposal](docs/proposals/windows-identity-direct-controller.md) starts with limited read-only policy/language-mode and no-process capability checks, then test-first bootstrap reuse of the unchanged probe in fresh02 and at most one direct literal-controller trial. No execution-policy modification, old run reuse or model read. Exact64-unit/1,200-second/1MiB package, changed invocation boundary and five-document commit await approval. No new allocation, preflight, aid or trial has started; G2/app remain open. Older pending-results wording below is historical.
+
 ## Current execution point — IF-I host-policy stop before probe
 
 User approved IF-I and proposal commit `16d6f97`. Two new stdlib aids passed14fake tests/Ruff and caught a mutation. The host rejected the saved PowerShell controller with PSSecurityException before it executed; no seal, fixture, probe or real stat observations. [Results](docs/benchmarks/windows-file-identity-results.md). Allocation closed without retry, policy change, guard repair or model read. Recommend a permitted controller invocation before any separately approved fresh synthetic run. Seven source/results files await separate commit approval; input-fit/native trust/G2/app gates remain open. Older pending statements below are historical.
