@@ -1,4 +1,12 @@
-# Latest checkpoint — R1-W committed; input-fit draft and IF-S package pending
+# Latest checkpoint — IF-S partial stop; findings commit pending
+
+Userapprovedall IF-S/exactfive-docdesigncommit. Committed `145278f` before separate freshepoch. New data/t17/input-fit-static-01 persistedQPC/full64manifest(init8/meta12/design8/review12/close8/protected16),900s/2MiB/64KiBfile/1MiBmetadata;14oldspec/lock/source/meters hashed. Init2four-unitcalls loadedrules/skills/status/inventory; no nativeimports/subagents. Metadata3four-unitcalls foundprojectstore andverified2manifests(857+708=1565bytes); exactQwen/Nomic digests match. Layer declarations retained in meter/report, weightsnotread.
+
+Thirdmetadatacall returnedempty after10.7s; mistakenly printedonlyoutputlostsession/exitmetadata. No layercompletionpersisted. Review12 used statecheck4/CIMdenied4/escalatedCIM4. Escalationfound stalledPowerShell35300 plus discoveryself47480. Close4verifiedknowncommandmarkers/PID/creationidentityonretainedprocess thenKill/WaitForExit5000; exittrue. Rootcauseunproven, no metadataretry or assetcorruption/nativefailureclaim. Chargefullintended25174failedmetadata+1565verified=26739potentialbytes, notclaimedcompletedreads. No candidateworkers/services/install/download/web/privatecontents.
+
+Reportauthoring firstpatchfailedverification(nochanges), correctednextpatch; countbothdesign2+2units. New docs/benchmarks/input-fit-static-review.md +dependencies/PLAN/TODO/README/thischeckpoint=sixfindingsfiles await separateGitapproval. Verified308links/14hashes/whitespace at362.798s; finalreportedit2design andlastreceipt4(2design2protected); closechecks6(4close2protected), total48normal4protected=52of64retainedreservations. Finalmeterrecordsbytes/time/metadatacharge26739/statusclosedpartial; no furtherexecutioninallocation. IF-S2partial/unchecked; no adapterselected/template/tokenizer/context/outputparityproof. Recommend newbounded inspection/session/deadline correction before remainingmetadata; NOTapprovedorimplemented. Preservealloldledgers/sources/unrelatedassets. G2/app/native trust remainopen; no hostcompact/status.
+
+# Earlier checkpoint — R1-W committed; input-fit draft and IF-S package pending
 
 User approved all and proceeding. Exact eight R1-W findings documents committed `197eb6e` after allowlist/index/whitespace checks. Closed R1-W record remains unchanged; no new research or worker. Read local AGENTS, planning/documentation skills, R01/contracts/SPEC/inventories; no skill scripts/subagents. Prepared concrete docs/proposals/input-fit-preflight-design.md plus PLAN/TODO/README/thischeckpoint: five documentation files, no implementation or native/source research.
 

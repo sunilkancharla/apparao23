@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-S — manifest identities verified; layer inspection incomplete
+
+Design committed `145278f`. The [partial static review](benchmarks/input-fit-static-review.md) reverified both selected model manifest hashes and recorded declared config/template/system/parameter/license identities. A layer-inspection shell stalled and was stopped with exit verified; referenced-layer verification did not finish. No dependency/model execution, installation, adapter selection or G2 adoption occurred. Template/tokenizer parity and R1-W native/vendor freshness gaps remain open.
+
 ## T17-R1-W — bounded public-source freshness update
 
 Approved proposal committed `780bad2`. The [2026-11-16 UTC review](benchmarks/public-source-web-review.md) examined specific Starlette/pdfminer/Pillow advisories whose listed fixed versions are at or below the recorded pins, plus selected native license sources and pinned Ollama input-fit behavior. Coverage is partial: full runtime/transitive/native advisory and notice reconciliation is still open, and no exact application-facing count-only preflight was validated. Existing pins/artifacts remain unchanged. No security clearance, installation, execution or G2 adoption follows. Earlier zero-research statements below describe the historical R1/T17-A attempts.

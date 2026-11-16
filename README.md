@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Model metadata review is partial:** Design committed `145278f`. Both selected model manifest hashes match. A later metadata inspection stalled; its shell was stopped and exit verified. [The report](docs/benchmarks/input-fit-static-review.md) keeps unfinished template/config checks explicit. No model was run or new software installed; the input-size method and app implementation remain pending. Findings await commit approval; earlier package-pending notes below are historical.
+
 **Input-size check designed for review:** Public-review findings are committed as `197eb6e`. The [preflight draft](docs/proposals/input-fit-preflight-design.md) describes checking the complete question/evidence input and reserving answer space, with clear refusal when fit cannot be established. A bounded review of existing model metadata is proposed next. No tokenizer or runtime method is adopted, and no new software was installed or run. The app is still not implemented; draft/package approval remains pending. Earlier findings-commit-pending notes below are historical.
 
 **Public-source review finished with gaps:** Proposal committed `780bad2`. The [bounded review](docs/benchmarks/public-source-web-review.md) records selected dependency advisory fixes and license evidence. Ollama's input handling still needs an exact template/tokenizer check before adoption; complete native notice/security review also remains open. Twelve web calls/48targets were reviewed without installing or running software. Findings await commit approval; the document-chat app is not implemented. Earlier proposal-pending wording below is historical.

@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-S — partial review closed; missing metadata remains
+
+User approved the exact package and five-document design commit `145278f`. [Partial evidence](docs/benchmarks/input-fit-static-review.md): both manifest hashes verified; later layer read did not finish. Its owned PowerShell was stopped and exit verified; no candidate/native/model calls. Adapter/fit and complete native freshness remain unresolved.
+
+- [x] **IF-S1:** Fresh prepaid64-unit/900-second manifest/clock and14preservation identities; safe bounds/hash checks on two manifests.
+- [ ] **IF-S2:** Partial:1,565bytes of verified manifest metadata; referenced config/template/system/parameter layer completion unavailable. No retry in this allocation.
+- [x] **IF-S3:** Compare options from available evidence; explicitly retain adapter/parity/license/resource blockers rather than select an unverified integration.
+- [x] **IF-S4:** Document partial stop/owned-shell cleanup and close with consistency/link/whitespace/preservation evidence; request findings commit separately.
+
+Conservatively charge26,739potential metadata bytes, including all intended failed-command inputs. Recommend a new bounded inspection correction before finishing S2; no new correction/source/native package or G2 approval inferred. Earlier pending-approval entries below are historical.
+
 ## T17-IF — preflight design drafted; IF-S review proposed
 
 R1-W findings committed `197eb6e`. The [draft and exact IF-S package](docs/proposals/input-fit-preflight-design.md) contain the admission contract, adapter alternatives, per-task prerequisites/acceptance/evidence and future test cases. Draft preparation was documentation only, using existing reports; no new research, allocation, metadata extraction, dependency execution, tests or installation occurred.

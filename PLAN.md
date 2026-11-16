@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-S partial review; inspection stopped safely
+
+Design committed `145278f`. The [IF-S report](docs/benchmarks/input-fit-static-review.md) verifies both manifest hashes but records an unfinished layer read and verified termination of its inspection shell. No model execution or adapter adoption. Next recommend a separately bounded correction of inspection/session/deadline handling before finishing missing metadata; no retry or new package is approved yet. Findings/status documents await commit approval. Earlier draft/package-pending notes below are historical; G2/application implementation remain open.
+
 ## Current execution point — R1-W committed; input-fit design drafted
 
 Findings committed `197eb6e`. The [input-fit preflight draft](docs/proposals/input-fit-preflight-design.md) defines immutable count/generation identity, exact input/output-headroom admission, bounded R01 packing, fail-closed outcomes and future test cases. Its IF-S1–S4 package proposes metadata-only local adapter review before selection or native validation. No tokenizer, internal endpoint access or application implementation is selected/authorized. Draft and five-document commit await review; all old research allocations stay closed. Earlier findings-commit-pending wording below is historical.
