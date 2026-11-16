@@ -1,5 +1,9 @@
 # T17-IF — exact input-fit preflight design
 
+## Evidence update — IF-QC requires integration direction
+
+[IF-QC source review](../benchmarks/input-fit-oracle-review-continuation.md), approved proposal `fa670fa`, identifies internal runtime token operations but no complete independently verifiable ownership/render/count/context/output contract for the present external controller. Dependency expansion skipped. A proposed owned-runtime bridge versus external handoff comparison needs a separate user decision; no runtime modification, installation or adapter adoption is implied. Existing exact-admission requirements and provisional settings remain unchanged.
+
 ## Evidence update — IF-P static data acquisition completed
 
 [IF-P findings](../benchmarks/input-fit-remaining-assets.md), approved proposal `2533f27`, identify all ten remaining publisher data files with exact observed SHA256/size and matching Git blobs. Earlier artifacts were preserved, not reloaded. This closes the missing-file acquisition task only: no tokenizer/model execution, trustworthy counting oracle, runtime/native/dependency adoption or proof of input/output headroom. This contract, provisional limits and G2 boundary remain unchanged.

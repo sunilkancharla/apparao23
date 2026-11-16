@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-QC — dependency expansion intentionally skipped
+
+[Counting-reference findings](benchmarks/input-fit-oracle-review-continuation.md), approved proposal `fa670fa`, leave the current external-controller contract unestablished after five source-review calls/twenty targets. Conditional dependency work was skipped as approved. No new graph/native/advisory/provenance clearance, package selection or installation. Resolve counting integration direction before further standalone-tokenizer dependency expansion; IF-N/P artifact evidence stays unchanged.
+
 ## T17-IF-Q — no new dependency evidence
 
 Approved proposal `be1690a` stopped during initial reporting before research. [Stop report](benchmarks/input-fit-oracle-dependency-review.md). Zero research targets; all prior graph/native/provenance/offline/runtime gates remain open, with no package selection or installation.

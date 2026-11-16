@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-QC — bounded source review completed; direction pending
+
+Approved proposal committed `fa670fa`. [Findings](docs/benchmarks/input-fit-oracle-review-continuation.md) retain the unresolved independent counting contract and compare three directions. No runtime/architecture choice inferred.
+
+- [x] **IF-QC1:** Clock/full reservations/reporting before inspection/output;30entry preservation identities. Fixed bootstrap succeeded, old allocations unchanged.
+- [x] **IF-QC2 (bounded review; feasibility unresolved):** Five calls/twenty targets incltwo404s, no retry; pinned source/symbol evidence records special-token/context/ownership/reference gaps. No trustworthy complete current-controller counting interface established.
+- [x] **IF-QC3 (skipped by approved condition):** No supported QC2 route, so no dependency expansion; no additional calls or installation.
+- [x] **IF-QC4:** Findings/alternatives/checkpoint and preservation/link/diff/budget closure recorded. Seven findings/status files await commit approval. Next direction/package requires user decision; no runtime bridge/build/trial authorized.
+
+Earlier pending QC checklist below is historical.
+
 ## T17-IF-QC — corrected continuation pending approval
 
 IF-Q stop committed `fd9cf38`; [exact continuation](docs/proposals/input-fit-oracle-review-continuation.md) carries its unchanged scope/limits with corrected accounting-before-output. Package and five-document commit await approval.

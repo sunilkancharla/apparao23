@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-QC reviewed; counting integration decision needed
+
+Approved continuation/proposal commit `fa670fa`. [Findings](docs/benchmarks/input-fit-oracle-review-continuation.md): accounting-before-output succeeded,30entry identities preserved; five web calls/twenty targets included two404s, six/24reservations retained. No trustworthy complete counting interface established for the present external-controller design. Conditional dependency review skipped under the approved stop rule. Recommend comparing a narrow owned-runtime counting bridge against an external ownership handoff before further dependency work; runtime/build/architecture choice requires user decision. Seven findings/status files await separate commit approval; no next package prepared or approved. No installation/native/model activity or G2/app approval. Earlier pending notes below are historical.
+
 ## Current execution point — IF-Q stop committed; corrected continuation proposed
 
 Stop findings committed `fd9cf38`. [IF-QC](docs/proposals/input-fit-oracle-review-continuation.md) proposes the same oracle-first source review with a corrected first invocation: initialize clock/reservations/report ledger, then capture inspection and precharge bounded summaries before emission. Fresh review-02 root only; IF-Q remains closed. QC1 bootstrap → QC2 oracle → conditional QC3 dependencies → QC4 decision/closeout. Same64units/1,200seconds/2MiB and research/reporting limits. Package and five-document commit await approval; no continuation execution/research/installation began. Older status below is historical.

@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Counting review reached a decision:** Approved proposal committed `fa670fa`. [The source review](docs/benchmarks/input-fit-oracle-review-continuation.md) found internal counting operations but did not establish a complete trusted interface for this app. Dependency expansion was skipped as agreed. Next recommendation is to compare a small owned-runtime counting bridge with an external ownership handoff before choosing an approach. No installation, runtime change or model run occurred. Seven findings/status files await commit approval; the app remains unimplemented. Earlier status below is historical.
+
 **Corrected review proposed:** Stop findings committed `fd9cf38`. [The continuation](docs/proposals/input-fit-oracle-review-continuation.md) keeps the same source-only review but initializes accounting before inspection and emits measured summaries. It checks counting feasibility first; dependency review is conditional. Package and five-document commit await approval. No new research, installation or model execution started. Earlier status below is historical.
 
 **Review stopped before research:** Proposal committed `be1690a`. Initial inspection exceeded its output limit, so optional work stopped under the approved rule. [The stop report](docs/benchmarks/input-fit-oracle-dependency-review.md) records the error. No research, installation or model run began. Counting feasibility and dependency review remain unresolved; a new continuation is not authorized. Six findings/status documents await commit approval. Earlier notes below are historical.

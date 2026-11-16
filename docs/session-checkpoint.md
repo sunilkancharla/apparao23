@@ -1,4 +1,16 @@
-# Latest checkpoint — IF-Q stop committed; IF-QC proposal pending approval
+# Latest checkpoint — IF-QC source review complete; integration direction pending
+
+User approved IF-QC/full five-document proposal commit `fa670fa`. Corrected first invocation captured DateTimeOffset UTC and created exclusive fresh root data/t17/input-fit-oracle-review-02, durable meter/full64units(48normal16protected)/research/reporting reservations before any inspection or stdout. Subsequent shell calls precharged4096bytes before bounded scalar output; initial4096also covers Git output. Thirty prior sources/reports/receipts frozen before research, including all IF-Q post-stop records without retrospective entry-compliance claims. No new helper/source/test/worker/native service/model/API/install or fixture.
+
+QC2 completed five web calls/twenty targets(including two404former runner paths), six/24ceilings prepaid and retained without refund. Pinned Ollama v0.40.16 interface/wrapper/routes/prompt sources show internal token/special-token and context operations; no complete trusted external-controller reference/ownership/headroom contract established. Literal debug key lookup missed typed field; DebugRenderOnly behavior confirmed, no false removal claim. Medium web responses included extensive provider-generated source context, no long requests/raw shell echo. QC3skipped by approved condition, no extra dependency research/version substitution. No complete oracle or impossibility proof claimed.
+
+Findings docs/benchmarks/input-fit-oracle-review-continuation.md recommend next **design comparison** of narrow owned-runtime counting bridge versus external Windows-owned-child handoff, with architecture/runtime-change alternative returned if neither acceptable. This is a new significant direction requiring user decision; no modification/build/install/trial/adoption/requirement relaxation approved. Same16GB CPU-only/Stage1formats/OCR/privacy/provisional2,048context192output/R01/G2 gates. Frozen parity document unchanged.
+
+Seven findings/status files: current findings,dependencies,preflight,PLAN,TODO,README,thischeckpoint. Preservation/link/diff/time/artifact/reporting closeout retained locally; request separate commit approval and direction decision. No next package prepared. Old epochs remain closed, no workers to tear down, no subagents/skill scripts/goal/status/compact claims. Preserve unrelated untracked content.
+
+Closeout verification:373local links/all30prior hashes passed, exact seven-file scope/index/whitespace passed; readable full tracked diff saved locally, new report reviewed separately. A later optional diff-display command failed PowerShell quoting before its body/planned precharge; no actions executed, short diagnostic not measured/precharged in that invocation. Recorded reporting-order deviation plus4096conservative error allowance; no complete-policy-compliance claim. No display retry or optional work resumed. Research verdict/evidence unaffected; protected final closure only.
+
+# Earlier checkpoint — IF-Q stop committed; IF-QC proposal pending approval
 
 User approved all six IF-Q stop findings/status files and preparing corrected continuation. Exact allowlist/index/whitespace commit `fd9cf38` succeeded. IF-Q root remains closed, reporting/prework-order deviation retained, zero research, no retrospective compliance claim.
 
