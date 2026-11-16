@@ -1,5 +1,9 @@
 # T17-IF — exact input-fit preflight design
 
+## Evidence update — IF-SV conditional validation reference
+
+[SV source review](../benchmarks/standalone-tokenizer-validation-design.md), approved proposal `68a878c`, identifies a directly owned exact bundled runner as a credible temporary reference for standalone counting. Shared source token helpers support the [staged trial design](standalone-tokenizer-parity-trial-design.md); installed artifacts, actual rendering/model parity, context/output/EOS and production identity binding remain unverified. No runtime count endpoint, custom build, dependency installation or trial adopted. Existing exact admission/R01/settings remain unchanged.
+
 ## Evidence update — IF-QC requires integration direction
 
 [IF-QC source review](../benchmarks/input-fit-oracle-review-continuation.md), approved proposal `fa670fa`, identifies internal runtime token operations but no complete independently verifiable ownership/render/count/context/output contract for the present external controller. Dependency expansion skipped. A proposed owned-runtime bridge versus external handoff comparison needs a separate user decision; no runtime modification, installation or adapter adoption is implied. Existing exact-admission requirements and provisional settings remain unchanged.

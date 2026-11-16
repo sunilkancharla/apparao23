@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Standalone validation design advanced:** Approved proposal committed `68a878c`. [The source review](docs/benchmarks/standalone-tokenizer-validation-design.md) identifies a credible way to use Ollama's exact bundled runner temporarily to check a separate tokenizer. A [staged test design](docs/proposals/standalone-tokenizer-parity-trial-design.md) is saved, but cannot run until binaries/dependencies and remaining compatibility details are verified. No software installed, binary inspected or model run. Eight findings/design/status files await commit approval. Earlier notes below are historical.
+
 **Standalone validation package proposed:** Direction/comparison committed `aae897e`. [The next design review](docs/proposals/standalone-tokenizer-validation-design.md) checks whether Ollama's exact bundled runner could temporarily validate a separate tokenizer, while production counting stays modular. It permits source review and a future test design only. No new research, install or model run started; package and five-document commit await approval. Earlier status below is historical.
 
 **Standalone direction approved (2026-11-16):** Continue toward a separate tokenizer, subject to exact runtime validation and dependency gates. The user approved committing the comparison and preparing the next bounded design package. Nothing has been installed or adopted. Earlier pending-direction wording below is historical.

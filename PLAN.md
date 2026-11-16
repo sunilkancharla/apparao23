@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — standalone reference design completed conditionally
+
+Approved IF-SV/proposal commit `68a878c`. [Findings](docs/benchmarks/standalone-tokenizer-validation-design.md) map Ollama's native source to b12177/`6c01da6278ab6c69ed67d9124806b50d2b299ba7` plus compatibility overlays and identify shared reference/generation token helpers. Eight calls/24targets; one404/one inaccessible API charged, no retries. [Staged trial design](docs/proposals/standalone-tokenizer-parity-trial-design.md) is conditional/non-executable; installed runner/DLL identity, native/dependency/provenance and actual context/EOS/parity gates remain open. Recommend next bounded static artifact/dependency review before any provisioning/trial. Eight findings/design/status files await commit approval; no next package prepared. No new binary/model inspection/install/native/API/inference or G2/app adoption. Earlier pending wording below is historical.
+
 ## Current execution point — standalone direction committed; validation design proposed
 
 Comparison/direction decision committed `aae897e`. [IF-SV](docs/proposals/standalone-tokenizer-validation-design.md) proposes source-only review of the exact bundled native runner as a temporary independent reference for standalone counting, without presuming a custom build or production endpoint. SV1 precharged bootstrap → SV2 provenance/ownership/effective-token feasibility → conditional SV3 later trial design → SV4 findings/decision. Same existing parity requirements; no inference from endpoint availability alone.64units/1,200seconds/2MiB, eight calls/twenty-four targets, bounded summaries. Five proposal/status files and package await approval; no research/install/native trial started. Earlier pending notes below are historical.

@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-SV — temporary native reference candidate; not adopted
+
+[SV source findings](benchmarks/standalone-tokenizer-validation-design.md), approved proposal `68a878c`, trace the runner build to upstream b12177/`6c01da6278ab6c69ed67d9124806b50d2b299ba7` plus Ollama compatibility sources/patches. A generic upstream binary is not equivalent. Directly owned reference is a candidate for validating standalone counting; actual packaged executable/DLL identity, license/advisory/provenance closure and standalone dependency review remain open. No local binary/model inspection, installation, extra dependency selection or native execution occurred. Proposed trial limits are unapproved.
+
 ## T17-IF-QC — dependency expansion intentionally skipped
 
 [Counting-reference findings](benchmarks/input-fit-oracle-review-continuation.md), approved proposal `fa670fa`, leave the current external-controller contract unestablished after five source-review calls/twenty targets. Conditional dependency work was skipped as approved. No new graph/native/advisory/provenance clearance, package selection or installation. Resolve counting integration direction before further standalone-tokenizer dependency expansion; IF-N/P artifact evidence stays unchanged.

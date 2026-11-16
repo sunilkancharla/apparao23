@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-SV — source feasibility/design completed; no trial adoption
+
+Approved proposal committed `68a878c`; [findings](docs/benchmarks/standalone-tokenizer-validation-design.md) and [conditional trial design](docs/proposals/standalone-tokenizer-parity-trial-design.md) distinguish native source evidence from installed artifact/runtime validation.
+
+- [x] **IF-SV1:** UTC/full64unit/shared research/report accounting before inspection/output;36prior identities frozen, transitive prior preservation checked. No old-root reuse.
+- [x] **IF-SV2:** Eightcalls/24targets identify pinned b12177/fullcommit plus Ollama compatibility integration and shared native text token preparation. One404/one inaccessible API charged, no retry. Directly owned reference credible at source level; installed artifact/provenance/headroom/parity remain unknown.
+- [x] **IF-SV3 (draft only):** Staged sequential reference design, exact-artifact/dependency gates, frozen parity matrix, proposed shared time/start/API/memory/artifact limits and teardown documented. No executable trial/package approval or custom build.
+- [x] **IF-SV4:** Findings/design/checkpoint and preservation/link/diff/budget closeout recorded. Eight files await commit approval; recommend preparing bounded existing-artifact/dependency review next. No install/native/G2 adoption.
+
+The earlier pending SV checklist below is historical.
+
 ## T17-IF-SV — standalone validation design proposed
 
 Direction C/comparison committed `aae897e`. [Exact source/design package](docs/proposals/standalone-tokenizer-validation-design.md) awaits approval along with five proposal/status files.
