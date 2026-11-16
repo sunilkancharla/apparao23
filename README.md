@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Review stopped before research:** Proposal committed `be1690a`. Initial inspection exceeded its output limit, so optional work stopped under the approved rule. [The stop report](docs/benchmarks/input-fit-oracle-dependency-review.md) records the error. No research, installation or model run began. Counting feasibility and dependency review remain unresolved; a new continuation is not authorized. Six findings/status documents await commit approval. Earlier notes below are historical.
+
 **Next review proposed:** Remaining-asset findings committed as `2fa113c`. [The next package](docs/proposals/input-fit-oracle-dependency-review.md) first checks whether exact input counting can be verified against the actual local runtime. Dependency review proceeds only if that route is supported; otherwise it returns the alternatives for a decision. Package and five-document commit await approval. No new research, software installation or model run has started. Earlier pending notes below are historical.
 
 **Remaining tokenizer files acquired:** Approved proposal committed `2533f27`. [The continuation](docs/benchmarks/input-fit-remaining-assets.md) acquired and identity-checked all ten missing data files, with no bookkeeping failure this time. Fourteen tests and final lint/format passed; the worker exited cleanly. Previous downloads and evidence were preserved. Nothing was installed or loaded as a tokenizer/model; dependency/native/runtime suitability remains unverified. Nine source/findings/status files await commit approval. Application development remains gated. Older pending notes below are historical.

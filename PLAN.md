@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-Q stopped before research
+
+Approved proposal committed `be1690a`. [Stop report](docs/benchmarks/input-fit-oracle-dependency-review.md): initial inspection exceeded8KiB reporting cap (proposal alone8,829bytes) and preceded durable reporting precharge. Optional work stopped; no research/install/native/model activity. Q1 incomplete, Q2/Q3 unattempted; protected partial closeout only. Six findings/status documents await commit approval. A fresh summary-only continuation requires a separately approved package; no rerun/reset. G2/application and counting/dependency gates remain open. Earlier pending notes are historical.
+
 ## Current execution point — IF-P committed; IF-Q proposed
 
 IF-P's nine reviewed files committed as `2fa113c`. [IF-Q](docs/proposals/input-fit-oracle-dependency-review.md) proposes a source-only feasibility check for an independent runtime counting reference before conditional dependency/native/provenance closure. Ordered Q1 allocation → Q2 oracle contract → Q3 conditional graph review → Q4 findings/decision. If Q2 cannot establish an actionable route within six calls/twenty-four targets, skip dependency expansion and present alternatives. Full package:64prepaid units/1,200seconds/2MiB, twelve web calls/forty-eight targets, bounded reporting. Package and five-document commit await approval; no research, installation or native execution started. G2/application implementation remains gated. Earlier pending wording below is historical.

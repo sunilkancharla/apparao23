@@ -1,4 +1,12 @@
-# Latest checkpoint — IF-P committed; IF-Q oracle-first review proposed
+# Latest checkpoint — IF-Q reporting deviation, no research
+
+User approved exact IF-Q and five proposal docs, committed `be1690a`. First inspection emitted full proposal plus status text before durable reporting precharge; proposal alone measured8,829UTF-8bytes >8,192per-invocation cap. Detected and stopped optional work immediately, no source research/candidate download/import/install/service/model/API. Fresh ignored data/t17/input-fit-oracle-review-01 created only after detection for honest stopped allocation and protected closeout; not compliant pre-work initialization, not backdated. Full64units retained48normal/16protected, no refunds. No trial/helper/worker to tear down. Q1 incomplete,Q2/Q3 not attempted; no architectural verdict.
+
+Authored current stop findings plus PLAN/TODO/README/dependencies/thischeckpoint=six findings/status files. Protected preservation/link/diff/artifact/report checks only; final local closeout records results. All old sources/data/receipts remain untouched. Proposed scope/limits unchanged; fresh continuation not prepared/approved, no retry/reset of this stopped allocation. Recommend summary-only/precharged inspection under a separately approved fresh package, without increasing8KiB cap. Six files await separate commit approval. G2/application/native/parity gates remain open. No subagents/skill scripts/goals or /status/compact claims. Preserve unrelated untracked files.
+
+Protected closeout checked353local links/24post-stop preservation snapshots, unchanged tracked frozen files by exact diff scope, empty index and whitespace. Snapshots are post-stop evidence, not retrospective entry checks. Local closeout initially mixed local/UTC DateTime subtraction; corrected to DateTimeOffset UTC subtraction, retaining the correction explicitly. Reporting/prework deviation remains unresolved, zero research. No reattempt authorized.
+
+# Earlier checkpoint — IF-P committed; IF-Q oracle-first review proposed
 
 User approved all nine IF-P source/findings/status files and preparing the next review. Exact allowlist/index/whitespace commit `2fa113c` succeeded; only the reviewed nine files staged. Final IF-P closeout: closed_completed_static_assets_no_adoption,1,321.0056138seconds,6,216,555artifact upper,23,549reporting precharges/largest10,679,31preserved identities,358links. Source hashes match prior checkpoint; no tests or worker rerun. All old epochs remain closed.
 

@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-Q — no new dependency evidence
+
+Approved proposal `be1690a` stopped during initial reporting before research. [Stop report](benchmarks/input-fit-oracle-dependency-review.md). Zero research targets; all prior graph/native/provenance/offline/runtime gates remain open, with no package selection or installation.
+
 ## T17-IF-P — remaining publisher data identified; no installation
 
 [Continuation findings](benchmarks/input-fit-remaining-assets.md), approved proposal `2533f27`, add exact bytes/SHA256 and matching Git identities for ten remaining Qwen/Nomic data assets, preserving the earlier two wheels/Qwen tokenizer. All eleven listed publisher files are acquired; locally computed SHA256 is not independent publisher attestation or cached-GGUF parity. No candidate imports/installations. Dependency graph, native notices/advisories/ABI/offline behavior, source-to-release reconciliation and runtime counting oracle remain open; prior package evidence stays immutable.

@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-Q — stopped before optional research
+
+Approved proposal committed `be1690a`. [Stop evidence](docs/benchmarks/input-fit-oracle-dependency-review.md): initial proposal output alone8,829bytes exceeded8,192/invocation and output preceded durable precharge. Zero research calls/targets; no install/native/model activity. Preserve this allocation closed, no automatic retry.
+
+- [ ] **IF-Q1 — stopped/incomplete:** Pre-work reporting/accounting ordering failed; post-stop allocation and preservation only, no claim of compliant initialization.
+- [ ] **IF-Q2 — not attempted:** Runtime counting-reference feasibility remains unknown.
+- [ ] **IF-Q3 — not attempted:** Conditional dependency review remains open.
+- [x] **IF-Q4 — partial-stop closeout:** Deviation/findings/checkpoint recorded; protected consistency/preservation/diff checks retained locally. Six findings/status files await commit approval; continuation needs a new explicit package decision.
+
+The earlier proposed checklist below is historical and was not completed.
+
 ## T17-IF-Q — proposed oracle-first source review
 
 IF-P results committed `2fa113c`. [IF-Q proposal](docs/proposals/input-fit-oracle-dependency-review.md) defines prerequisites, acceptance, verification, exact evidence and shared limits. Package and five-document commit await approval.
