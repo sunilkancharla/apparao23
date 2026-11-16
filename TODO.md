@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-QC — corrected continuation pending approval
+
+IF-Q stop committed `fd9cf38`; [exact continuation](docs/proposals/input-fit-oracle-review-continuation.md) carries its unchanged scope/limits with corrected accounting-before-output. Package and five-document commit await approval.
+
+- [ ] **IF-QC1:** After approval, exclusive fresh-root bootstrap; UTC clock/full allocation/report and research counters durable before optional inspection/output, then frozen hashes and measured/precharged scalar summary. Evidence: local meter/reporting/preservation records.
+- [ ] **IF-QC2:** After QC1, establish pinned actual-runtime chat/embedding counting contract within six calls/twenty-four targets. Evidence: source/symbol citations and feasible/blocked/unknown verdict; unsupported route stops dependency work.
+- [ ] **IF-QC3 (conditional):** Only after supported QC2, review applicable exact dependency/native/provenance/offline gaps with remaining six calls/twenty-four targets/20names. Evidence: verified/unknown/blocked table, no installation.
+- [ ] **IF-QC4:** After QC2 stop or QC3, save findings/alternatives/checkpoint, recheck preservation/links/diff/budgets and request findings commit. No closed-root retry or adoption.
+
 ## T17-IF-Q — stopped before optional research
 
 Approved proposal committed `be1690a`. [Stop evidence](docs/benchmarks/input-fit-oracle-dependency-review.md): initial proposal output alone8,829bytes exceeded8,192/invocation and output preceded durable precharge. Zero research calls/targets; no install/native/model activity. Preserve this allocation closed, no automatic retry.

@@ -1,4 +1,14 @@
-# Latest checkpoint — IF-Q reporting deviation, no research
+# Latest checkpoint — IF-Q stop committed; IF-QC proposal pending approval
+
+User approved all six IF-Q stop findings/status files and preparing corrected continuation. Exact allowlist/index/whitespace commit `fd9cf38` succeeded. IF-Q root remains closed, reporting/prework-order deviation retained, zero research, no retrospective compliance claim.
+
+Prepared docs/proposals/input-fit-oracle-review-continuation.md plus PLAN/TODO/README/thischeckpoint only. IF-QC1–QC4 keeps full IF-Q scope/limits, fixes first invocation to capture UTC start/exclusively create root/persist full accounting and reporting ledger before inspection or controlled stdout; summaries measured/precharged including newline, native warnings/stderr captured. DateTimeOffset UTC, explicit scalars/ReadAllText, no full proposal/checkpoint output. Same64units(48normal16protected)/1,200seconds/2MiB,12calls48targets total, oracle6/24 before conditional dependencies6/24/20names,8KiB/invocation64KiBaggregate reporting8KiBreserve. Fresh data/t17/input-fit-oracle-review-02 only after approval; old root and frozen sources/reports/parity stay unchanged. Include IF-Q post-stop records in new preservation manifest without relabelling them as entry checks.
+
+Package and five-file proposal commit await approval. No new root/ledger/research/helper/trial/install/model/API, no code or runtime adoption, G2/app open. Necessary bootstrap correction is concrete/reviewable; later routine package steps do not need repeated approvals. No subagents/skill scripts/goal/status/compact invocation. Preserve unrelated untracked files.
+
+Preparation checks: local link resolution, exact four tracked status changes plus one new proposal, empty index, absent continuation root and tracked/new-file whitespace passed. Documentation-only preparation; no application tests or research. Five proposal/status files remain uncommitted for review.
+
+# Earlier checkpoint — IF-Q reporting deviation, no research
 
 User approved exact IF-Q and five proposal docs, committed `be1690a`. First inspection emitted full proposal plus status text before durable reporting precharge; proposal alone measured8,829UTF-8bytes >8,192per-invocation cap. Detected and stopped optional work immediately, no source research/candidate download/import/install/service/model/API. Fresh ignored data/t17/input-fit-oracle-review-01 created only after detection for honest stopped allocation and protected closeout; not compliant pre-work initialization, not backdated. Full64units retained48normal/16protected, no refunds. No trial/helper/worker to tear down. Q1 incomplete,Q2/Q3 not attempted; no architectural verdict.
 

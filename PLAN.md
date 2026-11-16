@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-Q stop committed; corrected continuation proposed
+
+Stop findings committed `fd9cf38`. [IF-QC](docs/proposals/input-fit-oracle-review-continuation.md) proposes the same oracle-first source review with a corrected first invocation: initialize clock/reservations/report ledger, then capture inspection and precharge bounded summaries before emission. Fresh review-02 root only; IF-Q remains closed. QC1 bootstrap → QC2 oracle → conditional QC3 dependencies → QC4 decision/closeout. Same64units/1,200seconds/2MiB and research/reporting limits. Package and five-document commit await approval; no continuation execution/research/installation began. Older status below is historical.
+
 ## Current execution point — IF-Q stopped before research
 
 Approved proposal committed `be1690a`. [Stop report](docs/benchmarks/input-fit-oracle-dependency-review.md): initial inspection exceeded8KiB reporting cap (proposal alone8,829bytes) and preceded durable reporting precharge. Optional work stopped; no research/install/native/model activity. Q1 incomplete, Q2/Q3 unattempted; protected partial closeout only. Six findings/status documents await commit approval. A fresh summary-only continuation requires a separately approved package; no rerun/reset. G2/application and counting/dependency gates remain open. Earlier pending notes are historical.

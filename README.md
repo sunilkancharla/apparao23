@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Corrected review proposed:** Stop findings committed `fd9cf38`. [The continuation](docs/proposals/input-fit-oracle-review-continuation.md) keeps the same source-only review but initializes accounting before inspection and emits measured summaries. It checks counting feasibility first; dependency review is conditional. Package and five-document commit await approval. No new research, installation or model execution started. Earlier status below is historical.
+
 **Review stopped before research:** Proposal committed `be1690a`. Initial inspection exceeded its output limit, so optional work stopped under the approved rule. [The stop report](docs/benchmarks/input-fit-oracle-dependency-review.md) records the error. No research, installation or model run began. Counting feasibility and dependency review remain unresolved; a new continuation is not authorized. Six findings/status documents await commit approval. Earlier notes below are historical.
 
 **Next review proposed:** Remaining-asset findings committed as `2fa113c`. [The next package](docs/proposals/input-fit-oracle-dependency-review.md) first checks whether exact input counting can be verified against the actual local runtime. Dependency review proceeds only if that route is supported; otherwise it returns the alternatives for a decision. Package and five-document commit await approval. No new research, software installation or model run has started. Earlier pending notes below are historical.
