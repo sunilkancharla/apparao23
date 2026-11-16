@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — R1-DT committed; R1-W review proposed
+
+Detached-validation source/results committed `c6e8952`. The next [R1-W package](docs/proposals/public-source-web-review.md) proposes read-only official advisory/native-notice and pinned Ollama input-fit research through built-in web tools. It explicitly replaces unenforceable historical HTTP/byte/helper bounds with visible tool/target and local-work budgets. Proposal only: no research or execution started. Package and five-document commit approval are requested; G2 and application implementation remain open. Earlier results-commit-pending wording below is historical.
+
 ## Current execution point — R1-DT stdlib validation passed
 
 Assessment committed `3dddbc8`; approved single detached attempt passed ready count1/exit0/limits/identity/resources and verified empty-job cleanup. [Results](docs/benchmarks/public-source-detached-results.md) retain33tests/Ruff, targeted mutation and preservation evidence. No conhost or count-policy expansion was observed/adopted. Next prepare a bounded public-source refresh/input-fit-method review using read-only web tools; candidate/native integration and G2 remain separate gates. Seven source/report/status files await commit approval. Older pending-package and R1-I commit notes below are historical.

@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-R1-W — public-source review proposed
+
+R1-DT source/results committed `c6e8952`. [Exact R1-W proposal](docs/proposals/public-source-web-review.md) defines prerequisites, per-task acceptance/evidence, fixed candidate identities and stop conditions. No web research, fresh allocation, dependency execution or installation has started. Package and five proposal/status files' commit await approval.
+
+- [ ] **R1-W1:** After approval, initialize shared reservations/clock and freeze inventory/preservation hashes; verify identities against existing records.
+- [ ] **R1-W2:** After W1, document version-specific upstream advisory/notice findings, applicability and unavailable/unreviewed gaps with direct sources.
+- [ ] **R1-W3:** After W2, recommend an exact pinned-runtime pre-generation input-fit method or retain the blocker, covering templates/tokenization/truncation/output space separately from embedding prefixes.
+- [ ] **R1-W4:** After W3 or a bounded partial stop, review evidence, update affected documentation, check links/diff/preservation and close without adoption; request findings commit separately.
+
+Proposed limits:32 visible web calls/64 targets,64 prepaid local units(48normal/16protected),1,800active seconds,2MiB authored/accounting output; zero installs/downloads/native calls or new aids. Opaque tool-provider HTTP/redirect/byte/time/RAM internals are not measurable or promised. Older R1-DT results-pending notes below are historical.
+
 ## T17-R1-DT — detached stdlib validation complete
 
 Assessment committed `3dddbc8`; user approved the exact single-attempt package. [Results](docs/benchmarks/public-source-detached-results.md):33tests/Ruff pass; old-flag mutation caught; one real detached worker had ready count1, exit0, accepted limit/identity checks and final active0/four successful closes. No conhost/additional association observed, no expected-count increase, no retry. Seventeen prior hashes/eight seals preserved; results commit pending.
