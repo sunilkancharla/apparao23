@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-P — diagnostic remaining-asset continuation proposed
+
+IF-O aids/findings committed `a13e8b2`. [Exact IF-P boundary](docs/proposals/input-fit-remaining-assets-continuation.md) defines ten files, local authored-module reuse, diagnostic-only persistence change and narrower transport/reporting/resource caps. Package/five-document commit await approval. No new source, root, fixture, ledger, download or worker.
+
+- [ ] **IF-P1:** After approval, persist112-unit/1,800-second/16MiB shared reservations, reporting/HTTP caps and preservation manifest. Acceptance: complete precharge before optional work; old epochs/payload identities unchanged.
+- [ ] **IF-P2:** After P1, implement only2authored wrapper/test files test-first. Acceptance: per-stage diagnostics and strict inherited URL/redirect/body/output/reporting constraints, no retries, caught guard mutation and final lint/format checks; six suites/four Ruff cap.
+- [ ] **IF-P3:** After P2, one supervised static continuation for exactly ten missing pinned assets. Acceptance: verified byte/size/Git/LFS observations or explicit partial stop, independent operation/HTTP/reporting receipts and verified teardown; no previous successes reacquired or candidates loaded.
+- [ ] **IF-P4:** After P3 or bounded stop, combine identity references without editing frozen evidence, update current findings/status, verify preservation/link/diff/time/output and request source/results commit separately. Acceptance: no inferred installation/runtime/parity/G2 adoption.
+
 ## T17-IF-O — synthetic persistence investigation completed
 
 User approved [IF-O](docs/proposals/receipt-persistence-investigation.md) and proposal commit `3b43968`. [Findings](docs/benchmarks/receipt-persistence-investigation.md) distinguish the controlled replacement failure from the unresolved historical cause.

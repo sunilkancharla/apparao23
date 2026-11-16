@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — IF-O synthetic investigation completed
+## Current execution point — IF-O committed; IF-P remaining-file continuation proposed
 
-Approved IF-O/proposal commit `3b43968`. [Findings](docs/benchmarks/receipt-persistence-investigation.md):10tests/final lint/format passed; failure-guard mutation caught; one probe completed131attempts, all four controls as expected, handle/process teardown verified. Controlled target locking produced PermissionError at replace_target/errno13/winerror5; the historical IF-N cause remains unproved. Seven source/findings/status files await separate commit approval. Recommend preparing a diagnostic-enabled continuation for the ten remaining assets, not yet prepared/approved. No old-run retry, installation, writer repair or G2/app/runtime adoption. Older pending wording below is historical.
+IF-O aids/findings committed `a13e8b2`. [IF-P proposal](docs/proposals/input-fit-remaining-assets-continuation.md) defines diagnostic-enabled static acquisition of exactly ten missing revision-pinned data files, reusing verified local authored primitives with narrower policy. No wheel/Qwen-tokenizer redownload or old-run reopening. Limits:112prepaid units/1,800seconds/16MiB artifacts,40HTTP transactions/8MiB payloads+4MiB metadata,16KiB per reporting invocation/128KiB aggregate; six suites/four Ruff runs/one worker. Package/five-document commit await approval; no new code/root/download. Installation/native parity/G2/app adoption remain open. Older pending wording below is historical.
 
 ## Current execution point — IF-K metadata inspection completed
 
