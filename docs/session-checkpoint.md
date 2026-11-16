@@ -1,4 +1,12 @@
-# Latest checkpoint — IF-R partial stop, owned child reaped; results commit pending
+# Latest checkpoint — IF-R committed; synthetic IF-I proposal pending
+
+User approved all eight reviewed IF-R source/results files and proceeding. Exactallowlist/index/source-seal/whitespace checks then commit `9a72136`; closed IF-R meter/progress/ready/controller/execution unchanged. No metadata retry/real fixture/native call/new allocation. Planning/documentation skills read; no skill scripts/subagents. Prepared docs/proposals/windows-file-identity-investigation.md plus PLAN/TODO/README/thischeckpoint=fiveproposal/statusfiles.
+
+IF-I1–I4 proposed: two new windows_file_identity.py/test_windows_file_identity.py stdlib aids; testfirst field snapshot/comparison/fixture guards and caught in-memory mutation; one actual basePython synthetic probe after seals; owned short PowerShell controller10swait/5skill-reap, full tool result/exit cleanup retained. Exactlyone new <=64byte fixture,4KiB totalreads,32statcalls; seven IF-R identity fields plus available Windows attributes/birthtime with missingmarkers. Unchanged/read/onebyte-modified observations only; no guardfix/adoption/model-store read or old source changes. Connectedsyntheticonly boundary has no FS/outboundconfinement/kernelRAMcap; no evaluated native/model code.
+
+Fresh data/t17/windows-identity-01 onlyafterapproval. Proposed48prepaidunits36normal12protected(init4/author4/red4/implementation4/green-lint-mutation6/probe4/report4/reviewclose6/protected12),900s,1MiBnewoutput. No realprobe unless >=60s/headroom and controls/seals pass; no retry, protectedonlystop/report. Exact package/boundary and separatefive-doccommit approval pending. No new aid/runner/meter/fixture/tests/probe created during planning. Later source/results Git, guardchange/newmetadata and G2/app approvals separate. Preserve unrelated assets; no /compact or /status invoked.
+
+# Earlier checkpoint — IF-R partial stop, owned child reaped; results commit pending
 
 User approved all: exact IF-R package/boundary and five proposal/status documents committed `dee832a`. Fresh data/t17/input-fit-inspection-01 initialized full80prepaid units(64normal16protected)/1200s/2MiB and eight preserved source/spec/lock/old-meter hashes before optional work. Local implementation/TDD/security/review/documentation skills applied; no scripts/subagents. Two new aids input_fit_metadata.py/test_input_fit_metadata.py only. Import-error red;19test firstgreen, then20tests0.032s/lintclean and caught in-memory one-shot mutation; review corrected pipe closing after failed reap,20tests0.033s/lintclean. No real negative child/fixtures/network/native/import/install/service/model calls.
 

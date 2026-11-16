@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-I — synthetic Windows identity investigation proposed
+
+IF-R source/results committed `9a72136`. [Exact package](docs/proposals/windows-file-identity-investigation.md) defines two aids, one tiny owned fixture, test-first controls, one real probe and shared stops. Package/execution boundary and five proposal/status files' commit await approval. No new allocation/code/fixture/probe exists; historical IF-R stays closed.
+
+- [ ] **IF-I1:** After approval, persist48-unit/900-second/1MiB accounting and freeze prior IF-R/rules/spec/lock identities; verification is the fresh manifest and preservation hashes.
+- [ ] **IF-I2:** After I1, test-first finite snapshots/comparisons/fixture boundaries in two new stdlib aids; acceptance is meaningful red, passing focused tests/Ruff and caught mutation.
+- [ ] **IF-I3:** After I2/sealing, one synthetic Windows probe captures exact path/handle fields and one modification control; bounded fixture/reads/stats and verified owned exit or honest partial stop required.
+- [ ] **IF-I4:** After I3 or stop, review actual differing fields without adopting a guard; document results/checkpoint, verify preservation/links/diff/budgets and request separate results commit.
+
+No model-store/private-content read, metadata retry, old guard relaxation, native candidate call or runtime/G2 adoption. One package approval covers its routine ordered steps; later guard/metadata packages and Git actions remain separate.
+
 ## T17-IF-R — partial inspection closed; identity refusal retained
 
 User approved the [exact IF-R package](docs/proposals/input-fit-inspection-correction.md) and five-document proposal commit `dee832a`. [Results](docs/benchmarks/input-fit-inspection-results.md) record passing fake controls and one safely stopped real child. The old IF-S shell's stall cause remains unproven.

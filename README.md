@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Synthetic identity check proposed:** Inspection source/results committed `9a72136`. The [next bounded package](docs/proposals/windows-file-identity-investigation.md) would compare Windows file readings on one tiny synthetic file to explain the previous refusal. It leaves the existing guard and model files untouched. Package and five-document commit await approval; no new test aid, fixture or probe has been created. Earlier pending-results wording below is historical.
+
 **Metadata inspection stopped safely:** Approved proposal committed `dee832a`. The new inspection aid passed20fake tests and Ruff, including a caught second-attempt mutation. Its one real child stopped at the first file's open-handle identity check before reading contents; exit/reap was verified. [Results](docs/benchmarks/input-fit-inspection-results.md) preserve the partial evidence and recommend a separate synthetic Windows identity check before any new metadata attempt. No model ran or software was installed. Results commit remains separate; template/config/input-fit and app implementation remain incomplete. Older pending-approval wording below is historical.
 
 **Model metadata review is partial:** Design committed `145278f`. Both selected model manifest hashes match. A later metadata inspection stalled; its shell was stopped and exit verified. [The report](docs/benchmarks/input-fit-static-review.md) keeps unfinished template/config checks explicit. No model was run or new software installed; the input-size method and app implementation remain pending. Findings await commit approval; earlier package-pending notes below are historical.

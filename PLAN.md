@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-R committed; synthetic identity investigation proposed
+
+IF-R source/results committed `9a72136`. [IF-I proposal](docs/proposals/windows-file-identity-investigation.md) isolates the Windows path/open-handle comparison using one tiny synthetic file, test-first snapshots and one owned bounded probe. No old guard/source/meter changes or renewed model-metadata read. Exact48-unit/900-second/1MiB package and five-document commit await approval; no fresh allocation, aid, fixture or probe created. Input-fit/native trust/G2/app gates remain open. Earlier results-commit-pending wording below is historical.
+
 ## Current execution point — IF-R partial stop; owned child reaped
 
 User approved the exact IF-R package and proposal commit `dee832a`. Two aids passed20focused fake tests/Ruff and caught a mutation. The sole real metadata child refused the first open-handle/path identity comparison before content read; exit/reap verified. [Evidence](docs/benchmarks/input-fit-inspection-results.md). Allocation closed without retry or new metadata verification. Recommend separately bounded synthetic Windows stat/handle comparison before proposing another metadata read; no follow-up implementation is approved. Eight source/results files await separate commit approval. Model input-fit/adapter/G2/application gates remain open; older pending wording below is historical.
