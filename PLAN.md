@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — IF-S committed; bounded correction proposed
+
+Partial findings committed `f1b62d4`. The [IF-R correction](docs/proposals/input-fit-inspection-correction.md) proposes two test-first stdlib aids, finite checked paths, durable per-file progress, full result retention and one owned metadata child with timeout/reap verification. Exact80-unit/1,200-second package and five-document commit await approval. No repair, fixture, child or new allocation has started; previous IF-S remains closed. Model input-fit/adapter/G2/application gates remain open. Earlier findings-commit-pending wording below is historical.
+
 ## Current execution point — IF-S partial review; inspection stopped safely
 
 Design committed `145278f`. The [IF-S report](docs/benchmarks/input-fit-static-review.md) verifies both manifest hashes but records an unfinished layer read and verified termination of its inspection shell. No model execution or adapter adoption. Next recommend a separately bounded correction of inspection/session/deadline handling before finishing missing metadata; no retry or new package is approved yet. Findings/status documents await commit approval. Earlier draft/package-pending notes below are historical; G2/application implementation remain open.

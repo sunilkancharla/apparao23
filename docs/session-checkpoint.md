@@ -1,4 +1,12 @@
-# Latest checkpoint — IF-S partial stop; findings commit pending
+# Latest checkpoint — IF-S committed; IF-R correction package pending
+
+User approvedall six findings documents and proceeding. Exactallowlist/index/whitespacecommit `f1b62d4` stores IF-S partial report/dependencies/PLAN/TODO/README/checkpoint. Old IF-S meter/source state untouched; no new inspection/retry/worker. Prepared docs/proposals/input-fit-inspection-correction.md plus rootPLAN/TODO/README/thischeckpoint=fiveproposal/statusfiles. Existing planning/documentation/security workflows applied; no skillscripts/subagents.
+
+IF-R1–R4 proposed: two new stdlib aids input_fit_metadata.py/test_input_fit_metadata.py; testfirst finite ancestor checks/bounded read/hash/identity/durable per-fileprogress/full result and session retention/controller timeout/reap; then exactlyone real metadata child if controls/seals pass. Nine fixed public files(2manifests+7nonweightlayers,declared26739bytes), no weights/privateoutputs/candidateimports/services/network. Base F:/Python/Python314/python.exe -I-S-B; no venvredirector/dependency/global changes. One owned child with30scommunication afterspawn,5skill/reap; creationdelaynotclaimedbounded; no processscan/pidnamekill. Connectedstdlibonly, no filesystem/outboundconfinement or kernelRAMcap claim.
+
+Fresh data/t17/input-fit-inspection-01 onlyafterapproval. Proposed80prepaidunits64normal16protected(init8/testauthor4/red6/implementation4/green8/correction8/trial8/report4/review8/close6/protected16),1200active seconds,2MiBnewoutputs,64KiB/file1MiBmetadata64KiBchildoutput,32syntheticfiles128KiB. Fake-only timeout/process negatives, noextraactualchild/retry. No root/meter/aids/fixtures/code/tests creatednow. Reviewproposal/package and separatefive-docGitapprovalpending; laterresultscommit/adapter/native/G2separate. Preserveoldclosedledgers andunrelatedassets; stallcauseunproven. No hostcompact/statusinvoked.
+
+# Earlier checkpoint — IF-S partial stop; findings commit pending
 
 Userapprovedall IF-S/exactfive-docdesigncommit. Committed `145278f` before separate freshepoch. New data/t17/input-fit-static-01 persistedQPC/full64manifest(init8/meta12/design8/review12/close8/protected16),900s/2MiB/64KiBfile/1MiBmetadata;14oldspec/lock/source/meters hashed. Init2four-unitcalls loadedrules/skills/status/inventory; no nativeimports/subagents. Metadata3four-unitcalls foundprojectstore andverified2manifests(857+708=1565bytes); exactQwen/Nomic digests match. Layer declarations retained in meter/report, weightsnotread.
 

@@ -1,5 +1,16 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-R — inspection correction proposed
+
+IF-S partial findings committed `f1b62d4`. [Exact IF-R package](docs/proposals/input-fit-inspection-correction.md) defines scope, artifacts, per-task acceptance and shared stops. The old shell's stall cause remains unproven; no repair or retry is claimed. Five proposal/status files and package await approval.
+
+- [ ] **IF-R1:** After approval, prepay fresh80-unit/1,200-second accounting and preserve old ledgers/source/spec/lock identities.
+- [ ] **IF-R2:** After R1, test-first finite path/read/progress and owned-controller handling in two new stdlib aids; focused tests/Ruff and caught mutation required.
+- [ ] **IF-R3:** After R2/sealing, one actual public-metadata child only; verify nine fixed files or close partial, retain full result and verify exact owned-child reap.
+- [ ] **IF-R4:** After R3 or stop, assess evidence without runtime adoption, check docs/hash/budgets, close and request results commit separately.
+
+No code, fixtures, metadata reads, child, installation or new allocation were created during proposal preparation. Proposed connected stdlib/public-metadata boundary has no filesystem/outbound confinement or kernel RAM-cap claim. No native candidate calls, tokenizer selection or G2 application authorization. Older IF-S pending-commit entries below are historical.
+
 ## T17-IF-S — partial review closed; missing metadata remains
 
 User approved the exact package and five-document design commit `145278f`. [Partial evidence](docs/benchmarks/input-fit-static-review.md): both manifest hashes verified; later layer read did not finish. Its owned PowerShell was stopped and exit verified; no candidate/native/model calls. Adapter/fit and complete native freshness remain unresolved.

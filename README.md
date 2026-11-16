@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Metadata correction proposed:** Partial findings are committed as `f1b62d4`. The [next package](docs/proposals/input-fit-inspection-correction.md) would test a finite file-inspection routine and timeout/cleanup handling before one fresh metadata read. It is awaiting approval; no repair or model run has occurred. The previous manifest verification stands, while template/config and exact input-fit checks remain incomplete. Earlier findings-commit-pending notes below are historical.
+
 **Model metadata review is partial:** Design committed `145278f`. Both selected model manifest hashes match. A later metadata inspection stalled; its shell was stopped and exit verified. [The report](docs/benchmarks/input-fit-static-review.md) keeps unfinished template/config checks explicit. No model was run or new software installed; the input-size method and app implementation remain pending. Findings await commit approval; earlier package-pending notes below are historical.
 
 **Input-size check designed for review:** Public-review findings are committed as `197eb6e`. The [preflight draft](docs/proposals/input-fit-preflight-design.md) describes checking the complete question/evidence input and reserving answer space, with clear refusal when fit cannot be established. A bounded review of existing model metadata is proposed next. No tokenizer or runtime method is adopted, and no new software was installed or run. The app is still not implemented; draft/package approval remains pending. Earlier findings-commit-pending notes below are historical.
