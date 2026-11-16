@@ -1,5 +1,9 @@
 # T17-IF — exact input-fit preflight design
 
+## Evidence update — IF-M partial manifest and parity requirements
+
+Approved proposal commit `6b67433` produced a [metadata review](../benchmarks/input-fit-tokenizer-manifest-review.md) and [validation matrix](input-fit-tokenizer-parity-validation.md). Historical publisher asset listings and candidate registry hashes are recorded, but Hub release/source-version reconciliation, exact acquisition bytes/graph/payload trust and a trustworthy runtime oracle remain blockers. No executable trial, dependency/runtime adoption or admission proof; this contract and provisional limits remain unchanged.
+
 ## Evidence update — IF-L comparison prepared
 
 The [source review](../benchmarks/input-fit-adapter-source-review.md) and [adapter comparison](input-fit-adapter-comparison.md), under approved proposal commit `0a3a709`, distinguish public rendering from exact counting, special-token policies and owned internal operations. A standalone tokenizer candidate has registry provenance metadata, but asset/GGUF/rendering parity and output/EOS accounting remain unproved. Conditional direction recommendation awaits user decision; no adapter, dependency or runtime is adopted and this contract/provisional limits remain unchanged.

@@ -1,8 +1,8 @@
 # Implementation Plan — Stage 1 Local Prototype
 
-## Current execution point — standalone direction approved; IF-M proposed
+## Current execution point — IF-M reviewed; acquisition remains blocked
 
-IF-L findings/comparison committed `6a06493`; the user approved the runtime-rendered text plus matching standalone-tokenizer direction for package preparation. [IF-M](docs/proposals/input-fit-tokenizer-manifest-review.md) proposes exact asset/dependency metadata review and a parity-validation design: 16 web calls/48 targets, 80 prepaid units/1,200 seconds/2MiB. No full asset/binary download, installation, candidate execution or model call. Package and five proposal/status documents' commit await approval; no new allocation/research exists. Exact dependencies/runtime adoption and G2/app remain open. Older pending wording below is historical.
+Approved IF-M/proposal commit `6b67433`. [Manifest review](docs/benchmarks/input-fit-tokenizer-manifest-review.md) closed research at10calls/37targets with pinned publisher listings and three distribution candidates; Hub2.4.0's displayed publishing source declares2.4.0.dev0, requiring reconciliation. Exact asset hashes/sizes, graph/payload trust and runtime oracle remain open. [Parity design](docs/proposals/input-fit-tokenizer-parity-validation.md) defines fake/native cases without an executable permit. Eight reviewed findings/design/status documents await separate commit approval. Recommend a narrow reconciliation package before acquisition; none prepared/approved. No installation/runtime/G2/app adoption. Older pending wording below is historical.
 
 ## Current execution point — IF-K metadata inspection completed
 

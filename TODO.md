@@ -1,13 +1,13 @@
 # Stage 1 Atomic Task Checklist
 
-## T17-IF-M — acquisition manifest and parity design proposed
+## T17-IF-M — bounded review closed; partial manifest / no adoption
 
-IF-L findings committed `6a06493`; user approved the standalone direction for preparing this package. [Exact IF-M boundary](docs/proposals/input-fit-tokenizer-manifest-review.md) defines candidates, metadata-only operations, budgets and stop rules. Package and five proposal/status documents' commit await approval. No fresh allocation, research, acquisition or runtime action.
+User approved [IF-M](docs/proposals/input-fit-tokenizer-manifest-review.md) and proposal commit `6b67433`. [Findings](docs/benchmarks/input-fit-tokenizer-manifest-review.md) and [validation design](docs/proposals/input-fit-tokenizer-parity-validation.md) distinguish completed bounded review from unresolved acquisition/runtime prerequisites.
 
-- [ ] **IF-M1:** After approval, persist 80-unit/1,200-second/2MiB shared accounting, 16-call/48-target ledger and specified preservation hashes before optional research. Acceptance: durable reservations and unchanged closed epochs.
-- [ ] **IF-M2:** After M1, resolve fixed publisher snapshots/asset metadata and at most12 runtime distribution candidates. Acceptance: exact version/revision/file/URL/size/hash evidence, marker/lock constraints and explicit missing-byte-verification status; no substitution/download/install.
-- [ ] **IF-M3:** After M2 or bounded stop, document license/native/advisory/local-loading gaps and exact parity/failure/resource test matrix. Acceptance: concrete future oracle/ownership/provisioning gates, preserved 2,048/192 and R01 settings; no inferred safety or adoption.
-- [ ] **IF-M4:** After M3, close with evidence/manifest/validation design, preservation/link/diff/budget checks and checkpoint. Acceptance: ready-for-next-gate or explicit blockers; separate results-commit request.
+- [x] **IF-M1:** Persisted full80-unit/1,200-second/2MiB clock/reservations,16call/48target ceilings and12preservation hashes before research; old epochs unchanged.
+- [x] **IF-M2:** Bounded review stopped at10calls/37targets. Partial manifest records11publisher asset rows and3distribution candidates, with exact revision/filename/registry hashes where available. Missing byte hashes/sizes, incomplete12-name dependency review and Hub source/release mismatch explicitly block acquisition; no substitution/download/install.
+- [x] **IF-M3:** Documented source-only baseline constraints, native/license/advisory/offline gaps and FP01–08/NP01–08 cases. Exact runtime oracle and executable trial package remain unprepared; provisional2,048/192/R01 unchanged.
+- [x] **IF-M4:** Findings/design/checkpoint and preservation/link/diff/time/output closeout recorded. Eight reviewed documents await separate commit approval; next reconciliation package not prepared/approved.
 
 ## T17-IF-L — source review/comparison completed; no adapter adoption
 

@@ -1,5 +1,9 @@
 # T03 Dependency Review Inventory
 
+## T17-IF-M — partial tokenizer manifest; installation blocked
+
+Approved proposal committed `6b67433`. [Review](benchmarks/input-fit-tokenizer-manifest-review.md) confirms Tokenizers0.23.3registry candidate/hash and historical Qwen/Nomic listings, but per-asset hashes/exact sizes and full payload/native trust are missing. Hub2.4.0's displayed publishing commit declares2.4.0.dev0; reconciliation precedes treating its source requirements as final release metadata. HTTPX2/hf-xet and other source-declared transitives are not selected; existing HTTPX/lock unchanged. No install/import/model execution. [Parity requirements](proposals/input-fit-tokenizer-parity-validation.md) remain design only; G2 open.
+
 ## T17-IF-L — tokenizer candidate identified; not selected
 
 [Source review](benchmarks/input-fit-adapter-source-review.md) records Tokenizers0.23.3registry metadata, a regular WindowsABI3wheel/hash, Apache2.0source license and a declared hub dependency/native extension. No payload/transitive/advisory/import/offline/parity test occurred and no package was installed. Exact asset/GGUF matching and rendering/context/output semantics remain open. [Comparison](proposals/input-fit-adapter-comparison.md) conditionally recommends a standalone direction for later artifact/parity planning, not dependency/runtime/G2 adoption.
