@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — standalone direction committed; validation design proposed
+
+Comparison/direction decision committed `aae897e`. [IF-SV](docs/proposals/standalone-tokenizer-validation-design.md) proposes source-only review of the exact bundled native runner as a temporary independent reference for standalone counting, without presuming a custom build or production endpoint. SV1 precharged bootstrap → SV2 provenance/ownership/effective-token feasibility → conditional SV3 later trial design → SV4 findings/decision. Same existing parity requirements; no inference from endpoint availability alone.64units/1,200seconds/2MiB, eight calls/twenty-four targets, bounded summaries. Five proposal/status files and package await approval; no research/install/native trial started. Earlier pending notes below are historical.
+
 **Direction decision (2026-11-16):** User approved standalone route C and the five comparison/status files for commit. Prepare its bounded validation-design package; no research, installation, native trial or runtime adoption is authorized by this direction decision. Earlier pending-direction notes below are historical.
 
 ## Current execution point — integration comparison ready for direction decision

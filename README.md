@@ -6,6 +6,8 @@ Stage 1 is a planned single-user document-chat prototype targeting Windows 11, 1
 
 ## Current state
 
+**Standalone validation package proposed:** Direction/comparison committed `aae897e`. [The next design review](docs/proposals/standalone-tokenizer-validation-design.md) checks whether Ollama's exact bundled runner could temporarily validate a separate tokenizer, while production counting stays modular. It permits source review and a future test design only. No new research, install or model run started; package and five-document commit await approval. Earlier status below is historical.
+
 **Standalone direction approved (2026-11-16):** Continue toward a separate tokenizer, subject to exact runtime validation and dependency gates. The user approved committing the comparison and preparing the next bounded design package. Nothing has been installed or adopted. Earlier pending-direction wording below is historical.
 
 **Integration options ready for review:** Counting-review findings committed `17e0e70`. [The comparison](docs/proposals/input-fit-counting-integration-comparison.md) explains two ways to connect counting with generation: a small internal bridge requiring a custom runtime build, or an external ownership handoff whose guarantees remain unproven. After the user asked about a separate tokenizer, the comparison retains standalone counting as the preferred production direction, conditional on independent validation; it does not assume a custom runtime build is necessary. A direction decision is needed before a new research package. No new software or application feature was built; five comparison/status files await commit approval. Earlier status below is historical.

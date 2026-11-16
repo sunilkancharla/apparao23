@@ -1,4 +1,14 @@
-# Latest checkpoint — IF-QC committed; integration comparison ready
+# Latest checkpoint — standalone direction committed; IF-SV proposal pending
+
+User approved all after standalone route C recommendation. Recorded direction and five-file comparison commit `aae897e`; approval covers preparing the validation-design package, not runtime adoption/install/build/trial. Earlier CD3pending language is historical. No new bounded epoch opened.
+
+Prepared docs/proposals/standalone-tokenizer-validation-design.md plus PLAN/TODO/README/thischeckpoint (five files). New specific source-only question: exact bundled native runner as temporary directly owned independent validation reference, without assuming custom Ollama build or new production counting endpoint. Distinct from repeating failed public-API search. SV1 bootstrap/accounting before inspection/output, SV2 source/build provenance+ownership+effective token path, conditional SV3 later trial design, SV4 decision/closure. Runtime reference availability not proven; missing pinned source/binary mapping or effective policy stops expansion. Exact parity/identity/context/output192 gates unchanged; no standalone dependency install before credibility.
+
+Proposed fresh data/t17/standalone-validation-design-01 only after approval;64units48normal16protected/1,200seconds/2MiB, eightwebcalls24targets maxfour/call short/medium;8KiB/invocation64KiBaggregate summaries8KiBprotected reserve. Explicit bootstrap/Git/error allowance, simple quoting/captured stderr, no optional nested-quote diff output. No new research/root/ledger/helper/test/fixture/binary/model inspection/native/API/install/compile. Five proposal/status files and exact package await approval. Preserve all frozen prior artifacts/receipts; no subagents/skill scripts/goals/status/compact claims. G2/app/stage gates remain open.
+
+IF-SV preparation checks passed: local links, exact four tracked status documents plus one new proposal, empty index, absent proposed runtime root and tracked/new-file whitespace. Readable PLAN/README diff reviewed; authored proposal/TODO/checkpoint reviewed directly. Documentation-only preparation, no application tests/research. Five files remain uncommitted.
+
+# Earlier checkpoint — IF-QC committed; integration comparison ready
 
 Update2026-11-16: user approved all after the explicit standalone recommendation. Record route C direction approval and five-file comparison commit approval; prepare its bounded independent-validation design package next, without research/install/native execution or runtime adoption. Earlier pending-direction language below is historical.
 

@@ -1,5 +1,14 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-SV — standalone validation design proposed
+
+Direction C/comparison committed `aae897e`. [Exact source/design package](docs/proposals/standalone-tokenizer-validation-design.md) awaits approval along with five proposal/status files.
+
+- [ ] **IF-SV1:** After approval, exclusive fresh-root clock/accounting/reporting bootstrap before inspection/output, direct frozen identities/research ledger. Verification: durable local records and bounded precharged status.
+- [ ] **IF-SV2:** After SV1, identify pinned bundled-runner provenance, directly owned reference lifecycle and effective chat/embedding token policy, within eight calls/twenty-four targets. Verification: file/symbol/revision evidence or explicit unsupported-link stop.
+- [ ] **IF-SV3 (conditional):** Only if SV2 credible, draft exact later synthetic parity trial prerequisites/cases/negative controls/shared budgets and teardown. Verification: frozen parity matrix covered, artifact/dependency/resource unknowns blocked, no executable trial or installation.
+- [ ] **IF-SV4:** After SV2 stop or SV3, save verdict/findings/checkpoint, verify links/diff/preservation/time/artifact/reporting; request findings commit. No fallback build, requirement weakening or old-root retry.
+
 ## T17-IF-CD — integration comparison prepared
 
 IF-QC findings committed `17e0e70`; [comparison and proposed contract](docs/proposals/input-fit-counting-integration-comparison.md) use existing evidence without new execution.
