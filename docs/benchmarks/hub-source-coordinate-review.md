@@ -1,3 +1,38 @@
+# Latest result — epoch 03 publisher origin confirmed; build-source link unresolved
+
+The user approved the [runtime-compatible continuation](../proposals/hub-source-reporting-continuation.md), committed as `aa61658`. Fresh `data/t17/hub-source-coordinate-review-03/` completed its accounting/reporting controls and bounded review. Earlier report sections below remain historical evidence.
+
+**Decision: retain the publishing coordinate; keep source-dependent review and adoption blocked.** PyPI identifies the inspected wheel's SHA-256 and names `178e1a1797858724c79fd9d12d79d0902d730497` as its publishing commit, with `release.yml` and run `40902019488`. This establishes the registry's publisher claim for the exact artifact. We did not independently validate its signature or establish the source revision actually built. [PyPI artifact provenance](https://pypi.org/project/huggingface-hub/2.4.0/#files)
+
+The recorded wheel remains `huggingface_hub-2.4.0-py3-none-any.whl`, 857,021 bytes, SHA-256 `42ecfd93ede47bdd333daebbf66a32d7bfe2e18752754fe4d2d4f98a0179d801`. Its previous HS integrity result is preserved; this review did not reread the payload. The earlier [release observation](https://github.com/huggingface/huggingface_hub/commit/3739729b86489e4ae28b5a62e622be320b141493) remains `3739729b86489e4ae28b5a62e622be320b141493`. Publishing identity and release identity have distinct roles; their build relationship is still unknown. Neither coordinate is relabelled as verified build source.
+
+## Epoch-03 tasks and controls
+
+| Task | Result / evidence |
+| --- | --- |
+| SC1 | Passed: durable bootstrap first; immutable append/fresh-selection and negative controls; seven known UTF-8 cases, exact output boundary, string/object and oversized-response handling. Twenty-four small input identities frozen; saved-response size/SHA matched. |
+| SC2 | Partial: saved evidence reviewed, then three web calls/eight targets with six access failures. Exact-artifact publisher origin identified; necessary source/build link unavailable. |
+| SC3 | Completed recommendation: retain historical publishing identity, retain prior release observation separately, keep candidate blocked for source-dependent expansion/adoption. No automatic retry or new source pin. |
+| SC4 | Findings/checkpoint and bounded preservation/history/link/scope/diff/resource checks; static final-command validation before closure. Actual totals and command identity in local records; separate results-commit gate. |
+
+The reporting controls use standard JavaScript code-point arithmetic, including supplementary characters and isolated-surrogate replacement, without TextEncoder/Buffer/Node dependencies. Full admitted public responses were preserved before measured, explicitly selected excerpts. Expected oversized responses were withheld safely. No controlled reporting or accounting failure was observed in this epoch; provider response envelopes are not claimed to be kernel-bounded.
+
+## Access limitations and evidence boundary
+
+The saved epoch-02 registry projection did not include the expected wheel digest; that is a limitation of returned text, not proof the registry lacked it. The official project page supplied the artifact-specific checksum and publisher details. The comparison page, release-workflow directory, pinned publishing workflow and publishing-log page returned cache misses. Distinct official run/tag metadata API endpoints were inaccessible through the tool. Six failed accesses were counted; no failed URL was repeated and no alternate HTTP transport was used.
+
+The provenance display records a publisher relationship, not independently reconstructed build inputs. Source files, workflow checkout parameters and the relationship to the released source were not established. Version-string differences do not by themselves prove tampering or a defective wheel. Native/transitive notices, dependency closure, advisories, offline controls and input-fit/parity remain separate unfinished gates.
+
+No candidate payload download/read/import/execution, test suite/Ruff, worker/service, installation, model/API/native trial, build, environment/PATH/lock change, application implementation, runtime adoption or stage transition occurred. Inline accounting/reporting controls and static parsing are workflow checks, not application tests. No worker required teardown. Existing report text and authorized dependency/preflight baseline history are preserved.
+
+## Next decision
+
+Keep this artifact on hold for build/source-dependent work. The next approved approach review can consider deferring this candidate or defining what additional source evidence is required and obtainable. Do not automatically schedule another retry, change a pin, expand dependencies or infer approval from committing this report. Stage 1 formats/OCR/privacy, the 16 GB CPU-only target and G2 remain unchanged.
+
+Closure checks passed: 21 frozen identities unchanged, three historical sections retained as exact byte suffixes, 430 local links, exact seven-file scope, empty staged index, whitespace and ignored runtime root. The exact final PowerShell command passed static parsing. Final delivery hashes/resources remain in local closure records; these checks do not establish the missing build-source link.
+
+Request a separate commit of seven findings/status files: this report, dependencies/preflight, PLAN/TODO/README/checkpoint. A subsequent approach review or requirement change needs its own concrete approval.
+
 # Latest result — epoch 02 reporting stop after one source request
 
 The user approved the [immutable-accounting continuation](../proposals/hub-source-coordinate-continuation.md), committed as `fd5f61b`. Fresh `data/t17/hub-source-coordinate-review-02/` successfully bootstrapped and verified immutable accounting before source research. The earlier attempt below is historical and remains preserved.

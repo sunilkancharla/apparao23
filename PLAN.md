@@ -1,3 +1,7 @@
+## Latest SC outcome — publisher origin identified; build-source gate open
+
+Planning committed as `aa61658`. [Epoch-03 findings](docs/benchmarks/hub-source-coordinate-review.md): accounting/reporting controls passed; three calls/eight targets, six access failures; publisher origin established in the registry display, build-source mapping unresolved. SC3 recommends retaining distinct publishing/release identities and keeping source-dependent expansion/adoption blocked. No automatic retry or new pin. Seven findings/status files await commit approval; next step is an explicit approach decision. Earlier statuses below are historical.
+
 ## Latest execution point — epoch-02 results committed; reporting-compatible continuation proposed
 
 Five result/status files committed as `7d60633`. [Epoch-03 proposal](docs/proposals/hub-source-reporting-continuation.md) retains immutable accounting and existing limits, proves runtime-compatible UTF-8/response handling before source access, reuses the saved response and excludes the two failed URLs. Static final-command parsing addresses the additional closeout parser error. SC1–SC4 and five-document commit await approval; no new root, controls or research executed. Earlier statuses below are historical.

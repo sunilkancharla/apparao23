@@ -1,3 +1,14 @@
+## Latest T17-IF-SC epoch 03 — partial evidence, completed recommendation
+
+Planning commit `aa61658`; [current findings](docs/benchmarks/hub-source-coordinate-review.md) distinguish publisher origin from build-source evidence.
+
+- [x] SC1 — Immutable accounting, negative/Unicode/response/output controls passed; 24 entry identities frozen and saved-response size/SHA verified.
+- [ ] SC2 — Partial: three calls/eight targets, six access failures. Registry publisher identity established; required source/build relationship unresolved. Research ended at that evidence gate.
+- [x] SC3 — Retain publishing coordinate and prior release observation separately; keep candidate blocked for source-dependent review/adoption. No automatic retry or pin substitution.
+- [x] SC4 — Protected preservation/history/link/scope/whitespace/readable-diff/resource checks, static final-command validation and checkpoint; actual closure receipts retained. Seven-file results commit remains separately pending.
+
+No runtime/payload/native/model/application work or G2 transition occurred. Next needs an explicit approach decision, not another automatic research allocation. Earlier task states are historical.
+
 ## Latest T17-IF-SC epoch 03 — reporting-compatible continuation proposed
 
 Epoch-02 findings committed as `7d60633`. [Exact new proposal](docs/proposals/hub-source-reporting-continuation.md) preserves limits/accounting, adds runtime-compatible response and final-command checks, reuses saved public text and excludes the failed URLs. Package/five planning-document commit await approval.

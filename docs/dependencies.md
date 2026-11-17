@@ -1,3 +1,7 @@
+## Latest SC epoch-03 evidence
+
+PyPI's displayed provenance matches the inspected Hub wheel to its publishing identity. [Evidence and limits](benchmarks/hub-source-coordinate-review.md): source/build mapping remains unresolved; candidate adoption and source-dependent expansion remain blocked. No dependency or pin changed. Earlier entries below are historical.
+
 # T03 Dependency Review Inventory
 
 ## T17-IF-SV — temporary native reference candidate; not adopted

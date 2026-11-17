@@ -1,3 +1,7 @@
+## Latest source gate — epoch 03
+
+Publisher origin is identified for the exact Hub artifact; build-source mapping remains open. [Current evidence](../benchmarks/hub-source-coordinate-review.md) preserves this distinction. No input-fit implementation, source-pin substitution or runtime adoption is authorized by this finding. Earlier entries below are historical.
+
 # T17-IF — exact input-fit preflight design
 
 ## Evidence update — IF-SV conditional validation reference
