@@ -1,6 +1,6 @@
-## Latest execution point — MG results committed; explicit-profile adapter proposed
+## Latest execution point — adapter suite stopped; bounded field correction proposed
 
-MG results committed as `a0578ce`. The [EA proposal](docs/proposals/marker-environment-adapter-review.md) compares an isolated public-factory override with alternate evaluation/helper execution. Proposed: original strict guard, labelled partial profiles, test-first controls, then conditional local graph comparison only after passing adapter/original controls. EA1–EA6 and four-file planning commit await approval. No override, import, new root or retry started; licensing/provenance/adoption/G2 remain open.
+EA planning committed as `a09d8cc`. [EA findings and exact EAF follow-up](docs/benchmarks/marker-environment-adapter-review.md): expected RED preceded implementation; nine of 11 tests passed, two errored because KeyError-style field formatting defeated the whitelist. EA stopped before original controls/real graph. Proposed EAF1–EAF5 correct only the public exception-argument handling, retain all tests/strict guard, then conditionally run original controls and local graph. Request seven-file results commit and EAF execution approval; no correction/retry yet. Adoption/G2 remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

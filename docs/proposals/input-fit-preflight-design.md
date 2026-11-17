@@ -1,3 +1,7 @@
+## Latest EA outcome — fixture errors; original controls and graph not run
+
+[EA findings and bounded follow-up](../benchmarks/marker-environment-adapter-review.md): RED preceded the adapter/graph implementation; nine fixture tests passed and two exposed missing-field exception normalization. Optional work stopped, preserving tests and original strict guard. No original-control attempt, real graph, public research, model/parity run or adoption. EAF1–EAF5 require separate approval; no private/cache workaround or broader permission is proposed. Hardware, source-mapping deferral and G2 remain unchanged.
+
 ## Latest MG outcome — hostname exception tested; subprocess boundary retained
 
 [MG findings](../benchmarks/marker-environment-guard-review.md): RED preceded the approved exact hostname exception; 20 actual-policy cases passed. The single parser attempt then requested a Windows version helper subprocess and was denied, with complete diagnostics/exit retained. No wider exception, retry, graph/licence/provenance/model run or adoption. Prepare a source-only explicit environment-adapter review before another control package. Hardware, source-mapping deferral and G2 gates remain unchanged.

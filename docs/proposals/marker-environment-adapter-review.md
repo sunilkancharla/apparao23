@@ -1,6 +1,6 @@
 # T17-IF-EA — explicit marker profiles and conditional dependency comparison
 
-**Proposed; EA1–EA6 execution and the four-file planning commit await approval.** MG results were committed as `a0578ce`. The user approved that commit and preparation of this environment-adapter review. Preparation read local source as text; no factory override, import, trial root or new parser run occurred.
+**Approved; planning committed as `a09d8cc`; stopped on an unexpected GREEN failure.** [EA findings and proposed EAF1–EAF5](../benchmarks/marker-environment-adapter-review.md) record expected RED, nine passing tests/two errors, full diagnostics and no original-control/real-graph run. The bounded follow-up is a separate package pending approval. The original boundary below is retained for audit and does not authorize restarting the stopped root. MG results remain committed as `a0578ce`.
 
 ## Source review and alternatives
 

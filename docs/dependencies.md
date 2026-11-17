@@ -1,3 +1,7 @@
+## Latest EA evidence — adapter field bug blocks real dependency comparison
+
+[EA findings](benchmarks/marker-environment-adapter-review.md): nine of 11 adapter/graph-fixture tests passed, two errored on quoted missing-field names. Original controls and real retained-artifact/lock comparison did not run; fixture outcomes establish no project compatibility. Proposed EAF correction preserves all tests, strict restrictions and unknowns, with conditional original controls/graph only after passing. No candidate install/import, pin change or licence/provenance adoption.
+
 ## Latest RC evidence — parser review stopped before reconciliation
 
 [RC findings](benchmarks/wheel-evidence-reconciliation.md): packaging 26.3's 30 hashed installed RECORD entries matched and 20 source files were inspected. Its first synthetic check failed; incomplete host capture prevents diagnosing why. No passing parser controls, dependency graph, licence reconciliation or new provenance research are claimed. No lock/package selection or installation changed. Correct and validate the host capture boundary in a fresh approved package before another attempt.

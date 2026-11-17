@@ -1,15 +1,27 @@
-## Latest T17-IF-EA — explicit-profile adapter and conditional graph proposed
+## Latest T17-IF-EAF — exact field correction proposed; EA stopped
 
-MG results committed as `a0578ce`. The [exact EA package](docs/proposals/marker-environment-adapter-review.md) records source evidence, the review-only public-factory override, original strict guard, partial profiles and a conditional local graph step. EA1–EA6 and its four-file planning commit await approval. Conditional graph work is proposed scope, not execution authorization.
+EA planning committed as `a09d8cc`. [EA results and complete EAF package](docs/benchmarks/marker-environment-adapter-review.md) record nine passing tests/two errors and the public exception-argument correction. EAF1–EAF5 execution and the seven-file EA results commit await approval. Prior failed cases are explicit reused RED evidence, not permission to reset the stopped EA ledger.
 
-- [ ] EA1 — After approval, bootstrap/freeze and inspect source/import/command/profile boundaries. Accept: pinned input/tool identities, unchanged capture aid, original strict guard; no old dispatch or platform discovery.
-- [ ] EA2 — Run meaningful RED before corrected adapter implementation. Accept: supplied dictionary alone still reaches denied discovery; graph/adapter behavior fixtures written before implementation.
-- [ ] EA3 — Implement the isolated factory override and pass GREEN. Accept: restoration/freshness/profile/missing-field/extras/compound/policy tests and graph status/global-cap fixtures; no installed-file change or real networking.
-- [ ] EA4 — Only after GREEN, one original ten-control attempt. Accept: complete capture/exit/teardown; unchanged fixture semantics; failure blocks the graph and does not authorize a retry.
-- [ ] EA5 — Only after EA4 passes, compare local requirements/lock under two labelled partial profiles. Accept: global union of at most 20 exact distribution nodes, missing facts/metadata and conflicts explicit; no resolver or pin change.
-- [ ] EA6 — Completion/stop findings and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: seven-document closeout maximum; separate results-commit/adoption/stage gates.
+- [ ] EAF1 — After approval, fresh `marker-environment-adapter-02` bootstrap/freeze and exact source/test copy. Accept: fixed identities, strict guard and prior failures verified.
+- [ ] EAF2 — Apply only the two-line exception-field correction and run unchanged 11-test suite once. Accept: all pass, unknown fields/strict whitelist preserved; tests/graph/capture/guard unchanged.
+- [ ] EAF3 — Only after EAF2, one original ten-control attempt. Accept: complete admitted capture, passing result and owned exit; failure blocks graph.
+- [ ] EAF4 — Only after EAF3, one actual local graph comparison. Accept: same partial profiles/global 20-node union, conflicts/missing/unknowns explicit; no resolver or pin change.
+- [ ] EAF5 — Completion/stop resource/findings and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: seven-document maximum; separate future results-commit/adoption gates.
 
-Preparation checks passed: four-document scope, nine fixed source/evidence hashes, 18 local links, six task IDs, whitespace, readable plan diff and empty index; other tracked files unchanged. No `marker-environment-adapter-01` root, adapter code/profile fixture, import, override or control/graph run created/started. Closed roots, historical checkpoints and unrelated user files remain untouched. Existing licensing/native/provenance/offline/parity/G2 gates remain open.
+No EAF root, correction or rerun created/started. EA closeout checks passed: seven-document scope, nine frozen/nine prior pinned inputs, 20 tool-source/two metadata identities and eight follow-up source hashes preserved; 21 local links, whitespace, readable diff, empty index and non-null receipt checked. Closed roots, historical checkpoints and unrelated user changes remain preserved.
+
+## Earlier T17-IF-EA — stopped after adapter fixture errors
+
+EA1–EA6 and planning commit were approved; planning committed as `a09d8cc`. The [approved EA boundary](docs/proposals/marker-environment-adapter-review.md) required stopping on unexpected GREEN failure. Complete evidence is in the linked EA report; this root is not authorized to retry.
+
+- [x] EA1 — Nine fixed inputs, 20 tool-source/two metadata hashes, strict guard and unchanged capture verified; no old dispatch.
+- [x] EA2 — Expected RED recorded before corrective source; adapter/graph hashes and existing behavior tests retained.
+- [ ] EA3 — Partial: 11 tests ran, nine passed/two errors in missing-field normalization. Suite not GREEN; no tests weakened.
+- [ ] EA4 — Not run after EA3 failure.
+- [ ] EA5 — Real graph not run; fixture graphs are not dependency results.
+- [x] EA6 — Stop receipt/report and seven-document closeout checks complete. EA3 remains partial; EA4/EA5 not run. EAF is a separately proposed package, not a ledger reset.
+
+EA stop receipt: 374.500 active/wall seconds, no host exclusion, 64 units/32 starts prepaid, two check invocations consumed; both controllers/workers exited, complete captured results, zero orchestration corrections. No original controls, real graph, candidate install/import, Ruff/web/model run or application feature. Existing licensing/native/provenance/offline/parity/G2 gates remain open.
 
 ## Earlier T17-IF-MG — policy checks passed; results committed
 
