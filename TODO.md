@@ -1,4 +1,17 @@
-## Latest T17-IF-EAF — correction and controls pass; partial graph completed
+## Latest T17-IF-RR — remaining readiness proposal ready; execution pending
+
+EAF results committed as `da860aa`. The [exact RR package](docs/proposals/remaining-artifact-readiness-review.md) pins 17 inputs and proposes local-first metadata/licence/source review plus two explicitly assumed Windows AMD64 target cases, preserving both original partial profiles. RR1–RR6 and its four-file planning commit await approval.
+
+- [ ] RR1 — After approval, bootstrap/freeze and review helpers/imports/query boundaries. Accept: fixed/inherited identities, strict guard and unchanged capture; no old dispatch or user/model data.
+- [ ] RR2 — Test-first supplemental profile logic and controls. Accept: unchanged base profiles, labelled assumptions, no cross-profile mutation/shared-cap reset; retain 11 existing tests and original ten controls.
+- [ ] RR3 — Only after RR2, four-case graph and root Python-declaration comparison. Accept: global 20-node union, authority/mismatches/conflicts/unknowns explicit; no resolver/pin/ABI claim.
+- [ ] RR4 — Reconcile retained licence/notices/native inventory. Accept: declaration/selected notice/vendor gaps separated; no legal/security/adoption clearance.
+- [ ] RR5 — After local triage, bounded primary-source gap review. Accept: source/publisher/build claims distinguished, eight-call/24-target ceiling and cutoff, primary citations; no user data or binaries.
+- [ ] RR6 — Completion/stop readiness matrix, next proposal, resources and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: seven-document maximum; separate results-commit/provisioning/adoption/stage gates.
+
+Preparation checks passed: four-document scope, 17 fixed source/evidence hashes, 19 local links, six task IDs, whitespace, readable plan diff and empty index; other tracked files unchanged. No `remaining-artifact-readiness-01` root, helper/profile fixture, import, public query or graph run created/started. Older roots, historical checkpoints and unrelated user changes remain untouched. Scope/target/source-mapping deferral unchanged.
+
+## Earlier T17-IF-EAF — controls pass; partial graph results committed
 
 EAF1–EAF5 and the EA results commit were explicitly approved; EA results committed as `629fc82`. [EAF findings](docs/benchmarks/marker-environment-adapter-followup.md) record the two-line correction, 11 passing unchanged tests, ten passing original controls and real partial graph. [Approved scope](docs/benchmarks/marker-environment-adapter-review.md#bounded-follow-up-eaf1eaf5--approved-and-executed) retained; stopped EA root stayed read-only.
 

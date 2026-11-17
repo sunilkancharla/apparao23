@@ -1,6 +1,6 @@
-## Latest execution point — adapter correction passed; partial graph reviewed
+## Latest execution point — EAF results committed; remaining readiness review proposed
 
-EAF1–EAF5 and EA results commit approved; EA results committed as `629fc82`. [EAF findings](docs/benchmarks/marker-environment-adapter-followup.md): two-line correction passed all 11 unchanged tests and ten original controls; real local graph completed with 16 distributions and no conflicts on evaluated paths. Two platform conditions remain unknown per profile. Next: review seven-file EAF results commit and prepare bounded remaining platform/metadata/licence/provenance review. No installation/adoption/G2 or stage transition.
+EAF results committed as `da860aa`. The [RR proposal](docs/proposals/remaining-artifact-readiness-review.md) reuses local metadata first, proposes two labelled Windows AMD64 artifact-target cases alongside unchanged partial profiles, and bounds remaining Python/licence/native/source research. RR1–RR6 and the four-file planning commit await approval. No new profile/import/query/trial started; installation/adoption/G2 remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 
