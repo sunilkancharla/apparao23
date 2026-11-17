@@ -1,12 +1,24 @@
-## Latest T17-IF-PR — controls and native metadata probe passed
+## Latest T17-IF-AS — artifact-review proposal ready; execution pending
+
+PR results committed as `7c4e172`. The [exact AS package](docs/proposals/wheel-artifact-review.md) records fixed artifacts, ordered guard/helper tests, ownership/transport/ZIP boundaries and revised shared limits. Execution and its four-file planning commit await approval.
+
+- [ ] AS1 — After approval, bootstrap/freeze and architecture/dependency/security design review. Accept: exact manifest/tool identities and primitive dependency closure; reporting/startup/ownership/transport/ZIP design consistent with the approved package before aid implementation.
+- [ ] AS2 — After AS1, two aids test-first with native ownership controls. Accept: RED, passing abuse/regression/integrity mutation/Job checks and final Ruff/format/code/security review; shared counters cover all subprocesses.
+- [ ] AS3 — After AS2, one acquisition worker: eight fresh metadata admissions and eight fixed wheel requests. Accept: exact size/SHA, safe partials/source binding/monitoring and verified teardown; no retry/substitution.
+- [ ] AS4 — After AS3, one inert inspection worker and bounded cached-root reads. Accept: RECORD/metadata/notices/native findings, identity preservation and verified teardown; no candidate code execution.
+- [ ] AS5 — At completion/stop, findings/task/readiness updates and preservation/scope/link/whitespace/readable-diff/non-null-summary checks. Accept: actual measurements/gaps and separate results-commit/adoption gates.
+
+Preparation checks passed: four-document scope, five touched local links, three pinned source/scope identities, whitespace, empty index and readable diff; historical inputs unchanged against `7c4e172`. No `wheel-artifact-review-01` root, helper, fixture, test, Job trial or acquisition created or started. Next: request AS1–AS5/four-file planning-commit approval, explicitly including revised timing/suites/timeout and supervision. Closed roots and historical checkpoint files remain untouched.
+
+## Earlier T17-IF-PR — controls and native metadata probe passed
 
 PR1–PR3 and its planning commit were approved, including revised timing/supervision; planning committed as `103a6f1`. [Findings](docs/benchmarks/wheel-metadata-probe-retry.md) retain passing controls, one successful native metadata request, explicit host-review interval and clean owned-process teardown.
 
 - [x] PR1 — Fresh-root accounting/frozen inputs, unchanged fixed source copies and all 12 synthetic controls passed; launch starts/streams prepaid before the host request.
 - [x] PR2 — One native metadata request passed its fixed checks; 11,931-byte body and response identity retained. Host-review interval 503.628 seconds recorded/excluded once; both owned processes exited with code 0 and verified teardown. No wheel request.
-- [x] PR3 — Closeout complete: six-file scope, six touched local links, 17 unchanged frozen inputs, original/copied source pins, metadata-body hash, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; coverage/adoption gaps explicit. Results commit remains gated.
+- [x] PR3 — Closeout complete: six-file scope, six touched local links, 17 unchanged frozen inputs, original/copied source pins, metadata-body hash, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; coverage/adoption gaps explicit. Results committed as `7c4e172`.
 
-Evidence: `data/t17/wheel-metadata-probe-01/`. One suite/one HTTP transaction, no Ruff/download/candidate/application activity. Next: request the six-file results commit and approval to prepare the remaining acquisition/static-inspection package. Earlier closed roots and historical checkpoint files remain untouched.
+Evidence: `data/t17/wheel-metadata-probe-01/`. One suite/one HTTP transaction, no Ruff/download/candidate/application activity. Results committed as `7c4e172`; the user approved preparation of the AS proposal above. No further execution or automatic allocation reset. Earlier closed roots and historical checkpoint files remain untouched.
 
 ## Earlier T17-IF-WIC — controls passed; stopped before probe startup
 

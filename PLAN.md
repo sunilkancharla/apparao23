@@ -1,6 +1,6 @@
-## Latest execution point — PR metadata probe passed
+## Latest execution point — PR results committed; artifact review proposed
 
-PR planning committed as `103a6f1`. [Findings](docs/benchmarks/wheel-metadata-probe-retry.md): 12 control checks and the single native metadata probe passed; both owned processes exited cleanly and closeout checks passed. Explicit host-review timing worked. No wheel/candidate installation or application change. Next request the results commit and preparation of the remaining bounded acquisition/static-inspection package. Source/licence/native/offline/adoption/G2 gaps remain.
+PR results committed as `7c4e172`. The [AS package](docs/proposals/wheel-artifact-review.md) proposes test-first aids/Windows Job controls, eight fresh metadata admissions and pinned inert acquisitions, then bounded static/cached-root inspection. AS1–AS5 and the four-file planning commit await approval, including revised active time/suites/timeout/host-wait limits. No new execution started; installation, source/licence/native/offline/adoption/G2 gaps remain.
 
 ## Latest MR outcome — partial evidence; limits reached
 
