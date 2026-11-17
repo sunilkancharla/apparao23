@@ -1,3 +1,23 @@
+# Latest checkpoint — AR timing decision and results commit approved
+
+User explicitly approved all three requested actions: the seven-file results commit, narrow timing deferral, and preparation of the next metadata/dependency review proposal. Record approved scope: use registry-displayed publisher evidence for publication identity and defer exact build-source mapping only as prerequisite to metadata/notices/advisory/dependency review of the unchanged2.4.0 artifact. Carry mapping unresolved into later adoption decision; no unbound-source behavior claim, installation/execution, source-pin/runtime/G2 approval.
+
+Verified all seven original delivery identities against closed AR receipts before recording these approval-only status updates. Old runtime root/ledgers remain closed and unchanged. Seven reviewed results/status files only are approved for commit; the next proposal and its execution retain later gates. Earlier checkpoints below are historical.
+
+# Latest checkpoint — AR comparison complete; narrow gate decision pending
+
+User approved AR1–AR4/five planning docs; exact commit `e1a1571` succeeded. Fresh data/t17/stable-alternatives-review-01 bootstrap before optional reads, failure margin prepaid. Immutable chain/fresh-selection/negative and compatible Unicode/response/output controls passed;26 small identities frozen, no old-root writes. No controlled reporting/accounting failure observed.
+
+AR2 traced HS line56 provenance halt and SPEC reproducible-lockfile/dependency requirements as distinct evidence categories. AR3 used6webcalls21targets to compare baseline2.4.0 with preceding normal2.3.0/2.2.0 releases. Registry finds explicitly exposed yanked:false for both; Apache/Python>=3.10 declarations and tagged httpx2/hf-xet families recorded. No demonstrated downgrade benefit, full artifact/native/advisory closure or runtime stability claim. Eleven distribution names for context. Incomplete JSON projections classified unparsed/unknown, not fabricated.
+
+AR4 recommends unchanged2.4.0 baseline and this user decision: defer exact build-source mapping only as prerequisite for metadata/notices/advisory/dependency review of the already verified artifact; accept registry display as publication evidence, carry mapping unresolved into later adoption decision. No source-code/wheel-behavior inference, install/execution/adoption/G2 approval. Deferral is NOT applied; no SPEC/AGENTS/source pin changed. Report includes exact wording and rejection/hold option.
+
+Seven files: new docs/benchmarks/stable-tokenizer-alternatives.md; dependencies/preflight; PLAN/TODO/README/this checkpoint. Preserve two baseline texts as byte suffixes, other frozen inputs unchanged. Static exact final PowerShell command check and actual final delivery/resource/closure evidence retained locally. No application suite/Ruff/candidate payload/import/download/worker/model/API/native/build/install/environment/lock/application/stage change; no skill scripts/subagents/goal/status/compact invocation.
+
+Request approval for seven-file results commit, narrow timing decision, and preparation of the next bounded metadata/dependency review proposal. Do not execute a new package or apply deferral until explicit approval. Earlier checkpoints below are historical.
+
+Closure checks passed:24 frozen identities unchanged,2 exact historical suffixes,438 local links, exact6 tracked result updates plus1newreport, empty index, whitespace and ignored runtime root. Readable tracked/new-file diffs reviewed; exact final command statically parsed without AST execution. Final7-file delivery/resource totals retained locally; no gate change applied. Seven result/status files remain uncommitted.
+
 # Latest checkpoint — SC committed; stable-options/evidence review proposed
 
 User approved seven SC result files and preparing an alternatives review, then asked about stable releases. Exact delivery identities/index/allowlist/whitespace checks passed; commit `ec34c59` succeeded. No runtime data/session summary/unrelated content staged. SC03 remains closed:22units,591.564seconds,865045artifact-upper bytes,3calls8targets6failures; build-source link unresolved, no source pin/adoption change.

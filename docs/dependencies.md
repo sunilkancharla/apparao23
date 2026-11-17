@@ -1,3 +1,7 @@
+## Latest AR comparison — decision pending
+
+[The bounded comparison](benchmarks/stable-tokenizer-alternatives.md) retains Hub2.4.0 as research baseline; neither older candidate demonstrated a benefit. On2026-11-17 the user approved deferring exact build-source mapping only before metadata/notices/advisory/dependency review, carrying it unresolved to adoption. Next-package preparation is approved; execution remains gated. No dependency/pin/adoption change occurred. Earlier entries below are historical.
+
 ## Latest SC epoch-03 evidence
 
 PyPI's displayed provenance matches the inspected Hub wheel to its publishing identity. [Evidence and limits](benchmarks/hub-source-coordinate-review.md): source/build mapping remains unresolved; candidate adoption and source-dependent expansion remain blocked. No dependency or pin changed. Earlier entries below are historical.

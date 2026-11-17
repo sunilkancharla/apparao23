@@ -1,3 +1,14 @@
+## Latest T17-IF-AR — bounded comparison complete; user decision pending
+
+Planning commit `e1a1571`; [comparison and exact proposed decision](docs/benchmarks/stable-tokenizer-alternatives.md) retain evidence gaps and separate adoption gates.
+
+- [x] AR1 — Durable bootstrap, immutable/reporting/Unicode/response controls passed; 26 entry identities frozen. No old-root writes or candidate payload access.
+- [x] AR2 — Traced HS package halt versus dependency/lockfile requirements; distinguished evidence types. No gate was relaxed.
+- [x] AR3 — Baseline and two eligible comparison releases, six calls/21 targets; explicit non-yanked fields, declarations/tagged dependency families and advisory/artifact limitations recorded. No demonstrated downgrade benefit or runtime stability claim.
+- [x] AR4 — Retain-baseline recommendation and narrow timing-deferral wording; preservation/history/link/scope/diff/resource checks, static final-command validation, checkpoint and separate commit/decision gates.
+
+The user approved the seven-file results commit and narrow timing deferral, plus preparation of a metadata/dependency review package for unchanged2.4.0. Build-source mapping remains unresolved for adoption; no new package execution/install/adoption is authorized. Earlier task states are historical.
+
 ## Latest T17-IF-AR — stable options and evidence decision proposed
 
 Seven SC results committed as `ec34c59`. [Exact AR proposal](docs/proposals/stable-tokenizer-alternatives-review.md) retains Hub2.4.0 as baseline; another version must offer documented evidence/compatibility benefit. Package and five planning-document commit await approval.

@@ -1,3 +1,7 @@
+## Latest AR outcome — retain baseline; narrow timing decision proposed
+
+AR planning committed as `e1a1571`. [Comparison](docs/benchmarks/stable-tokenizer-alternatives.md) reviewed 2.4.0/2.3.0/2.2.0 across six calls/21 targets and found no demonstrated downgrade benefit. The user approved retaining baseline and deferring exact build-source mapping only before metadata/notices/advisory/dependency review, carrying it to adoption. Seven-file results commit and next-proposal preparation are approved; new execution, source-pin or runtime changes remain gated. Earlier statuses below are historical.
+
 ## Latest execution point — SC results committed; stable-options review proposed
 
 Seven SC findings/status files committed as `ec34c59`. [AR proposal](docs/proposals/stable-tokenizer-alternatives-review.md) first clarifies the source-evidence decision, then compares retaining Hub2.4.0 against at most two eligible stable alternatives and deferral. Current release status was checked only to answer the user's separate question; no alternative selection or adoption occurred. AR1–AR4 execution and five-document commit await approval. No new root/control/research package started; source/build and G2 gates remain open. Earlier statuses below are historical.

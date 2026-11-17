@@ -1,3 +1,7 @@
+## Latest AR timing decision — approved for metadata review only
+
+[AR findings](../benchmarks/stable-tokenizer-alternatives.md) record the user's2026-11-17 approval to defer build-source mapping only before metadata/notices/advisory/dependency review, retaining the gap for adoption. Next-package preparation is approved; its execution and source-dependent implementation/runtime adoption remain gated. No input-fit or tokenizer adoption is authorized.
+
 ## Latest source gate — epoch 03
 
 Publisher origin is identified for the exact Hub artifact; build-source mapping remains open. [Current evidence](../benchmarks/hub-source-coordinate-review.md) preserves this distinction. No input-fit implementation, source-pin substitution or runtime adoption is authorized by this finding. Earlier entries below are historical.
