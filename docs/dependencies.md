@@ -1,6 +1,6 @@
-## Latest AS evidence — source display stopped review before acquisition
+## Latest ASR evidence — exact wheels and inert inventory verified
 
-[AS findings](benchmarks/wheel-artifact-review.md): source-display truncation stopped AS1 before implementation or acquisition; planning commit `b466a78`. No new candidate metadata/payload was fetched or verified. The prior successful native probe remains evidence for its specific response. Artifact/size/provenance, requirements/notices/native/source/offline/adoption gaps remain; no installation or runtime selection follows. Earlier evidence below remains historical.
+[ASR findings](benchmarks/wheel-artifact-review-reporting-correction.md): eight fresh exact wheel acquisitions and static inspections passed, including 250 RECORD payloads; cached Hub/Tokenizers identities and bounded metadata/source reads passed. HF-Xet is exactly 3,911,559 bytes and FSSpec 221,738 bytes, replacing rounded observations. Declared licences/notices and dependency markers are retained. HF-Xet's native payload, Tokenizers notice completeness, FSSpec provenance, Hub source mapping, lock/marker reconciliation and actual offline/parity/adoption remain open. No candidate was installed/imported. Earlier evidence below remains historical.
 
 ## Latest MR evidence — incomplete readiness
 

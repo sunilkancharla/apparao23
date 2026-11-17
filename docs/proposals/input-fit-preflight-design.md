@@ -1,6 +1,6 @@
-## Latest AS outcome — source display stopped review before implementation
+## Latest ASR outcome — static artifact evidence ready for reconciliation
 
-[AS findings](../benchmarks/wheel-artifact-review.md) record a source-display truncation during AS1; planning commit `b466a78`. No aid implementation, Job trial, metadata/payload acquisition or input-fit result occurred. A corrected host reporting path needs review before another bounded execution allocation. Prior probe evidence and source/metadata/native/licence/offline/parity/G2 gates remain unchanged. The metadata-only timing deferral is unchanged.
+[ASR findings](../benchmarks/wheel-artifact-review-reporting-correction.md) record test-first aids/ownership controls, eight pinned acquisitions and inert inspection plus bounded cached-root evidence. Planning commit `42a2aea`; no candidate import, installation or input-fit/model execution. Reconcile actual dependency/licence/native/source findings and remaining blockers before a provisioning/adoption proposal. Source mapping, native/vendor notices, provenance, offline/parity and G2 gates remain open. The metadata-only timing deferral is unchanged.
 
 ## Latest MR readiness — gaps remain
 

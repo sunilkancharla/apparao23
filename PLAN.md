@@ -1,6 +1,6 @@
-## Latest execution point — AS results committed; short reporting correction proposed
+## Latest execution point — ASR acquisition and inert inspection completed
 
-AS results committed as `1d30457`. The [ASR correction](docs/proposals/wheel-artifact-review-reporting-correction.md) inherits AS artifacts/limits and requires host-display guard tests before source searches, with a 3,000-byte emission limit. ASR1–ASR5 and the four-file planning commit await approval; no new execution started. Prior successful probe evidence and source/licence/native/offline/adoption/G2 gaps remain.
+ASR planning committed as `42a2aea`. [Findings](docs/benchmarks/wheel-artifact-review-reporting-correction.md): test-first aids/controls passed, all eight exact wheels acquired and statically inspected, 250 new RECORD payloads verified and two cached roots reviewed. Owned-worker teardown verified; no installation/candidate import/product implementation. Closeout retains corrections/coverage gaps. Next request the eight-file results commit and prepare reconciliation of actual dependency/licence/native/source findings before any provisioning/adoption/G2 decision.
 
 ## Latest MR outcome — partial evidence; limits reached
 
