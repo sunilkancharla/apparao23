@@ -1,5 +1,9 @@
 # Implementation Plan — Stage 1 Local Prototype
 
+## Current execution point — SV committed; static artifact/dependency verification proposed
+
+SV findings/design committed `8d25bd7`. [IF-SA package](docs/proposals/standalone-tokenizer-static-verification.md) proposes test-first inert inspection of the existing exact Ollama ZIP/install and two verified wheels, followed conditionally by remaining public dependency/provenance review. SA1 bootstrap → SA2 inspector/fake tests → SA3 one600sstatic worker → SA4 conditional research → SA5 decision/closeout.128units/2,400seconds/8MiBnew outputs/8GiBstreamed reads, eightwebcalls24targets, sixsuites/fourRuff. No candidate execution/import/install/payload download or model read. Package and five-document commit await approval; no new root/aids/research started. Earlier status below is historical.
+
 ## Current execution point — standalone reference design completed conditionally
 
 Approved IF-SV/proposal commit `68a878c`. [Findings](docs/benchmarks/standalone-tokenizer-validation-design.md) map Ollama's native source to b12177/`6c01da6278ab6c69ed67d9124806b50d2b299ba7` plus compatibility overlays and identify shared reference/generation token helpers. Eight calls/24targets; one404/one inaccessible API charged, no retries. [Staged trial design](docs/proposals/standalone-tokenizer-parity-trial-design.md) is conditional/non-executable; installed runner/DLL identity, native/dependency/provenance and actual context/EOS/parity gates remain open. Recommend next bounded static artifact/dependency review before any provisioning/trial. Eight findings/design/status files await commit approval; no next package prepared. No new binary/model inspection/install/native/API/inference or G2/app adoption. Earlier pending wording below is historical.
@@ -493,3 +497,6 @@ Investigation source/results committed `612378a`. User approved the [minimal rep
 ## Approved combined-06 continuation
 
 State coordination repair is committed `92f3b67` after60passing combined/OCR tests. The user approved the [combined-06 package](docs/proposals/combined-ocr-model-sixth-run.md) and committing its five proposal documents: fixed experiment, both repairs, unchanged limits and a fresh allocation linking15prior records. T11-C6-1–C6-6 may proceed within the package. Both fake suites precede handoff; standalone OCR tests join the seal inventory. Native execution remains the disconnected user-run step; later source/results commits remain gated.
+
+<!-- IF-SA approval checkpoint -->
+The user explicitly approved the IF-SA package and its five planning-document commit. The initial execution stopped before artifact inspection, tests or research because accounting was not bootstrapped before the first read/output and the output exceeded its limit. Preserve the stopped epoch; no automatic retry. Earlier pending-approval text is historical. Closure findings remain separately reviewable.

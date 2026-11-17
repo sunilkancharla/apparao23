@@ -1,5 +1,15 @@
 # Stage 1 Atomic Task Checklist
 
+## T17-IF-SA — static verification proposed
+
+SV committed `8d25bd7`; [exact IF-SA proposal](docs/proposals/standalone-tokenizer-static-verification.md) defines paths/identities/read and execution caps. Package and five-document commit await approval.
+
+- [ ] **IF-SA1:** After approval, durable UTC/full reservation/report/research bootstrap before inspection/output; preserve prior sources/evidence, fix input paths and refuse existing root. Evidence: entry manifest/accounting.
+- [ ] **IF-SA2:** After SA1, two new stdlib aids test-first; path/archive/stream/type/identity/output negatives plus caught mutation, final lint/format. Evidence: bounded suite/check records, no candidate execution.
+- [ ] **IF-SA3:** After SA2, one supervised static worker verifies exact cached archive and installed member hashes/native notice inventory plus earlier two wheels, within8GiBread ceiling. Evidence: manifest or honest partial stop, retained/reaped process identity; no extraction/import/launch.
+- [ ] **IF-SA4 (conditional):** After coherent SA3, review applicable runtime graph/native/license/advisory/source-release/offline gaps within eightcalls24targets/20names. Evidence: verified/unknown/blocked table, no new artifacts or version adoption.
+- [ ] **IF-SA5:** After SA3 stop or SA4, preserve results/diffs/checkpoint/links/budgets and request findings commit; exact readiness decision without installation/trial/G2 approval.
+
 ## T17-IF-SV — source feasibility/design completed; no trial adoption
 
 Approved proposal committed `68a878c`; [findings](docs/benchmarks/standalone-tokenizer-validation-design.md) and [conditional trial design](docs/proposals/standalone-tokenizer-parity-trial-design.md) distinguish native source evidence from installed artifact/runtime validation.
@@ -1376,3 +1386,6 @@ Package: [exact scope, limits, dependencies and acceptance](docs/proposals/combi
 - [ ] **T11-C6-4 — Execute offline.** User ran disconnected. Four controls passed; S01–S15completed (baseline6/Tesserocr6/RapidOCR3),nine actual OCR/chat overlaps; S16started then stopped on reading_gap287.7155ms >250ms. Matrix incomplete, allocation closed, never retry. [Partial results](docs/benchmarks/combined-ocr-model-sixth-stop.md).
 - [x] **T11-C6-5 — Verify teardown.** Teardowntrue,zeroownedchildren,processreaped/portreleased. Preserve64/160,62API,15roots,11extras/26observed;24embedding/16responseattempts/15completed. No state-write error reported. No reset/reseal/retry.
 - [ ] **T11-C6-6 — Review results.** Sanitized timing/counters/partial metrics saved in report; README/handoff/checkpoint updated. Local review.html exists for S01–S15, semantic/factual citation review pending; schema/scope checks alone are insufficient. Preparation source/results still uncommitted; request approval for nine reviewed files. No timing-policy change or native continuation authorized.
+
+<!-- IF-SA approval checkpoint -->
+The user explicitly approved the IF-SA package and its five planning-document commit. The initial execution stopped before artifact inspection, tests or research because accounting was not bootstrapped before the first read/output and the output exceeded its limit. Preserve the stopped epoch; no automatic retry. Earlier pending-approval text is historical. Closure findings remain separately reviewable.

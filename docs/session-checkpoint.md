@@ -1,4 +1,16 @@
-# Latest checkpoint — IF-SV source review/design completed; static gates open
+# Latest checkpoint — SV committed; IF-SA static-verification proposal pending
+
+User approved eight SV findings/design/status files and preparing static-verification package. Exact allowlist/index/whitespace commit `8d25bd7` succeeded. SV remains closed383.735seconds/635,916artifact upper/49,152reporting reservations/36preservedhashes/391links/eightcalls24targets, no observed reporting deviation or native execution. No old allocation reopened.
+
+Prepared docs/proposals/standalone-tokenizer-static-verification.md plus PLAN/TODO/README/thischeckpoint (five files). Exact existing archive .venv/.cache/ollama/ollama-windows-amd64-0.40.16.zip,1,618,244,995bytes/SHA50fcf5ad54277f2fa5d173ebfc93bcb017adbc0c9ef2314daabc96ca9e6aa64e from authored data/t10-provision.py; installroot.venv/tools/ollama/0.40.16. Prior sanitized provisioning receipts allowed as data only. Two IF-Nwheels hashverified before metadata/notices read; no other artifacts/model reads. Two new inspector/test files only after approval, fake synthetic ZIP/files never executed; one600sstatic worker plus30steardown, no extraction/candidate import/launch/download/install.
+
+Proposed SA1bootstrap/SA2test-first inspector/SA3static compare/SA4conditional metadata review/SA5closure. Fresh data/t17/standalone-static-verification-01 only after approval.128units104normal24protected/2,400seconds/8MiBnewartifacts,8GiBsharedstreamedreads/128archiveentries128installedfiles/depth8/3GiBexpansion/textnoticecaps. Sixsuites/fourRuff/eightwebcalls24targets/20distributionnames,8KiB/invocation64KiBaggregate report8KiBreserve. Native/source/graph/offline gaps honest; no hash equated to attestation/safety. Trial design kept frozen.
+
+Package and five-document commit await approval. No new root/helper/test/ledger/research/payload inspection/native/API/inference/provisioning done during preparation. Relevant planning/documentation/security workflows reviewed, no skill scripts/subagents. G2/app/stage16GBformats/OCR/privacy/R01 unchanged; preserve unrelated untracked content and all old receipts. No status/compact/goal invocation.
+
+IF-SA preparation checks passed: local link resolution, exact four tracked status files plus one new proposal, empty staged index, absent proposed root/helper/tests and tracked/new-file whitespace. Readable PLAN/README diff shown; new proposal/TODO/checkpoint reviewed directly. Documentation-only preparation, no application tests or artifact inspection. Five files remain uncommitted.
+
+# Earlier checkpoint — IF-SV source review/design completed; static gates open
 
 User approved exact IF-SV/five proposal docs committed `68a878c`. First invocation captured DateTimeOffset UTC/exclusively created data/t17/standalone-validation-design-01 and flushed64prepaid units(8init20source20design16protected),1,200seconds/2MiB/eightcalls24targets/reporting reservations before optional inspection/output.36prior identities frozen, inherited30hashes checked. Shell summaries precharged4096blocks/measured before emission, bootstrap allowance covers Git/error output; no nested-quote diff-display command. No new code/helper/test/fixture/native process/local binary-model inspection/install/API/inference.
 
@@ -807,3 +819,6 @@ Validated command, only after user disconnection:
 TypeOFFLINE,no READY prompt; existingM02/M03/M04 inputs reused. Hash/startup may be quiet; remain disconnected until TEARDOWN VERIFIED:True and safe-to-reconnect message. No automatic native run by Codex. If stopped preserve evidence/no retry. After user reports cleanup/reconnection inspect sanitized summary only; review.html/private error receipt remain local. No fullT09/T11/G2/strict16GB/nativefeasibility/adoption claim. See docs/proposals/combined-ocr-model-third-run.md and current combined-ocr-model-handoff.md.
 
 Preserve unrelated untracked agents/skills/references/images/onboarding docs; .venv/data/assets/private/generated files ignored. Git writes need host escalation and explicit scope approval. No active goal/no callable /compact or /status tool; never claim invocation. Save exact progress on user pause.
+
+<!-- IF-SA approval checkpoint -->
+The user explicitly approved the IF-SA package and its five planning-document commit. The initial execution stopped before artifact inspection, tests or research because accounting was not bootstrapped before the first read/output and the output exceeded its limit. Preserve the stopped epoch; no automatic retry. Earlier pending-approval text is historical. Closure findings remain separately reviewable.
