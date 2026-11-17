@@ -1,3 +1,14 @@
+## Latest T17-IF-MR — partial review; protected closeout
+
+Planning commit `ed7ec1b`; [findings](docs/benchmarks/hub-metadata-dependency-review.md) retain evidence/limits.
+
+- [x] MR1 — Immutable/reporting controls passed;27 inputs frozen, no candidate payload.
+- [ ] MR2 — Partial: proposed versions/exposed edges; HF-Xet/FSSpec/retained-node closure incomplete. No override or complete conflict-free claim.
+- [ ] MR3 — Partial: six publisher artifact identities, declarations/four advisory ranges; complete notices/native/offline/security coverage unresolved.
+- [x] MR4 — Protected findings/checkpoint/checks after target/deadline stop; actual deviation/resources retained. Seven-file results commit pending.
+
+Nine calls/all36 targets consumed; no more research in this allocation. Ask approval to commit and prepare bounded gap closure, not install/execute/adopt. Earlier tasks historical.
+
 ## Latest T17-IF-MR — metadata/dependency readiness proposed
 
 AR results/timing approval committed as `0d4003e`. [Exact MR proposal](docs/proposals/hub-metadata-dependency-review.md) permits source-only metadata review before build-source mapping, which remains an adoption item. MR execution and five planning-document commit await approval.

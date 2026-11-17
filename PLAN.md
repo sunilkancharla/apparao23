@@ -1,3 +1,7 @@
+## Latest MR outcome — partial evidence; limits reached
+
+Planning commit `ed7ec1b`. [MR findings](docs/benchmarks/hub-metadata-dependency-review.md): nine calls/all36 targets produced candidate/artifact/advisory evidence; graph/native/notice/offline readiness incomplete. Deadline stopped normal findings preparation; protected closure records time/reporting deviation. Seven results await commit approval; recommend preparing precise gap closure, no installation or automatic retry. Earlier statuses historical.
+
 ## Latest execution point — AR decision committed; metadata/dependency review proposed
 
 Seven AR results and the approved narrow timing decision committed as `0d4003e`. [MR proposal](docs/proposals/hub-metadata-dependency-review.md) covers unchanged Hub2.4.0/Tokenizers0.23.3 metadata, applicable graph, project-pin conflicts, notices/advisories and prospective Windows artifact identities. Build-source mapping stays open for adoption. MR1–MR4 and five-document commit await approval; no new root/research/install/runtime work started. Proposed64units/1,200seconds/16MiBreads/4MiBartifacts/12calls36targets20names, with immutable controls and separate later execution/adoption gates. Earlier statuses below are historical.

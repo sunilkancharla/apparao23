@@ -1,3 +1,15 @@
+# Latest checkpoint — MR partial graph/advisory evidence; protected closeout
+
+User approved MR1–MR4/five planning docs; commit `ed7ec1b` succeeded. Fresh data/t17/hub-metadata-dependency-review-01 bootstrap/control/freeze passed,27 identities. Nine webcalls36targets reached target cap. HTTPX2/httpcore2=2.16.2,Filelock4.2.10,Truststore0.10.5 fields; retainedAnyIO4.16.0/Click8.5.1, six universal hashes/sizes recorded. HF-Xet1.8.0/FSSpec2026.9.0 filenames observed, complete metadata/native artifact unknown. Eighteen context names, no pin/lock change or complete graph claim.
+
+Four official HTTPX2 ranges exclude2.16.2, not full security clearance. Native/transitive notices, normal Windows HF-Xet artifact, FSSpec/retained metadata/offline checks remain gaps. Source mapping stays open for adoption under approved metadata-only deferral. MR1 passed;MR2/MR3 partial;MR4 records precise gaps.
+
+Normal findings reservation refused after1200s before edits. Research stopped; terminal ledger prepaid16protected units/8MiBreads/8KiBoutput for findings/checks/seal, no refund/reset. Total closure exceeds planned all-in time; deadline error escaped emitter, failure margin retained without retrospective compliance. Protected patch-format error corrected; no source retry. All later writes are protected findings/closure only, final closeout authoritative.
+
+Seven files:new MR report,dependencies/preflight,PLAN/TODO/README/this checkpoint. Preserve frozen inputs/historical baselines and local diff/link/scope/static-command/delivery/resources. No suite/Ruff/candidate payload/import/download/worker/install/model/Ollama API/native/build/environment/runtime/application/G2/stage change; no skill scripts/subagents/goal/status/compact invocation. Request commit and approval to prepare bounded gap-closure proposal, no automatic retry/install. Earlier checkpoints historical.
+
+Protected checks passed:25 frozen inputs unchanged,2 exact baseline suffixes,443 local links, six tracked result edits plus new report, empty index, whitespace/ignored runtime root. Readable diffs reviewed; exact protected final command statically parsed. Final seven delivery hashes and actual time/resource/error totals retained; no retrospective compliance claim. Seven result/status files remain uncommitted.
+
 # Latest checkpoint — AR decision committed; MR package prepared
 
 User approved narrow timing decision, seven-file results commit and next-proposal preparation. Verified original seven delivery identities before recording approval-only statuses in those same seven files. Commit `0d4003e` succeeded with exact allowlist/index/whitespace checks; no runtime data/session summary/unrelated content staged. Closed AR root/records unchanged. Approved decision: publication evidence may support metadata/notices/advisory/dependency review before exact build-source mapping; carry that unresolved item to adoption, no unbound-code behavior claim/source pin/install/execution/runtime/G2 approval.

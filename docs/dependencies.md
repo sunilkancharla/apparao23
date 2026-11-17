@@ -1,3 +1,7 @@
+## Latest MR evidence — incomplete readiness
+
+[MR findings](benchmarks/hub-metadata-dependency-review.md) record candidate/artifact/advisory evidence and exposed compatible pin ranges. HF-Xet/FSSpec, full retained/native/notice/offline coverage remain incomplete. No installation or pin/lock change. Metadata-only build-source deferral unchanged. Earlier entries historical.
+
 ## Latest AR comparison — decision pending
 
 [The bounded comparison](benchmarks/stable-tokenizer-alternatives.md) retains Hub2.4.0 as research baseline; neither older candidate demonstrated a benefit. On2026-11-17 the user approved deferring exact build-source mapping only before metadata/notices/advisory/dependency review, carrying it unresolved to adoption. Next-package preparation is approved; execution remains gated. No dependency/pin/adoption change occurred. Earlier entries below are historical.
