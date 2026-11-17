@@ -1,3 +1,7 @@
+## Latest RC evidence — parser review stopped before reconciliation
+
+[RC findings](benchmarks/wheel-evidence-reconciliation.md): packaging 26.3's 30 hashed installed RECORD entries matched and 20 source files were inspected. Its first synthetic check failed; incomplete host capture prevents diagnosing why. No passing parser controls, dependency graph, licence reconciliation or new provenance research are claimed. No lock/package selection or installation changed. Correct and validate the host capture boundary in a fresh approved package before another attempt.
+
 ## Latest ASR evidence — exact wheels and inert inventory verified
 
 [ASR findings](benchmarks/wheel-artifact-review-reporting-correction.md): eight fresh exact wheel acquisitions and static inspections passed, including 250 RECORD payloads; cached Hub/Tokenizers identities and bounded metadata/source reads passed. HF-Xet is exactly 3,911,559 bytes and FSSpec 221,738 bytes, replacing rounded observations. Declared licences/notices and dependency markers are retained. HF-Xet's native payload, Tokenizers notice completeness, FSSpec provenance, Hub source mapping, lock/marker reconciliation and actual offline/parity/adoption remain open. No candidate was installed/imported. Earlier evidence below remains historical.

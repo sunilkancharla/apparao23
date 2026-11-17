@@ -1,6 +1,6 @@
-## Latest execution point — ASR results committed; reconciliation proposed
+## Latest execution point — reconciliation stopped; capture correction needed
 
-ASR results committed as `8bf88b3`. The [RC package](docs/proposals/wheel-evidence-reconciliation.md) proposes a bounded dependency/lock/marker comparison, notice/native evidence review and targeted primary-source provenance investigation. Existing packaging 26.3 would be a review-only tool after its boundary check. RC1–RC5/four-file planning commit await approval; no new execution/research started. Installation, source/native/offline/adoption/G2 gates remain open.
+RC1–RC5 and its planning commit were approved; planning committed as `f3dad02`. [RC findings](docs/benchmarks/wheel-evidence-reconciliation.md): static local-tool integrity review passed, but the first synthetic check failed and its error capture was incomplete. Optional work stopped; graph/licence reconciliation and research did not run. Next: review the results commit and prepare a fresh capture-boundary correction before another parser attempt. Installation, source/native/offline/adoption/G2 gates remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

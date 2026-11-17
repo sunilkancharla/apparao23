@@ -1,3 +1,7 @@
+## Latest RC outcome — capture blocker; no adoption progress
+
+[RC findings](../benchmarks/wheel-evidence-reconciliation.md) record approved execution after planning commit `f3dad02`, static local-tool integrity evidence, and an unsuccessful synthetic check with incomplete error capture. Optional work stopped before graph/licence/provenance review. No tokenizer/input-fit/parity/model run or dependency adoption occurred. The metadata-only timing deferral and all existing G2/source/native/offline gates remain unchanged. A fresh capture-boundary correction is the next proposed prerequisite.
+
 ## Latest ASR outcome — static artifact evidence ready for reconciliation
 
 [ASR findings](../benchmarks/wheel-artifact-review-reporting-correction.md) record test-first aids/ownership controls, eight pinned acquisitions and inert inspection plus bounded cached-root evidence. Planning commit `42a2aea`; no candidate import, installation or input-fit/model execution. Reconcile actual dependency/licence/native/source findings and remaining blockers before a provisioning/adoption proposal. Source mapping, native/vendor notices, provenance, offline/parity and G2 gates remain open. The metadata-only timing deferral is unchanged.

@@ -1,6 +1,6 @@
 # T17-IF-RC — dependency, licence and provenance reconciliation
 
-**Proposed; RC1–RC5 execution and the four-file planning commit await approval.** ASR results are committed as `8bf88b3`. The user approved that commit and preparation of this package. [Static findings](../benchmarks/wheel-artifact-review-reporting-correction.md) establish exact artifact/RECORD evidence, not installation or adoption readiness.
+**Approved; planning committed as `f3dad02`; execution stopped during RC1.** [RC findings](../benchmarks/wheel-evidence-reconciliation.md) record the failed synthetic check and incomplete error capture. RC2–RC4 did not run; no automatic retry or adoption. ASR results remain committed as `8bf88b3`; [static findings](../benchmarks/wheel-artifact-review-reporting-correction.md) establish exact artifact/RECORD evidence, not installation or adoption readiness. The original approved boundary below is retained for audit; its limits do not authorize restarting this stopped run.
 
 ## Purpose and fixed inputs
 

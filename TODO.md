@@ -1,14 +1,14 @@
-## Latest T17-IF-RC — reconciliation proposal ready; execution pending
+## Latest T17-IF-RC — stopped on incomplete capture; closeout under review
 
-ASR results committed as `8bf88b3`. The [exact RC package](docs/proposals/wheel-evidence-reconciliation.md) records the fixed evidence, review-only packaging tool, marker assumptions, primary-source scope and shared limits. Execution and its four-file planning commit await approval.
+RC1–RC5 and the four-file planning commit were approved; planning committed as `f3dad02`. [RC findings](docs/benchmarks/wheel-evidence-reconciliation.md) record partial tool review and the failed synthetic check with incomplete error capture. The [approved boundary](docs/proposals/wheel-evidence-reconciliation.md) requires stopping optional work; this run is not authorized to retry.
 
-- [ ] RC1 — After approval, bootstrap/freeze and inspect the existing packaging 26.3 import/tool boundary; synthetic marker/report controls. Accept: exact inputs and reviewed local tool identity; no new dependency/candidate import.
-- [ ] RC2 — After RC1, reconcile active marker/extras/lock edges for fixed roots and at most 20 distributions. Accept: actual/minimum-marker dictionaries, conflicts/missing/unknowns explicit; no version/pin override.
-- [ ] RC3 — After local graph review, reconcile licence declarations, retained notices and native/vendor evidence. Accept: evidence categories/completeness limits clear; no legal/ABI/security clearance inferred.
-- [ ] RC4 — After local review, targeted primary-source provenance/source investigation. Accept: publisher claims/build relationship/inferences/unknowns distinguished; eight-call/24-target ceiling and cutoff respected.
-- [ ] RC5 — At completion/stop, readiness/blocker matrix, smallest next proposal and final preservation/scope/link/whitespace/diff/non-null-summary checks. Accept: actual resource/gap evidence, separate results-commit/provisioning/adoption gates.
+- [ ] RC1 — Partial: bootstrap/freeze and existing packaging integrity review completed (30 RECORD payloads, 20 source modules). First synthetic invocation failed, its traceback capture incomplete; no passing control claim. Remaining acceptance blocked.
+- [ ] RC2 — Not run after RC1 stop. Marker matrices, lock conflicts and closure remain unresolved; no version/pin override.
+- [ ] RC3 — Not run. Existing licence declarations/notices/native evidence remain unreconciled; no legal/ABI/security clearance.
+- [ ] RC4 — Not run. Zero web calls/targets; existing source-mapping deferral retained.
+- [x] RC5 — Stop receipt/findings/blocker matrix and closeout complete: seven-document scope, eight frozen inputs preserved, three fixed evidence hashes, 20 tool-source hashes, local links, whitespace, readable diff and non-null summary checked. Separate results-commit/provisioning/adoption gates remain.
 
-Preparation checks passed: four-document scope, four touched local links, three fixed evidence identities, whitespace, empty index and readable plan diff; historical/configuration/test inputs unchanged against `8bf88b3`. No `wheel-evidence-reconciliation-01` root, parser script, candidate/tool import, synthetic check or public research created or started. Next: obtain RC1–RC5/four-file planning-commit approval. Closed roots and historical checkpoint files remain untouched.
+Stop evidence: 249.186 active/wall seconds at stop, no host exclusion; 64 units/32 starts prepaid, including unused reservations. Both started parser processes exited; graph process never started. No installations, candidate imports, binary/archive rereads, model calls or application changes. Next: review the seven-file results commit and prepare a fresh capture-boundary correction package with complete-stream/nonzero-exit/overflow/timeout controls before another parser attempt. Closed roots and historical checkpoint files remain untouched.
 
 ## Earlier T17-IF-ASR — acquisition/inspection complete; results committed
 
