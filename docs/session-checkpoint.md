@@ -1,3 +1,10 @@
+# Latest checkpoint — IF-SA stopped; planning committed
+
+User approved IF-SA and the exact five planning documents; commit `fca4bb9` completed after capturing harmless Git line-ending warnings. Session summary and unrelated files excluded; index empty after commit. IF-SA first post-approval command read local skills/proposal before durable bootstrap and returned over 8 KiB controlled output (12,775 original tokens; exact bytes unknown). Mandatory stop; late `data/t17/standalone-static-verification-01/stop.json` explicitly records noncompliance, not a retroactive fix.
+
+No artifact payload reads, helpers, tests, Ruff, web research, candidate launches, installation, model/API requests or owned workers. SA1 failed; SA2–SA4 unstarted; SA5 partial closeout documented. Epoch 01 stays stopped. [Findings](benchmarks/standalone-tokenizer-static-verification.md) propose fresh epoch 02 under identical package caps, with a bootstrap-only first invocation before all optional reads/output; explicit approval required. Findings commit remains separate and pending. G2, Stage 1, format/OCR/privacy and 16 GB CPU-only requirements unchanged.
+
+Earlier checkpoints below are historical.
 # Latest checkpoint — SV committed; IF-SA static-verification proposal pending
 
 User approved eight SV findings/design/status files and preparing static-verification package. Exact allowlist/index/whitespace commit `8d25bd7` succeeded. SV remains closed383.735seconds/635,916artifact upper/49,152reporting reservations/36preservedhashes/391links/eightcalls24targets, no observed reporting deviation or native execution. No old allocation reopened.

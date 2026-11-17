@@ -1,3 +1,6 @@
+## Latest T17-IF-SA outcome — mandatory process stop
+
+Planning commit `fca4bb9` completed. IF-SA1 failed its accounting/reporting prerequisite; IF-SA2–SA4 remain unstarted. IF-SA5 recorded [partial-stop findings](docs/benchmarks/standalone-tokenizer-static-verification.md); findings commit is pending. No tests, research, artifact inspection or candidate execution. Fresh continuation requires explicit approval; do not reset epoch 01. Earlier pending/approval status text is historical.
 # Stage 1 Atomic Task Checklist
 
 ## T17-IF-SA — static verification proposed

@@ -1,3 +1,6 @@
+## Latest IF-SA outcome — stopped before artifact inspection
+
+Approved planning documents committed as `fca4bb9`. IF-SA1 stopped on bootstrap/reporting order; SA2–SA4 were not started. [Findings](docs/benchmarks/standalone-tokenizer-static-verification.md) preserve the failure and propose a fresh, bootstrap-first continuation with unchanged caps, pending approval. No runtime adoption or implementation follows. Earlier proposal statuses below are historical.
 # Implementation Plan — Stage 1 Local Prototype
 
 ## Current execution point — SV committed; static artifact/dependency verification proposed
