@@ -1,6 +1,6 @@
-## Latest execution point — WI stopped before probe
+## Latest execution point — WI results committed; continuation proposed
 
-The user approved WI1–WI5; planning committed as `424962f`. [WI findings](docs/benchmarks/wheel-static-inspection.md) record a combined source-read output of at least 19,667 bytes against an 8,192-byte invocation cap. WI1 stopped before the native metadata probe; no HTTP/download/helper/test/install/adoption ran. Protected closeout preserves the failed attempt. Next request a results commit, then a bounded continuation with byte-limited capture; no automatic allocation reset. Source/adoption/G2 gaps remain.
+WI results committed as `5ec1002`. The [WIC continuation](docs/proposals/wheel-static-inspection-continuation.md) requires bounded capture checks before the same early probe, retaining the eight artifacts and original ceilings. WIC1–WIC5 execution and the four-file planning commit await approval. No new root/control/helper/test/network activity started. The closed WI attempt remains untouched; source/adoption/G2 gaps remain.
 
 ## Latest MR outcome — partial evidence; limits reached
 
