@@ -1,3 +1,7 @@
+## Latest execution point — MR committed; focused gap closure proposed
+
+Seven MR results committed as `e25690b`. [GC proposal](docs/proposals/hub-dependency-gap-closure.md) reuses evidence, closes specific HF-Xet/FSSpec/retained-node/notice/offline preparation gaps and produces a static-inspection allowlist or precise blocker. New source cutoff600s, optional-work cutoff720s, total1,200s with480s reserved closure;8calls24targets. GC1–GC4 and five-document commit await approval. No new root/research/payload/runtime work started. Earlier statuses historical.
+
 ## Latest MR outcome — partial evidence; limits reached
 
 Planning commit `ed7ec1b`. [MR findings](docs/benchmarks/hub-metadata-dependency-review.md): nine calls/all36 targets produced candidate/artifact/advisory evidence; graph/native/notice/offline readiness incomplete. Deadline stopped normal findings preparation; protected closure records time/reporting deviation. Seven results await commit approval; recommend preparing precise gap closure, no installation or automatic retry. Earlier statuses historical.

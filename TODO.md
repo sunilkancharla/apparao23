@@ -1,3 +1,14 @@
+## Latest T17-IF-GC — focused gap closure proposed
+
+MR results committed as `e25690b`. [Exact GC proposal](docs/proposals/hub-dependency-gap-closure.md) reuses known evidence and reserves closeout time. Execution/five planning-document commit await approval.
+
+- [ ] GC1 — After approval, bootstrap/phase/immutable/reporting controls and freeze; classify reusable evidence/missing fields. Acceptance: controls/identities pass before optional reads; no old-root writes.
+- [ ] GC2 — After GC1, HF-Xet normal Windows/pinned metadata, FSSpec identity and retained-node constraints. Acceptance: exact source evidence or unknowns; no default pin/ABI/dependency assumptions.
+- [ ] GC3 — After GC2/partial, notice/offline intentions and exact static-inspection allowlist or blocker. Acceptance: payload/runtime checks remain later gates.
+- [ ] GC4 — At720s or earlier completion, concise findings/checkpoint, targeted preservation/link/scope/diff/resource checks and validated final summary. Acceptance: truthful closure within total1,200s, or explicit unfinished checks/overrun; separate commit/adoption gates.
+
+No GC root/control/lookup/helper/trial created during preparation. Do not repeat empty MR routes or restart a closed allocation. Earlier tasks historical.
+
 ## Latest T17-IF-MR — partial review; protected closeout
 
 Planning commit `ed7ec1b`; [findings](docs/benchmarks/hub-metadata-dependency-review.md) retain evidence/limits.

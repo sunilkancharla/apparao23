@@ -1,3 +1,15 @@
+# Latest checkpoint — MR committed; focused GC proposal prepared
+
+User approved seven-file MR results commit and focused proposal preparation. Delivery identities matched; exact allowlist/index/whitespace commit `e25690b` succeeded. No runtime data/session summary/unrelated content staged. Closed MR unchanged:43units,9calls36targets,total1742.565s versus1200s planned. Deadline/patch-format deviations retained; final console null projection was corrected by read-only verification, not a root rewrite.
+
+Prepared docs/proposals/hub-dependency-gap-closure.md plus PLAN/TODO/README/this checkpoint only. GC1 controls/freeze/reuse → GC2 specific metadata/retained-node gaps → GC3 notices/offline intentions/static-inspection allowlist → GC4 timed closure. No unchanged full-graph/advisory redo or empty MR API route repeats. No candidate payload acquisition/read or native/runtime proof; those remain later bounded gates.
+
+Proposed fresh data/t17/hub-dependency-gap-closure-01;64units(48normal16protected),1200s total, no new external request after600s, optional stop720s,480s closure reserve; provisional gap matrix by480s. Same16MiBread/4MiBartifact/64KiBreport(8KiB invocation/closure reserve),32ledgerrecords/validations4KiBeach;8calls24targets20names. Up to2 trustworthy corrections; two unproductive new attempts per gap then classify unavailable. Report near1000words, active status updates in place, targeted changed-link checks and validated non-null final summary.
+
+GC execution and five-document commit await approval. No new root/ledger/control/lookup/helper/trial created. Existing metadata-only source deferral and G2/runtime/stage gates unchanged. Local planning/documentation workflows carried forward; no skill scripts/subagents/goal/status/compact invocation. Earlier checkpoints historical.
+
+Preparation checks passed: four tracked status edits plus new proposal, empty index, whitespace, three immutable HS hashes, four new/touched local links, fixed baseline identities and absent GC root. Committed MR findings/dependency/preflight files unchanged. Readable additions/proposal reviewed; documentation only, no application tests. Five proposal/status files remain uncommitted.
+
 # Latest checkpoint — MR partial graph/advisory evidence; protected closeout
 
 User approved MR1–MR4/five planning docs; commit `ed7ec1b` succeeded. Fresh data/t17/hub-metadata-dependency-review-01 bootstrap/control/freeze passed,27 identities. Nine webcalls36targets reached target cap. HTTPX2/httpcore2=2.16.2,Filelock4.2.10,Truststore0.10.5 fields; retainedAnyIO4.16.0/Click8.5.1, six universal hashes/sizes recorded. HF-Xet1.8.0/FSSpec2026.9.0 filenames observed, complete metadata/native artifact unknown. Eighteen context names, no pin/lock change or complete graph claim.
