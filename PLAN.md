@@ -1,6 +1,6 @@
-## Latest execution point — policy checks passed; platform subprocess denied
+## Latest execution point — MG results committed; explicit-profile adapter proposed
 
-MG1–MG5 and its planning commit were approved; planning committed as `299498d`. [MG findings](docs/benchmarks/marker-environment-guard-review.md): RED preceded the two-line exception, 20 policy cases passed, and the single parser attempt captured a new platform-helper subprocess denial. No extra exception/retry/graph/research. Next: review the six-file results commit and prepare an explicit environment-adapter review that retains subprocess denial. Reconciliation/adoption/G2 remain open.
+MG results committed as `a0578ce`. The [EA proposal](docs/proposals/marker-environment-adapter-review.md) compares an isolated public-factory override with alternate evaluation/helper execution. Proposed: original strict guard, labelled partial profiles, test-first controls, then conditional local graph comparison only after passing adapter/original controls. EA1–EA6 and four-file planning commit await approval. No override, import, new root or retry started; licensing/provenance/adoption/G2 remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

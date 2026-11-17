@@ -1,4 +1,17 @@
-## Latest T17-IF-MG — policy checks passed; platform subprocess blocked
+## Latest T17-IF-EA — explicit-profile adapter and conditional graph proposed
+
+MG results committed as `a0578ce`. The [exact EA package](docs/proposals/marker-environment-adapter-review.md) records source evidence, the review-only public-factory override, original strict guard, partial profiles and a conditional local graph step. EA1–EA6 and its four-file planning commit await approval. Conditional graph work is proposed scope, not execution authorization.
+
+- [ ] EA1 — After approval, bootstrap/freeze and inspect source/import/command/profile boundaries. Accept: pinned input/tool identities, unchanged capture aid, original strict guard; no old dispatch or platform discovery.
+- [ ] EA2 — Run meaningful RED before corrected adapter implementation. Accept: supplied dictionary alone still reaches denied discovery; graph/adapter behavior fixtures written before implementation.
+- [ ] EA3 — Implement the isolated factory override and pass GREEN. Accept: restoration/freshness/profile/missing-field/extras/compound/policy tests and graph status/global-cap fixtures; no installed-file change or real networking.
+- [ ] EA4 — Only after GREEN, one original ten-control attempt. Accept: complete capture/exit/teardown; unchanged fixture semantics; failure blocks the graph and does not authorize a retry.
+- [ ] EA5 — Only after EA4 passes, compare local requirements/lock under two labelled partial profiles. Accept: global union of at most 20 exact distribution nodes, missing facts/metadata and conflicts explicit; no resolver or pin change.
+- [ ] EA6 — Completion/stop findings and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: seven-document closeout maximum; separate results-commit/adoption/stage gates.
+
+Preparation checks passed: four-document scope, nine fixed source/evidence hashes, 18 local links, six task IDs, whitespace, readable plan diff and empty index; other tracked files unchanged. No `marker-environment-adapter-01` root, adapter code/profile fixture, import, override or control/graph run created/started. Closed roots, historical checkpoints and unrelated user files remain untouched. Existing licensing/native/provenance/offline/parity/G2 gates remain open.
+
+## Earlier T17-IF-MG — policy checks passed; results committed
 
 MG1–MG5 and its planning commit were approved; planning committed as `299498d`. [MG findings](docs/benchmarks/marker-environment-guard-review.md) record RED before correction, 20 passing policy cases and one complete parser diagnostic at the retained subprocess denial. The [approved package](docs/proposals/marker-environment-guard-review.md) is consumed; no additional exception/retry/reconciliation is authorized.
 
