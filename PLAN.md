@@ -1,6 +1,6 @@
-## Latest execution point — ASR acquisition and inert inspection completed
+## Latest execution point — ASR results committed; reconciliation proposed
 
-ASR planning committed as `42a2aea`. [Findings](docs/benchmarks/wheel-artifact-review-reporting-correction.md): test-first aids/controls passed, all eight exact wheels acquired and statically inspected, 250 new RECORD payloads verified and two cached roots reviewed. Owned-worker teardown verified; no installation/candidate import/product implementation. Closeout retains corrections/coverage gaps. Next request the eight-file results commit and prepare reconciliation of actual dependency/licence/native/source findings before any provisioning/adoption/G2 decision.
+ASR results committed as `8bf88b3`. The [RC package](docs/proposals/wheel-evidence-reconciliation.md) proposes a bounded dependency/lock/marker comparison, notice/native evidence review and targeted primary-source provenance investigation. Existing packaging 26.3 would be a review-only tool after its boundary check. RC1–RC5/four-file planning commit await approval; no new execution/research started. Installation, source/native/offline/adoption/G2 gates remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

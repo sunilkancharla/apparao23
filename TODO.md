@@ -1,4 +1,16 @@
-## Latest T17-IF-ASR — acquisition/inspection complete; final closeout
+## Latest T17-IF-RC — reconciliation proposal ready; execution pending
+
+ASR results committed as `8bf88b3`. The [exact RC package](docs/proposals/wheel-evidence-reconciliation.md) records the fixed evidence, review-only packaging tool, marker assumptions, primary-source scope and shared limits. Execution and its four-file planning commit await approval.
+
+- [ ] RC1 — After approval, bootstrap/freeze and inspect the existing packaging 26.3 import/tool boundary; synthetic marker/report controls. Accept: exact inputs and reviewed local tool identity; no new dependency/candidate import.
+- [ ] RC2 — After RC1, reconcile active marker/extras/lock edges for fixed roots and at most 20 distributions. Accept: actual/minimum-marker dictionaries, conflicts/missing/unknowns explicit; no version/pin override.
+- [ ] RC3 — After local graph review, reconcile licence declarations, retained notices and native/vendor evidence. Accept: evidence categories/completeness limits clear; no legal/ABI/security clearance inferred.
+- [ ] RC4 — After local review, targeted primary-source provenance/source investigation. Accept: publisher claims/build relationship/inferences/unknowns distinguished; eight-call/24-target ceiling and cutoff respected.
+- [ ] RC5 — At completion/stop, readiness/blocker matrix, smallest next proposal and final preservation/scope/link/whitespace/diff/non-null-summary checks. Accept: actual resource/gap evidence, separate results-commit/provisioning/adoption gates.
+
+Preparation checks passed: four-document scope, four touched local links, three fixed evidence identities, whitespace, empty index and readable plan diff; historical/configuration/test inputs unchanged against `8bf88b3`. No `wheel-evidence-reconciliation-01` root, parser script, candidate/tool import, synthetic check or public research created or started. Next: obtain RC1–RC5/four-file planning-commit approval. Closed roots and historical checkpoint files remain untouched.
+
+## Earlier T17-IF-ASR — acquisition/inspection complete; results committed
 
 ASR1–ASR5 and its planning commit were approved; planning committed as `42a2aea`. [Findings](docs/benchmarks/wheel-artifact-review-reporting-correction.md) retain the tests, exact acquisitions, static findings, ownership/resource evidence and corrections. The [approved scope](docs/proposals/wheel-artifact-review-reporting-correction.md) remains the execution boundary; no adoption follows.
 
@@ -6,9 +18,9 @@ ASR1–ASR5 and its planning commit were approved; planning committed as `42a2ae
 - [x] ASR2 — Expected RED retained; full 19-test regression and final 15-test pure run passed, including integrity mutation and unchanged native Job cases. Reused report controls passed 12 cases. Final format/lint passed; 8 suites/8 Ruff invocations charged. Intermediate diagnostic gap and test-assumption correction retained.
 - [x] ASR3 — Eight fresh metadata entries and eight exact wheels acquired in one worker; sizes/SHA, sampled ownership/memory and teardown verified. Exactly 16 HTTP transactions; no retry or installation.
 - [x] ASR4 — Eight new wheels/two cached roots inspected inertly; 250 new RECORD payloads verified, notices/requirements/native inventory and allowed source text retained. No candidate code executed; worker teardown verified.
-- [x] ASR5 — Closeout complete: eight-file scope, touched links, 19 unchanged frozen inputs, tested source bindings, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable tracked/new-file diffs checked. Non-null local summary retained; reporting/coverage/adoption gaps explicit. Eight-file results commit remains gated.
+- [x] ASR5 — Closeout complete: eight-file scope, touched links, 19 unchanged frozen inputs, tested source bindings, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable tracked/new-file diffs checked. Non-null local summary retained; reporting/coverage/adoption gaps explicit. Results committed as `8bf88b3`.
 
-Evidence: `data/t17/wheel-artifact-review-02/`. No optional retry or adoption; both real workers exited cleanly. Next: request the eight-file results commit and preparation of bounded dependency/licence/native/source reconciliation. Earlier closed roots and historical checkpoint files remain untouched.
+Evidence: `data/t17/wheel-artifact-review-02/`. No optional retry or adoption; both real workers exited cleanly. Results committed as `8bf88b3`; the user approved preparation of the RC package above. Earlier closed roots and historical checkpoint files remain untouched.
 
 ## Earlier T17-IF-AS — stopped during source display; closeout committed
 
