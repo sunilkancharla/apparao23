@@ -1,6 +1,6 @@
-## Latest execution point — capture verified; local hostname guard conflict diagnosed
+## Latest execution point — CC results committed; narrow guard correction proposed
 
-CC1–CC5 and its planning commit were approved; planning committed as `86bdaa9`. [CC findings](docs/benchmarks/reconciliation-capture-correction.md): expected RED and eight GREEN capture cases passed their intended outcomes; one parser attempt retained the full error, identifying the guard's rejection of a hostname query. Guard unchanged, no parser retry/graph/research. Next: review the six-file results commit and prepare a source-only comparison of a narrowly scoped hostname exception versus supplied marker environments. Runtime adoption/G2 remain open.
+CC results committed as `d36bd49`. Source comparison in the [MG proposal](docs/proposals/marker-environment-guard-review.md) confirms that supplied marker dictionaries still trigger default platform lookup. Recommend an exact review-child hostname-event exception, with test-first policy checks and one conditional parser attempt. MG1–MG5/four-file planning commit await approval; no guard edit, import, retry or fresh root created. Reconciliation/adoption/G2 remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

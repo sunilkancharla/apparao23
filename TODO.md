@@ -1,4 +1,16 @@
-## Latest T17-IF-CC — capture verified; parser blocker diagnosed
+## Latest T17-IF-MG — source comparison and correction proposal ready
+
+CC results committed as `d36bd49`. The [exact MG proposal](docs/proposals/marker-environment-guard-review.md) records the read-only source comparison, exact identities, review-child-only hostname exception and bounded tests/attempt. Supplied marker dictionaries still invoke default lookup in this library version. MG1–MG5 and its four-file planning commit await approval.
+
+- [ ] MG1 — After approval, bootstrap/freeze and inspect exact guard/loader/capture source and commands. Accept: fixed input/tool identities, shared leases, unchanged capture aid; no old dispatch, graph or global import-path change.
+- [ ] MG2 — Execute a meaningful expected RED against the unchanged policy before authoring the corrected predicate. Accept: exact hostname-event allowance assertion demonstrably fails; retained evidence.
+- [ ] MG3 — Implement only the approved hostname-event exception and pass GREEN against the actual parser policy. Accept: all other socket/subprocess/native/import denials retained; synthetic event controls perform no networking.
+- [ ] MG4 — Only after GREEN, one parser attempt. Accept: guard installed before environment lookup, complete admitted capture/exit/teardown, ten marker-control outcomes recorded; no further exception/retry/reconciliation.
+- [ ] MG5 — Completion/stop findings and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: six-document closeout maximum; separate results-commit/next-package/adoption gates.
+
+Preparation checks passed: four-document scope, eight fixed source/evidence hashes, 18 local links, task-ID consistency, whitespace, readable plan diff and empty index; other tracked files unchanged. No `marker-environment-guard-01` root, generated guard/fixture, import or parser retry created/started. Prior roots remain read-only; the historical CC authoring-order deviation remains recorded. No product security policy, dependency, target hardware or G2 change.
+
+## Earlier T17-IF-CC — capture verified; results committed
 
 CC1–CC5 and its planning commit were approved; planning committed as `86bdaa9`. [CC findings](docs/benchmarks/reconciliation-capture-correction.md) record passing capture controls and the single, fully captured parser failure at the guard's `socket.gethostname` restriction. The [approved package](docs/proposals/reconciliation-capture-correction.md) is consumed; no further parser attempt/guard change/graph/research is authorized.
 
