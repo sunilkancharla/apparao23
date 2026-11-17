@@ -1,3 +1,14 @@
+## Latest T17-IF-MR — metadata/dependency readiness proposed
+
+AR results/timing approval committed as `0d4003e`. [Exact MR proposal](docs/proposals/hub-metadata-dependency-review.md) permits source-only metadata review before build-source mapping, which remains an adoption item. MR execution and five planning-document commit await approval.
+
+- [ ] MR1 — After approval, durable accounting/failure reservation before optional reads; verified immutable/reporting controls and frozen inputs. Acceptance: correct ceilings/identities, no old-root writes/payload access.
+- [ ] MR2 — After MR1, applicable graph and exact candidate versions compared with project/lock constraints. Acceptance: roots/edges/markers/extras explicit, conflicts/unknowns retained, no pin/lock override.
+- [ ] MR3 — After MR2/partial graph, licence/notices/advisory/platform/native/offline-intent and publisher artifact metadata matrix. Acceptance: evidence categories explicit; no runtime/security/ABI/installed-footprint guarantee.
+- [ ] MR4 — After MR3/stop, concrete readiness/decision recommendation; preservation/history/links/scope/whitespace/readable diff/resource/static-final-command checks and checkpoint. Acceptance: separate results commit/provisioning/adoption gates, unresolved source mapping carried forward.
+
+No new MR root, ledger, control, helper, research, payload acquisition or trial started during proposal preparation. Larger source-only budgets are proposed explicitly, not used. Earlier task states are historical.
+
 ## Latest T17-IF-AR — bounded comparison complete; user decision pending
 
 Planning commit `e1a1571`; [comparison and exact proposed decision](docs/benchmarks/stable-tokenizer-alternatives.md) retain evidence gaps and separate adoption gates.

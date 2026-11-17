@@ -1,3 +1,7 @@
+## Latest execution point — AR decision committed; metadata/dependency review proposed
+
+Seven AR results and the approved narrow timing decision committed as `0d4003e`. [MR proposal](docs/proposals/hub-metadata-dependency-review.md) covers unchanged Hub2.4.0/Tokenizers0.23.3 metadata, applicable graph, project-pin conflicts, notices/advisories and prospective Windows artifact identities. Build-source mapping stays open for adoption. MR1–MR4 and five-document commit await approval; no new root/research/install/runtime work started. Proposed64units/1,200seconds/16MiBreads/4MiBartifacts/12calls36targets20names, with immutable controls and separate later execution/adoption gates. Earlier statuses below are historical.
+
 ## Latest AR outcome — retain baseline; narrow timing decision proposed
 
 AR planning committed as `e1a1571`. [Comparison](docs/benchmarks/stable-tokenizer-alternatives.md) reviewed 2.4.0/2.3.0/2.2.0 across six calls/21 targets and found no demonstrated downgrade benefit. The user approved retaining baseline and deferring exact build-source mapping only before metadata/notices/advisory/dependency review, carrying it to adoption. Seven-file results commit and next-proposal preparation are approved; new execution, source-pin or runtime changes remain gated. Earlier statuses below are historical.
