@@ -1,13 +1,13 @@
-## Latest T17-IF-GC — focused gap closure proposed
+## Latest T17-IF-GC — partial evidence; inspection proposal next
 
-MR results committed as `e25690b`. [Exact GC proposal](docs/proposals/hub-dependency-gap-closure.md) reuses known evidence and reserves closeout time. Execution/five planning-document commit await approval.
+Planning commit `0768aea`; [findings](docs/benchmarks/hub-dependency-gap-closure.md) retain evidence and caveats.
 
-- [ ] GC1 — After approval, bootstrap/phase/immutable/reporting controls and freeze; classify reusable evidence/missing fields. Acceptance: controls/identities pass before optional reads; no old-root writes.
-- [ ] GC2 — After GC1, HF-Xet normal Windows/pinned metadata, FSSpec identity and retained-node constraints. Acceptance: exact source evidence or unknowns; no default pin/ABI/dependency assumptions.
-- [ ] GC3 — After GC2/partial, notice/offline intentions and exact static-inspection allowlist or blocker. Acceptance: payload/runtime checks remain later gates.
-- [ ] GC4 — At720s or earlier completion, concise findings/checkpoint, targeted preservation/link/scope/diff/resource checks and validated final summary. Acceptance: truthful closure within total1,200s, or explicit unfinished checks/overrun; separate commit/adoption gates.
+- [x] GC1 — Controls/freeze/early matrix passed;25 inputs, no old-root writes/payload.
+- [ ] GC2 — Partial: HF-Xet/FSSpec checksum/licence identities and seven lock records; exact bytes/requirements still open.
+- [ ] GC3 — Inspection-planning decision recorded; notice/offline/actual behavior gaps retained.
+- [x] GC4 — Source cutoff enforced; protected findings/checks/actual timing/error records retained. User stopped session-checkpoint updates; progress remains here and in reports.
 
-No GC root/control/lookup/helper/trial created during preparation. Do not repeat empty MR routes or restart a closed allocation. Earlier tasks historical.
+Two source calls/eight targets; no further source request after cutoff. Closure checks:23 frozen inputs,2 preserved suffixes,7 touched links, exact scope/index/whitespace; final command parsed. Session-checkpoint unchanged by user direction. Results commit and exact static-inspection proposal preparation need approval; no acquisition/install/adoption. Earlier tasks historical.
 
 ## Latest T17-IF-MR — partial review; protected closeout
 

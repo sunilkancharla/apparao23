@@ -8,6 +8,7 @@ This file contains persistent, repository-wide working instructions for Codex. R
 - The **approved Stage 1 `SPEC.md`** defines product requirements and acceptance criteria. Its carried-forward decisions supersede older provisional statements as specified there.
 - When present and approved, `PLAN.md` defines implementation order and `TODO.md` tracks atomic work. Drafts and deleted plans are not authorization.
 - `README.md` documents what actually exists and has been verified. Existing skills/reference documentation is not evidence of implemented application functionality.
+- **No session-checkpoint files:** the user has disabled these. Do not create or update `docs/session-checkpoint.md` or renamed equivalents unless explicitly requested. Keep durable task progress in TODO, PLAN and linked evaluation/review reports. Leave existing historical checkpoint files unchanged unless asked.
 - If project artifacts conflict or a request changes an approved requirement, explain the inconsistency and ask for a decision before dependent work. Do not silently modify SPEC, invent defaults, or infer approval from these standing rules.
 
 ## Current approval state and stopping point

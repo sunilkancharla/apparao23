@@ -1,3 +1,7 @@
+## Latest GC evidence — inspection proposal can be prepared
+
+[GC findings](benchmarks/hub-dependency-gap-closure.md) bind HF-Xet/FSSpec filenames/checksums and licence declarations; exact bytes, FSSpec attestation, requirements/notices/offline behavior remain explicit gaps. Reuse MR's six identities. No acquisition/install/adoption authorized. Earlier evidence below remains historical.
+
 ## Latest MR evidence — incomplete readiness
 
 [MR findings](benchmarks/hub-metadata-dependency-review.md) record candidate/artifact/advisory evidence and exposed compatible pin ranges. HF-Xet/FSSpec, full retained/native/notice/offline coverage remain incomplete. No installation or pin/lock change. Metadata-only build-source deferral unchanged. Earlier entries historical.

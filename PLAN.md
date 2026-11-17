@@ -1,6 +1,6 @@
-## Latest execution point — MR committed; focused gap closure proposed
+## Latest GC outcome — artifact identifiers improved
 
-Seven MR results committed as `e25690b`. [GC proposal](docs/proposals/hub-dependency-gap-closure.md) reuses evidence, closes specific HF-Xet/FSSpec/retained-node/notice/offline preparation gaps and produces a static-inspection allowlist or precise blocker. New source cutoff600s, optional-work cutoff720s, total1,200s with480s reserved closure;8calls24targets. GC1–GC4 and five-document commit await approval. No new root/research/payload/runtime work started. Earlier statuses historical.
+Planning committed as `0768aea`. [GC findings](docs/benchmarks/hub-dependency-gap-closure.md) identify HF-Xet/FSSpec publisher checksums/licences and retained lock context; requirements/notices/offline gaps remain. Next prepare an exact static-inspection proposal with size/provenance caveats after approval. No acquisition/runtime/adoption. Progress stays in these task/report files; no session-checkpoint updates.
 
 ## Latest MR outcome — partial evidence; limits reached
 

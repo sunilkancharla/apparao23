@@ -1,3 +1,7 @@
+## Latest GC outcome — static-inspection planning next
+
+[GC evidence](../benchmarks/hub-dependency-gap-closure.md) supports preparing an exact static-inspection proposal with rounded-size/provenance caveats. No payload/runtime/parity work approved; source mapping remains open for adoption. Metadata-only deferral unchanged.
+
 ## Latest MR readiness — gaps remain
 
 [MR evidence](../benchmarks/hub-metadata-dependency-review.md) records partial dependency/artifact/advisory findings. Native/pinned metadata/notices/offline gaps prevent installation readiness. Build-source mapping remains open for adoption under approved metadata-only timing deferral. No input-fit execution/adoption approved.

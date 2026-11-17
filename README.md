@@ -1,4 +1,4 @@
-**Latest checkpoint:** MR results committed as `e25690b`. [Focused gap closure](docs/proposals/hub-dependency-gap-closure.md) is proposed with evidence reuse and earlier research/closeout cutoffs. Execution and five-document commit await approval. Installation readiness and build-source adoption items remain open; no runtime/application change. Earlier entries historical.
+**Current status:** [GC findings](docs/benchmarks/hub-dependency-gap-closure.md) identify the missing HF-Xet/FSSpec artifact checksums/licences. Next is a separately approved static-inspection proposal; no package was acquired or installed. Requirements/notices/offline/adoption gaps remain. Task/report files carry progress; session-checkpoint files are no longer updated. Earlier entries historical.
 
 **Latest checkpoint:** MR planning committed as `ed7ec1b`. [Review findings](docs/benchmarks/hub-metadata-dependency-review.md) identify candidate/artifact/advisory evidence with remaining metadata/native/notice/offline gaps. Research stopped at its limits; installation is not ready. Findings/checkpoint saved, no dependency or application change. Earlier entries historical.
 
