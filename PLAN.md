@@ -1,3 +1,7 @@
+## Latest execution point — SC stop committed; immutable-ledger continuation proposed
+
+Five SC result/status files committed as `c404b61`. [Corrected continuation](docs/proposals/hub-source-coordinate-continuation.md) proposes fresh epoch 02 and exclusive-create, hash-linked accounting records with checked sequence selection; no File.Replace or old-root repair. Inline accounting/output controls precede evidence reads. SC1–SC4 retain 48 units/900 seconds/2 MiB artifacts/8 MiB reads/six calls/18 targets; ledger validation receives 4 MiB within that read ceiling. Execution and five-document commit await approval. No fresh root/control/research executed. Earlier statuses below are historical.
+
 ## Latest SC outcome — accounting stop before public research
 
 SC planning committed as `0868f05`. [Partial findings](docs/benchmarks/hub-source-coordinate-review.md): durable bootstrap succeeded, then accounting File.Replace rejected its backup path before output controls, entry preservation or source research. Required I/O stop applied; no retries, source-pin changes, payload reads, trials or adoption. Pending reservations retained, protected closure/checkpoint only. Five result/status files await commit approval; recommend preparing a fresh continuation with corrected accounting. Earlier statuses below are historical.

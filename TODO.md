@@ -1,3 +1,14 @@
+## Latest T17-IF-SC — immutable-accounting continuation proposed
+
+Stopped epoch-01 findings committed as `c404b61`. [Exact continuation](docs/proposals/hub-source-coordinate-continuation.md) defines a fresh root, bounded immutable record chain, inline controls and unchanged research ceilings. Package and five planning-document commit await approval.
+
+- [ ] SC1 — After approval, bootstrap new record before optional reads; append/fresh-selection and negative/output controls; freeze/verify small evidence. Acceptance: valid sequence accepted, gap/hash/counter/partial/terminal failures refused; no old-root writes.
+- [ ] SC2 — After SC1, public exact-artifact publisher/source review within six calls/18 targets. Acceptance: cited verified/unknown/conflicting relationships, failures charged, no payload acquisition or source-pin substitution.
+- [ ] SC3 — After SC2/required stop, retain/correction/defer recommendation. Acceptance: source roles or exact unresolved relationship documented; no downstream graph/runtime adoption.
+- [ ] SC4 — After SC3/stop, preservation, local links/scope/whitespace/readable diff/resource checks, checkpoint and results-commit request. Acceptance: honest closeout including failures; no allocation reset or application claim.
+
+No epoch-02 root, ledger, control, helper, research or trial exists from this preparation. Earlier completed/partial task states refer to historical allocations.
+
 ## Latest T17-IF-SC outcome — partial bootstrap, no research
 
 Exact planning commit `0868f05`; [findings](docs/benchmarks/hub-source-coordinate-review.md) preserve the failure without resetting the epoch.

@@ -1,3 +1,15 @@
+# Latest checkpoint — SC stop committed; corrected continuation prepared
+
+User approved committing the five reviewed SC findings/status files and preparing a corrected continuation. Delivery identity/allowlist/index/whitespace checks passed; exact commit `c404b61` succeeded. No runtime records, session summary or unrelated content staged. Closed attempt 01 remains unchanged: 16/48 units,273.917 seconds,760009-byte artifact upper, zero source calls/tests/workers. No failure diagnostic or source retry performed.
+
+Prepared docs/proposals/hub-source-coordinate-continuation.md plus PLAN/TODO/README/this checkpoint only. Proposed fresh data/t17/hub-source-coordinate-review-02; SC1 exclusive-create/flush initial ledger then checked append/fresh-selection, in-memory negative and output controls before optional evidence; SC2 public source mapping; SC3 recommendation; SC4 closure. No File.Replace/mutable pointer/overwrite; at most32 ledger records4KiB each, contiguous hash-linked sequence with schema/identity/counter/terminal checks; partial highest record stops rather than being skipped. Preserve failure records, no refund/reset.
+
+Same48units(36normal/12protected),900active seconds,2MiB artifacts,8MiB local reads; reserve4MiB of those reads for ledger validation and4MiB for evidence/docs. Same6webcalls18targets,short/medium, at most4/call; original explicit one fresh attempt per previously inaccessible endpoint retained, never exercised in epoch01. Reporting8KiB/invocation48KiBtotal8KiBclosure reserve. No test suites/Ruff/workers/candidate imports/model/API/native trials; only expressly planned inline accounting/output controls. No payload reread/download or pin/G2/runtime/application adoption.
+
+Execution and five-document proposal commit await approval. No new root/ledger/control/helper/fixture/research created. Use existing SC report for clearly separated epoch02 findings after approval, preserving epoch01 history. Local planning/documentation workflows carried forward; no skill scripts/subagents. Earlier checkpoints below are historical.
+
+Preparation checks passed: exact four tracked status edits plus one new proposal; empty index; six immutable HS/SC source/report identities preserved; 363 local links; whitespace; future root absent. Readable tracked additions and new proposal reviewed. Documentation-only work, no application tests. Five proposal/status files remain uncommitted.
+
 # Latest checkpoint — SC accounting stop before source research
 
 User approved SC1–SC4 and five planning docs; exact scoped commit `0868f05` succeeded. First execution invocation exclusively created fresh data/t17/hub-source-coordinate-review-01 meter/approval records before optional reads (8 units/512 reporting bytes). Next invocation precharged a pending update (9 units/65,536 read bytes/2,560 reporting bytes), flushed meter.json.pending, then File.Replace rejected the backup path. No optional evidence read, output-control demonstration, entry preservation or research followed. Required I/O stop applied; original and pending ledgers preserved, no refund/reset/retry.
