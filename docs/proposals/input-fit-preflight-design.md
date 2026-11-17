@@ -1,6 +1,6 @@
-## Latest PR outcome — fixed native metadata probe passed
+## Latest AS outcome — source display stopped review before implementation
 
-[PR findings](../benchmarks/wheel-metadata-probe-retry.md) record 12 passed control checks and one successful fixed native metadata request, with explicit host-review timing and verified teardown. Planning commit `103a6f1`; no wheel acquisition, candidate execution or input-fit result. Prepare the remaining bounded artifact-review package before further execution. Source mapping, remaining metadata/native/licence/offline/parity and G2 gates remain open. The metadata-only timing deferral is unchanged.
+[AS findings](../benchmarks/wheel-artifact-review.md) record a source-display truncation during AS1; planning commit `b466a78`. No aid implementation, Job trial, metadata/payload acquisition or input-fit result occurred. A corrected host reporting path needs review before another bounded execution allocation. Prior probe evidence and source/metadata/native/licence/offline/parity/G2 gates remain unchanged. The metadata-only timing deferral is unchanged.
 
 ## Latest MR readiness — gaps remain
 

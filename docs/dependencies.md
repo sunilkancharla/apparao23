@@ -1,6 +1,6 @@
-## Latest PR evidence — native metadata access verified
+## Latest AS evidence — source display stopped review before acquisition
 
-[PR findings](benchmarks/wheel-metadata-probe-retry.md): 12 output-control checks and one fixed native HTTPX2 release-metadata request passed; planning commit `103a6f1`. The response matched its expected publisher entry, with clean process teardown. No wheel payload was acquired or verified. Other metadata/size/provenance, requirements/notices/native/source/offline/adoption gaps remain. This probe does not approve installation or the remaining artifact-review execution. Earlier evidence below remains historical.
+[AS findings](benchmarks/wheel-artifact-review.md): source-display truncation stopped AS1 before implementation or acquisition; planning commit `b466a78`. No new candidate metadata/payload was fetched or verified. The prior successful native probe remains evidence for its specific response. Artifact/size/provenance, requirements/notices/native/source/offline/adoption gaps remain; no installation or runtime selection follows. Earlier evidence below remains historical.
 
 ## Latest MR evidence — incomplete readiness
 

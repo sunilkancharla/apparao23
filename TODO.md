@@ -1,14 +1,14 @@
-## Latest T17-IF-AS — artifact-review proposal ready; execution pending
+## Latest T17-IF-AS — stopped during source display; protected closeout
 
-PR results committed as `7c4e172`. The [exact AS package](docs/proposals/wheel-artifact-review.md) records fixed artifacts, ordered guard/helper tests, ownership/transport/ZIP boundaries and revised shared limits. Execution and its four-file planning commit await approval.
+AS1–AS5 and its planning commit were approved; planning committed as `b466a78`. [Findings](docs/benchmarks/wheel-artifact-review.md) retain the source-display truncation and skipped work. The [approved scope](docs/proposals/wheel-artifact-review.md) remains historical; its stopped allocation cannot be reset automatically.
 
-- [ ] AS1 — After approval, bootstrap/freeze and architecture/dependency/security design review. Accept: exact manifest/tool identities and primitive dependency closure; reporting/startup/ownership/transport/ZIP design consistent with the approved package before aid implementation.
-- [ ] AS2 — After AS1, two aids test-first with native ownership controls. Accept: RED, passing abuse/regression/integrity mutation/Job checks and final Ruff/format/code/security review; shared counters cover all subprocesses.
-- [ ] AS3 — After AS2, one acquisition worker: eight fresh metadata admissions and eight fixed wheel requests. Accept: exact size/SHA, safe partials/source binding/monitoring and verified teardown; no retry/substitution.
-- [ ] AS4 — After AS3, one inert inspection worker and bounded cached-root reads. Accept: RECORD/metadata/notices/native findings, identity preservation and verified teardown; no candidate code execution.
-- [ ] AS5 — At completion/stop, findings/task/readiness updates and preservation/scope/link/whitespace/readable-diff/non-null-summary checks. Accept: actual measurements/gaps and separate results-commit/adoption gates.
+- [ ] AS1 — Partial/stopped: bootstrap/16 frozen inputs and limited source review completed; combined search/source/skill display truncated (tool reported 1,895 original tokens against a 1,700-token return limit). Full design/primitive/control review incomplete.
+- [ ] AS2 — Not started; no versioned helper, fixture, test, Job trial or Ruff run.
+- [ ] AS3 — Not started; zero HTTP transactions or wheel downloads.
+- [ ] AS4 — Not started; no candidate payload reads or imports.
+- [x] AS5 — Protected closeout complete: six-file scope, seven touched links, 13 unchanged frozen inputs, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; truncated-output/read-measurement gaps explicit. Separate results-commit/adoption gates remain.
 
-Preparation checks passed: four-document scope, five touched local links, three pinned source/scope identities, whitespace, empty index and readable diff; historical inputs unchanged against `7c4e172`. No `wheel-artifact-review-01` root, helper, fixture, test, Job trial or acquisition created or started. Next: request AS1–AS5/four-file planning-commit approval, explicitly including revised timing/suites/timeout and supervision. Closed roots and historical checkpoint files remain untouched.
+Evidence: `data/t17/wheel-artifact-review-01/`. No optional retry or new execution allocation; no owned trial workers remain. Next: request the six-file results commit and approval to prepare a short AS reporting correction covering every host inspection command. Closed roots and historical checkpoint files remain untouched.
 
 ## Earlier T17-IF-PR — controls and native metadata probe passed
 

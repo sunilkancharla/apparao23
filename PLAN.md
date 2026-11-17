@@ -1,6 +1,6 @@
-## Latest execution point — PR results committed; artifact review proposed
+## Latest execution point — AS stopped during source review
 
-PR results committed as `7c4e172`. The [AS package](docs/proposals/wheel-artifact-review.md) proposes test-first aids/Windows Job controls, eight fresh metadata admissions and pinned inert acquisitions, then bounded static/cached-root inspection. AS1–AS5 and the four-file planning commit await approval, including revised active time/suites/timeout/host-wait limits. No new execution started; installation, source/licence/native/offline/adoption/G2 gaps remain.
+AS planning committed as `b466a78`. [Findings](docs/benchmarks/wheel-artifact-review.md): initial accounting/16 frozen inputs completed, but combined source/search display was truncated during AS1. Optional work stopped before helper implementation, tests, Job trials or acquisition. Protected closeout retains the failure; no timer/allocation reset. Next request a results commit and a short correction enforcing byte-checked capture for every host inspection command before a new execution allocation. Prior successful probe evidence and adoption/G2 gaps remain.
 
 ## Latest MR outcome — partial evidence; limits reached
 
