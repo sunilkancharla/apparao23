@@ -1,3 +1,9 @@
+# Latest checkpoint — continuation 02 stopped; no artifact inspection
+
+User approved closeout/fresh continuation; exact five-file closeout commit 9462a08 succeeded. Epoch02 first invocation correctly bootstrapped durable accounting. Later source-convention read emitted unmeasured raw output (3,452 original tokens; exact bytes unknown), so reporting compliance cannot be established. Optional work stopped. No helpers, artifact payload reads, tests, Ruff, web research, candidate processes, model/API calls or installations. No owned worker started. Local epoch02 meter records stop and conservative charges; do not reset either epoch.
+
+Current five findings/status files remain uncommitted. Findings propose fresh epoch03 with unchanged caps plus one enforced, byte-measured output gate tested with synthetic text before optional reads; explicit approval required. G2/Stage1/16GB CPU-only/formats/privacy unchanged. Summary and unrelated files preserved. Earlier checkpoints are historical.
+
 # Latest checkpoint — IF-SA stopped; planning committed
 
 User approved IF-SA and the exact five planning documents; commit `fca4bb9` completed after capturing harmless Git line-ending warnings. Session summary and unrelated files excluded; index empty after commit. IF-SA first post-approval command read local skills/proposal before durable bootstrap and returned over 8 KiB controlled output (12,775 original tokens; exact bytes unknown). Mandatory stop; late `data/t17/standalone-static-verification-01/stop.json` explicitly records noncompliance, not a retroactive fix.

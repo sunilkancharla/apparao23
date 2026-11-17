@@ -1,3 +1,5 @@
+**Latest IF-SA status:** Closeout commit 9462a08 completed. A fresh run stopped on another agent output-control error before artifact inspection or tests. No new application capability was built or verified. A measured-output correction is proposed in the findings; another run requires approval.
+
 **Latest research status:** Approved IF-SA planning committed as `fca4bb9`, but execution stopped before artifact inspection because the initial accounting/output rules were not met. [Findings](docs/benchmarks/standalone-tokenizer-static-verification.md) explain the process failure and a proposed fresh continuation. No software or model failure was observed, and no new capability was verified.
 # Document Assistant
 

@@ -1,3 +1,7 @@
+## Latest IF-SA status — continuation 02 stopped
+
+Closeout commit 9462a08 complete. SA1 bootstrap passed but reporting/preservation acceptance incomplete; SA2–SA4 unstarted; SA5 partial-stop evidence saved. No software tests ran. See docs/benchmarks/standalone-tokenizer-static-verification.md for the proposed output-gated continuation 03, pending approval.
+
 ## Latest T17-IF-SA outcome — mandatory process stop
 
 Planning commit `fca4bb9` completed. IF-SA1 failed its accounting/reporting prerequisite; IF-SA2–SA4 remain unstarted. IF-SA5 recorded [partial-stop findings](docs/benchmarks/standalone-tokenizer-static-verification.md); findings commit is pending. No tests, research, artifact inspection or candidate execution. Fresh continuation requires explicit approval; do not reset epoch 01. Earlier pending/approval status text is historical.

@@ -1,3 +1,7 @@
+## Latest IF-SA status — continuation 02 stopped
+
+Closeout committed as 9462a08. Fresh bootstrap succeeded, but unmeasured source output prevented reporting-bound acceptance; no artifact inspection or implementation occurred. Current findings propose a single measured-output gate before a separately approved continuation 03. No retry authorized.
+
 ## Latest IF-SA outcome — stopped before artifact inspection
 
 Approved planning documents committed as `fca4bb9`. IF-SA1 stopped on bootstrap/reporting order; SA2–SA4 were not started. [Findings](docs/benchmarks/standalone-tokenizer-static-verification.md) preserve the failure and propose a fresh, bootstrap-first continuation with unchanged caps, pending approval. No runtime adoption or implementation follows. Earlier proposal statuses below are historical.
