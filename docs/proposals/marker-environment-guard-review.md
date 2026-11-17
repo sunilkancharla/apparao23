@@ -1,6 +1,6 @@
 # T17-IF-MG — narrow marker-environment guard correction
 
-**Proposed; MG1–MG5 execution and the four-file planning commit await approval.** CC results were committed as `d36bd49`. The user approved that commit and preparation of this review. Source comparison below was read-only preparation; no new trial root, import, policy change or parser retry occurred.
+**Approved; planning committed as `299498d`; execution ended with a diagnosed platform-subprocess blocker.** [MG findings](../benchmarks/marker-environment-guard-review.md) record test-first RED, 20 passing policy cases, one fully captured parser failure and one orchestration correction. No further exception/retry, graph/research or adoption. The original boundary below is retained for audit and does not authorize another run. CC results remain committed as `d36bd49`.
 
 ## Source comparison and recommendation
 

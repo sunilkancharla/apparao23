@@ -1,6 +1,6 @@
-## Latest execution point — CC results committed; narrow guard correction proposed
+## Latest execution point — policy checks passed; platform subprocess denied
 
-CC results committed as `d36bd49`. Source comparison in the [MG proposal](docs/proposals/marker-environment-guard-review.md) confirms that supplied marker dictionaries still trigger default platform lookup. Recommend an exact review-child hostname-event exception, with test-first policy checks and one conditional parser attempt. MG1–MG5/four-file planning commit await approval; no guard edit, import, retry or fresh root created. Reconciliation/adoption/G2 remain open.
+MG1–MG5 and its planning commit were approved; planning committed as `299498d`. [MG findings](docs/benchmarks/marker-environment-guard-review.md): RED preceded the two-line exception, 20 policy cases passed, and the single parser attempt captured a new platform-helper subprocess denial. No extra exception/retry/graph/research. Next: review the six-file results commit and prepare an explicit environment-adapter review that retains subprocess denial. Reconciliation/adoption/G2 remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

@@ -1,14 +1,14 @@
-## Latest T17-IF-MG — source comparison and correction proposal ready
+## Latest T17-IF-MG — policy checks passed; platform subprocess blocked
 
-CC results committed as `d36bd49`. The [exact MG proposal](docs/proposals/marker-environment-guard-review.md) records the read-only source comparison, exact identities, review-child-only hostname exception and bounded tests/attempt. Supplied marker dictionaries still invoke default lookup in this library version. MG1–MG5 and its four-file planning commit await approval.
+MG1–MG5 and its planning commit were approved; planning committed as `299498d`. [MG findings](docs/benchmarks/marker-environment-guard-review.md) record RED before correction, 20 passing policy cases and one complete parser diagnostic at the retained subprocess denial. The [approved package](docs/proposals/marker-environment-guard-review.md) is consumed; no additional exception/retry/reconciliation is authorized.
 
-- [ ] MG1 — After approval, bootstrap/freeze and inspect exact guard/loader/capture source and commands. Accept: fixed input/tool identities, shared leases, unchanged capture aid; no old dispatch, graph or global import-path change.
-- [ ] MG2 — Execute a meaningful expected RED against the unchanged policy before authoring the corrected predicate. Accept: exact hostname-event allowance assertion demonstrably fails; retained evidence.
-- [ ] MG3 — Implement only the approved hostname-event exception and pass GREEN against the actual parser policy. Accept: all other socket/subprocess/native/import denials retained; synthetic event controls perform no networking.
-- [ ] MG4 — Only after GREEN, one parser attempt. Accept: guard installed before environment lookup, complete admitted capture/exit/teardown, ten marker-control outcomes recorded; no further exception/retry/reconciliation.
-- [ ] MG5 — Completion/stop findings and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: six-document closeout maximum; separate results-commit/next-package/adoption gates.
+- [x] MG1 — Eight fixed identities, 20 source/two metadata hashes and unchanged capture aid checked; reviewed loader/policy generation excluded old dispatch/graph.
+- [x] MG2 — Expected RED recorded against original guard before correction; source hashes, timestamp order and later two-line semantic difference verified.
+- [x] MG3 — Twenty cases passed against the actual policy loaded by the parser. Exact hostname allowance; all other tested denials retained; no networking by policy controls.
+- [x] MG4 — One parser attempt, full 3,114-byte stderr and child exit retained. Windows-version helper subprocess was denied; ten marker assertions were not reached. No retry or additional exception.
+- [x] MG5 — Six-document closeout passed: 10 frozen inputs/eight pinned inputs, 20 tool-source/two metadata hashes preserved; 22 local links, whitespace, readable diff, empty index and non-null receipt checked. Separate results-commit/next-package/adoption gates.
 
-Preparation checks passed: four-document scope, eight fixed source/evidence hashes, 18 local links, task-ID consistency, whitespace, readable plan diff and empty index; other tracked files unchanged. No `marker-environment-guard-01` root, generated guard/fixture, import or parser retry created/started. Prior roots remain read-only; the historical CC authoring-order deviation remains recorded. No product security policy, dependency, target hardware or G2 change.
+Three check invocations consumed, plus source-preparation controller; all four controllers and the sole parser child exited. One orchestration correction renamed a reserved PowerShell variable and verified already-recorded RED/source order before GREEN. No candidate install/import, Ruff/web/model run, graph or application feature. Next: review the six-file results commit and prepare an explicit environment-adapter source review, retaining subprocess denial. Prior roots, historical checkpoint files and unrelated user content remain untouched; the CC authoring-order deviation remains historical.
 
 ## Earlier T17-IF-CC — capture verified; results committed
 
