@@ -1,6 +1,6 @@
-## Latest execution point — WIC controls passed; probe deadline stopped execution
+## Latest execution point — WIC results committed; probe-only retry proposed
 
-WIC planning committed as `2aa9ea7`. [Findings](docs/benchmarks/wheel-static-inspection-continuation.md): 12 reporting-control checks passed, but the 360-second probe-start guard rejected the later command before Python/network startup. Zero HTTP/download/candidate activity; WIC2–WIC4 unexecuted. Protected closeout retains the failed timing/accounting evidence. Next request the results commit and propose a small probe-first retry reusing frozen controls, with host-wait accounting explicit. No automatic allocation reset or adoption/G2 change.
+WIC results committed as `0882bc0`. The [PR proposal](docs/proposals/wheel-metadata-probe-retry.md) reuses frozen controls for one metadata request, explicitly records/excludes one host-review interval from active timing, and narrows the supervision boundary to metadata only. PR1–PR3 and its four-file planning commit await approval. No new execution started; wheel acquisition/inspection, source/adoption/G2 gaps remain separately gated.
 
 ## Latest MR outcome — partial evidence; limits reached
 

@@ -1,4 +1,14 @@
-## Latest T17-IF-WIC — controls passed; stopped before probe startup
+## Latest T17-IF-PR — probe-only retry ready; execution pending
+
+WIC results committed as `0882bc0`. The [exact PR proposal](docs/proposals/wheel-metadata-probe-retry.md) reuses frozen controller/probe bytes, isolates host-review timing and permits only one metadata request with the explicit narrower supervision boundary. Execution and its four-file planning commit await approval.
+
+- [ ] PR1 — After approval, bootstrap/freeze/copy unchanged sources and rerun the existing synthetic controls. Accept: fixed identities, 12 checks and teardown pass; capture/launch accounting prepared before host permission request.
+- [ ] PR2 — After PR1, one approved native metadata probe. Accept: submission/entry clocks and every shell start accounted; one request or honest pre-start stop; bounded validation/capture and verified teardown.
+- [ ] PR3 — At completion/stop, findings/task/readiness updates and final preservation/scope/link/whitespace/diff/non-null-summary checks. Accept: actual timing/coverage gaps, separate results-commit/adoption gates; no acquisition or installation.
+
+Preparation checks passed: four-document scope, four touched local links, both fixed source identities, whitespace, empty index and readable diff; historical inputs unchanged against `0882bc0`. No `wheel-metadata-probe-01` root, control copy, fixture, test or network request created or started. Next: obtain PR1–PR3/four-file planning-commit approval, including the explicit timing/supervision changes. Closed roots and historical checkpoint files remain untouched.
+
+## Earlier T17-IF-WIC — controls passed; stopped before probe startup
 
 WIC1–WIC5 and its planning commit were approved; planning committed as `2aa9ea7`. [Findings](docs/benchmarks/wheel-static-inspection-continuation.md) retain passed controls and the probe-start deadline failure. The [approved scope](docs/proposals/wheel-static-inspection-continuation.md) remains historical; its stopped allocation cannot be reset automatically.
 
@@ -6,9 +16,9 @@ WIC1–WIC5 and its planning commit were approved; planning committed as `2aa9ea
 - [ ] WIC2 — Not started; no new versioned aid or implementation suite.
 - [ ] WIC3 — Not started; zero HTTP transactions or downloads.
 - [ ] WIC4 — Not started; no candidate payload reads/imports.
-- [x] WIC5 — Protected closeout complete: six-file delivery scope, seven touched links, 14 unchanged frozen inputs, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; timing/accounting and untested-monitor gaps explicit. Separate results-commit/adoption gates remain.
+- [x] WIC5 — Protected closeout complete: six-file delivery scope, seven touched links, 14 unchanged frozen inputs, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; timing/accounting and untested-monitor gaps explicit. Results committed as `0882bc0`; adoption gates remain.
 
-Evidence: `data/t17/wheel-static-inspection-02/`. One synthetic suite, no Ruff/network/candidate activity; no owned workers remain. Next: request the six-file results commit and approval to prepare a small probe-first retry that reuses frozen controls and records host waiting separately. No session-checkpoint writes.
+Evidence: `data/t17/wheel-static-inspection-02/`. One synthetic suite, no Ruff/network/candidate activity; no owned workers remain. Results committed as `0882bc0`; the user approved preparation of the PR proposal above. No new attempt or automatic allocation reset. No session-checkpoint writes.
 
 ## Earlier T17-IF-WI — stopped before probe; closeout committed
 
