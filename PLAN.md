@@ -1,3 +1,7 @@
+## Latest SC outcome — accounting stop before public research
+
+SC planning committed as `0868f05`. [Partial findings](docs/benchmarks/hub-source-coordinate-review.md): durable bootstrap succeeded, then accounting File.Replace rejected its backup path before output controls, entry preservation or source research. Required I/O stop applied; no retries, source-pin changes, payload reads, trials or adoption. Pending reservations retained, protected closure/checkpoint only. Five result/status files await commit approval; recommend preparing a fresh continuation with corrected accounting. Earlier statuses below are historical.
+
 ## Latest execution point — HS committed; source-coordinate review proposed
 
 The nine reviewed HS source/results files are committed as `12416e1`. [SC proposal](docs/proposals/hub-source-coordinate-review.md) isolates publisher/build/source mapping: SC1 bootstrap → SC2 public evidence → SC3 recommendation → SC4 closeout. Proposed 48 units/900 seconds/2 MiB artifacts/8 MiB local reads, six web calls/18 targets; no tests, workers, candidate payload reads or pin substitution. Package and five-document commit await approval. No new review root or research started. Earlier statuses below are historical.

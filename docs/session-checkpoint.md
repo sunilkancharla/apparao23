@@ -1,3 +1,15 @@
+# Latest checkpoint — SC accounting stop before source research
+
+User approved SC1–SC4 and five planning docs; exact scoped commit `0868f05` succeeded. First execution invocation exclusively created fresh data/t17/hub-source-coordinate-review-01 meter/approval records before optional reads (8 units/512 reporting bytes). Next invocation precharged a pending update (9 units/65,536 read bytes/2,560 reporting bytes), flushed meter.json.pending, then File.Replace rejected the backup path. No optional evidence read, output-control demonstration, entry preservation or research followed. Required I/O stop applied; original and pending ledgers preserved, no refund/reset/retry.
+
+Host exception bypassed the controlled emitter; record this reporting failure honestly. PowerShell null-string argument binding is suspected, not experimentally diagnosed. No diagnostic, test/Ruff, worker, candidate payload/import/execution, model/API/native trial, install/build/PATH/lock/application change occurred. No worker/service needed teardown. Pre-commit proposal verification was separate Git preparation, not package source research.
+
+Protected closure only: immutable named stop/close ledgers, partial report plus PLAN/TODO/README/this checkpoint (five files). Fourteen small identities captured after stop, explicitly not entry evidence; five immutable HS delivery identities matched. Keep HS report/aids/proposal/dependencies/preflight unchanged; no new source mapping or pin substitution. All historical roots remain unchanged. Final closeout records actual resources and verification.
+
+Recommend approval to commit five findings/status files and prepare an accounting-corrected, fresh source-only continuation proposal, preferably immutable accounting records with verified sequence selection. Do not create or execute that continuation without its later gate. G2/runtime/application/stage acceptance remains open. Local planning/documentation guidance carried forward; no skill scripts/subagents/goal/status/compact invocation. Earlier checkpoints follow.
+
+Protected closure verification: 14 post-stop identities unchanged; 360 local links passed; exact four tracked status edits plus one new report; empty index, whitespace and ignored runtime-root checks passed. Readable tracked/new-file diffs captured locally and reviewed. Final delivery hashes and resource totals recorded without a new trial or research attempt. Five result/status files remain uncommitted.
+
 # Latest checkpoint — HS committed; source-coordinate proposal prepared
 
 User approved all nine HS source/results files and preparation of the next proposal. Reviewed delivery hashes matched. Initial Git staging succeeded but PowerShell treated a line-ending warning as an error; no commit occurred in that invocation. Exact staged allowlist and hashes were rechecked; captured UTF-8 stdout/stderr execution completed commit `12416e1` (nine files). No tests/worker/research rerun; closed HS root unchanged. Unrelated content and session summary excluded.

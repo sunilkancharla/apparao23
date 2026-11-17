@@ -1,3 +1,14 @@
+## Latest T17-IF-SC outcome — partial bootstrap, no research
+
+Exact planning commit `0868f05`; [findings](docs/benchmarks/hub-source-coordinate-review.md) preserve the failure without resetting the epoch.
+
+- [ ] SC1 — Partial: initial meter/approval persisted; next accounting replacement failed before output controls/entry preservation. Flushed pending reservation retained without refund.
+- [ ] SC2 — Not started after mandatory I/O stop: zero calls/targets, no new provenance evidence.
+- [ ] SC3 — Partial: recommend a separately approved accounting-corrected continuation; source roles and pin decision unresolved.
+- [x] SC4 — Protected stop records, partial findings/checkpoint and closure consistency checks; final local closeout retains actual limits and reporting failure. No workers/services started.
+
+Five result/status files await commit approval. Preparing another proposal needs approval; no continuation, payload reread, dependency expansion, runtime/G2/application adoption is authorized. Earlier task states are historical.
+
 ## Latest T17-IF-SC — source-coordinate review proposed
 
 HS results committed as `12416e1`. [Exact SC proposal](docs/proposals/hub-source-coordinate-review.md) defines coordinates, evidence policy, budgets and gates. Preparation authorizes neither execution nor a source-pin change.
