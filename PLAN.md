@@ -1,6 +1,6 @@
-## Latest execution point — adapter suite stopped; bounded field correction proposed
+## Latest execution point — adapter correction passed; partial graph reviewed
 
-EA planning committed as `a09d8cc`. [EA findings and exact EAF follow-up](docs/benchmarks/marker-environment-adapter-review.md): expected RED preceded implementation; nine of 11 tests passed, two errored because KeyError-style field formatting defeated the whitelist. EA stopped before original controls/real graph. Proposed EAF1–EAF5 correct only the public exception-argument handling, retain all tests/strict guard, then conditionally run original controls and local graph. Request seven-file results commit and EAF execution approval; no correction/retry yet. Adoption/G2 remain open.
+EAF1–EAF5 and EA results commit approved; EA results committed as `629fc82`. [EAF findings](docs/benchmarks/marker-environment-adapter-followup.md): two-line correction passed all 11 unchanged tests and ten original controls; real local graph completed with 16 distributions and no conflicts on evaluated paths. Two platform conditions remain unknown per profile. Next: review seven-file EAF results commit and prepare bounded remaining platform/metadata/licence/provenance review. No installation/adoption/G2 or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 

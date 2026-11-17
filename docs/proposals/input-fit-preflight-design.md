@@ -1,3 +1,7 @@
+## Latest EAF outcome — adapter and original controls pass; partial graph evidence
+
+[EAF findings](../benchmarks/marker-environment-adapter-followup.md): approved two-line correction passed all 11 unchanged tests and ten original controls; one real graph review covered 16 distributions. No evaluated-path conflicts; two platform marker conditions remain unknown per profile. Strict audit policy and installed source unchanged. No tokenizer/native import, parity/model run, provisioning/adoption or G2 closure. Prepare the remaining platform/metadata/licence/provenance review before another package; source-mapping timing deferral remains unchanged.
+
 ## Latest EA outcome — fixture errors; original controls and graph not run
 
 [EA findings and bounded follow-up](../benchmarks/marker-environment-adapter-review.md): RED preceded the adapter/graph implementation; nine fixture tests passed and two exposed missing-field exception normalization. Optional work stopped, preserving tests and original strict guard. No original-control attempt, real graph, public research, model/parity run or adoption. EAF1–EAF5 require separate approval; no private/cache workaround or broader permission is proposed. Hardware, source-mapping deferral and G2 remain unchanged.

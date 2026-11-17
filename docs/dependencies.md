@@ -1,3 +1,7 @@
+## Latest EAF evidence — bounded local comparison completed; readiness still partial
+
+[EAF findings](benchmarks/marker-environment-adapter-followup.md): corrected adapter passed 11 unchanged tests/ten original controls, then compared 16 exact distributions under two labelled partial profiles. No conflicts found on evaluated paths or relevant project constraints; two marker conditions remain unknown in each profile (Hub/HF-Xet machine type and TQDM/Colorama platform system). Six matching locked metadata records were retained. Eight fixed roots are absent from the current lock and none was added. Root Python-version declarations, licence/native notices, source provenance and runtime/offline/parity remain open. No resolver, candidate install/import or adoption occurred.
+
 ## Latest EA evidence — adapter field bug blocks real dependency comparison
 
 [EA findings](benchmarks/marker-environment-adapter-review.md): nine of 11 adapter/graph-fixture tests passed, two errored on quoted missing-field names. Original controls and real retained-artifact/lock comparison did not run; fixture outcomes establish no project compatibility. Proposed EAF correction preserves all tests, strict restrictions and unknowns, with conditional original controls/graph only after passing. No candidate install/import, pin change or licence/provenance adoption.

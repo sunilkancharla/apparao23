@@ -1,14 +1,14 @@
-## Latest T17-IF-EAF — exact field correction proposed; EA stopped
+## Latest T17-IF-EAF — correction and controls pass; partial graph completed
 
-EA planning committed as `a09d8cc`. [EA results and complete EAF package](docs/benchmarks/marker-environment-adapter-review.md) record nine passing tests/two errors and the public exception-argument correction. EAF1–EAF5 execution and the seven-file EA results commit await approval. Prior failed cases are explicit reused RED evidence, not permission to reset the stopped EA ledger.
+EAF1–EAF5 and the EA results commit were explicitly approved; EA results committed as `629fc82`. [EAF findings](docs/benchmarks/marker-environment-adapter-followup.md) record the two-line correction, 11 passing unchanged tests, ten passing original controls and real partial graph. [Approved scope](docs/benchmarks/marker-environment-adapter-review.md#bounded-follow-up-eaf1eaf5--approved-and-executed) retained; stopped EA root stayed read-only.
 
-- [ ] EAF1 — After approval, fresh `marker-environment-adapter-02` bootstrap/freeze and exact source/test copy. Accept: fixed identities, strict guard and prior failures verified.
-- [ ] EAF2 — Apply only the two-line exception-field correction and run unchanged 11-test suite once. Accept: all pass, unknown fields/strict whitelist preserved; tests/graph/capture/guard unchanged.
-- [ ] EAF3 — Only after EAF2, one original ten-control attempt. Accept: complete admitted capture, passing result and owned exit; failure blocks graph.
-- [ ] EAF4 — Only after EAF3, one actual local graph comparison. Accept: same partial profiles/global 20-node union, conflicts/missing/unknowns explicit; no resolver or pin change.
-- [ ] EAF5 — Completion/stop resource/findings and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: seven-document maximum; separate future results-commit/adoption gates.
+- [x] EAF1 — Fresh root/ledger and eight exact source copies; nine pinned inputs, 20 tool-source/two metadata hashes and prior two-error RED evidence verified.
+- [x] EAF2 — Only approved two semantic lines changed; all 11 unchanged tests passed, other seven source helpers/guard/capture byte-identical.
+- [x] EAF3 — Original ten controls passed once; complete admitted capture and child exit verified.
+- [x] EAF4 — One actual local comparison: 16 distributions/global cap 20, no evaluated-path conflicts; two unknown marker conditions per profile retained. No resolver/pin change.
+- [x] EAF5 — Seven-document closeout passed: 10 frozen/nine prior inputs, 20 tool-source/two installed metadata hashes, six graph metadata records and seven unchanged helpers verified; 21 local links/two anchors, whitespace, readable diff, empty index and non-null receipt checked. Separate future results-commit/adoption gates.
 
-No EAF root, correction or rerun created/started. EA closeout checks passed: seven-document scope, nine frozen/nine prior pinned inputs, 20 tool-source/two metadata identities and eight follow-up source hashes preserved; 21 local links, whitespace, readable diff, empty index and non-null receipt checked. Closed roots, historical checkpoints and unrelated user changes remain preserved.
+All three check invocations consumed; three controllers/three workers exited with complete capture, zero orchestration corrections. No candidate install/import, Ruff/web/model run, native load or application feature. Next: request seven-file EAF results commit and preparation of bounded remaining platform conditions, root Python metadata, licence/native notices and provenance review. Older roots, historical checkpoints and unrelated user changes remain preserved.
 
 ## Earlier T17-IF-EA — stopped after adapter fixture errors
 

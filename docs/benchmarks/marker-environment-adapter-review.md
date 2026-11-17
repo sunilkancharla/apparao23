@@ -39,9 +39,9 @@ No orchestration correction, Ruff/web/model run, candidate installation/import, 
 
 At the stop receipt: 374.500 active/wall seconds, zero host-wait exclusion, 64 work units/32 starts prepaid, two of four check invocations consumed. Unused reservations do not authorize restarting this stopped root. Final elapsed time, leases and retained bytes are in the local summary. Read leases exclude total OS/interpreter I/O.
 
-## Proposed bounded follow-up EAF1–EAF5 — pending approval
+## Bounded follow-up EAF1–EAF5 — approved and executed
 
-This concrete follow-up is included in the seven-file results review so approval can cover its execution directly. It is **a new package**, not a reset/retry of EA's ledger. No follow-up code, root or process has been created. The factory override, partial-profile contract, original strict guard, original ten-control semantics and conditional graph rules in the EA proposal remain unchanged.
+The user explicitly approved this follow-up and the EA results commit (`629fc82`). [EAF findings](marker-environment-adapter-followup.md) record 11 passing unchanged tests, ten passing original controls and the completed partial graph. Execution used a fresh ledger/root; the stopped EA root was not retried. The original approved scope below is retained for audit and does not authorize another run. Factory/profile/strict-guard/fixture/graph contracts were unchanged.
 
 Fresh ignored root: **`data/t17/marker-environment-adapter-02/`**. Refuse an existing/reparse root; bootstrap/freeze first. Copy only the source below and the verified tool inventories, preserve earlier roots read-only, and validate every identity. The prior failed tests are reused explicitly as RED evidence; do not spend another invocation reproducing the same failure.
 
@@ -77,6 +77,6 @@ No hostname exception, subprocess permission, cache prewarming, private helper c
 
 Deliver ignored source/receipts/profiles/graph/accounting and `docs/benchmarks/marker-environment-adapter-followup.md`, plus affected updates to this report's follow-up status, dependencies, preflight, PLAN, TODO and README: seven versioned closeout documents maximum. Preserve AGENTS, SPEC, pyproject/lock, existing versioned tests/manifests, historical checkpoints and unrelated changes. The future results commit/adoption remain separate gates.
 
-Request **EAF1–EAF5 execution approval** and the **current seven-file EA results commit** separately. Approving the results commit alone does not authorize the follow-up. Dependency/licence/provenance/offline/parity/G2 decisions remain open.
+EAF1–EAF5 execution and the seven-file EA results commit were separately requested and both explicitly approved. The next EAF results commit still needs approval. Dependency/licence/provenance/offline/parity/G2 decisions remain open; this completed boundary does not authorize further execution or adoption.
 
-Current EA closeout checks passed: seven-document scope; nine frozen inputs/nine prior pinned identities preserved; 20 tool-source/two installed metadata hashes and eight follow-up source hashes checked; 21 local links, whitespace, readable diff, empty index and non-null receipt verified. SPEC, lock/configuration, existing versioned tests/manifests, historical checkpoints and unrelated user files remain unchanged. No EAF root or corrective code has been created. Final accounting is retained in the stopped root's summary.
+Historical EA closeout checks passed: seven-document scope; nine frozen inputs/nine prior pinned identities preserved; 20 tool-source/two installed metadata hashes and eight follow-up source hashes checked; 21 local links, whitespace, readable diff, empty index and non-null receipt verified. SPEC, lock/configuration, existing versioned tests/manifests, historical checkpoints and unrelated user files remained unchanged. EAF was created only after its subsequent explicit approval; EA accounting remains in the stopped root's summary.
