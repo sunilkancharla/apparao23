@@ -1,4 +1,16 @@
-## Latest T17-IF-AS — stopped during source display; protected closeout
+## Latest T17-IF-ASR — short reporting correction ready; execution pending
+
+AS results committed as `1d30457`. The [ASR correction](docs/proposals/wheel-artifact-review-reporting-correction.md) inherits all AS artifact/execution limits and requires a tested host-display path before source searches. Execution and its four-file planning commit await approval.
+
+- [ ] ASR1 — After approval, bootstrap/freeze, verify the 3,000-byte host-display path in one inherited suite, then original AS1 design review. Accept: controls pass before searches; exact input/tool/primitive/security review complete.
+- [ ] ASR2 — After ASR1, original AS2 two aids test-first. Accept: RED, passing abuse/regression/integrity/Job controls and final Ruff/format/code/security review within shared limits.
+- [ ] ASR3 — After ASR2, original AS3 fixed acquisition once. Accept: eight fresh metadata entries and eight exact wheels, ownership/size/SHA/teardown verified; no retry.
+- [ ] ASR4 — After ASR3, original AS4 inert inspection once. Accept: bounded metadata/RECORD/notices/native/cached-root findings and verified teardown; no candidate execution.
+- [ ] ASR5 — At completion/stop, original AS5 reporting and preservation/scope/link/whitespace/diff/non-null-summary checks. Accept: actual gaps/resource evidence and separate results-commit/adoption gates.
+
+Preparation checks passed: four-document scope, five touched local links, inherited package identity, whitespace, empty index and readable changes; historical inputs unchanged against `1d30457`. No `wheel-artifact-review-02` root, host control, helper, fixture, test, request or acquisition created or started. Next: obtain ASR1–ASR5/four-file planning-commit approval. Closed roots and historical checkpoint files remain untouched.
+
+## Earlier T17-IF-AS — stopped during source display; closeout committed
 
 AS1–AS5 and its planning commit were approved; planning committed as `b466a78`. [Findings](docs/benchmarks/wheel-artifact-review.md) retain the source-display truncation and skipped work. The [approved scope](docs/proposals/wheel-artifact-review.md) remains historical; its stopped allocation cannot be reset automatically.
 
@@ -6,9 +18,9 @@ AS1–AS5 and its planning commit were approved; planning committed as `b466a78`
 - [ ] AS2 — Not started; no versioned helper, fixture, test, Job trial or Ruff run.
 - [ ] AS3 — Not started; zero HTTP transactions or wheel downloads.
 - [ ] AS4 — Not started; no candidate payload reads or imports.
-- [x] AS5 — Protected closeout complete: six-file scope, seven touched links, 13 unchanged frozen inputs, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; truncated-output/read-measurement gaps explicit. Separate results-commit/adoption gates remain.
+- [x] AS5 — Protected closeout complete: six-file scope, seven touched links, 13 unchanged frozen inputs, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; truncated-output/read-measurement gaps explicit. Results committed as `1d30457`; adoption gates remain.
 
-Evidence: `data/t17/wheel-artifact-review-01/`. No optional retry or new execution allocation; no owned trial workers remain. Next: request the six-file results commit and approval to prepare a short AS reporting correction covering every host inspection command. Closed roots and historical checkpoint files remain untouched.
+Evidence: `data/t17/wheel-artifact-review-01/`. No optional retry or new execution allocation; no owned trial workers remain. Results committed as `1d30457`; the user approved preparation of the ASR correction above. Closed roots and historical checkpoint files remain untouched.
 
 ## Earlier T17-IF-PR — controls and native metadata probe passed
 

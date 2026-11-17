@@ -1,6 +1,6 @@
-## Latest execution point — AS stopped during source review
+## Latest execution point — AS results committed; short reporting correction proposed
 
-AS planning committed as `b466a78`. [Findings](docs/benchmarks/wheel-artifact-review.md): initial accounting/16 frozen inputs completed, but combined source/search display was truncated during AS1. Optional work stopped before helper implementation, tests, Job trials or acquisition. Protected closeout retains the failure; no timer/allocation reset. Next request a results commit and a short correction enforcing byte-checked capture for every host inspection command before a new execution allocation. Prior successful probe evidence and adoption/G2 gaps remain.
+AS results committed as `1d30457`. The [ASR correction](docs/proposals/wheel-artifact-review-reporting-correction.md) inherits AS artifacts/limits and requires host-display guard tests before source searches, with a 3,000-byte emission limit. ASR1–ASR5 and the four-file planning commit await approval; no new execution started. Prior successful probe evidence and source/licence/native/offline/adoption/G2 gaps remain.
 
 ## Latest MR outcome — partial evidence; limits reached
 
