@@ -1,6 +1,6 @@
-## Latest WIC evidence — controls passed; no artifact acquired
+## Latest PR evidence — native metadata access verified
 
-[WIC findings](benchmarks/wheel-static-inspection-continuation.md): reporting controls passed 12 checks, then the probe-start deadline stopped the attempt before networking. Planning commit `2aa9ea7`; no dependency artifact was acquired, inspected, imported or installed. Existing checksum/rounded-size/provenance and requirements/notices/native/offline gaps remain. Passing reporting controls do not establish dependency readiness or authorize a retry. Earlier evidence below remains historical.
+[PR findings](benchmarks/wheel-metadata-probe-retry.md): 12 output-control checks and one fixed native HTTPX2 release-metadata request passed; planning commit `103a6f1`. The response matched its expected publisher entry, with clean process teardown. No wheel payload was acquired or verified. Other metadata/size/provenance, requirements/notices/native/source/offline/adoption gaps remain. This probe does not approve installation or the remaining artifact-review execution. Earlier evidence below remains historical.
 
 ## Latest MR evidence — incomplete readiness
 

@@ -1,12 +1,12 @@
-## Latest T17-IF-PR — probe-only retry ready; execution pending
+## Latest T17-IF-PR — controls and native metadata probe passed
 
-WIC results committed as `0882bc0`. The [exact PR proposal](docs/proposals/wheel-metadata-probe-retry.md) reuses frozen controller/probe bytes, isolates host-review timing and permits only one metadata request with the explicit narrower supervision boundary. Execution and its four-file planning commit await approval.
+PR1–PR3 and its planning commit were approved, including revised timing/supervision; planning committed as `103a6f1`. [Findings](docs/benchmarks/wheel-metadata-probe-retry.md) retain passing controls, one successful native metadata request, explicit host-review interval and clean owned-process teardown.
 
-- [ ] PR1 — After approval, bootstrap/freeze/copy unchanged sources and rerun the existing synthetic controls. Accept: fixed identities, 12 checks and teardown pass; capture/launch accounting prepared before host permission request.
-- [ ] PR2 — After PR1, one approved native metadata probe. Accept: submission/entry clocks and every shell start accounted; one request or honest pre-start stop; bounded validation/capture and verified teardown.
-- [ ] PR3 — At completion/stop, findings/task/readiness updates and final preservation/scope/link/whitespace/diff/non-null-summary checks. Accept: actual timing/coverage gaps, separate results-commit/adoption gates; no acquisition or installation.
+- [x] PR1 — Fresh-root accounting/frozen inputs, unchanged fixed source copies and all 12 synthetic controls passed; launch starts/streams prepaid before the host request.
+- [x] PR2 — One native metadata request passed its fixed checks; 11,931-byte body and response identity retained. Host-review interval 503.628 seconds recorded/excluded once; both owned processes exited with code 0 and verified teardown. No wheel request.
+- [x] PR3 — Closeout complete: six-file scope, six touched local links, 17 unchanged frozen inputs, original/copied source pins, metadata-body hash, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; coverage/adoption gaps explicit. Results commit remains gated.
 
-Preparation checks passed: four-document scope, four touched local links, both fixed source identities, whitespace, empty index and readable diff; historical inputs unchanged against `0882bc0`. No `wheel-metadata-probe-01` root, control copy, fixture, test or network request created or started. Next: obtain PR1–PR3/four-file planning-commit approval, including the explicit timing/supervision changes. Closed roots and historical checkpoint files remain untouched.
+Evidence: `data/t17/wheel-metadata-probe-01/`. One suite/one HTTP transaction, no Ruff/download/candidate/application activity. Next: request the six-file results commit and approval to prepare the remaining acquisition/static-inspection package. Earlier closed roots and historical checkpoint files remain untouched.
 
 ## Earlier T17-IF-WIC — controls passed; stopped before probe startup
 

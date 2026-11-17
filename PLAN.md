@@ -1,6 +1,6 @@
-## Latest execution point — WIC results committed; probe-only retry proposed
+## Latest execution point — PR metadata probe passed
 
-WIC results committed as `0882bc0`. The [PR proposal](docs/proposals/wheel-metadata-probe-retry.md) reuses frozen controls for one metadata request, explicitly records/excludes one host-review interval from active timing, and narrows the supervision boundary to metadata only. PR1–PR3 and its four-file planning commit await approval. No new execution started; wheel acquisition/inspection, source/adoption/G2 gaps remain separately gated.
+PR planning committed as `103a6f1`. [Findings](docs/benchmarks/wheel-metadata-probe-retry.md): 12 control checks and the single native metadata probe passed; both owned processes exited cleanly and closeout checks passed. Explicit host-review timing worked. No wheel/candidate installation or application change. Next request the results commit and preparation of the remaining bounded acquisition/static-inspection package. Source/licence/native/offline/adoption/G2 gaps remain.
 
 ## Latest MR outcome — partial evidence; limits reached
 
