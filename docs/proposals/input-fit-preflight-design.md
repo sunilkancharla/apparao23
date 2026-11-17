@@ -121,3 +121,7 @@ Likely outputs after approval: `docs/benchmarks/input-fit-static-review.md`, foc
 ## Review decisions
 
 Review this draft contract and the IF-S investigation package. The settled product scope/resource targets are unchanged. The concrete tokenizer/adapter choice, exact special-token/output overhead and actual runtime privacy/compatibility remain unresolved until evidence supports a decision. Git approval for this five-document draft set is separate from IF-S approval and from later findings commits. G2 and the first CSV application implementation remain gated.
+
+## IF-SA continuation 03 — static progress, runtime gate unchanged
+
+[Findings](../benchmarks/standalone-tokenizer-static-verification.md) verify the archive/all 75 installed files and Tokenizers RECORD. Hub identity matched, but 191 entries exceeded 128; mandatory stop before further graph/source/native/offline review. Static equality does not prove effective runner/DLL loading, source-release provenance, rendering/token-ID parity, context/EOS or output reservation. Frozen parity/trial designs are unchanged; no candidate launch/install/G2. Recommend a separately approved Hub-only continuation.

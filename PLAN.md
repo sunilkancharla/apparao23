@@ -1,3 +1,6 @@
+## Latest IF-SA result — runtime verified; Hub cap stopped continuation 03
+
+Prior findings committed as 740dc3a. All 75 runtime files match the exact cached archive; the Tokenizers wheel and its 31-member RECORD verified. Hub identity matches, but its 191 entries exceed the 128-entry cap. Mandatory stop; SA4 unstarted. Final 26 tests and lint passed before the worker. [Findings](docs/benchmarks/standalone-tokenizer-static-verification.md) recommend preparing a fresh Hub-only review, avoiding another large runtime read. Nine source/results/status files await commit approval; G2 remains open. Earlier statuses are historical.
 ## Latest IF-SA status — continuation 02 stopped
 
 Closeout committed as 9462a08. Fresh bootstrap succeeded, but unmeasured source output prevented reporting-bound acceptance; no artifact inspection or implementation occurred. Current findings propose a single measured-output gate before a separately approved continuation 03. No retry authorized.

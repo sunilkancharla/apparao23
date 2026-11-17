@@ -1,3 +1,12 @@
+# Latest checkpoint — IF-SA continuation 03 partial result
+
+User approved five findings/status files and corrected continuation; exact commit 740dc3a succeeded. Epoch 03 exclusively bootstrapped accounting, then verified its measured-output gate. Earlier epochs unchanged. Two oversized metadata projections blocked before raw emission; a PowerShell array-shape error was corrected with conservative charging. All 36 inherited hashes matched; 43 identities frozen.
+
+Two approved aids implemented test-first. Expected RED; initial Windows DirEntry.stat link-field failure fixed with path lstat. Final 26 tests passed in 0.155 s; integrity mutation detected. Five suites/four Ruff calls; final lint passed, automated format preceded manual lint cleanup. No tests/lint after worker stop.
+
+One owned stdlib worker: 149.885773 s, exit 0, captured output 0; retained-handle/wait teardown verified. Cached archive and all 75 runtime files matched, including fixed ollama.exe SHA; 71 native files/four notices inventoried. Tokenizers exact wheel/31-member RECORD verified. Hub exact identity passed, then 191 entries exceeded 128: stopped_no_retry. SA4 unstarted; no more payload reads/research. Worker reads 7,786,285,990 bytes; shared 8,123,386,371 before closure. Final meter/closeout contain totals/preservation.
+
+Nine files await separate commit: two aids, findings, dependencies/preflight, PLAN/TODO/README/this checkpoint. Summary/unrelated files excluded. Recommend preparing a narrow Hub-only review proposing 256 entries; do not repeat large archive. Exact package/helper changes/execution need approval. No install/candidate launch/model/API/build/PATH/lock changes or G2/app/stage/16 GB acceptance. Earlier checkpoints retained.
 # Latest checkpoint — continuation 02 stopped; no artifact inspection
 
 User approved closeout/fresh continuation; exact five-file closeout commit 9462a08 succeeded. Epoch02 first invocation correctly bootstrapped durable accounting. Later source-convention read emitted unmeasured raw output (3,452 original tokens; exact bytes unknown), so reporting compliance cannot be established. Optional work stopped. No helpers, artifact payload reads, tests, Ruff, web research, candidate processes, model/API calls or installations. No owned worker started. Local epoch02 meter records stop and conservative charges; do not reset either epoch.
@@ -835,3 +844,5 @@ Preserve unrelated untracked agents/skills/references/images/onboarding docs; .v
 
 <!-- IF-SA approval checkpoint -->
 The user explicitly approved the IF-SA package and its five planning-document commit. The initial execution stopped before artifact inspection, tests or research because accounting was not bootstrapped before the first read/output and the output exceeded its limit. Preserve the stopped epoch; no automatic retry. Earlier pending-approval text is historical. Closure findings remain separately reviewable.
+
+Closeout note: Git line-ending warnings and a PowerShell hashtable measurement error escaped the display gate. The captured output measured 1521 UTF-8 bytes against its 2,048-byte reservation; it was not measured before emission. This reporting-order deviation is preserved, not described as compliant. Artifact accounting was corrected using explicit byte summation; no tests, research or payload work was resumed.

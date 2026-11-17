@@ -1,3 +1,14 @@
+## Latest T17-IF-SA result — partial static verification, continuation 03
+
+Prior five-file findings commit 740dc3a succeeded. [Current findings](docs/benchmarks/standalone-tokenizer-static-verification.md) and epoch 03 receipts supersede earlier statuses.
+
+- [x] SA1: Durable bootstrap/output gate; 36 inherited hashes matched, 43 identities frozen.
+- [x] SA2: Two approved stdlib aids; final 26 tests passed, integrity mutation detected, final lint passed. Five suites/four Ruff calls; automated format preceded manual lint cleanup.
+- [ ] SA3: Partial — all 75 runtime files match the archive/fixed executable identity; Tokenizers RECORD verified. Hub identity matched, then 191 entries exceeded 128. One owned worker exited/waited; no retry.
+- [ ] SA4: Not started after cap stop; dependency/native/provenance questions remain.
+- [x] SA5: Partial findings/checkpoint/closure recorded; nine-file source/results commit awaits approval.
+
+Next: seek approval to prepare a narrow Hub-only review proposing 256 entries. No installation, native trial, G2 or application implementation is authorized.
 ## Latest IF-SA status — continuation 02 stopped
 
 Closeout commit 9462a08 complete. SA1 bootstrap passed but reporting/preservation acceptance incomplete; SA2–SA4 unstarted; SA5 partial-stop evidence saved. No software tests ran. See docs/benchmarks/standalone-tokenizer-static-verification.md for the proposed output-gated continuation 03, pending approval.
