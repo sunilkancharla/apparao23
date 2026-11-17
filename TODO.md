@@ -1,15 +1,15 @@
-## Latest T17-IF-RR — remaining readiness proposal ready; execution pending
+## Latest T17-IF-RR — stopped during bootstrap; review closeout
 
-EAF results committed as `da860aa`. The [exact RR package](docs/proposals/remaining-artifact-readiness-review.md) pins 17 inputs and proposes local-first metadata/licence/source review plus two explicitly assumed Windows AMD64 target cases, preserving both original partial profiles. RR1–RR6 and its four-file planning commit await approval.
+The user approved the [exact RR package](docs/proposals/remaining-artifact-readiness-review.md) and four-file planning commit (`da952e1`). [Stop findings](docs/benchmarks/remaining-artifact-readiness-review.md): initial ledger selection failed; the one correction failed command parsing before its body ran. Optional work stopped. No review worker/test/graph/import/public query ran. EAF (`da860aa`) remains the latest successful comparison.
 
-- [ ] RR1 — After approval, bootstrap/freeze and review helpers/imports/query boundaries. Accept: fixed/inherited identities, strict guard and unchanged capture; no old dispatch or user/model data.
+- [ ] RR1 — Partial/stopped: fresh root/allocation/preservation records created; fixed/inherited input revalidation and helper boundary review did not run. No acceptance claim.
 - [ ] RR2 — Test-first supplemental profile logic and controls. Accept: unchanged base profiles, labelled assumptions, no cross-profile mutation/shared-cap reset; retain 11 existing tests and original ten controls.
 - [ ] RR3 — Only after RR2, four-case graph and root Python-declaration comparison. Accept: global 20-node union, authority/mismatches/conflicts/unknowns explicit; no resolver/pin/ABI claim.
 - [ ] RR4 — Reconcile retained licence/notices/native inventory. Accept: declaration/selected notice/vendor gaps separated; no legal/security/adoption clearance.
 - [ ] RR5 — After local triage, bounded primary-source gap review. Accept: source/publisher/build claims distinguished, eight-call/24-target ceiling and cutoff, primary citations; no user data or binaries.
-- [ ] RR6 — Completion/stop readiness matrix, next proposal, resources and preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: seven-document maximum; separate results-commit/provisioning/adoption/stage gates.
+- [x] RR6 — Stop closeout verified: seven-document scope, eight protected file identities, 17 local links, whitespace, readable retained diff, empty index and non-null receipt. Results await user review/commit approval. RR2–RR5 remain unstarted, not failed candidate evaluations; provisioning/adoption/stage gates remain separate.
 
-Preparation checks passed: four-document scope, 17 fixed source/evidence hashes, 19 local links, six task IDs, whitespace, readable plan diff and empty index; other tracked files unchanged. No `remaining-artifact-readiness-01` root, helper/profile fixture, import, public query or graph run created/started. Older roots, historical checkpoints and unrelated user changes remain untouched. Scope/target/source-mapping deferral unchanged.
+Earlier preparation checks passed: four-document scope, 17 fixed source/evidence hashes, 19 local links, six task IDs, whitespace, readable plan diff and empty index. During execution only the fresh `remaining-artifact-readiness-01` bookkeeping root/context was created. Do not reopen it or reset unused allowances. Next proposed work: a fresh bounded continuation proving ledger selection/command construction on synthetic cases before revalidating inputs and resuming the review. Older roots, historical checkpoints and unrelated user changes remain untouched. Scope/target/source-mapping deferral unchanged.
 
 ## Earlier T17-IF-EAF — controls pass; partial graph results committed
 

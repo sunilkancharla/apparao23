@@ -1,6 +1,6 @@
-## Latest execution point — EAF results committed; remaining readiness review proposed
+## Latest execution point — RR stopped during bootstrap; closeout ready
 
-EAF results committed as `da860aa`. The [RR proposal](docs/proposals/remaining-artifact-readiness-review.md) reuses local metadata first, proposes two labelled Windows AMD64 artifact-target cases alongside unchanged partial profiles, and bounds remaining Python/licence/native/source research. RR1–RR6 and the four-file planning commit await approval. No new profile/import/query/trial started; installation/adoption/G2 remain open.
+RR1–RR6 and its four-file planning commit were approved; the plan is committed as `da952e1`. [RR stop findings](docs/benchmarks/remaining-artifact-readiness-review.md): ledger selection failed, and the one allowed correction failed PowerShell parsing before worker execution. Optional work stopped. No input revalidation, profile/test/graph/public query or installation ran; EAF results (`da860aa`) remain the latest successful comparison. Review the seven-document closeout, then prepare a fresh continuation with synthetic bookkeeping checks before retrying the unexecuted review. No budget reset, adoption/G2 or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 

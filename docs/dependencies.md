@@ -1,4 +1,8 @@
-## Latest EAF evidence — bounded local comparison completed; readiness still partial
+## Latest RR evidence — stopped before dependency review
+
+The approved RR plan is committed as `da952e1`. [RR stopped during bookkeeping bootstrap](benchmarks/remaining-artifact-readiness-review.md); the permitted correction also failed before worker execution. No fixed-input revalidation, supplemental profile/Python comparison, licence/native reconciliation or public provenance query ran. No new dependency conclusion, candidate import/installation or adoption. The earlier successful evidence below and its unresolved gaps remain unchanged; a fresh bounded continuation requires approval.
+
+## Earlier EAF evidence — bounded local comparison completed; readiness still partial
 
 [EAF findings](benchmarks/marker-environment-adapter-followup.md): corrected adapter passed 11 unchanged tests/ten original controls, then compared 16 exact distributions under two labelled partial profiles. No conflicts found on evaluated paths or relevant project constraints; two marker conditions remain unknown in each profile (Hub/HF-Xet machine type and TQDM/Colorama platform system). Six matching locked metadata records were retained. Eight fixed roots are absent from the current lock and none was added. Root Python-version declarations, licence/native notices, source provenance and runtime/offline/parity remain open. No resolver, candidate install/import or adoption occurred.
 

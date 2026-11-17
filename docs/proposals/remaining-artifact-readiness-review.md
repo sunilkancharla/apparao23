@@ -1,6 +1,6 @@
 # T17-IF-RR — remaining platform, Python, licence and provenance evidence
 
-**Proposed; RR1–RR6 execution and the four-file planning commit await approval.** EAF results are committed as `da860aa`. The user approved that commit and preparation of this package. Preparation inventoried/read existing public metadata as data; no new trial, public query, import, supplemental profile or graph run occurred.
+**Approved and stopped during bootstrap; no automatic retry.** The user approved RR1–RR6, the declared target cases, bounded queries and the four-file planning commit (`da952e1`). [Stop findings](../benchmarks/remaining-artifact-readiness-review.md) record ledger selection failure and a parsing failure during the one permitted correction, before input revalidation or any worker/test/query. The original package boundary below is retained; its unused allowances do not authorize another execution root. EAF results (`da860aa`) remain the latest successful comparison.
 
 ## Purpose and retained decisions
 
@@ -65,12 +65,12 @@ Send only public distribution/version/digest/source identifiers. No local paths,
 
 | ID | Objective / prerequisite | Acceptance / evidence | Status |
 | --- | --- | --- | --- |
-| RR1 | After approval, bootstrap/freeze and review exact helper/import/query boundaries | All 17 fixed inputs plus inherited tool/source identities match; public saved data separated from code; original strict guard, verified capture and existing corrected adapter preserved. | Pending approval |
-| RR2 | Test-first supplementary profile logic, then controls | Meaningful RED before new corrective/helper implementation where applicable; GREEN retains 11 fixture tests plus new profile/cap invariants; original ten controls pass. Assumptions are labelled, base facts unchanged, factory restored. | Pending RR1 |
-| RR3 | Conditional four-case graph/Python-declaration comparison | Only after RR2 passes; shared 20-node union, authoritative declarations identified, conflicts/unknowns and registry/artifact mismatches explicit. No resolver, version choice or native-support claim. | Pending RR2 |
-| RR4 | Licence/notice/native evidence reconciliation from local inputs | Declarations, selected notices, inferred obligations and unresolved vendor/source evidence separated; no legal/ABI/security adoption clearance. Can report bounded partial outcome if comparison stops. | Pending local review |
-| RR5 | Targeted primary-source gap review after local triage | Exact artifact/source/publisher claims and remaining linkage gaps distinguished; no repeated blind fetches, cap/cutoff respected, cited primary URLs. | Pending local triage |
-| RR6 | Completion/stop readiness and closeout | Supported/unresolved/user-decision matrix, smallest next proposal, resource/ownership evidence; preservation/scope/links/whitespace/readable diff/empty index/non-null receipt. Separate results-commit/provisioning/adoption gates. | Pending completion/stop |
+| RR1 | After approval, bootstrap/freeze and review exact helper/import/query boundaries | All 17 fixed inputs plus inherited tool/source identities match; public saved data separated from code; original strict guard, verified capture and existing corrected adapter preserved. | Partial/stopped: bootstrap only; identities not revalidated |
+| RR2 | Test-first supplementary profile logic, then controls | Meaningful RED before new corrective/helper implementation where applicable; GREEN retains 11 fixture tests plus new profile/cap invariants; original ten controls pass. Assumptions are labelled, base facts unchanged, factory restored. | Not started: RR1 stopped |
+| RR3 | Conditional four-case graph/Python-declaration comparison | Only after RR2 passes; shared 20-node union, authoritative declarations identified, conflicts/unknowns and registry/artifact mismatches explicit. No resolver, version choice or native-support claim. | Not started |
+| RR4 | Licence/notice/native evidence reconciliation from local inputs | Declarations, selected notices, inferred obligations and unresolved vendor/source evidence separated; no legal/ABI/security adoption clearance. Can report bounded partial outcome if comparison stops. | Not started |
+| RR5 | Targeted primary-source gap review after local triage | Exact artifact/source/publisher claims and remaining linkage gaps distinguished; no repeated blind fetches, cap/cutoff respected, cited primary URLs. | Not started; zero calls/targets |
+| RR6 | Completion/stop readiness and closeout | Supported/unresolved/user-decision matrix, smallest next proposal, resource/ownership evidence; preservation/scope/links/whitespace/readable diff/empty index/non-null receipt. Separate results-commit/provisioning/adoption gates. | Stop closeout verified; review/results commit pending |
 
 Use the previously reviewed incremental, test-first, security, quality-review and documentation workflows. Keep new evaluation source/fixtures ignored. Do not execute downloaded project scripts or third-party instructions. No application implementation or mandatory-format/OCR acceptance change.
 
@@ -100,4 +100,4 @@ After approval: ignored helper/profile/fixture/graph/notice/source/query/account
 
 The review recommends whether a separately approved provisioning/adoption proposal is supportable, more bounded evidence is needed, or an explicit residual-risk/alternative decision is required. It cannot approve itself. Native Tokenizers/HF-Xet loading, model/parity/offline checks and G2 remain separately gated. No stage transition.
 
-Request **RR1–RR6 approval**, explicitly including the two supplementary declared Windows AMD64 target cases, conditional graph/Python checks, licence/source review and bounded public queries. Separately approve the **four-file planning commit**: this proposal, PLAN.md, TODO.md and README.md. Preparation does not authorize execution or that commit.
+The user granted **RR1–RR6 approval**, explicitly including the two supplementary declared Windows AMD64 target cases, conditional graph/Python checks, licence/source review and bounded public queries, and approved the **four-file planning commit** (`da952e1`). Execution stopped as recorded above. The user subsequently approved the seven-document closeout commit and preparation only of a corrected continuation. No installation/adoption or fresh continuation execution is authorized by this closeout.

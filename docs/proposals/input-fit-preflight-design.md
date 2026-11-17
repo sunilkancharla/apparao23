@@ -1,4 +1,8 @@
-## Latest EAF outcome — adapter and original controls pass; partial graph evidence
+## Latest RR outcome — bookkeeping stop; review unexecuted
+
+RR1–RR6 and plan commit `da952e1` were approved. [RR stop findings](../benchmarks/remaining-artifact-readiness-review.md) record two authored bookkeeping failures, the second during the one permitted correction. No worker, regression check, four-case comparison or public query ran. EAF remains the latest successful evidence; source-mapping deferral and all provisioning/native/parity/G2 gates remain unchanged. Review closeout before preparing a fresh bounded continuation.
+
+## Earlier EAF outcome — adapter and original controls pass; partial graph evidence
 
 [EAF findings](../benchmarks/marker-environment-adapter-followup.md): approved two-line correction passed all 11 unchanged tests and ten original controls; one real graph review covered 16 distributions. No evaluated-path conflicts; two platform marker conditions remain unknown per profile. Strict audit policy and installed source unchanged. No tokenizer/native import, parity/model run, provisioning/adoption or G2 closure. Prepare the remaining platform/metadata/licence/provenance review before another package; source-mapping timing deferral remains unchanged.
 
