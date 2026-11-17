@@ -1,3 +1,14 @@
+## Latest T17-IF-AR — stable options and evidence decision proposed
+
+Seven SC results committed as `ec34c59`. [Exact AR proposal](docs/proposals/stable-tokenizer-alternatives-review.md) retains Hub2.4.0 as baseline; another version must offer documented evidence/compatibility benefit. Package and five planning-document commit await approval.
+
+- [ ] AR1 — After approval, fresh durable accounting/output-failure reservations before optional reads; proven immutable/reporting controls and frozen-input verification. Acceptance: controls pass, no old-root writes or payload access.
+- [ ] AR2 — After AR1, separate release status, integrity/publisher/signature/source evidence and measured behavior; trace existing gate. Acceptance: any proposed evidence change/deferral explicitly requires user decision.
+- [ ] AR3 — After AR2, baseline plus at most two eligible Hub versions within eight calls/24 targets. Acceptance: exact versions/reasons, compatibility/license/direct-dependency/source/advisory evidence and unknowns; no automatic downgrade or adoption.
+- [ ] AR4 — After AR3/stop, retain/change/defer comparison and concrete decision; preserve/check links/scope/diff/resources and checkpoint. Acceptance: separate commit/adoption gates, no reset or false closure.
+
+No AR root/ledger/control/alternative-candidate assessment/trial created during preparation. Two official lookups answered the separate stable-release question; SC03 remains closed and unchanged. Earlier task states are historical.
+
 ## Latest T17-IF-SC epoch 03 — partial evidence, completed recommendation
 
 Planning commit `aa61658`; [current findings](docs/benchmarks/hub-source-coordinate-review.md) distinguish publisher origin from build-source evidence.

@@ -1,3 +1,7 @@
+## Latest execution point — SC results committed; stable-options review proposed
+
+Seven SC findings/status files committed as `ec34c59`. [AR proposal](docs/proposals/stable-tokenizer-alternatives-review.md) first clarifies the source-evidence decision, then compares retaining Hub2.4.0 against at most two eligible stable alternatives and deferral. Current release status was checked only to answer the user's separate question; no alternative selection or adoption occurred. AR1–AR4 execution and five-document commit await approval. No new root/control/research package started; source/build and G2 gates remain open. Earlier statuses below are historical.
+
 ## Latest SC outcome — publisher origin identified; build-source gate open
 
 Planning committed as `aa61658`. [Epoch-03 findings](docs/benchmarks/hub-source-coordinate-review.md): accounting/reporting controls passed; three calls/eight targets, six access failures; publisher origin established in the registry display, build-source mapping unresolved. SC3 recommends retaining distinct publishing/release identities and keeping source-dependent expansion/adoption blocked. No automatic retry or new pin. Seven findings/status files await commit approval; next step is an explicit approach decision. Earlier statuses below are historical.

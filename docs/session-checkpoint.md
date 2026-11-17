@@ -1,3 +1,17 @@
+# Latest checkpoint — SC committed; stable-options/evidence review proposed
+
+User approved seven SC result files and preparing an alternatives review, then asked about stable releases. Exact delivery identities/index/allowlist/whitespace checks passed; commit `ec34c59` succeeded. No runtime data/session summary/unrelated content staged. SC03 remains closed:22units,591.564seconds,865045artifact-upper bytes,3calls8targets6failures; build-source link unresolved, no source pin/adoption change.
+
+Separate user-question verification used two official web targets during documentation preparation: GitHub releases/latest resolved to v2.4.0, and version-specific PyPI page returned. This answers release availability, not measured stability or build-source provenance. No alternative version assessed/selected, no old ledger reopened or AR execution started. Existing Tokenizers report confirms Hub requirement >=0.16.4,<3.0; no wheel reread.
+
+Prepared docs/proposals/stable-tokenizer-alternatives-review.md plus PLAN/TODO/README/this checkpoint only. AR1 bootstrap/controls → AR2 evidence-gate clarification → AR3 current Hub2.4.0 versus at most2 eligible stable/non-yanked alternatives → AR4 comparison/decision/closure. Fixed reviewed Hub/Tokenizers artifact identities; no automatic downgrade or evidence-gate relaxation. Any change/deferral is a separate user decision.
+
+Proposed fresh data/t17/stable-alternatives-review-01;48units(36normal12protected),900seconds,8MiBreads(4MiBledger4MiBevidence),2MiBartifacts,8calls24targets,32ledgerrecords/validations4KiBeach;8KiBreport/invocation48KiBtotal8KiBclosure reserve. Reuse proved immutable/UTF-8 controls; exact final command statically parsed. At most2 bounded orchestration corrections if accounting/capture remain trustworthy, no failed-target refetch; actual bound/identity/accounting/exposure failures still stop. No trials/suites/Ruff/candidate imports/payloads/models/API/native/build/install/environment/lock changes.
+
+Package execution and five-document commit await approval. No new root/control/helper/fixture/alternative research or proposal adoption occurred. Local planning/documentation workflows carried forward; no skill scripts/subagents/goal/status/compact invocation. Earlier checkpoints below are historical.
+
+Preparation checks passed: four tracked status edits plus one new proposal; empty index; whitespace; six latest reviewed source/report identities preserved; 373 local links; exact baseline constants; absent AR root. Initial hash check used obsolete HS dependency/preflight hashes; corrected to the latest authorized SC03 manifest before verifying, without changing those files. Readable additions/proposal reviewed; documentation only, no application tests. Five proposal/status files remain uncommitted.
+
 # Latest checkpoint — epoch 03 publisher evidence; source/build link unresolved
 
 User approved SC03/five planning docs; exact commit `aa61658` succeeded. Fresh data/t17/hub-source-coordinate-review-03 bootstrap included prepaid failure-output margin before optional reads. Immutable accounting/fresh-selection/negative controls passed. Runtime-compatible UTF-8 controls passed seven known cases plus boundary/string/object/large-response handling, no unavailable helper. Twenty-four small identities frozen; saved response17,990bytes/SHA6d035145ad7cc981f99535349192d45986fb14ed9046981002982a4bf39e2f46 matched. No old-root writes.
