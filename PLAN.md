@@ -1,6 +1,6 @@
-## Latest execution point — RC results committed; capture correction proposed
+## Latest execution point — capture verified; local hostname guard conflict diagnosed
 
-RC results committed as `2b8f4ce`. The [CC package](docs/proposals/reconciliation-capture-correction.md) proposes complete-stream capture controls first, followed by one parser-control attempt only if they pass. CC1–CC5 and its four-file planning commit await approval. No fresh execution/root or research started; graph/licence/provenance, installation, runtime adoption and G2 remain open.
+CC1–CC5 and its planning commit were approved; planning committed as `86bdaa9`. [CC findings](docs/benchmarks/reconciliation-capture-correction.md): expected RED and eight GREEN capture cases passed their intended outcomes; one parser attempt retained the full error, identifying the guard's rejection of a hostname query. Guard unchanged, no parser retry/graph/research. Next: review the six-file results commit and prepare a source-only comparison of a narrowly scoped hostname exception versus supplied marker environments. Runtime adoption/G2 remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

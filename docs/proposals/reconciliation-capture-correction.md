@@ -1,6 +1,6 @@
 # T17-IF-CC — complete subprocess capture before parser review
 
-**Proposed; CC1–CC5 execution and the four-file planning commit await approval.** RC results were committed as `2b8f4ce`. The user approved that commit and preparation of this package. This document authorizes nothing by itself.
+**Approved; planning committed as `86bdaa9`; execution completed with a diagnosed parser blocker.** [CC findings](../benchmarks/reconciliation-capture-correction.md) record expected RED, eight passing GREEN capture cases and one fully captured parser failure at `socket.gethostname`. Guard unchanged; no retry, graph/research or adoption. The original approved boundary below is retained for audit; it does not authorize another run.
 
 ## Purpose and prerequisites
 

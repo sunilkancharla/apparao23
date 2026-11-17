@@ -1,14 +1,14 @@
-## Latest T17-IF-CC — capture-correction proposal ready; execution pending
+## Latest T17-IF-CC — capture verified; parser blocker diagnosed
 
-RC results committed as `2b8f4ce`. The [exact CC package](docs/proposals/reconciliation-capture-correction.md) defines source identities, complete-stream/negative controls, a conditional single parser attempt and shared limits. CC1–CC5 and its four-file planning commit await approval; preparation does not authorize execution.
+CC1–CC5 and its planning commit were approved; planning committed as `86bdaa9`. [CC findings](docs/benchmarks/reconciliation-capture-correction.md) record passing capture controls and the single, fully captured parser failure at the guard's `socket.gethostname` restriction. The [approved package](docs/proposals/reconciliation-capture-correction.md) is consumed; no further parser attempt/guard change/graph/research is authorized.
 
-- [ ] CC1 — After approval, bootstrap/freeze and inspect source/import/command boundaries. Accept: fresh root, shared leases and exact input/tool identities; no old-script dispatch or unreviewed import.
-- [ ] CC2 — After CC1, test-first capture correction. Accept: deterministic expected RED for the single-read defect and a smallest bounded, concurrent byte-stream implementation.
-- [ ] CC3 — After CC2, GREEN suite for delayed/empty/nonzero/exact-cap/UTF-8/overflow/timeout/reader-failure cases. Accept: complete admitted bytes, expected negatives, preserved exit codes and verified child exit within shared limits.
-- [ ] CC4 — Only after CC3 passes, one packaging 26.3 parser-control attempt. Accept: reviewed loader/controls only, source identity rechecked, complete admitted diagnostics/exit/teardown; no graph/research or speculative semantic fix.
-- [ ] CC5 — On completion/stop, findings, budgets, preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: six-document closeout maximum; separate results-commit, next-package and adoption gates.
+- [x] CC1 — Fresh bootstrap/freeze; four prior identities, 20 tool-source hashes and installed metadata boundary checked; old graph/dispatch excluded.
+- [ ] CC2 — Capture delivered: deterministic single-read RED assertion failed as expected, followed by passing concurrent bounded EOF controls. Source was authored alongside fixtures before RED execution; strict authoring-order deviation remains disclosed for review, so full test-first compliance is not marked complete.
+- [x] CC3 — Eight GREEN cases passed, including negative overflow/timeout/reader-error controls; all eight synthetic children exited.
+- [x] CC4 — One parser attempt retained its complete 1,791-byte error and verified child exit. Parser failed at hostname audit guard; no speculative fix, retry, graph or research.
+- [x] CC5 — Six-document closeout checked: 10 frozen inputs preserved, 20 tool-source/two metadata hashes unchanged, 22 local links, whitespace, readable diff, empty index and non-null summary passed. Separate results-commit/next-package/adoption gates.
 
-Preparation checks passed: four-document scope, five fixed evidence hashes, 18 checked local links, whitespace, empty index and readable plan diff; other tracked inputs unchanged. No `reconciliation-capture-correction-01` root, capture harness, new fixture, tool import, test or parser retry created/started. Closed roots remain read-only; historical checkpoint files and unrelated user content remain untouched.
+Three ordered check invocations consumed; no rerun or orchestration correction. All three host controllers and nine child processes exited. Zero web/Ruff/model runs, candidate installs/imports or application features. Next: review the six-file results commit and prepare a source-only comparison of a narrow hostname-query exception versus supplied marker environments. Older roots, historical checkpoints and unrelated user content remain untouched.
 
 ## Earlier T17-IF-RC — stopped on incomplete capture; results committed
 

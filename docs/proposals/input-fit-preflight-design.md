@@ -1,3 +1,7 @@
+## Latest CC outcome — capture verified; parser environment guard unresolved
+
+[CC findings](../benchmarks/reconciliation-capture-correction.md): capture controls passed eight synthetic cases, followed by one parser attempt with complete diagnostics. Packaging's environment lookup reached `socket.gethostname`, rejected by the existing blanket audit rule. No guard change, retry, dependency graph, public research, tokenizer parity or model run followed. Review the platform call path and compare a narrow hostname exception with supplied marker environments before approving the next correction. Adoption/G2 and the metadata-only source-mapping deferral remain unchanged.
+
 ## Latest RC outcome — capture blocker; no adoption progress
 
 [RC findings](../benchmarks/wheel-evidence-reconciliation.md) record approved execution after planning commit `f3dad02`, static local-tool integrity evidence, and an unsuccessful synthetic check with incomplete error capture. Optional work stopped before graph/licence/provenance review. No tokenizer/input-fit/parity/model run or dependency adoption occurred. The metadata-only timing deferral and all existing G2/source/native/offline gates remain unchanged. A fresh capture-boundary correction is the next proposed prerequisite.
