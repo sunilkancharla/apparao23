@@ -1,3 +1,7 @@
+## Latest execution point — HS committed; source-coordinate review proposed
+
+The nine reviewed HS source/results files are committed as `12416e1`. [SC proposal](docs/proposals/hub-source-coordinate-review.md) isolates publisher/build/source mapping: SC1 bootstrap → SC2 public evidence → SC3 recommendation → SC4 closeout. Proposed 48 units/900 seconds/2 MiB artifacts/8 MiB local reads, six web calls/18 targets; no tests, workers, candidate payload reads or pin substitution. Package and five-document commit await approval. No new review root or research started. Earlier statuses below are historical.
+
 ## Latest HS result — Hub integrity verified; source mapping unresolved
 
 Approved planning committed as 9834ce4. [HS findings](docs/benchmarks/hub-only-static-review.md): all 191 wheel entries admitted, 190 RECORD payload hashes verified, metadata/one license read; one owned worker exited with teardown verified. Final 18 tests, lint and format check passed. Public review used three calls/12 targets, then stopped on the required mapping between approved source 178e1a… and official release 3739729…. No pin substitution, graph expansion, installation or candidate execution. Nine source/results/status files await commit approval; next propose source-coordinate reconciliation without repeating wheel inspection. Earlier statuses are historical.

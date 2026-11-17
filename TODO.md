@@ -1,3 +1,14 @@
+## Latest T17-IF-SC — source-coordinate review proposed
+
+HS results committed as `12416e1`. [Exact SC proposal](docs/proposals/hub-source-coordinate-review.md) defines coordinates, evidence policy, budgets and gates. Preparation authorizes neither execution nor a source-pin change.
+
+- [ ] SC1 — After approval, fresh accounting/output gate and small-file preservation before optional reads. Evidence: approval/allocation/deadline/identity records; no old epoch writes.
+- [ ] SC2 — After SC1, exact-artifact registry provenance and official publishing/release/source review within six calls/18 targets. Evidence: relationships verified/unknown/conflicting; failed access counted; no payload acquisition.
+- [ ] SC3 — After SC2/required-evidence stop, record source-role interpretation and retain/correction/defer recommendation. Evidence: exact remaining blocker; no silent pin change, graph expansion or adoption.
+- [ ] SC4 — After SC3/stop, preservation, links, scope, whitespace, readable diff and actual-limit checks; checkpoint and results-commit request. Evidence: bounded closeout; no trial/G2/application claim.
+
+SC execution and five-document commit await approval; no new root, helper, test, payload inspection or research started. Earlier task states are historical.
+
 ## Latest T17-IF-HS — static success; partial public provenance stop
 
 Planning commit 9834ce4 recorded exact approval. [Findings](docs/benchmarks/hub-only-static-review.md) and fresh HS receipts retain evidence and remaining gates.

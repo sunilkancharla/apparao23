@@ -1,3 +1,15 @@
+# Latest checkpoint — HS committed; source-coordinate proposal prepared
+
+User approved all nine HS source/results files and preparation of the next proposal. Reviewed delivery hashes matched. Initial Git staging succeeded but PowerShell treated a line-ending warning as an error; no commit occurred in that invocation. Exact staged allowlist and hashes were rechecked; captured UTF-8 stdout/stderr execution completed commit `12416e1` (nine files). No tests/worker/research rerun; closed HS root unchanged. Unrelated content and session summary excluded.
+
+Prepared docs/proposals/hub-source-coordinate-review.md plus PLAN/TODO/README/this checkpoint only. SC1 bootstrap → SC2 exact-artifact registry/official source/publishing evidence → SC3 retain/correction/defer recommendation → SC4 closeout. Fixed historical 178e1a1797858724c79fd9d12d79d0902d730497 and observed release 3739729b86489e4ae28b5a62e622be320b141493 remain distinct; no pin substitution or build-provenance claim. Preserve successful HS wheel evidence without payload rereads.
+
+Proposed 48 prepaid units (36 normal/12 protected), 900 active seconds, 2 MiB new artifacts, 8 MiB small local reads; six web calls/18 targets, at most four/call, short/medium only. Explicitly allow one fresh attempt per previously inaccessible endpoint, without repeat/transport fallback. Zero tests/Ruff/workers/candidate imports/model/API/native trials. Reporting 8 KiB/invocation,48 KiB aggregate,8 KiB closure reserve; bootstrap first, capture both streams and measure before emission. Source-only decision; no dependency expansion/provisioning/runtime/G2/application/stage adoption.
+
+Execution and exact five-document proposal commit await approval. No new root/ledger/helper/fixture/source research created. Local planning/documentation workflows used as written guidance; no skill scripts/subagents. Old records and historical findings preserved; earlier statuses below are historical.
+
+Preparation checks passed: exact four tracked status edits plus one new proposal; empty index; five other HS source/report/dependency result hashes unchanged; 356 local links; whitespace; absent proposed runtime root. Readable additions and new proposal reviewed. Documentation only, so no application tests were run. Proposal/status files remain uncommitted.
+
 # Latest checkpoint — HS static passed; source-provenance stop
 
 User approved HS1–HS5 and five planning documents; exact commit 9834ce4 succeeded. Fresh data/t17/hub-only-static-review-01 exclusively bootstrapped accounting, then verified measured-output gate. All 43 inherited hashes matched; 58 identities frozen, including old aid/test and prior final records. Older epochs unchanged.
