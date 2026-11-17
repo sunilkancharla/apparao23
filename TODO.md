@@ -1,4 +1,16 @@
-## Latest T17-IF-GC — partial evidence; inspection proposal next
+## Latest T17-IF-WI — proposal ready; execution pending
+
+GC/rule results committed as `90a01de`. [Exact WI proposal](docs/proposals/wheel-static-inspection.md) records artifacts, native network boundary, tests/leases/caps and stop conditions. Package/four-document commit await approval.
+
+- [ ] WI1 — After approval, bootstrap/freeze/boundary review and one fixed metadata-only probe. Accept: controls/ownership pass; blocked access stops before substantial helper work.
+- [ ] WI2 — After WI1, two aids test-first; RED/regression/mutation/final lint-format/security review. Accept: no candidate imports/network in suites; shared budget.
+- [ ] WI3 — After WI2, one acquisition worker. Accept: eight exact manifests, SHA/size checks, no retry/substitution, verified exit.
+- [ ] WI4 — After WI3, one static worker/cached texts. Accept: bounded RECORD/metadata/notice/native results and teardown, no code loading/runtime claim.
+- [ ] WI5 — After completion/stop, findings/tasks/docs and targeted consistency/diff/resource checks. Accept: non-null summary, honest gaps, separate result-commit/adoption gates.
+
+Preparation checks passed: eight artifact filename/checksum pairs match saved reports; five touched local links resolve; tracked diff and new-proposal whitespace checks pass; index empty. No WI root/helper/fixture/probe/download created. Next: obtain WI1–WI5/four-file planning-commit approval, then bootstrap first. No session-checkpoint writes.
+
+## Earlier T17-IF-GC — inspection proposal prepared
 
 Planning commit `0768aea`; [findings](docs/benchmarks/hub-dependency-gap-closure.md) retain evidence and caveats.
 
@@ -7,7 +19,7 @@ Planning commit `0768aea`; [findings](docs/benchmarks/hub-dependency-gap-closure
 - [ ] GC3 — Inspection-planning decision recorded; notice/offline/actual behavior gaps retained.
 - [x] GC4 — Source cutoff enforced; protected findings/checks/actual timing/error records retained. User stopped session-checkpoint updates; progress remains here and in reports.
 
-Two source calls/eight targets; no further source request after cutoff. Closure checks:23 frozen inputs,2 preserved suffixes,7 touched links, exact scope/index/whitespace; final command parsed. Session-checkpoint unchanged by user direction. Results commit and exact static-inspection proposal preparation need approval; no acquisition/install/adoption. Earlier tasks historical.
+Two source calls/eight targets; closure checks/gaps retained. GC/rule results committed as `90a01de`; user approved WI proposal preparation. Its execution remains separately gated. No acquisition/install/adoption; earlier tasks historical.
 
 ## Latest T17-IF-MR — partial review; protected closeout
 

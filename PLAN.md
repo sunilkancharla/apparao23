@@ -1,6 +1,6 @@
-## Latest GC outcome — artifact identifiers improved
+## Latest execution point — GC committed; static inspection proposed
 
-Planning committed as `0768aea`. [GC findings](docs/benchmarks/hub-dependency-gap-closure.md) identify HF-Xet/FSSpec publisher checksums/licences and retained lock context; requirements/notices/offline gaps remain. Next prepare an exact static-inspection proposal with size/provenance caveats after approval. No acquisition/runtime/adoption. Progress stays in these task/report files; no session-checkpoint updates.
+GC/rule results committed as `90a01de`. [WI proposal](docs/proposals/wheel-static-inspection.md) specifies one fail-fast native metadata probe, eight pinned acquisitions, two cached-root static reads and test-first aids. WI1–WI5/four-file commit await approval; no execution started. No install/candidate import; source/adoption/G2 gaps remain. Progress stays in task/report files.
 
 ## Latest MR outcome — partial evidence; limits reached
 
