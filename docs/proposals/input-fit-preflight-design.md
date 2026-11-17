@@ -125,3 +125,8 @@ Review this draft contract and the IF-S investigation package. The settled produ
 ## IF-SA continuation 03 — static progress, runtime gate unchanged
 
 [Findings](../benchmarks/standalone-tokenizer-static-verification.md) verify the archive/all 75 installed files and Tokenizers RECORD. Hub identity matched, but 191 entries exceeded 128; mandatory stop before further graph/source/native/offline review. Static equality does not prove effective runner/DLL loading, source-release provenance, rendering/token-ID parity, context/EOS or output reservation. Frozen parity/trial designs are unchanged; no candidate launch/install/G2. Recommend a separately approved Hub-only continuation.
+
+
+## HS static evidence — source mapping remains a preflight gate
+
+[HS findings](../benchmarks/hub-only-static-review.md) close the Hub wheel entry/RECORD gap: 191 entries and 190 payload hashes verified, metadata/one license read, no candidate import/execution. Final 18 tests/lint/format and owned-worker teardown passed. Public release source points to 3739729…; approved 178e1a… is not yet linked to release/wheel. Stop retained; no automatic pin correction, dependent graph expansion, native trial or runtime adoption. Static equality does not establish offline behavior, loader/source provenance, standalone/native parity, context/EOS or output headroom. Frozen trial designs remain unchanged.

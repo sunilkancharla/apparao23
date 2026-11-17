@@ -1,3 +1,15 @@
+## Latest T17-IF-HS — static success; partial public provenance stop
+
+Planning commit 9834ce4 recorded exact approval. [Findings](docs/benchmarks/hub-only-static-review.md) and fresh HS receipts retain evidence and remaining gates.
+
+- [x] HS1: Bootstrap/output gate before optional reads; 43 inherited identities matched, 58 direct identities frozen.
+- [x] HS2: Two approved new aids, expected RED, 18 final passing tests, caught integrity mutation, final lint/format pass. Four suites/five Ruff invocations; old inspector/tests unchanged.
+- [x] HS3: One static attempt verified 191 entries/190 RECORD payload hashes, metadata and one license; zero native-suffix filenames. Worker exit 0 and retained-handle/wait teardown verified.
+- [ ] HS4: Partial — three calls/12 targets, four fetch failures retained. Official release uses 3739729…; relationship to approved 178e1a… and exact wheel unresolved. Mandatory stop before graph/advisory/offline expansion; no silent pin change.
+- [x] HS5: Partial-stop report/checkpoint and final bounded closeout recorded; nine-file source/results commit remains separately pending.
+
+Next: obtain approval to prepare source-coordinate reconciliation, preserving successful wheel evidence. No provisioning, native trial, runtime adoption, G2 or application implementation authorized.
+
 ## T17-IF-HS — Hub-only static continuation proposed
 
 IF-SA's nine reviewed source/results files committed as 2ad9cb1. [Exact HS proposal](docs/proposals/hub-only-static-review.md) defines inputs, helper reuse, 256-entry wheel-only cap and full limits. Package and five planning-document commit await approval.

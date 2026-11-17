@@ -1,3 +1,15 @@
+# Latest checkpoint — HS static passed; source-provenance stop
+
+User approved HS1–HS5 and five planning documents; exact commit 9834ce4 succeeded. Fresh data/t17/hub-only-static-review-01 exclusively bootstrapped accounting, then verified measured-output gate. All 43 inherited hashes matched; 58 identities frozen, including old aid/test and prior final records. Older epochs unchanged.
+
+Two approved new aids only. Expected RED -> initial 14 pass -> final 18 pass in 0.567 s; payload-identity mutation caught. Four suites/five Ruff calls; final lint/final format check passed. One local S102 suppression covers compiling exact verified owned-source bytes as expressly approved; no downloaded source executed. Old worker/writer/test/root not used.
+
+Single static worker verified exact Hub size/SHA, all 191 entries/190 RECORD payload hashes, metadata and one LICENSE; no native-suffix filenames. Worker 10.558894 s, exit 0, captured output 0; retained-handle/wait teardown verified. Worker reads 5,164,397 bytes; sampled private peak 15,065,088 bytes, no full-resource/16 GB acceptance claim.
+
+HS4 used three web calls/12 targets, four fetch failures retained. Official release commit 3739729b86489e4ae28b5a62e622be320b141493/tag source declares 2.4.0. Approved reference 178e1a1797858724c79fd9d12d79d0902d730497 remains unmapped to that release/exact wheel; necessary provenance stop applied. No pin change, graph expansion, subsequent tests/lint/payload reads or research. Eleven direct runtime names observed, no transitive/version/artifact closure. Final totals/preservation/scope in HS meter/closeout.
+
+Nine files await source/results commit: two new aids, HS report, dependencies/preflight, PLAN/TODO/README/this checkpoint. Summary and unrelated content preserved. Recommend preparing bounded source-coordinate reconciliation; do not repeat successful wheel/runtime payload inspection. Exact next package/pin decision/execution need approval. No install/candidate import/launch/model/API/build/PATH/lock/G2/app/stage transition. Six local workflows used: planning, incremental, TDD, security, quality review, documentation; no skill scripts/subagents. Earlier history follows.
+
 # Latest checkpoint — IF-SA committed; HS proposal pending
 
 User approved committing nine IF-SA result/source files and preparing a Hub-only follow-up. Exact delivery hashes, nine-file staged allowlist and whitespace checks passed; commit 2ad9cb1 succeeded, index empty. Session summary and unrelated content excluded. Epochs 01/02/03 remain closed; no old meter/report was changed for this preparation. Static findings retain the 191-versus-128 stop and closeout reporting deviation.

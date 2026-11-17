@@ -152,3 +152,10 @@ T10 result: [bounded embedding comparison](benchmarks/embeddings.md). Approved o
 ## T17-IF-SA continuation 03 — partial static evidence
 
 [Findings](benchmarks/standalone-tokenizer-static-verification.md): the cached runtime archive and all 75 installed files agree; 71 native files/four notices inventoried, without publisher/source/native-safety attestation. Tokenizers 0.23.3 identity/31-member RECORD/Python>=3.10/Hub>=0.16.4,<3.0 metadata verified. Hub 2.4.0 identity matches but 191 entries exceed 128; no new Hub RECORD/metadata/notices or dependency research. No installation/import/adoption. Native notices/advisories, Hub source/release mapping, applicable hf-xet/httpx2 graph/offline/parity remain unresolved. Recommend a separately approved Hub-only continuation.
+
+
+## T17-IF-HS — Hub wheel identity/RECORD complete; adoption still gated
+
+[HS findings](benchmarks/hub-only-static-review.md): exact Hub 2.4.0 wheel verified, 191 entries/190 RECORD payload hashes, Python>=3.10 metadata and one Apache-2.0-declared LICENSE read. No native-suffix filenames in this wheel; applicable hf-xet remains a native-transitive question, and httpx2 is distinct from HTTPX. Nine direct requirements are recorded; extras and Python<3.11 tomli excluded. No exact transitive artifacts selected.
+
+Three public calls/12 targets exposed official release commit 3739729… while approved source 178e1a… remains unmapped to release/wheel; four failed fetches preserved. Required-provenance stop prevents graph/advisory/offline expansion. No install/import/adoption. Prepare separately approved source-coordinate reconciliation, keeping successful static evidence.

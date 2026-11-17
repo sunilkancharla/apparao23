@@ -1,3 +1,7 @@
+## Latest HS result — Hub integrity verified; source mapping unresolved
+
+Approved planning committed as 9834ce4. [HS findings](docs/benchmarks/hub-only-static-review.md): all 191 wheel entries admitted, 190 RECORD payload hashes verified, metadata/one license read; one owned worker exited with teardown verified. Final 18 tests, lint and format check passed. Public review used three calls/12 targets, then stopped on the required mapping between approved source 178e1a… and official release 3739729…. No pin substitution, graph expansion, installation or candidate execution. Nine source/results/status files await commit approval; next propose source-coordinate reconciliation without repeating wheel inspection. Earlier statuses are historical.
+
 ## Latest execution point — IF-SA committed; Hub-only review proposed
 
 The nine IF-SA source/results files were committed as 2ad9cb1 after exact delivery-hash/allowlist checks. [HS proposal](docs/proposals/hub-only-static-review.md) now covers only the existing Hub wheel: propose 256 entries, preserve the old inspector, add two new stdlib aids, perform one 120-second static attempt, then conditionally research remaining dependency/provenance questions. No repeated large-runtime inspection. Proposed 128 units/2,400 seconds/8 MiB artifacts/128 MiB shared reads, six suites/six Ruff calls, eight web calls/24 targets. Package and five-document commit await approval; no new root/code/fixture/payload inspection/research started. Earlier statuses are historical.
