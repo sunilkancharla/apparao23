@@ -1,3 +1,15 @@
+## T17-IF-HS — Hub-only static continuation proposed
+
+IF-SA's nine reviewed source/results files committed as 2ad9cb1. [Exact HS proposal](docs/proposals/hub-only-static-review.md) defines inputs, helper reuse, 256-entry wheel-only cap and full limits. Package and five planning-document commit await approval.
+
+- [ ] HS1 — After approval, fresh accounting/output gate and preserved identities before optional reads. Evidence: bootstrap, entry manifest and measured-output controls.
+- [ ] HS2 — After HS1, two new stdlib aids, expected RED/green/mutation, final tests/lint/format. Evidence: shared suite/resource/check records; no old test/root execution.
+- [ ] HS3 — After HS2, one owned Hub-only static worker: exact identity, bounded 256-entry ZIP, RECORD/metadata/notices or partial stop, verified teardown. Evidence: static manifest and handle/wait receipt.
+- [ ] HS4 — Only after coherent HS3 without a stop, public runtime-graph/native/source-release/offline review. Evidence: verified/unknown/blocked table within eight calls/24 targets/20 names; no installation/adoption.
+- [ ] HS5 — After HS3 stop or HS4, preserve evidence/checkpoint/diffs/links/scope/limits and request the separate findings commit. No old epoch reset or G2/application claim.
+
+All tasks are pending; preparing this documentation did not authorize execution. Earlier IF-SA task statuses remain historical evidence.
+
 ## Latest T17-IF-SA result — partial static verification, continuation 03
 
 Prior five-file findings commit 740dc3a succeeded. [Current findings](docs/benchmarks/standalone-tokenizer-static-verification.md) and epoch 03 receipts supersede earlier statuses.

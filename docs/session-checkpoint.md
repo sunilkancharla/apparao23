@@ -1,3 +1,15 @@
+# Latest checkpoint — IF-SA committed; HS proposal pending
+
+User approved committing nine IF-SA result/source files and preparing a Hub-only follow-up. Exact delivery hashes, nine-file staged allowlist and whitespace checks passed; commit 2ad9cb1 succeeded, index empty. Session summary and unrelated content excluded. Epochs 01/02/03 remain closed; no old meter/report was changed for this preparation. Static findings retain the 191-versus-128 stop and closeout reporting deviation.
+
+Prepared docs/proposals/hub-only-static-review.md plus PLAN/TODO/README/this checkpoint (five files). HS1 bootstrap -> HS2 two new test-first stdlib aids -> HS3 one owned static worker -> conditional HS4 public metadata -> HS5 closure. Existing exact Hub wheel only, 857,021 bytes/SHA 42ecfd93ede47bdd333daebbf66a32d7bfe2e18752754fe4d2d4f98a0179d801. Propose wheel-only 256 entries/16 MiB expansion, preserve old 128-entry defaults and inspector/test. Explicitly allow verified owned helper primitives only; never old worker/tests/JSON writer/root. No large runtime/tokenizer/model payload reread.
+
+Proposed 128 units (104 normal/24 protected), 2,400 active seconds, 8 MiB artifacts, 128 MiB shared streamed reads including six prepaid 8 MiB synthetic-suite allowances. Six suites/six Ruff invocations; worker 120 seconds plus 30 teardown; eight public calls/24 targets/20 distribution names; output 8 KiB/call/64 KiB total/8 KiB closure reserve with stdout AND stderr captured/measured before emission. No candidate imports/execution, install, payload download, native/model/API/build/PATH/lock changes, G2/app/stage/16 GB acceptance.
+
+Package and exact five-document commit await approval. No HS root, aid, fixture, ledger, payload inspection or new research created/run. Planning/documentation workflows manually reviewed; no skill scripts/subagents. After approval, the first execution invocation must only bootstrap; no optional read precedes accounting. Preserve closed IF-SA evidence; do not execute old test fixtures into epoch 03. Earlier checkpoints follow.
+
+Preparation verification passed: 350 local links, exact four tracked status files plus one new proposal, unchanged hashes for the other five committed result files, empty staged index, absent future root/aids, and whitespace checks. Documentation only; no application tests or new research.
+
 # Latest checkpoint — IF-SA continuation 03 partial result
 
 User approved five findings/status files and corrected continuation; exact commit 740dc3a succeeded. Epoch 03 exclusively bootstrapped accounting, then verified its measured-output gate. Earlier epochs unchanged. Two oversized metadata projections blocked before raw emission; a PowerShell array-shape error was corrected with conservative charging. All 36 inherited hashes matched; 43 identities frozen.

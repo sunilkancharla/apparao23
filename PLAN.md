@@ -1,3 +1,7 @@
+## Latest execution point — IF-SA committed; Hub-only review proposed
+
+The nine IF-SA source/results files were committed as 2ad9cb1 after exact delivery-hash/allowlist checks. [HS proposal](docs/proposals/hub-only-static-review.md) now covers only the existing Hub wheel: propose 256 entries, preserve the old inspector, add two new stdlib aids, perform one 120-second static attempt, then conditionally research remaining dependency/provenance questions. No repeated large-runtime inspection. Proposed 128 units/2,400 seconds/8 MiB artifacts/128 MiB shared reads, six suites/six Ruff calls, eight web calls/24 targets. Package and five-document commit await approval; no new root/code/fixture/payload inspection/research started. Earlier statuses are historical.
+
 ## Latest IF-SA result — runtime verified; Hub cap stopped continuation 03
 
 Prior findings committed as 740dc3a. All 75 runtime files match the exact cached archive; the Tokenizers wheel and its 31-member RECORD verified. Hub identity matches, but its 191 entries exceed the 128-entry cap. Mandatory stop; SA4 unstarted. Final 26 tests and lint passed before the worker. [Findings](docs/benchmarks/standalone-tokenizer-static-verification.md) recommend preparing a fresh Hub-only review, avoiding another large runtime read. Nine source/results/status files await commit approval; G2 remains open. Earlier statuses are historical.
