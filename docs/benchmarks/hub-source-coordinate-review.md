@@ -1,3 +1,26 @@
+# Latest result — epoch 02 reporting stop after one source request
+
+The user approved the [immutable-accounting continuation](../proposals/hub-source-coordinate-continuation.md), committed as `fd5f61b`. Fresh `data/t17/hub-source-coordinate-review-02/` successfully bootstrapped and verified immutable accounting before source research. The earlier attempt below is historical and remains preserved.
+
+**Accounting correction passed; source reconciliation remains incomplete.** A public request covered four approved targets. The response was stored in orchestration memory, but its reporting guard then raised `ReferenceError: TextEncoder is not defined`. That JavaScript helper is unavailable in this tool runtime. This is an agent orchestration error, not a candidate-package or publisher failure. The required reporting stop was applied; no additional web request followed.
+
+| Task | Epoch-02 evidence / result |
+| --- | --- |
+| SC1 | Passed: initial durable record before optional reads; successful append/fresh selection; inline controls rejected bad parent, gap, decreasing counter, terminal continuation and malformed JSON; oversized-output refusal passed. Twenty-two small identities frozen; five immutable HS delivery hashes matched. |
+| SC2 | Partial: one call/four targets; two fetch failures; no established exact-wheel/source relationship. Response preserved for protected findings only after the reporting stop. |
+| SC3 | Partial recommendation: use a byte counter supported by the orchestration runtime under a separately approved fresh continuation; no source-pin substitution or adoption. |
+| SC4 | Protected partial findings/checkpoint, preservation/scope/diff/resource checks and separate results-commit gate. Final local closeout records actual totals. |
+
+The exact-wheel provenance endpoint and historical commit page returned cache misses. These are tool-access observations, not proof that publisher evidence or the commit does not exist. The [version-specific registry JSON](https://pypi.org/pypi/huggingface-hub/2.4.0/json) returned data, but its complete provenance relationship was not assessed before the stop. The [release commit](https://github.com/huggingface/huggingface_hub/commit/3739729b86489e4ae28b5a62e622be320b141493) returned its already observed release-candidate-to-2.4.0 version change. This does not connect the exact wheel digest to its publishing/build source or resolve the historical coordinate.
+
+The 17,293-byte fetched response was retained locally, within the artifact ceiling. Protected closure classified that existing response without another request; no subsequent optional research occurred. The host exception bypassed controlled emission. Its prepaid reporting allowance remains charged, without any retrospective compliance claim. No test suite, Ruff call, candidate payload read/download/import, model/API/native trial, worker/service, installation, build or environment/lock change occurred.
+
+Preserve this closed allocation and the earlier evidence. A fresh continuation would need to keep the immutable-accounting contract and replace the unavailable output helper with a runtime-supported UTF-8 byte count, demonstrated before source calls. Do not execute a continuation, repeat a failed target or raise limits automatically. Runtime adoption, dependency/native/offline review, input-fit/parity and G2 remain open; Stage 1 scope and the 16 GB CPU-only target are unchanged.
+
+Protected checks passed: 21 frozen identities unchanged, original epoch-01 report text retained exactly, 367 local links, exact five-file tracked scope, empty index, whitespace and ignored runtime-root checks. Readable diff and final delivery hashes are retained locally. These checks do not establish source provenance or erase the reporting failure.
+
+Request a separate commit of the five findings/status files and approval to prepare that narrowly corrected continuation. The original epoch-01 account follows unchanged.
+
 # T17-IF-SC — stopped during accounting; source review not started
 
 ## Outcome

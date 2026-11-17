@@ -1,3 +1,14 @@
+## Latest T17-IF-SC epoch 02 — reporting stop after partial research
+
+Planning commit `fd5f61b`; [current findings](docs/benchmarks/hub-source-coordinate-review.md) distinguish this allocation from closed epoch 01.
+
+- [x] SC1 — Immutable bootstrap/append/fresh-selection, in-memory negative/output controls passed; 22 entry identities frozen and five immutable HS delivery hashes verified.
+- [ ] SC2 — Partial: one call/four targets, two fetch failures; received response stored before unavailable TextEncoder caused reporting failure. Required stop, no further source call; relationship unresolved.
+- [ ] SC3 — Partial recommendation: separately approved fresh continuation with a runtime-compatible output-byte guard; no pin or adoption decision.
+- [x] SC4 — Protected response preservation/classification, partial findings/checkpoint and closure checks. Retain reporting failure/reservations and final local totals; no worker/service started.
+
+Five findings/status files await commit approval. Preparing/executing another continuation retains its applicable approval gates. No retries, payload reads/downloads, test suites/Ruff/native/model trials, runtime/G2/application adoption. Earlier task states are historical.
+
 ## Latest T17-IF-SC — immutable-accounting continuation proposed
 
 Stopped epoch-01 findings committed as `c404b61`. [Exact continuation](docs/proposals/hub-source-coordinate-continuation.md) defines a fresh root, bounded immutable record chain, inline controls and unchanged research ceilings. Package and five planning-document commit await approval.

@@ -1,3 +1,7 @@
+## Latest SC result — accounting passed; response reporting stopped epoch 02
+
+Continuation planning committed as `fd5f61b`. [Findings](docs/benchmarks/hub-source-coordinate-review.md): immutable-accounting controls and entry preservation passed; one public call/four targets returned before the output guard used unavailable TextEncoder and triggered the required reporting stop. Two fetch failures retained; existing response preserved/classified during protected closure, no further request. Source mapping unresolved; no pin/runtime/G2 change. Five findings/status files await commit approval; next recommend a runtime-compatible reporting guard in a separately approved fresh continuation. Earlier statuses below are historical.
+
 ## Latest execution point — SC stop committed; immutable-ledger continuation proposed
 
 Five SC result/status files committed as `c404b61`. [Corrected continuation](docs/proposals/hub-source-coordinate-continuation.md) proposes fresh epoch 02 and exclusive-create, hash-linked accounting records with checked sequence selection; no File.Replace or old-root repair. Inline accounting/output controls precede evidence reads. SC1–SC4 retain 48 units/900 seconds/2 MiB artifacts/8 MiB reads/six calls/18 targets; ledger validation receives 4 MiB within that read ceiling. Execution and five-document commit await approval. No fresh root/control/research executed. Earlier statuses below are historical.

@@ -1,3 +1,15 @@
+# Latest checkpoint — SC epoch 02 accounting passed; reporting stop
+
+User approved immutable-accounting continuation/five planning docs; scoped commit `fd5f61b` succeeded. Fresh data/t17/hub-source-coordinate-review-02 initial durable ledger preceded optional reads. Successful immutable append/fresh selection; in-memory bad-parent/gap/decreasing-counter/terminal/malformed controls and oversized-output refusal passed. Twenty-two small entry identities frozen, five immutable HS delivery hashes matched. No File.Replace or old-root writes.
+
+One precharged public web call/four targets completed and response was stored in orchestration memory. Output guard then used TextEncoder, unavailable in this V8 tool runtime; ReferenceError bypassed controlled emitter. Required reporting stop applied, no further web request. This is orchestration error, not candidate/publisher failure. Keep prepaid allowance; no retrospective reporting-compliance claim.
+
+Protected closure retained 17,293-byte existing response as data and classified only partial results: provenance endpoint and historical commit page cache misses; registry JSON returned but full source relationship not assessed; known release version change visible. No exact-wheel/source mapping or pin substitution. Record recovered-response processing separately from optional research. Existing epoch01 report text preserved below a new epoch02 section; dependencies/preflight and historical sources unchanged.
+
+Five findings/status files: SC report, PLAN/TODO/README/this checkpoint. No test suite/Ruff/worker/candidate payload read/download/import/install/model/API/native trial/build/environment/lock/application/G2 change; no worker/service teardown needed. Final local closeout retains resource/preservation/diff/link/scope evidence. Recommend approval to commit these five and prepare a narrowly corrected fresh continuation using a runtime-supported UTF-8 counter before source calls; do not execute it automatically. No skill scripts/subagents/goal/status/compact invocation. Earlier checkpoints below are historical.
+
+Protected checks passed: 21 frozen identities unchanged; historical epoch01 report retained as exact byte suffix; 367 local links; exact five tracked result/status files; empty index; whitespace; ignored runtime root. Readable diff saved/reviewed. Final five-file delivery hashes and resource totals retained locally; reporting failure remains explicit, no retrospective compliance claim.
+
 # Latest checkpoint — SC stop committed; corrected continuation prepared
 
 User approved committing the five reviewed SC findings/status files and preparing a corrected continuation. Delivery identity/allowlist/index/whitespace checks passed; exact commit `c404b61` succeeded. No runtime records, session summary or unrelated content staged. Closed attempt 01 remains unchanged: 16/48 units,273.917 seconds,760009-byte artifact upper, zero source calls/tests/workers. No failure diagnostic or source retry performed.
