@@ -1,6 +1,6 @@
-## Latest GC outcome — static-inspection planning next
+## Latest WI outcome — stopped before metadata probe
 
-[GC evidence](../benchmarks/hub-dependency-gap-closure.md) supports preparing an exact static-inspection proposal with rounded-size/provenance caveats. No payload/runtime/parity work approved; source mapping remains open for adoption. Metadata-only deferral unchanged.
+[WI findings](../benchmarks/wheel-static-inspection.md) record an approved attempt stopped at its reporting boundary during source reads. Planning commit `424962f`; no native probe, HTTP request, artifact download or candidate execution ran. A later continuation must fix byte-limited output and receive a new bounded allocation. Existing source mapping, metadata/native/licence/offline/parity and G2 gates remain open. The metadata-only timing deferral is unchanged.
 
 ## Latest MR readiness — gaps remain
 

@@ -1,6 +1,6 @@
-## Latest GC evidence — inspection proposal can be prepared
+## Latest WI evidence — stopped before acquisition
 
-[GC findings](benchmarks/hub-dependency-gap-closure.md) bind HF-Xet/FSSpec filenames/checksums and licence declarations; exact bytes, FSSpec attestation, requirements/notices/offline behavior remain explicit gaps. Reuse MR's six identities. No acquisition/install/adoption authorized. Earlier evidence below remains historical.
+[WI findings](benchmarks/wheel-static-inspection.md): the user approved the exact inspection package; planning committed as `424962f`. Its combined source-read output exceeded the invocation cap, stopping WI1 before the metadata probe. No artifact was acquired, inspected, imported or installed. Existing checksum/rounded-size/provenance and requirements/notices/offline gaps remain; the stopped allocation cannot be reset automatically. Earlier evidence below remains historical.
 
 ## Latest MR evidence — incomplete readiness
 

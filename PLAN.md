@@ -1,6 +1,6 @@
-## Latest execution point — GC committed; static inspection proposed
+## Latest execution point — WI stopped before probe
 
-GC/rule results committed as `90a01de`. [WI proposal](docs/proposals/wheel-static-inspection.md) specifies one fail-fast native metadata probe, eight pinned acquisitions, two cached-root static reads and test-first aids. WI1–WI5/four-file commit await approval; no execution started. No install/candidate import; source/adoption/G2 gaps remain. Progress stays in task/report files.
+The user approved WI1–WI5; planning committed as `424962f`. [WI findings](docs/benchmarks/wheel-static-inspection.md) record a combined source-read output of at least 19,667 bytes against an 8,192-byte invocation cap. WI1 stopped before the native metadata probe; no HTTP/download/helper/test/install/adoption ran. Protected closeout preserves the failed attempt. Next request a results commit, then a bounded continuation with byte-limited capture; no automatic allocation reset. Source/adoption/G2 gaps remain.
 
 ## Latest MR outcome — partial evidence; limits reached
 
