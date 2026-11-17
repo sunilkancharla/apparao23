@@ -1,6 +1,6 @@
-## Latest WI outcome — stopped before metadata probe
+## Latest WIC outcome — reporting controls passed; probe did not launch
 
-[WI findings](../benchmarks/wheel-static-inspection.md) record an approved attempt stopped at its reporting boundary during source reads. Planning commit `424962f`; no native probe, HTTP request, artifact download or candidate execution ran. A later continuation must fix byte-limited output and receive a new bounded allocation. Existing source mapping, metadata/native/licence/offline/parity and G2 gates remain open. The metadata-only timing deferral is unchanged.
+[WIC findings](../benchmarks/wheel-static-inspection-continuation.md) record 12 passed reporting-control checks and a later probe-start deadline rejection before Python/network startup. Planning commit `2aa9ea7`; no metadata request, acquisition, candidate execution or input-fit result. Reusing frozen controls in a probe-first retry needs a new bounded approval with explicit host-wait/start accounting. Existing source mapping, metadata/native/licence/offline/parity and G2 gates remain open. The metadata-only timing deferral is unchanged.
 
 ## Latest MR readiness — gaps remain
 

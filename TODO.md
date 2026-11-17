@@ -1,14 +1,14 @@
-## Latest T17-IF-WIC — continuation ready; execution pending
+## Latest T17-IF-WIC — controls passed; stopped before probe startup
 
-WI results committed as `5ec1002`. The [exact continuation](docs/proposals/wheel-static-inspection-continuation.md) retains the original artifacts/ceilings and adds bounded capture and synthetic controls before the early native metadata probe. Its execution and four-file planning commit await approval.
+WIC1–WIC5 and its planning commit were approved; planning committed as `2aa9ea7`. [Findings](docs/benchmarks/wheel-static-inspection-continuation.md) retain passed controls and the probe-start deadline failure. The [approved scope](docs/proposals/wheel-static-inspection-continuation.md) remains historical; its stopped allocation cannot be reset automatically.
 
-- [ ] WIC1 — After approval, fresh-root accounting/freeze, bounded capture controls and one fixed metadata probe. Accept: reporting controls pass within the shared suite/process limits; probe succeeds or work stops before helper implementation.
-- [ ] WIC2 — After WIC1, original two aids test-first. Accept: expected RED, passing regression/abuse/integrity-mutation checks and final lint/format/security review, with mocked network.
-- [ ] WIC3 — After WIC2, eight pinned acquisitions once. Accept: exact manifests/SHA/size, no retry/substitution, verified worker teardown.
-- [ ] WIC4 — After WIC3, bounded inert inspection/cached-root reads once. Accept: RECORD/metadata/notices/native findings and verified teardown; no candidate code execution.
-- [ ] WIC5 — At completion/stop, findings/task/readiness updates and final preservation/scope/link/whitespace/diff/summary checks. Accept: honest gaps/resource receipts and separate result-commit/adoption gates.
+- [ ] WIC1 — Partial/stopped: bootstrap/frozen inputs and 12 reporting-control checks passed; probe command rejected the elapsed 360-second start window before source loading/Python/network startup. Failed shell start reconciled in closeout; no retry.
+- [ ] WIC2 — Not started; no new versioned aid or implementation suite.
+- [ ] WIC3 — Not started; zero HTTP transactions or downloads.
+- [ ] WIC4 — Not started; no candidate payload reads/imports.
+- [x] WIC5 — Protected closeout complete: six-file delivery scope, seven touched links, 14 unchanged frozen inputs, preserved specification/configuration/historical checkpoint, empty index, whitespace and readable diff checked. Non-null local summary retained; timing/accounting and untested-monitor gaps explicit. Separate results-commit/adoption gates remain.
 
-Preparation checks passed: exact four-document delivery scope, five touched local links, inherited proposal identity, whitespace, empty index and readable diff; historical specification/configuration/checkpoint/report unchanged against `5ec1002`. No `wheel-static-inspection-02` root, capture control, helper, fixture, test or network request created or started. Next: request WIC1–WIC5 and the four-file planning commit approval. The prior closed root is unchanged; no session-checkpoint writes.
+Evidence: `data/t17/wheel-static-inspection-02/`. One synthetic suite, no Ruff/network/candidate activity; no owned workers remain. Next: request the six-file results commit and approval to prepare a small probe-first retry that reuses frozen controls and records host waiting separately. No session-checkpoint writes.
 
 ## Earlier T17-IF-WI — stopped before probe; closeout committed
 

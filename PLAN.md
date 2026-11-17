@@ -1,6 +1,6 @@
-## Latest execution point — WI results committed; continuation proposed
+## Latest execution point — WIC controls passed; probe deadline stopped execution
 
-WI results committed as `5ec1002`. The [WIC continuation](docs/proposals/wheel-static-inspection-continuation.md) requires bounded capture checks before the same early probe, retaining the eight artifacts and original ceilings. WIC1–WIC5 execution and the four-file planning commit await approval. No new root/control/helper/test/network activity started. The closed WI attempt remains untouched; source/adoption/G2 gaps remain.
+WIC planning committed as `2aa9ea7`. [Findings](docs/benchmarks/wheel-static-inspection-continuation.md): 12 reporting-control checks passed, but the 360-second probe-start guard rejected the later command before Python/network startup. Zero HTTP/download/candidate activity; WIC2–WIC4 unexecuted. Protected closeout retains the failed timing/accounting evidence. Next request the results commit and propose a small probe-first retry reusing frozen controls, with host-wait accounting explicit. No automatic allocation reset or adoption/G2 change.
 
 ## Latest MR outcome — partial evidence; limits reached
 

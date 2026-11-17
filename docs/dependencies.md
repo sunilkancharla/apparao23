@@ -1,6 +1,6 @@
-## Latest WI evidence — stopped before acquisition
+## Latest WIC evidence — controls passed; no artifact acquired
 
-[WI findings](benchmarks/wheel-static-inspection.md): the user approved the exact inspection package; planning committed as `424962f`. Its combined source-read output exceeded the invocation cap, stopping WI1 before the metadata probe. No artifact was acquired, inspected, imported or installed. Existing checksum/rounded-size/provenance and requirements/notices/offline gaps remain; the stopped allocation cannot be reset automatically. Earlier evidence below remains historical.
+[WIC findings](benchmarks/wheel-static-inspection-continuation.md): reporting controls passed 12 checks, then the probe-start deadline stopped the attempt before networking. Planning commit `2aa9ea7`; no dependency artifact was acquired, inspected, imported or installed. Existing checksum/rounded-size/provenance and requirements/notices/native/offline gaps remain. Passing reporting controls do not establish dependency readiness or authorize a retry. Earlier evidence below remains historical.
 
 ## Latest MR evidence — incomplete readiness
 
