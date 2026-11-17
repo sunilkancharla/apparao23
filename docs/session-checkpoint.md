@@ -1,3 +1,15 @@
+# Latest checkpoint — epoch-02 results committed; compatible-reporting proposal prepared
+
+User approved committing five reviewed findings/status files and preparing the reporting correction. Delivery identities matched; exact allowlist/index/whitespace commit `7d60633` succeeded. Closed epoch02 unchanged:19/48 units,486.488seconds,one web call/four targets/two fetch failures. Additional protected seal parser error and late charge remain in its closeout/error receipt; not retrospective compliance. No session summary/runtime data/unrelated content staged.
+
+Prepared docs/proposals/hub-source-reporting-continuation.md plus PLAN/TODO/README/this checkpoint only. Fresh proposed root data/t17/hub-source-coordinate-review-03; immutable-accounting contract retained. SC1 proves standard-JavaScript UTF-8 counting and string/object/oversized response handling before evidence access; SC2 reuses saved public response then bounded permitted new sources; SC3 retain/correction/blocked-defer recommendation; SC4 closure with static validation of exact final PowerShell command. No TextEncoder/Buffer/btoa/Node dependency, policy bypass or AST execution.
+
+Saved response input17,990bytes/SHA6d035145ad7cc981f99535349192d45986fb14ed9046981002982a4bf39e2f46; identity measured during documentation preparation, source body not researched here. Do not repeat epoch02 failed provenance/historical-commit URLs or refetch successful registry/release targets. Public text only, no payload or candidate execution. Limits remain48units(36normal/12protected),900seconds,8MiBreads(4MiBledger/4MiBevidence),2MiBartifacts,6calls18targets,32ledgerrecords/validations4KiBeach;8KiBreport/invocation48KiBtotal8KiBclosure reserve. Controls/closure/failure output must be prepaid before invocation.
+
+Execution and five-document commit await approval. No new root/ledger/control/helper/fixture/research/trial started; source coordinates and G2/runtime/application/stage gates unchanged. Local planning/documentation guidance carried forward; no skill scripts/subagents/goal/status/compact invocation. Earlier checkpoints below are historical.
+
+Preparation checks passed: exact four tracked status edits plus one new proposal, empty index, whitespace, six preserved reviewed source/report identities, 370 local links, fixed wheel/response/source identity constants and absent future root. Readable additions and new proposal reviewed. Documentation only; no application tests or reporting controls executed. Five proposal/status files remain uncommitted.
+
 # Latest checkpoint — SC epoch 02 accounting passed; reporting stop
 
 User approved immutable-accounting continuation/five planning docs; scoped commit `fd5f61b` succeeded. Fresh data/t17/hub-source-coordinate-review-02 initial durable ledger preceded optional reads. Successful immutable append/fresh selection; in-memory bad-parent/gap/decreasing-counter/terminal/malformed controls and oversized-output refusal passed. Twenty-two small entry identities frozen, five immutable HS delivery hashes matched. No File.Replace or old-root writes.

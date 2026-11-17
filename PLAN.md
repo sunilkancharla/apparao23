@@ -1,3 +1,7 @@
+## Latest execution point — epoch-02 results committed; reporting-compatible continuation proposed
+
+Five result/status files committed as `7d60633`. [Epoch-03 proposal](docs/proposals/hub-source-reporting-continuation.md) retains immutable accounting and existing limits, proves runtime-compatible UTF-8/response handling before source access, reuses the saved response and excludes the two failed URLs. Static final-command parsing addresses the additional closeout parser error. SC1–SC4 and five-document commit await approval; no new root, controls or research executed. Earlier statuses below are historical.
+
 ## Latest SC result — accounting passed; response reporting stopped epoch 02
 
 Continuation planning committed as `fd5f61b`. [Findings](docs/benchmarks/hub-source-coordinate-review.md): immutable-accounting controls and entry preservation passed; one public call/four targets returned before the output guard used unavailable TextEncoder and triggered the required reporting stop. Two fetch failures retained; existing response preserved/classified during protected closure, no further request. Source mapping unresolved; no pin/runtime/G2 change. Five findings/status files await commit approval; next recommend a runtime-compatible reporting guard in a separately approved fresh continuation. Earlier statuses below are historical.

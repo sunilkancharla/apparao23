@@ -1,3 +1,14 @@
+## Latest T17-IF-SC epoch 03 — reporting-compatible continuation proposed
+
+Epoch-02 findings committed as `7d60633`. [Exact new proposal](docs/proposals/hub-source-reporting-continuation.md) preserves limits/accounting, adds runtime-compatible response and final-command checks, reuses saved public text and excludes the failed URLs. Package/five planning-document commit await approval.
+
+- [ ] SC1 — After approval, durable bootstrap first; immutable-accounting controls plus UTF-8/Unicode/serialized-string/object/oversized reporting controls; frozen-input/saved-response verification. Acceptance: controls pass before optional source access; no unavailable helper or old-root write.
+- [ ] SC2 — After SC1, inspect saved public evidence then permitted new official sources within six calls/18 targets. Acceptance: relationship verified/unknown/conflicting with cited identities; no failed-URL repeat, payload acquisition or source-pin substitution.
+- [ ] SC3 — After SC2/required stop, retain/correction/blocked-defer recommendation. Acceptance: exact relationship and consequence stated; no automatic retry, graph expansion or adoption.
+- [ ] SC4 — After SC3/stop, preservation/history/links/scope/whitespace/readable diff/resource checks, static final-command validation, seal/checkpoint and separate results-commit request. Acceptance: actual evidence/failures retained without resetting allocation.
+
+No epoch-03 root/ledger/control/helper/source request/trial created during preparation. Earlier task states refer to historical allocations.
+
 ## Latest T17-IF-SC epoch 02 — reporting stop after partial research
 
 Planning commit `fd5f61b`; [current findings](docs/benchmarks/hub-source-coordinate-review.md) distinguish this allocation from closed epoch 01.
