@@ -1,6 +1,6 @@
-## Latest execution point — reconciliation stopped; capture correction needed
+## Latest execution point — RC results committed; capture correction proposed
 
-RC1–RC5 and its planning commit were approved; planning committed as `f3dad02`. [RC findings](docs/benchmarks/wheel-evidence-reconciliation.md): static local-tool integrity review passed, but the first synthetic check failed and its error capture was incomplete. Optional work stopped; graph/licence reconciliation and research did not run. Next: review the results commit and prepare a fresh capture-boundary correction before another parser attempt. Installation, source/native/offline/adoption/G2 gates remain open.
+RC results committed as `2b8f4ce`. The [CC package](docs/proposals/reconciliation-capture-correction.md) proposes complete-stream capture controls first, followed by one parser-control attempt only if they pass. CC1–CC5 and its four-file planning commit await approval. No fresh execution/root or research started; graph/licence/provenance, installation, runtime adoption and G2 remain open.
 
 ## Latest MR outcome — partial evidence; limits reached
 

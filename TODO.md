@@ -1,4 +1,16 @@
-## Latest T17-IF-RC — stopped on incomplete capture; closeout under review
+## Latest T17-IF-CC — capture-correction proposal ready; execution pending
+
+RC results committed as `2b8f4ce`. The [exact CC package](docs/proposals/reconciliation-capture-correction.md) defines source identities, complete-stream/negative controls, a conditional single parser attempt and shared limits. CC1–CC5 and its four-file planning commit await approval; preparation does not authorize execution.
+
+- [ ] CC1 — After approval, bootstrap/freeze and inspect source/import/command boundaries. Accept: fresh root, shared leases and exact input/tool identities; no old-script dispatch or unreviewed import.
+- [ ] CC2 — After CC1, test-first capture correction. Accept: deterministic expected RED for the single-read defect and a smallest bounded, concurrent byte-stream implementation.
+- [ ] CC3 — After CC2, GREEN suite for delayed/empty/nonzero/exact-cap/UTF-8/overflow/timeout/reader-failure cases. Accept: complete admitted bytes, expected negatives, preserved exit codes and verified child exit within shared limits.
+- [ ] CC4 — Only after CC3 passes, one packaging 26.3 parser-control attempt. Accept: reviewed loader/controls only, source identity rechecked, complete admitted diagnostics/exit/teardown; no graph/research or speculative semantic fix.
+- [ ] CC5 — On completion/stop, findings, budgets, preservation/scope/link/whitespace/readable-diff/empty-index/non-null-receipt checks. Accept: six-document closeout maximum; separate results-commit, next-package and adoption gates.
+
+Preparation checks passed: four-document scope, five fixed evidence hashes, 18 checked local links, whitespace, empty index and readable plan diff; other tracked inputs unchanged. No `reconciliation-capture-correction-01` root, capture harness, new fixture, tool import, test or parser retry created/started. Closed roots remain read-only; historical checkpoint files and unrelated user content remain untouched.
+
+## Earlier T17-IF-RC — stopped on incomplete capture; results committed
 
 RC1–RC5 and the four-file planning commit were approved; planning committed as `f3dad02`. [RC findings](docs/benchmarks/wheel-evidence-reconciliation.md) record partial tool review and the failed synthetic check with incomplete error capture. The [approved boundary](docs/proposals/wheel-evidence-reconciliation.md) requires stopping optional work; this run is not authorized to retry.
 
