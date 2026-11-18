@@ -1,4 +1,16 @@
-## Current T17-IF-MTR — correction/checks passed; results uncommitted
+## Current T17-IF-RSR — retained-source review prepared; approval pending
+
+The user approved the twelve-file WSP/MTR commit (**`5d28c59`**) and preparation of the [RSR package](docs/proposals/tokenizer-retained-source-review.md). Only existing evidence identities were checked during preparation; candidate text was not semantically reviewed. Proposed root/report remain absent. Each task below is proposed, not execution authority.
+
+- [ ] **RSR1 — Freeze/accounting.** Prerequisite: package approval. Objective: establish a fresh shared boundary. Accept: twelve pinned inputs, carried 12 fixed/eight protected entries and four aid identities; reviewed root/namespace/zero-check-limit substitutions; actual accounting smoke/negative controls before candidate-text interpretation. Evidence: allocation/admission/control records. Files: proposal and ignored records. Status: awaiting approval.
+- [ ] **RSR2 — Retained Python review.** Prerequisite: RSR1. Objective: map the actual local-file path and optional/native edges across all 16 verified Python texts. Accept: exact names/66,467 bytes/member hashes; import/definition-time and relevant function-body review; no candidate execution. Evidence: file/line/digest matrix and bounded notes. Files: new RSR findings. Status: pending.
+- [ ] **RSR3 — Retained CPU-source review.** Prerequisite: RSR1; follows RSR2. Objective: review the three saved source responses. Accept: CPU/device, explicit-model/non-router, local endpoints/auth/request and compatibility/DLL questions classified with partial projections explicit; zero public calls. Evidence: source-coordinate/line matrix. Files: same findings. Status: pending.
+- [ ] **RSR4 — Consolidated readiness.** Prerequisite: RSR2/RSR3. Objective: identify one next decision. Accept: supported/runtime-validation/prelaunch-gap/optional categories, exact remaining facts and alternatives, no invented native/offline/parity proof or adoption. Evidence: findings and dependency status only if affected. Status: pending.
+- [ ] **RSR5 — Close/review.** Prerequisite: completion or stop. Objective: preserve evidence and close the approved allocation. Accept: final identities/scope/links/UTF-8/whitespace/diff/index/owned exit checks, honest counters/non-null receipt, at most six result documents and no new aid; separate results commit and subsequent package gates. Evidence: final report/receipt/readable diff. Status: pending.
+
+Four-file planning commit and RSR1–RSR5 remain unapproved. Preparation checks passed: twelve pinned plus twelve carried fixed/eight protected entries, four aid identities, 418 scoped local links, five ordered tasks, allocation arithmetic, UTF-8/whitespace, readable diff/new-file review and empty index. Proposed execution root/report remain absent. No reader/helper, fixture, test run, public request, installation, native/model run, checkpoint or adoption. Earlier MTR/WSP statuses below are historical.
+
+## Completed T17-IF-MTR — correction/checks passed; committed in 5d28c59
 
 WSP execution was approved after planning commit `4a8275a`. Its static evidence and 32 passing reader tests remain useful; parent start/report accounting failed. WSP1 is partial, WSP2 passed reader checks but failed package coverage, WSP3 obtained static evidence, and WSP4/WSP5 remain incomplete. Eight result files are uncommitted. [Findings](docs/benchmarks/tokenizer-cached-wheel-source-review.md).
 
