@@ -1,4 +1,30 @@
-## Current T17-IF-SMC — small-page continuation prepared
+## Current T17-IF-RPT — reporting correction prepared
+
+[RPT proposal](docs/proposals/tokenizer-closeout-reporting-fix.md). User approved preparation only; six-file planning/results commit and execution await approval.
+
+- [ ] **RPT1 — Freeze/accounting.** Prerequisite: package approval. Objective: fresh boundary. Acceptance: 113 identity rows, measured bootstrap, prepaid/shared limits and fresh paths. Evidence/files: proposal and ignored entry/frozen records. Status: proposed.
+- [ ] **RPT2 — Reporting-path correction.** Prerequisite: RPT1. Objective: use explicit closure phase and reserved status space. Acceptance: actual-path RED/GREEN/mutation/restoration, at most twelve inert cases/two supervised children, unchanged capture/ownership guards. Evidence/files: ignored owned copy/wrapper/tests/captures. Status: proposed.
+- [ ] **RPT3 — Protected Git checks.** Prerequisite: final RPT2 GREEN. Objective: verify the corrected controller. Acceptance: supervised read-only whitespace/diff checks, complete captures, child/controller exits, readable review including authored untracked files. Evidence/files: captures/new benchmark findings. Status: proposed.
+- [ ] **RPT4 — Close/review.** Prerequisite: completion/hard stop. Objective: honest final acceptance. Acceptance: preserved inputs, exact scope/links/format/index, reconciled resources and observed terminal receipt; dated SMC follow-up preserves its failure. Evidence/files: root docs/proposal/new findings/SMC addendum and ignored closure. Status: proposed.
+
+Preparation changed only proposal/PLAN/TODO/README; existing uncommitted SMC report/proposal are preserved. No fix code, tests, new root, external request, model-store access, native run, installation, commit or checkpoint during preparation. Earlier statuses below are historical.
+
+Preparation checks passed: 113 identity rows, 448 scoped local links, UTF-8/EOF/whitespace, empty index and exact six-file proposed commit list. Planned starts: 34 within 40, optional ceiling 28/protected twelve. Proposed root/findings absent. Current tracked diffs reviewed in two bounded displays; new documents reviewed separately. These documentation checks do not count as corrected-controller integration or retroactive SMC acceptance.
+
+## Earlier T17-IF-SMC — closed with reporting limitations
+
+[Findings](docs/benchmarks/tokenizer-source-metadata-continuation.md), approved planning commit **68e012c**.
+
+- [x] SMC1: 107 identities and local admission controls.
+- [x] SMC2: sixteen combined cases, RED/GREEN/mutation/restoration.
+- [x] SMC3: six responses/16 visits/three verified batches.
+- [x] SMC4: two manifest hashes/descriptors; no payload/parity proof.
+- [x] SMC5: G01–G10 and sixteen FP/NP groups retained; hold native execution.
+- [ ] SMC6: closed with limitations; terminal observed. Controller reporting and two Git checks remain unaccepted.
+
+Last provisional note refused before output at 24,426 report bytes. Ignored root data/t17/tokenizer-source-metadata-02/ retains checks/counters. Five results await commit approval. Earlier statuses are historical.
+
+## Historical SMC preparation
 
 SMR stop results are committed as **`625a347`**. The user approved that commit and preparation of the [SMC proposal](docs/proposals/tokenizer-source-metadata-continuation.md). Its four-file planning commit and execution await approval; no new trial root or source/model-manifest access during preparation.
 

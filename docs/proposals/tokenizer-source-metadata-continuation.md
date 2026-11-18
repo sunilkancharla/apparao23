@@ -2,6 +2,8 @@
 
 ## Purpose and approval boundary
 
+Approved package, planning commit **68e012c**. [Findings](../benchmarks/tokenizer-source-metadata-continuation.md) record collection, remaining gates and optional-report stop. Protected closeout/results-commit gate apply. Preparation wording below is historical.
+
 The five SMR stop documents are committed as **`625a347`**. The user approved that commit and preparation of this continuation. This document, PLAN, TODO and README are the four planning changes. **Their commit and SMC1–SMC6 execution are proposed, not yet approved.** Preparation makes no public requests, reads no model manifests and creates no execution root or control code.
 
 Continue the same Stage 1 research: resolve or precisely record G02–G04/G07 through finite pinned-source requests and two exact manifest reads. The [SMR request](tokenizer-source-metadata-request.md) remains the authoritative source/metadata allowlist and base resource contract. Its [stop findings](../benchmarks/tokenizer-source-metadata-review.md) remain historical evidence. This continuation changes transport, entry evidence and owned paths only as specified below. All other SMR prohibitions, controls, limits and gates carry forward. A conflict stops dependent work; this is not permission to choose a looser interpretation.

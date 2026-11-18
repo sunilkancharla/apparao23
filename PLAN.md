@@ -1,4 +1,12 @@
-## Current execution point — SMR stop committed; small-page continuation proposed
+## Current execution point — closeout-reporting correction proposed
+
+The user approved preparation of the [RPT correction](docs/proposals/tokenizer-closeout-reporting-fix.md). It proposes explicit closure-phase propagation and a precharged status lease, then test-first controls → two supervised Git checks → final closeout. Reuse the SMC evidence; no new public/model-store access or native trial. The six-file planning/results commit and RPT1–RPT4 execution await approval. Preparation is documentation only; SMC's historical reporting limitation remains recorded.
+
+## Earlier SMC outcome
+
+[SMC findings](docs/benchmarks/tokenizer-source-metadata-continuation.md), planning commit **68e012c**: source/manifest collection complete; optional report stop, protected closeout. Handler/entry/descriptor questions narrowed; exact native prerequisites remain open. Hold native execution; five results await commit approval.
+
+## Historical SMC preparation
 
 The five SMR stop documents are committed as **`625a347`**. The user approved that commit and preparation of the [SMC continuation](docs/proposals/tokenizer-source-metadata-continuation.md). Proposed order: verify 107 identity rows → test actual admission/parser/transport paths → finite pinned-source requests → two exact manifest reads → readiness direction → audited closeout. Separate 4,096-byte bootstrap displays replace the oversized combined read; the planned start allocation is 61 within the unchanged cap of 64. Source/metadata and all product/runtime gates stay unchanged. Four-file planning commit and SMC1–SMC6 await approval. No new root, public request, model-manifest access, control run or installation occurred during preparation.
 
