@@ -1,4 +1,17 @@
-## Current T17-IF-PGC — checklist complete; results await commit
+## Current T17-IF-SMR — approved attempt stopped before optional work
+
+The user approved the [SMR package](docs/proposals/tokenizer-source-metadata-request.md) and four-file planning commit. An explicitly truncated opening read triggered mandatory stop before commit or optional work. HEAD remains **`679194b`**. See [stop findings](docs/benchmarks/tokenizer-source-metadata-review.md); the ignored root is closure-only, with no automatic retry.
+
+- [ ] **SMR1 — Freeze/accounting.** Approved; partial. All thirteen pins/89 carried rows matched during closure. Gateway/bootstrap/smoke/negative controls and full reconciliation did not run; acceptance unmet. Evidence: ignored prebootstrap-stop record and linked findings.
+- [ ] **SMR2 — Public/manifest admission controls.** Prerequisite: SMR1. Objective: meter real callers before relying on them. Accept: meaningful RED, actual-path GREEN, caught/restored mutation/final GREEN; sixteen inert cases maximum, zero real source/manifest access during controls. Evidence: ignored owned bridge/parser/tests/captures. Status: pending.
+- [ ] **SMR3 — Pinned source request.** Prerequisite: final SMR2 GREEN. Objective: address G02–G04 precisely. Accept: six calls/eighteen visits/eleven URLs maximum, up to three verified batches, complete returned envelopes before excerpts, exact unsupported spans/no automatic retry. Evidence: public ledger/responses/packets/findings. Status: pending.
+- [ ] **SMR4 — Two exact manifests.** Prerequisite: final SMR2 GREEN and SMR3. Objective: identify declared local model layers. Accept: approved paths/ancestry/length/hash/schema; no blob access, enumeration or equivalence/payload-verification claim. Evidence: ignored metadata projection and minimal findings. Status: pending.
+- [ ] **SMR5 — Readiness direction.** Prerequisite: SMR3/SMR4. Objective: one next decision. Accept: G01–G10 and all sixteen FP/NP groups retained; exact fact/risk/identity gaps; settled timing conditions preserved; compare trial-only design, precise blockers and hold without automatic adoption. Evidence: checklist/findings; dependencies only if affected. Status: pending.
+- [ ] **SMR6 — Close/review.** Prerequisite: completion/hard stop. Objective: accurate handoff. Accept: preserved identities, exact scope/links/UTF-8/whitespace/diff/index/known exits, reconciled local/public resources and non-null terminal receipt; at most six results documents, separate next gates. Evidence: final verification/report. Status: pending.
+
+**Execution status:** SMR2–SMR5 above remain unrun after stop. SMR6 is stop closeout only, not full audited-run acceptance. Preparation checks remain historical evidence; they do not prove this attempt passed. Five result documents (proposal, findings, PLAN, TODO, README) now record approval, failure and remaining work. No public request, manifest read, candidate run, installation, Git write or checkpoint update. Protected identities and final checks are recorded in ignored closure evidence; process-audit limitations remain explicit. A fresh bounded continuation and the changed results commit retain their separate gates. Earlier statuses below are historical.
+
+## Earlier T17-IF-PGC — completed static review, committed in 679194b
 
 The user approved the [PGC package](docs/proposals/tokenizer-prelaunch-gap-closure.md) and planning commit **`1f94a74`**. [Findings](docs/benchmarks/tokenizer-prelaunch-gap-closure.md) record the bounded review and exact remaining contracts. No next source/metadata request or native action is approved.
 
