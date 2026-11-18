@@ -1,11 +1,25 @@
-## Latest T17-IF-LFC — local-file comparison ready; next decision pending
+## Latest T17-IF-LFT — controlled-trial readiness prepared; approval pending
 
-ALN results committed as `fc0d8f5`. The user approved that commit and preparation of the [comparison](docs/proposals/local-file-tokenizer-comparison.md). Saved metadata settles the mandatory Hub requirement; no additional source search was needed. Recommend option A's trial-only proposal preparation, retaining the complete dependency graph and named evidence gaps. This recommendation is not installation, risk-exception or trial permission.
+LFC comparison committed as `cbfedf3`. The user approved that commit and option A's trial-proposal preparation. The [exact proposal](docs/proposals/controlled-local-file-tokenizer-trial.md) separates readiness work from a later native trial and explicitly names remaining evidence/risk decisions. No installation, source query, helper/fixture, native run or risk exception has started.
+
+- [ ] **LFT1 — Bootstrap/freeze.** Prerequisite: package approval. Accept: fresh shared root/allocation, 16 fixed/eight protected identities, complete 17-node candidate set and unresolved roles. Evidence: identities/ledger. Status: awaiting approval.
+- [ ] **LFT2 — Pinned loading/reference contracts.** Prerequisite: LFT1. Accept: four-call/12-target limit, complete retained responses and local-file/import/CPU-reference/loader contract verified or honestly unknown. Evidence: source-role/readiness matrix. Status: pending.
+- [ ] **LFT3 — Test-first readiness/reporting validator.** Prerequisite: sufficient LFT2 contract. Accept: behavioural RED, GREEN and caught mutation; tested reporting-reserve guard used by parent, fake-only manifest controls, final tests/Ruff within shared limits. Evidence: source/test/capture outcomes. Status: pending; skip dependent code if indispensable source contract is missing.
+- [ ] **LFT4 — Exact native-package design.** Prerequisite: LFT3. Accept: all FP/NP groups mapped into a finite counted schedule, exact runtime/asset/provisioning/ownership/host fields or explicit blockers; no guessed readiness. Evidence: proposed native manifest/package or blocked verdict. Status: pending.
+- [ ] **LFT5 — Decision/closeout.** Prerequisite: completion or stop. Accept: non-null summary, actual/reserved resources, ownership and preservation/scope/link/whitespace/diff/index checks; exact exception/next decision and separate commit/native/adoption gates. Evidence: findings/receipt. Status: pending.
+
+Readiness package execution and four-file planning commit await approval. Later candidate provisioning/native execution needs its exact package and explicit trial-only evidence/host decisions; LFT readiness approval cannot activate that phase. Current preparation changes only proposal/PLAN/TODO/README; proposed readiness root remains absent, historical checkpoints and unrelated files preserved.
+
+Preparation verification passed: 16 fixed/eight protected identities, 410 local links, five ordered task IDs, four-document scope, absent future root/code/findings/native package, UTF-8/new-file and tracked whitespace checks, empty index and readable diff/proposal review. Documentation only; no application tests or trial checks ran.
+
+## Earlier T17-IF-LFC — comparison committed; option A preparation approved
+
+The user approved the four-file [comparison](docs/proposals/local-file-tokenizer-comparison.md) commit (`cbfedf3`) and option A's trial-proposal preparation. Saved metadata settles the mandatory Hub requirement; no additional source search was needed. Preparation retains the complete dependency graph and named gaps; no installation, risk-exception or native-trial permission. Execution-era pending-decision wording in the frozen comparison is historical; current gates are LFT above.
 
 - [x] **LFC1 — Retained evidence.** Prerequisite: approved documentation preparation/ALN commit. Accept: exact baseline requirement, runtime-use versus installation distinction and existing counting gates retained. Evidence: saved Tokenizers metadata and linked static/RRC/ALN reports. Status: verified documentation review.
 - [x] **LFC2 — Alternatives.** Prerequisite: LFC1. Accept: dependency-complete local-file path, unsupported omission, alternative official artifact and hold compared without asserting a smaller graph or offline capability. Evidence: comparison table. Status: completed.
 - [x] **LFC3 — Contract and next proposal requirements.** Prerequisite: LFC2. Accept: local-only path/identity boundary, unchanged model-specific parity and explicit residual-gap decisions; no runnable package or source query. Evidence: comparison contract/next-approval sections. Status: draft design completed.
-- [ ] **LFC4 — Review and decision.** Prerequisite: LFC3. Accept: four-document checks and explicit commit/next-preparation direction. Evidence: documentation verification below and user decision. Status: comparison ready; approval pending.
+- [x] **LFC4 — Review and decision.** Four-document checks passed; user approved comparison commit `cbfedf3` and option A trial-proposal preparation. No installation, risk exception or native execution approved.
 
 Only comparison/PLAN/TODO/README change; no new execution root, artifact/API research, fixture/helper, package install or application work. Historical evidence and checkpoint files, evaluation sources, SPEC/AGENTS/project/lock and unrelated user content remain unchanged.
 
