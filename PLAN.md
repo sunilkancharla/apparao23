@@ -1,6 +1,6 @@
-## Latest execution point — ALN findings ready; dependency direction needed
+## Latest execution point — ALN committed; local-file comparison ready
 
-ALN1–ALN5 approved; plan committed as `a1e3240`. [Findings](docs/benchmarks/artifact-licence-notice-review.md): saved HF-Xet notice identity matches, release-linked Tokenizers/source licence terms clarified, four calls/12 targets and all responses retained. Native/vendor/build gaps remain; optional display used part of the closeout reserve and stopped. Review the seven-file results and choose hold, a precisely scoped trial-design with named gaps, or a minimal local-file tokenizer comparison. No automatic source retry, installation/adoption, G2 closure or stage transition; Hub/FSSpec timing retained.
+ALN results committed as `fc0d8f5`. The user approved that commit and preparation of the [local-file comparison](docs/proposals/local-file-tokenizer-comparison.md). Retained metadata already requires Hub for Tokenizers 0.23.3; local-file use cannot alone remove Hub/HF-Xet from the supported dependency graph. LFC1–LFC3 completed as documentation. Recommend preparing a complete-dependency, local-only trial proposal with explicit unresolved-evidence/risk decisions; comparison commit and that preparation await approval. No new query, payload inspection, install, trial, adoption/G2 closure or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 

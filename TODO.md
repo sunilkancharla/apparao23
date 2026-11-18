@@ -1,6 +1,19 @@
-## Latest T17-IF-ALN — findings ready; dependency decision pending
+## Latest T17-IF-LFC — local-file comparison ready; next decision pending
 
-The user approved the [ALN package](docs/proposals/artifact-licence-notice-review.md) and four-file planning commit (`a1e3240`). [Findings](docs/benchmarks/artifact-licence-notice-review.md) retain all four responses, clearer source licence terms and unresolved native/vendor/build evidence. Optional display crossed its portion of the reporting allocation; no full boundary-compliance claim. Seven-file results commit and next direction await approval; no installation/adoption.
+ALN results committed as `fc0d8f5`. The user approved that commit and preparation of the [comparison](docs/proposals/local-file-tokenizer-comparison.md). Saved metadata settles the mandatory Hub requirement; no additional source search was needed. Recommend option A's trial-only proposal preparation, retaining the complete dependency graph and named evidence gaps. This recommendation is not installation, risk-exception or trial permission.
+
+- [x] **LFC1 — Retained evidence.** Prerequisite: approved documentation preparation/ALN commit. Accept: exact baseline requirement, runtime-use versus installation distinction and existing counting gates retained. Evidence: saved Tokenizers metadata and linked static/RRC/ALN reports. Status: verified documentation review.
+- [x] **LFC2 — Alternatives.** Prerequisite: LFC1. Accept: dependency-complete local-file path, unsupported omission, alternative official artifact and hold compared without asserting a smaller graph or offline capability. Evidence: comparison table. Status: completed.
+- [x] **LFC3 — Contract and next proposal requirements.** Prerequisite: LFC2. Accept: local-only path/identity boundary, unchanged model-specific parity and explicit residual-gap decisions; no runnable package or source query. Evidence: comparison contract/next-approval sections. Status: draft design completed.
+- [ ] **LFC4 — Review and decision.** Prerequisite: LFC3. Accept: four-document checks and explicit commit/next-preparation direction. Evidence: documentation verification below and user decision. Status: comparison ready; approval pending.
+
+Only comparison/PLAN/TODO/README change; no new execution root, artifact/API research, fixture/helper, package install or application work. Historical evidence and checkpoint files, evaluation sources, SPEC/AGENTS/project/lock and unrelated user content remain unchanged.
+
+Documentation verification passed: seven retained source identities, eight protected identities, 412 local links, four task IDs/four-document scope, UTF-8/new-file and tracked whitespace checks, empty index and no new execution root. The readable tracked diff and new comparison were reviewed. No application tests were needed for this documentation-only change.
+
+## Earlier T17-IF-ALN — findings committed; gaps and deviation retained
+
+The user approved the [ALN package](docs/proposals/artifact-licence-notice-review.md), planning commit (`a1e3240`), seven-file results commit (`fc0d8f5`) and preparation of LFC. [Findings](docs/benchmarks/artifact-licence-notice-review.md) retain all four responses, clearer source terms, unresolved native/vendor/build evidence and the reporting-reserve deviation. Execution-era pending-commit wording below is historical; current direction/commit gates are in LFC above. No installation/adoption.
 
 - [x] **ALN1 — Freeze and allocation.** Nine fixed/eight protected identities matched; fresh shared allocation and hash-verified unchanged response helper. Evidence: bootstrap/fixed/protected receipts.
 - [x] **ALN2 — Saved artifact reconciliation.** Two exact artifacts and missing/native/vendor evidence separated; saved HF-Xet licence text matches size/hash. No payload reread. Evidence: saved-evidence matrix.
