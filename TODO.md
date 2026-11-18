@@ -1,4 +1,17 @@
-## Current T17-IF-PBF — retained-source matrix and closeout
+## Current T17-IF-PGC — targeted gap-closure plan prepared
+
+The five PBF results files are committed as **`4cc2d24`**. The [PGC package](docs/proposals/tokenizer-prelaunch-gap-closure.md) is proposed; no execution/root/selector/candidate review has started. New tasks:
+
+- [ ] **PGC1 — Freeze/accounting.** Prerequisite: package approval. Objective: fresh shared boundary. Accept: fourteen pins plus 59 carried/sixteen readiness rows, unchanged formatter/skills, parent smoke/negative controls and prepaid reconciliation. Evidence: allocation/identity/control records. Status: awaiting approval.
+- [ ] **PGC2 — Definition-time/packet selector.** Prerequisite: PGC1. Objective: inspect syntax and select relevant spans without executing candidate code. Accept: actual-path RED/GREEN, caught/restored mutation and final GREEN; fourteen inert cases maximum, interpreter/future-import context, metadata exclusion/question priority and zero-write refusal. Evidence: ignored owned source/tests/captures. Status: pending.
+- [ ] **PGC3 — Python projection.** Prerequisite: final PGC2 GREEN. Objective: close unprojected default-expression questions across fourteen default-graph modules. Accept: one capped AST pass, original identities/locations, deferred/conditional/unknown effects and residual spans explicit within 6 KiB frames. Evidence: occurrence ledger/packet/findings. Status: pending.
+- [ ] **PGC4 — Retained control plane.** Prerequisite: PGC3. Objective: classify exact local-model/CPU/bind/auth/routes/request/compatibility facts. Accept: question-specific complete spans where retained; exact missing facts, no broad-match starvation or absence inference; at most 8 KiB frames. Evidence: server ledger/findings. Status: pending.
+- [ ] **PGC5 — Prerequisite checklist.** Prerequisite: PGC3/PGC4. Objective: one next direction. Accept: native/DLL/dependency/model/FP-NP facts classified by prelaunch/runtime/adoption gate; settled timing decisions preserved; exact residual-risk decision needs, no implied exception; at most 4 KiB readiness frames. Evidence: checklist/findings; dependencies only if affected. Status: pending.
+- [ ] **PGC6 — Close/review.** Prerequisite: completion or hard stop. Objective: accurate handoff. Accept: preservation/scope/links/UTF-8/whitespace/diff/index/known exits/resources/non-null terminal receipt; at most six results documents, separate commit/next-package gates. Evidence: final verification/report. Status: pending.
+
+Four-file planning commit and PGC1–PGC6 await approval. Preparation checks passed: 89 identity rows (fourteen pins, 59 carried, sixteen readiness), six unchanged reviewed skills, prior gate/timing wording, six ordered tasks, 48-unit/59-planned-start arithmetic within 64 starts, 18,432-byte packet allocation, 431 scoped local links, absent proposed root/report and UTF-8/whitespace. Readable tracked/new-file review, exact four-file scope and empty index are checked before handoff. No new root, selector/test fixtures, formatter execution, candidate-source interpretation, public request, installation, native/model run or checkpoint. Earlier status sections below are historical.
+
+## Earlier T17-IF-PBF — completed bounded review, committed in 4cc2d24
 
 The user approved the [PBF package](docs/proposals/tokenizer-preflight-frame-continuation.md) and four-file planning commit (**`55ecaf3`**). [Findings](docs/benchmarks/tokenizer-preflight-frame-continuation.md) record final controls, bounded source review and open prelaunch contracts. No next package or runtime adoption is approved.
 
