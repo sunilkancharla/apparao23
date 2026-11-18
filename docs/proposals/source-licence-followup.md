@@ -1,6 +1,6 @@
 # T17-IF-SLR — response retention and remaining source/licence evidence
 
-**Proposed; SLR1–SLR6 execution and the four-file planning commit await approval.** RRC results are committed as **`cc0905f`**. The user approved that commit and preparation of this follow-up only. Preparation read retained evidence and historical reporting controls; no new control, query, helper or execution root was created or run.
+**Approved and executed; bounded review completed, dependency decision remains.** The user approved SLR1–SLR6 and the four-file planning commit (`a382e7e`). [Findings](../benchmarks/source-licence-followup.md) record the expected RED/23 passing GREEN assertions, four calls/12 targets and four retained responses. Licence/native/build-source gaps remain explicit; results await review/commit approval. The original boundary below is retained, not renewed permission to run this root or its spent calls.
 
 ## Purpose and retained decisions
 
@@ -45,12 +45,12 @@ Count ASCII, accented/BMP, supplementary and isolated-surrogate cases correctly,
 
 | ID | Objective / prerequisites | Acceptance / evidence | Initial status |
 | --- | --- | --- | --- |
-| SLR1 | After approval, bootstrap shared accounting, verify inputs and preservation boundaries | Fresh root; 11 fixed identities and eight protected project/evaluation/checkpoint identities match; literal command/data boundaries and exact versions/artifact identities retained. | Awaiting approval |
-| SLR2 | Response-ordering RED/GREEN after SLR1 | Behavioural RED, then known UTF-8/boundary/round-trip/recovery/negative controls pass; unavailable globals absent; no real web call before GREEN. | Pending SLR1 |
-| SLR3 | Saved evidence triage after SLR2 | Four-question matrix identifies what is known, unknown, already deferred and required before a particular next action. Extract known publisher URLs before searching; preserve prior failed-access inventory. | Pending SLR2 |
-| SLR4 | Bounded primary-source review after SLR3 | At most four calls/12 targets; admitted responses retained before excerpts; primary source URLs near claims, exact artifact/publisher/release/build/vendor roles separated. | Pending SLR3 |
-| SLR5 | Consolidated readiness/decision review after SLR4 or stop | Recommend a precise next package or explicit evidence/risk/alternative decision; identify which action each gap blocks. No self-adoption or automatic research retry. | Pending completion/stop |
-| SLR6 | Completion/stop closeout | Non-null receipt; actual versus prepaid resources; ownership; seven-document scope; input/protected identity, links, whitespace, readable diff and empty-index checks. Separate results-commit/provisioning/adoption/stage gates. | Pending completion/stop |
+| SLR1 | After approval, bootstrap shared accounting, verify inputs and preservation boundaries | Fresh root; 11 fixed identities and eight protected project/evaluation/checkpoint identities match; literal command/data boundaries and exact versions/artifact identities retained. | Verified |
+| SLR2 | Response-ordering RED/GREEN after SLR1 | Behavioural RED, then known UTF-8/boundary/round-trip/recovery/negative controls pass; unavailable globals absent; no real web call before GREEN. | Verified: expected RED then 23 GREEN assertions |
+| SLR3 | Saved evidence triage after SLR2 | Four-question matrix identifies what is known, unknown, already deferred and required before a particular next action. Extract known publisher URLs before searching; preserve prior failed-access inventory. | Verified |
+| SLR4 | Bounded primary-source review after SLR3 | At most four calls/12 targets; admitted responses retained before excerpts; primary source URLs near claims, exact artifact/publisher/release/build/vendor roles separated. | Verified bounded review; evidence gaps retained |
+| SLR5 | Consolidated readiness/decision review after SLR4 or stop | Recommend a precise next package or explicit evidence/risk/alternative decision; identify which action each gap blocks. No self-adoption or automatic research retry. | Verified recommendation; user decision pending |
+| SLR6 | Completion/stop closeout | Non-null receipt; actual versus prepaid resources; ownership; seven-document scope; input/protected identity, links, whitespace, readable diff and empty-index checks. Separate results-commit/provisioning/adoption/stage gates. | Verified closeout; reporting coverage limit explicit; results review/commit pending |
 
 SLR5–SLR6 still run on a stop. Routine steps inside this package need no repeated task-start approval. Use the verified incremental/test-first, security, review and documentation workflows; no subagents or third-party scripts.
 
@@ -96,4 +96,4 @@ After execution approval, retain authored response-control definitions/outcomes,
 
 Recommend whether a narrowly scoped next provisioning/evaluation proposal is supportable, specified evidence remains necessary, or an explicit residual-risk/alternative decision is needed. No runtime component, model or source pin is selected by this review.
 
-Request **SLR1–SLR6 approval as one package**, including response-ordering controls, same-response processing recovery, the four source/licence questions, and four-call/12-target shared boundary. Separately approve the **four-file planning commit**: this proposal, PLAN, TODO and README. Current authorization covers preparation only.
+The user approved **SLR1–SLR6 as one package**, including response-ordering controls, same-response recovery, the four source/licence questions and four-call/12-target boundary, and the **four-file planning commit** (`a382e7e`). Execution completed as recorded above. The seven-file results commit and any next evidence/alternative package remain unapproved; no provisioning/adoption follows automatically.

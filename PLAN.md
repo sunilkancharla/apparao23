@@ -1,6 +1,6 @@
-## Latest execution point — RRC results committed; focused source/licence review proposed
+## Latest execution point — SLR review completed; dependency decision remains
 
-RRC results are committed as `cc0905f`; passed local checks remain evidence. The [SLR proposal](docs/proposals/source-licence-followup.md) reuses the historically successful UTF-8 reporting approach, tests store-before-processing recovery, then bounds four source/licence questions to four calls/12 targets. SLR1–SLR6 and its four-file planning commit await approval. Preparation only: no fresh root/control/query. No graph/model rerun, installation/adoption, G2 closure or stage transition.
+SLR1–SLR6 approved; plan committed as `a382e7e`. [SLR findings](docs/benchmarks/source-licence-followup.md): expected RED then 23 GREEN assertions; four calls/12 targets with all responses retained. Tokenizers' Apache classification and HF-Xet's exact-artifact publisher claim added; native/vendor and build/source gaps remain. Review the seven-file closeout and choose a focused artifact-level notice review or an alternative counting-design direction. Preserve passed RRC checks; no automatic retry, installation/adoption, G2 closure or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 

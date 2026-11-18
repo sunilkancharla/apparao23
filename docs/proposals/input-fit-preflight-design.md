@@ -1,4 +1,8 @@
-## Latest RRC outcome — local checks passed; public-source stop
+## Latest SLR outcome — public responses retained; dependency decision remains
+
+[SLR findings](../benchmarks/source-licence-followup.md): approved plan `a382e7e`, response controls passed and all four public response files retained. New Tokenizers classification/HF-Xet publisher observations do not establish exact native/vendor notices or build inputs. Review the consolidated decision matrix before a scoped artifact-level notice package or alternative counting-design review. Preserve RRC passes and the metadata-only source-mapping timing deferral; no automatic retry, candidate install/import, parity/offline adoption, G2 closure or stage transition. Results commit pending.
+
+## Earlier RRC outcome — local checks passed; public-source stop
 
 [RRC findings](../benchmarks/remaining-artifact-readiness-continuation.md): approved plan `234e07d`, two meaningful REDs followed by 23 passing unit tests/ten original controls and four-case/17-node comparison. Base matrices unchanged; declared Python fits remain metadata evidence, not native/runtime proof. Public response retention failed on the first call, so optional research stopped. Retain successful local evidence for a narrow source/licence follow-up; native/parity/offline/provisioning/adoption/G2 gates and source-mapping deferral remain unchanged. Results await review/commit approval.
 
