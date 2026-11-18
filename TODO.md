@@ -1,4 +1,19 @@
-## Latest T17-IF-RR — stopped during bootstrap; review closeout
+## Latest T17-IF-RRC — corrected continuation prepared; awaiting approval
+
+RR closeout is committed as `e5d037c`. The [exact RRC proposal](docs/proposals/remaining-artifact-readiness-continuation.md) defines one sequential package, with 20 fixed inputs, six checks, 48 shared starts and unchanged local-only/adoption restrictions. The user authorized preparation only. Execution and the four-file planning commit await approval.
+
+- [ ] **RRC1 — Bootstrap and freeze.** Prerequisite: package approval. Accept: fresh root, shared allocation, 20 fixed plus inherited tool/helper identities, preserved source/guard/capture and data boundary. Evidence: identities/accounting receipts. Status: awaiting approval.
+- [ ] **RRC2 — Bookkeeping regression.** Prerequisite: RRC1. Accept: behavioural RED then GREEN, literal arguments, ledger/state/cap/time and in-process negative/mutation controls, full capture and restored source. Evidence: two ordered check receipts. Status: pending.
+- [ ] **RRC3 — Supplementary profiles.** Prerequisite: RRC2. Accept: separate RED/GREEN, all 11 existing tests, unchanged base profiles, assumption labels, no mutation or global-cap reset. Evidence: fixture/profile receipts. Status: pending.
+- [ ] **RRC4 — Original controls.** Prerequisite: RRC3. Accept: ten unchanged original controls pass under strict guard. Evidence: complete capture/control result. Status: pending.
+- [ ] **RRC5 — Graph/Python comparison.** Prerequisite: RRC4. Accept: four labelled cases, shared 20-node union, authority/mismatches/conflicts/unknowns explicit; no resolver/ABI claim. Evidence: graph/declarations. Status: pending.
+- [ ] **RRC6 — Licence/native reconciliation.** Prerequisite: RRC5. Accept: retained declarations/selected notices/vendor/source gaps distinguished; no clearance. Evidence: readiness matrix. Status: pending.
+- [ ] **RRC7 — Primary-source gaps.** Prerequisite: RRC6/local triage. Accept: saved evidence first, eight-call/24-target/cutoff limits, cited publishing/build/source distinctions; public identifiers only. Evidence: query/response receipts or honest not-started outcome. Status: pending.
+- [ ] **RRC8 — Completion/stop closeout.** Prerequisite: completion or stop. Accept: actual/leased resource distinction, ownership, readiness/decision matrix, seven-document scope, preservation/links/whitespace/readable diff/empty index/non-null receipt. Evidence: report and closeout checks; separate results/provisioning/adoption/stage gates. Status: pending.
+
+Preparation checks passed: four-document scope, 20 fixed input identities, 20 local links, eight task IDs, eight protected file identities, whitespace, readable plan diff and empty index. The proposed execution root is absent. No continuation helper/fixture/test/query/installation has been created or run. Old roots/reports, historical checkpoints and unrelated user files remain unchanged.
+
+## Earlier T17-IF-RR — stopped during bootstrap; closeout committed
 
 The user approved the [exact RR package](docs/proposals/remaining-artifact-readiness-review.md) and four-file planning commit (`da952e1`). [Stop findings](docs/benchmarks/remaining-artifact-readiness-review.md): initial ledger selection failed; the one correction failed command parsing before its body ran. Optional work stopped. No review worker/test/graph/import/public query ran. EAF (`da860aa`) remains the latest successful comparison.
 
@@ -7,7 +22,7 @@ The user approved the [exact RR package](docs/proposals/remaining-artifact-readi
 - [ ] RR3 — Only after RR2, four-case graph and root Python-declaration comparison. Accept: global 20-node union, authority/mismatches/conflicts/unknowns explicit; no resolver/pin/ABI claim.
 - [ ] RR4 — Reconcile retained licence/notices/native inventory. Accept: declaration/selected notice/vendor gaps separated; no legal/security/adoption clearance.
 - [ ] RR5 — After local triage, bounded primary-source gap review. Accept: source/publisher/build claims distinguished, eight-call/24-target ceiling and cutoff, primary citations; no user data or binaries.
-- [x] RR6 — Stop closeout verified: seven-document scope, eight protected file identities, 17 local links, whitespace, readable retained diff, empty index and non-null receipt. Results await user review/commit approval. RR2–RR5 remain unstarted, not failed candidate evaluations; provisioning/adoption/stage gates remain separate.
+- [x] RR6 — Stop closeout verified: seven-document scope, eight protected file identities, 17 local links, whitespace, readable retained diff, empty index and non-null receipt. User approved closeout and preparation of RRC; results committed as `e5d037c`. RR2–RR5 remain unstarted, not failed candidate evaluations; provisioning/adoption/stage gates remain separate.
 
 Earlier preparation checks passed: four-document scope, 17 fixed source/evidence hashes, 19 local links, six task IDs, whitespace, readable plan diff and empty index. During execution only the fresh `remaining-artifact-readiness-01` bookkeeping root/context was created. Do not reopen it or reset unused allowances. Next proposed work: a fresh bounded continuation proving ledger selection/command construction on synthetic cases before revalidating inputs and resuming the review. Older roots, historical checkpoints and unrelated user changes remain untouched. Scope/target/source-mapping deferral unchanged.
 

@@ -1,6 +1,6 @@
-## Latest execution point — RR stopped during bootstrap; closeout ready
+## Latest execution point — RR closeout committed; corrected continuation proposed
 
-RR1–RR6 and its four-file planning commit were approved; the plan is committed as `da952e1`. [RR stop findings](docs/benchmarks/remaining-artifact-readiness-review.md): ledger selection failed, and the one allowed correction failed PowerShell parsing before worker execution. Optional work stopped. No input revalidation, profile/test/graph/public query or installation ran; EAF results (`da860aa`) remain the latest successful comparison. Review the seven-document closeout, then prepare a fresh continuation with synthetic bookkeeping checks before retrying the unexecuted review. No budget reset, adoption/G2 or stage transition.
+RR closeout is committed as `e5d037c`. The [RRC continuation](docs/proposals/remaining-artifact-readiness-continuation.md) proposes bookkeeping RED/GREEN before supplementary profile tests, original controls, four-case graph/Python comparison and retained licence/source review. Twenty fixed inputs, six checks and one shared 48-start allocation; unchanged guard/capture and adoption boundaries. RRC1–RRC8 and its four-file planning commit await approval. Preparation only: no new root, helper, check, query or installation. EAF remains the latest successful comparison; no budget reset, G2 closure or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 
