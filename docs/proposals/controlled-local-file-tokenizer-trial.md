@@ -2,9 +2,9 @@
 
 ## Approval state and readiness
 
-The user approved the four-file [LFC comparison](local-file-tokenizer-comparison.md) commit **`cbfedf3`** and preparation of option A's trial proposal. This approval selects preparation with the **complete declared dependency set**, not installation, a trial-risk exception, native execution or runtime adoption. No code, fixture, execution root, public query or environment change was made during this preparation.
+The user approved LFT1–LFT5 and the four-file planning commit **`8e846c1`**, following LFC commit `cbfedf3`. [Readiness findings](../benchmarks/local-file-trial-readiness.md) retain two public responses and source-level local-file construction evidence, but Python import/CPU-reference contracts remain incomplete. The explicit stop branch was taken before dependent validator/tests/native-package authoring. No candidate payload read, installation/import, native/model run, risk exception or adoption. The original limits below are historical, not renewed permission.
 
-**The native trial is not execution-ready.** Existing static evidence is useful, but exact local-file import/load behaviour, native launch/loader policy, complete executable schedule and the named evidence exceptions remain unsettled. This document provides a bounded **readiness package LFT1–LFT5** for approval now. It also defines the later native-trial acceptance contract and required risk decision. Approving LFT1–LFT5 cannot activate the native phase.
+**The native trial is not execution-ready.** Exact Python import/load behaviour, native launch/loader policy, complete executable schedule and named evidence exceptions remain unsettled. LFT1–LFT5 is closed with partial source findings; dependent steps were not run. Its approval did not activate the native phase. The next source-evidence approach needs a separate scope decision.
 
 Stage 1 remains Windows 11/16 GB/CPU-only, PDF/XLSX/CSV. Conditional standalone counting remains the direction; Ollama remains the generation/embedding candidate. No CSV application coding, architecture/runtime adoption/G2 closure or stage transition.
 
@@ -77,17 +77,17 @@ Verify these 16 byte identities before optional work and at closeout. Historical
 | `data/t17/source-licence-review-01/response-helper.js` | 311 | `5c17dcd40c17736ad3932313fcafdcb5df09238f1cd4635c2d24b69f8d70efc9` |
 | `data/t17/source-licence-review-01/green-controls.json` | 179 | `2af07df9ff181a7bfb947dcd80a201d7f8a3274ba415b41e4997ac5264cb5792` |
 
-## LFT1–LFT5 readiness package — proposed, not yet authorized
+## Approved LFT1–LFT5 readiness package — closed partial
 
 This is one sequential package with internal review points, not five separate task-start approvals. No candidate payloads/imports, native executable/library loads, model calls, dependency acquisition/installation, resolver, environment/PATH change or runnable user handoff. Public source text is data only. Existing graph/archive/control/model suites stay closed.
 
 | ID | Objective / prerequisites | Acceptance / verification | Status |
 | --- | --- | --- | --- |
-| LFT1 | Bootstrap/freeze after package approval | Fresh root/shared accounting; 16 fixed/eight protected identities; complete 17-node candidate set and unresolved artifact roles recorded; literal command/data boundaries | Awaiting approval |
-| LFT2 | Local-file API/reference source review after LFT1 | Pinned import/file-loading and CPU-reference/request/loader contracts verified or explicitly unknown; no remote identifiers/download/code path assumed safe; exact source notes retained | Pending |
-| LFT3 | Test-first readiness/reporting validator after LFT2 | Meaningful behavioural RED, smallest GREEN and caught mutation; fake-only manifest/admission/report-reserve/ownership controls; focused tests and final Ruff pass, or stop with full diagnostics | Pending |
-| LFT4 | Finite trial manifest/schedule design after LFT3 | Every FP01–08/NP01–08 group mapped; exact future installation/asset/runtime/request/ownership entries and call/start/resource schedule, or explicit missing fields; no guessed readiness | Pending |
-| LFT5 | Decision and completion/stop closeout | Non-null summary, actual/reserved counters, owned exits, preservation/scope/links/whitespace/diff/index review; clear ready/blocked verdict and exact exception/next decision, no native activation | Pending |
+| LFT1 | Bootstrap/freeze after package approval | Fresh root/shared accounting; 16 fixed/eight protected identities; complete 17-node candidate set and unresolved artifact roles recorded; literal command/data boundaries | Verified |
+| LFT2 | Local-file API/reference source review after LFT1 | Pinned import/file-loading and CPU-reference/request/loader contracts verified or explicitly unknown; no remote identifiers/download/code path assumed safe; exact source notes retained | Partial: core method supported; import/reference contract incomplete; two calls/six targets |
+| LFT3 | Test-first readiness/reporting validator after LFT2 | Meaningful behavioural RED, smallest GREEN and caught mutation; fake-only manifest/admission/report-reserve/ownership controls; focused tests and final Ruff pass, or stop with full diagnostics | Not run under explicit source-contract stop branch |
+| LFT4 | Finite trial manifest/schedule design after LFT3 | Every FP01–08/NP01–08 group mapped; exact future installation/asset/runtime/request/ownership entries and call/start/resource schedule, or explicit missing fields; no guessed readiness | No executable package; blocked/not-run matrix retained during closeout |
+| LFT5 | Decision and completion/stop closeout | Non-null summary, actual/reserved counters, owned exits, preservation/scope/links/whitespace/diff/index review; clear ready/blocked verdict and exact exception/next decision, no native activation | Closeout evidence in findings/summary; results commit pending |
 
 If LFT2 cannot justify an indispensable reference/loader contract, skip new validator authoring that depends on it and close out with alternatives. Source-only readiness work does not need an exception to execute candidates because none may run. Routine edits/tests/review/documentation inside the approved package need no repeated permission; significant scope changes do.
 
@@ -153,4 +153,4 @@ No exception is presumed approved. A future exception must be specific, rather t
 
 Preparation touches only this proposal, PLAN, TODO and README. Readiness execution may author the three named evaluation files and at most seven closeout/design documents: this proposal, new `docs/benchmarks/local-file-trial-readiness.md`, new `docs/proposals/local-file-native-trial-package.md` **only if a concrete package can be supported**, `docs/dependencies.md`, PLAN, TODO and README. Record a blocked verdict instead of an empty/runnable-looking native package. Preserve SPEC/AGENTS/project/lock, existing parity/evaluation sources/manifests, old roots/reports/proposals, historical checkpoints and unrelated user files.
 
-**Requested now:** the four-file planning commit and **LFT1–LFT5 readiness work only**, under the limits above. This does not approve any residual-risk exception, installation/download of candidates, native/model execution, runtime adoption or stage transition. No session-checkpoint file is created or updated.
+**Approval record:** the user approved planning commit `8e846c1` and LFT1–LFT5; the package is now closed as recorded above. Six-file results commit and preparation of a targeted cached-wheel static-source review await a new decision. No residual-risk exception, candidate installation/download/payload access, native/model execution, adoption or stage transition follows. No session-checkpoint file was created or updated.

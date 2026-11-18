@@ -1,4 +1,8 @@
-## Latest ALN evidence — source terms clarified; native/vendor/build gaps remain
+## Latest LFT evidence — local-file core supported; import/reference readiness blocked
+
+[LFT findings](benchmarks/local-file-trial-readiness.md), plan `8e846c1`: two public calls/six targets, both responses retained. Pinned Rust binding delegates to core local-file read/JSON construction; Python import and exact CPU-reference contract remain unverified. Explicit stop branch skipped dependent validator/tests/native-package work. All 17 dependencies and prior native/vendor/source conditions preserved; no candidate payload read, installation, import or adoption. Recommend a separately approved cached-wheel static-source review rather than repeated inaccessible source requests. Six-file results commit/next preparation pending.
+
+## Earlier ALN evidence — source terms clarified; native/vendor/build gaps remain
 
 [ALN findings](benchmarks/artifact-licence-notice-review.md), plan `a1e3240`: retained HF-Xet Apache-2.0 notice identity matches; Tokenizers 0.23.3 release links source `301277072263fb3830eb66eec7e47adadf76f1dc`, whose root licence is Apache-2.0. HF-Xet publisher-coordinate source licence/manifest agree with its saved declaration. Neither establishes exhaustive native/vendor notices or independent wheel/build mapping. Four responses retained; reporting-reserve deviation explicit. Hold unconditional install/adoption; choose hold, a bounded trial-design carrying gaps, or alternative local-file design comparison. No automatic source retry, version/source-pin change, install or adoption; Hub/FSSpec timing conditions preserved.
 

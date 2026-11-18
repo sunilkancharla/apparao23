@@ -1,6 +1,6 @@
-## Latest execution point — LFC committed; controlled-trial readiness proposed
+## Latest execution point — LFT source findings retained; readiness blocked
 
-LFC comparison committed as `cbfedf3`; user approved option A's trial-proposal preparation. The [controlled-trial proposal](docs/proposals/controlled-local-file-tokenizer-trial.md) preserves all 17 declared dependencies and frozen parity requirements. Native execution is not ready: loader/reference contracts, exact schedule/provisioning manifest and trial-only evidence exceptions remain unresolved. LFT1–LFT5 offer one bounded source/readiness/test-first validator package; execution and four-file planning commit await approval. No candidate install/import/native/model run, risk exception, adoption/G2 closure or stage transition is authorized.
+LFT1–LFT5 approved; plan committed as `8e846c1`. [Findings](docs/benchmarks/local-file-trial-readiness.md): two calls/six targets and both responses retained; Rust local-file construction supported, but Python import and CPU-reference contracts incomplete. The approved stop branch skipped dependent validator/tests/native-package authoring. Review six-file results and decide preparation of a bounded static review of cached-wheel Python sources, rather than repeating inaccessible public targets. No payload read, install/import/native/model run, risk exception, adoption/G2 closure or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 
