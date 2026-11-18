@@ -1,6 +1,6 @@
-## Latest execution point — RRC local checks passed; source review stopped
+## Latest execution point — RRC results committed; focused source/licence review proposed
 
-RRC1–RRC8 approved; plan committed as `234e07d`. [RRC findings](docs/benchmarks/remaining-artifact-readiness-continuation.md): seven bookkeeping/five profile/11 existing tests and ten original controls passed after expected REDs; four-case comparison covered 17 distributions and preserved the earlier base matrices. Retained declarations fit both version cases. One public call lost its response before retention; optional research stopped. Review the seven-file closeout, then prepare only the remaining response-capture/source/licence follow-up. No rerun/reset, candidate provisioning/adoption, G2 closure or stage transition.
+RRC results are committed as `cc0905f`; passed local checks remain evidence. The [SLR proposal](docs/proposals/source-licence-followup.md) reuses the historically successful UTF-8 reporting approach, tests store-before-processing recovery, then bounds four source/licence questions to four calls/12 targets. SLR1–SLR6 and its four-file planning commit await approval. Preparation only: no fresh root/control/query. No graph/model rerun, installation/adoption, G2 closure or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 

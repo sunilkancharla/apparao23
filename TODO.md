@@ -1,6 +1,19 @@
-## Latest T17-IF-RRC — local checks passed; bounded source-research stop
+## Latest T17-IF-SLR — source/licence follow-up prepared; awaiting approval
 
-The user approved the [exact RRC package](docs/proposals/remaining-artifact-readiness-continuation.md) and planning commit (`234e07d`). [RRC findings](docs/benchmarks/remaining-artifact-readiness-continuation.md) retain passed local checks/17-node comparison and the lost public-response stop. No candidate installation/adoption or stage transition. Results commit remains unapproved.
+RRC results are committed as `cc0905f`. The user approved that commit and preparation only of the [exact SLR proposal](docs/proposals/source-licence-followup.md). It reuses historical UTF-8 controls, adds store-before-processing recovery, and focuses on four remaining source/licence questions. SLR1–SLR6 and the four-file planning commit await approval; no old graph/model/check rerun or runtime adoption.
+
+- [ ] **SLR1 — Bootstrap/input freeze.** Prerequisite: package approval. Accept: fresh root/shared allocation, 11 fixed/eight protected identities, reviewed data/command/privacy boundary. Evidence: identity/accounting receipts. Status: awaiting approval.
+- [ ] **SLR2 — Response-retention controls.** Prerequisite: SLR1. Accept: behavioural ordering RED then GREEN with historical UTF-8 cases, exact response/display boundaries, JSON round-trip and same-response recovery/mutation controls; no unavailable globals or web request. Evidence: two in-process control outcomes/diagnostics. Status: pending.
+- [ ] **SLR3 — Saved-evidence triage.** Prerequisite: SLR2. Accept: four-question known/unknown/deferred/action-blocker matrix and known publisher URLs/failed-access inventory. Evidence: local triage notes. Status: pending.
+- [ ] **SLR4 — Primary-source review.** Prerequisite: SLR3. Accept: four-call/12-target shared cap; complete admitted responses retained before measured excerpts, primary citations and exact artifact/publisher/build/vendor distinctions. Evidence: requests/responses/source notes or honest partial stop. Status: pending.
+- [ ] **SLR5 — Readiness decision.** Prerequisite: completion or stop. Accept: consolidated evidence/decision/alternative matrix identifies each blocked next action and respects existing timing deferral; no adoption or automatic retry. Evidence: report recommendation. Status: pending.
+- [ ] **SLR6 — Completion/stop closeout.** Prerequisite: completion or stop. Accept: actual/prepaid counters, ownership, seven-document scope, preservation/links/whitespace/readable diff/empty index/non-null receipt; separate commit/provisioning/adoption/stage gates. Evidence: closeout report/receipt. Status: pending.
+
+Preparation checks passed: four-document scope, 11 fixed identities, eight protected file identities, 17 local links, six task IDs, whitespace, readable plan diff and empty index. The proposed execution root is absent. No helper, control, public query or installation was created or run. Old reports/roots, historical checkpoints and unrelated user changes remain untouched.
+
+## Earlier T17-IF-RRC — local checks passed; bounded source-research stop
+
+The user approved the [exact RRC package](docs/proposals/remaining-artifact-readiness-continuation.md), planning commit (`234e07d`), results commit (`cc0905f`) and preparation of SLR. [RRC findings](docs/benchmarks/remaining-artifact-readiness-continuation.md) retain passed local checks/17-node comparison and the lost public-response stop. No candidate installation/adoption or stage transition.
 
 - [x] **RRC1 — Bootstrap and freeze.** Twenty fixed/eight inherited helper/20 tool-source/two metadata identities matched; one schema correction completed before helper import. Evidence: fixed/source/ledger receipts. Status: verified.
 - [x] **RRC2 — Bookkeeping regression.** Behavioural clock RED then seven passing tests with ledger/caps/literal arguments/time/mutation controls; tested helper integrated into parent. Evidence: complete book-RED/GREEN captures. Status: verified.
