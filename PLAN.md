@@ -1,6 +1,8 @@
-## Latest execution point — LFT results committed; cached-source review proposed
+## Current execution point — accounting correction passed; results await review
 
-LFT results committed as `073025c`; user approved that commit and preparation of the [WSP package](docs/proposals/tokenizer-cached-wheel-source-review.md). It proposes static reads of the exact cached wheel's 16 Python files, test-first reuse of verified ZIP primitives, then remaining CPU-reference source questions. WSP1–WSP5 and four-file planning commit await approval. No candidate payload read, helper/fixture, worker, source query, installation/import/native/model run, risk exception, adoption/G2 closure or stage transition has started.
+WSP planning committed as `4a8275a`; its execution was approved. The static attempt verified 31 entries/all 16 Python members, and final reader tests (32) and lint passed. Parent process/report accounting failed; WSP4/WSP5 remain incomplete and eight result files are uncommitted. [WSP findings](docs/benchmarks/tokenizer-cached-wheel-source-review.md) preserve that failure.
+
+The user approved the [MTR correction package](docs/proposals/evaluation-parent-accounting-correction.md). MTR1–MTR5 produced 14 passing final tests, passing lint, actual host/mutation controls and fresh-budget preservation/scope/link/whitespace/index checks. [MTR findings](docs/benchmarks/evaluation-parent-accounting-correction.md) distinguish these later checks from WSP's historical non-compliance. Twelve combined authored files await separate commit approval; no staging or planning commit occurred. Next propose reviewing retained WSP source evidence, without repeating the wheel or public calls. No installation, native trial, source-review continuation, application implementation or G2 progression is authorized. Older status sections below are historical.
 
 ## Latest MR outcome — partial evidence; limits reached
 
@@ -562,3 +564,4 @@ State coordination repair is committed `92f3b67` after60passing combined/OCR tes
 
 <!-- IF-SA approval checkpoint -->
 The user explicitly approved the IF-SA package and its five planning-document commit. The initial execution stopped before artifact inspection, tests or research because accounting was not bootstrapped before the first read/output and the output exceeded its limit. Preserve the stopped epoch; no automatic retry. Earlier pending-approval text is historical. Closure findings remain separately reviewable.
+> **T17-IF-WSP stop, 2026-11-18:** Planning commit `4a8275a` and WSP1–WSP5 were approved. The single static read succeeded, but the combined parent start/report boundary was not enforced. WSP4/WSP5 are incomplete; no native/G2 progression. Before resuming source interpretation, propose a bounded shared-meter correction and the omitted closeout checks; do not repeat successful wheel reads automatically. [Evidence and failure](docs/benchmarks/tokenizer-cached-wheel-source-review.md).

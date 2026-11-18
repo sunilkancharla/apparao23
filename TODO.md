@@ -1,16 +1,16 @@
-## Latest T17-IF-WSP — cached-source review prepared; approval pending
+## Current T17-IF-MTR — correction/checks passed; results uncommitted
 
-LFT results committed as `073025c`. The user approved that commit and preparation only of the [exact WSP package](docs/proposals/tokenizer-cached-wheel-source-review.md). It bounds static reads to the cached wheel's 16 Python members and uses verified owned ZIP primitives, test-first controls and a separate bounded CPU-source review. No candidate source member has been read or executed during preparation.
+WSP execution was approved after planning commit `4a8275a`. Its static evidence and 32 passing reader tests remain useful; parent start/report accounting failed. WSP1 is partial, WSP2 passed reader checks but failed package coverage, WSP3 obtained static evidence, and WSP4/WSP5 remain incomplete. Eight result files are uncommitted. [Findings](docs/benchmarks/tokenizer-cached-wheel-source-review.md).
 
-- [ ] **WSP1 — Freeze/allocation.** Prerequisite: package approval. Accept: fresh shared root, 12 fixed/eight protected identities and exact wheel/member/read/report policy before optional work. Evidence: identities/ledger. Status: awaiting approval.
-- [ ] **WSP2 — Test-first source reader.** Prerequisite: WSP1. Accept: behavioural RED/GREEN, caught integrity/reserve mutation, final focused tests/Ruff; reviewed primitives reused without old dispatch or candidate import. Evidence: two authored aids and complete control captures. Status: pending.
-- [ ] **WSP3 — One static attempt.** Prerequisite: final WSP2 checks. Accept: exact outer hash/31-member admission, all 16 Python size/hash matches, bounded JSON/AST evidence, no native decompression, owned exit or honest stop. Evidence: worker/byte/source records. Status: pending.
-- [ ] **WSP4 — Import/reference review.** Prerequisite: coherent WSP3. Accept: import/file/network/native edges classified and independent CPU-source questions reviewed within three calls/nine targets; unknowns explicit, no offline/native proof inferred. Evidence: source-role/readiness matrix. Status: pending.
-- [ ] **WSP5 — Completion/stop closeout.** Prerequisite: completion or stop. Accept: consolidated verdict, actual/reserved resources, ownership/preservation/scope/links/whitespace/diff/index/non-null summary; separate commit/next/native/adoption gates. Evidence: findings/receipt. Status: pending.
+The user approved the [MTR package](docs/proposals/evaluation-parent-accounting-correction.md). [MTR findings](docs/benchmarks/evaluation-parent-accounting-correction.md) and the fresh local terminal receipt record correction/check evidence. The original WSP failure remains historical; WSP source-contract review is still partial.
 
-Four-file planning commit and WSP1–WSP5 remain unapproved. Proposed root/code/results absent; no source queries, helper/fixture, payload read, install or candidate execution. Historical checkpoints and unrelated files preserved.
+- [x] **MTR1 — Freeze/coverage.** Prerequisite: approved package. Eight pinned plus 12 fixed/eight protected identities verified; bootstrap and full envelopes charged. Evidence: allocation/preflight/admission records. Status: complete with disclosed early bootstrap authoring errors.
+- [x] **MTR2 — Test-first meter.** Prerequisite: MTR1. Meaningful two-failure RED, corrected GREEN and byte/duplicate/stop/closure controls. Evidence: two new authored aids and captures. Status: complete.
+- [x] **MTR3 — Actual host integration.** Prerequisite: MTR2. Actual parent/nested sequence reconciles; bypass/undercharge/report mutation counterexamples caught, owned source restored; 14 final tests and lint pass. Evidence: host controls/claims/captures. Status: complete for the reviewed owned graph, not a machine-wide audit.
+- [x] **MTR4 — Missing WSP closeout checks.** Prerequisite: final GREEN. Fresh-budget identities, 66-file old-evidence inventory, authored scope/links/UTF-8/whitespace/index checks and readable diff review; only dependency-document EOF normalized. Evidence: MTR findings/check records. Status: complete; no historical compliance or complete source-review claim.
+- [x] **MTR5 — Review/stop closeout.** Prerequisite: task completion. Accurate findings, final resource/ownership/preservation checks and non-null receipt; twelve-file combined review set; no commit or continuation implied. Evidence: MTR findings/local terminal summary. Status: complete; results commit awaits user approval.
 
-Preparation verification passed: 12 fixed/eight protected identities, saved 31-member inventory/16 Python files/66,467 bytes, 412 local links, five ordered task IDs/four-document scope, absent execution artifacts, UTF-8/new-file and tracked whitespace checks, empty index and readable diff/proposal review. No application tests or static-worker checks ran during documentation preparation.
+Preparation checks: 416 local links, eight pinned plus 12 fixed/eight protected identities, five ordered tasks, allocation arithmetic, absent proposed execution artifacts, UTF-8 and readable tracked/new-file review. The four preparation files have scoped whitespace checks; the workspace-wide diff also exposed an existing EOF blank-line issue in pending `docs/dependencies.md`, explicitly left for MTR4. Index is empty. No application tests, new execution root, aid, fixture, research, installation or candidate execution. No planning commit: shared status files contain pending WSP results. Review all twelve unique combined result files after checks before asking about their commit. Historical entries below remain historical.
 
 ## Earlier T17-IF-LFT — partial source results committed; readiness blocked
 
@@ -1767,3 +1767,12 @@ Package: [exact scope, limits, dependencies and acceptance](docs/proposals/combi
 
 <!-- IF-SA approval checkpoint -->
 The user explicitly approved the IF-SA package and its five planning-document commit. The initial execution stopped before artifact inspection, tests or research because accounting was not bootstrapped before the first read/output and the output exceeded its limit. Preserve the stopped epoch; no automatic retry. Earlier pending-approval text is historical. Closure findings remain separately reviewable.
+## T17-IF-WSP — stopped package update, 2026-11-18
+
+- **WSP1 — Partial:** initial 12 fixed/eight protected identities verified; parent accounting later invalidated.
+- **WSP2 — Reader checks passed, package criterion failed:** behavioural RED, 32 final tests, caught/restored reserve mutation and final lint; combined parent enforcement not proven.
+- **WSP3 — Evidence obtained:** one worker verified outer identity/31 entries/16 Python hashes, retained inert JSON and exited/reaped; no native member opened. Package-level resource compliance failed.
+- **WSP4 — Partial:** three calls/nine targets retained and verified; semantic source/CPU/loader interpretation incomplete.
+- **WSP5 — Partial stop closeout:** non-null receipt and findings retained; final identity/link/diff/index checks not run after process accounting failed. Results uncommitted.
+
+Prerequisite for further execution: a separately approved correction package for one shared parent start/report meter and missing closeout checks. Acceptance must demonstrate admission before every relevant operation and protect mandatory closeout. No wheel/public/native retry, installation or runtime adoption is implied. [Review, failures, evidence and next decision](docs/benchmarks/tokenizer-cached-wheel-source-review.md).

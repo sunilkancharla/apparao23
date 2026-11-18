@@ -2,7 +2,7 @@
 
 ## Approval state and purpose
 
-LFT results were committed as **`073025c`**. The user approved that commit and preparation of this package. **WSP1–WSP5 execution and the four-file planning commit await approval.** No candidate payload, source member or native binary was read during preparation; only existing inspection records, authored tools and documentation were reviewed. No helper/fixture, execution root, source query, installation or candidate execution was created or run.
+LFT results were committed as **`073025c`**. The user subsequently approved the four-file planning commit (**`4a8275a`**) and WSP1–WSP5 execution. **Execution stopped after parent accounting failures; this is not a compliant package completion.** The single static attempt succeeded, but parent reporting crossed its optional allowance and the launch counter omitted processes. See [findings and limits](../benchmarks/tokenizer-cached-wheel-source-review.md). No installation, candidate import/native execution, model run or adoption occurred. The limits below are the approved boundary, not a claim that every limit was met.
 
 Resolve the two remaining source-contract questions from [LFT findings](../benchmarks/local-file-trial-readiness.md): Python import/local-file loading and the exact CPU-reference launch/loader policy. Use actual Python members from the already cached wheel instead of retrying inaccessible public Python files. Reuse the tested, project-owned ZIP primitives; do not repeat the completed full RECORD/native archive/graph/model checks.
 
@@ -61,11 +61,11 @@ Never call old `inspect_wheel`, `worker`, `acquire`, `fetch`, `supervise_code` o
 
 | ID | Objective / prerequisite | Acceptance / verification | Status |
 | --- | --- | --- | --- |
-| WSP1 | Bootstrap/freeze after approval | Fresh shared allocation, 12 fixed/eight protected identities, exact wheel/member policy and tested reporting plan retained before optional work | Awaiting approval |
-| WSP2 | Test-first bounded source reader after WSP1 | Behavioural RED, smallest GREEN, caught integrity/reserve mutation and final tests/Ruff; no candidate import/execution, old dispatch or unmetered subprocess | Pending |
-| WSP3 | One owned static attempt after final WSP2 checks pass | Outer identity, 31-member admission, all 16 Python size/hash matches and complete bounded data-only evidence; no native decompression; exit/reap verified or honest stop | Pending |
-| WSP4 | Source-contract review after coherent WSP3 | Python import/file/network/native-edge map and remaining pinned CPU-reference questions classified supported/unknown/blocked within public limits; no runtime proof inferred | Pending |
-| WSP5 | Completion/stop closeout | Consolidated readiness decision, actual/reserved usage, ownership, preservation/scope/links/whitespace/diff/index and non-null receipt; separate results-commit/next/native/adoption decisions | Pending |
+| WSP1 | Bootstrap/freeze after approval | Initial 12 fixed/eight protected identities verified; exact wheel/member policy retained | Partial: parent accounting invalid |
+| WSP2 | Test-first bounded source reader after WSP1 | 32 final tests and lint pass; reserve mutation caught/restored; host-wide enforcement not established | Reader checks passed; package criterion failed |
+| WSP3 | One owned static attempt after final WSP2 checks pass | Outer identity, 31 members and all 16 Python hashes verified; 66,467 bytes retained as inert JSON; child reaped | Static evidence obtained; package limits failed |
+| WSP4 | Source-contract review after coherent WSP3 | Three calls/nine targets; three responses retained/verified; incomplete interpretation and native/loader unknowns | Partial; stopped |
+| WSP5 | Completion/stop closeout | Non-null stop receipt/findings retained; no further processes after accounting failure; final preservation/link/diff/index checks not run | Partial closeout; results uncommitted |
 
 One approval covers all routine steps inside WSP1–WSP5. Review synthetic controls before real-wheel reads, then static results before public review. A contract uncertainty is a finding: finish other independent source questions within the budget and report remaining blockers. An integrity, safety, required-final-GREEN, capture, ownership or allowance failure stops optional work. Do not activate the closed LFT validator/native-package tasks automatically.
 
@@ -110,4 +110,4 @@ Preparation changes exactly this proposal, PLAN, TODO and README. Execution may 
 
 Preserve AGENTS/SPEC/project/lock, old evaluation sources/manifests, prior reports/proposals/roots, historical checkpoints and unrelated user files. Do not create/update a session-checkpoint file. No candidate downloads, installation/import, native model/binary/library execution, architecture/runtime adoption/G2 or stage transition.
 
-**Requested now:** approve the four-file planning commit and **WSP1–WSP5**, including the exact cached-wheel integrity/text reads, two test-first owned evaluation files, single static worker and bounded CPU-source review above. Reading source as inert data is the only new candidate-payload permission. Installation, execution of that source/native candidate, trial-risk exceptions and adoption remain unapproved.
+**Current gate:** review the stopped package and its eight authored result files before a separate results commit. Repairing and validating a shared parent meter requires a new bounded package; neither repeating the wheel/source reads nor a native trial is authorized by this closeout. Installation, candidate execution, trial-risk exceptions and adoption remain unapproved.
