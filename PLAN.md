@@ -1,6 +1,6 @@
-## Latest execution point — SLR review completed; dependency decision remains
+## Latest execution point — SLR results committed; targeted notice review proposed
 
-SLR1–SLR6 approved; plan committed as `a382e7e`. [SLR findings](docs/benchmarks/source-licence-followup.md): expected RED then 23 GREEN assertions; four calls/12 targets with all responses retained. Tokenizers' Apache classification and HF-Xet's exact-artifact publisher claim added; native/vendor and build/source gaps remain. Review the seven-file closeout and choose a focused artifact-level notice review or an alternative counting-design direction. Preserve passed RRC checks; no automatic retry, installation/adoption, G2 closure or stage transition.
+SLR results committed as `832191c`. The user approved that commit and preparation only of the [ALN proposal](docs/proposals/artifact-licence-notice-review.md): reuse saved exact-artifact inspections, inspect narrowly permitted publisher licence/notice text, then make one dependency recommendation. ALN1–ALN5 and its four-file planning commit await approval. No fresh root/query, payload reread, installation/adoption, G2 closure or stage transition; passed RRC/SLR checks and Hub/FSSpec timing conditions retained.
 
 ## Latest MR outcome — partial evidence; limits reached
 

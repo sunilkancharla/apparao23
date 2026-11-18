@@ -1,6 +1,20 @@
-## Latest T17-IF-SLR — bounded review completed; dependency decision remains
+## Latest T17-IF-ALN — targeted notice review prepared; awaiting approval
 
-The user approved the [exact SLR package](docs/proposals/source-licence-followup.md) and four-file planning commit (`a382e7e`). [SLR findings](docs/benchmarks/source-licence-followup.md) record passed response controls, all four retained public responses and the remaining licence/native/source decisions. Results commit remains unapproved; no old graph/model/check rerun or runtime adoption.
+SLR results committed as `832191c`. The user approved that commit and preparation only of the [ALN package](docs/proposals/artifact-licence-notice-review.md). It reuses saved Tokenizers/HF-Xet artifact evidence and permits narrowly scoped publisher source/notice text, ending in a dependency recommendation. ALN1–ALN5 and the four-file planning commit remain unapproved; no new execution or adoption.
+
+- [ ] **ALN1 — Freeze and allocation.** Prerequisite: package approval. Accept: fresh root/shared limits, nine fixed/eight protected identities and unchanged tested response helper. Evidence: identities/accounting. Status: awaiting approval.
+- [ ] **ALN2 — Saved artifact reconciliation.** Prerequisite: ALN1. Accept: two exact artifacts, saved notice identity/content and missing/native/vendor evidence separated without payload rereads. Evidence: retained-data matrix. Status: pending.
+- [ ] **ALN3 — Targeted publisher text.** Prerequisite: ALN2. Accept: four-call/12-target ceiling, permitted source-coordinate/path rules, full admitted responses verified before excerpts; unknowns explicit. Evidence: requests/responses/notice-role matrix or stop. Status: pending.
+- [ ] **ALN4 — Dependency recommendation.** Prerequisite: ALN3 or stop. Accept: per-artifact evidence, affected next action and proceed/hold/alternative recommendation; no inferred risk exception, adoption or automatic research retry. Evidence: final decision table. Status: pending.
+- [ ] **ALN5 — Completion/stop closeout.** Prerequisite: completion or stop. Accept: non-null summary, actual/reserved usage and coverage, owned exits, preservation/scope/links/whitespace/readable diff/empty index; explicit commit/provisioning/adoption gates. Evidence: report/receipt. Status: pending.
+
+Preparation changes only proposal/PLAN/TODO/README; the proposed ignored root must remain absent. No source query, inspection helper, new fixture/control, install or model run is authorized during preparation. Old roots/reports, historical checkpoint files and unrelated user content remain unchanged.
+
+Preparation verification: nine fixed/eight protected identities, 406 local links, five ordered task IDs, four-document scope, absent execution root, empty index and whitespace checks passed. Readable tracked diff and the new proposal were reviewed; documentation-only work required no application tests. Execution and planning commit await approval.
+
+## Earlier T17-IF-SLR — bounded review completed; results committed
+
+The user approved the [exact SLR package](docs/proposals/source-licence-followup.md), four-file planning commit (`a382e7e`), seven-file results commit (`832191c`) and preparation of ALN. [SLR findings](docs/benchmarks/source-licence-followup.md) record passed response controls, all four retained public responses and the remaining licence/native/source decisions. No old graph/model/check rerun or runtime adoption. Execution-era pending-commit wording below is historical; the current gate is ALN above.
 
 - [x] **SLR1 — Bootstrap/input freeze.** Eleven fixed/eight protected identities matched; fresh root and shared budget established before optional work. Evidence: bootstrap/fixed/preserved records. Status: verified.
 - [x] **SLR2 — Response-retention controls.** Behavioural RED then 23 passing GREEN assertions, including seven UTF-8 vectors, boundaries, round-trip, recovery and mutation. Two in-process invocations, zero real web calls during controls. Status: verified.
