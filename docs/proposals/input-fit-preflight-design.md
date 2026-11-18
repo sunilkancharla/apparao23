@@ -1,4 +1,8 @@
-## Latest SLR outcome — public responses retained; dependency decision remains
+## Latest ALN outcome — source licence evidence improved; dependency decision remains
+
+[ALN findings](../benchmarks/artifact-licence-notice-review.md), approved plan `a1e3240`: saved notice identity and release-linked source licence/packaging observations retained across four calls/12 targets. Native/vendor/build gaps remain; optional reporting used some protected closure reserve and stopped. Review the hold/next-action matrix rather than repeating identical searches. Any bounded trial-design or local-file alternative needs a separate package decision; no candidate install/import, parity/offline adoption, G2 closure or stage transition. Hub/FSSpec metadata-only timing deferral preserved; results commit pending.
+
+## Earlier SLR outcome — public responses retained; dependency decision remains
 
 [SLR findings](../benchmarks/source-licence-followup.md): approved plan `a382e7e`, response controls passed and all four public response files retained. New Tokenizers classification/HF-Xet publisher observations do not establish exact native/vendor notices or build inputs. Review the consolidated decision matrix before a scoped artifact-level notice package or alternative counting-design review. Preserve RRC passes and the metadata-only source-mapping timing deferral; no automatic retry, candidate install/import, parity/offline adoption, G2 closure or stage transition. Results commit pending.
 

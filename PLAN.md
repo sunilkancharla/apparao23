@@ -1,6 +1,6 @@
-## Latest execution point — SLR results committed; targeted notice review proposed
+## Latest execution point — ALN findings ready; dependency direction needed
 
-SLR results committed as `832191c`. The user approved that commit and preparation only of the [ALN proposal](docs/proposals/artifact-licence-notice-review.md): reuse saved exact-artifact inspections, inspect narrowly permitted publisher licence/notice text, then make one dependency recommendation. ALN1–ALN5 and its four-file planning commit await approval. No fresh root/query, payload reread, installation/adoption, G2 closure or stage transition; passed RRC/SLR checks and Hub/FSSpec timing conditions retained.
+ALN1–ALN5 approved; plan committed as `a1e3240`. [Findings](docs/benchmarks/artifact-licence-notice-review.md): saved HF-Xet notice identity matches, release-linked Tokenizers/source licence terms clarified, four calls/12 targets and all responses retained. Native/vendor/build gaps remain; optional display used part of the closeout reserve and stopped. Review the seven-file results and choose hold, a precisely scoped trial-design with named gaps, or a minimal local-file tokenizer comparison. No automatic source retry, installation/adoption, G2 closure or stage transition; Hub/FSSpec timing retained.
 
 ## Latest MR outcome — partial evidence; limits reached
 

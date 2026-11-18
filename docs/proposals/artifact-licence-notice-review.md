@@ -1,6 +1,6 @@
 # T17-IF-ALN — Tokenizers/HF-Xet artifact licence and notice review
 
-**Prepared only; ALN1–ALN5 execution and the four-file planning commit await approval.** SLR results were committed as `832191c`; the user approved that commit and preparation of this package. No fresh execution root, public request, candidate payload inspection, download, installation or runtime adoption has started.
+**Approved and executed; findings pending review/commit.** The user approved ALN1–ALN5 and the four-file planning commit (`a1e3240`). [Findings](../benchmarks/artifact-licence-notice-review.md) clarify source licence terms while retaining native/vendor/build gaps. All four calls/12 targets completed and responses were retained; the final optional inspection crossed the protected reporting reserve, so full boundary compliance is not claimed. No install/import/native/model run or adoption. The original boundary below is historical and does not renew permission.
 
 ## Purpose and boundary
 
@@ -51,11 +51,11 @@ Report publisher declaration, packaged notice, source licence text, native/vendo
 
 | ID | Objective / prerequisites | Acceptance and evidence | Status |
 | --- | --- | --- | --- |
-| ALN1 | After package approval, establish a fresh shared allocation and freeze inputs | Nine fixed/eight protected identities match; old roots read-only; tested SLR helper identity verified, shared limits and literal command/data boundary retained before substantive work. | Awaiting approval |
-| ALN2 | Reconcile saved artifact evidence after ALN1 | Matrix identifies exact two artifacts, saved notice identity/content, missing Tokenizers declaration/notices and native/vendor unknowns; no payload reread or claim of clearance. Evidence: retained-data matrix. | Pending |
-| ALN3 | Targeted source/notice review after ALN2 | At most four calls/12 targets; permitted coordinate/path rules respected, full admitted responses identified before excerpts; missing text/linkage stays unknown. Evidence: requests/responses/notice-role matrix, or honest stop. | Pending |
-| ALN4 | Dependency recommendation after ALN3 or stop | For each artifact, name established terms/notices, unresolved scope and the action affected; recommend proceed to a separately approved bounded trial, hold, or alternative design. No automatic next research package or self-adoption. Evidence: final decision table. | Pending |
-| ALN5 | Closeout after completion or stop | Non-null summary; actual versus reserved resources, owned exits, input/protection/scope/link/whitespace/readable diff/empty-index checks; user decisions and separate commit/provisioning/adoption gates explicit. | Pending |
+| ALN1 | After package approval, establish a fresh shared allocation and freeze inputs | Nine fixed/eight protected identities match; old roots read-only; tested SLR helper identity verified, shared limits and literal command/data boundary retained before substantive work. | Verified |
+| ALN2 | Reconcile saved artifact evidence after ALN1 | Matrix identifies exact two artifacts, saved notice identity/content, missing Tokenizers declaration/notices and native/vendor unknowns; no payload reread or claim of clearance. Evidence: retained-data matrix. | Verified; HF-Xet saved text identity matches |
+| ALN3 | Targeted source/notice review after ALN2 | At most four calls/12 targets; permitted coordinate/path rules respected, full admitted responses identified before excerpts; missing text/linkage stays unknown. Evidence: requests/responses/notice-role matrix, or honest stop. | Evidence retained; reporting-reserve deviation; not fully compliant |
+| ALN4 | Dependency recommendation after ALN3 or stop | For each artifact, name established terms/notices, unresolved scope and the action affected; recommend proceed to a separately approved bounded trial, hold, or alternative design. No automatic next research package or self-adoption. Evidence: final decision table. | Verified hold/next-action matrix; user decision pending |
+| ALN5 | Closeout after completion or stop | Non-null summary; actual versus reserved resources, owned exits, input/protection/scope/link/whitespace/readable diff/empty-index checks; user decisions and separate commit/provisioning/adoption gates explicit. | Closeout evidence in findings/summary; results commit pending |
 
 Review points after ALN2 and ALN4 are internal checks within the package; routine progress needs no repeated task-start approval. There is no implementation or new test helper in this package. Reuse the hash-verified response helper and its 23 passing SLR assertions; do not rerun historical controls. Any necessary helper change requires a new scoped decision/test plan rather than an untested silent correction.
 
@@ -89,4 +89,4 @@ Recommended route: this single targeted text review, ending with a concrete reco
 
 User decisions after findings: whether to approve a precisely bounded provisioning/parity trial despite any named remaining evidence, hold the artifacts, or change the counting approach. Hub/FSSpec source conditions remain visible at their affected adoption gate. Do not automatically propose another identical search continuation. Results commit, provisioning/native execution, runtime adoption/G2 and stage transition each retain their own approval boundaries.
 
-**Requested now:** approval of ALN1–ALN5 as this single package and the four-file planning commit. The present user approval covers preparation only; none of these execution allowances is spent or active yet.
+**Approval record:** the user approved ALN1–ALN5 and planning commit `a1e3240`; execution is now closed as recorded in the findings. The seven-file results commit and any trial-design/alternative package remain unapproved. No further source search, installation, runtime adoption or stage transition follows automatically.

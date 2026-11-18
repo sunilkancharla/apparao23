@@ -1,4 +1,8 @@
-## Latest SLR evidence — response handling verified; licence/source decision remains
+## Latest ALN evidence — source terms clarified; native/vendor/build gaps remain
+
+[ALN findings](benchmarks/artifact-licence-notice-review.md), plan `a1e3240`: retained HF-Xet Apache-2.0 notice identity matches; Tokenizers 0.23.3 release links source `301277072263fb3830eb66eec7e47adadf76f1dc`, whose root licence is Apache-2.0. HF-Xet publisher-coordinate source licence/manifest agree with its saved declaration. Neither establishes exhaustive native/vendor notices or independent wheel/build mapping. Four responses retained; reporting-reserve deviation explicit. Hold unconditional install/adoption; choose hold, a bounded trial-design carrying gaps, or alternative local-file design comparison. No automatic source retry, version/source-pin change, install or adoption; Hub/FSSpec timing conditions preserved.
+
+## Earlier SLR evidence — response handling verified; licence/source decision remains
 
 [SLR findings](benchmarks/source-licence-followup.md), plan `a382e7e`: response-ordering RED then 23 passing assertions; four calls/12 targets and all response files retained. PyPI supplies Tokenizers' Apache classification and an HF-Xet publisher claim matching the selected Windows wheel digest (`e551f0a75f989b8ee1a474c5f83c80ad4903f84d`, run `41036139993`). Exact native/vendor notice and build-source evidence remains incomplete; FSSpec/Hub conditions retain the approved timing rule. No package/source pin changed, installation/adoption or application feature. Results commit pending; next needs one explicit dependency direction, not an automatic search retry.
 

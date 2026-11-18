@@ -1,16 +1,16 @@
-## Latest T17-IF-ALN — targeted notice review prepared; awaiting approval
+## Latest T17-IF-ALN — findings ready; dependency decision pending
 
-SLR results committed as `832191c`. The user approved that commit and preparation only of the [ALN package](docs/proposals/artifact-licence-notice-review.md). It reuses saved Tokenizers/HF-Xet artifact evidence and permits narrowly scoped publisher source/notice text, ending in a dependency recommendation. ALN1–ALN5 and the four-file planning commit remain unapproved; no new execution or adoption.
+The user approved the [ALN package](docs/proposals/artifact-licence-notice-review.md) and four-file planning commit (`a1e3240`). [Findings](docs/benchmarks/artifact-licence-notice-review.md) retain all four responses, clearer source licence terms and unresolved native/vendor/build evidence. Optional display crossed its portion of the reporting allocation; no full boundary-compliance claim. Seven-file results commit and next direction await approval; no installation/adoption.
 
-- [ ] **ALN1 — Freeze and allocation.** Prerequisite: package approval. Accept: fresh root/shared limits, nine fixed/eight protected identities and unchanged tested response helper. Evidence: identities/accounting. Status: awaiting approval.
-- [ ] **ALN2 — Saved artifact reconciliation.** Prerequisite: ALN1. Accept: two exact artifacts, saved notice identity/content and missing/native/vendor evidence separated without payload rereads. Evidence: retained-data matrix. Status: pending.
-- [ ] **ALN3 — Targeted publisher text.** Prerequisite: ALN2. Accept: four-call/12-target ceiling, permitted source-coordinate/path rules, full admitted responses verified before excerpts; unknowns explicit. Evidence: requests/responses/notice-role matrix or stop. Status: pending.
-- [ ] **ALN4 — Dependency recommendation.** Prerequisite: ALN3 or stop. Accept: per-artifact evidence, affected next action and proceed/hold/alternative recommendation; no inferred risk exception, adoption or automatic research retry. Evidence: final decision table. Status: pending.
-- [ ] **ALN5 — Completion/stop closeout.** Prerequisite: completion or stop. Accept: non-null summary, actual/reserved usage and coverage, owned exits, preservation/scope/links/whitespace/readable diff/empty index; explicit commit/provisioning/adoption gates. Evidence: report/receipt. Status: pending.
+- [x] **ALN1 — Freeze and allocation.** Nine fixed/eight protected identities matched; fresh shared allocation and hash-verified unchanged response helper. Evidence: bootstrap/fixed/protected receipts.
+- [x] **ALN2 — Saved artifact reconciliation.** Two exact artifacts and missing/native/vendor evidence separated; saved HF-Xet licence text matches size/hash. No payload reread. Evidence: saved-evidence matrix.
+- [ ] **ALN3 — Targeted publisher text.** Four calls/12 targets, four admitted responses/70,378 bytes; release-linked Tokenizers Apache-2.0 text and HF-Xet source terms observed. Three cache misses/one 404; no retry. Final optional inspection consumed part of reserved closeout display; not fully compliant. Evidence retained, deviation explicit.
+- [x] **ALN4 — Dependency recommendation.** Per-artifact hold/next-action matrix retains gaps and timing conditions; no risk exception or adoption. Decision now needed, no automatic identical search continuation.
+- [x] **ALN5 — Completion/stop closeout.** Verified nine fixed/eight protected/four response identities, 488 local links, seven-document scope, whitespace, readable diff and empty index. Evidence/summary retain actual/reserved resources and ownership. Results commit/provisioning/adoption gates remain separate; reporting deviation preserved.
 
-Preparation changes only proposal/PLAN/TODO/README; the proposed ignored root must remain absent. No source query, inspection helper, new fixture/control, install or model run is authorized during preparation. Old roots/reports, historical checkpoint files and unrelated user content remain unchanged.
+Execution root: ignored `data/t17/artifact-notice-review-01/`, now consumed; no renewal. No helper changes, new controls, native/library/model run, install or application work. Old roots/reports, historical checkpoints and unrelated user content remain unchanged.
 
-Preparation verification: nine fixed/eight protected identities, 406 local links, five ordered task IDs, four-document scope, absent execution root, empty index and whitespace checks passed. Readable tracked diff and the new proposal were reviewed; documentation-only work required no application tests. Execution and planning commit await approval.
+Earlier preparation verification passed nine fixed/eight protected identities, 406 links, five task IDs/four-document scope, absent root, empty index and whitespace. Execution closeout evidence is in the linked findings/summary; no historical application/graph/control suite was rerun.
 
 ## Earlier T17-IF-SLR — bounded review completed; results committed
 
