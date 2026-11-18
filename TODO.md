@@ -1,4 +1,23 @@
-## Current T17-IF-RSR — stopped on excerpt capture; results uncommitted
+## Current T17-IF-RBF — approved attempt stopped during preflight
+
+The user approved the four-file planning commit and [RBF1–RBF6](docs/proposals/tokenizer-bounded-frame-continuation.md). A combined documentation/skill preflight produced a truncated capture, triggering the package stop before staging/commit, formatter controls or semantic review. [Findings](docs/benchmarks/tokenizer-bounded-frame-continuation.md) preserve the failure. Current task outcomes supersede the original acceptance checklist below:
+
+- **RBF1: partial/stopped.** Protected closeout verified eight pinned, twelve underlying, twelve fixed, eight protected and four aid identities. Gateway bootstrap occurred only after the stop for closure; no accounting smoke/negative controls. An initial dictionary-only manifest assumption failed; corrected verification passed.
+- **RBF2–RBF5: not started.** No formatter RED/GREEN/mutation, source frames, Python/CPU interpretation or readiness matrix. Existing native/prelaunch gaps remain unresolved.
+- **RBF6: stop closeout.** Five authored documents and ignored closure records; final evidence/check results are in the findings and local terminal receipt. Planning commit was not attempted. Results commit and any fresh continuation require separate approval.
+
+Original task objectives and acceptance criteria (pending tasks were not completed):
+
+- [ ] **RBF1 — Freeze/accounting.** Prerequisite: package approval. Objective: fresh shared boundary. Accept: eight pinned/underlying/protected/four aid identities, reviewed root/namespace substitutions and actual gateway smoke/negative controls. Evidence: admission/identity/control records. Files: proposal/ignored records. Status: awaiting approval.
+- [ ] **RBF2 — Pre-output formatter.** Prerequisite: RBF1. Objective: reject oversized complete serialized output before any write. Accept: meaningful RED, actual-path GREEN, caught/restored mutation; exact/escaped-byte and zero-write refusal controls within 16 inert cases. Evidence: owned inline source/controls; no new versioned aid. Status: pending.
+- [ ] **RBF3 — Retained Python roles.** Prerequisite: final RBF2 GREEN. Objective: finish default-import/local-file and optional/native role review across 16 saved files. Accept: verified source/line references, complete selected definitions and explicit unread spans, at most 12 KiB Python frames. Evidence: frames/manifest/Python matrix. Files: new findings. Status: pending.
+- [ ] **RBF4 — Saved CPU-source review.** Prerequisite: RBF3. Objective: classify CPU/model/local endpoints/auth/request/compatibility/DLL questions. Accept: retained projections only, at most 6 KiB CPU frames; unknowns explicit, zero new public calls. Evidence: source-coordinate/line matrix. Status: pending.
+- [ ] **RBF5 — Consolidated readiness.** Prerequisite: RBF3/RBF4. Objective: one next decision. Accept: supported/runtime-needed/prelaunch-gap/optional categories and exact remaining alternatives; no native/offline/parity/adoption guarantee. Evidence: findings/dependency status only if affected. Status: pending.
+- [ ] **RBF6 — Close/review.** Prerequisite: completion or stop. Objective: honest handoff. Accept: final preservation/scope/links/UTF-8/whitespace/diff/index/owned exits and non-null resource receipt; at most six result documents, separate commit/next-package gates. Evidence: report/receipts/readable diff. Status: pending.
+
+Preparation previously passed four-file scope, identity rows, 422 scoped local links, six ordered tasks, allocation arithmetic, UTF-8/whitespace, readable diff and empty-index checks. The approved execution is now stopped; its root is closed after protected closeout. No automatic retry, new research, candidate execution, installation, checkpoint or adoption. Historical RSR statuses below describe the earlier closed allocation.
+
+## Earlier T17-IF-RSR — stopped result committed in acfc5f3
 
 The user approved the twelve-file WSP/MTR commit (**`5d28c59`**), RSR planning commit (**`b4e880f`**) and execution. [RSR findings](docs/benchmarks/tokenizer-retained-source-review.md) record verified text/AST evidence and the subsequent truncated local excerpt. Further optional work stopped; no semantic-review completion or native readiness is claimed.
 
