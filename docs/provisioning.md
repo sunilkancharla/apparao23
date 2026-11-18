@@ -1,5 +1,13 @@
 # T03 Provisioning Proposals
 
+## Current T17 closeout — 2026-11-19
+
+[Consolidated report](benchmarks/t17-consolidated-closeout.md) records one fresh user-authorized package, complete runtime/model hash inspection, 11 matching packaged-reference count cases and format/OCR checks. Existing .venv assets were reused without installation, resolver, model pull, lock or global/PATH changes. Exact proposed components remain in dependencies; standalone Tokenizers' seventeen-node provisioning and notice/ABI/parity conditions remain open.
+
+All new native jobs used fresh ignored data/t17/consolidated-closeout-01/ evidence, safe authored inputs, explicit CPU/loopback settings where applicable and owned Windows job teardown. This allocation is closed on delivery; old or new ignored worker commands are not reusable application setup commands. Actual context 2,048 and unbounded default n_predict require the explicit caller controls described in contracts. No startup auto-download is introduced.
+
+G2/T18 remain gated by B01–B03 and the final architecture decision. Physical RAM is about19.91GiB; no 16GB proxy or earlier disconnected/no-confinement exception was inferred. The next implementation must use accepted component/asset identities and refuse missing/drifted assets. No application startup command exists yet. Older entries below are historical.
+
 ## T17 static pack — provisioning and validation handoff
 
 **No provisioning or runtime validation was executed in T17-A.** The existing project environment and assets are retained. Static checks matched all52installed distribution name/version metadata pairs against53lock records including the project; `.venv` configuration disables inherited system packages. This is not an import, vulnerability audit or proof of fresh-install reproducibility. [T17 inventory](dependencies.md#t17-a1--static-reconciliation-and-proposed-runtime-set) records exact hashes and runtime-versus-evaluation recommendations.

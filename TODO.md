@@ -1,4 +1,18 @@
-## Current T17-IF-RPT — corrected reporting path and closeout
+## Current T17-CC — user-authorized consolidated closeout
+
+User authorized all four remaining work blocks and scoped commits without further project-approval waits on 2026-11-19. [Package](docs/proposals/t17-consolidated-closeout.md). G2 remains the final user decision; no product requirements or host permission controls are waived.
+
+- [x] CC1: six RPT result documents committed as 34ca104; consolidated scope recorded.
+- [ ] CC2: exact proposed components reconciled; 52 locked/installed versions, 75 runtime file hashes and both complete model hashes verified. B03 notice/advisory/provisioning closure remains.
+- [ ] CC3: 21 evaluation tests, full model/vocabulary mapping and 11 exact packaged-reference count matches passed. Full standalone/selected-Ollama NP01–NP08 parity and boundary semantics remain B01.
+- [ ] CC4: fresh CSV/XLSX/native-and-scanned PDF/OCR gold checks and prior evidence reconciled. Physical16GB/proxy acceptance and wider representative checks remain B02/feature acceptance.
+- [x] CC5: [final report](docs/benchmarks/t17-consolidated-closeout.md), proposed ADR/readiness and handoff presented; G2 is not approved, T17 is not fully complete and T18 was not started. Final checks/scoped commit are recorded with delivery evidence.
+
+Observed native reference: 8/8 chat and 3/3 embedding counts matched, both wrong-key controls rejected, 42 API attempts, both model jobs closed/reaped. Fresh format/OCR checks used three authored files, no user documents. Ten metadata tests plus eleven fake FP contract tests and final Ruff checks passed after expected RED/mutation, a during-count drift correction and routine import-order correction. No new installation/lock change. Current details and limitations are in the consolidated report; no old ledger/root was reset and no checkpoint was written.
+
+Evidence will be recorded in one closeout report and fresh data/t17/consolidated-closeout-01/ ledger. No session-checkpoint files. Earlier package states are historical.
+
+## Earlier T17-IF-RPT — corrected reporting path and closeout
 
 Approved planning/results commit **8c07563**. [Findings](docs/benchmarks/tokenizer-closeout-report-fix.md); ignored root data/t17/tokenizer-closeout-report-fix-01/.
 

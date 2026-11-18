@@ -1,5 +1,13 @@
 # Stage 1 Decision Register
 
+## 2026-11-19 — consolidated T17 authority and evidence disposition
+
+The user explicitly requested finishing the four remaining T17 blocks, including scoped commits, in one go without intermediate project approvals. [Package](proposals/t17-consolidated-closeout.md), [report](benchmarks/t17-consolidated-closeout.md). This authorizes that package's independent safe work; it does not approve G2, T18, a requirement change, hardware proxy or blanket security/licence exception. RPT results were committed as 34ca104.
+
+Retain the exact existing proposed core components. The packaged native runner was an evaluation reference, not a silently selected production counter. Standalone Tokenizers and all seventeen candidates remain on hold for unresolved provisioning/trust and full pipeline parity. Nomic vocabulary representation differences were reconciled, but its GGUF/reference 2,048 context differs from the earlier unverified 8,192 declaration. Keep provisional product settings and unknown-overhead/equality gates unchanged.
+
+The completed report explicitly retains B01 (standalone/selected-Ollama parity), B02 (physical16GB or explicitly approved proxy) and B03 (selected-runtime notice/advisory/provisioning closure). New positive counts/synthetic format checks do not turn those gaps into passes. No user document, global install, checkpoint, application feature or stage transition was involved.
+
 ## T17-A commit and R1 approval — attempt closed, no research/adoption finding
 
 The user answered "yes, i do approve all" to the exact11-file commit and R1public-source package. Committed architecture/policies as `dbd9137`. R1was attempted under a fresh allocation and stopped before HTTP on authored initializer/cleanup-adapter defects, not network or upstream evidence. [Stop report](benchmarks/public-source-review-stop.md) records the preserved state and unperformed research. No retry, field/counter reset, new repair package or G2 approval is inferred; R1-Srequires a separate explicit decision. Prior storage/retention/resource/format/chart decisions remain unchanged.

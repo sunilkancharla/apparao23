@@ -2,6 +2,8 @@
 
 ## Status
 
+**Consolidated evidence, 2026-11-19:** [T17 closeout](../benchmarks/t17-consolidated-closeout.md) records 21 new evaluation tests, 75 rehashed runtime files, complete model hashes, 11 successful packaged-reference count comparisons and fresh format/OCR component checks. It also identifies B01 (full selected-Ollama/standalone parity), B02 (physical 16 GB or approved proxy) and B03 (selected-runtime/standalone notice, provisioning and advisory closure). This ADR remains **Proposed; unconditional G2 is not ready**. No application implementation or adoption. Older status paragraphs below are historical.
+
 **R1-W bounded source review:** approved proposal committed `780bad2`; [findings](../benchmarks/public-source-web-review.md) add selected advisory/fixed-version and notice evidence, but leave complete native/vendor freshness and exact input-fit validation open. Pinned Ollama source has truncation/rendering controls and an internal runner tokenizer; no stable application-facing exact count-only contract or template/token parity has been validated. Recommend a separate static preflight-integration design, with no new architecture/dependency/runtime adoption. This ADR remains Proposed and G2 open. Historical zero-HTTP wording below concerns the original failed helper.
 
 **Research follow-up stopped before HTTP:** architecture pack committed `dbd9137`; approved R1attempt is closed with0requests/0sources because of local startup/close-adapter defects. [Stop report](../benchmarks/public-source-review-stop.md) preserves evidence and proposes a separate no-network integration repair. Nothing in this attempt resolves the freshness/input-fit/native-trust/resource gates below; G2 remains open.
@@ -84,10 +86,10 @@ This is a static walkthrough, not an independent runtime reviewer or passing con
 |---|---|---|
 | Settled scope/policies | Recorded | SPEC/T16 plus explicit T17 accounting/original-cap/resource/tombstone decisions; no repeated approval needed for unchanged choices |
 | Concrete architecture/contracts | Proposed, static package complete | This ADR/C01–C08/API/identity/transaction/quota/privacy designs; user must review proposed mechanisms/defaults before G2 |
-| Artifact/runtime inventory | Statically reconciled, freshness incomplete | Local metadata52installed/53lock records and exact cached identities; current relevant advisories, selected native/vendor notice completeness and final runtime-only bill remain unresolved |
-| Model-input fit | **Unresolved pre-adoption evidence gap** | Trustworthy exact tokenizer/template accounting or verified pinned-runtime equivalent, over-limit refusal/no truncation and packed multi-file validation; no new method/dependency is selected/executed |
-| Resource/target-machine feasibility | Targets approved; validation incomplete | One heavy job/30s warm/90s hard/8GiB total/4GiB available; physical16GB or explicitly approved bounded proxy method and representative scale remain unverified |
-| Parser/OCR representative acceptance | Partial historical evidence | Known layout/rotation/scan-detection gaps preserved; exact boundaries/native trust acceptance and planned targeted checks needed, not a universal OCR claim |
+| Artifact/runtime inventory | 52 installed/52 locked dependency versions match; 75 runtime files rehashed | Four current advisory ranges checked; complete selected native/vendor notices, standalone provisioning and freshness remain B03 |
+| Model-input fit | Fake contracts and packaged-reference support; adoption still blocked | 21 tests, full model metadata mapping and 11 matching reference/runtime counts; full selected-Ollama/standalone NP matrix and output/equality semantics remain B01 |
+| Resource/target-machine feasibility | Native observations on larger host; target unchanged | New bounded jobs succeeded on about19.91GiB physical RAM; no physical16GB/proxy acceptance, full-answer or whole-application guarantee (B02) |
+| Parser/OCR representative acceptance | Fresh small format/OCR gold checks plus historical evidence | CSV/XLSX/mixed PDF/render/OCR checks passed; rotation/layout/scale and future product integration remain explicit |
 | Product integration | Future implementation/acceptance | CSV-first upload→grounded answer→citations→saved chat/restart, then PDF/OCR/XLSX slices; these cannot be claimed before coding |
 | Chart timing | Explicit deferral recorded | T16A after T34 before chart adoption/claims; does not waive other format/OCR/privacy requirements |
 | G2 and T18 implementation | **Not approved** | User decision only after reviewing this pack and resolving or explicitly deciding each applicable prerequisite; no blanket waiver is requested |

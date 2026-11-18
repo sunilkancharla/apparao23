@@ -1,4 +1,13 @@
-**Current status:** The [RPT correction](docs/benchmarks/tokenizer-closeout-report-fix.md), planning commit **8c07563**, passed test-first reporting controls. Its report and receipts record corrected-controller Git integration and closeout. Existing [SMC findings](docs/benchmarks/tokenizer-source-metadata-continuation.md) remain historical; native-readiness and payload/parity gates stay open. No application feature, new research, installation or native run. Six results await commit approval.
+**Current status — 2026-11-19:** [T17 consolidated closeout](docs/benchmarks/t17-consolidated-closeout.md) records 21 passing evaluation tests, complete model/runtime hash checks, 11 matching packaged-reference prompt counts and new CSV/XLSX/mixed-PDF/OCR component checks. RPT results are committed as **34ca104**. Full selected-Ollama/standalone parity, physical16GB/proxy evidence and selected-runtime trust/provisioning gaps remain; G2 is not approved and no end-user app exists. No installation or dependency/lock change occurred. Raw synthetic evidence stays local/ignored; old trial commands are not renewed allocations.
+
+New data-only/fake evaluation checks were verified with the existing isolated inspector:
+
+```powershell
+& 'F:/Python/Python314/python.exe' -I -S -B tests/evals/spikes/test_t17_model_metadata.py
+& 'F:/Python/Python314/python.exe' -I -S -B tests/evals/spikes/test_t17_fit_contract.py
+```
+
+These tests do not start models or inspect user documents. Native reference/format trials were executed only in their fresh closed evaluation root; they are not application startup instructions.
 
 The [PGC retained-evidence review](docs/benchmarks/tokenizer-prelaunch-gap-closure.md) is committed as **`679194b`**. The user approved the [SMR request](docs/proposals/tokenizer-source-metadata-request.md) and planning commit, but truncated opening output triggered its mandatory stop before the commit or optional work. [Stop findings](docs/benchmarks/tokenizer-source-metadata-review.md) record 102 matching evidence rows. No public request, model-manifest read, installation, native/model run or usable application feature resulted. Native/server/weight-mapping questions remain unresolved. Earlier [PBF](docs/benchmarks/tokenizer-preflight-frame-continuation.md), [RSR](docs/benchmarks/tokenizer-retained-source-review.md) and [RBF](docs/benchmarks/tokenizer-bounded-frame-continuation.md) evidence remains preserved; older statuses below are historical.
 

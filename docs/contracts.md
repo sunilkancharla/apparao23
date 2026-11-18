@@ -1,5 +1,13 @@
 # Stage 1 application boundary contracts
 
+## Validation addendum — 2026-11-19
+
+[Consolidated T17 evidence](benchmarks/t17-consolidated-closeout.md) adds fake FP01–FP08 contract checks and actual packaged-reference counts. The evaluation helper is not a public API, an authenticated admission capability or implemented application integration. Real counts/proof flags must come from a trusted bound runtime, never a user-supplied count or equality Boolean.
+
+C07's provisional 2,048 context/192 output remains unchanged. Both reference processes actually reported a 2,048 slot; Nomic's earlier 8,192 auxiliary setting is not verified capacity. The reference default n_predict=-1 is not a safe application default: new test requests explicitly set max_tokens=1 and do not validate a full 192-token output/EOS reservation. Unknown overhead still refuses admission; equality still needs proof. The evaluator demonstrates bounded eight-candidate history/evidence removal, source/runtime/rendering identity checks and refusal paths only with injected counts; NP01–NP08 are not fully passed.
+
+Loopback listener ownership and wrong-key rejection were checked for the temporary reference, not the future FastAPI/browser boundary. Existing Host/Origin/CSRF, scope, deletion/recovery, privacy and resource contracts remain requirements for implementation. No application filesystem confinement, strict disconnected runtime or physical-16-GB acceptance is claimed.
+
 ## Status, authority and decisions
 
 **Proposed architecture contracts; no application code or G2 adoption.** Prepared under T17-A after readiness commit `e9d107e`. [SPEC](../SPEC.md), approved [T16 design](retrieval-design.md) and explicit user policy decisions take precedence. Mechanisms below are concrete proposals for G2 review; recorded acceptance targets are not measured results or runtime-trial permissions. See [architecture ADR](ADR/0001-stage1-architecture.md) for alternatives and blockers.

@@ -1,4 +1,8 @@
-## Current execution point — RPT correction and closeout
+## Current execution point — consolidated T17 report; G2 blockers explicit
+
+The user authorized completing the remaining T17 work and scoped commits without intermediate project approvals on 2026-11-19. RPT results were committed as **34ca104**. [Consolidated report](docs/benchmarks/t17-consolidated-closeout.md): 21 new evaluation tests, full model/runtime identity checks, 11 packaged-reference count matches and fresh CSV/XLSX/mixed-PDF/OCR checks. Exact proposed components remain unchanged. Full standalone/selected-Ollama parity, physical16GB/proxy acceptance and selected-runtime notice/provisioning/freshness gaps remain B01–B03. T17/G2 is not fully complete; this pack presents the final readiness decision without adopting it or starting T18. No further project-approval wait was introduced.
+
+## Historical RPT outcome
 
 [RPT findings](docs/benchmarks/tokenizer-closeout-report-fix.md), planning commit **8c07563**: the reporting correction passed test-first controls. The corrected controller and final receipts establish the supervised Git/closeout outcome. Historical SMC evidence and native-readiness gates remain unchanged. Six results await commit approval; no new research, installation or native run.
 

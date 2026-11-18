@@ -1,4 +1,22 @@
-## Latest LFT evidence — local-file core supported; import/reference readiness blocked
+## Current T17 consolidated component disposition — 2026-11-19
+
+[Closeout report](benchmarks/t17-consolidated-closeout.md) is the current evidence summary. The exact proposed set below is retained for G2; nothing was installed, upgraded or silently promoted to runtime. The 52 installed distributions match all 52 lock dependency versions.
+
+| Role | Exact proposed components / disposition |
+| --- | --- |
+| API/local model transport | FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1; minimal locally served HTML/CSS/JavaScript |
+| CSV/XLSX | CPython csv; openpyxl 3.1.5, et-xmlfile 2.0.0, defusedxml 0.7.1; never execute formulas/macros or follow external links |
+| PDF | pdfplumber 0.11.10/pdfminer-six 20260107; pypdfium2 5.15.2/Pillow 13.0.0 for rendering. pypdf 7.0.1 was used only to author evaluation fixtures |
+| English OCR | Tesserocr 2.13.0 and the existing pinned English asset; RapidOCR remains an evaluated alternative, not automatic fallback |
+| Model runtime/assets | Ollama 0.40.16; exact Qwen2.5 1.5B Q4_K_M and Nomic v1.5 identities already listed below |
+| Metadata/vector store | CPython SQLite and the reviewed sqlite-vec 0.1.9 artifact; original companion-notice decision retained |
+| Standalone counting candidate | Tokenizers 0.23.3 and its complete seventeen-distribution graph remain blocked for provisioning/adoption by B01/B03; no dependency omission or lock change |
+
+The new inspection verified the entire cached chat/embedding weights and all 75 installed runtime files against recorded hashes. Qwen's known token IDs/merges match; Nomic's complete vocabulary matches after the observed WordPiece representation transformation. Neither result proves the unexecuted standalone/selected-Ollama pipeline. Actual packaged-reference bind/key checks and explicit CPU settings succeeded; a direct reference process is not an adopted additional application service.
+
+The existing recorded licence families/notice artefacts remain the basis of the proposal. Four specifically reviewed current advisory ranges exclude the selected pdfminer/Starlette pins; full selected-native/vendor notices and advisory coverage are still incomplete. No statement of universal security clearance or independent binary-build attestation follows. Historical conclusions below are superseded only where the report supplies new evidence.
+
+## Historical LFT evidence — local-file core supported; import/reference readiness blocked
 
 [LFT findings](benchmarks/local-file-trial-readiness.md), plan `8e846c1`: two public calls/six targets, both responses retained. Pinned Rust binding delegates to core local-file read/JSON construction; Python import and exact CPU-reference contract remain unverified. Explicit stop branch skipped dependent validator/tests/native-package work. All 17 dependencies and prior native/vendor/source conditions preserved; no candidate payload read, installation, import or adoption. Recommend a separately approved cached-wheel static-source review rather than repeated inaccessible source requests. Six-file results commit/next preparation pending.
 
