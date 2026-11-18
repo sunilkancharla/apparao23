@@ -1,8 +1,12 @@
 # T17-IF-PBF — bounded preflight and retained-source review
 
+## Executed outcome
+
+The user approved the four-file planning commit (**`55ecaf3`**) and PBF1–PBF6. [Findings](../benchmarks/tokenizer-preflight-frame-continuation.md) record passing entry/accounting and final formatter controls, thirteen admitted frames across five groups, explicit unread spans and a four-category readiness matrix. Python role review and saved CPU projections do not establish native/prelaunch readiness. The initial Unicode test expectation, six safe selection-size refusals and one selection syntax error are retained and counted. No capture truncation, installation or candidate execution occurred. Results commit and any next package remain unapproved. The request/status wording below describes the original approved proposal; current task outcomes are in TODO/findings.
+
 ## Purpose and approval
 
-The user approved the five-file RBF closeout commit, now **`96022c9`**, and continuation preparation. **This four-file planning commit and PBF1–PBF6 execution require approval.** Preparation changes this proposal, PLAN, TODO and README only. No fresh evidence root, formatter, candidate-source interpretation or trial has started.
+The user approved the five-file RBF closeout commit (**`96022c9`**), continuation preparation, and subsequently this four-file planning commit and PBF1–PBF6. Preparation changed this proposal, PLAN, TODO and README only; the separately approved execution is recorded above.
 
 Finish the saved Python/CPU-source contract review described in the [RBF proposal](tokenizer-bounded-frame-continuation.md), preserving its successful earlier identity evidence and all unresolved native/adoption requirements. [RBF findings](../benchmarks/tokenizer-bounded-frame-continuation.md) record a preflight output failure, not a candidate failure. The correction applies before bootstrap as well as before candidate excerpts: never combine whole skill/project documents and Git output into an unbounded response.
 

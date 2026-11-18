@@ -1,6 +1,15 @@
-## Current T17-IF-PBF — bounded-preflight continuation prepared
+## Current T17-IF-PBF — retained-source matrix and closeout
 
-The five RBF closeout documents are committed as **`96022c9`**. The [PBF package](docs/proposals/tokenizer-preflight-frame-continuation.md) is proposed; no execution/root/formatter/source review has started. Six local skill instructions were completely read in size-admitted contiguous pages during preparation; no skill scripts ran. New tasks:
+The user approved the [PBF package](docs/proposals/tokenizer-preflight-frame-continuation.md) and four-file planning commit (**`55ecaf3`**). [Findings](docs/benchmarks/tokenizer-preflight-frame-continuation.md) record final controls, bounded source review and open prelaunch contracts. No next package or runtime adoption is approved.
+
+- [x] **PBF1 — Freeze/accounting.** Nine pins/44 carried rows/six skills verified; actual smoke and five negative controls passed, prepaid prelude reconciled. Evidence: frozen/accounting-control records.
+- [x] **PBF2 — Formatter controls.** Meaningful RED; initial Unicode expectation corrected without weakening bounds; sixteen-case final GREEN, response-bound mutation caught and owned source restored. Evidence: control results/captures.
+- [x] **PBF3 — Python roles.** Ten admitted frames cover all sixteen roles and selected default/import expressions. Helper bodies and unprojected definition-time expressions remain explicitly unread; no complete-path safety claim. Evidence: Python frames/review and findings. Six safe size refusals and one syntax error counted; inherited ledger body-completeness wording corrected in the review record.
+- [x] **PBF4 — CPU projections.** Three admitted frames classify numeric CPU-related arguments, explicit-model role and compatibility sources. Bind/auth/routes/request and exact DLL/packaged mappings remain prelaunch gaps; no absence inference. Evidence: CPU ledger/unread matches and findings.
+- [x] **PBF5 — Readiness matrix.** Four categories, compared next options and one recommendation: prepare precise prelaunch-gap closure; native trial remains blocked. Evidence: matrix/findings.
+- [x] **PBF6 — Close/review.** Final checks passed: 59 identity rows, 432 local links, thirteen frames/five groups (15,472 frame bytes), final formatter controls, exact five-file scope, UTF-8/whitespace/readable diff/empty index and all six supervised children at EOF/reaped, including the expected initial exit-1 control. Non-null terminal receipt observed after successful host return. Evidence: verification/summary and final parent-state record. Status: complete bounded review; native readiness unresolved; results commit awaits approval.
+
+Original objectives/acceptance criteria are retained below; current outcomes above supersede their preparation statuses:
 
 - [ ] **PBF1 — Freeze/accounting.** Prerequisite: package approval. Objective: fresh shared boundary. Accept: nine pins, carried entries/six skills, reviewed substitutions, actual meter smoke/negative controls and prepaid prelude reconciliation. Evidence: ignored admission/identity/control records. Status: awaiting approval.
 - [ ] **PBF2 — Formatter controls.** Prerequisite: PBF1. Objective: reject complete oversized output before writes. Accept: meaningful RED, actual-path GREEN, caught/restored mutation and final GREEN; sixteen inert cases maximum, zero writes on refusal. Evidence: owned inline-source/control JSON. Status: pending.
@@ -9,7 +18,7 @@ The five RBF closeout documents are committed as **`96022c9`**. The [PBF package
 - [ ] **PBF5 — Readiness matrix.** Prerequisite: PBF3/PBF4. Objective: one next decision. Accept: supported/runtime-needed/prelaunch-gap/optional categories, exact alternatives and no adoption waiver. Evidence: findings/dependency status only if affected. Status: pending.
 - [ ] **PBF6 — Close/review.** Prerequisite: completion or stop. Objective: accurate handoff. Accept: preservation/scope/links/UTF-8/whitespace/diff/index/known exits/resource/terminal checks; at most six result files, separate commit/next-package gates. Evidence: findings/receipts. Status: pending.
 
-Four-file planning commit and PBF1–PBF6 await approval. Preparation checks passed: 59 identity rows (nine pins, 44 carried, six skills), complete capture/coverage across 25 skill pages, 429 scoped local links, six ordered tasks, 48-unit/51-planned-start arithmetic within the 64-start cap, absent proposed root/report, UTF-8/whitespace and readable tracked/new-file review. Exact four-file scope and empty index are checked before handoff. No new evidence root, application tests, formatter controls, candidate interpretation, research, installation, native/model run or checkpoint. Earlier status sections below are historical.
+Preparation previously passed 59 identity rows, 25 complete skill pages, 429 links, task/budget/absence/UTF-8/whitespace/diff checks. Execution and protected closeout are complete; optional work finished at 51 reserved starts, final package reservation 64 starts (62 observed owned starts including the prepaid prelude/bootstrap). Five result documents await review/commit. No new research, installation, candidate/native/model run, application feature or checkpoint. Earlier status sections below are historical.
 
 ## Earlier T17-IF-RBF — stopped result committed in 96022c9
 
