@@ -1,6 +1,6 @@
-## Latest execution point — LFT source findings retained; readiness blocked
+## Latest execution point — LFT results committed; cached-source review proposed
 
-LFT1–LFT5 approved; plan committed as `8e846c1`. [Findings](docs/benchmarks/local-file-trial-readiness.md): two calls/six targets and both responses retained; Rust local-file construction supported, but Python import and CPU-reference contracts incomplete. The approved stop branch skipped dependent validator/tests/native-package authoring. Review six-file results and decide preparation of a bounded static review of cached-wheel Python sources, rather than repeating inaccessible public targets. No payload read, install/import/native/model run, risk exception, adoption/G2 closure or stage transition.
+LFT results committed as `073025c`; user approved that commit and preparation of the [WSP package](docs/proposals/tokenizer-cached-wheel-source-review.md). It proposes static reads of the exact cached wheel's 16 Python files, test-first reuse of verified ZIP primitives, then remaining CPU-reference source questions. WSP1–WSP5 and four-file planning commit await approval. No candidate payload read, helper/fixture, worker, source query, installation/import/native/model run, risk exception, adoption/G2 closure or stage transition has started.
 
 ## Latest MR outcome — partial evidence; limits reached
 

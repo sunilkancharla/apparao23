@@ -1,6 +1,20 @@
-## Latest T17-IF-LFT — source review partial; readiness blocked
+## Latest T17-IF-WSP — cached-source review prepared; approval pending
 
-The user approved [LFT1–LFT5](docs/proposals/controlled-local-file-tokenizer-trial.md) and four-file planning commit (`8e846c1`). [Findings](docs/benchmarks/local-file-trial-readiness.md) retain two full source-tool responses and core local-file evidence. Python import/CPU-reference contracts remain incomplete, so the approved stop branch skipped dependent implementation/tests/native-package authoring. No payload read, installation, candidate import/native/model run or risk exception.
+LFT results committed as `073025c`. The user approved that commit and preparation only of the [exact WSP package](docs/proposals/tokenizer-cached-wheel-source-review.md). It bounds static reads to the cached wheel's 16 Python members and uses verified owned ZIP primitives, test-first controls and a separate bounded CPU-source review. No candidate source member has been read or executed during preparation.
+
+- [ ] **WSP1 — Freeze/allocation.** Prerequisite: package approval. Accept: fresh shared root, 12 fixed/eight protected identities and exact wheel/member/read/report policy before optional work. Evidence: identities/ledger. Status: awaiting approval.
+- [ ] **WSP2 — Test-first source reader.** Prerequisite: WSP1. Accept: behavioural RED/GREEN, caught integrity/reserve mutation, final focused tests/Ruff; reviewed primitives reused without old dispatch or candidate import. Evidence: two authored aids and complete control captures. Status: pending.
+- [ ] **WSP3 — One static attempt.** Prerequisite: final WSP2 checks. Accept: exact outer hash/31-member admission, all 16 Python size/hash matches, bounded JSON/AST evidence, no native decompression, owned exit or honest stop. Evidence: worker/byte/source records. Status: pending.
+- [ ] **WSP4 — Import/reference review.** Prerequisite: coherent WSP3. Accept: import/file/network/native edges classified and independent CPU-source questions reviewed within three calls/nine targets; unknowns explicit, no offline/native proof inferred. Evidence: source-role/readiness matrix. Status: pending.
+- [ ] **WSP5 — Completion/stop closeout.** Prerequisite: completion or stop. Accept: consolidated verdict, actual/reserved resources, ownership/preservation/scope/links/whitespace/diff/index/non-null summary; separate commit/next/native/adoption gates. Evidence: findings/receipt. Status: pending.
+
+Four-file planning commit and WSP1–WSP5 remain unapproved. Proposed root/code/results absent; no source queries, helper/fixture, payload read, install or candidate execution. Historical checkpoints and unrelated files preserved.
+
+Preparation verification passed: 12 fixed/eight protected identities, saved 31-member inventory/16 Python files/66,467 bytes, 412 local links, five ordered task IDs/four-document scope, absent execution artifacts, UTF-8/new-file and tracked whitespace checks, empty index and readable diff/proposal review. No application tests or static-worker checks ran during documentation preparation.
+
+## Earlier T17-IF-LFT — partial source results committed; readiness blocked
+
+The user approved [LFT1–LFT5](docs/proposals/controlled-local-file-tokenizer-trial.md), planning commit (`8e846c1`), six-file results commit (`073025c`) and WSP preparation. [Findings](docs/benchmarks/local-file-trial-readiness.md) retain two responses/core local-file evidence and the explicit missing-contract stop branch. Pending-commit/next-preparation wording below is historical; current WSP execution/commit gates are above. No payload read, installation, candidate import/native/model run or risk exception.
 
 - [x] **LFT1 — Bootstrap/freeze.** Sixteen fixed/eight protected identities matched; fresh shared allocation and complete 17-node candidate set retained with assumptions labelled. Evidence: fixed/protected/candidate records.
 - [ ] **LFT2 — Pinned loading/reference contracts.** Partial: two calls/six targets, both complete tool responses/60,072 bytes identified. Rust binding/core file construction supported; two Python cache misses, incomplete export projection and CPU search without a match leave indispensable contract unresolved. No failed-target retry.
