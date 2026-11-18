@@ -1,4 +1,15 @@
-## Current T17-IF-RPT — reporting correction prepared
+## Current T17-IF-RPT — corrected reporting path and closeout
+
+Approved planning/results commit **8c07563**. [Findings](docs/benchmarks/tokenizer-closeout-report-fix.md); ignored root data/t17/tokenizer-closeout-report-fix-01/.
+
+- [x] RPT1: 113 identities, fresh root, prepaid/shared limits.
+- [x] RPT2: actual-path RED/GREEN/mutation/restoration; phase, lease and byte refusals.
+- [x] RPT3: corrected-controller Git checks and complete captured diff/report review passed.
+- [x] RPT4: 113 identities/450 links, scope/index/format/accounting passed; terminal receipt observed.
+
+Two supervised test children passed. Unit near-limit fixtures never reset the real ledger. No repeated source/manifest research, installation, native run, application feature or checkpoint. Six results await commit approval. Earlier statuses are historical.
+
+## Historical RPT preparation
 
 [RPT proposal](docs/proposals/tokenizer-closeout-reporting-fix.md). User approved preparation only; six-file planning/results commit and execution await approval.
 

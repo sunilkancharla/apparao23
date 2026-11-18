@@ -1,4 +1,8 @@
-## Current execution point — closeout-reporting correction proposed
+## Current execution point — RPT correction and closeout
+
+[RPT findings](docs/benchmarks/tokenizer-closeout-report-fix.md), planning commit **8c07563**: the reporting correction passed test-first controls. The corrected controller and final receipts establish the supervised Git/closeout outcome. Historical SMC evidence and native-readiness gates remain unchanged. Six results await commit approval; no new research, installation or native run.
+
+## Historical RPT preparation
 
 The user approved preparation of the [RPT correction](docs/proposals/tokenizer-closeout-reporting-fix.md). It proposes explicit closure-phase propagation and a precharged status lease, then test-first controls → two supervised Git checks → final closeout. Reuse the SMC evidence; no new public/model-store access or native trial. The six-file planning/results commit and RPT1–RPT4 execution await approval. Preparation is documentation only; SMC's historical reporting limitation remains recorded.
 

@@ -2,6 +2,8 @@
 
 ## Approval and purpose
 
+Approved planning/results commit **8c07563** authorizes RPT1–RPT4. [Findings](../benchmarks/tokenizer-closeout-report-fix.md) and the fresh root record implementation, tests and final receipt. The original preparation text below is historical; results commit remains separately gated.
+
 The user approved **preparation** of this correction. Its execution and Git commit are not yet approved. HEAD is 68e012c. Five SMC result documents remain uncommitted; this proposal is the sixth document for the proposed combined planning/results commit. Their recorded limitations remain explicit.
 
 Use the reviewed planning/documentation workflows. After execution approval, also reuse the unchanged reviewed incremental implementation, test-first, security and quality workflows. No skill script, sub-agent, installation or application implementation is needed.

@@ -51,3 +51,7 @@ A fixed-metadata quoting failure occurred before response reads; correction cons
 Ignored root data/t17/tokenizer-source-metadata-02/ retains controls, responses, projections, readiness checklist and terminal reconciliation/check results. No machine-wide confinement/offline claim. Five results await commit approval; no new native trial/adoption/G2. [Historical stop](tokenizer-source-metadata-review.md) unchanged.
 
 Closeout limitation: the Git-status child persisted its capture, but the frozen controller reporter then rejected its status with report_reserve. The other two controller-based Git checks were not run. Final verification uses the saved status and direct identity/link/format checks; no full Git-diff/controller-closeout pass is claimed. Next propose a bounded correction allowing closure reports to use the protected reserve, with refusal/mutation tests and existing evidence reused; no new research or native actions.
+
+## Follow-up — 2026-11-18
+
+The approved RPT reporting correction (planning commit 8c07563) addresses the missing closure phase and status reservation. See [its separate findings](tokenizer-closeout-report-fix.md) for test and supervised integration evidence. This addendum does not rewrite the earlier failed controller outcome or change the native-readiness hold.
