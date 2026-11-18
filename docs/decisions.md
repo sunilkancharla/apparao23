@@ -1,5 +1,11 @@
 # Stage 1 Decision Register
 
+## 2026-11-19 — dependency/input-fit work and commit authorized
+
+The user explicitly requested finishing T17 items 1 and 2, reporting the outcome and performing the reviewed commit without another explicit approval. [Package](proposals/t17-standalone-validation-closeout.md), [findings](benchmarks/t17-standalone-validation-closeout.md). No additional routine project-approval request is needed for this scope or commit. Host permission controls remain separate.
+
+The exact retained seventeen-node graph, cached wheel/registry identities and publisher subjects passed the fresh static checks. Publication records contain no build-input predicate; the existing build-source/native-notice conditions remain unresolved. Therefore installation and native parity are not claimed complete. No waiver, dependency/version substitution, G2 acceptance, target-hardware change or T18 start was inferred. The selected standalone direction is unchanged.
+
 ## 2026-11-19 — standalone tokenizer direction selected
 
 The user explicitly chose to proceed with standalone tokenization for local model-input accounting. Treat this route choice as settled; do not reopen an Ollama-only counting design or repeat completed artifact/vocabulary research without a specific new finding.

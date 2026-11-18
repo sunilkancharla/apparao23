@@ -2,6 +2,8 @@
 
 ## Status
 
+**SV2 follow-up, 2026-11-19:** [Exact dependency findings](../benchmarks/t17-standalone-validation-closeout.md) verify the full seventeen-node graph, ten current registry/wheel identities and three exact publication subjects. These do not supply the remaining build-source/native-notice evidence. Installation and standalone/selected-Ollama parity remain blocked; B01–B03 and the Proposed G2 status are unchanged. No new architecture or runtime adoption follows from the user's work/commit authorization.
+
 **User-selected counting direction, 2026-11-19:** standalone Hugging Face tokenization with pinned local assets is now the chosen route for input accounting; Ollama continues generation/embeddings. Retain the existing 0.23.3 candidate/full dependency graph for focused validation. [Decision](../decisions.md#2026-11-19--standalone-tokenizer-direction-selected). Route selection is settled; provisioning, exact selected-model parity and the overall G2 decision remain distinct. No runtime-readiness pass is inferred from popularity or local download alone.
 
 **Consolidated evidence, 2026-11-19:** [T17 closeout](../benchmarks/t17-consolidated-closeout.md) records 21 new evaluation tests, 75 rehashed runtime files, complete model hashes, 11 successful packaged-reference count comparisons and fresh format/OCR component checks. It also identifies B01 (full selected-Ollama/standalone parity), B02 (physical 16 GB or approved proxy) and B03 (selected-runtime/standalone notice, provisioning and advisory closure). This ADR remains **Proposed; unconditional G2 is not ready**. No application implementation or adoption. Older status paragraphs below are historical.

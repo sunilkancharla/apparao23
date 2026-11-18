@@ -1,4 +1,10 @@
-## Current execution point — consolidated T17 report; G2 blockers explicit
+## Current execution point — T17-SV2 reviewed; artifact prerequisites remain
+
+The user authorized completing dependency/input-fit items 1 and 2 and committing the reviewed work without further project approvals. [SV2 results](docs/benchmarks/t17-standalone-validation-closeout.md) verify ten wheel identities/470 payloads, seven reused distributions/158 payloads, all seventeen graph nodes, current registry identities and three exact publication statements. The source review located Tokenizers' binding lockfile and release workflow.
+
+Existing build-source/native-notice prerequisites remain unresolved; provisioning and standalone/Ollama parity are blocked rather than passed. Do not repeat successful static checks or reopen the selected standalone direction. Follow the [ordered package](docs/proposals/t17-standalone-validation-closeout.md); actual provisioning/parity require the named evidence. Hardware validation remains separate. T17/G2 is open and T18 has not started.
+
+## Earlier execution point — consolidated T17 report; G2 blockers explicit
 
 **Latest user decision, 2026-11-19:** proceed with standalone Hugging Face tokenization for local input accounting. The [route decision](docs/decisions.md#2026-11-19--standalone-tokenizer-direction-selected) is settled. Focus subsequent dependent work on reviewed project-local provisioning and the existing model-specific parity/boundary matrix, reusing completed evidence. Keep the separate hardware gate from reopening the tokenizer choice. No installation or trial is claimed by this documentation update.
 

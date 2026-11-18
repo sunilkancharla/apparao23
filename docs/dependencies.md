@@ -1,4 +1,10 @@
-## Current T17 consolidated component disposition — 2026-11-19
+## Current T17-SV2 dependency evidence — 2026-11-19
+
+[Focused results](benchmarks/t17-standalone-validation-closeout.md) retain the selected Tokenizers 0.23.3/full seventeen-node graph. Ten exact wheel/registry identities and 470 payload hashes passed; seven reused distributions contributed 158 verified payloads. All 19 active requirements and declared wheel/Python compatibility checks pass on actual Windows AMD64 CPython 3.14.6. Fresh PyPI version records list no advisories for the seventeen pins; this is not exhaustive native security clearance.
+
+Three exact artifact publication statements now match the cached Tokenizers/Hub/HF-Xet digests. Their predicates provide no build-input inventory. Tokenizers' binding Cargo lockfile/release workflow are available, but the existing build-source/native-notice conditions remain unresolved. Keep the installation/adoption hold; no provisioning, import, native parity, environment or lock change occurred. Do not repeat completed metadata/graph/RECORD audits as missing work.
+
+## Earlier T17 consolidated component disposition — 2026-11-19
 
 [Closeout report](benchmarks/t17-consolidated-closeout.md) is the current evidence summary. The exact proposed set below is retained for G2; nothing was installed, upgraded or silently promoted to runtime. The 52 installed distributions match all 52 lock dependency versions.
 

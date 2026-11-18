@@ -1,4 +1,15 @@
-## Current T17-CC — user-authorized consolidated closeout
+## Current T17-SV2 — dependency checks passed; installation/parity blocked
+
+The user explicitly authorized items 1 and 2 and the reviewed commit without another project-approval request. [Package](docs/proposals/t17-standalone-validation-closeout.md), [results](docs/benchmarks/t17-standalone-validation-closeout.md). The standalone direction remains selected; G2/T18 and the 16 GB hardware gate are unchanged.
+
+- [ ] **SV2-1 — exact dependency closure.** Ten wheel hashes/470 payloads, seven reused distributions/158 payloads, all 17 nodes/19 active edges and actual Windows/Python compatibility declarations passed. Current registry identities and three exact publication subjects match. Build-source/native-notice prerequisites remain unresolved; no unconditional installation clearance.
+- [ ] **SV2-2 — project-local provisioning.** Prerequisite: SV2-1 clearance. Blocked by those precise trust/notice conditions; no installation or lock change.
+- [ ] **SV2-3 — standalone/Ollama parity.** Prerequisite: SV2-2. Existing FP01–08/NP01–NP08 retained; no new native parity pass or runtime adoption.
+- [x] **SV2-4 — report/review.** Eight authored documents reviewed; 540 local links, UTF-8/whitespace, empty index and four protected files checked. Results and precise blockers recorded. The already authorized scoped commit outcome is reported with delivery.
+
+Do not repeat the completed graph/RECORD/registry checks as another research task. The specific missing evidence is the publisher/build-source relationship and applicable compiled-component notices. Items 1 and 2 are not fully finished; no additional routine approval is pending.
+
+## Earlier T17-CC — user-authorized consolidated closeout
 
 **Latest decision:** user selected standalone Hugging Face tokenization with pinned local assets. [Recorded decision](docs/decisions.md#2026-11-19--standalone-tokenizer-direction-selected). Route comparison is closed; CC3 now follows this direction. Retain the existing candidate/dependency graph and exact validation requirements; this decision does not mark unexecuted installation/parity as passed.
 
