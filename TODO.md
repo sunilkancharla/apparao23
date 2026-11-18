@@ -1,4 +1,19 @@
-## Current T17-IF-SMR — approved attempt stopped before optional work
+## Current T17-IF-SMC — small-page continuation prepared
+
+SMR stop results are committed as **`625a347`**. The user approved that commit and preparation of the [SMC proposal](docs/proposals/tokenizer-source-metadata-continuation.md). Its four-file planning commit and execution await approval; no new trial root or source/model-manifest access during preparation.
+
+- [ ] **SMC1 — Freeze/accounting.** Prerequisite: package approval. Objective: fresh boundary. Acceptance: 107 identities, two individually measured bootstrap outputs, actual smoke/negative controls and prepaid reconciliation. Evidence/files: proposal and ignored freeze/ledger/control records. Status: proposed.
+- [ ] **SMC2 — Actual admission/parser controls.** Prerequisite: SMC1. Objective: prevent uncharged/unsafe access and oversized output. Acceptance: RED/GREEN, caught mutation/restoration/final GREEN, at most sixteen combined inert cases, zero real public/manifest reads. Evidence/files: ignored source/tests/captures. Status: proposed.
+- [ ] **SMC3 — Pinned source questions.** Prerequisite: final SMC2 GREEN. Objective: G02–G04. Acceptance: inherited eleven URLs/six calls/eighteen visits, at most three verified batches, complete retained responses and precise missing evidence. Evidence/files: public receipts/packets/new findings. Status: proposed.
+- [ ] **SMC4 — Exact manifests.** Prerequisite: SMC2 GREEN and SMC3. Objective: declared model-layer identities. Acceptance: only the inherited two paths, ancestry/hash/schema checks, declared digest separated from payload/publisher/parity proof. Evidence/files: ignored metadata/minimal findings. Status: proposed.
+- [ ] **SMC5 — Readiness direction.** Prerequisite: SMC3/SMC4. Objective: one next decision. Acceptance: G01–G10, sixteen FP/NP groups and seventeen dependencies retained; compare future trial-only design with exact blockers/hold, preserve timing/risk gates. Evidence/files: findings/checklist; dependencies only if affected. Status: proposed.
+- [ ] **SMC6 — Close/review.** Prerequisite: completion/hard stop. Objective: accurate bounded handoff. Acceptance: identity/scope/link/UTF-8/diff/index/exit checks, local/public/prepaid reconciliation, non-null terminal receipt observed before acceptance claims. Evidence/files: at most six result docs/ignored closure. Status: proposed.
+
+Preparation only changes SMC proposal, PLAN, TODO and README. No new controls, public request, model-manifest read, runtime/native service, installation or checkpoint. Earlier tasks below retain their historical incomplete/stop status; new allocation does not reset old ledgers or turn failed captures into successful evidence.
+
+Preparation verification passed: 107 identity rows, 441 local links, exact four-document scope, UTF-8/EOF/whitespace and empty index; proposed root/findings absent. The unchanged compact bootstrap envelopes measure 3,380 and 3,505 ASCII bytes, both below 4,096. Planned starts: 59 + 2 = 61, leaving three within 64. Tracked diffs reviewed in separate bounded displays; the new proposal reviewed as authored. These are planning checks, not execution-control or application-test results.
+
+## Earlier T17-IF-SMR — stopped attempt, results committed in 625a347
 
 The user approved the [SMR package](docs/proposals/tokenizer-source-metadata-request.md) and four-file planning commit. An explicitly truncated opening read triggered mandatory stop before commit or optional work. HEAD remains **`679194b`**. See [stop findings](docs/benchmarks/tokenizer-source-metadata-review.md); the ignored root is closure-only, with no automatic retry.
 

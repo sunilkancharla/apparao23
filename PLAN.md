@@ -1,4 +1,8 @@
-## Current execution point — SMR approved, stopped before optional work
+## Current execution point — SMR stop committed; small-page continuation proposed
+
+The five SMR stop documents are committed as **`625a347`**. The user approved that commit and preparation of the [SMC continuation](docs/proposals/tokenizer-source-metadata-continuation.md). Proposed order: verify 107 identity rows → test actual admission/parser/transport paths → finite pinned-source requests → two exact manifest reads → readiness direction → audited closeout. Separate 4,096-byte bootstrap displays replace the oversized combined read; the planned start allocation is 61 within the unchanged cap of 64. Source/metadata and all product/runtime gates stay unchanged. Four-file planning commit and SMC1–SMC6 await approval. No new root, public request, model-manifest access, control run or installation occurred during preparation.
+
+## Historical SMR outcome
 
 The user approved the twelve-file WSP/MTR results commit, now **`5d28c59`**, and preparation of the [RSR retained-source review](docs/proposals/tokenizer-retained-source-review.md). [WSP findings](docs/benchmarks/tokenizer-cached-wheel-source-review.md) preserve its original accounting failure and successful static evidence; [MTR findings](docs/benchmarks/evaluation-parent-accounting-correction.md) record the later correction and checks. Old statements that those twelve results await commit are historical.
 
