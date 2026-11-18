@@ -2,7 +2,7 @@
 
 ## Approval and objective
 
-The user approved the twelve-file WSP/MTR results commit (**`5d28c59`**) and **preparation** of this package. **The four-file planning commit and RSR1–RSR5 execution await approval.** Preparation checks existing evidence identities and writes this proposal, PLAN, TODO and README; it does not interpret candidate source, create an execution root or run the review.
+The user approved the twelve-file WSP/MTR results commit (**`5d28c59`**), preparation, the four-file planning commit (**`b4e880f`**) and RSR1–RSR5 execution. **Execution stopped on a truncated local excerpt after successful identity/AST checks.** See [RSR findings](../benchmarks/tokenizer-retained-source-review.md). Semantic Python/CPU review and the consolidated readiness verdict remain incomplete; results are uncommitted. The boundary below records the approved package, not authorization for a retry.
 
 Finish the remaining static review using the Python text and public-source responses already retained by WSP. Produce one consolidated contract/readiness matrix. Separate established facts, runtime-validation questions, indispensable prelaunch gaps and optional paths. A static review cannot prove native/offline behaviour or matching token counts; do not turn every runtime-only unknown into another source-research prerequisite.
 
@@ -37,11 +37,11 @@ Verify the three complete retained response JSON files against their saved ident
 
 | ID | Objective / prerequisite | Acceptance criteria | Evidence / status |
 | --- | --- | --- | --- |
-| RSR1 | Freeze and activate reviewed accounting after approval | Fresh root/allocation; twelve pinned, carried protected/fixed and four aid identities verified; exact root/namespace/cap substitutions reviewed; actual gateway smoke/negative controls pass before candidate-text interpretation | Immutable allocation/admission/control records. Awaiting approval. |
-| RSR2 | Review all retained Python roles after RSR1 | All 16 source identities match; complete default import/definition-time map; trace the exposed local-file path separately from pretrained/download, training, visualization and other optional paths; native/external/dynamic edges explicit | File/line/digest references and bounded data-only notes. Pending. |
-| RSR3 | Review saved CPU-reference projections after RSR1; after RSR2 in execution order | Classify CPU/device flags, explicit model/non-router selection, local bind/auth/routes/request contract and compatibility/DLL implications from the three saved responses; missing projections remain explicit | Source-coordinate/line/projection matrix; no new research. Pending. |
-| RSR4 | Consolidate readiness after RSR2/RSR3 | Each question labelled supported, runtime validation needed, indispensable prelaunch gap, or optional/deferred; distinguish local-file API evidence from import/native/offline/parity proof; recommend one next decision without silently waiving conditions | New findings with exact gaps, evidence limits and prospective acceptance checks. Pending. |
-| RSR5 | Complete or stop and close after prior tasks | Preservation, scope, UTF-8/links/whitespace/diff/index and owned exit checks; honest resources and non-null final receipt; update task/docs; separate results commit and subsequent trial/adoption decisions | Final report/receipts/readable diff. Pending. |
+| RSR1 | Freeze and activate reviewed accounting after approval | Frozen inputs and root/namespace/zero-check caps verified; actual smoke and five negative controls passed | Complete. |
+| RSR2 | Review all retained Python roles after RSR1 | 16 hashes/66,467 bytes verified; bounded AST data saved; broad excerpt exceeded host token limit | Partial; semantic review incomplete. |
+| RSR3 | Review saved CPU-reference projections after RSR1; after RSR2 in execution order | Original criteria retained; capture stop prevented starting interpretation | Not started. |
+| RSR4 | Consolidate readiness after RSR2/RSR3 | Original four-category contract matrix still required; no new readiness decision inferred | Not completed. |
+| RSR5 | Complete or stop and close after prior tasks | Honest stop findings, preservation/scope/check records, resource summary and separate commit decision | Stop closeout; results uncommitted. |
 
 Do not stop the whole review merely because one source-contract question remains unknown. Finish independent questions inside the allowance, then consolidate them in RSR4. An integrity, safety, accounting/capture/ownership or hard-limit failure does stop optional work. Unknowns do not authorize new files/URLs/versions, executing candidate code or asking the user to waive an unspecified risk.
 
@@ -74,4 +74,4 @@ Preparation changes exactly **four documents**: this proposal, PLAN, TODO and RE
 
 No new product decision is needed to read the retained evidence. Native safety/offline behaviour, parity, exact launch/loader requirements and final model/dependency adoption are not settled by static inspection. At closeout, propose a controlled validation package only if indispensable prelaunch facts are available; otherwise identify the exact missing facts and compare bounded ways to obtain them. Runtime-only questions belong in later tests, not invented source guarantees. Neither outcome executes that next package or closes G2.
 
-**Requested now:** approve the four-file planning commit and **RSR1–RSR5** within this retained-evidence-only boundary. Routine steps inside the package need no repeated approval; results commits, substantial scope changes, further research/native trial and adoption retain separate gates.
+**Current gate:** review the five-file stopped results before a separate results commit. A continuation must pre-bound serialized excerpt bytes before stdout and use a fresh approved allocation. No retry, extra research, native trial or adoption is authorized by this closeout.

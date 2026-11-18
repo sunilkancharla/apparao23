@@ -1,8 +1,8 @@
-## Current execution point — WSP/MTR committed; retained-source review proposed
+## Current execution point — retained-source review stopped at capture guard
 
 The user approved the twelve-file WSP/MTR results commit, now **`5d28c59`**, and preparation of the [RSR retained-source review](docs/proposals/tokenizer-retained-source-review.md). [WSP findings](docs/benchmarks/tokenizer-cached-wheel-source-review.md) preserve its original accounting failure and successful static evidence; [MTR findings](docs/benchmarks/evaluation-parent-accounting-correction.md) record the later correction and checks. Old statements that those twelve results await commit are historical.
 
-Proposed order: **RSR1 frozen inputs/accounting → RSR2 all 16 retained Python roles → RSR3 saved CPU-source projections → RSR4 consolidated contract/readiness matrix → RSR5 closeout**. RSR execution and the four-file planning commit require approval. No new research, wheel reread, evaluation source, pytest/Ruff run, installation, native/model trial, runtime adoption, application implementation or G2 progression. Review should distinguish indispensable prelaunch gaps from questions requiring runtime validation. Older status sections below are historical.
+RSR planning committed as **`b4e880f`** and execution was approved. [RSR findings](docs/benchmarks/tokenizer-retained-source-review.md): RSR1 passed; RSR2 verified 16 retained texts/66,467 bytes and saved bounded AST data, then an oversized local excerpt was truncated by the host token limit. Optional work stopped: semantic review, RSR3 and RSR4 remain incomplete. Five result documents await commit review. Next recommend a narrow retained-data continuation with serialized byte bounds before stdout, preserving successful checks and existing limits. No new research, wheel reread, aid/test run, installation, native/model trial, application implementation or G2 progression. Older status sections below are historical.
 
 ## Latest MR outcome — partial evidence; limits reached
 
