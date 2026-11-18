@@ -1,5 +1,7 @@
 ## Current execution point — consolidated T17 report; G2 blockers explicit
 
+**Latest user decision, 2026-11-19:** proceed with standalone Hugging Face tokenization for local input accounting. The [route decision](docs/decisions.md#2026-11-19--standalone-tokenizer-direction-selected) is settled. Focus subsequent dependent work on reviewed project-local provisioning and the existing model-specific parity/boundary matrix, reusing completed evidence. Keep the separate hardware gate from reopening the tokenizer choice. No installation or trial is claimed by this documentation update.
+
 The user authorized completing the remaining T17 work and scoped commits without intermediate project approvals on 2026-11-19. RPT results were committed as **34ca104**. [Consolidated report](docs/benchmarks/t17-consolidated-closeout.md): 21 new evaluation tests, full model/runtime identity checks, 11 packaged-reference count matches and fresh CSV/XLSX/mixed-PDF/OCR checks. Exact proposed components remain unchanged. Full standalone/selected-Ollama parity, physical16GB/proxy acceptance and selected-runtime notice/provisioning/freshness gaps remain B01–B03. T17/G2 is not fully complete; this pack presents the final readiness decision without adopting it or starting T18. No further project-approval wait was introduced.
 
 ## Historical RPT outcome

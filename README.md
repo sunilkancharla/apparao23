@@ -1,5 +1,7 @@
 **Current status — 2026-11-19:** [T17 consolidated closeout](docs/benchmarks/t17-consolidated-closeout.md) records 21 passing evaluation tests, complete model/runtime hash checks, 11 matching packaged-reference prompt counts and new CSV/XLSX/mixed-PDF/OCR component checks. RPT results are committed as **34ca104**. Full selected-Ollama/standalone parity, physical16GB/proxy evidence and selected-runtime trust/provisioning gaps remain; G2 is not approved and no end-user app exists. No installation or dependency/lock change occurred. Raw synthetic evidence stays local/ignored; old trial commands are not renewed allocations.
 
+**Counting direction selected:** standalone Hugging Face tokenization from pinned local assets; Ollama continues generation and embeddings. The user settled this route on 2026-11-19. [Decision and remaining validation](docs/decisions.md#2026-11-19--standalone-tokenizer-direction-selected). The standalone candidate has not been provisioned or fully parity-validated by this documentation update.
+
 New data-only/fake evaluation checks were verified with the existing isolated inspector:
 
 ```powershell

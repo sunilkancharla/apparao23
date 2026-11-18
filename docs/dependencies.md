@@ -10,7 +10,7 @@
 | English OCR | Tesserocr 2.13.0 and the existing pinned English asset; RapidOCR remains an evaluated alternative, not automatic fallback |
 | Model runtime/assets | Ollama 0.40.16; exact Qwen2.5 1.5B Q4_K_M and Nomic v1.5 identities already listed below |
 | Metadata/vector store | CPython SQLite and the reviewed sqlite-vec 0.1.9 artifact; original companion-notice decision retained |
-| Standalone counting candidate | Tokenizers 0.23.3 and its complete seventeen-distribution graph remain blocked for provisioning/adoption by B01/B03; no dependency omission or lock change |
+| Selected standalone counting direction | Hugging Face Tokenizers with pinned local assets; existing 0.23.3/full seventeen-distribution graph is the validation baseline. Route chosen by user; dependency/licence/provisioning and exact runtime-parity checks remain B01/B03 |
 
 The new inspection verified the entire cached chat/embedding weights and all 75 installed runtime files against recorded hashes. Qwen's known token IDs/merges match; Nomic's complete vocabulary matches after the observed WordPiece representation transformation. Neither result proves the unexecuted standalone/selected-Ollama pipeline. Actual packaged-reference bind/key checks and explicit CPU settings succeeded; a direct reference process is not an adopted additional application service.
 

@@ -1,5 +1,13 @@
 # Stage 1 Decision Register
 
+## 2026-11-19 — standalone tokenizer direction selected
+
+The user explicitly chose to proceed with standalone tokenization for local model-input accounting. Treat this route choice as settled; do not reopen an Ollama-only counting design or repeat completed artifact/vocabulary research without a specific new finding.
+
+Use the existing Hugging Face Tokenizers candidate and pinned local model-specific assets as the validation baseline (currently Tokenizers 0.23.3 with the full recorded seventeen-distribution graph). Ollama remains responsible for generation and embeddings. The packaged native runner remains an evaluation reference, not an additional selected production service.
+
+This selects the direction, not a claim that the standalone engine is already installed, that downloaded assets establish exact runtime parity, or that unresolved dependency/licence conditions have passed. Next dependent work is the focused reviewed provisioning and existing FP/NP comparison, reusing the verified weights, vocabulary mapping and tests. The 16 GB performance gate is separate from tokenizer correctness and is not a reason to repeat the route decision. Scope, provisional context/output settings and final G2 approval remain unchanged.
+
 ## 2026-11-19 — consolidated T17 authority and evidence disposition
 
 The user explicitly requested finishing the four remaining T17 blocks, including scoped commits, in one go without intermediate project approvals. [Package](proposals/t17-consolidated-closeout.md), [report](benchmarks/t17-consolidated-closeout.md). This authorizes that package's independent safe work; it does not approve G2, T18, a requirement change, hardware proxy or blanket security/licence exception. RPT results were committed as 34ca104.

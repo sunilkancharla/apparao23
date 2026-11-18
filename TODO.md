@@ -1,5 +1,7 @@
 ## Current T17-CC — user-authorized consolidated closeout
 
+**Latest decision:** user selected standalone Hugging Face tokenization with pinned local assets. [Recorded decision](docs/decisions.md#2026-11-19--standalone-tokenizer-direction-selected). Route comparison is closed; CC3 now follows this direction. Retain the existing candidate/dependency graph and exact validation requirements; this decision does not mark unexecuted installation/parity as passed.
+
 User authorized all four remaining work blocks and scoped commits without further project-approval waits on 2026-11-19. [Package](docs/proposals/t17-consolidated-closeout.md). G2 remains the final user decision; no product requirements or host permission controls are waived.
 
 - [x] CC1: six RPT result documents committed as 34ca104; consolidated scope recorded.
