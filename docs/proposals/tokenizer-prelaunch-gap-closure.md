@@ -1,8 +1,12 @@
 # T17-IF-PGC — targeted prelaunch-gap closure
 
+## Executed outcome
+
+The user approved planning commit **`1f94a74`** and PGC1–PGC6. [Findings](../benchmarks/tokenizer-prelaunch-gap-closure.md) record passing entry/selector controls, one fourteen-module syntax pass (5,137 nodes), fourteen frames/five groups and the ten-item prerequisite checklist. Explicit call expressions were absent from the projected definition-time records; implicit/native effects remain unknown. Routes and setter/build spans are supported; bind/auth/handler, native/DLL and weight-mapping gaps remain precise. A corrective server packet retained the original charged packet. No source request or candidate/native action occurred. Results commit and the recommended finite source/local-metadata request remain separately gated. Original proposal status/request wording below is historical; current outcomes are in TODO/findings.
+
 ## Purpose and approval state
 
-The five PBF results documents are committed as **`4cc2d24`**. The user approved that commit and preparation of this plan. **This four-file planning commit and PGC1–PGC6 execution await approval.** Preparation changes this proposal, PLAN, TODO and README only; no new evidence root, scanner, source interpretation or trial has started.
+The five PBF results documents are committed as **`4cc2d24`**. The user approved that commit, preparation of this plan, and subsequently the four-file planning commit and PGC1–PGC6. Preparation changed this proposal, PLAN, TODO and README only; the separately approved execution is recorded above.
 
 Resolve the precise retained-evidence gaps in [PBF findings](../benchmarks/tokenizer-preflight-frame-continuation.md): unprojected Python definition-time expressions, server bind/auth/routes/request handling, and the disposition of native/DLL/artifact/model prerequisites. Reuse completed identity, wheel/archive, formatter and role reviews. This package ends with one finite prelaunch checklist, including exact unknowns; it does not promise to make a native trial ready through static evidence alone.
 
