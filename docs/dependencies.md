@@ -1,4 +1,8 @@
-## Latest RR evidence — stopped before dependency review
+## Latest RRC evidence — local comparison passed; source gaps remain
+
+[RRC findings](benchmarks/remaining-artifact-readiness-continuation.md), plan `234e07d`: 23 unit tests/ten original controls passed, four labelled cases covered 17 distributions, earlier partial matrices preserved exactly. Supplementary Windows AMD64 assumptions resolve two conditions and add matching Colorama 0.4.6 metadata. All ten retained root Python declarations fit 3.14.6/3.11.0, with eight registry-only versus two cached-inspection authorities explicit. Eight licence labels/selected artifact identities agree; Tokenizers/native/vendor/provenance gaps remain. One public response was lost; research stopped without source claims, provisioning or adoption. Results commit pending.
+
+## Earlier RR evidence — stopped before dependency review
 
 The approved RR plan is committed as `da952e1`. [RR stopped during bookkeeping bootstrap](benchmarks/remaining-artifact-readiness-review.md); the permitted correction also failed before worker execution. No fixed-input revalidation, supplemental profile/Python comparison, licence/native reconciliation or public provenance query ran. No new dependency conclusion, candidate import/installation or adoption. The earlier successful evidence below and its unresolved gaps remain unchanged; a fresh bounded continuation requires approval.
 

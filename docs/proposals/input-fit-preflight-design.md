@@ -1,4 +1,8 @@
-## Latest RR outcome — bookkeeping stop; review unexecuted
+## Latest RRC outcome — local checks passed; public-source stop
+
+[RRC findings](../benchmarks/remaining-artifact-readiness-continuation.md): approved plan `234e07d`, two meaningful REDs followed by 23 passing unit tests/ten original controls and four-case/17-node comparison. Base matrices unchanged; declared Python fits remain metadata evidence, not native/runtime proof. Public response retention failed on the first call, so optional research stopped. Retain successful local evidence for a narrow source/licence follow-up; native/parity/offline/provisioning/adoption/G2 gates and source-mapping deferral remain unchanged. Results await review/commit approval.
+
+## Earlier RR outcome — bookkeeping stop; review unexecuted
 
 RR1–RR6 and plan commit `da952e1` were approved. [RR stop findings](../benchmarks/remaining-artifact-readiness-review.md) record two authored bookkeeping failures, the second during the one permitted correction. No worker, regression check, four-case comparison or public query ran. EAF remains the latest successful evidence; source-mapping deferral and all provisioning/native/parity/G2 gates remain unchanged. Review closeout before preparing a fresh bounded continuation.
 

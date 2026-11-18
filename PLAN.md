@@ -1,6 +1,6 @@
-## Latest execution point — RR closeout committed; corrected continuation proposed
+## Latest execution point — RRC local checks passed; source review stopped
 
-RR closeout is committed as `e5d037c`. The [RRC continuation](docs/proposals/remaining-artifact-readiness-continuation.md) proposes bookkeeping RED/GREEN before supplementary profile tests, original controls, four-case graph/Python comparison and retained licence/source review. Twenty fixed inputs, six checks and one shared 48-start allocation; unchanged guard/capture and adoption boundaries. RRC1–RRC8 and its four-file planning commit await approval. Preparation only: no new root, helper, check, query or installation. EAF remains the latest successful comparison; no budget reset, G2 closure or stage transition.
+RRC1–RRC8 approved; plan committed as `234e07d`. [RRC findings](docs/benchmarks/remaining-artifact-readiness-continuation.md): seven bookkeeping/five profile/11 existing tests and ten original controls passed after expected REDs; four-case comparison covered 17 distributions and preserved the earlier base matrices. Retained declarations fit both version cases. One public call lost its response before retention; optional research stopped. Review the seven-file closeout, then prepare only the remaining response-capture/source/licence follow-up. No rerun/reset, candidate provisioning/adoption, G2 closure or stage transition.
 
 ## Latest MR outcome — partial evidence; limits reached
 

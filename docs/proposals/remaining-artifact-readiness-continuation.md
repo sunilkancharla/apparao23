@@ -1,6 +1,6 @@
 # T17-IF-RRC — correct bookkeeping, then finish the retained-artifact review
 
-**Proposed; execution and the four-file planning commit await approval.** RR closeout is committed as `e5d037c`. The user approved that commit and preparation of this continuation, not its execution. No continuation root, helper, fixture, test, query or installation has been created or run during preparation.
+**Approved and executed; local checks passed, public research stopped.** The user approved RRC1–RRC8 and the four-file planning commit (`234e07d`). [Findings](../benchmarks/remaining-artifact-readiness-continuation.md): all six check invocations completed as expected; public-response capture failed after the first call and optional work stopped. Results await separate review/commit approval. The boundary below is retained as approved, not permission to reopen this root or renew unused allowances.
 
 ## Goal and retained scope
 
@@ -38,14 +38,14 @@ Directly repairing and reopening RR was rejected because its stop boundary was r
 
 | ID | Objective / prerequisites | Acceptance and evidence | Initial status |
 | --- | --- | --- | --- |
-| RRC1 | After approval, bootstrap a fresh root, prepay shared limits, freeze inputs/tool/source and preservation identities | Exactly 20 fixed inputs match; reviewed source/import/query boundaries, original guard and unchanged capture; no old-root writes or candidate import. | Awaiting approval |
-| RRC2 | Test-first bookkeeping correction after RRC1 | Meaningful retained RED then GREEN with ledger, literal-argument, time and negative/mutation controls; complete captures, restored mutated source and cumulative meter. Failure blocks subsequent review. | Pending RRC1 |
-| RRC3 | Test-first supplementary profile helper after RRC2 | Separate meaningful RED then GREEN; retain all 11 EAF fixture tests plus new assumption-label, unchanged-base, no-mutation and shared-cap invariants. Factory restored on success/error. | Pending RRC2 |
-| RRC4 | Original control regression after RRC3 | All ten unchanged original controls pass under the original strict guard; full diagnostics retained. | Pending RRC3 |
-| RRC5 | Four-case graph and root Python declarations after RRC4 | Shared global 20-node union; registry/artifact authority, mismatches, active/inactive/unknown/conflict and metadata gaps explicit. No resolver/version choice/ABI claim. | Pending RRC4 |
-| RRC6 | Local licence/notice/native reconciliation after passed prerequisites | Declarations, selected notices, vendor/source gaps and inference separated. No legal/security clearance or uninspected-transitive claim. | Pending RRC5 |
-| RRC7 | Primary-source gap review after local triage | Saved evidence first; bounded public calls with exact source/publisher/build distinctions and primary citations. Start by the cutoff or report not started. | Pending RRC6 |
-| RRC8 | Completion or stop closeout | Readiness/blocker/decision matrix, smallest next proposal, actual vs prepaid accounting, ownership, preservation, seven-document scope, links, whitespace, readable diff, empty index and non-null receipt. | Pending completion/stop |
+| RRC1 | After approval, bootstrap a fresh root, prepay shared limits, freeze inputs/tool/source and preservation identities | Exactly 20 fixed inputs match; reviewed source/import/query boundaries, original guard and unchanged capture; no old-root writes or candidate import. | Verified; one schema correction used |
+| RRC2 | Test-first bookkeeping correction after RRC1 | Meaningful retained RED then GREEN with ledger, literal-argument, time and negative/mutation controls; complete captures, restored mutated source and cumulative meter. Failure blocks subsequent review. | Verified: RED then seven passing tests |
+| RRC3 | Test-first supplementary profile helper after RRC2 | Separate meaningful RED then GREEN; retain all 11 EAF fixture tests plus new assumption-label, unchanged-base, no-mutation and shared-cap invariants. Factory restored on success/error. | Verified: RED then five new/11 existing tests |
+| RRC4 | Original control regression after RRC3 | All ten unchanged original controls pass under the original strict guard; full diagnostics retained. | Verified: ten controls |
+| RRC5 | Four-case graph and root Python declarations after RRC4 | Shared global 20-node union; registry/artifact authority, mismatches, active/inactive/unknown/conflict and metadata gaps explicit. No resolver/version choice/ABI claim. | Verified: 17 nodes; original matrices unchanged |
+| RRC6 | Local licence/notice/native reconciliation after passed prerequisites | Declarations, selected notices, vendor/source gaps and inference separated. No legal/security clearance or uninspected-transitive claim. | Verified retained-data review; gaps explicit |
+| RRC7 | Primary-source gap review after local triage | Saved evidence first; bounded public calls with exact source/publisher/build distinctions and primary citations. Start by the cutoff or report not started. | Incomplete: one call/four targets; response lost, stopped |
+| RRC8 | Completion or stop closeout | Readiness/blocker/decision matrix, smallest next proposal, actual vs prepaid accounting, ownership, preservation, seven-document scope, links, whitespace, readable diff, empty index and non-null receipt. | Verified stop closeout; results review/commit pending |
 
 RRC8 runs after a stop even when earlier tasks remain incomplete. This authorizes a bounded partial report, not bypassing prerequisite failures. Use the verified incremental, test-first, security, review and documentation workflows; no subagents or third-party scripts.
 
@@ -90,4 +90,4 @@ After execution approval, retain authored helpers/fixtures, profiles/graph, noti
 
 Outcome: supported next provisioning proposal, bounded additional-evidence request, or explicit residual-risk/alternative decision. No automatic installation, native Tokenizers/HF-Xet import, model/parity/offline trial, G2 closure or stage transition. All remain separately gated.
 
-Request approval of **RRC1–RRC8 as one package**, including the bookkeeping correction/tests, retained Windows AMD64 assumptions, six checks, 48-start shared allocation and bounded public queries. Separately approve the **four-file planning commit**: this proposal, PLAN, TODO and README. Preparation authorizes neither execution nor that commit.
+The user approved **RRC1–RRC8 as one package**, including bookkeeping correction/tests, retained Windows AMD64 assumptions, six checks, the 48-start allocation and bounded queries, and the **four-file planning commit** (`234e07d`). Execution stopped as recorded above. The seven-file results commit and any new source-only package remain unapproved; no installation/adoption follows from these results.
