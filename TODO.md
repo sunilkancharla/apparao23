@@ -1,4 +1,17 @@
-## Current T17-IF-RBF — approved attempt stopped during preflight
+## Current T17-IF-PBF — bounded-preflight continuation prepared
+
+The five RBF closeout documents are committed as **`96022c9`**. The [PBF package](docs/proposals/tokenizer-preflight-frame-continuation.md) is proposed; no execution/root/formatter/source review has started. Six local skill instructions were completely read in size-admitted contiguous pages during preparation; no skill scripts ran. New tasks:
+
+- [ ] **PBF1 — Freeze/accounting.** Prerequisite: package approval. Objective: fresh shared boundary. Accept: nine pins, carried entries/six skills, reviewed substitutions, actual meter smoke/negative controls and prepaid prelude reconciliation. Evidence: ignored admission/identity/control records. Status: awaiting approval.
+- [ ] **PBF2 — Formatter controls.** Prerequisite: PBF1. Objective: reject complete oversized output before writes. Accept: meaningful RED, actual-path GREEN, caught/restored mutation and final GREEN; sixteen inert cases maximum, zero writes on refusal. Evidence: owned inline-source/control JSON. Status: pending.
+- [ ] **PBF3 — Python roles.** Prerequisite: final PBF2 GREEN. Objective: review sixteen retained file roles/default/local-file paths. Accept: source/line identities, complete selected definitions and explicit unread spans within 12 KiB frames. Evidence: frames/manifest/findings. Status: pending.
+- [ ] **PBF4 — CPU projections.** Prerequisite: PBF3. Objective: classify CPU/model/local endpoint/auth/request/compatibility/DLL questions. Accept: saved-source coordinates and unknowns, zero new public calls, at most 6 KiB frames. Evidence: matrix/findings. Status: pending.
+- [ ] **PBF5 — Readiness matrix.** Prerequisite: PBF3/PBF4. Objective: one next decision. Accept: supported/runtime-needed/prelaunch-gap/optional categories, exact alternatives and no adoption waiver. Evidence: findings/dependency status only if affected. Status: pending.
+- [ ] **PBF6 — Close/review.** Prerequisite: completion or stop. Objective: accurate handoff. Accept: preservation/scope/links/UTF-8/whitespace/diff/index/known exits/resource/terminal checks; at most six result files, separate commit/next-package gates. Evidence: findings/receipts. Status: pending.
+
+Four-file planning commit and PBF1–PBF6 await approval. Preparation checks passed: 59 identity rows (nine pins, 44 carried, six skills), complete capture/coverage across 25 skill pages, 429 scoped local links, six ordered tasks, 48-unit/51-planned-start arithmetic within the 64-start cap, absent proposed root/report, UTF-8/whitespace and readable tracked/new-file review. Exact four-file scope and empty index are checked before handoff. No new evidence root, application tests, formatter controls, candidate interpretation, research, installation, native/model run or checkpoint. Earlier status sections below are historical.
+
+## Earlier T17-IF-RBF — stopped result committed in 96022c9
 
 The user approved the four-file planning commit and [RBF1–RBF6](docs/proposals/tokenizer-bounded-frame-continuation.md). A combined documentation/skill preflight produced a truncated capture, triggering the package stop before staging/commit, formatter controls or semantic review. [Findings](docs/benchmarks/tokenizer-bounded-frame-continuation.md) preserve the failure. Current task outcomes supersede the original acceptance checklist below:
 
