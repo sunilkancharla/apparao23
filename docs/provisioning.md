@@ -1,5 +1,13 @@
 # T03 Provisioning Proposals
 
+## Current tokenization choice — 2026-11-20
+
+Use [Ollama's internal tokenizer](decisions.md#2026-11-20--ollama-internal-tokenizer-selected). The standalone Tokenizers/Hub/HF-Xet candidate graph is no longer an installation requirement. Keep the existing project-local runtime and cached model identities; record actual provisioning only when an approved implementation task needs it. No new dependency, private runner integration, custom build, model trial or cache removal occurred for this decision. Earlier standalone provisioning proposals are historical, not pending commands to execute.
+
+## Current handoff — G2 accepted; bounded T18 authorized
+
+[The user accepted](decisions.md#2026-11-19--stop-the-three-remaining-t17-investigations) moving forward without the remaining three upfront investigation groups, then [approved G2 and bounded T18](decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized). Their unexecuted checks remain unverified; no repeat trial is an automatic T18 prerequisite. Reuse the existing `.venv`, uv/cache, baseline dependencies and lock. This T18 increment permits no new dependencies, downloads or model/native inference trial. Normal implementation/setup checks remain required; no new installation, model/API run or app startup occurred in this documentation handoff.
+
 ## Current T17 closeout — 2026-11-19
 
 [Consolidated report](benchmarks/t17-consolidated-closeout.md) records one fresh user-authorized package, complete runtime/model hash inspection, 11 matching packaged-reference count cases and format/OCR checks. Existing .venv assets were reused without installation, resolver, model pull, lock or global/PATH changes. Exact proposed components remain in dependencies; standalone Tokenizers' seventeen-node provisioning and notice/ABI/parity conditions remain open.

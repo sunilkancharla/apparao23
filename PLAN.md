@@ -1,4 +1,16 @@
-## Current execution point — T17-SV2 reviewed; artifact prerequisites remain
+## Current execution point — T17/G2 complete; bounded T18 in progress
+
+[G2 and T18 approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved all presented items and the reviewed documentation commit. T17 is closed with the recorded unverified limitations. Execute the bounded T18 foundations increment below; the three omitted investigations are not an active retry queue.
+
+**Latest component decision, 2026-11-20:** use Ollama's internal model-native tokenizer; the separate standalone tokenizer graph is no longer proposed for Stage 1 installation. [Decision](docs/decisions.md#2026-11-20--ollama-internal-tokenizer-selected). Keep existing research as history. This selects the runtime tokenization path; exact application-facing pre-request counting remains unverified. No new comparison trial, private runner integration or model/runtime modification is planned by this choice. The G2 proposal below now uses this internal route.
+
+The user accepted moving forward without further dependency-evidence closure, standalone/Ollama comparison or 16 GB target-proof investigations. [Decision and exact limits](docs/decisions.md#2026-11-19--stop-the-three-remaining-t17-investigations). Reuse existing evidence; retain these items as unverified limitations instead of scheduling another research package. SPEC and recorded PDF/OCR limitations remain unchanged.
+
+The [architecture ADR](docs/ADR/0001-stage1-architecture.md) is accepted. T18 establishes implementation foundations using the existing project-local baseline, followed by T19 and the approved CSV-first sequence under their applicable task approvals. Ordinary implementation tests still apply; the approval is not a claim that the application already exists.
+
+**Approved T18 first increment:** reuse the existing Python 3.14.6 project environment, uv 0.13.8, baseline FastAPI/Uvicorn/HTTPX pins, pytest 9.2.0 and Ruff 0.17.5. Verify the existing local configuration/lock/ignore rules, add one meaningful setup smoke test if needed, and correct only demonstrated foundation defects. Allowed authored files: `pyproject.toml`, `uv.lock`, `.gitignore`, `tests/test_project_setup.py`, README, TODO and provisioning notes, only where needed. No new dependencies, downloads, model/native inference trial, parser expansion or speculative app modules. Use at most 32 owned process starts and 30 minutes across inspection, tests/negative controls, fixes and closeout; no new accounting framework. Acceptance: project-local baseline can execute its focused smoke test and lint/format checks, runtime/private paths stay ignored, and actual commands/results are documented. Do not rerun the three omitted T17 investigations. This increment is authorized by the recorded G2/T18 decision.
+
+## Earlier execution point — T17-SV2 reviewed; artifact prerequisites remain
 
 The user authorized completing dependency/input-fit items 1 and 2 and committing the reviewed work without further project approvals. [SV2 results](docs/benchmarks/t17-standalone-validation-closeout.md) verify ten wheel identities/470 payloads, seven reused distributions/158 payloads, all seventeen graph nodes, current registry identities and three exact publication statements. The source review located Tokenizers' binding lockfile and release workflow.
 

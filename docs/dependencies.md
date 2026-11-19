@@ -1,4 +1,14 @@
-## Current T17-SV2 dependency evidence — 2026-11-19
+## Current disposition — Ollama internal tokenizer selected, 2026-11-20
+
+[User decision](decisions.md#2026-11-20--ollama-internal-tokenizer-selected): use the selected Ollama runtime's model-native tokenization. Remove standalone Tokenizers 0.23.3 and its separate candidate graph from proposed Stage 1 installation; this does not remove existing reused packages needed by other components. No new dependency is needed merely to select Ollama's internal tokenizer. Preserve prior static evidence/assets as history; no uninstall, cache deletion, environment or lock change occurred.
+
+The existing Ollama binary/model/notice identities remain the selected baseline. A public exact count-only preflight contract is still unverified; no private runner-port bridge, custom build or runtime upgrade is selected. The prior user-directed investigation omission remains effective for remaining selected-runtime/target evidence. [G2 and bounded T18 are now approved](decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized); T18 reuses the existing baseline without new dependencies or downloads.
+
+## Earlier disposition — further T17 investigations omitted by user decision
+
+The user accepted proceeding without the remaining dependency build-source/native-notice/security investigation, standalone/Ollama comparison and 16 GB target proof. [Exact decision](decisions.md#2026-11-19--stop-the-three-remaining-t17-investigations). Keep all existing identities, notices and known gaps; no new clearance or successful native import/parity is implied. The pending G2 review may consider the existing proposed components with those limitations, rather than requiring another research package. Provisioning stays project-local and introduces only the exact dependencies needed by an approved implementation task. SPEC/privacy and ordinary implementation checks remain in force.
+
+## Earlier T17-SV2 dependency evidence — 2026-11-19
 
 [Focused results](benchmarks/t17-standalone-validation-closeout.md) retain the selected Tokenizers 0.23.3/full seventeen-node graph. Ten exact wheel/registry identities and 470 payload hashes passed; seven reused distributions contributed 158 verified payloads. All 19 active requirements and declared wheel/Python compatibility checks pass on actual Windows AMD64 CPython 3.14.6. Fresh PyPI version records list no advisories for the seventeen pins; this is not exhaustive native security clearance.
 
@@ -16,7 +26,7 @@ Three exact artifact publication statements now match the cached Tokenizers/Hub/
 | English OCR | Tesserocr 2.13.0 and the existing pinned English asset; RapidOCR remains an evaluated alternative, not automatic fallback |
 | Model runtime/assets | Ollama 0.40.16; exact Qwen2.5 1.5B Q4_K_M and Nomic v1.5 identities already listed below |
 | Metadata/vector store | CPython SQLite and the reviewed sqlite-vec 0.1.9 artifact; original companion-notice decision retained |
-| Selected standalone counting direction | Hugging Face Tokenizers with pinned local assets; existing 0.23.3/full seventeen-distribution graph is the validation baseline. Route chosen by user; dependency/licence/provisioning and exact runtime-parity checks remain B01/B03 |
+| Selected tokenization direction | Ollama's internal model-native tokenizer, chosen on 2026-11-20. No standalone tokenizer graph is proposed for installation. Exact application pre-request fit and output/boundary behaviour remain unverified under the user's investigation omission. |
 
 The new inspection verified the entire cached chat/embedding weights and all 75 installed runtime files against recorded hashes. Qwen's known token IDs/merges match; Nomic's complete vocabulary matches after the observed WordPiece representation transformation. Neither result proves the unexecuted standalone/selected-Ollama pipeline. Actual packaged-reference bind/key checks and explicit CPU settings succeeded; a direct reference process is not an adopted additional application service.
 

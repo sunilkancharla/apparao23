@@ -2,6 +2,12 @@
 
 ## Status
 
+**Accepted at G2, 2026-11-20.** The user approved all presented items: this architecture/component/contract decision, the bounded T18 foundations scope and committing the reviewed documentation. [Approval record](../decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized). T17 is closed; T18 may proceed within its recorded limits. Ollama-internal tokenization is selected. The omitted selected-runtime/input-fit/16 GB investigations remain unverified limitations, with SPEC and normal implementation/acceptance tests unchanged. Earlier Proposed/pending statements below are historical.
+
+**Latest component decision, 2026-11-20:** the user selected [Ollama's internal tokenizer](../decisions.md#2026-11-20--ollama-internal-tokenizer-selected), superseding standalone Hugging Face tokenization. No separate tokenizer graph is proposed for installation. Use ordinary Ollama chat/embedding requests; no private-port bridge/custom build is selected. Exact pre-request counting, output reservation and boundary handling remain unverified under the prior investigation omission. This component choice is approved; the complete architecture remains **Proposed pending G2 and T18 authorization**. Earlier route/status notes below are historical.
+
+**Latest user decision, 2026-11-19 — ready for conditional G2 review:** the user accepted proceeding without the three remaining dependency-evidence, standalone/Ollama and 16 GB target-proof investigations. [Decision](../decisions.md#2026-11-19--stop-the-three-remaining-t17-investigations). B01–B03 remain unverified limitations; they no longer require another investigation before presenting this decision. Keep SPEC, target hardware, PDF/OCR limitations and normal implementation/acceptance tests intact. This ADR remains **Proposed pending G2 architecture/component adoption and T18 authorization**. No installation or application code is authorized by this status note alone. Older status notes below are historical.
+
 **SV2 follow-up, 2026-11-19:** [Exact dependency findings](../benchmarks/t17-standalone-validation-closeout.md) verify the full seventeen-node graph, ten current registry/wheel identities and three exact publication subjects. These do not supply the remaining build-source/native-notice evidence. Installation and standalone/selected-Ollama parity remain blocked; B01–B03 and the Proposed G2 status are unchanged. No new architecture or runtime adoption follows from the user's work/commit authorization.
 
 **User-selected counting direction, 2026-11-19:** standalone Hugging Face tokenization with pinned local assets is now the chosen route for input accounting; Ollama continues generation/embeddings. Retain the existing 0.23.3 candidate/full dependency graph for focused validation. [Decision](../decisions.md#2026-11-19--standalone-tokenizer-direction-selected). Route selection is settled; provisioning, exact selected-model parity and the overall G2 decision remain distinct. No runtime-readiness pass is inferred from popularity or local download alone.
@@ -23,6 +29,8 @@ Component trials exist; no end-user application exists. Tiny synthetic successes
 ## Proposed decision
 
 Use a modular FastAPI/Uvicorn application with a minimal locally served HTML/CSS/JavaScript frontend and HTTPX for a separately owned loopback Ollama process. Use one SQLite metadata/history database with the exact reviewed sqlite-vec extension for scoped embeddings; keep immutable originals, normalized extraction and previews in a managed application data root. Use a small number of cohesive modules only when their implementation task needs them, not a speculative skeleton.
+
+Let the selected Ollama runtime perform model-native tokenization for chat and embeddings. The application does not install a standalone Hugging Face tokenizer or replace the model's internal tokenization. Keep request bounds and explicit error/termination handling; do not treat post-generation usage as proof of exact pre-admission fit. No new model/runner API is invented.
 
 Prefer standard-library CSV, openpyxl for XLSX and one explicit pdfplumber/pdfminer text/layout/table path with reviewed PDFium rendering and Tesserocr/Tesseract English OCR. Keep pypdf and RapidOCR as historical evaluation alternatives, not automatic runtime fallback chains. Prefer pinned Nomic embeddings and Qwen2.5 1.5B chat from the approved shortlist. Exact artifact/license/prefix/version identity is in the inventory; tags alone are insufficient. These are proposed G2 selections, not new installed dependencies.
 
@@ -86,22 +94,22 @@ This is a static walkthrough, not an independent runtime reviewer or passing con
 
 ## Readiness matrix and blockers
 
-| Gate | Status after T17-A | Evidence / exact remaining work |
+| Gate | Current disposition | Evidence / exact remaining work |
 |---|---|---|
 | Settled scope/policies | Recorded | SPEC/T16 plus explicit T17 accounting/original-cap/resource/tombstone decisions; no repeated approval needed for unchanged choices |
-| Concrete architecture/contracts | Proposed, static package complete | This ADR/C01–C08/API/identity/transaction/quota/privacy designs; user must review proposed mechanisms/defaults before G2 |
-| Artifact/runtime inventory | 52 installed/52 locked dependency versions match; 75 runtime files rehashed | Four current advisory ranges checked; complete selected native/vendor notices, standalone provisioning and freshness remain B03 |
-| Model-input fit | Fake contracts and packaged-reference support; adoption still blocked | 21 tests, full model metadata mapping and 11 matching reference/runtime counts; full selected-Ollama/standalone NP matrix and output/equality semantics remain B01 |
-| Resource/target-machine feasibility | Native observations on larger host; target unchanged | New bounded jobs succeeded on about19.91GiB physical RAM; no physical16GB/proxy acceptance, full-answer or whole-application guarantee (B02) |
+| Concrete architecture/contracts | Accepted at G2, 2026-11-20 | This ADR/C01–C08/API/identity/transaction/quota/privacy designs approved with the explicitly recorded unverified limitations. |
+| Artifact/runtime inventory | Ollama-native route selected; further selected-runtime B03 investigation omitted by user decision | The standalone graph is no longer proposed for installation. Its ten-wheel/seventeen-node review is historical evidence. Remaining selected-runtime notice/security limitations stay disclosed. |
+| Model-input fit | Internal tokenization selected; further B01 investigation omitted by user decision | 21 tests, model metadata and 11 packaged-reference count matches retain their limits. Standalone parity is no longer an adoption prerequisite; exact application pre-request fit and output/equality semantics remain unverified. |
+| Resource/target-machine feasibility | Larger-host observations retained; further B02 proof omitted by user decision | About19.91GiB host observations do not prove the unchanged 16 GB target. No proxy, full-answer or whole-application guarantee is inferred. |
 | Parser/OCR representative acceptance | Fresh small format/OCR gold checks plus historical evidence | CSV/XLSX/mixed PDF/render/OCR checks passed; rotation/layout/scale and future product integration remain explicit |
 | Product integration | Future implementation/acceptance | CSV-first upload→grounded answer→citations→saved chat/restart, then PDF/OCR/XLSX slices; these cannot be claimed before coding |
 | Chart timing | Explicit deferral recorded | T16A after T34 before chart adoption/claims; does not waive other format/OCR/privacy requirements |
-| G2 and T18 implementation | **Not approved** | User decision only after reviewing this pack and resolving or explicitly deciding each applicable prerequisite; no blanket waiver is requested |
+| G2 and T18 implementation | **G2 accepted; bounded T18 authorized** | Explicit approval recorded on 2026-11-20; T17 closed. Normal implementation/Stage 1 acceptance and later-package/stage gates remain. |
 
 ## Follow-up boundaries and requested review
 
-Recommend first a public-source-only dependency/native-notice/advisory refresh, followed by an exact bounded model-input-fit validation proposal once a viable local method is identified. Public research must carry no user document text and needs its own approved request/byte/time scope because T17-A allows zero outbound requests. Native validation must identify interpreter/runtime/model/template artifacts, safe authored fixtures, user operating boundary, shared process/time/API/disk/memory budgets, controls, teardown and stop conditions before execution. Existing stopped/completed runs remain closed.
+Present one G2 decision on the existing proposed stack and C01–C08 contracts, with B01–B03 explicitly unverified under the user's decision above. Do not start another source-refresh, parity or target-machine trial as an automatic prerequisite. Existing stopped/completed runs remain closed. Any future trial would need its own applicable scope and execution boundary.
 
 Do not build a placeholder app to obscure these gaps. Do not require a completed end-user app as proof before approving any implementation: distinguish component/adoption readiness above from product integration tests that correctly follow G2. Bring unresolved component feasibility/privacy/fit/resource decisions to the user; do not silently reduce approved limits or defer them under the chart timing exception.
 
-Review the proposed architecture and C01–C08 mechanisms, then decide the necessary research/validation packages. T17-A is complete as static work; **this ADR remains Proposed and G2 remains open**. No source commit, runtime adoption, installation or T18 action is authorized by this document.
+G2 component/contract adoption and the bounded T18 authorization are now recorded. T18 reuses the existing local baseline and verifies the foundations needed for implementation. This acceptance does not authorize new dependencies, downloads, a model trial or another development stage outside that task's scope. Later runtime integration must retain the recorded limitations and actual acceptance evidence.

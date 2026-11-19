@@ -1,5 +1,9 @@
 # Stage 1 application boundary contracts
 
+## Current tokenization decision — 2026-11-20
+
+The user selected [Ollama-native internal tokenization](decisions.md#2026-11-20--ollama-internal-tokenizer-selected), superseding the standalone route. Use ordinary Ollama chat/embedding interfaces; no external tokenizer graph, private runner-port discovery or counting bridge is selected. The earlier T17 investigation omission applies; unexecuted fit/boundary checks remain unverified. This choice does not establish an exact public pre-request counting API. Post-processing token metrics remain observations after work, not pre-admission proof. SPEC and normal implementation error/scope/privacy requirements remain unchanged.
+
 ## Validation addendum — 2026-11-19
 
 [Consolidated T17 evidence](benchmarks/t17-consolidated-closeout.md) adds fake FP01–FP08 contract checks and actual packaged-reference counts. The evaluation helper is not a public API, an authenticated admission capability or implemented application integration. Real counts/proof flags must come from a trusted bound runtime, never a user-supplied count or equality Boolean.
@@ -10,7 +14,7 @@ Loopback listener ownership and wrong-key rejection were checked for the tempora
 
 ## Status, authority and decisions
 
-**Proposed architecture contracts; no application code or G2 adoption.** Prepared under T17-A after readiness commit `e9d107e`. [SPEC](../SPEC.md), approved [T16 design](retrieval-design.md) and explicit user policy decisions take precedence. Mechanisms below are concrete proposals for G2 review; recorded acceptance targets are not measured results or runtime-trial permissions. See [architecture ADR](ADR/0001-stage1-architecture.md) for alternatives and blockers.
+**Architecture contracts accepted at G2, 2026-11-20; product implementation pending.** [Approval](decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized). Prepared under T17-A after readiness commit `e9d107e`. [SPEC](../SPEC.md), approved [T16 design](retrieval-design.md) and explicit user policy decisions take precedence. Mechanisms below are accepted design contracts; recorded targets remain acceptance goals, not measured results or unrestricted runtime-trial permissions. The [architecture ADR](ADR/0001-stage1-architecture.md) retains the omitted investigations and unverified limitations.
 
 During T17-A the user approved: metadata/history/index databases and retained journals count against5GB processed data; upload staging/render scratch/temporary copies count against1GB temporary data; conversation-only originals have a10GB aggregate cap, once per stored content hash. No silent eviction. Existing decimal100MB/file,10references/upload/conversation,1GB unique library originals and all T16 retention rules remain unchanged.
 
@@ -108,7 +112,7 @@ Record all relevant process memory and OS headroom, including extra native desce
 
 Use evaluated CPU-only/four-thread/2048context/192output settings only as the R01 provisional baseline; do not adopt a model merely by repeating trial parameters. Load/unload owned models explicitly; no unapproved alternate model. Stop if wrong artifact, prefix/dimension/version, OOM, unexpected network/download or ownership uncertainty appears. Missing local assets fail readiness rather than triggering retrieval from a registry.
 
-**Input-fit blocker:** no trustworthy pre-generation template/token-fit method has been validated for this application. A3000-byte envelope, returned token count or a model's claim of seeing a footer does not prove all input was consumed. Proposed next investigation compares exact local tokenizer/template accounting or a verified pinned-runtime fit interface; neither a new dependency nor such an interface is selected/executed here. Until one is verified with over-limit/truncation and multi-file controls, dependent generation adoption is blocked. Safe degradation is refusal, not silent truncation or cloud fallback.
+**Input-fit limitation under the accepted T17 investigation omission:** no trustworthy application-facing exact pre-generation fit method has been validated. The selected route is Ollama's internal tokenizer; no further standalone comparison is an automatic architecture prerequisite. A3000-byte envelope, returned token count or a model's claim of seeing a footer does not prove all input was consumed. Keep the provisional request bounds and explicit runtime overflow/termination/error handling; do not fabricate counts, declare unknown fit verified, silently discard selected evidence or add a cloud fallback. Exact pre-request fit and output/boundary semantics remain disclosed limitations for G2. This paragraph replaces the former mandatory investigation ordering, not the measured evidence or product requirements.
 
 Separate finite invocation/time/process/disk budgets are required for every future native validation package, including controls/regressions/cleanup. Application acceptance targets are not those package budgets. Preserve all prior trial meters and source seals; do not reuse their unused allowances. Local/offline/no-telemetry behavior and real CSV-first restart/persistence must be demonstrated after implementation under approved execution, not inferred from this document.
 

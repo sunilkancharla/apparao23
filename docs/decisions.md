@@ -1,5 +1,27 @@
 # Stage 1 Decision Register
 
+## 2026-11-20 — G2 approved; T17 closed; bounded T18 authorized
+
+After presentation of the updated architecture, the bounded T18 foundations scope and the documentation commit, the user answered "I approve all of them, please proceed." Record G2 acceptance of [ADR0001](ADR/0001-stage1-architecture.md), its existing component pins/C01–C08 contracts and the Ollama-internal tokenizer route. The same approval covers committing the reviewed documentation and performing the [bounded T18 increment](../PLAN.md). T17 is complete as an architecture/decision task.
+
+The accepted omissions remain unverified: outstanding selected-runtime build/notice/security evidence, exact input-fit/output-boundary proof and physical 16 GB CPU-only acceptance. Standalone dependencies are no longer selected. No omitted test becomes a pass, no hardware or privacy requirement changes, and PDF/OCR limitations remain. Normal implementation tests and Stage 1 acceptance still apply. T18 reuses existing local tools with no new dependencies/downloads/model trial; subsequent packages and Stage 2 remain separately gated.
+
+## 2026-11-20 — Ollama internal tokenizer selected
+
+The user explicitly chose: "okay then we go with the internal tokenizer". Use the selected local Ollama runtime's model-native tokenization for generation and embeddings. This supersedes the 2026-11-19 standalone Hugging Face route choice. Remove the separate Tokenizers/Hub/HF-Xet seventeen-node candidate graph from proposed Stage 1 provisioning; existing packages used elsewhere remain untouched. Preserve the cached research assets and historical evidence without another standalone trial.
+
+Use the ordinary Ollama chat/embedding interfaces for the application. This choice does not authorize a custom runtime build, private runner-port discovery or an internal counting bridge, and does not establish a supported public count-only preflight endpoint. Runtime response token metrics describe completed processing; they do not prove exact pre-request fit. Input/output reservation and truncation/boundary behaviour remain unverified under the already accepted T17 investigation omission. Do not invent an endpoint or claim those checks passed.
+
+SPEC's product requirements and 16 GB CPU-only target remain unchanged. This component decision does not by itself approve the complete G2 architecture or T18. Normal implementation tests remain required; no installation, new runtime/model trial, dependency/lock change or cache deletion occurred in recording it.
+
+## 2026-11-19 — stop the three remaining T17 investigations
+
+The user explicitly accepted proceeding without further checking/retesting of (1) remaining dependency build-source/native-notice/security evidence, (2) actual standalone-tokenizer/Ollama parity and input boundaries, and (3) the 16 GB CPU-only target-machine proof, and asked to move to the next step. Treat these as user-accepted unverified limitations for advancing the T17 architecture decision. Do not reopen these investigation packages or repeat their completed checks without a concrete new reason/user request.
+
+This supersedes their earlier mandatory pre-G2 investigation ordering. It does not turn missing evidence into a pass, establish complete licence/security clearance, demonstrate token/context correctness or prove physical-16-GB feasibility. Keep the recorded PDF/OCR limitations. SPEC's product scope, local-processing/privacy rules, target hardware and acceptance requirements remain unchanged; normal tests of newly implemented behaviour remain required. No new physical proxy was approved.
+
+The next step is the final G2 architecture decision in [ADR0001](ADR/0001-stage1-architecture.md), followed by T18 once architecture/component adoption and that implementation task are approved. The present instruction accepts the named verification omissions; it does not silently select different components or mark G2 approved. No additional research proposal, new benchmark report, installation or application code is needed for this documentation handoff.
+
 ## 2026-11-19 — dependency/input-fit work and commit authorized
 
 The user explicitly requested finishing T17 items 1 and 2, reporting the outcome and performing the reviewed commit without another explicit approval. [Package](proposals/t17-standalone-validation-closeout.md), [findings](benchmarks/t17-standalone-validation-closeout.md). No additional routine project-approval request is needed for this scope or commit. Host permission controls remain separate.
@@ -7,6 +29,8 @@ The user explicitly requested finishing T17 items 1 and 2, reporting the outcome
 The exact retained seventeen-node graph, cached wheel/registry identities and publisher subjects passed the fresh static checks. Publication records contain no build-input predicate; the existing build-source/native-notice conditions remain unresolved. Therefore installation and native parity are not claimed complete. No waiver, dependency/version substitution, G2 acceptance, target-hardware change or T18 start was inferred. The selected standalone direction is unchanged.
 
 ## 2026-11-19 — standalone tokenizer direction selected
+
+**Superseded by the user's [2026-11-20 internal-tokenizer decision](#2026-11-20--ollama-internal-tokenizer-selected).** The following records the earlier direction; it is not an active provisioning requirement.
 
 The user explicitly chose to proceed with standalone tokenization for local model-input accounting. Treat this route choice as settled; do not reopen an Ollama-only counting design or repeat completed artifact/vocabulary research without a specific new finding.
 
