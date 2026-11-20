@@ -80,12 +80,22 @@ def test_missing_gate_flags_never_create_a_run_root(tmp_path, monkeypatch, flags
 
 
 def test_existing_run_root_is_never_reopened_or_reset(tmp_path, monkeypatch):
-    monkeypatch.setattr(smoke, "RUN_ROOT", tmp_path)
-    assert smoke.main(["--execute-approved", "--offline-attested"]) == 2
+    from dataclasses import replace
+
+    monkeypatch.setitem(
+        smoke.PACKAGES, "T27-S2", replace(smoke.PACKAGES["T27-S2"], root=tmp_path)
+    )
+    assert (
+        smoke.main(["--package", "T27-S2", "--execute-approved", "--offline-attested"])
+        == 2
+    )
     assert not (tmp_path / "ledger.json").exists()
 
 
-def test_changed_source_seal_refuses_before_native_construction(tmp_path, monkeypatch):
+@pytest.mark.parametrize("package_id", ["T27-S1", "T27-S2"])
+def test_changed_source_seal_refuses_before_native_construction(
+    tmp_path, monkeypatch, package_id
+):
     paths = [
         "app/a.py",
         "pyproject.toml",
@@ -101,7 +111,7 @@ def test_changed_source_seal_refuses_before_native_construction(tmp_path, monkey
     seal.write_text(
         json.dumps(
             {
-                "package": "T27-S1",
+                "package": package_id,
                 "sha256": {
                     name: hashlib.sha256((tmp_path / name).read_bytes()).hexdigest()
                     for name in paths
@@ -110,10 +120,11 @@ def test_changed_source_seal_refuses_before_native_construction(tmp_path, monkey
         )
     )
     monkeypatch.setattr(smoke, "PROJECT_ROOT", tmp_path)
-    smoke.check_sources()
+    package = smoke.SmokePackage(package_id, tmp_path / "unused", seal, closed=True)
+    smoke.check_sources(package)
     (tmp_path / "app/a.py").write_bytes(b"changed\n")
     with pytest.raises(OllamaError, match="SOURCE_MISMATCH"):
-        smoke.check_sources()
+        smoke.check_sources(package)
 
 
 def test_prepaid_worker_can_be_claimed_only_once(tmp_path):
@@ -152,3 +163,68 @@ def test_parent_kills_and_reaps_worker_on_deadline_or_output_limit(tmp_path, mod
     )
     assert worker.killed and worker.reaped and meter.state["stopped"]
     assert (tmp_path / "worker-output.txt").stat().st_size <= 65_536
+
+
+def test_closed_s1_is_refused_even_with_no_existing_root(tmp_path, monkeypatch):
+    from dataclasses import replace
+
+    package = replace(smoke.PACKAGES["T27-S1"], root=tmp_path / "uncreated")
+    monkeypatch.setitem(smoke.PACKAGES, "T27-S1", package)
+    monkeypatch.setattr(
+        smoke, "supervise", lambda *a, **k: pytest.fail("Closed S1 launched a worker")
+    )
+    assert smoke.main(["--execute-approved", "--offline-attested"]) == 2
+    assert not package.root.exists()
+
+
+def test_s2_ledger_cannot_claim_an_s1_worker(tmp_path):
+    meter = smoke.Meter(tmp_path, package_id="T27-S1")
+    with pytest.raises(OllamaError, match="WORKER_REFUSED"):
+        smoke.Meter.worker(tmp_path, meter.state["worker_token"], package_id="T27-S2")
+    assert not (tmp_path / "worker.claim").exists()
+
+
+@pytest.mark.parametrize(
+    "normal_exit,code,native,expected",
+    [
+        (True, "MODEL_MISSING", {}, "not_started"),
+        (False, "MODEL_MISSING", {}, "unverified"),
+        (True, "UNKNOWN_ERROR", {}, "unverified"),
+        (True, "MODEL_MISSING", {"positive": 0}, "unverified"),
+        (True, [], {}, "unverified"),
+    ],
+)
+def test_parent_distinguishes_proven_preflight_stop_from_teardown_uncertainty(
+    tmp_path, normal_exit, code, native, expected
+):
+    meter = smoke.Meter(tmp_path)
+    meter.state["native_observed"] = native
+    (tmp_path / "result.json").write_text(
+        json.dumps(
+            {"package": meter.state["package"], "status": "failed", "code": code}
+        )
+    )
+    assert smoke._native_teardown_status(meter, normal_exit=normal_exit) == expected
+
+
+def test_s2_parent_forwards_the_selected_package_to_its_worker(tmp_path, monkeypatch):
+    from dataclasses import replace
+
+    package = replace(smoke.PACKAGES["T27-S2"], root=tmp_path / "fresh")
+    monkeypatch.setitem(smoke.PACKAGES, "T27-S2", package)
+    seen = []
+    monkeypatch.setattr(smoke, "check_sources", lambda selected: seen.append(selected))
+
+    def supervised(meter, arguments):
+        assert meter.root == package.root and meter.state["package"] == "T27-S2"
+        index = arguments.index("--package")
+        assert arguments[index + 1] == "T27-S2"
+        assert "--worker-token" in arguments
+        return 0
+
+    monkeypatch.setattr(smoke, "supervise", supervised)
+    assert (
+        smoke.main(["--package", "T27-S2", "--execute-approved", "--offline-attested"])
+        == 0
+    )
+    assert seen == [package]

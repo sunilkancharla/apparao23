@@ -1,6 +1,6 @@
 # T27-R1 — Correct asset preflight and prepare one fresh S2 smoke
 
-**Status: approved, 2026-11-20; implementation/native execution not yet started.** [S1 stop evidence](../benchmarks/t27-runtime-first-stop.md) confirms a verifier path error before any native/model request. This proposal does not reopen or reset S1. The user explicitly approved the following ordered implementation/test/preparation/native steps and committing the six-document results review; Git commit, operator offline confirmation and runtime acceptance retain their separate gates.
+**Status: approved work completed, 2026-11-20; R1-A/B/C verified and R1-D/S2 passed.** [Repair evidence](../benchmarks/t27-preflight-correction.md): 22 new cases; full suite 387 passed/one existing skip and warning, Ruff passed. [S2 results](../benchmarks/t27-runtime-smoke-02.md): two document/one query vectors, owned positive/cancellation teardown and released port; final 34 charged starts, 10 calls, no stop. Both native allocations are now preserved/closed without retry or reseal. The six-document S1 results review was committed as `8fabbfa`; reviewed repair/handoff/results files await their separate commit decision. The operator attested to disconnection locally and reconnected for review. [S1 evidence](../benchmarks/t27-runtime-first-stop.md) and original receipts/seal remain unchanged. No broader runtime/resource/quality acceptance or stage transition follows from this bounded result.
 
 ## Unchanged components and scope
 

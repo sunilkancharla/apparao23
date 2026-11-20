@@ -1,0 +1,30 @@
+{
+  "package": "T27-S2",
+  "sha256": {
+    "app/__init__.py": "8592011cd9f047b0fea7746755204b85819b107ad5f92a707f4ee04810853f3b",
+    "app/api/sources.py": "e6da78ca372d7e535557451ca10824d50ed7ce055e52f336aee93493631f8aa1",
+    "app/config.py": "524c3b3aa7edde3a7016723778819fc2a85e3662c46a06f7fc937aad68f57ba6",
+    "app/diagnostics.py": "0436234b5354b1b1b7c69dda195f728a980d00d5dbf1b7ac59e9c601bee99004",
+    "app/ingestion/__init__.py": "5f2cd529acae5da6ec3e861834705461af05c68c35a61ace939e8ffa9b998d07",
+    "app/ingestion/csv.py": "a6f6871c980f6d9200dc5bdc3318de200168a0316fe4a1b71aae3f8bbbe37512",
+    "app/ingestion/models.py": "5048eafc926801f43c00989d4a4c5bfeeee37a1da0cbb44322677463a594da71",
+    "app/ingestion/processing.py": "9ad897af813afa8e083c224f2cb6f84776d437fef778ab97aa20f923a7d2e79b",
+    "app/ingestion/validation.py": "10fad23afd34ba4ea541e63cb36c23d44f6c70363b1e168502ae67162e9b82f5",
+    "app/main.py": "9c85a2f01ff3c3ad1a4bace4bf44e25f968918ffc6fe7c07cd120a8a91adb191",
+    "app/ollama.py": "43f358dc4f405b7ad68c9bfc33d2fbce5edb030df73b113dd55d76f67c05a4c3",
+    "app/retrieval/__init__.py": "83dcc48eb87284c5f65d1290840c0c88ab10b4b8255134c6c39674470269fbbb",
+    "app/retrieval/chunking.py": "32097121d2d20a9de04dc0c9beb87854076f5bfca5347a0a26fb8bcbc52fe54f",
+    "app/retrieval/embeddings.py": "5ed0d555ea2932a3aa61bc4b0ccc4bd60ee558189f1b34b6c1d41f6fb660f29c",
+    "app/retrieval/models.py": "602cd73a8fe8eda9dd41dcd6d043ffb0068855a3f28a62f1674d6a258b25b393",
+    "app/runtime.py": "67506e26d48b7c71cba123fe52e8cbf57d7e4baeac2b216fe2ecb9dc95d57989",
+    "app/storage/__init__.py": "4793f7acadf5a7681818f1c49d0eb6327e79686d98b79e237bfef009f05cdabb",
+    "app/storage/database.py": "4ea8f9b54f1bd065833e25ee5ac37cf9a240e3e138fa96af4154617990ffc343",
+    "app/storage/documents.py": "711685c99e24719e5825af256fa13588f8b741be20bf638cbaecee75fabfc03a",
+    "app/storage/extractions.py": "9b3e51307888a1ec3acf0183eae1a723543ed85de2e9314a6ad051fe4f8a06e6",
+    "app/storage/files.py": "28e39a36eca565d89586c4049797ed3f1b84515c89b3936676d223e9caa8c33f",
+    "app/windows_job.py": "36fc5abf1732c3790a92265dabfdf497ab657626e636f8536484946d4bd040f7",
+    "pyproject.toml": "addaa6c4e0d75bb97687fb207103d7d46dcc34250bbcd662046b221ad59911d5",
+    "tests/evals/spikes/t27_runtime_smoke.py": "fc6e055715c7ba41ca0aff49df347dae4bd76242e9cbcdcb3bd0935bf7f7e600",
+    "uv.lock": "3ba2690f6f902be6fdf3847e90285eed3d80b6660729187975ff6ba8ff5ed83c"
+  }
+}

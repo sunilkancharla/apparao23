@@ -37,8 +37,9 @@ def _verify_assets(settings: Settings) -> None:
             settings.model_root, "embedding_model", *MODEL_MANIFESTS["embedding_model"]
         ),
     ]
-    if any(not state.code.endswith("_VERIFIED") for state in states):
-        raise OllamaError("OLLAMA_ASSET_UNAVAILABLE")
+    for state in states:
+        if not state.code.endswith("_VERIFIED"):
+            raise OllamaError(state.code)
 
 
 def _process() -> OwnedProcess:
