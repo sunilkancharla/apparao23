@@ -1,5 +1,13 @@
 # Stage 1 application boundary contracts
 
+## T24 — implemented batch and operation-status subset
+
+Authorized by continuation after T23 commit `3dd27a1`. [Exact transport, state, capacity and retry contract](benchmarks/t24-processing.md). `POST /api/conversations/{id}/attachment-batches` accepts an idempotent JSON manifest `{files:["a.csv","b.csv"]}` of one through ten names within 32,768 observed UTF-8 bytes. Each file gets a stable operation ID; unsafe/unsupported metadata fails individually. Valid entries reserve reference slots alongside actual attachments, including across batches. Stream each original through the T23 attachment route with `X-Batch-File-Id`, its matching filename and per-attempt key. No multipart dependency or concurrent body processing is introduced.
+
+`GET /api/operations/{id}?conversation_id={id}` now reads only a matching conversation's batch/file/upload metadata. Snapshots expose queued, processing, awaiting-extraction, failed, interrupted and cleanup-pending states; batches retain individual outcomes and stored/failed counts. Current `ready`/`indexed` flags stay false, and unknown byte progress stays null. Ready pipeline states require actual later work. Pre-admission request refusals leave unstarted entries queued; admitted failures retain safe error codes. Verified-cleanup retries use a deliberate new attempt key and reacquire capacity; pending/successful attempts are never recreated with fresh keys.
+
+Exact v1/v2→v3 migration adds durable manifests/file bindings/failure codes under the existing processed-data ceiling. A blocked startup cleanup keeps safe status reads available and blocks new upload admission. Queued entries retain their slots across restart; no automatic expiry/cancellation, general lifecycle or retention change is adopted. The T23 notes below describe its original-storage subset; its former whole-store-unavailable cleanup behavior is superseded by this read-only-status availability.
+
 ## T23 — implemented single-original upload subset
 
 Authorized on 2026-11-20 after T22 commit `57973a6`. [Implementation/evidence and limits](benchmarks/t23-uploads.md). The raw-body attachment route in C06 now requires exact Host/Origin plus a per-instance CSRF token from `GET /api/session`; headers are `X-CSRF-Token`, percent-encoded UTF-8 `X-Filename`, `Idempotency-Key` and `Content-Type: text/csv` or `application/octet-stream` (optional UTF-8 charset). Content encodings are refused. Existing conversation IDs come from the trusted T20 backend; public conversation creation is not implemented.

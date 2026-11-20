@@ -1,4 +1,12 @@
-**Current status — 2026-11-20:** T23 implements single CSV conversation-attachment upload with safe display names, streamed byte limits, scoped references, verified retries, quota reservations and interrupted-upload cleanup. The full suite passed **181 tests**, with one existing Windows permission skip and the Starlette warning; Ruff passed. [T23 evidence and limits](docs/benchmarks/t23-uploads.md). The user approved the reviewed T23 closeout and thirteen-file commit. Batch processing, normalized extraction/previews, model execution and a chat UI remain later tasks.
+**Current status — 2026-11-20:** T23 is committed as `3dd27a1`. T24 adds batch manifests, shared conversation-slot reservations and durable per-file status/retry/recovery to CSV upload. The full suite passed **209 tests**, with one existing Windows permission skip and the Starlette warning; Ruff passed. [T24 evidence and limits](docs/benchmarks/t24-processing.md). The user approved the reviewed T24 closeout and twelve-file commit. Normalized extraction/previews, model execution and a chat UI remain later tasks.
+
+## Batch upload and status
+
+Create a batch with `POST /api/conversations/{id}/attachment-batches`, the same Origin/CSRF safeguards described below, `Idempotency-Key`, `Content-Type: application/json` and `{ "files": ["a.csv", "b.csv"] }`. The manifest accepts one through ten names within 32,768 observed UTF-8 JSON bytes. Safe unsupported and unsafe filename entries fail individually; unsafe labels are omitted from status. Valid siblings receive stable file operation IDs and reserve available conversation-reference slots.
+
+Submit each body through the existing attachment route with its matching `X-Filename`, a per-attempt idempotency key and `X-Batch-File-Id` set to that file's operation ID. Bodies remain serialized and bounded by the original/temporary reservations. Poll `GET /api/operations/{operation_id}?conversation_id={conversation_id}` for a batch, file or actual upload attempt. Scope is mandatory. Status exposes queued/processing/failed/interrupted/cleanup-pending states, stored-original counts and safe errors; unknown byte progress stays null. Successful originals report `awaiting_extraction`, `ready: false`, `indexed: false`.
+
+Batch retries preserve IDs and verify the ordered manifest. Completed body retries still verify actual bytes. After verified failure cleanup, a deliberate new key can retry the same file ID, reacquiring capacity; unknown outcomes never silently run again. Pre-admission quota refusal leaves the file queued and reports the HTTP error. Unsubmitted queued entries retain their slots across restart; there is no automatic expiry or cancellation endpoint. [Exact API/state/recovery contract](docs/benchmarks/t24-processing.md).
 
 ## Single CSV upload
 
@@ -8,7 +16,7 @@ A 202 `data` receipt contains `operation_id`, `document_id`, `reference_id`, `di
 
 Admission accepts UTF-8/BOM comma CSV syntax, rejects unsafe Windows names, common binary/HTML mismatches, malformed quotes, invalid encoding and empty text, and enforces 100,000,000 bytes while streaming. CSV has no definitive magic signature; single-column text may be valid CSV. Broader encoding/dialect handling and semantic table validation remain T25/T39. This endpoint does not yet extract/index data or expose a source preview.
 
-The upload store holds one OS lock per root, reserves up to 100 MB each for original and staging before writes, and bounds database growth/journal space within the approved class caps. Worst-case reservation may refuse a smaller request near a cap. Startup reconciles the one interrupted upload; locked/unsafe cleanup stays unavailable with reservations retained. Unknown files are preserved and counted. [Accounting, failure codes and verification](docs/benchmarks/t23-uploads.md). There is no automatic eviction or general conversation/library deletion.
+The upload store holds one OS lock per root, reserves up to 100 MB each for original and staging before writes, and bounds database growth/journal space within the approved class caps. Worst-case reservation may refuse a smaller request near a cap. Startup reconciles the one interrupted upload; locked cleanup retains reservations and blocks admission while safe status reads remain available. Unsafe storage still disables access. Unknown files are preserved and counted. [Original-upload accounting](docs/benchmarks/t23-uploads.md) and [current recovery behavior](docs/benchmarks/t24-processing.md). There is no automatic eviction or general conversation/library deletion.
 
 ## Reproducible test fixtures
 
@@ -25,7 +33,7 @@ $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
 .\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration
 ```
 
-`-rP` displays the shared meter summary. The final verified run used 9 starts and 263,060 retained factory-artifact/child-output bytes. The default ignored parent directory is created automatically. No environment installation or external service is needed with the existing provisioned project environment.
+`-rP` displays the shared meter summary. The final verified run used 11 starts and 263,224 retained factory-artifact/child-output bytes. The default ignored parent directory is created automatically. No environment installation or external service is needed with the existing provisioned project environment.
 
 ## Provenance contracts
 
@@ -37,7 +45,7 @@ These models validate structure without reading originals, executing formulas, r
 
 ## Metadata storage foundations
 
-`app/storage/database.py` opens `metadata.sqlite3` beneath a caller-supplied trusted managed root; the caller must close the returned connection. It initializes schema v2 with an application identifier, foreign keys, DELETE journaling and FULL synchronization, or migrates an exact v1 schema while preserving identities. Unsupported or changed schemas are refused. `app/storage/documents.py` provides trusted backend methods to create conversation identities, register library documents, create exclusive attachments, attach library documents and resolve/list only a conversation's references. Browser writes use `UploadStore` validation/reservations rather than exposing these trusted primitives directly.
+`app/storage/database.py` opens `metadata.sqlite3` beneath a caller-supplied trusted managed root; the caller must close the returned connection. It initializes schema v3 with an application identifier, foreign keys, DELETE journaling and FULL synchronization, or migrates exact v1/v2 schemas while preserving identities. Unsupported or changed schemas are refused. `app/storage/documents.py` provides trusted backend methods to create conversation identities, register library documents, create exclusive attachments, attach library documents and resolve/list only a conversation's references. Browser writes use `UploadStore`/`UploadOperations` validation/reservations rather than exposing these trusted primitives directly.
 
 Equal SHA256 identities share content metadata. Documents and references keep separate UUIDs and membership. Reattaching the same library document to the same conversation returns its existing reference; a new logical attachment consumes another slot even for equal bytes. Foreign keys, unique membership, immutable identities and a ten-reference constraint protect metadata integrity. These methods take already verified content metadata; they do not read, store or hash uploaded originals.
 
@@ -64,7 +72,7 @@ $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
 .\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/unit tests/integration
 ```
 
-The integration suite starts three short-lived Python launcher processes for real loopback diagnostics, upload and port refusal, plus two abrupt-exit upload children for recovery checks. It uses synthetic/missing asset paths and runs no native model/OCR engine. Historical `tests/evals/` scripts retain their separate execution gates.
+The integration suite starts three short-lived Python launcher processes for real loopback diagnostics, single/batch upload/status and port refusal, plus four abrupt-exit upload/batch children for recovery checks. It uses synthetic/missing asset paths and runs no native model/OCR engine. Historical `tests/evals/` scripts retain their separate execution gates.
 
 ## Verified foundations checks
 

@@ -1,4 +1,8 @@
-## Current task — T23 complete; closeout and commit approved
+## Current task — T24 complete; closeout and commit approved
+
+The user authorized T24 by instructing continuation after T23 commit `3dd27a1`. [Batch/status evidence](docs/benchmarks/t24-processing.md): 28 new tests; full suite 209 passed, one existing permission skip and warning; Ruff passed. Actual loopback mixed-success batch/polling and two additional abrupt-exit cases passed. Final shared meter: 11/64 starts, 263,224/2,000,000 retained factory-artifact/child-output bytes. No new dependencies, models/OCR, private samples or T25 work. The user explicitly approved the reviewed T24 closeout and twelve-file commit on 2026-11-20.
+
+## Earlier task — T23 complete; closeout and commit approved
 
 The user explicitly authorized T23 on 2026-11-20 after T22 commit `57973a6` and summary commit `beed4c5`. [Upload evidence](docs/benchmarks/t23-uploads.md): 58 new tests; full suite 181 passed, one existing permission skip and warning; Ruff passed. Actual loopback upload/refusal and process-exit recovery passed; the shared routine meter used 9/64 starts and 263,060/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run, private sample read or T24 work. The user explicitly approved the reviewed T23 closeout and thirteen-file commit on 2026-11-20.
 
@@ -1449,15 +1453,15 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T24 — Expose batch upload and per-file processing status
 
-**Status:** Proposed. **Prerequisites:** T23; approved processing/concurrency contract. **Scope:** M.
+**Status:** Complete; review and commit approved, 2026-11-20. **Prerequisites:** T23 (`3dd27a1`); accepted G2 processing/concurrency contract; explicit user continuation. **Scope:** M.
 **Objective:** Report each file independently without concealing partial failures.
 
-- [ ] Enforce approved batch/count/resource budgets and persistent per-file queued/processing/ready/failed states, useful errors/warnings and independent successful siblings.
-- [ ] Handle retries/interrupted processing consistently under the approved recovery design; never report indexed/ready before the required work is actually complete.
+- [x] Enforce approved batch/count/resource budgets and persistent per-file queued/processing/ready/failed states, useful errors/warnings and independent successful siblings. Stored originals report awaiting extraction; the readiness contract keeps ready/indexed false until actual later pipeline completion.
+- [x] Handle retries/interrupted processing consistently under the approved recovery design; never report indexed/ready before the required work is actually complete.
 
 **Verification:** Mixed-success/count-limit/status-transition/retry/restart tests with mocked delays/errors and bounded processing.
-**Evidence:** Pending — batch/status/error/recovery results.
-**Likely files:** `app/api/uploads.py`, `app/ingestion/processing.py`, `app/storage/documents.py`, `tests/integration/test_processing_status.py`.
+**Evidence:** [T24 report](docs/benchmarks/t24-processing.md): 28 new tests cover bounded/partial manifests, per-file status/errors, scope/CSRF, atomic reservations/rollback, ten-file completion, retry reacquisition, cleanup locks/restart and two real exit boundaries. Full suite 209 passed/one existing skip and warning; Ruff passed. Actual loopback mixed-success batch/status passed; the pre-existing startup test timeout guard was corrected without changing assertions/deadline. Queued intents retain their slots; no expiry/cancellation, extraction/index readiness, full-size or target-machine performance is claimed. T25 has not started.
+**Files:** `app/main.py`, `app/ingestion/processing.py`, `app/storage/files.py`, `app/storage/database.py`, `tests/integration/test_processing_status.py`; narrow existing loopback-test expansion and linked closeout documentation.
 
 ### T25 — Extract and preview CSV with record/column provenance
 

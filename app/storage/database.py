@@ -8,7 +8,7 @@ from pathlib import Path
 from app.config import ConfigurationError, prepare_data_root, validate_local_ancestry
 
 APPLICATION_ID = 0x44415331
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 SCHEMA_V1 = (
     """CREATE TABLE content_objects (
         sha256 TEXT PRIMARY KEY CHECK(length(sha256)=64 AND sha256 NOT GLOB '*[^0-9a-f]*'),
@@ -69,7 +69,31 @@ UPLOAD_SCHEMA = (
     """CREATE UNIQUE INDEX one_active_upload ON uploads((1))
         WHERE state IN ('receiving','promoting','cleanup_pending')""",
 )
-SCHEMA = (*SCHEMA_V1, *UPLOAD_SCHEMA)
+SCHEMA_V2 = (*SCHEMA_V1, *UPLOAD_SCHEMA)
+PROCESSING_SCHEMA = (
+    """CREATE TABLE upload_batches (
+        id TEXT PRIMARY KEY,
+        conversation_id TEXT NOT NULL REFERENCES conversations(id),
+        key_hash TEXT NOT NULL,
+        fingerprint TEXT NOT NULL,
+        UNIQUE(conversation_id, key_hash)
+    ) STRICT""",
+    """CREATE TABLE upload_batch_files (
+        id TEXT PRIMARY KEY,
+        batch_id TEXT NOT NULL REFERENCES upload_batches(id),
+        position INTEGER NOT NULL CHECK(position BETWEEN 0 AND 9),
+        display_name TEXT CHECK(length(display_name) BETWEEN 1 AND 255),
+        rejected_error TEXT,
+        upload_id TEXT UNIQUE REFERENCES uploads(id),
+        UNIQUE(batch_id, position)
+    ) STRICT""",
+    """CREATE TABLE upload_failures (
+        upload_id TEXT PRIMARY KEY REFERENCES uploads(id),
+        error_code TEXT NOT NULL CHECK(length(error_code) BETWEEN 1 AND 64
+            AND error_code NOT GLOB '*[^A-Z_]*')
+    ) STRICT""",
+)
+SCHEMA = (*SCHEMA_V2, *PROCESSING_SCHEMA)
 
 
 class StorageError(ValueError):
@@ -153,16 +177,24 @@ def open_database(root: Path, *, max_pages: int | None = None) -> sqlite3.Connec
                     connection.execute(statement)
                 connection.execute(f"PRAGMA application_id={APPLICATION_ID}")
                 connection.execute(f"PRAGMA user_version={SCHEMA_VERSION}")
-            elif version == 1 and identity == APPLICATION_ID:
+            elif version in {1, 2} and identity == APPLICATION_ID:
                 old_schema = {
                     row[0]
                     for row in connection.execute(
                         "SELECT sql FROM sqlite_master WHERE name NOT LIKE 'sqlite_%'"
                     )
                 }
-                if old_schema != {statement.strip() for statement in SCHEMA_V1}:
+                expected = SCHEMA_V1 if version == 1 else SCHEMA_V2
+                if old_schema != {statement.strip() for statement in expected}:
                     raise StorageError("DATABASE_SCHEMA_MISMATCH")
-                for statement in UPLOAD_SCHEMA:
+                if connection.execute("PRAGMA journal_mode").fetchone()[0] != "delete":
+                    raise StorageError("UNSUPPORTED_JOURNAL_MODE")
+                additions = (
+                    (*UPLOAD_SCHEMA, *PROCESSING_SCHEMA)
+                    if version == 1
+                    else PROCESSING_SCHEMA
+                )
+                for statement in additions:
                     connection.execute(statement)
                 connection.execute(f"PRAGMA user_version={SCHEMA_VERSION}")
             elif version != SCHEMA_VERSION or identity != APPLICATION_ID:

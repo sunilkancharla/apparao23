@@ -13,6 +13,7 @@ from typing import Literal, TypedDict
 from uuid import uuid4
 
 from app.config import prepare_data_root, validate_local_ancestry
+from app.ingestion.processing import bind_reference_slot
 from app.ingestion.validation import MAX_FILE_BYTES, UploadError, validate_csv
 from app.storage.database import StorageError, open_database, transaction
 from app.storage.documents import Documents
@@ -44,6 +45,7 @@ class UploadStore:
     def __init__(self, root: Path) -> None:
         self.root, self.connection, self.lock_file = root, None, None
         self.busy = False
+        self.recovery_pending = False
         try:
             prepare_data_root(root)
             initial = self._usage()
@@ -86,7 +88,12 @@ class UploadStore:
                 "SELECT id FROM uploads WHERE state IN ('receiving','promoting','cleanup_pending') LIMIT 1"
             ).fetchone()
             if pending is not None:
-                self._cleanup(pending[0])
+                try:
+                    self._cleanup(pending[0])
+                except (OSError, UploadError, StorageError):
+                    # Safe status reads remain available; the durable active
+                    # intent still blocks new uploads until cleanup succeeds.
+                    self.recovery_pending = True
         except Exception:  # noqa: BLE001 - startup privacy boundary, releasing ownership
             self.close()
             raise UploadError("STORAGE_UNAVAILABLE", 503) from None
@@ -163,7 +170,9 @@ class UploadStore:
             raise UploadError("UPLOAD_UNAVAILABLE", 404)
         return row
 
-    def admit(self, conversation: str, key: str, name: str) -> tuple[sqlite3.Row, bool]:
+    def admit(
+        self, conversation: str, key: str, name: str, batch_file: str | None = None
+    ) -> tuple[sqlite3.Row, bool]:
         """Claim one durable intent and worst-case byte reservations before staging."""
         key_hash = hashlib.sha256(key.encode("ascii")).hexdigest()
         with self._write():
@@ -181,19 +190,17 @@ class UploadStore:
             if existing is not None:
                 if existing["display_name"] != name:
                     raise UploadError("IDEMPOTENCY_CONFLICT", 409)
+                binding = self.connection.execute(
+                    "SELECT id FROM upload_batch_files WHERE upload_id=?",
+                    (existing["id"],),
+                ).fetchone()
+                if (binding[0] if binding else None) != batch_file:
+                    raise UploadError("IDEMPOTENCY_CONFLICT", 409)
                 if existing["state"] != "original_stored":
                     if existing["state"] == "failed":
                         raise UploadError("UPLOAD_FAILED", 409)
                     raise UploadError("UPLOAD_PENDING", 409)
                 return existing, True
-            if (
-                self.connection.execute(
-                    "SELECT count(*) FROM document_references WHERE conversation_id=?",
-                    (conversation,),
-                ).fetchone()[0]
-                >= 10
-            ):
-                raise UploadError("REFERENCE_LIMIT", 413)
             if self.connection.execute(
                 "SELECT 1 FROM uploads WHERE state IN ('receiving','promoting','cleanup_pending')"
             ).fetchone():
@@ -221,6 +228,9 @@ class UploadStore:
                     MAX_FILE_BYTES,
                     MAX_FILE_BYTES,
                 ),
+            )
+            bind_reference_slot(
+                self.connection, conversation, name, batch_file, identity
             )
         return self._operation(identity), False
 
@@ -250,13 +260,22 @@ class UploadStore:
             raise UploadError("SOURCE_UNAVAILABLE", 410) from None
         return path
 
-    def _cleanup(self, identity: str) -> None:
+    def _cleanup(self, identity: str, failure_code: str | None = None) -> None:
         # The durable server-created intent is ownership evidence. Never sweep
         # unknown files or recursively delete a directory inferred from a name.
         row = self._operation(identity)
         if row["state"] == "original_stored":
             return
         with self._write():
+            self.connection.execute(
+                "INSERT INTO upload_failures VALUES (?,?) ON CONFLICT(upload_id) DO NOTHING",
+                (identity, failure_code or "UPLOAD_INTERRUPTED"),
+            )
+            if failure_code is not None:
+                self.connection.execute(
+                    "UPDATE upload_failures SET error_code=? WHERE upload_id=?",
+                    (failure_code, identity),
+                )
             self.connection.execute(
                 "UPDATE uploads SET state='cleanup_pending' WHERE id=?", (identity,)
             )
@@ -294,6 +313,7 @@ class UploadStore:
         key: str,
         name: str,
         declared: int | None = None,
+        batch_file: str | None = None,
     ) -> UploadReceipt:
         """Stream within reservations, verify retries and publish only complete originals."""
         if self.busy:
@@ -302,7 +322,9 @@ class UploadStore:
         operation = None
         replay = False
         try:
-            operation, replay = self.admit(conversation, key, name)
+            operation, replay = self.admit(conversation, key, name, batch_file)
+            if declared is not None and declared > MAX_FILE_BYTES:
+                raise UploadError("FILE_TOO_LARGE", 413)
             size, digest = 0, hashlib.sha256()
             stage = None if replay else self._path("staging", operation["id"])
             stream = None if replay else stage.open("xb")
@@ -387,7 +409,14 @@ class UploadStore:
         except BaseException as error:
             if operation is not None and not replay:
                 try:
-                    self._cleanup(operation["id"])
+                    failure_code = (
+                        error.code
+                        if isinstance(error, UploadError)
+                        else "UPLOAD_INTERRUPTED"
+                    )
+                    if isinstance(error, OSError) and error.errno == errno.ENOSPC:
+                        failure_code = "STORAGE_QUOTA"
+                    self._cleanup(operation["id"], failure_code)
                 except Exception:  # noqa: BLE001 - retain intent/reservations on uncertain cleanup
                     raise UploadError("CLEANUP_PENDING", 503) from None
             if isinstance(error, UploadError) or not isinstance(error, Exception):
