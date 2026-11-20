@@ -98,6 +98,10 @@ class UploadStore:
                 from app.storage.extractions import recover_extractions
 
                 recover_extractions(self)
+            if not self.recovery_pending:
+                from app.storage.index_state import recover_indexes
+
+                recover_indexes(self)
         except Exception:  # noqa: BLE001 - startup privacy boundary, releasing ownership
             self.close()
             raise UploadError("STORAGE_UNAVAILABLE", 503) from None

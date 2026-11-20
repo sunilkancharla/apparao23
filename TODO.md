@@ -1,4 +1,14 @@
-## Current task — T27-S2 passed; T28 indexing next
+## Current task — CP10 accepted; T28 commit approved; T29 authorized
+
+The user explicitly approved all reviewed T28/CP10 items, requested the 13-file T28 commit and instructed proceeding to T29 on 2026-11-20. CP10 is accepted; no stage transition or additional native trial is implied. T29 implementation follows the approved retrieval contract; its new source commit remains separately gated. Earlier pending-approval wording below describes the reviewed closeout before this decision.
+
+## Earlier task — T28 verified; CP10 review and commit pending
+
+The user approved the reviewed 16-file T27 repair/results commit and instructed proceeding; committed as `73cb659`. T28 increments A/B/C are implemented and verified using existing Python/SQLite and frozen little-endian float32 vectors for the approved sqlite-vec backend. [Results and CP10 technical review](docs/benchmarks/t28-indexing.md): 37 new cases; full suite 424 passed/one existing skip and warning, application/test Ruff passed, space-identity mutation caught/restored, three forced exits/restarts passed. Content reuse preserves separate provenance/scope; incomplete, failed or incompatible generations cannot claim current readiness. T28 commit and CP10 review await approval. T29 search/query execution is next; no model/DLL trial, new dependency, retention or stage change, or S1/S2 reopening occurred.
+
+T28 increments: A — schema/vector persistence and validation; B — streamed stored-CSV orchestration/deduplication; C — recovery/status/integration/review. Routine checks use the existing shared harness and a task-wide explicit allocation: 64 total starts, with precharged suballocations red 4, green 6, full regression 24 (including children), quality/consistency 8 and mutation 2 (44 prepaid, no refunds/resets). Keep the existing 120-second per-run admission/owned-child deadline and 2,000,000-byte combined metered artifact/child-output ceiling; record cumulative charges in ignored `data/t28-01/`. No native model/DLL trial or benchmark is included. Stop on exhausted phase, unresolved regression, source/scope ambiguity or a required architecture/retention change. New source commit remains separately gated.
+
+## Earlier task — T27-S2 passed; T28 indexing next
 
 The operator completed approved R1-D/S2 and requested inspection. [S2 report](docs/benchmarks/t27-runtime-smoke-02.md): passed; two document/one query vectors, matching space, owned positive/cancellation teardown and released port. Final meter: 34/64 charged starts, 10/12 calls, 85,878 retained charged bytes, no stop. All 25 source hashes match; S1 receipts remain unchanged. Both run allocations are preserved/closed without rerun. T27 implementation and bounded integration verification are complete; repair/results commit awaits approval. Existing [routine evidence](docs/benchmarks/t27-preflight-correction.md): 387 passed/one existing skip and warning, Ruff passed. T28 indexing is next and unstarted; CP10 remains open through T28. No readiness or stage transition.
 
@@ -1525,7 +1535,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T27 — Embed through the approved local Ollama model
 
-**Status:** Implementation and bounded native integration verification complete, 2026-11-20; reviewed repair/results commit pending approval. Client `ae1f611`, owner/handoff `67bdd7f` and S1 review `8fabbfa` committed; S1 closed on preflight failure, corrected S2 passed and closed. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step/remaining-runtime instructions and R1/S2 approval. **Scope:** M, sequential increments below; native proof is limited to the documented S2 smoke.
+**Status:** Complete and committed as `73cb659`, 2026-11-20. Client `ae1f611`, owner/handoff `67bdd7f` and S1 review `8fabbfa` preceded it; S1 closed on preflight failure, corrected S2 passed and closed. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step/remaining-runtime instructions and R1/S2 approval. **Scope:** M, sequential increments below; native proof is limited to the documented S2 smoke.
 **Objective:** Add bounded loopback embeddings with explicit model/dimension/error handling.
 
 | Increment | Objective / prerequisites | Acceptance / verification | Status |
@@ -1546,21 +1556,21 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Verification:** Test-first mocked local HTTP/model/error cases; separately authorized actual-model embedding smoke with non-sensitive text.
 **Evidence:** [Original client checks](docs/benchmarks/t27-embeddings.md) and [repair regression](docs/benchmarks/t27-preflight-correction.md): final full suite 387 passed/one existing skip and warning, Ruff passed, mutations caught/restored. [Actual S2 integration](docs/benchmarks/t27-runtime-smoke-02.md) passed the two-document/one-query vector, owned-process/listener and cancellation/teardown/port checks with pinned assets; source seal and receipts verified. Exact fit, model/retrieval quality, in-flight inference cancellation and strict target-resource acceptance remain unverified; no broader readiness claim follows.
-**Files:** Client files are committed as `ae1f611`; owner/handoff as `67bdd7f`. R1 changes diagnostics/runtime, the same smoke helper, startup/budget regressions and new model-asset tests, with current docs/report/handoff and a separate S2 seal; S2 results add the linked report. Repair/results commit pending approval. T28 is next; CP10 remains open through T28.
+**Files:** Client files are committed as `ae1f611`; owner/handoff as `67bdd7f`. R1 diagnostics/runtime/helper/tests and S2 source seal/handoff/results are committed as `73cb659`. T28 verification and the combined CP10 technical review are recorded below; historical task evidence remains unchanged.
 
 ### T28 — Persist an idempotent versioned local index
 
-**Status:** Proposed. **Prerequisites:** T27; T12/T17 consistency/index design. **Scope:** M.
+**Status:** Implemented and verified; CP10 review and source/results commit pending approval, 2026-11-20. **Prerequisites:** T27 (`73cb659`); T12/T17 consistency/index design; explicit continuation. **Scope:** M, sequential A/B/C increments and explicit routine allocation above.
 **Objective:** Index content once per approved identity/version and preserve searchable integrity across restart.
 
-- [ ] Persist vectors/chunk metadata/index state; unchanged uploads reuse indexed content while retaining distinct ownership/reference/display metadata.
-- [ ] Handle content/parser/model version changes and interrupted indexing through approved retry/rebuild behavior without duplicate chunks, scope leaks or false-ready state.
+- [x] Persist vectors/chunk metadata/index state; unchanged uploads reuse indexed content while retaining distinct ownership/reference/display metadata.
+- [x] Handle content/parser/model version changes and interrupted indexing through approved retry/rebuild behavior without duplicate chunks, scope leaks or false-ready state.
 
 **Verification:** Test-first duplicate/repeat/version-change/failure/restart cases and inspect reference scope plus stored chunk/vector counts.
-**Evidence:** Pending — index idempotency/recovery tests and local smoke.
-**Likely files:** `app/retrieval/index.py`, `app/ingestion/processing.py`, `app/storage/index_state.py`, `tests/integration/test_indexing.py`.
+**Evidence:** [T28 report](docs/benchmarks/t28-indexing.md): 18 vector/profile unit cases, 19 stored-CSV integration cases including three process-exit boundaries; full suite 424 passed/one existing skip and warning. Application/test Ruff passed; broader historical-script lint/format findings are disclosed and untouched. Complete batches, ordinal/hash/space validation, duplicate reuse, distinct source bindings, source tamper, quota rollback, cancellation/uncertain-cleanup refusal, status/version changes and explicit retries passed. Space mutation caught/restored before full regression. SQLite integration uses synthetic embeddings; no combined real-model indexing, native query/ranking, full-scale/16-GB or answer-quality claim.
+**Files:** `app/retrieval/index.py`, `app/storage/index_state.py`, database schema v5/store recovery/status integration, `tests/unit/test_index_vectors.py`, `tests/integration/test_indexing.py`; current docs/contracts/ADR/report. Canonical float32 vector persistence is ready for the approved sqlite-vec query backend; native search structures/query execution remain T29.
 
-**Checkpoint CP10 — T26–T28:** Proposed. Review source-preserving chunks, local embedding errors, version/dedup/restart integrity and relevant checks. Apply G3.
+**Checkpoint CP10 — T26–T28:** Technical review complete; user acceptance pending. [Evidence and limits](docs/benchmarks/t28-indexing.md#cp10-and-handoff) cover source-preserving chunks, local embedding errors/native S2 ownership and version/dedup/restart integrity; full suite 424 passed and application/test Ruff passed. Apply G3: approve the reviewed 13-file T28 commit and CP10 before T29. No stage transition is requested.
 
 ### T29 — Retrieve evidence within the selected document scope
 

@@ -1,6 +1,10 @@
-## Current execution point — T27-S2 passed; T28 indexing next
+## Current execution point — CP10 accepted; T28 commit approved; T29 authorized
 
-The operator completed the approved disconnected S2 run and requested review. [S2 evidence](docs/benchmarks/t27-runtime-smoke-02.md): passed, two document/one query vectors, matching space, positive/cancellation cleanup and released port; final 34/64 charged starts, 10/12 calls, 85,878 retained charged bytes, no stop. All 25 sealed sources match, S1 receipts remain unchanged, both allocations are preserved/closed without rerun. T27 implementation and bounded native integration verification are complete; repair/results commit awaits approval. [Routine verification](docs/benchmarks/t27-preflight-correction.md): 387 passed/one existing skip and warning, Ruff passed. T28 versioned/idempotent indexing is next and unstarted; CP10 stays open through T28. Native success does not change readiness, final resource/quality acceptance or stage.
+The user explicitly accepted CP10, approved the reviewed 13-file T28 commit and instructed proceeding to T29 on 2026-11-20. Implement scoped retrieval under the approved provisional R01 contract; new source commits and any new native execution package retain their separate gates. No stage transition is requested. Earlier pending wording below is historical.
+
+## Earlier execution point — T28 verified; CP10 review and commit pending
+
+The user approved the T27 repair/S2 results commit and instructed proceeding; committed as `73cb659`. T28 now persists versioned canonical vectors and separate scoped source bindings, with atomic publication after teardown/source revalidation, explicit retries, interrupted-intent recovery and accurate status. [Evidence and CP10 technical review](docs/benchmarks/t28-indexing.md): 37 new cases, full suite 424 passed/one existing skip and warning, application/test Ruff passed, space mutation caught/restored and three process-exit boundaries verified. No model/DLL trial, dependency, lifecycle or stage change occurred; S1/S2 remain preserved/closed. T28 source/results commit and CP10 review await approval. T29 scoped retrieval follows; native sqlite-vec search/query execution remains that task, with the approved backend unchanged.
 
 ## Earlier execution point — T27 owner and native package approved; offline start pending
 

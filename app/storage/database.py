@@ -8,7 +8,7 @@ from pathlib import Path
 from app.config import ConfigurationError, prepare_data_root, validate_local_ancestry
 
 APPLICATION_ID = 0x44415331
-SCHEMA_VERSION = 4
+SCHEMA_VERSION = 5
 SCHEMA_V1 = (
     """CREATE TABLE content_objects (
         sha256 TEXT PRIMARY KEY CHECK(length(sha256)=64 AND sha256 NOT GLOB '*[^0-9a-f]*'),
@@ -126,7 +126,62 @@ CSV_SCHEMA = (
         UNIQUE(reference_id,key_hash)
     ) STRICT""",
 )
-SCHEMA = (*SCHEMA_V3, *CSV_SCHEMA)
+SCHEMA_V4 = (*SCHEMA_V3, *CSV_SCHEMA)
+INDEX_SCHEMA = (
+    """CREATE TABLE index_generations (
+        id TEXT PRIMARY KEY,
+        identity TEXT NOT NULL,
+        content_hash TEXT NOT NULL REFERENCES content_objects(sha256),
+        profile TEXT NOT NULL,
+        state TEXT NOT NULL CHECK(state IN ('processing','complete','failed')),
+        error_code TEXT,
+        chunk_count INTEGER NOT NULL DEFAULT 0 CHECK(chunk_count>=0),
+        omission_count INTEGER NOT NULL DEFAULT 0 CHECK(omission_count>=0)
+    ) STRICT""",
+    """CREATE UNIQUE INDEX one_index_processing ON index_generations((1))
+        WHERE state='processing'""",
+    """CREATE UNIQUE INDEX index_complete_identity ON index_generations(identity)
+        WHERE state='complete'""",
+    """CREATE TABLE index_vectors (
+        generation_id TEXT NOT NULL REFERENCES index_generations(id),
+        ordinal INTEGER NOT NULL CHECK(ordinal>0),
+        text_hash TEXT NOT NULL CHECK(length(text_hash)=64),
+        vector BLOB NOT NULL CHECK(length(vector)=3072),
+        PRIMARY KEY(generation_id,ordinal)
+    ) STRICT""",
+    """CREATE TABLE index_bindings (
+        id TEXT PRIMARY KEY,
+        extraction_id TEXT NOT NULL REFERENCES csv_extractions(id),
+        generation_id TEXT NOT NULL REFERENCES index_generations(id),
+        UNIQUE(extraction_id,generation_id)
+    ) STRICT""",
+    """CREATE TABLE index_chunks (
+        binding_id TEXT NOT NULL REFERENCES index_bindings(id),
+        ordinal INTEGER NOT NULL CHECK(ordinal>0),
+        generation_id TEXT NOT NULL,
+        chunk_id TEXT NOT NULL,
+        payload TEXT NOT NULL,
+        PRIMARY KEY(binding_id,ordinal),
+        FOREIGN KEY(generation_id,ordinal) REFERENCES index_vectors(generation_id,ordinal)
+    ) STRICT""",
+    """CREATE TABLE index_omissions (
+        binding_id TEXT NOT NULL REFERENCES index_bindings(id),
+        ordinal INTEGER NOT NULL CHECK(ordinal>0),
+        payload TEXT NOT NULL,
+        PRIMARY KEY(binding_id,ordinal)
+    ) STRICT""",
+    """CREATE TABLE index_requests (
+        id TEXT PRIMARY KEY,
+        reference_id TEXT NOT NULL REFERENCES document_references(id),
+        key_hash TEXT NOT NULL,
+        extraction_id TEXT NOT NULL REFERENCES csv_extractions(id),
+        generation_id TEXT NOT NULL REFERENCES index_generations(id),
+        state TEXT NOT NULL CHECK(state IN ('processing','complete','failed')),
+        error_code TEXT,
+        UNIQUE(reference_id,key_hash)
+    ) STRICT""",
+)
+SCHEMA = (*SCHEMA_V4, *INDEX_SCHEMA)
 
 
 class StorageError(ValueError):
@@ -210,22 +265,25 @@ def open_database(root: Path, *, max_pages: int | None = None) -> sqlite3.Connec
                     connection.execute(statement)
                 connection.execute(f"PRAGMA application_id={APPLICATION_ID}")
                 connection.execute(f"PRAGMA user_version={SCHEMA_VERSION}")
-            elif version in {1, 2, 3} and identity == APPLICATION_ID:
+            elif version in {1, 2, 3, 4} and identity == APPLICATION_ID:
                 old_schema = {
                     row[0]
                     for row in connection.execute(
                         "SELECT sql FROM sqlite_master WHERE name NOT LIKE 'sqlite_%'"
                     )
                 }
-                expected = {1: SCHEMA_V1, 2: SCHEMA_V2, 3: SCHEMA_V3}[version]
+                expected = {1: SCHEMA_V1, 2: SCHEMA_V2, 3: SCHEMA_V3, 4: SCHEMA_V4}[
+                    version
+                ]
                 if old_schema != {statement.strip() for statement in expected}:
                     raise StorageError("DATABASE_SCHEMA_MISMATCH")
                 if connection.execute("PRAGMA journal_mode").fetchone()[0] != "delete":
                     raise StorageError("UNSUPPORTED_JOURNAL_MODE")
                 additions = {
-                    1: (*UPLOAD_SCHEMA, *PROCESSING_SCHEMA, *CSV_SCHEMA),
-                    2: (*PROCESSING_SCHEMA, *CSV_SCHEMA),
-                    3: CSV_SCHEMA,
+                    1: (*UPLOAD_SCHEMA, *PROCESSING_SCHEMA, *CSV_SCHEMA, *INDEX_SCHEMA),
+                    2: (*PROCESSING_SCHEMA, *CSV_SCHEMA, *INDEX_SCHEMA),
+                    3: (*CSV_SCHEMA, *INDEX_SCHEMA),
+                    4: INDEX_SCHEMA,
                 }[version]
                 for statement in additions:
                     connection.execute(statement)

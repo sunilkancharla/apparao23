@@ -17,10 +17,10 @@ class OperationStatus(TypedDict):
     """Bounded metadata only; upload completion never asserts pipeline readiness."""
 
     operation_id: str
-    kind: Literal["upload_file", "upload_batch", "csv_extraction"]
+    kind: Literal["upload_file", "upload_batch", "csv_extraction", "document_index"]
     state: str
-    ready: Literal[False]
-    indexed: Literal[False]
+    ready: bool
+    indexed: bool
     display_name: NotRequired[str | None]
     error_code: NotRequired[str | None]
     upload_operation_id: NotRequired[str | None]
@@ -96,6 +96,22 @@ class UploadOperations:
     def __init__(self, store: "UploadStore") -> None:
         self.store = store
         self.connection = store.connection
+
+    def _index_status(self, conversation: str, reference: str) -> dict:
+        from app.storage.index_state import IndexState
+
+        status = IndexState(self.store).status(conversation, reference)
+        if status is None:
+            return {}
+        fields = {
+            key: status[key]
+            for key in ("ready", "indexed", "state", "warning_codes", "error_code")
+        }
+        if status["state"] == "processing":
+            fields["state"] = (
+                "cleanup_pending" if self.store.recovery_pending else "indexing"
+            )
+        return fields
 
     def create_batch(
         self, conversation: str, key: str, names: list[str]
@@ -232,6 +248,11 @@ class UploadOperations:
                         state, warnings = "extracting", []
                 else:
                     error, warnings = extraction["error_code"], ["EXTRACTION_FAILED"]
+        indexed_fields = (
+            self._index_status(conversation, row["reference_id"])
+            if extraction is not None and extraction["state"] == "complete"
+            else {}
+        )
         return {
             "operation_id": identity,
             "kind": "upload_file",
@@ -247,6 +268,7 @@ class UploadOperations:
             "warning_codes": warnings,
             "extraction_id": extraction["id"] if extraction else None,
             "extraction_state": extraction["state"] if extraction else "not_started",
+            **indexed_fields,
         }
 
     def status(self, conversation: str, identity: str) -> OperationStatus:
@@ -275,24 +297,34 @@ class UploadOperations:
             extraction_failed = sum(
                 item["extraction_state"] == "failed" for item in files
             )
+            indexed = all(item["indexed"] for item in files)
+            ready = all(item["ready"] for item in files)
             state = (
                 "awaiting_extraction"
                 if "awaiting_extraction" in states
                 else "awaiting_index"
             )
-            for candidate in ("processing", "extracting", "cleanup_pending", "queued"):
+            for candidate in (
+                "processing",
+                "extracting",
+                "indexing",
+                "cleanup_pending",
+                "queued",
+            ):
                 if candidate in states:
                     state = candidate
                     break
             else:
                 if failed or extraction_failed:
                     state = "partial_failure" if stored else "failed"
+                elif indexed:
+                    state = "indexed" if ready else "indexed_with_omissions"
             return {
                 "operation_id": identity,
                 "kind": "upload_batch",
                 "state": state,
-                "ready": False,
-                "indexed": False,
+                "ready": ready,
+                "indexed": indexed,
                 "total_files": len(files),
                 "originals_stored": stored,
                 "failed_files": failed,
@@ -321,7 +353,7 @@ class UploadOperations:
                 conversation, identity, upload["display_name"], None, identity
             )
         extraction = self.connection.execute(
-            """SELECT e.* FROM csv_extractions e
+            """SELECT e.*,r.id AS scoped_reference FROM csv_extractions e
             JOIN document_references r ON r.document_id=e.document_id WHERE e.id=? AND r.conversation_id=?""",
             (identity, conversation),
         ).fetchone()
@@ -349,5 +381,29 @@ class UploadOperations:
                 "unit_count": extraction["unit_count"]
                 if extraction["state"] == "complete"
                 else None,
+                **(
+                    self._index_status(conversation, extraction["scoped_reference"])
+                    if extraction["state"] == "complete"
+                    else {}
+                ),
             }
+        from app.storage.index_state import IndexState
+
+        indexed = self.connection.execute(
+            """SELECT q.* FROM index_requests q JOIN document_references r ON r.id=q.reference_id
+            WHERE q.id=? AND r.conversation_id=?""",
+            (identity, conversation),
+        ).fetchone()
+        if indexed is not None:
+            state = IndexState(self.store)
+            receipt = state.receipt(indexed)
+            current = state.status(conversation, indexed["reference_id"])
+            if current is None or current["generation_id"] != receipt["generation_id"]:
+                receipt.update(
+                    ready=False,
+                    indexed=False,
+                    state="reindex_required",
+                    warning_codes=["INDEX_VERSION_CHANGED"],
+                )
+            return receipt
         raise UploadError("OPERATION_NOT_FOUND", 404)
