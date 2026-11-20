@@ -1,5 +1,13 @@
 # Stage 1 application boundary contracts
 
+## T27-D/E — implemented owner; actual native behavior unverified
+
+`OwnedRuntime.session()` holds the existing `UploadStore.busy` admission slot across asset checks, launch, embeddings and verified teardown. It refuses recovery/closed storage, preflights port availability, supplies explicit local CPU/model/profile settings and binds T27's callback to owned handles/listener membership. No startup service or public embedding route is added. The staged runtime home is operator-provisioned and retained under temporary accounting, with a sampled 16,000,000-byte/4,096-entry ceiling and admission margin; no hard filesystem quota or recursive cleanup is claimed.
+
+`WindowsJob` uses hidden/suspended `CreateProcessW` with `PROC_THREAD_ATTRIBUTE_JOB_LIST`, no inherited handles, kill-on-close, eight active processes and a job-memory ceiling. It validates exact root IPv4 listener ownership, complete process membership, cumulative starts and sampled memory/TCP boundaries; cleanup kills only that job and requires root reaping/zero members before releasing handles. An independent 100-ms watcher stops on expiry or a gap above 300 ms. The session reserves up to 84 seconds plus teardown; these mechanisms remain unverified against real native behavior and do not establish complete answer/resource acceptance or same-account confinement.
+
+Fake controls verify busy refusal, cancellation, watchdog error propagation and uncertain-cleanup admission blocking. [T27-S1](proposals/t27-runtime-smoke.md) is the concrete separately gated native package; its parent and single worker share prepaid starts, bounded output/wall time and sticky ledger/source checks. Native execution/commit was approved on 2026-11-20; execution awaits operator offline confirmation. [Evidence, limits and source trace](benchmarks/t27-runtime-owner.md). Earlier T27 client notes below describe its original unowned-guard seam; D/E supplies its candidate owner implementation, not a native validation pass.
+
 ## T27 — implemented embedding-client subset
 
 `OllamaClient` owns an async HTTPX session for one literal IPv4 loopback port; it never launches/adopts an Ollama process. The trusted owner supplies `ownership_check`, required to raise unless its pinned process/model store and heavy-job lease remain owned. It runs before and after each HTTP exchange; absent/failed checks refuse requests. This injection seam is not production process-ownership verification. The app supplies no live owner yet, and readiness remains unchanged.

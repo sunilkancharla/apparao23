@@ -1,4 +1,8 @@
-## Current task — T27 client closeout and commit approved; runtime integration pending
+## Current task — T27 owner and native package approved; offline start pending
+
+The user's continuation after `ae1f611` authorized implementing the missing owner and preparing its exact smoke. [T27-D/E evidence](docs/benchmarks/t27-runtime-owner.md): 36 new fake/data-only cases; full suite 365 passed/one existing skip and warning; Ruff passed. Final shared routine meter: 13/64 starts, 331,210/2,000,000 retained artifact/child-output bytes. The listener-check mutation failed and was restored exactly; a blocked-loop watchdog regression was fixed. [T27-S1](docs/proposals/t27-runtime-smoke.md) defines a fresh shared allocation and source seal, is unexecuted; the user approved it and the 15-file source commit on 2026-11-20. Execution awaits the operator confirming external networking is disconnected. No real job/Ollama/model execution, download, private sample or readiness change. T27/CP10 stay open; T28 is next after runtime verification.
+
+## Earlier task — T27 client closeout and commit approved; runtime integration pending
 
 The user authorized the next step after T26 commit `f7f0a90`, starting T27's approved local embedding client. [Evidence](docs/benchmarks/t27-embeddings.md): 56 new cases; full suite 329 passed/one existing skip and warning, Ruff passed. Synthetic loopback CSV chunk → document/query vector checks passed with inherited proxies disabled; the wrong-digest mutation was caught and restored exactly. Shared final suite meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No download, dependency/native/model run, private sample read, schema or readiness change. The user explicitly approved the reviewed T27 client closeout and ten-file commit on 2026-11-20; production owned-service/global lease integration and the separately authorized actual-model smoke remain pending. T28 is unstarted.
 
@@ -1517,7 +1521,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T27 — Embed through the approved local Ollama model
 
-**Status:** Client implemented and routine-verified; client closeout and commit approved, 2026-11-20. Production owned-service integration/real-model smoke remain pending. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step instruction. **Scope:** M, sequential increments below; no native execution authorized by these routine checks.
+**Status:** Client committed as `ae1f611`; T27-D/E owner and supervised handoff implemented/fake-verified; their closeout/commit and T27-S1 native execution approved, 2026-11-20; offline-start confirmation pending. Actual Windows/model integration remains unrun. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step/remaining-runtime instructions. **Scope:** M, sequential increments below; no native execution authorized by these routine checks.
 **Objective:** Add bounded loopback embeddings with explicit model/dimension/error handling.
 
 | Increment | Objective / prerequisites | Acceptance / verification | Status |
@@ -1525,14 +1529,17 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 | T27-A | Bounded loopback HTTP seam over existing HTTPX | Explicit owner check, no proxy/redirect escape, bounded JSON, safe errors and deadline | Routine checks verified; actual process owner not implemented |
 | T27-B | Pinned document/query embeddings after A | Version/digest/prefix/dimension identity, complete batches, finite normalized vectors and source hashes | Verified with mocked responses; negative controls caught truncation/Unicode gaps before fixes |
 | T27-C | Synthetic loopback integration and review after B | Real HTTP CSV chunks/query flow, proxy isolation, unowned refusal, cancellation/busy/combined deadline, mutation and full suite | Verified; 56 new cases, full suite 329 passed |
+| T27-D | Owned runtime and shared admission after client commit | Atomic job startup/handle/listener checks; shared upload slot, independent watchdog, safe environment and verified-close release | Implemented; fake process/DLL/data tests passed; real Windows behavior unverified |
+| T27-E | Supervised smoke handoff after D | Source seal, shared parent/worker/native prepayment, deadlines/output caps, sticky/no-reset controls and bounded disconnected command | Prepared/fake-verified; 36 new cases, full suite 365 passed; native T27-S1 approved; offline-start confirmation pending |
 
 - [x] Implement the client for only the approved endpoint/model with bounded batches/timeouts and recorded identity/dimensions; reject invalid/incompatible responses and explicit truncation reports. Actual server fit/silent truncation remains unverified.
 - [x] Surface absent service/model, timeout and malformed-response errors without downloads, sensitive logs or remote fallback.
-- [ ] Connect a verified production runtime owner and shared heavy-job lease, then complete the separately authorized bounded actual-model embedding smoke. No native run or prior trial-budget reuse is authorized here; browser readiness remains false.
+- [x] Implement the owned runtime/shared-work-slot adapter and source-sealed supervised handoff, with fake/data-only lifecycle and budget verification. This is not real Windows integration evidence or live application readiness.
+- [ ] Execute/review the approved [T27-S1](docs/proposals/t27-runtime-smoke.md) after operator offline confirmation for actual Windows ownership/model smoke. Only this fresh bounded allocation is authorized; no historical budget reuse. Browser readiness remains false until its remaining pipeline prerequisites are met.
 
 **Verification:** Test-first mocked local HTTP/model/error cases; separately authorized actual-model embedding smoke with non-sensitive text.
 **Evidence:** [T27 report](docs/benchmarks/t27-embeddings.md): 54 unit cases and two real-loopback synthetic integration cases; full suite 329 passed/one existing skip and warning, Ruff passed. Initial module absence and later truncation/Unicode controls failed before implementation/fixes. Wrong-digest mutation failed its guard test and restored the pre-mutation hash. No actual Ollama/native execution, model accuracy, owned-process lifecycle, global job coordination or target-resource proof is claimed. Real-model smoke remains pending rather than being represented by the synthetic server.
-**Files:** `app/ollama.py`, `app/retrieval/embeddings.py`, `tests/unit/test_ollama.py`, `tests/unit/test_embeddings.py`, `tests/integration/test_local_embeddings.py`; README, PLAN, TODO, contracts and report. T28/CP10 remain open.
+**Files:** Client files are committed as `ae1f611`. T27-D/E add `app/runtime.py`, `app/windows_job.py`, four fake/data-only unit files and `tests/evals/spikes/t27_runtime_smoke.py`; source-seal/proposal/report and current documentation. [Owner verification](docs/benchmarks/t27-runtime-owner.md): full suite 365 passed, one existing skip/warning; Ruff passed. T28/CP10 remain open pending the actual-runtime gate.
 
 ### T28 — Persist an idempotent versioned local index
 
