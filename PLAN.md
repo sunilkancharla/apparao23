@@ -1,4 +1,60 @@
-## Current execution point — T25/CP09 closeout and commit approved; T26 next session
+## Current execution point — T26–T32 committed; stop before T33
+
+T32 source/results and the approved workflow updates are committed as `c3c6e61`. [Session 4 summary](docs/session_summaries/SESSION_4_AI_Session_SUMMARY.md) records T26–T32 files, commits, verification/native evidence and remaining limits; the last verified suite is 579 passed/one existing skip and warning, scoped Ruff passed. T15/UI UX Pro Max review/use is skipped; retain manual frontend review with the approved stack. T33 is unstarted and reserved for a new session. T34A is scheduled immediately after T34/CP12 and before T35, with its exact native package still gated; T48 remains the final all-format baseline. This documentation handoff starts no implementation/trial or stage transition. Earlier pending wording below is historical.
+
+## Earlier execution point — T32 verified; commit pending; T15 review before T33
+
+T31 is committed as `fd830e5`, with CP11 accepted and explicit T32 continuation. [T32 evidence](docs/benchmarks/t32-evidence-support.md): 38 new cases, full suite 579 passed/one existing skip and warning, scoped Ruff passed; failure/no-evidence precedence mutation caught/restored. Answer HTTP envelopes now describe observable checks/declared-block counts and independent warnings, with semantic support always unverified and current model-input fit explicitly incomplete. The reviewed 13-file source/results commit remains gated. Next is T15's required UI UX Pro Max source-only review before T33, not automatic frontend/tool adoption. No schema, dependency, retention, native trial, readiness or stage change. Earlier pending wording below is historical.
+
+## Earlier execution point — CP11 accepted; T31 commit approved; T32 authorized
+
+The user explicitly accepted CP11, approved the reviewed 12-file T31 source/results commit and instructed proceeding to T32 on 2026-11-20. Implement only the approved observable support-state/warning/structural-coverage design; do not infer semantic support or a correctness probability from citation validity. Prior allocations remain preserved/closed, and T32 source commits retain their own gate. No schema, dependency, retention, native trial or stage change is authorized. Earlier pending wording below is historical.
+
+## Earlier execution point — T31 verified; CP11 review and commit pending
+
+T30 results are committed as `aff116e`; explicit continuation authorized T31. [T31/CP11 evidence](docs/benchmarks/t31-citations.md): 35 new citation/preview cases, full suite 541 passed/one existing skip and warning, scoped Ruff passed, cited-ID scope mutation caught/restored. The backend resolves saved answer/citation scope against current originals/extraction/index state, checks normalized quotation spans/locations, escapes bounded previews and labels historical-source availability. No schema, dependency, retention or native-trial change. CP11 technical review is complete with semantic/real-model/resource limitations explicit; user acceptance and the 12-file source/results commit remain gated. T32 support signals is next and unstarted; browser readiness/stage remain unchanged. Earlier pending wording below is historical.
+
+## Earlier execution point — T30 results commit approved; T31 authorized
+
+The user explicitly approved the eight-document T30-N1 results/status commit and instructed proceeding to T31 on 2026-11-20. T31 follows the existing scoped citation/current-source preview contracts, with test-first verification and its source commit separately gated. All prior native allocations remain preserved/closed; no further trial, dependency, retention or stage change is authorized. Earlier pending wording below describes the preceding results review.
+
+## Earlier execution point — T30-N1 passed; results commit and T31 next
+
+T30 source/handoff is committed as `07a7d27`; the operator completed the approved disconnected T30-N1 run and requested inspection. [Native results](docs/benchmarks/t30-model-smoke.md): passed, actual Qwen answer contains 42 with supplied-only citations, exact saved exchange matches after store reopen, private port released. All 35 source pins and executable/manifest hashes match; 14 prior native receipts remain unchanged. The ledger records 18 charged starts, five HTTP attempts and ten sampled cumulative positive-tree starts, within the approved limits. T30 implementation/routine/bounded native verification is complete. The allocation is preserved/closed without rerun; broader semantic quality, combined real-model retrieval, final fit/resource/latency acceptance and readiness remain unverified. Eight-document results/status commit awaits approval; T31 citation validation/previews is next and unstarted. Earlier pending wording below is historical.
+
+## Earlier execution point — T30 commit/native package approved; offline operator run pending
+
+The user explicitly approved the reviewed 23-file T30 source/status/handoff commit and exact [T30-N1 run](docs/proposals/t30-model-smoke.md) on 2026-11-20. Its one operator-disconnected execution is authorized under the unchanged source/model/settings/allocation. The operator runs locally and reconnects for receipt review; no offline chat confirmation is needed. Native generation/persistence verification and T31 remain pending actual results, with no stage transition. Earlier pending wording below is historical.
+
+## Earlier execution point — T30 routine verified; commit/native smoke proposed
+
+T29 results committed as `b301d1d`; the user's explicit continuation authorized T30. Ordered generation/prompt, storage/revision, service/API and native-handoff preparation increments are implemented and routine-verified. [Evidence](docs/benchmarks/t30-grounded-chat.md): 40 new cases, full suite 506 passed/one existing skip and warning, scoped Ruff passed; publication mutation caught/restored and two process-exit recovery boundaries verified. Selection revisions and source checks fence exchange publication, with no new full-source quotation snapshots. T30's 23-file source/status commit and separate [T30-N1 package](docs/proposals/t30-model-smoke.md)/35-file seal await approval; no model/native run occurred. T31 follows native generation/persistence verification. No dependency, retention, readiness or stage change; all earlier trials stay closed. Earlier pending wording below is historical.
+
+## Earlier execution point — T29-N1 passed; results commit and T30 next
+
+T29 source/handoff committed as `4a618c2`; the operator completed the approved disconnected T29-N1 run and requested review. [Native results](docs/benchmarks/t29-native-search.md): passed, two expected ranked records/two evidence items, 768 dimensions, SQL load denied, integrity `ok`, worker reaped; two prepaid Python starts/one recorded DLL load. All 29 source pins and three assets match; prior S1/S2 receipts are unchanged. T29 implementation/routine/bounded native verification is complete. The native allocation is preserved/closed with no rerun. Eight-document results/status commit awaits approval; T30 grounded chat is next and unstarted. Semantic quality, combined real-model retrieval, resource/latency acceptance and stage/readiness remain unchanged. Earlier pending wording below is historical.
+
+## Earlier execution point — T29 routine verified; source commit/native bridge check proposed
+
+The user accepted CP10, requested the T28 commit and explicitly authorized T29; T28 is committed as `e9d5580`. T29 now implements explicit selected-reference eligibility, local query-vector validation, selected-only sqlite-vec cosine ranking, complete evidence packing and source rechecks. [Evidence](docs/benchmarks/t29-retrieval.md): 42 new cases, full suite 466 passed/one existing skip and warning, scoped Ruff passed; scope mutation caught/restored. Tests use injected models/native kernel with real SQLite/storage. A separate [T29-N1 package](docs/proposals/t29-native-search.md) and 29-file seal are prepared but unapproved/unexecuted. Reviewed 14-file source/status/handoff commit and this native check need decisions before native T29 acceptance/T30. No schema/dependency/retention/stage change; prior trials remain closed. Earlier pending wording below is historical.
+
+## Earlier execution point — T28 verified; CP10 review and commit pending
+
+The user approved the T27 repair/S2 results commit and instructed proceeding; committed as `73cb659`. T28 now persists versioned canonical vectors and separate scoped source bindings, with atomic publication after teardown/source revalidation, explicit retries, interrupted-intent recovery and accurate status. [Evidence and CP10 technical review](docs/benchmarks/t28-indexing.md): 37 new cases, full suite 424 passed/one existing skip and warning, application/test Ruff passed, space mutation caught/restored and three process-exit boundaries verified. No model/DLL trial, dependency, lifecycle or stage change occurred; S1/S2 remain preserved/closed. T28 source/results commit and CP10 review await approval. T29 scoped retrieval follows; native sqlite-vec search/query execution remains that task, with the approved backend unchanged.
+
+## Earlier execution point — T27 owner and native package approved; offline start pending
+
+After client commit `ae1f611`, the user instructed proceeding with the remaining runtime work. T27-D/E now implement an exclusive runtime session, atomic Windows job creation, listener/handle/resource checks, teardown and a shared-budget supervised smoke handoff. [Verification](docs/benchmarks/t27-runtime-owner.md): 36 new fake/data-only cases; full suite 365 passed/one existing skip and warning, Ruff passed. [T27-S1](docs/proposals/t27-runtime-smoke.md) and its 25-file source seal are prepared but unexecuted; the user explicitly approved the exact native package and 15-file source commit on 2026-11-20. The operator will disconnect external networking once preparation is complete; execution awaits that confirmation. No native/model execution, installation, private sample or app readiness change occurred. T27/CP10 remain open; T28 follows actual-runtime verification rather than skipping it.
+
+## Earlier execution point — T27 client closeout and commit approved; runtime integration pending
+
+The user's next-step instruction after T26 commit `f7f0a90` authorizes T27 implementation using the approved Nomic/Ollama selection. Bounded HTTP transport, pinned embedding identities/vector validation and synthetic real-loopback checks are implemented sequentially. There are 56 new tests; full suite: 329 passed, one existing skip and warning, Ruff passed. [Evidence and limits](docs/benchmarks/t27-embeddings.md). No dependency/native process/model execution or readiness change occurred. Production service ownership/global job coordination and a separately authorized actual-model smoke remain open before live integration; the client defaults to refusing requests without an owner check. The user explicitly approved the reviewed T27 client closeout and ten-file commit on 2026-11-20. T28 is unstarted and CP10 remains open.
+
+## Earlier execution point — T26 complete; closeout and commit approved
+
+The user's instruction to start T26 authorizes this task after T25 commit `ebbe77b` and accepted CP09. Pure source-preserving chunking is implemented with the approved provisional 600/800/120-byte policy. Sequential prose, structured-table/CSV and integration/review increments passed 32 new tests; full suite: 273 passed, one existing skip and warning, Ruff passed. [Evidence, provenance examples and limits](docs/benchmarks/t26-chunking.md). No dependency, storage schema, model execution or readiness change occurred. The user explicitly approved the reviewed T26 closeout and ten-file commit on 2026-11-20; T27 remains unstarted and CP10 remains open through T28.
+
+## Earlier execution point — T25/CP09 closeout and commit approved; T26 next session
 
 The user's continuation after T24 commit `0e4502f` authorized T25. Streaming CSV provenance, atomic versioned normalized storage/recovery, bounded scoped JSON previews and derived-operation status are implemented sequentially under T25-A/B/C. Final suite: 241 passed, one existing permission skip and warning; Ruff passed. [Evidence, CP09 walkthrough and limits](docs/benchmarks/t25-csv.md). The user explicitly approved the reviewed T25/CP09 closeout and seventeen-file commit on 2026-11-20, and requested that T26 begin in a new session. T26 has not started.
 
@@ -390,9 +446,9 @@ T08 depends on T05 and T07 (T06 and T07A excluded). T17 must resolve all three r
 
 The user approved all three improvements while authorizing the complete T07 package: consolidate settled SPEC decisions, bundle exact bounded-task permissions, and prioritize model feasibility plus the CSV-first slice. The T07 approval covers its three pins, fixtures, tests, measurements and specified budgets without another task-start question. Git commit, G2 adoption, scope changes and work exceeding approved artifacts/budgets still need explicit approval.
 
-Revised execution order after T07: **T10 → T11A → T08 → T09 → T11 → T12 → T16 → T17/G2 → T18–T34**, with T15 before T33. T11A uses fixed verified evidence to expose CPU-only chat limitations early; T11 later combines those settings with OCR/embedding contention after T09. No model provisioning is authorized by moving the task. T08 MarkItDown remains required before parser adoption; T07A XLS is deferred. T16A chart evaluation or an explicit runtime-scope decision remains required at G2.
+Revised execution order after T07: **T10 → T11A → T08 → T09 → T11 → T12 → T16 → T17/G2 → T18–T34 → T34A**, with T15 explicitly skipped by the user's 2026-11-20 decision. T11A uses fixed verified evidence to expose CPU-only chat limitations early; T11 later combines those settings with OCR/embedding contention after T09. No model provisioning is authorized by moving the task. T08 MarkItDown remains required before parser adoption subject to its later approved exception; T07A XLS is deferred. T16A chart evaluation is subject to its later explicit post-T34 deferral.
 
-T13/T14 optional developer-tool reviews move after the first CSV slice (or immediately before proposed tool use); they cannot block core architecture or a working answer path. T15 UI UX Pro Max stays a separate evaluation before frontend implementation, with manual design as a reviewed alternative. No tool is implicitly adopted, installed or declared evaluated. Core G2 approves the already selected minimal HTML/CSS/JavaScript approach; later design-aid evaluation cannot silently change that stack.
+T13/T14 optional developer-tool reviews move after the first CSV slice (or immediately before proposed tool use); they cannot block core architecture or a working answer path. T15/UI UX Pro Max is skipped at the user's explicit request; perform frontend design/accessibility review manually. No skipped tool is declared evaluated or adopted. Core G2 approves the already selected minimal HTML/CSS/JavaScript approach; another framework requires a separate decision.
 
 This order prioritizes CSV upload → retrieval → local answer → citation → saved conversation. XLSX, native/scanned PDFs, lifecycle, privacy and full acceptance remain required later slices; a first CSV demo does not satisfy all Stage 1 criteria. Complete-model resource adoption still needs combined evidence, not early fixed-evidence timings alone.
 
@@ -514,7 +570,7 @@ For each candidate/artifact, record exact upstream repository/version/digest whe
 | T10/T11 | Ollama embedding/chat candidates | Actual-machine quality/latency/memory; `embeddinggemma` and `qwen2.5:3b` are candidates, not defaults |
 | T12 | SQLite metadata plus local vector alternatives | Minimal representation versus justified index library; ranking/persistence/delete/rebuild/versioning and interrupted-write integrity |
 | T13 and T14, separately | User-intended RTK and ponytail | Exact identity first; one representative developer-workflow trial, trust/license/Windows support and benefit; no assumptions from names |
-| T15 — before UI implementation | UI UX Pro Max | Local non-sensitive design exercise, generated-code/asset review, licensing, accessibility, upload/chat/library/citation states; manual design fallback |
+| T15 — skipped by user | UI UX Pro Max | No source review, trial, installation or use; manual accessibility/upload/chat/library/citation review remains part of T33 |
 | Checkpoints | `/status`, `/compact` | Host availability and persisted state; neither is a runtime dependency |
 
 Reading the explicitly requested local planning skill is authorized; it did not execute bundled scripts or install tools. T04 concerns later acceptance of additional third-party instructions. If an optional tool is unavailable, ambiguous or rejected, record the evidence and obtain agreement on deferral/manual fallback. Do not block required product functionality indefinitely or silently skip a mandated evaluation.
@@ -548,7 +604,8 @@ TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 
 | M0 — Decisions/evaluations/design | T01 decisions; T02 fixtures/rubric; T03 environment/dependencies; T04 SkillSpector; T05 PDF; T02R corpus revision; T06 excluded; T07 XLSX/CSV; T10 embeddings; T11A early chat; T07A XLS (deferred); T08 MarkItDown; T09 OCR; T11 combined chat; T12 storage; T16 grounding; T17 core architecture | G1 trial approvals throughout; G2 design/component adoption before app code |
 | M1 — Minimal foundations | T18 reproducible project; T19 local startup/config; T20 ownership persistence; T21 provenance contracts; T22 fixture harness | Tested foundations only; no complete future schema or unused modules |
 | M2 — First upload slice | T23 safe CSV attachment; T24 batch/status; T25 extraction/preview | User can upload and inspect traceable local text |
-| M3 — First answer slice | T26 chunk; T27 embed; T28 index; T29 retrieve; T30 grounded chat; T31 citations; T32 indicator; T15 UI aid review; T33 browser flow; T34 saved chats | CSV upload → answer/abstention → citation → restart/reopen |
+| M3 — First answer slice | T26 chunk; T27 embed; T28 index; T29 retrieve; T30 grounded chat; T31 citations; T32 indicator; T33 manual browser flow; T34 saved chats; T15 skipped | CSV upload → answer/abstention → citation → restart/reopen |
+| CSV validation before expansion | T34A — selected-runtime input boundaries and real CSV pipeline | Bounded ground-truth/fit findings and explicit remaining limitations before T35; T48 remains the final all-format baseline |
 | M4 — Required format expansion | T35 native PDF; T36 scanned/mixed OCR; T37 XLS (deferred); T38 XLSX; T39 CSV robustness; T40 mixed-format integration | Three formats with table/image/OCR provenance and disclosed limitations |
 | M5 — Library and lifecycle | T41 library upload/list; T42 references/scope; T43 impact warnings; T44 document removal; T45 chat deletion | Shared bytes, safe scope, approved removal/retention and citations |
 | M6 — Acceptance | T46 security/recovery; T47 offline traffic; T48 quality/resource baseline; T49 setup/inventory/docs; T50 demo/sign-off | G4 evidence; no automatic Stage 2 transition |
@@ -557,12 +614,12 @@ TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 
 G0 → T01 → T02 → T03 → G1 approvals for trials
 T02/T03 → T04 → T05; T02R → T07; T05/T07 → T08 → T09
 T07 → T10 → T11A → T08/T09 → T11 → T12
-T34 → T13/T14 (or before tool use); T17 → T15 → T33
+T34 → T13/T14 (or before tool use); T15 skipped; T17's approved manual frontend approach → T33
 Required parser/model/storage/grounding evidence → T16 → T17 → G2 (T13–T15 do not block core G2)
 G2 → T18 → T19 → T20 → T21 → T22
 T22 → T23 → T24 → T25 → T26 → T27 → T28 → T29
 T29 → T30 → T31 → T32 → T33 → T34
-T34 → T35 → T36 → T38 → T39 → T40
+T34 → T34A → T35 → T36 → T38 → T39 → T40
 T40 → T41 → T42 → T43 → T44 → T45
 T45 → T46 → T47 → T48 → T49 → T50 → G4
 ```

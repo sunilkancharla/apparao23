@@ -63,7 +63,9 @@ def _asset(
 
 
 def _model(root: Path, component: str, relative: str, digest: str) -> ComponentState:
-    manifest = root / "manifests/registry.ollama.ai/library" / relative
+    # The selected Ollama 0.40.16 store uses this versioned layout. A legacy
+    # registry path is not an alternate source for an approved model identity.
+    manifest = root / "manifests-v2/ollama.com/library" / relative
     result = _asset(component, manifest, digest, 65536)
     if not result.code.endswith("_VERIFIED"):
         if result.code.endswith("_MISSING"):

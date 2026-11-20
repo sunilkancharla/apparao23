@@ -78,7 +78,7 @@ Use skills as workflows, not mandatory application dependencies. Load only relev
 
 - Prove CPU-only embedding/chat feasibility early using fixed, verified evidence before completing all optional-tool investigations. Combined OCR/model resource checks still precede final adoption.
 - Deliver the CSV upload → retrieval → local answer → citation → saved-conversation vertical slice before expanding product ingestion. Legacy XLS is deferred outside Stage 1 by explicit user direction; preserve its historical evidence without further trials.
-- Optional developer tools do not block core architecture or the first slice. Evaluate a tool before installing/relying on it; keep UI UX Pro Max's separate review before frontend implementation. No automatic adoption or removal of mandatory format/OCR/privacy acceptance follows from prioritization.
+- Optional developer tools do not block core architecture or the first slice. Evaluate a tool before installing/relying on it. The user explicitly skipped UI UX Pro Max: do not review its sources, install or use it unless requested again. Use manual frontend design/accessibility review with the approved stack. No automatic adoption or removal of mandatory format/OCR/privacy acceptance follows from prioritization.
 
 ## Python, dependencies and architecture
 
@@ -125,7 +125,7 @@ When planning is authorized, create separate PLAN/TODO evaluation tasks before i
 | Before accepting additional third-party skills | SkillSpector | Verify availability; inspect skill instructions/scripts/permissions/outbound calls and manually review findings; not a security guarantee |
 | Ingestion/parser design | Microsoft MarkItDown | Compare with format-specific parsers/local OCR across PDF/XLSX/CSV, tables, provenance, scans/images, time/RAM, footprint, and offline behavior |
 | OCR design | Local OCR engines | Compare Windows/CPU support, approved languages, fidelity, license, native assets, size, and local-only operation |
-| Frontend design | UI UX Pro Max | Evaluate accessibility, upload/status states, chat/library flows, citation previews, generated code/assets, and licensing |
+| Frontend design | Manual design review; UI UX Pro Max skipped by user | Review accessibility, upload/status states, chat/library flows and citation previews without reviewing/installing/using the skipped tool |
 | Developer-tool review | RTK and ponytail, separately | First confirm exact projects/intended benefits; compare trust, license, Windows support, and measured workflow value |
 | Workflow checkpoints | `/status`, `/compact` | Verify host support; persist decisions/task/test evidence before compaction |
 

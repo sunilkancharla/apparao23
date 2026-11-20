@@ -13,6 +13,7 @@ from starlette.exceptions import HTTPException
 from starlette.middleware.base import RequestResponseEndpoint
 from starlette.responses import Response
 
+from app.api.chat import router as chat_router
 from app.api.sources import router as source_router
 from app.config import ConfigurationError, Settings, prepare_data_root
 from app.diagnostics import ComponentState, inspect_prerequisites, reserve_port
@@ -75,6 +76,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         redoc_url=None,
     )
     csrf_token = secrets.token_urlsafe(32)
+    application.state.chat_service = None
 
     @application.middleware("http")
     async def local_boundary(
@@ -84,7 +86,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         origins = request.headers.getlist("origin")
         tokens = request.headers.getlist("x-csrf-token")
         mutation_allowed = (
-            request.method == "POST"
+            request.method in {"POST", "PUT"}
             and origins == [config.origin]
             and len(tokens) == 1
             and tokens[0].isascii()
@@ -218,6 +220,85 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         """Return safe startup diagnostics, never asset paths or private text."""
         return JSONResponse(request.app.state.health.model_dump(), status_code=503)
 
+    @application.get("/api/session")
+    def session() -> dict:
+        """Convey the ephemeral CSRF value to same-origin clients; never persist it."""
+        return {"data": {"csrf_token": csrf_token}}
+
+    @application.post("/api/conversations/{conversation}/attachments")
+    async def attachment(conversation: str, request: Request) -> JSONResponse:
+        """Accept a raw CSV body; validate metadata before consuming any bytes."""
+        try:
+            _uuid(conversation)
+            metadata = {}
+            for key in ("x-filename", "idempotency-key", "content-type"):
+                values = request.headers.getlist(key)
+                if len(values) != 1:
+                    raise UploadError("INVALID_REQUEST")
+                metadata[key] = values[0]
+            key = metadata["idempotency-key"]
+            if not re.fullmatch(r"[A-Za-z0-9_-]{16,128}", key):
+                raise UploadError("INVALID_REQUEST")
+            raw_name = metadata["x-filename"]
+            if re.search(r"%(?![a-fA-F0-9]{2})", raw_name):
+                raise UploadError("INVALID_FILENAME")
+            try:
+                name = validate_filename(unquote(raw_name, errors="strict"))
+            except UnicodeError:
+                raise UploadError("INVALID_FILENAME") from None
+            if not re.fullmatch(
+                r'(?:text/csv|application/octet-stream)(?:\s*;\s*charset="?utf-8"?)?',
+                metadata["content-type"].lower(),
+            ) or request.headers.getlist("content-encoding"):
+                raise UploadError("UNSUPPORTED_FORMAT", 415)
+            lengths = request.headers.getlist("content-length")
+            if len(lengths) > 1 or (
+                lengths and not re.fullmatch(r"[0-9]{1,18}", lengths[0])
+            ):
+                raise UploadError("INVALID_REQUEST", 400)
+            declared = int(lengths[0]) if lengths else None
+            batch_files = request.headers.getlist("x-batch-file-id")
+            if len(batch_files) > 1:
+                raise UploadError("INVALID_REQUEST")
+            batch_file = _uuid(batch_files[0]) if batch_files else None
+            if (
+                declared is not None
+                and declared > MAX_FILE_BYTES
+                and batch_file is None
+            ):
+                raise UploadError("FILE_TOO_LARGE", 413)
+            store = request.app.state.upload_store
+            if store is None:
+                raise UploadError("STORAGE_UNAVAILABLE", 503)
+            data = await store.receive(
+                request.stream(), conversation, key, name, declared, batch_file
+            )
+            return JSONResponse({"data": data}, status_code=202)
+        except UploadError as error:
+            messages = {
+                "INVALID_FILENAME": "Use a plain Windows-safe CSV filename.",
+                "UNSUPPORTED_FORMAT": "This route accepts UTF-8 CSV files only.",
+                "INVALID_CSV": "The file is empty, malformed CSV or uses an unsupported encoding.",
+                "FILE_TOO_LARGE": "The file exceeds the 100 MB upload limit.",
+                "REFERENCE_LIMIT": "This conversation already has ten document references.",
+                "CONVERSATION_NOT_FOUND": "The conversation does not exist.",
+                "IDEMPOTENCY_CONFLICT": "This upload key was already used for different content or metadata.",
+                "UPLOAD_PENDING": "An earlier upload is unresolved; do not submit it with a new key.",
+                "UPLOAD_FAILED": "This upload attempt failed; a new upload needs a new key.",
+                "CLEANUP_PENDING": "Upload cleanup is pending; restore storage access and restart the app.",
+                "SOURCE_UNAVAILABLE": "The stored source is missing or corrupt; it was not recreated.",
+            }
+            return _error(
+                error.code,
+                messages.get(
+                    error.code,
+                    "Upload could not complete; check the file, storage limits and operation state.",
+                ),
+                error.status,
+            )
+
+    application.include_router(source_router)
+    application.include_router(chat_router)
     return application
 
 

@@ -1,4 +1,94 @@
-## Current task — T25 complete; closeout and commit approved; T26 next session
+## Current task — T26–T32 committed; stop before T33
+
+T32 source/results and approved workflow decisions are committed as `c3c6e61`; T26–T32 are complete within their recorded implementation/bounded-validation scopes. Last verified suite: 579 passed/one existing skip and warning, scoped Ruff passed. The explicitly requested [Session 4 summary](docs/session_summaries/SESSION_4_AI_Session_SUMMARY.md) follows Session 3's format and records actual Git inventories/evidence. T15/UI UX Pro Max source review/use is skipped. T33 remains unstarted and reserved for a new session; retain manual frontend review with the approved stack. T34A is scheduled after T34/CP12 and before format expansion, with the exact native execution package still gated. Earlier summaries, source seals and all closed allocations are preserved. Finish the approved summary/status commit and stop; no T33 implementation or new model/tool trial is included.
+
+## Earlier task — T32 verified; commit pending; T15 review before T33
+
+T31 is committed as `fd830e5`, with CP11 accepted. T32-A/B/C are implemented and verified: [evidence](docs/benchmarks/t32-evidence-support.md), 30 unit and eight integration cases; full suite 579 passed/one existing skip and warning, scoped Ruff passed, 72 files formatted. Failure/no-evidence mutation caught/restored before full regression. Signals distinguish current checked citations from unverified input fit, preserve independent warnings and give N/A denominators to applicable clarification/refusal/no-evidence cases; no correctness score or semantic assurance is emitted. Thirteen-file source/results commit awaits approval. T15 source-only UI aid review is proposed next, as required before T33; no install/trial/framework decision is implied. Prior allocations stay closed; no schema, dependency, retention, readiness or stage change.
+
+## Earlier task — CP11 accepted; T31 commit approved; T32 authorized
+
+The user explicitly accepted CP11, approved the reviewed 12-file T31 source/results commit and instructed proceeding to T32 on 2026-11-20; T31 is committed as `fd830e5`. T32-A implements the approved observable-state classifier, declared-block counts, fixed explanations and independent warnings. T32-B adds ephemeral source/OCR observations and the indicator to POST/saved-answer HTTP envelopes, preserving raw historical storage/replay and source-preview semantics. T32-C verifies the truth table, error/no-evidence precedence, no semantic assurance and routine regression/review. Intended files: `app/chat/evidence.py`, narrow citation/service/answer-route integration, indicator unit/integration tests and affected documentation. Each increment is tested before proceeding. No schema, dependency, retention, model setting, native trial or stage change is authorized; new source commits retain their gate.
+
+Use fresh ignored `data/t32-01/`: 64 total routine starts, prepaid red 6, green 10, regression 22 (controller/children/controls), quality 8 (each Windows Ruff wrapper plus child charged as two before launch), mutation 2 = 48. The existing shared 120-second/64-start/2,000,000-byte per-run harness and 2,000,000 combined metered artifact/log/review-byte ceiling apply. No refunds/reset or reuse of closed ledgers. Acceptance: hard failures cannot become successful no-evidence/resolved signals; unknown context fit remains incomplete when generation was applicable; no-evidence without inference and clarification/refusal coverage are N/A; source/OCR/coarse/partial/omission warnings stay visible; counts describe declared blocks only; no correctness percentage or model-self-assessed meaning grade. No actual model/native run, install/download or private corpus is included.
+
+## Earlier task — T31 verified; CP11 review and commit pending
+
+T30 results are committed as `aff116e`. T31-A/B/C are implemented and verified: [evidence and CP11 review](docs/benchmarks/t31-citations.md), 35 new cases, full suite 541 passed/one existing skip and warning, scoped Ruff passed; cited-ID scope mutation caught/restored. Current-source previews derive checked normalized quotations/locations, enforce saved answer/conversation scope and escape the complete bounded response. Historical reads label unavailable or not-revalidated citations without replacing saved text or retaining new quote snapshots. Twelve-file source/results commit and CP11 acceptance await approval; T32 is next and unstarted. Native allocations remain closed; no schema, dependency, retention, readiness or stage change.
+
+## Earlier task — T30 results commit approved; T31 authorized
+
+The user explicitly approved the eight-document T30-N1 results closeout and instructed proceeding to T31 on 2026-11-20; T30 results are committed as `aff116e`. T31-A validates quotation spans/locations against normalized units and rejects inconsistent citation bindings. T31-B resolves saved answer/citation scope against current originals/extraction/index state and derives escaped previews, without new quotation snapshots. T31-C adds bounded scoped HTTP preview/status annotations, verifies missing/changed-source behavior and reviews CP11. Each increment is tested before the next. Intended files: `app/chat/citations.py`, `app/api/sources.py`, `app/api/chat.py`, focused citation/preview tests and affected documentation. Preserve every consumed native allocation/seal; no native retry, new dependency, schema/retention change or stage transition is authorized. T31 source changes retain their own commit gate.
+
+Routine allocation: fresh ignored `data/t31-01/`, 64 total starts, explicitly prepaid red 6, green 14, regression 22 (controller and all children/controls), quality/consistency 8, mutation 2 = 52 starts, no refunds/reset. Each run retains the existing shared 120-second/64-start/2,000,000-byte harness; conservative phase charges and combined retained artifact/log bytes also remain within this task allocation. No actual model/DLL/OCR execution, install, download or private document is included. Acceptance: supplied/cited IDs only, checked source spans and genuine coordinates, no current preview for unavailable/changed sources, historical answer still readable/labelled, escaped bounded output, conversation isolation, full routine regression and caught/restored scope mutation. Semantic claim correctness and later-format runtime ingestion remain unverified.
+
+Closeout accounting correction: five Windows `python -m ruff` commands each spawn a Ruff child. Quality charges were understated during execution; corrected to ten starts and assigned two previously unallocated starts to that phase, for 54 total conservative charges/prepaid starts under the unchanged 64-start ceiling. No extra command or reset occurred. The report preserves this procedural limitation; future quality admission must precharge both wrapper and child. Full regression observed 18 starts within 22 reserved, without refund. The allocation is closed after final artifact/diff accounting.
+
+## Earlier task — T30-N1 passed; results commit and T31 next
+
+T30 source/handoff is committed as `07a7d27`; the operator completed the approved disconnected run and requested review. [T30-N1 receipts](docs/benchmarks/t30-model-smoke.md) passed the actual Qwen generation/persistence bridge: 42 present, supplied-only citations, exact saved exchange after reopen and private port release. All 35 source pins/executable/manifest identities match and 14 earlier native receipt hashes remain unchanged. Counters are within bounds: 18 charged starts, five HTTP attempts, ten sampled cumulative positive-tree starts, 76,825 charged retained bytes and no stop. T30 implementation/routine/bounded native verification is complete; preserve the closed allocation without retry/reseal. Eight-document results/status commit awaits approval. T31 is next and unstarted; no broader quality/resource acceptance, runtime adoption, readiness or stage change follows. Earlier pending wording below is historical.
+
+## Earlier task — T30 commit/native package approved; offline operator run pending
+
+The user explicitly approved the reviewed 23-file T30 source/status/handoff commit and exact [T30-N1 package](docs/proposals/t30-model-smoke.md) on 2026-11-20. Record the commit and verify unchanged source pins/fresh native root; the operator then disconnects, runs the approved command locally once and reconnects for receipt review. No offline chat reply or further project approval is required. Native T30 verification/T31 remain pending actual results; no stage transition is implied. Earlier pending wording below records the preceding review point.
+
+## Earlier task — T30 routine verified; commit/native smoke proposed
+
+[T30 results](docs/benchmarks/t30-grounded-chat.md): 40 new cases, full suite 506 passed/one existing skip and warning, scoped Ruff passed, publication mutation caught/restored and two process-exit recovery boundaries verified. Generation/prompt packing, schema v6 selections/intents/exchanges, source-checked atomic publication and local HTTP routes are implemented. T29 results commit is `b301d1d`; prior native allocations remain preserved/closed. Reviewed 23-file T30 source/status/handoff commit and [T30-N1](docs/proposals/t30-model-smoke.md) execution await approval. The 35-file native seal is prepared; no model/native run occurred. T31 is unstarted and follows native verification. No new dependency, full-source quotation snapshot policy, readiness or stage change.
+
+## Earlier task — T30 authorized; T29 results committed
+
+T29-N1 results are committed as `b301d1d`; the user explicitly instructed T30. Ordered increments: T30-A — pinned Qwen chat client, structured output and whole-request prompt packing; T30-B — exact schema v6, saved selections/revisions, idempotent intents, complete exchanges and interrupted-intent recovery; T30-C — source-checked orchestration, bounded answer/selection HTTP routes and mock integration/review. Each increment is verified before proceeding. Intended source/test groups are `app/chat/` plus generation tests; database/messages plus storage tests; then runtime/transport/API integration plus chat tests. No UI, citation preview resolver, deletion, new dependency, model installation or native trial is included. Minimal backend selection revision handling is required now for C04/C06 publication safety; the browser selection flow remains T33.
+
+T30-D prepares a separately proposed native chat handoff/helper/seal after A–C verification: one owned Qwen tree, authored North/42 evidence, fixture retrieval/embedding seams and real generation/persistence/reopen checks, reusing the reviewed generic meter/supervisor with a distinct T30-N1 identity/root. Routine gate tests remain fake; no actual model/native execution is authorized by this preparation. Its exact source/model/settings, allocation and disconnected handoff are reviewed before requesting that separate execution decision.
+
+Use approved Qwen2.5 1.5B identity and recorded CPU/2048-context/192-output settings, explicit model termination/error handling, 512-byte questions, 2,000-byte evidence, two/500-byte history pairs and a 3,000-byte complete request guard. Exact token fit remains unverified; no external fallback. Persist answer/message/citation-identity metadata, not new full-source quotation snapshots. Routine allocation: 64 starts, prepaid red 4, green 6, regression 24 including controllers/children/controls, quality/consistency 8, mutation 2 = 44 starts, no reset/refund. Retain existing 120-second per-run admission/owned-child deadlines and 2,000,000 combined metered artifact/child-output bytes, recording charges under ignored `data/t30-01/`. All previous trials stay closed. New source commit and any actual chat-model trial remain separately gated.
+
+## Earlier task — T29 results commit approved; T30 authorized
+
+The user explicitly approved the eight-document T29-N1 results closeout and instructed proceeding to T30 on 2026-11-20. Preserve the completed native root/receipts/seal; no additional trial or stage transition is implied. T30 implementation follows the approved generation/history/source-publication contract, with its new source commit and any new native package retaining separate gates. Earlier pending wording below describes the preceding results review.
+
+## Earlier task — T29-N1 passed; results commit and T30 next
+
+T29 source/handoff committed as `4a618c2`; the operator completed the approved disconnected run and requested inspection. [T29-N1 review](docs/benchmarks/t29-native-search.md): passed, two expected ranked records/two evidence items, 768 dimensions, SQL load denied, integrity `ok`, worker reaped; two prepaid Python starts/one recorded DLL load. All 29 sealed sources/three asset pins match, S1/S2 receipts remain unchanged, and N1 is preserved/closed without retry or reseal. T29 implementation/routine/bounded native verification is complete. Eight-document results/status commit awaits approval; T30 is next and unstarted. No new trial, model run, readiness or stage change occurred during this read-only review. Earlier pending wording below is historical.
+
+## Earlier task — T29 routine verified; source commit/native bridge check proposed
+
+[T29 results](docs/benchmarks/t29-retrieval.md): selected-scope cosine ranking, current-source rechecks and complete evidence packing are implemented; 42 new cases, full suite 466 passed/one existing skip and warning, application/test/helper Ruff passed. T28 commit `e9d5580` and CP10 acceptance are recorded. Scope mutation caught/restored; no real DLL/model trial occurred. Reviewed 14-file source/status/handoff commit and [T29-N1](docs/proposals/t29-native-search.md) execution await approval; native bridge verification remains pending and T30 is unstarted.
+
+## Earlier task — T29 implementation authorized; T28 committed
+
+T28 is committed as `e9d5580`; CP10 is accepted. T29 proceeds in ordered increments: A — pinned sqlite-vec loader/cosine adapter and query-vector validation; B — selected-reference eligibility, stable top-five ranking and complete evidence packing; C — source-version rechecks, deterministic small retrieval evaluation and review. Intended files: `app/retrieval/search.py`, `app/retrieval/vector_search.py`, retrieval unit/integration tests and current docs/report/ADR. Use the existing canonical vector BLOBs and selected native cosine function; no schema, install, model, fallback backend or retention change. Native MATCH optimization is not implied by the earlier benchmark; document this streaming scalar-query implementation's distinct performance limits.
+
+Routine T29 checks use existing mocked-model/native seams and the shared harness. One fresh task allocation: 64 starts, explicitly prepaid red 4, green 6, regression 22 (controllers/children/controls), quality/consistency 8, mutation 2 = 42 starts, no reset/refund; 120-second per-run admission/owned-child deadlines and 2,000,000 combined metered artifact/child-output bytes. Record charges in ignored `data/t29-01/`. No real DLL/Ollama run in this routine allocation; native validation needs its own reviewable package before execution. Preserve S1/S2 and all earlier ledgers/seals. Scope is explicit selected CSV references until saved-selection UI/later formats exist; omitted selection must not broaden scope. T29 source commit remains separately gated.
+
+## Earlier task — CP10 accepted; T28 commit approved; T29 authorized
+
+The user explicitly approved all reviewed T28/CP10 items, requested the 13-file T28 commit and instructed proceeding to T29 on 2026-11-20. CP10 is accepted; no stage transition or additional native trial is implied. T29 implementation follows the approved retrieval contract; its new source commit remains separately gated. Earlier pending-approval wording below describes the reviewed closeout before this decision.
+
+## Earlier task — T28 verified; CP10 review and commit pending
+
+The user approved the reviewed 16-file T27 repair/results commit and instructed proceeding; committed as `73cb659`. T28 increments A/B/C are implemented and verified using existing Python/SQLite and frozen little-endian float32 vectors for the approved sqlite-vec backend. [Results and CP10 technical review](docs/benchmarks/t28-indexing.md): 37 new cases; full suite 424 passed/one existing skip and warning, application/test Ruff passed, space-identity mutation caught/restored, three forced exits/restarts passed. Content reuse preserves separate provenance/scope; incomplete, failed or incompatible generations cannot claim current readiness. T28 commit and CP10 review await approval. T29 search/query execution is next; no model/DLL trial, new dependency, retention or stage change, or S1/S2 reopening occurred.
+
+T28 increments: A — schema/vector persistence and validation; B — streamed stored-CSV orchestration/deduplication; C — recovery/status/integration/review. Routine checks use the existing shared harness and a task-wide explicit allocation: 64 total starts, with precharged suballocations red 4, green 6, full regression 24 (including children), quality/consistency 8 and mutation 2 (44 prepaid, no refunds/resets). Keep the existing 120-second per-run admission/owned-child deadline and 2,000,000-byte combined metered artifact/child-output ceiling; record cumulative charges in ignored `data/t28-01/`. No native model/DLL trial or benchmark is included. Stop on exhausted phase, unresolved regression, source/scope ambiguity or a required architecture/retention change. New source commit remains separately gated.
+
+## Earlier task — T27-S2 passed; T28 indexing next
+
+The operator completed approved R1-D/S2 and requested inspection. [S2 report](docs/benchmarks/t27-runtime-smoke-02.md): passed; two document/one query vectors, matching space, owned positive/cancellation teardown and released port. Final meter: 34/64 charged starts, 10/12 calls, 85,878 retained charged bytes, no stop. All 25 source hashes match; S1 receipts remain unchanged. Both run allocations are preserved/closed without rerun. T27 implementation and bounded integration verification are complete; repair/results commit awaits approval. Existing [routine evidence](docs/benchmarks/t27-preflight-correction.md): 387 passed/one existing skip and warning, Ruff passed. T28 indexing is next and unstarted; CP10 remains open through T28. No readiness or stage transition.
+
+## Earlier task — T27 owner and native package approved; offline start pending
+
+The user's continuation after `ae1f611` authorized implementing the missing owner and preparing its exact smoke. [T27-D/E evidence](docs/benchmarks/t27-runtime-owner.md): 36 new fake/data-only cases; full suite 365 passed/one existing skip and warning; Ruff passed. Final shared routine meter: 13/64 starts, 331,210/2,000,000 retained artifact/child-output bytes. The listener-check mutation failed and was restored exactly; a blocked-loop watchdog regression was fixed. [T27-S1](docs/proposals/t27-runtime-smoke.md) defines a fresh shared allocation and source seal, is unexecuted; the user approved it and the 15-file source commit on 2026-11-20. Execution awaits the operator confirming external networking is disconnected. No real job/Ollama/model execution, download, private sample or readiness change. T27/CP10 stay open; T28 is next after runtime verification.
+
+## Earlier task — T27 client closeout and commit approved; runtime integration pending
+
+The user authorized the next step after T26 commit `f7f0a90`, starting T27's approved local embedding client. [Evidence](docs/benchmarks/t27-embeddings.md): 56 new cases; full suite 329 passed/one existing skip and warning, Ruff passed. Synthetic loopback CSV chunk → document/query vector checks passed with inherited proxies disabled; the wrong-digest mutation was caught and restored exactly. Shared final suite meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No download, dependency/native/model run, private sample read, schema or readiness change. The user explicitly approved the reviewed T27 client closeout and ten-file commit on 2026-11-20; production owned-service/global lease integration and the separately authorized actual-model smoke remain pending. T28 is unstarted.
+
+## Earlier task — T26 complete; closeout and commit approved
+
+The user explicitly instructed starting T26 after T25 commit `ebbe77b` and accepted CP09. [Chunking evidence](docs/benchmarks/t26-chunking.md): prose, table/CSV and stored-extraction integration increments completed; 32 new tests, full suite 273 passed/one existing permission skip and warning, Ruff passed. The 800-byte boundary mutation was caught and the original source hash restored. Final shared suite meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run, private sample read, schema or readiness change. The user explicitly approved the reviewed T26 closeout and ten-file commit on 2026-11-20; T27 is unstarted.
+
+## Earlier task — T25 complete; closeout and commit approved; T26 next session
 
 The user authorized T25 by instructing continuation after T24 commit `0e4502f`. [CSV evidence](docs/benchmarks/t25-csv.md): T25-A/B/C completed sequentially; 32 new tests, full suite 241 passed/one existing permission skip and warning; Ruff passed. Actual loopback upload → extraction → anchored preview and two additional abrupt-exit cases passed. Shared final meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run or private sample read. The user explicitly approved the reviewed T25/CP09 closeout and seventeen-file commit on 2026-11-20. T26 is unstarted and reserved for a new session at the user's request.
 
@@ -1326,19 +1416,11 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 **Evidence:** Pending — `docs/benchmarks/ponytail.md`, trial/deferral and decision.
 **Likely files:** That report and at most one fixture description.
 
-### T15 — Evaluate UI UX Pro Max before frontend adoption
+### T15 — UI UX Pro Max evaluation skipped by user
 
-**Scheduling:** After core G2 and before T33; evaluate the aid/manual alternative without implicitly changing the approved frontend stack.
+**Status:** Skipped at the user's explicit direction, 2026-11-20. Do not review sources, install, trial or use the tool unless requested again. **Scheduling:** Removed as a prerequisite for T33; manual frontend accessibility/flow review remains required.
 
-**Status:** Proposed. **Prerequisites:** T02–T04; D05; exact optional tool/trial approved under G1. **Scope:** M, design aid only.
-**Objective:** Evaluate whether the aid improves required local browser flows without selecting a framework implicitly.
-
-- [ ] Verify repository/version, skill/scripts/code/assets licenses, Windows needs and file/network behavior; review generated outputs locally on non-sensitive content.
-- [ ] Compare a small chat/upload/library/citation-preview sketch with manual design for keyboard/focus/labels/contrast and loading/empty/error/status states; use supplied images only as references and obtain a tool decision.
-
-**Verification:** Walk the sketches against accessibility/flow criteria and review assets/code before reuse; a trial is not product UI implementation.
-**Evidence:** Pending — `docs/benchmarks/ui-ux-pro-max.md`, design notes and adopt/reject/defer decision.
-**Likely files:** That report, `docs/ui-design.md`, and at most two sketches.
+**Decision/evidence:** [Explicit user skip](docs/decisions.md#2026-11-20--t32-commit-approved-ui-aid-skipped-csv-validation-scheduled). No review/trial result is claimed and no empty tool report is required. Continue the already approved local HTML/CSS/JavaScript approach, Design 1/2 references and manual keyboard/focus/labels/contrast/state review under T33. Another framework/tool still requires approval.
 
 **Checkpoint CP05 — T13–T15:** Proposed. Review exact optional-tool identities/benefits and UI direction. Document approved deferrals/fallbacks; no automatic runtime additions. Apply G3.
 
@@ -1360,7 +1442,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Chart timing prerequisite resolved:** The user explicitly deferred T16A until after the first usable CSV flow/T34. The prior trial-or-deferral gate is satisfied by that timing decision; chart evaluation/adoption remains tracked before any chart-support claim. Other T17 prerequisites remain unchanged.
 
-**Status:** Proposed. **Prerequisites:** T01/T02/T02R/T03/T05/T07/T08/T09/T10/T11A/T11/T12/T16, T04 approved deferral, and chart-scope prerequisite above; all core blocking decisions resolved. T06 excluded; T13/T14 are scheduled after the first slice or before use; T15 remains required before T33, not core G2. **Scope:** M, review only.
+**Status:** Proposed. **Prerequisites:** T01/T02/T02R/T03/T05/T07/T08/T09/T10/T11A/T11/T12/T16, T04 approved deferral, and chart-scope prerequisite above; all core blocking decisions resolved. T06 excluded; T13/T14 are scheduled after the first slice or before use; T15 is skipped by the user; manual frontend review remains part of T33, not core G2. **Scope:** M, review only.
 **Objective:** Obtain G2 approval of exact components and interfaces before application implementation.
 
 - [ ] Present benchmark-backed parser/OCR/model/index/UI alternatives and selections, diagram/inventory, ownership/provenance/data-root/API/status/error boundaries, loopback security, retention and interruption/recovery design.
@@ -1491,95 +1573,117 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T26 — Chunk passages without losing source structure
 
-**Status:** Proposed. **Prerequisites:** T25; T16 chunk/context policy. **Scope:** M.
+**Status:** Complete; review and commit approved, 2026-11-20. **Prerequisites:** T25 (`ebbe77b`), accepted CP09; approved provisional T16 chunk policy; explicit user T26 instruction. **Scope:** M, sequential increments below.
 **Objective:** Produce deterministic bounded chunks with traceable boundaries.
 
-- [ ] Retain document/extraction/chunk identities, hashes, filename/format, exact/coarse locations and warnings under the approved size/overlap/context policy.
-- [ ] Preserve table headers/rows and native/OCR markers in contract fixtures; handle empty/oversized passages and cross-boundary evidence explicitly.
+| Increment | Objective / prerequisites | Acceptance / verification | Status |
+|---|---|---|---|
+| T26-A | Pure prose transform over T21/T25 contracts | Deterministic byte boundaries, complete overlap, exact normalized spans and explicit empty/oversized omissions | Verified; initial four failing/passing tests |
+| T26-B | Structured rows and CSV reconstruction after A | Preserve individual headers/keys/cells/anchors; no inferred CSV key or partial oversized row; native/OCR metadata | Verified; table cases failed before implementation and passed after |
+| T26-C | Boundary/negative/integration and quality review after B | Real stored CSV trace, exact 800-byte controls, version identities, mutation check, full suite and documentation | Verified; 32 new tests, full suite 273 passed |
+
+- [x] Retain document/extraction/chunk identities, hashes, filename/format, exact/coarse locations and warnings under the approved size/overlap/context policy.
+- [x] Preserve table headers/rows and native/OCR markers in contract fixtures; handle empty/oversized passages and cross-boundary evidence explicitly.
 
 **Verification:** Test-first deterministic boundaries/overlap/table/metadata checks and manual trace to expected anchors.
-**Evidence:** Pending — chunking tests and golden provenance examples.
-**Likely files:** `app/retrieval/chunking.py`, `app/retrieval/models.py`, `tests/unit/test_chunking.py`.
+**Evidence:** [T26 report](docs/benchmarks/t26-chunking.md): 32 new cases include persisted CSV envelope/unit integration, source/version identity, multibyte limits and omissions, original-span coverage, repeated context, formula-cache absence and coarse/native/OCR provenance. Full suite 273 passed/one existing skip and warning; Ruff passed. Boundary mutation failed both controls and the source hash was restored. Pure backend transform only; persistence/indexing, live scope enforcement and model fit remain later tasks. The 600/800/120 settings remain provisional; no full-size/target-machine quality or memory claim.
+**Files:** `app/retrieval/__init__.py`, `app/retrieval/chunking.py`, `app/retrieval/models.py`, `tests/unit/test_chunking.py`, `tests/integration/test_stored_chunking.py`; README, PLAN, TODO, contracts and linked report. CP10 remains open through T28.
 
 ### T27 — Embed through the approved local Ollama model
 
-**Status:** Proposed. **Prerequisites:** T26; approved T10/T17 selection. **Scope:** M.
+**Status:** Complete and committed as `73cb659`, 2026-11-20. Client `ae1f611`, owner/handoff `67bdd7f` and S1 review `8fabbfa` preceded it; S1 closed on preflight failure, corrected S2 passed and closed. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step/remaining-runtime instructions and R1/S2 approval. **Scope:** M, sequential increments below; native proof is limited to the documented S2 smoke.
 **Objective:** Add bounded loopback embeddings with explicit model/dimension/error handling.
 
-- [ ] Use only the approved endpoint/model with bounded batches/timeouts and recorded model identity/dimensions; validate missing/invalid/incompatible/truncated responses according to contract.
-- [ ] Surface absent service/model, timeout and malformed-response errors without downloads, sensitive logs or remote fallback.
+| Increment | Objective / prerequisites | Acceptance / verification | Status |
+|---|---|---|---|
+| T27-A | Bounded loopback HTTP seam over existing HTTPX | Explicit owner check, no proxy/redirect escape, bounded JSON, safe errors and deadline | Verified; native owner supplied by D and exercised in S2 |
+| T27-B | Pinned document/query embeddings after A | Version/digest/prefix/dimension identity, complete batches, finite normalized vectors and source hashes | Verified with mocked responses; negative controls caught truncation/Unicode gaps before fixes |
+| T27-C | Synthetic loopback integration and review after B | Real HTTP CSV chunks/query flow, proxy isolation, unowned refusal, cancellation/busy/combined deadline, mutation and full suite | Verified; 56 new cases, full suite 329 passed |
+| T27-D | Owned runtime and shared admission after client commit | Atomic job startup/handle/listener checks; shared upload slot, independent watchdog, safe environment and verified-close release | Implemented; fake checks and bounded real S2 ownership/cleanup passed |
+| T27-E | Supervised smoke handoff after D | Source seal, shared parent/worker/native prepayment, deadlines/output caps, sticky/no-reset controls and bounded disconnected command | Original fake verification: 365 passed; S1 stopped before native launch and is closed |
+| T27-R1 A–C | Approved path/error correction and fresh handoff after S1 stop | Real-layout fixtures, unchanged integrity checks, safe component codes, conservative teardown report, distinct S2 ledger/seal | Verified: 22 new cases, full suite 387 passed; S2 sealed and ready |
+| T27-R1 D / S2 | One approved operator-disconnected native run after A–C | Pinned assets, two document/one query vectors, ownership/cancellation/zero-member teardown/free port | Passed; receipts reviewed, 34 charged starts/10 calls, no stop; allocation closed |
+
+- [x] Implement the client for only the approved endpoint/model with bounded batches/timeouts and recorded identity/dimensions; reject invalid/incompatible responses and explicit truncation reports. Actual server fit/silent truncation remains unverified.
+- [x] Surface absent service/model, timeout and malformed-response errors without downloads, sensitive logs or remote fallback.
+- [x] Implement the owned runtime/shared-work-slot adapter and source-sealed supervised handoff, with fake/data-only lifecycle and budget verification; separately exercise the bounded real path in S2. Browser readiness remains unchanged.
+- [x] Correct the [S1 preflight stop](docs/benchmarks/t27-runtime-first-stop.md), verify with real-layout synthetic assets and prepare the separate S2 source seal without changing S1 receipts or allocation.
+- [x] Complete actual Windows ownership/model smoke using the approved S2 local handoff and review [success receipts](docs/benchmarks/t27-runtime-smoke-02.md). S1/S2 cannot be reused; browser readiness remains false.
 
 **Verification:** Test-first mocked local HTTP/model/error cases; separately authorized actual-model embedding smoke with non-sensitive text.
-**Evidence:** Pending — routine tests and separately labelled local integration result.
-**Likely files:** `app/retrieval/embeddings.py`, `app/ollama.py`, `tests/unit/test_embeddings.py`, `tests/integration/test_local_embeddings.py`.
+**Evidence:** [Original client checks](docs/benchmarks/t27-embeddings.md) and [repair regression](docs/benchmarks/t27-preflight-correction.md): final full suite 387 passed/one existing skip and warning, Ruff passed, mutations caught/restored. [Actual S2 integration](docs/benchmarks/t27-runtime-smoke-02.md) passed the two-document/one-query vector, owned-process/listener and cancellation/teardown/port checks with pinned assets; source seal and receipts verified. Exact fit, model/retrieval quality, in-flight inference cancellation and strict target-resource acceptance remain unverified; no broader readiness claim follows.
+**Files:** Client files are committed as `ae1f611`; owner/handoff as `67bdd7f`. R1 diagnostics/runtime/helper/tests and S2 source seal/handoff/results are committed as `73cb659`. T28 verification and the combined CP10 technical review are recorded below; historical task evidence remains unchanged.
 
 ### T28 — Persist an idempotent versioned local index
 
-**Status:** Proposed. **Prerequisites:** T27; T12/T17 consistency/index design. **Scope:** M.
+**Status:** Complete and committed as `e9d5580`; CP10 accepted, 2026-11-20. **Prerequisites:** T27 (`73cb659`); T12/T17 consistency/index design; explicit continuation. **Scope:** M, sequential A/B/C increments and explicit routine allocation above.
 **Objective:** Index content once per approved identity/version and preserve searchable integrity across restart.
 
-- [ ] Persist vectors/chunk metadata/index state; unchanged uploads reuse indexed content while retaining distinct ownership/reference/display metadata.
-- [ ] Handle content/parser/model version changes and interrupted indexing through approved retry/rebuild behavior without duplicate chunks, scope leaks or false-ready state.
+- [x] Persist vectors/chunk metadata/index state; unchanged uploads reuse indexed content while retaining distinct ownership/reference/display metadata.
+- [x] Handle content/parser/model version changes and interrupted indexing through approved retry/rebuild behavior without duplicate chunks, scope leaks or false-ready state.
 
 **Verification:** Test-first duplicate/repeat/version-change/failure/restart cases and inspect reference scope plus stored chunk/vector counts.
-**Evidence:** Pending — index idempotency/recovery tests and local smoke.
-**Likely files:** `app/retrieval/index.py`, `app/ingestion/processing.py`, `app/storage/index_state.py`, `tests/integration/test_indexing.py`.
+**Evidence:** [T28 report](docs/benchmarks/t28-indexing.md): 18 vector/profile unit cases, 19 stored-CSV integration cases including three process-exit boundaries; full suite 424 passed/one existing skip and warning. Application/test Ruff passed; broader historical-script lint/format findings are disclosed and untouched. Complete batches, ordinal/hash/space validation, duplicate reuse, distinct source bindings, source tamper, quota rollback, cancellation/uncertain-cleanup refusal, status/version changes and explicit retries passed. Space mutation caught/restored before full regression. SQLite integration uses synthetic embeddings; no combined real-model indexing, native query/ranking, full-scale/16-GB or answer-quality claim.
+**Files:** `app/retrieval/index.py`, `app/storage/index_state.py`, database schema v5/store recovery/status integration, `tests/unit/test_index_vectors.py`, `tests/integration/test_indexing.py`; current docs/contracts/ADR/report. Canonical float32 vector persistence is ready for the approved sqlite-vec query backend; native search structures/query execution remain T29.
 
-**Checkpoint CP10 — T26–T28:** Proposed. Review source-preserving chunks, local embedding errors, version/dedup/restart integrity and relevant checks. Apply G3.
+**Checkpoint CP10 — T26–T28:** Accepted by the user, 2026-11-20; T28 committed as `e9d5580` and T29 explicitly authorized. [Evidence and limits](docs/benchmarks/t28-indexing.md#cp10-and-handoff) cover provenance/chunking, native S2 ownership and version/dedup/restart integrity. No stage transition is implied.
 
 ### T29 — Retrieve evidence within the selected document scope
 
-**Status:** Proposed. **Prerequisites:** T28; T16 retrieval contract. **Scope:** M.
+**Status:** Implementation/routine/bounded native verification complete, 2026-11-20. Source/handoff committed as `4a618c2`; native N1 passed and closed, results-documentation commit pending approval. **Prerequisites:** T28 (`e9d5580`)/accepted CP10; T16 retrieval contract; explicit T29 instruction and N1 approval. **Scope:** M, ordered A/B/C implementation and exact separate allocations above.
 **Objective:** Return useful bounded evidence without unrelated/removed attachments or old-context contamination.
 
-- [ ] Resolve selected references, embed queries locally and rank chunks with complete provenance under approved relevance/context budgets; support multiple files and table context.
-- [ ] Exclude unselected/unrelated/removed sources and apply no-evidence/ambiguous behavior; same-content attachments in different conversations must remain correctly scoped.
+- [x] Implement selected-reference resolution, owned local query seam and scoped native cosine ranking with complete provenance, top-five candidates and complete 2,000-byte evidence packing; multi-file/table fixtures verified with injected vectors/kernel.
+- [x] Exclude unselected/foreign/removed sources; disclose blocked/no-evidence/tied candidates without claiming semantic support; preserve same-content scope/provenance and recheck after query/ranking.
+- [x] Execute/review the approved exact T29-N1 native DLL bridge package using the operator-disconnected handoff. [Success receipts](docs/benchmarks/t29-native-search.md) verified; no model run, prior-trial retry or further N1 execution. T30 remains unstarted.
 
 **Verification:** Deterministic mocked ranking/scope/budget tests and a small agreed retrieval evaluation with expected relevant passages.
-**Evidence:** Pending — isolation and measured relevance results.
-**Likely files:** `app/retrieval/search.py`, `tests/unit/test_retrieval.py`, `tests/integration/test_retrieval_scope.py`.
+**Evidence:** [T29 report](docs/benchmarks/t29-retrieval.md): 18 query/loader unit, 18 scoped stored-source integration and six fake handoff cases; full suite 466 passed/one existing skip and warning, application/test/helper Ruff passed. Scope-join mutation failed and was restored before full regression. Expected North/42 rank, unselected North/999 exclusion, same-content cross-conversation denial, tied conflicting values, complete packing, bad question/vector, missing/changed source, cancellation and no-fallback errors verified mechanically. Routine tests do not establish native execution or real embedding relevance/latency/memory/semantic answer quality; separate native results follow.
+**Native evidence:** [T29-N1](docs/benchmarks/t29-native-search.md) passed the real selected DLL against the actual stored-source retrieval path with synthetic vectors, expected distance/rank checks, disabled SQL load, SQLite integrity and parent reaping. This does not measure semantic model relevance, full application latency/memory or answer quality. No further native run is required for this bounded gate.
+**Files:** T29 retrieval/native boundary, tests, helper/seal/package and current docs were committed as `4a618c2`. N1 review adds the linked report and updates affected documentation only. Its eight-file results commit remains separately gated; T30 is next. No schema, dependency, retention, readiness or stage change.
 
 ### T30 — Generate and persist grounded chat exchanges
 
-**Status:** Proposed. **Prerequisites:** T29; T11/T16/T17 approved generation/history contract. **Scope:** M.
+**Status:** Implementation, routine checks and bounded T30-N1 generation/persistence verification complete, 2026-11-20; results/status committed as `aff116e`. **Prerequisites:** T29 (`4a618c2`)/native results (`b301d1d`); T11/T16/T17 generation/history contract; explicit continuation. **Scope:** M, sequential A/B/C/D increments and explicit routine allocation above.
 **Objective:** Add the local chat API with evidence-bound answers and explicit abstention.
 
-- [ ] Separate system policy, untrusted current evidence and bounded history; answer multi-file questions only when supported and handle insufficient/ambiguous evidence without treating document instructions or old messages as authority.
-- [ ] Persist messages/timestamps/document context consistently using the approved local model/timeouts; handle missing model, malformed output and interrupted requests with clear safe errors.
+- [x] Implement separate fixed policy/untrusted current evidence/bounded eligible history, complete byte packing, pinned typed local generation, explicit insufficiency and only supplied citation IDs. Mechanical boundaries are verified with mocks; semantic multi-file/ambiguous/unsupported-answer quality remains for model evaluation.
+- [x] Persist complete questions/answers/timestamps/current-source identity metadata atomically after teardown and selection/source checks; refuse incomplete/malformed/unowned generation and recover interrupted intents without inference or partial assistant text.
+- [x] Execute/review the approved exact T30-N1 Qwen generation/persistence smoke using the one-run operator-disconnected handoff. [Success receipts](docs/benchmarks/t30-model-smoke.md) verified; allocation preserved/closed without retry. Prior native roots/seals remain closed; T31 has not started.
 
 **Verification:** Test-first mocked grounded/abstention/history-injection/API failure/persistence cases; separately labelled actual local-model smoke.
-**Evidence:** Pending — chat tests, known-evidence examples and local smoke limitations.
-**Likely files:** `app/chat/service.py`, `app/api/chat.py`, `app/storage/messages.py`, `tests/integration/test_chat.py`, `tests/security/test_prompt_boundaries.py`.
+**Evidence:** [T30 report](docs/benchmarks/t30-grounded-chat.md): 18 generation/runtime/transport/handoff cases, eight messages/migration/restart cases and 14 service/HTTP cases. Full suite 506 passed/one existing skip and warning; application/test/helper Ruff passed. Bad termination/model/output/citations, history exclusion, prompt bounds, replay/conflict, source/selection changes, pre-generation scope checks, quota/cancellation, CSRF/HTTP isolation and two forced exits/restarts passed. Publication mutation failed its control and exact source was restored before full regression. Separate [T30-N1](docs/benchmarks/t30-model-smoke.md) passed actual pinned Qwen generation, supplied-ID checks, teardown and exact saved-exchange reopen with authored retrieval/index vectors. Independent semantic/quote/calculation support, combined real-model retrieval, full-scale latency/memory and application readiness remain unverified.
+**Files:** T30 source/tests/helper/seal/package and status documentation were committed as `07a7d27`; its eight-document native results closeout is committed as `aff116e`. Default app inference is disabled without trusted owned factories. T31's separate citation/preview implementation is tracked below; T32 support signals and T33 UI remain later work.
 
 ### T31 — Validate citations and resolve safe passage previews
 
-**Status:** Proposed. **Prerequisites:** T30, T25. **Scope:** M.
+**Status:** Implemented and routine-verified, 2026-11-20; committed as `fd830e5`, CP11 accepted. **Prerequisites:** T30, T25; explicit continuation after results commit `aff116e`. **Scope:** M, ordered A/B/C increments above.
 **Objective:** Bind surfaced citations to supplied evidence rather than model-invented metadata.
 
-- [ ] Allow only citation IDs in the answer's supplied evidence; derive real filenames/locations from stored provenance and reject fabricated IDs/quotes/pages/sheets/rows.
-- [ ] Expose bounded escaped previews through scoped IDs and approved missing/removed-source behavior; disclose coarse location precision without arbitrary local-file access.
+- [x] Validate unique supplied citation IDs and require answered claims to cite evidence; resolve only IDs actually cited by that saved answer. Derive filenames/locations/quotation spans from current stored provenance; reject inconsistent IDs, source identities, normalized quotes, coordinates and parser metadata. Plain model-prose assertions remain semantically unverified.
+- [x] Expose escaped previews through answer/conversation-scoped IDs, with a 65,536-byte complete envelope guard and no path/quote/location inputs. Missing/changed/unreadable sources block live preview; saved text remains readable with availability labels. Coarse/missing precision stays explicit; no new quotation snapshots or retention behavior.
 
 **Verification:** Test-first allowlist/location/quote/preview-scope/XSS cases and manually trace a CSV answer to original records/columns.
-**Evidence:** Pending — citation/preview tests and source trace examples; no claim of full semantic verification.
-**Likely files:** `app/chat/citations.py`, `app/api/sources.py`, `app/chat/service.py`, `tests/unit/test_citations.py`, `tests/security/test_source_preview.py`.
+**Evidence:** [T31/CP11 report](docs/benchmarks/t31-citations.md): ten unit and 25 integration/HTTP cases, full suite 541 passed/one existing skip and warning in 89.44 s; scoped Ruff passed, 69 files already formatted. Cited-ID mutation failed its control; exact source restored before full regression. Actual CSV North/42 record/column/line spans and multiline/coarse/missing/header cases traced; original/selection/index changes, foreign/uncited IDs, output bounds, escaping and unsafe/unreadable paths refused. Routine models/native kernel remain injected; no new native/model trial or semantic-quality score.
+**Files:** New `app/chat/citations.py`, `tests/unit/test_citations.py`, `tests/integration/test_saved_citations.py`; narrow chat service and source/saved-answer route integration; README/PLAN/TODO/contracts/ADR and linked report. No schema/lockfile/retention change. The reviewed 12-file source/results commit is `fd830e5`; CP11 is accepted.
 
-**Checkpoint CP11 — T29–T31:** Proposed. Demonstrate selected evidence → answer/abstention → real citation; review unsupported/injection/error cases and persisted context. Apply G3.
+**Checkpoint CP11 — T29–T31:** Accepted by the user, 2026-11-20, with the [reviewed evidence and limits](docs/benchmarks/t31-citations.md#cp11-review-and-next-decision). Scoped retrieval, grounded answer/abstention, persistence and real source previews have mechanical boundary evidence. T29-N1/T30-N1 remain separate authored native bridge checks; combined real-model semantic quality is unverified. Unsupported/injection/error/history tests do not independently verify model meaning. The user authorized T32; no stage transition is implied. Apply G3 to its new source commit.
 
 ### T32 — Expose transparent evidence-support signals
 
-**Status:** Proposed. **Prerequisites:** T31; T16 approved semantics. **Scope:** M.
+**Status:** Implemented, routine-verified and committed as `c3c6e61`, 2026-11-20. **Prerequisites:** T31 (`fd830e5`)/accepted CP11; T16 approved R02 semantics; explicit continuation. **Scope:** M, ordered A/B/C increments and routine allocation above.
 **Objective:** Explain observed citation/support coverage without implying calibrated accuracy.
 
-- [ ] Return the approved interpretable validity/coverage/abstention/warning states and explanations, distinguishing identifier validation from actual semantic support.
-- [ ] Handle absent/invalid/partial citations, mixed support and extraction limits consistently; no numerical correctness probability or unsupported semantic assurance.
+- [x] Return observable validity/coverage/abstention/warning states and fixed explanations on answer POST/GET. Count only declared text blocks; separate supplied-ID validity, current quotation/location checks and unknown input fit. Semantic support remains independently unverified.
+- [x] Preserve hard failure precedence, missing/invalid/mixed citations, partial answers and source/OCR/coarse/omission/conflict/formula limitations. Pre-generation no-evidence and applicable clarification/refusal coverage are N/A; no correctness percentage or model-self-assessment is accepted. Signals are ephemeral, not saved scores.
 
 **Verification:** Test-first indicator cases from T16 and manual comparison of wording with actual available evidence/limits.
-**Evidence:** Pending — indicator tests and reviewed examples/text.
-**Likely files:** `app/chat/evidence.py`, `app/chat/service.py`, `tests/unit/test_evidence_indicator.py`.
+**Evidence:** [T32 report](docs/benchmarks/t32-evidence-support.md): 30 unit and eight actual-storage/HTTP cases, full suite 579 passed/one existing skip and warning in 63.41 s; scoped Ruff passed, 72 files formatted. Five missing hard-warning cases failed before correction; all 38 focused cases passed after it. Mutation allowing unavailable selected sources to become successful no-evidence failed its control; exact source restored before full regression. Positive verified-fit/semantic-counterexample cases use authored predicates, not a claimed tokenizer result. OCR metadata bridge is synthetic; no actual OCR/model/native trial.
+**Files:** New `app/chat/evidence.py`, `tests/unit/test_evidence_indicator.py`, `tests/integration/test_evidence_support.py`; narrow source-observation/answer-route/blocked-source-warning integration and README/PLAN/TODO/contracts/ADR/evaluation/report. The 13 implementation/report files plus three approved policy/decision updates were committed as `c3c6e61`. No schema/lockfile/retention change. T15 is skipped, T34A is scheduled after T34, and T33 remains reserved for a new session.
 
 ### T33 — Deliver the local browser CSV chat flow
 
-**Status:** Proposed. **Prerequisites:** T32; T15 conclusion and T17 approved UI approach. **Scope:** M.
+**Status:** Unstarted; reserved for a new session at the user's explicit request, 2026-11-20. **Prerequisites:** T32; T15 explicitly skipped; T17 approved manual HTML/CSS/JavaScript approach. **Scope:** M.
 **Objective:** Let the user upload, ask, read support signals and inspect sources through a minimal browser interface.
 
 - [ ] Connect existing upload/status/chat/source operations with selected-document context, per-file processing, loading/empty/success/warning/error states and safely rendered untrusted text; serve all assets locally.
@@ -1603,11 +1707,25 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Checkpoint CP12 — T32–T34:** Proposed. Demo full CSV upload → answer/citation/indicator → restart/reopen, including accessibility and error paths. Apply G3 before format expansion.
 
+### T34A — Validate selected-runtime input boundaries and the real CSV pipeline
+
+**Status:** Scheduling and initial scope approved by the user, 2026-11-20; unstarted. Exact execution package remains gated. **Prerequisites:** T34/CP12, existing T02/T16 rubric and selected T17 runtime/components. **Scope:** M, bounded validation before T35; no new runtime/tool selection.
+**Objective:** Obtain early CSV input-boundary and end-to-end quality evidence before expanding formats.
+
+- [ ] **T34A-A — Define the package.** Freeze authored CSV cases/gold answers/anchors for answerable, unanswerable, multi-file, ambiguous and table questions; pin the then-current source/model/runtime/index/settings. Define a fresh shared execution/output/time/resource allocation including controls/regressions/cleanup, offline conditions and stop rules; obtain approval before native execution. Do not reopen prior roots/seals.
+- [ ] **T34A-B — Examine input boundaries.** Use ordinary selected-Ollama interfaces to check near-boundary requests, input handling/truncation, output headroom, termination and failures. Keep whole-request/template/version identities. Byte caps, response token counts or one recovered sentinel alone do not prove exact pre-request fit. Report unsupported/unknown guarantees explicitly; no standalone tokenizer/private bridge/custom build is implicitly authorized.
+- [ ] **T34A-C — Evaluate the real CSV path.** Exercise upload/extraction/index → real local embedding/retrieval → real chat generation → checked citation/preview → saved conversation/restart, with selected-only scope. Score against fixed local ground truth for relevance, quotation/location fidelity, semantic support and abstention; preserve failures in the denominator and record latency/resource observations under the approved package.
+- [ ] **T34A-D — Review before expansion.** Record findings, remaining fit/quality limitations and any targeted fixes or new decision needed before T35. Do not infer a runtime per-answer semantic verifier from benchmark scores or mark an unproved guarantee verified. Keep T48's final all-format quality/resource baseline and existing targets unchanged.
+
+**Acceptance:** Reproducible pinned CSV results with separated mechanical/semantic/fit observations; honest unknowns/failures and scoped follow-up decisions, no silent acceptance waiver or unsupported runtime claim.
+**Verification/evidence:** A linked sanitized report and exact commands/fixture manifest under the approved future package; currently pending, no execution/benchmark claim.
+**Likely files:** A bounded proposal/helper/CSV fixture definitions and `docs/benchmarks/t34a-csv-validation.md`, selected only when the package is concretely prepared. No report or runner is created merely to imply execution now.
+
 ## M4 — Add each remaining format through the working path
 
 ### T35 — Support native-text PDFs with table/image references
 
-**Status:** Proposed. **Prerequisites:** T34; approved T05/T08/T17 parser selection. **Scope:** M.
+**Status:** Proposed. **Prerequisites:** T34, T34A review; approved T05/T08/T17 parser selection. **Scope:** M.
 **Objective:** Extend upload-to-answer support to native PDFs with honest page/region citations.
 
 - [ ] Extract native pages, practical table row/column structure, table regions/image references and warnings/parser version; detect pages requiring the later OCR path and preserve originals separately.
@@ -1829,7 +1947,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ## Approved delivery priority
 
-After T07 closeout: T10 → T11A (early CPU feasibility) → T08 → T09 → T11 (combined pressure) → T12 → T16 → T17/G2 → CSV-first T18–T34, with T15 before T33. T13/T14 follow the first slice or precede proposed use. These are scheduling changes approved with the three improvements; provisioning/execution of those future packages remains gated. New T11A is an early risk check, not runtime adoption or replacement of T11's combined measurements.
+After T07 closeout: T10 → T11A (early CPU feasibility) → T08 → T09 → T11 (combined pressure) → T12 → T16 → T17/G2 → CSV-first T18–T34, with T15 explicitly skipped and T34A after T34/before format expansion. T13/T14 follow the first slice or precede proposed use. These are scheduling changes approved with the three improvements; provisioning/execution of those future packages remains gated. New T11A is an early risk check, not runtime adoption or replacement of T11's combined measurements.
 
 ## Current handoff
 

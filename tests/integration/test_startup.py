@@ -105,7 +105,7 @@ def test_model_manifest_and_layers_are_checked(settings, monkeypatch):
             "layers": [],
         }
     ).encode()
-    manifest = settings.model_root / "manifests/registry.ollama.ai/library/test/v1"
+    manifest = settings.model_root / "manifests-v2/ollama.com/library/test/v1"
     manifest.parent.mkdir(parents=True)
     manifest.write_bytes(manifest_bytes)
     blob = settings.model_root / "blobs" / f"sha256-{digest}"
