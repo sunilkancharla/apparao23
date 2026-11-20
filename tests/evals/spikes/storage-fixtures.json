@@ -1,0 +1,14 @@
+{
+  "version": "t12-synthetic-v1",
+  "seed": 12001,
+  "dimensions": 768,
+  "sizes": [32, 1000, 10000],
+  "queries": 12,
+  "passes": 4,
+  "top_k": 5,
+  "distance_tolerance": 0.000001,
+  "tie_rule": "distance ascending then stable chunk ID ascending",
+  "vector_format": "little-endian float32; random.Random(seed+size) uniform(-1,1), normalized before float32 encoding",
+  "version_key": "nomic-v1.5:768:search_document/search_query:extract-v1",
+  "crash_cases": ["before-commit", "after-commit", "file-before-commit", "commit-before-cleanup"]
+}

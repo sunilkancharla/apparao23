@@ -1,0 +1,22 @@
+# Project environment, provisioning binaries and caches
+.venv/
+.tools/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+
+# Local/private originals, runtime data and generated fixtures
+sample_files/
+data/
+tests/fixtures/generated/
+*.sqlite
+*.sqlite3
+*.db
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key

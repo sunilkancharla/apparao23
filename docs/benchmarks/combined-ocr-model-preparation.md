@@ -1,0 +1,33 @@
+# T11 combined OCR/model runner preparation
+
+**Date:** 2026-11-14 (Asia/Calcutta). **Authorization:** User explicitly approved the [exact bounded package](../proposals/combined-ocr-model-trial.md), implementation/offline testing and committing reviewed changes. **Status:** Connected preparation complete; actual combined inference/ownership/resource behavior awaits the user's disconnected run. No runtime component is adopted.
+
+## Implemented boundary and checks
+
+Three authored evaluation files implement shared persistent category/process/API accounting, a fixed 36-chat/44-embedding/24-OCR/four-sentinel schedule, lazy offline imports, immutable input/asset/source sealing, aggregate Windows Job supervision, actual worker/header interval measurement, CPU/residency checks, bounded local HTTP, safe local escaped semantic review and teardown reporting. Existing OCR/chat/model supervisors and definitions are reused; old ledgers are read/hash-linked, not reset or executed. The controller rebinds the reused OCR module's run/charge hooks only inside the new process so all OCR roots enter the new shared allocation.
+
+The aggregate job caps owned memory at 8 GiB without inheriting a per-process controller cap. OCR retains its own worker limit; controller private memory is monitored at 512 MiB. Polling targets 100 ms and stops for observed gaps above 250 ms. The owned server's historical 6-GiB/per-process caps are removed before launch in favor of the aggregate cap. All cumulative descendants are accounted; explicit roots and already charged extras are not counted twice. Unexpected overshoot is retained before stopping. No AppContainer, global setup, downloads or new dependencies are introduced.
+
+Metadata checks consume the same 128-attempt API meter. The complete schedule normally uses 125 attempts: 36 chat, 44 embedding and 45 version/tags/show/residency/unload calls. Residency is checked after baseline requests, and during the response stream immediately before overlapping OCR. Actual OCR intervals come from the worker itself, not parent launch timing. Zero real overlap, eviction, quality/control failure or unknown ownership stops without retry. Semantic answer/citation support is not inferred from schema/source-ID validation.
+
+## Test-first evidence and static preparation
+
+The initial 10 core contracts failed before implementation, then passed. Three additional lifecycle/transport contracts exposed parent-launch timing incorrectly standing in for actual worker timing; corrected to worker timestamps, then 13 passed. Static preparation stopped on the historical whole-question-file hash: Git history confirms later scope updates in `6724ac1`. Frozen source identities, 32 passages, selected C01/C03/C08 wording/gold and chat definitions were independently compared locally; selected facts/questions were unchanged. A new regression first failed, then passed with exact selected-record reconciliation and explicit historical/current file hashes. No source facts/gold were edited, no raw evidence/output was printed and no samples were reopened.
+
+Final **15 stdlib/fake contracts passed in 0.713 s**; Ruff lint/format passed. Tests cover category/shared cleanup reserves, persistent attempt counts/restart refusal, descendant reconciliation/overshoot retention, memory/deadline/sampling stops, model identity/CPU/context/residency, missing/tampered/escaping assets, exact question/gold matching, actual interval/event timing, remote/download/generate-inference refusal and retained failed-request cleanup evidence and current job-membership verification before terminating a worker PID. These do not replace native integration testing.
+
+The first static-preparation failure and fake-test failures remain under `data/t11/combined-01/`. After reconciliation, static preparation verified and sealed **142 files**, including exact cached model manifests/layers, interpreter, runtime files, OCR assets, frozen packets/fixture identities and sources. No OCR/image/model package was imported as a native backend, fixture rendered, inference called, model downloaded, dependency installed or old native trial rerun during preparation.
+
+The new ledger reserves the full 48 preparation slots and 16 report/Git closeout slots conservatively (64/160), including inspection/test/lint/static-preparation tools, failed attempts and resumed checks. native roots/API attempts remain zero and `offline_started` remains unset. All prior ledgers are hash-linked and unchanged. All processes/negative/regression workers in the later native phase must share this same ledger; no new allowance is inferred from this report.
+
+## Handoff and remaining limits
+
+Use only the [combined-01 local instructions](../proposals/combined-ocr-model-handoff.md). The user must disconnect and attest before any native server/OCR launch. Kernel cap/ownership/loopback code and complete overlap matrix remain unrun in combination. Timing/cache effects, scheduling-gap stops, model residency and native backend errors may stop the run; no automatic repair/retry is authorized. Partial constructor/teardown uncertainty fails closed. No source/code review or fake success establishes strict 16-GB capacity or a secure filesystem/network sandbox.
+
+Rotated-output review, wider scan/table/provenance quality, semantic grounding scores, acceptable product latency and adoption remain open. This package is a T11 feasibility subset and does not close T09, all T11 requirements or Stage 1 acceptance.
+
+## Resumed final review
+
+The user paused and resumed work; pause time is retained separately from the original preparation clock, not charged as active work or used to reset process/API counters. The final ownership regression first failed; the guard now checks IsProcessInJob before terminating a PID that might have been recycled. Binding the test closures resolved Ruff B023 without weakening assertions. The earlier connected seal is retained as seal.pre-review.json; only the never-started preparation seal was replaced for final source. No stopped/native-started ledger was reset or resealed.
+
+Final resumed closeout: all15 contracts passed0.713s, Ruff lint/format and PowerShell syntax passed, all142 final seal hashes and prior-ledger identities verified, relative proposal/report links and Git diff checks passed. The unstarted preparation seal was replaced only after archiving the earlier connected source epoch. Recorded active preparation was1453.6seconds (24.23minutes), excluding user pause, within30minutes. Native roots/API attempts remainzero; conservative48 preparation+16report reservations total64/160. Actual disconnected combined execution remains pending.

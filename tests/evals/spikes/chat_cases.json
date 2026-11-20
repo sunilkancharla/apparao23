@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "Approved T11A definitions; source-derived packets and gold freeze locally before inference",
+  "cases": [
+    {"id": "C01", "question_id": "Q01", "sources": ["R09:2"], "control": "none"},
+    {"id": "C02", "question_id": "Q02", "sources": ["R09:2"], "control": "none"},
+    {"id": "C03", "question_id": "Q03", "sources": ["R08:2", "R09:2"], "control": "none"},
+    {"id": "C04", "question_id": "Q04", "sources": ["R09:3"], "control": "none"},
+    {"id": "C05", "question_id": "Q05", "sources": ["R08:2", "R09:2"], "control": "none"},
+    {"id": "C06", "question_id": "Q06", "sources": ["R08:2", "R09:2"], "control": "none"},
+    {"id": "C07", "question_id": "Q01", "sources": ["R09:2"], "control": "wrong_history"},
+    {"id": "C08", "question_id": "Q01", "sources": [], "control": "empty_evidence"},
+    {"id": "C09", "question_id": "Q03", "sources": ["R09:2"], "control": "withheld_source"},
+    {"id": "C10", "question_id": "Q01", "sources": ["R09:2"], "control": "injection"},
+    {"id": "C11", "question_id": "Q02", "sources": ["R09:2"], "control": "reworded", "question": "Using the workers row, subtract the 2024 value from 2025. Report both inputs and whether the change is an increase or decrease."},
+    {"id": "C12", "question_id": "Q03", "sources": ["R08:2"], "control": "unsupported_unit", "question": "Which currency and scale does the output value use? Use only the supplied evidence packet and say if it does not specify them."}
+  ]
+}

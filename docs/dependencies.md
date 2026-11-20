@@ -1,0 +1,244 @@
+## Current disposition — Ollama internal tokenizer selected, 2026-11-20
+
+[User decision](decisions.md#2026-11-20--ollama-internal-tokenizer-selected): use the selected Ollama runtime's model-native tokenization. Remove standalone Tokenizers 0.23.3 and its separate candidate graph from proposed Stage 1 installation; this does not remove existing reused packages needed by other components. No new dependency is needed merely to select Ollama's internal tokenizer. Preserve prior static evidence/assets as history; no uninstall, cache deletion, environment or lock change occurred.
+
+The existing Ollama binary/model/notice identities remain the selected baseline. A public exact count-only preflight contract is still unverified; no private runner-port bridge, custom build or runtime upgrade is selected. The prior user-directed investigation omission remains effective for remaining selected-runtime/target evidence. [G2 and bounded T18 are now approved](decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized); T18 reuses the existing baseline without new dependencies or downloads.
+
+## Earlier disposition — further T17 investigations omitted by user decision
+
+The user accepted proceeding without the remaining dependency build-source/native-notice/security investigation, standalone/Ollama comparison and 16 GB target proof. [Exact decision](decisions.md#2026-11-19--stop-the-three-remaining-t17-investigations). Keep all existing identities, notices and known gaps; no new clearance or successful native import/parity is implied. The pending G2 review may consider the existing proposed components with those limitations, rather than requiring another research package. Provisioning stays project-local and introduces only the exact dependencies needed by an approved implementation task. SPEC/privacy and ordinary implementation checks remain in force.
+
+## Earlier T17-SV2 dependency evidence — 2026-11-19
+
+[Focused results](benchmarks/t17-standalone-validation-closeout.md) retain the selected Tokenizers 0.23.3/full seventeen-node graph. Ten exact wheel/registry identities and 470 payload hashes passed; seven reused distributions contributed 158 verified payloads. All 19 active requirements and declared wheel/Python compatibility checks pass on actual Windows AMD64 CPython 3.14.6. Fresh PyPI version records list no advisories for the seventeen pins; this is not exhaustive native security clearance.
+
+Three exact artifact publication statements now match the cached Tokenizers/Hub/HF-Xet digests. Their predicates provide no build-input inventory. Tokenizers' binding Cargo lockfile/release workflow are available, but the existing build-source/native-notice conditions remain unresolved. Keep the installation/adoption hold; no provisioning, import, native parity, environment or lock change occurred. Do not repeat completed metadata/graph/RECORD audits as missing work.
+
+## Earlier T17 consolidated component disposition — 2026-11-19
+
+[Closeout report](benchmarks/t17-consolidated-closeout.md) is the current evidence summary. The exact proposed set below is retained for G2; nothing was installed, upgraded or silently promoted to runtime. The 52 installed distributions match all 52 lock dependency versions.
+
+| Role | Exact proposed components / disposition |
+| --- | --- |
+| API/local model transport | FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1; minimal locally served HTML/CSS/JavaScript |
+| CSV/XLSX | CPython csv; openpyxl 3.1.5, et-xmlfile 2.0.0, defusedxml 0.7.1; never execute formulas/macros or follow external links |
+| PDF | pdfplumber 0.11.10/pdfminer-six 20260107; pypdfium2 5.15.2/Pillow 13.0.0 for rendering. pypdf 7.0.1 was used only to author evaluation fixtures |
+| English OCR | Tesserocr 2.13.0 and the existing pinned English asset; RapidOCR remains an evaluated alternative, not automatic fallback |
+| Model runtime/assets | Ollama 0.40.16; exact Qwen2.5 1.5B Q4_K_M and Nomic v1.5 identities already listed below |
+| Metadata/vector store | CPython SQLite and the reviewed sqlite-vec 0.1.9 artifact; original companion-notice decision retained |
+| Selected tokenization direction | Ollama's internal model-native tokenizer, chosen on 2026-11-20. No standalone tokenizer graph is proposed for installation. Exact application pre-request fit and output/boundary behaviour remain unverified under the user's investigation omission. |
+
+The new inspection verified the entire cached chat/embedding weights and all 75 installed runtime files against recorded hashes. Qwen's known token IDs/merges match; Nomic's complete vocabulary matches after the observed WordPiece representation transformation. Neither result proves the unexecuted standalone/selected-Ollama pipeline. Actual packaged-reference bind/key checks and explicit CPU settings succeeded; a direct reference process is not an adopted additional application service.
+
+The existing recorded licence families/notice artefacts remain the basis of the proposal. Four specifically reviewed current advisory ranges exclude the selected pdfminer/Starlette pins; full selected-native/vendor notices and advisory coverage are still incomplete. No statement of universal security clearance or independent binary-build attestation follows. Historical conclusions below are superseded only where the report supplies new evidence.
+
+## Historical LFT evidence — local-file core supported; import/reference readiness blocked
+
+[LFT findings](benchmarks/local-file-trial-readiness.md), plan `8e846c1`: two public calls/six targets, both responses retained. Pinned Rust binding delegates to core local-file read/JSON construction; Python import and exact CPU-reference contract remain unverified. Explicit stop branch skipped dependent validator/tests/native-package work. All 17 dependencies and prior native/vendor/source conditions preserved; no candidate payload read, installation, import or adoption. Recommend a separately approved cached-wheel static-source review rather than repeated inaccessible source requests. Six-file results commit/next preparation pending.
+
+## Earlier ALN evidence — source terms clarified; native/vendor/build gaps remain
+
+[ALN findings](benchmarks/artifact-licence-notice-review.md), plan `a1e3240`: retained HF-Xet Apache-2.0 notice identity matches; Tokenizers 0.23.3 release links source `301277072263fb3830eb66eec7e47adadf76f1dc`, whose root licence is Apache-2.0. HF-Xet publisher-coordinate source licence/manifest agree with its saved declaration. Neither establishes exhaustive native/vendor notices or independent wheel/build mapping. Four responses retained; reporting-reserve deviation explicit. Hold unconditional install/adoption; choose hold, a bounded trial-design carrying gaps, or alternative local-file design comparison. No automatic source retry, version/source-pin change, install or adoption; Hub/FSSpec timing conditions preserved.
+
+## Earlier SLR evidence — response handling verified; licence/source decision remains
+
+[SLR findings](benchmarks/source-licence-followup.md), plan `a382e7e`: response-ordering RED then 23 passing assertions; four calls/12 targets and all response files retained. PyPI supplies Tokenizers' Apache classification and an HF-Xet publisher claim matching the selected Windows wheel digest (`e551f0a75f989b8ee1a474c5f83c80ad4903f84d`, run `41036139993`). Exact native/vendor notice and build-source evidence remains incomplete; FSSpec/Hub conditions retain the approved timing rule. No package/source pin changed, installation/adoption or application feature. Results commit pending; next needs one explicit dependency direction, not an automatic search retry.
+
+## Earlier RRC evidence — local comparison passed; source gaps remain
+
+[RRC findings](benchmarks/remaining-artifact-readiness-continuation.md), plan `234e07d`: 23 unit tests/ten original controls passed, four labelled cases covered 17 distributions, earlier partial matrices preserved exactly. Supplementary Windows AMD64 assumptions resolve two conditions and add matching Colorama 0.4.6 metadata. All ten retained root Python declarations fit 3.14.6/3.11.0, with eight registry-only versus two cached-inspection authorities explicit. Eight licence labels/selected artifact identities agree; Tokenizers/native/vendor/provenance gaps remain. One public response was lost; research stopped without source claims, provisioning or adoption. Results commit pending.
+
+## Earlier RR evidence — stopped before dependency review
+
+The approved RR plan is committed as `da952e1`. [RR stopped during bookkeeping bootstrap](benchmarks/remaining-artifact-readiness-review.md); the permitted correction also failed before worker execution. No fixed-input revalidation, supplemental profile/Python comparison, licence/native reconciliation or public provenance query ran. No new dependency conclusion, candidate import/installation or adoption. The earlier successful evidence below and its unresolved gaps remain unchanged; a fresh bounded continuation requires approval.
+
+## Earlier EAF evidence — bounded local comparison completed; readiness still partial
+
+[EAF findings](benchmarks/marker-environment-adapter-followup.md): corrected adapter passed 11 unchanged tests/ten original controls, then compared 16 exact distributions under two labelled partial profiles. No conflicts found on evaluated paths or relevant project constraints; two marker conditions remain unknown in each profile (Hub/HF-Xet machine type and TQDM/Colorama platform system). Six matching locked metadata records were retained. Eight fixed roots are absent from the current lock and none was added. Root Python-version declarations, licence/native notices, source provenance and runtime/offline/parity remain open. No resolver, candidate install/import or adoption occurred.
+
+## Latest EA evidence — adapter field bug blocks real dependency comparison
+
+[EA findings](benchmarks/marker-environment-adapter-review.md): nine of 11 adapter/graph-fixture tests passed, two errored on quoted missing-field names. Original controls and real retained-artifact/lock comparison did not run; fixture outcomes establish no project compatibility. Proposed EAF correction preserves all tests, strict restrictions and unknowns, with conditional original controls/graph only after passing. No candidate install/import, pin change or licence/provenance adoption.
+
+## Latest RC evidence — parser review stopped before reconciliation
+
+[RC findings](benchmarks/wheel-evidence-reconciliation.md): packaging 26.3's 30 hashed installed RECORD entries matched and 20 source files were inspected. Its first synthetic check failed; incomplete host capture prevents diagnosing why. No passing parser controls, dependency graph, licence reconciliation or new provenance research are claimed. No lock/package selection or installation changed. Correct and validate the host capture boundary in a fresh approved package before another attempt.
+
+## Latest ASR evidence — exact wheels and inert inventory verified
+
+[ASR findings](benchmarks/wheel-artifact-review-reporting-correction.md): eight fresh exact wheel acquisitions and static inspections passed, including 250 RECORD payloads; cached Hub/Tokenizers identities and bounded metadata/source reads passed. HF-Xet is exactly 3,911,559 bytes and FSSpec 221,738 bytes, replacing rounded observations. Declared licences/notices and dependency markers are retained. HF-Xet's native payload, Tokenizers notice completeness, FSSpec provenance, Hub source mapping, lock/marker reconciliation and actual offline/parity/adoption remain open. No candidate was installed/imported. Earlier evidence below remains historical.
+
+## Latest MR evidence — incomplete readiness
+
+[MR findings](benchmarks/hub-metadata-dependency-review.md) record candidate/artifact/advisory evidence and exposed compatible pin ranges. HF-Xet/FSSpec, full retained/native/notice/offline coverage remain incomplete. No installation or pin/lock change. Metadata-only build-source deferral unchanged. Earlier entries historical.
+
+## Latest AR comparison — decision pending
+
+[The bounded comparison](benchmarks/stable-tokenizer-alternatives.md) retains Hub2.4.0 as research baseline; neither older candidate demonstrated a benefit. On2026-11-17 the user approved deferring exact build-source mapping only before metadata/notices/advisory/dependency review, carrying it unresolved to adoption. Next-package preparation is approved; execution remains gated. No dependency/pin/adoption change occurred. Earlier entries below are historical.
+
+## Latest SC epoch-03 evidence
+
+PyPI's displayed provenance matches the inspected Hub wheel to its publishing identity. [Evidence and limits](benchmarks/hub-source-coordinate-review.md): source/build mapping remains unresolved; candidate adoption and source-dependent expansion remain blocked. No dependency or pin changed. Earlier entries below are historical.
+
+# T03 Dependency Review Inventory
+
+## T17-IF-SV — temporary native reference candidate; not adopted
+
+[SV source findings](benchmarks/standalone-tokenizer-validation-design.md), approved proposal `68a878c`, trace the runner build to upstream b12177/`6c01da6278ab6c69ed67d9124806b50d2b299ba7` plus Ollama compatibility sources/patches. A generic upstream binary is not equivalent. Directly owned reference is a candidate for validating standalone counting; actual packaged executable/DLL identity, license/advisory/provenance closure and standalone dependency review remain open. No local binary/model inspection, installation, extra dependency selection or native execution occurred. Proposed trial limits are unapproved.
+
+## T17-IF-QC — dependency expansion intentionally skipped
+
+[Counting-reference findings](benchmarks/input-fit-oracle-review-continuation.md), approved proposal `fa670fa`, leave the current external-controller contract unestablished after five source-review calls/twenty targets. Conditional dependency work was skipped as approved. No new graph/native/advisory/provenance clearance, package selection or installation. Resolve counting integration direction before further standalone-tokenizer dependency expansion; IF-N/P artifact evidence stays unchanged.
+
+## T17-IF-Q — no new dependency evidence
+
+Approved proposal `be1690a` stopped during initial reporting before research. [Stop report](benchmarks/input-fit-oracle-dependency-review.md). Zero research targets; all prior graph/native/provenance/offline/runtime gates remain open, with no package selection or installation.
+
+## T17-IF-P — remaining publisher data identified; no installation
+
+[Continuation findings](benchmarks/input-fit-remaining-assets.md), approved proposal `2533f27`, add exact bytes/SHA256 and matching Git identities for ten remaining Qwen/Nomic data assets, preserving the earlier two wheels/Qwen tokenizer. All eleven listed publisher files are acquired; locally computed SHA256 is not independent publisher attestation or cached-GGUF parity. No candidate imports/installations. Dependency graph, native notices/advisories/ABI/offline behavior, source-to-release reconciliation and runtime counting oracle remain open; prior package evidence stays immutable.
+
+## T17-IF-N — wheel bytes verified; no installation/adoption
+
+[Static findings](benchmarks/input-fit-tokenizer-static-review.md), approved proposal `b8ebed3`, verify both approved wheel hashes and all RECORD entries. Actual Tokenizers0.23.3/Hub2.4.0METADATA confirms the previously reviewed direct ranges; full graph remains open. Tokenizers contains one `.pyd` and no license/notice scan match; native notice/ABI/advisory reconciliation remains unverified. Hub includes LICENSE/console metadata and actual2.4.0wheel version; source-workflow provenance remains open. OneQwen tokenizer data file identified,10assets unacquired after bookkeeping PermissionError. No imports/installations/lock changes; no native or G2 clearance.
+
+## T17-IF-M — partial tokenizer manifest; installation blocked
+
+Approved proposal committed `6b67433`. [Review](benchmarks/input-fit-tokenizer-manifest-review.md) confirms Tokenizers0.23.3registry candidate/hash and historical Qwen/Nomic listings, but per-asset hashes/exact sizes and full payload/native trust are missing. Hub2.4.0's displayed publishing commit declares2.4.0.dev0; reconciliation precedes treating its source requirements as final release metadata. HTTPX2/hf-xet and other source-declared transitives are not selected; existing HTTPX/lock unchanged. No install/import/model execution. [Parity requirements](proposals/input-fit-tokenizer-parity-validation.md) remain design only; G2 open.
+
+## T17-IF-L — tokenizer candidate identified; not selected
+
+[Source review](benchmarks/input-fit-adapter-source-review.md) records Tokenizers0.23.3registry metadata, a regular WindowsABI3wheel/hash, Apache2.0source license and a declared hub dependency/native extension. No payload/transitive/advisory/import/offline/parity test occurred and no package was installed. Exact asset/GGUF matching and rendering/context/output semantics remain open. [Comparison](proposals/input-fit-adapter-comparison.md) conditionally recommends a standalone direction for later artifact/parity planning, not dependency/runtime/G2 adoption.
+
+## T17-IF-K — cached public metadata verified
+
+Approved proposal committed `c4dff2d`; [completed inspection](benchmarks/metadata-identity-correction-results.md) verifies both manifests and seven config/system/template/parameter/license layers,26,739bytes, with expected hashes and stable same-API observations. Configs declare qwen2/1.5B/Q4_K_M and nomic-bert/137M/F16; Nomic parameters contain num_ctx8192, an artifact declaration rather than measured runtime context. Both license layers contain Apache License/Version2.0 markers; native/vendor/transitive notice/advisory reconciliation remains open. No weights/tokenizer/native loads, new dependencies or G2 adoption. Prior incomplete-layer reports below remain historical; exact rendering/counting/context/output parity is still unverified.
+
+## T17-IF-R — no new metadata verified
+
+Approved proposal committed `dee832a`. The stdlib inspection aid passed20fake controls/Ruff, but its sole real child refused the first open-handle/path identity comparison before reading content. Exit/reap verified; no retry or installation. [Partial results](benchmarks/input-fit-inspection-results.md) retain unknown differing stat fields. Prior IF-S manifest verification remains historical; layer metadata, exact tokenizer/rendering fit, native notices/advisories and G2 remain unresolved. No dependency or model adoption follows.
+
+## T17-IF-S — manifest identities verified; layer inspection incomplete
+
+Design committed `145278f`. The [partial static review](benchmarks/input-fit-static-review.md) reverified both selected model manifest hashes and recorded declared config/template/system/parameter/license identities. A layer-inspection shell stalled and was stopped with exit verified; referenced-layer verification did not finish. No dependency/model execution, installation, adapter selection or G2 adoption occurred. Template/tokenizer parity and R1-W native/vendor freshness gaps remain open.
+
+## T17-R1-W — bounded public-source freshness update
+
+Approved proposal committed `780bad2`. The [2026-11-16 UTC review](benchmarks/public-source-web-review.md) examined specific Starlette/pdfminer/Pillow advisories whose listed fixed versions are at or below the recorded pins, plus selected native license sources and pinned Ollama input-fit behavior. Coverage is partial: full runtime/transitive/native advisory and notice reconciliation is still open, and no exact application-facing count-only preflight was validated. Existing pins/artifacts remain unchanged. No security clearance, installation, execution or G2 adoption follows. Earlier zero-research statements below describe the historical R1/T17-A attempts.
+
+## T17-A1 — static reconciliation and proposed runtime set
+
+**R1freshness update:** the approved public-source helper stopped before its first HTTP request. [Failure evidence](benchmarks/public-source-review-stop.md) identifies local ledger/cleanup-adapter bugs, not upstream security findings. Existing inventory below is unchanged; no current advisory/notice refresh or clearance occurred. G2 freshness remains open.
+
+**Prepared under the approved T17-A static package; G2 adoption pending.** Local metadata (not imports) confirms52installed distribution records and53lock package records, including the project. All52installed name/version pairs match the lock. This does not verify installed payload bytes against every wheel/RECORD. Earlier36-package counts below are historical. No package was installed, upgraded, removed or loaded during this check. The existing `.venv/pyvenv.cfg` records Python3.14.6 and `include-system-site-packages=false`; this is configuration evidence, not a fresh binary/runtime compatibility test.
+
+| Role / proposed selection | Recorded exact identity | License / dependency / resource and offline evidence | Adoption gap |
+|---|---|---|---|
+| Backend | FastAPI0.162.2, Uvicorn0.54.0, HTTPX0.28.1 | Existing baseline review below; Starlette/Pydantic/native-core and transport dependencies pinned by lock; local-only endpoint/assets policy | Relevant current advisories, runtime-only transitive/notice inventory and startup/network contract verification |
+| Developer tools | uv0.13.8, pytest9.2.0, Ruff0.17.5 | Existing project-local tools; not application inference dependencies; no global/PATH change | T18 verifies the existing setup, not automatic reprovisioning |
+| CSV | Existing CPython standard-library `csv`, UTF-8/UTF-8-BOM initial policy proposed | No additional wheel; record/physical-line and encoding/error controls in [tabular report](benchmarks/tabular-text-parsers.md) | Non-UTF-8 encoding policy and full-scale ingestion acceptance remain explicit review items |
+| XLSX | openpyxl3.1.5, et-xmlfile2.0.0, defusedxml0.7.1 | MIT/MIT+bundled Python notices/PSFv2 per tabular review; recorded wheels total294573bytes and registered footprint992236bytes in that trial | Verify actual XML-hardening integration, cache/date/merged/external-link behavior and representative resource limits; installed hardening package alone is not protection |
+| PDF text/layout/tables | Recommend pdfplumber0.11.10 with pdfminer-six20260107 as one explicit extraction path | MIT family; [PDF review](benchmarks/pdf-parsers.md), includes observed reading-order limits; pypdf7.0.1 remains comparison tool rather than silent fallback | Complex-layout/scan-detection coverage, native/transitive notices and relevant advisory freshness; no new runtime selection inferred |
+| PDF rendering | pypdfium2 5.15.2 with pinned Pillow13.0.0 dependency where required | Recorded PDFium159.0.8149.0; preserve BSD/Apache/vendor notices and exact wheel choices; historical full `.venv` size is not a parser-only resource estimate | Actual rendering worker contract and native-code trust acceptance; no claim of filesystem confinement |
+| English OCR | tesserocr2.13.0 cp314 Windows AMD64 wheel SHA256 `385820149f88e1a423a0109b6ccd5b0025400f2a3ec30e4de5bdf5a5b06d2442` | MIT binding, bundled Tesseract5.5.4/Leptonica1.87.0 plus their notices;24071055-byte wheel. [Exact inventory](proposals/ocr-trial-artifacts.json), [manual results](benchmarks/manual-ocr-results.md) | Representative scanned/mixed/rotation handling and exact native/asset notices before adoption; no fallback to RapidOCR or new assets |
+| English asset | `tessdata_fast` commit `65727574dfcd264acbb0c3e07860e4e9e9b22185`, SHA256 `7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2` | Apache2.0 recorded; hash was computed after immutable-source verification, not an independent publisher attestation | Startup verifies exact local bytes; missing/drifted asset refuses, never downloads |
+| Local model runtime | Ollama0.40.16 executable SHA256 `4ccefcbfecc50fb6526471adabbc20869dd614e29e351120b15083cb174b0b8a` | Existing MIT/vendor notice review and cached owned runtime; current file rehashed without execution | Native runtime security/privacy inventory and model-input fit; no service/global/user-store installation |
+| Chat | qwen2.5:1.5b-instruct-q4_K_M; manifest `65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b`; weight `183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4` | Recorded Apache2.0;986048512-byte weight; [chat review](benchmarks/chat-models.md) and [shortlist](proposals/model-ocr-selection.md) retain template/license/layer evidence | Copy all manifest/config/template/license identities from the sealed local inventory into provisioning checks; tags alone are insufficient; no model loaded now |
+| Embeddings | nomic-embed-text:v1.5; manifest `0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f`; weight `970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6` | Recorded Apache2.0;274290656-byte weight;768dimensions, distinct `search_query:`/`search_document:` prefixes and truncate=false; [embedding review](benchmarks/embeddings.md) | Exact prefix/template application and local context-fit/reindex validation; no vector/model import or new inference |
+| Metadata | CPython's evaluated SQLite3.50.4 | Version observed in prior trials, not loaded during this static check; stdlib binding plus SQLite licensing/provenance inventory | Migration/integrity/transaction/recovery and data-directory accounting tests |
+| Vector search | sqlite-vec0.1.9 Windows wheel SHA256 `4a28dc12fa4b53d7b1dced22da2488fade444e96b5d16fd2d698cd670675cf32`; DLL `fcf98662a7ad9dce394b96a88f91032047823831b951c76636787c312a6476e6` | Wheel292804bytes/DLL289280bytes; [artifact review](benchmarks/sqlite-vec-artifact-review.md), [native results](benchmarks/sqlite-vec-match-results.md). Accepted exact-artifact companion MIT1068bytes/Apache10931bytes; hashes in [approved package](proposals/sqlite-vec-runtime-comparison.md) | Missing bundled notices and binary/source provenance remain disclosed; exact absolute loader/finally-disable and SQL policy needed; no Python package installation or native load now |
+
+Installed RapidOCR3.10.0/ONNX Runtime1.31.1 and their related packages are evaluation alternatives, not proposed automatic runtime fallbacks. pypdf and the historical alternative models remain evaluation evidence. Do not uninstall them or silently promote their dependency groups into application requirements. Optional MarkItDown/SkillSpector/graphify and developer/design aids keep their recorded non-adoption/defer/review gates.
+
+Static identity snapshot: `pyproject.toml` SHA256 `5fb224b4b38916957a844535bfa3ff1b99c18e582bcbaccb99a325b55c3853b5`; `uv.lock` SHA256 `3ba2690f6f902be6fdf3847e90285eed3d80b6660729187975ff6ba8ff5ed83c`. Both are read-only in this package. Lock wheel hashes remain the canonical Python artifact inventory; model/native assets use the linked exact manifests/seals. No public advisory/license refresh occurred because this package permits zero outbound requests. Current freshness and complete selected native/vendor-notice review therefore remain G2 blockers, not implicit approvals.
+
+**Status:** The user subsequently requested dedicated project installation of the reviewed baseline. It is installed in `.venv` with exact resolution in `uv.lock`. Earlier global observations below are historical inventory, not inherited dependencies. Parser/OCR/model/runtime adoption gates remain pending. Sources checked 2026-11-13.
+
+## Dedicated environment outcome
+
+Installed pins: FastAPI 0.162.2, Uvicorn 0.54.0, HTTPX 0.28.1, pytest 9.2.0 and Ruff 0.17.5. uv 0.13.8 is a verified executable in `.venv/Scripts`, not a global package. `uv.lock` originally recorded 24 baseline distributions; T05/T07 additions bring the current installed set to 36 (37 lock entries including the project). Relative to the global inventory below, annotated-doc is 0.0.6, annotated-types 0.8.0 is included, anyio 4.16.0, certifi 2026.10.23 and idna 3.20. Global distributions were not changed.
+
+All package locations were verified under `.venv`; imports, versions, lock consistency and frozen offline sync passed. No source builds or exporter/SDK/cloud CLI were added; opentelemetry-api remains. Colorama's installed LICENSE.txt was located and inspected despite the missing metadata field. No vulnerability-free or offline application claim is made. This environment setup is a user-authorized sequencing exception before T18, not completed architecture/features. Later adoption, downloads and global changes remain gated.
+
+## Baseline candidates and alternatives
+
+| Component / candidate version | Purpose / alternatives | License and Windows/CPU review | Resource, security and offline implications |
+|---|---|---|---|
+| Existing CPython 3.14.6 | Reuse approved 3.11+ interpreter in isolated environments; alternative approved managed older Python if a parser lacks compatible wheels | Actual 64-bit Windows interpreter; package support must be tested | Avoids a new interpreter download initially; never inherit global site-packages; no third-party code required for stdlib CSV/TXT/SQLite |
+| uv 0.13.8 | Required environment/lock workflow; standalone archive versus installer/WinGet; pip/requirements substitution is not approved | MIT OR Apache-2.0; x64 Windows artifact published; native prebuilt executable | Developer tool, not runtime server. Network resolver/download capability requires scoped provisioning; direct archive avoids installer/profile changes. Actual installed footprint/RAM unmeasured. [Registry](https://pypi.org/project/uv/), [release](https://github.com/astral-sh/uv/releases/tag/0.13.8) |
+| FastAPI 0.162.2 | API/type validation per SPEC; alternatives Starlette directly or another framework would change architecture | MIT; Python >=3.10; package supports Windows-independent Python use | Requires Starlette/Pydantic and native Pydantic core transitively. Installed metadata includes opentelemetry-api; review its initialization/absence of exporters before adoption. Avoid standard/all extras; no privacy guarantee from package metadata. [Version source](https://pypi.org/project/fastapi/0.162.2/) |
+| Uvicorn 0.54.0, minimal package | ASGI server; alternatives other ASGI servers need review | BSD-3-Clause, Python >=3.10; minimal package avoids optional compiled/event-loop extras | Click/h11 baseline; bind loopback. Optional reload/WebSocket/native extras not needed until a justified task. Offline serving possible in principle, not yet tested. [Source](https://pypi.org/project/uvicorn/) |
+| HTTPX 0.28.1, minimal package | Async/sync loopback Ollama API and API tests; stdlib urllib is a smaller synchronous alternative | BSD-3-Clause, Python >=3.8; actual host support not tested as an app | anyio/httpcore/h11/certifi/idna graph. Explicit local URLs, bounded timeouts and no environment-proxy routing for document requests must be verified. No HTTP2/SOCKS/CLI extras planned. [Source](https://pypi.org/project/httpx/) |
+| pytest 9.2.0 | Fixture/parameter/API tests; unittest is stdlib alternative but SPEC selects pytest | MIT, Python >=3.10; Windows classified | Dev only; plugin discovery can execute installed code, so isolate environment and review plugins. No external service required for mocked tests. [Source](https://pypi.org/project/pytest/) |
+| Ruff 0.17.5 | Required lint/format workflow; multiple separate linters/formatters add tools | MIT; published Windows x64 wheel about 10.3 MB | Dev-only prebuilt native tool; no Rust compilation proposed. Runtime memory/installed size unmeasured; run checks locally. [Source](https://pypi.org/project/ruff/) |
+| sqlite3, csv, pathlib, hashlib, zipfile/XML | Metadata/history, text/table handling and integrity helpers; no separate SQLite server/package by default | Python standard library; SQLite 3.50.4 observed | No extra download; constrain paths, archive sizes and XML/entity handling; SQL parameters and transaction semantics still require implementation review |
+
+Maintenance observations are bounded: upstream release pages show FastAPI updated in November 2026, Uvicorn in September 2026, pytest in October 2026 and uv/Ruff in November 2026. HTTPX's registry release is older; longevity alone is not a security verdict. No package or resolved graph is certified vulnerability-free; changelog/advisory checks and artifact/hash review are required before actual adoption.
+
+## Observed transitive packages — not a proposed lockfile
+
+These are read-only installed-distribution metadata observations, not a clean resolver result or a list approved for reuse. Resolve the future isolated environment and review its actual lock graph, including additional dependencies, before installation/adoption.
+
+| Package | Installed version | Declared local license |
+|---|---|---|
+| starlette | 1.10.0 | BSD-3-Clause |
+| pydantic / pydantic_core | 2.14.3 / 2.50.4 | MIT / MIT |
+| typing_extensions | 4.16.0 | PSF-2.0 |
+| typing-inspection / annotated-doc | 0.4.5 / 0.0.5 | MIT / MIT |
+| opentelemetry-api | 1.45.2 | Apache-2.0 |
+| click / h11 | 8.5.1 / 0.16.0 | BSD-3-Clause / MIT |
+| anyio / httpcore | 4.14.2 / 1.0.9 | MIT / BSD-3-Clause |
+| certifi / idna | 2026.7.22 / 3.19 | MPL-2.0 / BSD-3-Clause |
+| colorama | 0.4.6 | Missing license field in inspected metadata; source/license-file review outstanding |
+| iniconfig / pluggy | 2.3.1 / 1.7.0 | MIT / MIT |
+| packaging / pygments | 26.3 / 2.21.0 | Apache-2.0 OR BSD-2-Clause / BSD-2-Clause |
+
+Do not add telemetry exporters/instrumentation. Presence of an API-only telemetry package is not itself proof of transmission, and absence of an exporter in a metadata list is not proof of no outbound traffic. Review runtime initialization and verify traffic in T19/T47. Native Pydantic core/wheel compatibility is a specific Python 3.14 check. License notices and artifact provenance remain part of the eventual inventory/lock review.
+
+## Later evaluations, not current installation requests
+
+- T04 SkillSpector: exact project/version and scripts/security remain unverified; manual inspection still required. No installer proposal exists yet.
+- T05–T09 parsers/OCR: PyMuPDF 1.28.2 is globally installed and its local metadata states AGPL-3.0 or Artifex commercial licensing. It is not adopted. Compare its licensing/dependencies/provenance with alternatives; python-docx, openpyxl, MarkItDown, PDF rendering and English OCR assets need exact trial proposals. No universal parser is assumed.
+- T10/T11 models: `embeddinggemma` and `qwen2.5:3b` remain candidates. Review exact digest/quantization/license/download size/context and CPU/RAM behavior before pulls. No model files were inspected or downloaded.
+- Ollama: no reachable local service/version. Its [Windows documentation](https://docs.ollama.com/windows) describes native installation and at least 4 GB binary-install space; model storage is additional. Choose a pinned release/artifact/license/update behavior in a separate proposal; do not use an unversioned installer silently.
+- T12 vector representation, T13/T14 exact RTK/ponytail identities, T15 UI UX Pro Max and T16A local chart tooling remain separately gated. No frontend framework, cloud model, vector service or native OCR binary is approved here.
+
+## Privacy and offline adoption checks
+
+T09 approved continuation result (`6491666`): [all artifact identities verified](benchmarks/ocr.md), including three English assets and the approved FlatBuffers companion notice. Fourteen cached wheels reused unchanged; two wheels and three assets newly fetched. 80 notice records include bundled LGPL/Microsoft/third-party terms; 64 native DLL/extension entries are inventoried, without runtime version or unrestricted distribution clearance. English recognizer dictionary metadata is embedded; actual initialization remains untested. Ten preparation tests passed; 14,856,592 response-body bytes/12 requests, old meter unchanged. No pyproject/lock or installed-package change, source build, native OCR import/run or runtime adoption. Installation and benchmark require Part B approval plus an agreed native boundary.
+
+FlatBuffers follow-up: stop report committed in `7c50144`; user-authorized upstream license investigation found all ten cached 25.12.19 runtime Python files byte-identical to commit `7e163021e59cca4f8e1e35a7c828b5c6b7915953`. Its 11,358-byte Apache-2.0 LICENSE has SHA-256 `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`. Wheel omission remains recorded; [proposed continuation](proposals/ocr-trial.md#proposed-part-a-continuation-after-flatbuffers-investigation) requests an exact-wheel companion-notice exception and a new artifact-only budget. No blanket missing-notice waiver, repackage, dependency/lock change, installation or Part B approval. Original artifact meter verified unchanged.
+
+T09 Part A actual outcome: proposal committed in `bf3b82e`; [inspection stopped](benchmarks/ocr.md) at missing license/notice material in `flatbuffers-25.12.19-py2.py3-none-any.whl`. Fourteen wheel hashes/sizes verified; thirteen notice collections completed. 125,721,610 response-body bytes, 14 requests, no retries; 16/16 conservative process slots consumed. Tesserocr includes 29 native entries/37 located notices; complete native/runtime license review remains open. RapidOCR includes three unselected default ONNX assets inside its approved wheel. No separately listed English asset, package installation, OCR import/run or dependency-file change occurred. No complete license/security clearance; a revised continuation and native execution boundary remain gated.
+
+T09 follow-up: the [bounded proposal](proposals/ocr-trial.md) and [exact artifact inventory](proposals/ocr-trial-artifacts.json) identify 16 new Windows/Python 3.14-compatible wheel candidates (126,313,841 bytes) and three English assets (14,187,839 bytes). tesserocr 2.13.0's upstream wheel release reports Tesseract 5.5.4/Leptonica 1.87.0, offering an installer-free candidate; bundled notices/actual DLL identity still require inspection. Manual metadata closure preserves six reused versions and found no declared conflicts, without uv resolution or import testing. English-data identity uses a pinned Git blob/commit pending a recorded SHA-256. Part A approval would permit only bounded artifact preparation, not installation; Part B requires artifact review and an agreed native boundary. No source builds, global changes, dependency-file edits or OCR runs have occurred.
+
+T09 read-only result: [English OCR shortlist](benchmarks/ocr.md) compares Tesseract 5.5.4 (Apache-2.0 engine; Windows artifact/native dependency review pending) with RapidOCR 3.10.0 (Apache-2.0 wrapper, separate model notices) and ONNX Runtime CPU 1.31.1 compatibility evidence. Registry wheel identities are recorded without download. NumPy/OpenCV/geometry/runtime transitive pins and licenses, exact English assets, patched binary, local initialization and resource costs remain unverified. No OCR installation/import/run or pyproject/lock change. A project-local Tesseract subprocess is proposed as a baseline only if a suitable patched artifact is reviewed; RapidOCR is the alternative. No automatic model downloads, global installation, source build or trial approval.
+
+T08 read-only result: [MarkItDown review](benchmarks/markitdown.md) examines official v0.1.9 (MIT), Python >=3.10,<3.15; registry wheel 90,071 bytes, SHA-256 `52f59c48bea9cf887224c56247f648d68beb7aa7af5a12d414748210c83c20ea`. Direct dependencies include Magika, requests, BeautifulSoup and markdownify; XLSX adds pandas/openpyxl, PDF reuses pdfminer/pdfplumber candidates. Exact additional graph/native licenses, Windows wheels, inference assets and resource costs remain unverified. No artifact download/install/import or resolver/lock change. The user approved non-adoption and empirical-trial deferral on 2026-11-13; no MarkItDown runtime dependency is selected. Any trial requires a separately reviewed exact package and fresh execution/isolation budget. XLS proposal below is historical, now excluded from Stage 1.
+
+T07A read-only proposal: [XLS parser review](benchmarks/xls-parsers.md) compares xlrd 2.0.2 (BSD-family with inherited attribution/advertising provisions) against python-calamine 0.9.1 (MIT binding and Calamine core; compiled dependency notices still to inventory). Proposed evaluation-only xlwt 1.3.0 has BSD-family inherited notices and an old release baseline. The three pinned wheels total 984,935 bytes; no new installation or manifest/lock change has occurred. Exact bounded trial approval precedes artifact download/import, fixture generation and parser tests; no reader is adopted.
+
+T11A read-only review: [chat proposal](benchmarks/chat-models.md) pins Qwen2.5 1.5B and Qwen3 1.7B GGUF Q4_K_M (Apache 2.0), with verified public manifest/config/template/license hashes. Proposed download 2,345,355,336 layer/config bytes, reusing Ollama 0.40.16 and HTTPX/standard library; no Python dependency or lock change. Qwen3's 1.7B tag differs from registry parameter labels (2.0B/2.03B); retain actual local metadata before measuring memory. Qwen2.5 3B is Qwen Research, restricted to non-commercial research/evaluation absent a requested commercial license; no 3B weights or license acceptance authorized. The user approved this package; both models are installed/hash-verified and CPU loading/zero VRAM/context 2048 were observed. Qwen3 emitted no nonempty thinking field in completed responses. The original run stopped at 84/96 attempts on a request deadline; its separately approved no-download continuation completed the remaining 13 Qwen3 requests, retaining the timeout. All 96 planned slots now have completed/schema-scope-valid results. Final 27 tests/Ruff and later cleanup verification passed; semantic quality, combined/strict-16-GB and disconnected validation remain incomplete. No Python/lock change, model adoption or commit. The continuation used 30/32 starts and 19/40 calls with zero downloads; neither phase may be reset or restarted implicitly.
+
+The approved workflow needs local-only inference/storage/assets and no runtime downloads. Ollama's [FAQ](https://docs.ollama.com/faq) documents disabling cloud features using `OLLAMA_NO_CLOUD=1` and default loopback binding, but Windows desktop updates can download automatically. Review update control and package choice before installation; do not claim local-only traffic from defaults. Its [GPU guidance](https://docs.ollama.com/gpu) describes excluding NVIDIA devices; CPU-only execution must also be observed during actual runs, including other GPU backends.
+
+Before adopting any component: exact pin/hash and upstream provenance, direct/transitive/native license review, applicable advisories/changelog review, isolated Windows wheel/command smoke, resource footprint, bounded inputs/errors, no content/network telemetry, no cloud fallback, and offline behavior after provisioning. Public documentation research in T03 sent no user content externally. Nothing in this inventory authorizes downloads, a global package change or application implementation.
+
+T05 follow-up: the [PDF evaluation report](benchmarks/pdf-parsers.md) records nine installed pdf-eval pins, licenses/native notices, Windows isolation, resources and observed local behavior. pypdf/pdfplumber were trialed with baseline versions unchanged; neither was adopted. PyMuPDF was not installed; user accepted deferring its empirical comparison at T05 closeout.
+
+T07 result: [XLSX/CSV report](benchmarks/tabular-text-parsers.md). Installed openpyxl 3.1.5 (MIT), et-xmlfile 2.0.0 (MIT plus bundled Python-license notices) and defusedxml 0.7.1 (PSF v2), only inside `.venv`; earlier pins unchanged. Registered files total 992,236 bytes, wheels 294,573 bytes. Hashes/backend assertions and offline sync/lock checked. Forty bounded original-file runs and controls completed; source hashes unchanged. Coverage gaps and combined regression-worker budget overrun are in the report. No lxml/pandas/calamine/Office or XLS parser installed; no runtime adoption. Future exact packages and G2 remain gated.
+
+T10 result: [bounded embedding comparison](benchmarks/embeddings.md). Approved official Ollama v0.40.16 Windows ZIP (core MIT plus inventoried bundled notices), EmbeddingGemma 300m BF16 (custom Gemma Terms) and Nomic Embed Text v1.5 F16 (Apache 2.0) are hash-verified and installed project-locally. Existing HTTPX/standard library suffice; no pyproject/lock change, PyTorch, SentenceTransformers or cloud client. Charged transfer 2,515,473,387 bytes; native extraction 2,267,275,279 bytes. Both CPU schedules completed across original/continuation runs, with original failure/count uncertainty retained. Nomic is the leading candidate for later review given equal small-set recall, smaller weights and lower observed run-wide memory; no model adoption or universal speed claim. Additional approved phase used 24/24 starts, 82/100 calls and no downloads. Disconnected/combined validation and full bundled-license/security certification remain unestablished. Neither consumed phase may be restarted without a new allocation; G2 selection remains separate. Earlier inventory statements above describe the pre-provisioning state.
+
+## T17-IF-SA continuation 03 — partial static evidence
+
+[Findings](benchmarks/standalone-tokenizer-static-verification.md): the cached runtime archive and all 75 installed files agree; 71 native files/four notices inventoried, without publisher/source/native-safety attestation. Tokenizers 0.23.3 identity/31-member RECORD/Python>=3.10/Hub>=0.16.4,<3.0 metadata verified. Hub 2.4.0 identity matches but 191 entries exceed 128; no new Hub RECORD/metadata/notices or dependency research. No installation/import/adoption. Native notices/advisories, Hub source/release mapping, applicable hf-xet/httpx2 graph/offline/parity remain unresolved. Recommend a separately approved Hub-only continuation.
+
+
+## T17-IF-HS — Hub wheel identity/RECORD complete; adoption still gated
+
+[HS findings](benchmarks/hub-only-static-review.md): exact Hub 2.4.0 wheel verified, 191 entries/190 RECORD payload hashes, Python>=3.10 metadata and one Apache-2.0-declared LICENSE read. No native-suffix filenames in this wheel; applicable hf-xet remains a native-transitive question, and httpx2 is distinct from HTTPX. Nine direct requirements are recorded; extras and Python<3.11 tomli excluded. No exact transitive artifacts selected.
+
+Three public calls/12 targets exposed official release commit 3739729… while approved source 178e1a… remains unmapped to release/wheel; four failed fetches preserved. Required-provenance stop prevents graph/advisory/offline expansion. No install/import/adoption. Prepare separately approved source-coordinate reconciliation, keeping successful static evidence.
+> **T17-IF-WSP static evidence update, 2026-11-18:** Tokenizers 0.23.3 cached-wheel integrity and the exact 16 Python members were verified without importing the candidate or opening native payloads. Parent start/report accounting failed, so the package is incomplete; native import/loader/offline/parity readiness remains unproven. All 17 declared dependencies and prior licence/build conditions remain binding. No installation, dependency omission, native execution or runtime adoption is approved. See [findings and limits](benchmarks/tokenizer-cached-wheel-source-review.md).

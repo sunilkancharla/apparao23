@@ -1,0 +1,31 @@
+# T09 - Authorized consolidated isolation validation
+
+**Date:** 2026-11-14 (Asia/Calcutta). **Authorization:** The user explicitly requested proceeding with one consolidated bounded validation without CREATE_NO_WINDOW, covering remaining checks in one approval. This records that package; it does not reopen prior stopped runs or approve a commit/OCR execution. [Flag evidence](../benchmarks/launch-flag-comparison.md), [original access map/profile side effects](ocr-appcontainer-preflight.md).
+
+**Actual outcome:** [Recorded gate results](../benchmarks/consolidated-isolation-validation.md): positive staged startup and all four native positive loopback controls passed; the fresh profile was created, but the first ACL grant was denied. Profile deletion succeeded; removal utility denial retained, independent read-only audit found no SID entry on the 11 planned grant targets/ancestors. Restricted controls/OCR were not reached. This diagnostic chain ends at the stop; no automatic follow-up.
+
+## One package and acceptance gates
+
+Reuse the existing verified 810-file staged Python 3.14.6 runtime (38,852,581 bytes) at `.venv/tools/appcontainer-preflight/preflight-01/runtime/`, with no new copy or installation. Rehash against the original manifest and preserve all prior meter hashes. New ignored ledger: `data/t09-isolation/consolidated-01/`; fresh profile moniker `DocumentAssistant.T09.consolidated-01`. Never reuse another profile.
+
+Use extended startup, suspended creation, Unicode environment and the child-process restriction, **without CREATE_NO_WINDOW**. Preserve AppContainer SID/zero-capability/low-integrity validation before resume, one-process worker Job, controller plus one current child, no breakaway, and strict cumulative accounting. The changed flag is an evaluation setting, not production adoption.
+
+Sequential gates, stopping before the next on failure:
+
+1. Test-first helper changes/policy and cleanup checks; revalidate runtime/config/source identities, available RAM, controller Job/descendant accounting and output boundaries.
+2. Positive staged startup/identity with the actual authored control helper and child restriction, then native Winsock IPv4/IPv6 TCP/UDP positive loopback controls using owned listeners and synthetic markers. Missing delivery or pending/refused/timeout outcomes are inconclusive and stop.
+3. Create one zero-capability temporary per-user AppContainer profile and obtain its exact Windows-managed storage path. This API creates profile folders/registry storage outside the repository, as previously reviewed/approved; no global Python/Windows feature/firewall/PATH change. Preserve ownership before any later operation.
+4. Apply only this SID's read/execute grants on the staged runtime and synthetic inputs, modify/low-integrity label on the new work directory, and minimal non-inheriting traversal on needed workspace ancestors. No whole-workspace recursive grant, outside-project ACL, global runtime grant or access to real documents. Record original/applied descriptors; remove only owned grants, preserve concurrent unrelated changes, and verify cleanup. Profile storage/default OS-accessible resources remain explicitly disclosed exceptions to project-only confinement.
+5. Validate the actual suspended worker token, startup/identity, synthetic allowed read/write and denied private/sibling/input-modification cases; preserve the original bytes of sentinels. Validate native Winsock denial on the same four loopback paths using explicit WSAEACCES/no received marker, no monkeypatch or loopback exemption. This is bounded loopback/token evidence, not a complete Internet/firewall audit.
+6. Verify actual child-creation denial, a safe timeout sentinel, Job accounting/resource enforcement and teardown. At most seven direct worker roots: two positives plus startup/files/network/child/timeout restricted roots; the blocked child attempt is also charged. No OCR/native third-party import, image/PDF decoding or user data.
+7. Always terminate/wait/close owned workers/listeners/handles, remove this SID's grants and owned label changes, delete only the profile successfully created by this run through its API, and verify remnants/active processes. Preserve partial results and cleanup errors; do not recursively delete a Windows-managed profile directory.
+
+## Shared limits and exit
+
+Retain the original approved **96-start/attempt ceiling**: 24 helper/test, 12 preparation, 24 native control slots, 12 cleanup operations, 12 closeout and 12 reserve. All shells, redirectors/interpreters, lint/tests, ACL utility descendants, worker/blocked child attempts and observed extras share one meter. Append reservations before launching; kernel-account controlled children. Protect at least the exact required cleanup slots plus 12 closeout slots before granting access; abort preparation if that cannot fit. No repeated failing controls, automatic retries, old suite invocation or budget resets.
+
+**20 minutes preparation, 20 minutes execution; 15 seconds/worker** (timeout sentinel terminated after one second); **512 MiB private commit per controller/worker; >=4 GiB available RAM; one worker at a time; 256 MiB new disk including profile/output storage; 16 MiB outputs; zero downloads/external requests/Ollama calls.** Monitor/bound storage; failure to observe/enforce a required boundary stops before inference. Prior cached runtime bytes are not new disk. No expanded assets, packages or resolver.
+
+Any safety/accounting/token/permission/resource failure, inconclusive control, host restriction, failed cleanup or exhaustion ends native validation. No whitelist for an unidentified process or suppressed guard. On success, present the complete boundary evidence before OCR Part B provisioning approval. On failure, end this Windows diagnostic chain and present alternatives/limitations for a user decision; do not automatically create another micro-investigation. Git commits, runtime adoption, security-policy changes and OCR Part B retain separate gates.
+
+Necessary implementation uses the existing verified incremental/TDD/security/review/documentation workflows. Allowed source is the preflight helper/test pair, limited reusable accounting helpers when necessary, and affected proposal/report/README/TODO. This document is an authorization record and checklist, not a passing result.
