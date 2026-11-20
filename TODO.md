@@ -1,4 +1,8 @@
-## Current task — T27 owner and native package approved; offline start pending
+## Current task — T27-S1 stop reviewed; correction/fresh S2 approved
+
+The operator executed S1 and requested review. [Stop report](docs/benchmarks/t27-runtime-first-stop.md): 2 charged starts, 0 HTTP calls, no native reservation; `OLLAMA_ASSET_UNAVAILABLE` arose from a legacy manifest path while the installed `manifests-v2/ollama.com/library` Nomic manifest has the exact approved digest. The executable hash and four blob sizes also match; full blob rehash is reserved for a corrected preflight. S1 receipts/root/seal stay unchanged and closed. The user approved [T27-R1/S2](docs/proposals/t27-preflight-correction.md) and the six-document review/proposal commit on 2026-11-20. No code/dependency/native execution changed in this review; T27/CP10/T28 remain gated.
+
+## Earlier task — T27 owner and native package approved; offline start pending
 
 The user's continuation after `ae1f611` authorized implementing the missing owner and preparing its exact smoke. [T27-D/E evidence](docs/benchmarks/t27-runtime-owner.md): 36 new fake/data-only cases; full suite 365 passed/one existing skip and warning; Ruff passed. Final shared routine meter: 13/64 starts, 331,210/2,000,000 retained artifact/child-output bytes. The listener-check mutation failed and was restored exactly; a blocked-loop watchdog regression was fixed. [T27-S1](docs/proposals/t27-runtime-smoke.md) defines a fresh shared allocation and source seal, is unexecuted; the user approved it and the 15-file source commit on 2026-11-20. Execution awaits the operator confirming external networking is disconnected. No real job/Ollama/model execution, download, private sample or readiness change. T27/CP10 stay open; T28 is next after runtime verification.
 
@@ -1521,7 +1525,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T27 — Embed through the approved local Ollama model
 
-**Status:** Client committed as `ae1f611`; T27-D/E owner and supervised handoff implemented/fake-verified; their closeout/commit and T27-S1 native execution approved, 2026-11-20; offline-start confirmation pending. Actual Windows/model integration remains unrun. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step/remaining-runtime instructions. **Scope:** M, sequential increments below; no native execution authorized by these routine checks.
+**Status:** Client `ae1f611` and owner/handoff `67bdd7f` committed; S1 executed and closed on asset-path preflight failure, 2026-11-20. T27-R1 correction/fresh S2 approved, 2026-11-20; actual Windows/model integration remains unrun. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step/remaining-runtime instructions. **Scope:** M, sequential increments below; no native execution authorized by these routine checks.
 **Objective:** Add bounded loopback embeddings with explicit model/dimension/error handling.
 
 | Increment | Objective / prerequisites | Acceptance / verification | Status |
@@ -1535,7 +1539,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 - [x] Implement the client for only the approved endpoint/model with bounded batches/timeouts and recorded identity/dimensions; reject invalid/incompatible responses and explicit truncation reports. Actual server fit/silent truncation remains unverified.
 - [x] Surface absent service/model, timeout and malformed-response errors without downloads, sensitive logs or remote fallback.
 - [x] Implement the owned runtime/shared-work-slot adapter and source-sealed supervised handoff, with fake/data-only lifecycle and budget verification. This is not real Windows integration evidence or live application readiness.
-- [ ] Execute/review the approved [T27-S1](docs/proposals/t27-runtime-smoke.md) after operator offline confirmation for actual Windows ownership/model smoke. Only this fresh bounded allocation is authorized; no historical budget reuse. Browser readiness remains false until its remaining pipeline prerequisites are met.
+- [ ] Complete actual Windows ownership/model smoke after correcting the [S1 preflight stop](docs/benchmarks/t27-runtime-first-stop.md). [T27-R1/S2](docs/proposals/t27-preflight-correction.md) is approved for its exact fresh allocation; S1 is closed without native work and cannot be reused. Browser readiness remains false.
 
 **Verification:** Test-first mocked local HTTP/model/error cases; separately authorized actual-model embedding smoke with non-sensitive text.
 **Evidence:** [T27 report](docs/benchmarks/t27-embeddings.md): 54 unit cases and two real-loopback synthetic integration cases; full suite 329 passed/one existing skip and warning, Ruff passed. Initial module absence and later truncation/Unicode controls failed before implementation/fixes. Wrong-digest mutation failed its guard test and restored the pre-mutation hash. No actual Ollama/native execution, model accuracy, owned-process lifecycle, global job coordination or target-resource proof is claimed. Real-model smoke remains pending rather than being represented by the synthetic server.

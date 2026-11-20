@@ -1,4 +1,8 @@
-## Current execution point — T27 owner and native package approved; offline start pending
+## Current execution point — T27-S1 stop reviewed; correction/fresh S2 approved
+
+The operator ran the approved disconnected S1 handoff. [Receipts and diagnosis](docs/benchmarks/t27-runtime-first-stop.md): `OLLAMA_ASSET_UNAVAILABLE`, 2 charged Python starts, 0 HTTP calls, no native-tree reservation. The installed Nomic v2 manifest and executable match their approved hashes; the verifier used the wrong manifest directory. Preserve/close S1 without retry or reseal. [T27-R1/S2](docs/proposals/t27-preflight-correction.md) defines the fixture-led path/error correction and fresh explicitly allocated smoke approved by the user on 2026-11-20, together with the six-document review commit. This results review changed documentation only; no repair, model run or new native allocation started. T27/CP10 remain open and T28 waits for actual runtime verification.
+
+## Earlier execution point — T27 owner and native package approved; offline start pending
 
 After client commit `ae1f611`, the user instructed proceeding with the remaining runtime work. T27-D/E now implement an exclusive runtime session, atomic Windows job creation, listener/handle/resource checks, teardown and a shared-budget supervised smoke handoff. [Verification](docs/benchmarks/t27-runtime-owner.md): 36 new fake/data-only cases; full suite 365 passed/one existing skip and warning, Ruff passed. [T27-S1](docs/proposals/t27-runtime-smoke.md) and its 25-file source seal are prepared but unexecuted; the user explicitly approved the exact native package and 15-file source commit on 2026-11-20. The operator will disconnect external networking once preparation is complete; execution awaits that confirmation. No native/model execution, installation, private sample or app readiness change occurred. T27/CP10 remain open; T28 follows actual-runtime verification rather than skipping it.
 
