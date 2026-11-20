@@ -1,4 +1,4 @@
-**Current status — 2026-11-20:** T18 is committed as **0658bea**. The user authorized T19; its loopback launcher and startup diagnostics are implemented and verified, awaiting review/commit. The normal suite passed **36 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T19 evidence and limits](docs/benchmarks/t19-startup.md). G2/T17 remains closed with its recorded unverified limitations. No document ingestion, model execution or chat UI is implemented by T19.
+**Current status — 2026-11-20:** T18 is committed as **0658bea** and T19 as **e99630a**, following the user's explicit closeout/commit approval. The loopback launcher and startup diagnostics are implemented and verified. The normal suite passed **36 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T19 evidence and limits](docs/benchmarks/t19-startup.md). G2/T17 remains closed with its recorded unverified limitations. No document ingestion, model execution or chat UI is implemented by T19.
 
 ## Local startup and diagnostics
 
