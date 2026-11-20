@@ -1,6 +1,8 @@
-## Current task — T19 complete and committed; T20 next
+## Current task — T20 implemented and verified; review complete; commit approved
 
-The user authorized T19 on 2026-11-20 after T18 commit **0658bea**, then explicitly approved its reviewed closeout and ten-file commit, created as **e99630a**. Configuration, exclusive loopback startup and safe prerequisite diagnostics are implemented; 36 normal tests passed, one symlink-creation test skipped for host permissions, and Ruff passed. [T19 evidence](docs/benchmarks/t19-startup.md) records test-first failures, actual Python server/port-collision/log checks, mutation detection and limitations. Readiness stays false until later owned model integration. T20 is next and has not started; no provisioning or model/OCR execution occurred.
+The user explicitly authorized the presented T20 scope on 2026-11-20. [Storage evidence](docs/benchmarks/t20-storage.md): 21 new real-SQLite tests pass; full suite 57 passed, one host-permission skip and one retained Starlette warning; Ruff passed. Shared content identity, separate scoped document/reference identities, uniqueness/FK constraints, atomic rollback, version/schema refusal and restart persistence are covered. No new dependency, native model execution, live ingestion, quota/lifecycle implementation or T21 work. The user explicitly approved the reviewed nine-file T20 closeout and commit on 2026-11-20.
+
+The user authorized T19 on 2026-11-20 after T18 commit **0658bea**, then explicitly approved its reviewed closeout and ten-file commit, created as **e99630a**. Configuration, exclusive loopback startup and safe prerequisite diagnostics are implemented; 36 normal tests passed, one symlink-creation test skipped for host permissions, and Ruff passed. [T19 evidence](docs/benchmarks/t19-startup.md) records test-first failures, actual Python server/port-collision/log checks, mutation detection and limitations. Readiness stays false until later owned model integration. This T19 closeout predates the T20 authorization above; no provisioning or model/OCR execution occurred.
 
 [Approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved the architecture, bounded T18 task and reviewed documentation commit. T17 is closed in **2698240** and has no remaining mandatory task; the three omitted investigations remain unverified limitations. T18 checks passed as recorded below; the user explicitly authorized the scoped T18 commit on 2026-11-20.
 
@@ -1382,14 +1384,14 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T20 — Persist minimal ownership and conversation references
 
-**Status:** Proposed. **Prerequisites:** T19; approved D04/T17 schema/lifecycle. **Scope:** M.
+**Status:** Implemented and verified; review complete; commit approved, 2026-11-20. **Prerequisites:** completed T19; approved D04/T17 schema/lifecycle; explicit task approval. **Scope:** M.
 **Objective:** Establish only the SQLite identities/reference distinctions needed by upcoming uploads.
 
-- [ ] Persist content/document identity, minimal conversations, exclusive/library ownership and references with integrity/uniqueness constraints; shared content identity must not merge visibility.
-- [ ] Version/initialize schema and preserve references after restart with transaction rollback on failure; do not prebuild unrelated future message/lifecycle features.
+- [x] Persist content/document identity, minimal conversations, exclusive/library ownership and references with integrity/uniqueness constraints; shared content identity must not merge visibility.
+- [x] Version/initialize schema and preserve references after restart with transaction rollback on failure; do not prebuild unrelated future message/lifecycle features.
 
 **Verification:** Test-first identity/reference/uniqueness/rollback/reopen cases against approved ownership policy.
-**Evidence:** Pending — storage/schema/restart tests and contract review.
+**Evidence:** [T20 report](docs/benchmarks/t20-storage.md): 21 focused tests pass, full suite 57 passed/one host-permission skip; Ruff passed. Real process termination leaves committed membership intact and rolls back the uncommitted transaction on reopen with integrity_check=ok. Isolation mutation is detected; original source restored exactly. SQLite schema/version/ownership and statement boundaries reviewed against C02/D04. No automatic product-database creation or public mutation API added.
 **Likely files:** `app/storage/database.py`, `app/storage/documents.py`, `tests/unit/test_document_storage.py`, one schema file if warranted.
 
 ### T21 — Implement normalized provenance contracts
