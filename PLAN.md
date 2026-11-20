@@ -1,4 +1,8 @@
-## Current execution point — T25/CP09 closeout and commit approved; T26 next session
+## Current execution point — T26 complete; closeout and commit approved
+
+The user's instruction to start T26 authorizes this task after T25 commit `ebbe77b` and accepted CP09. Pure source-preserving chunking is implemented with the approved provisional 600/800/120-byte policy. Sequential prose, structured-table/CSV and integration/review increments passed 32 new tests; full suite: 273 passed, one existing skip and warning, Ruff passed. [Evidence, provenance examples and limits](docs/benchmarks/t26-chunking.md). No dependency, storage schema, model execution or readiness change occurred. The user explicitly approved the reviewed T26 closeout and ten-file commit on 2026-11-20; T27 remains unstarted and CP10 remains open through T28.
+
+## Earlier execution point — T25/CP09 closeout and commit approved; T26 next session
 
 The user's continuation after T24 commit `0e4502f` authorized T25. Streaming CSV provenance, atomic versioned normalized storage/recovery, bounded scoped JSON previews and derived-operation status are implemented sequentially under T25-A/B/C. Final suite: 241 passed, one existing permission skip and warning; Ruff passed. [Evidence, CP09 walkthrough and limits](docs/benchmarks/t25-csv.md). The user explicitly approved the reviewed T25/CP09 closeout and seventeen-file commit on 2026-11-20, and requested that T26 begin in a new session. T26 has not started.
 

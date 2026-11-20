@@ -1,4 +1,12 @@
-**Current status — 2026-11-20:** T24 is committed as `0e4502f`. T25 adds versioned CSV extraction, structured record/column/physical-line provenance and bounded escaped source previews. The full suite passed **241 tests**, with one existing Windows permission skip and the Starlette warning; Ruff passed. [T25 evidence and limits](docs/benchmarks/t25-csv.md). The user approved the reviewed T25/CP09 closeout and seventeen-file commit. T26 is reserved for a new session; chunking, indexing, model execution and a chat UI remain later tasks.
+**Current status — 2026-11-20:** T25 is committed as `ebbe77b`. T26 adds deterministic source-preserving chunks and explicit evidence omissions. The full suite passed **273 tests**, with one existing Windows permission skip and the Starlette warning; Ruff passed. [T26 evidence and limits](docs/benchmarks/t26-chunking.md). The user approved the reviewed T26 closeout and ten-file commit; embedding, indexing, model execution and a chat UI remain later tasks.
+
+## Source-preserving chunks
+
+`app.retrieval.chunking.iter_chunks(extraction, units=None)` is a pure backend transform over the normalized provenance contract. It yields immutable `Chunk` or `ChunkOmission` values. It also accepts an ordered source-unit iterator with T25's units-free extraction envelope, avoiding a full-document tuple. The caller supplies already validated, complete extraction data; chunk identities do not grant document access. No chunk route, automatic processing step or persisted index is introduced.
+
+The approved provisional policy targets 600 UTF-8 bytes of prose, permits at most 800 bytes including generated labels, and repeats up to 120 bytes at complete punctuation/paragraph boundaries. Table chunks retain complete cells, headers and declared row keys, with their individual anchors. CSV columns are reunited by logical record and original position; no column is guessed to be a semantic key. Oversized CSV rows or unsplittable values emit omissions while their normalized extraction remains intact. Tables with declared keys can split by complete data cells while repeating all headers and keys.
+
+Chunks preserve source/version/hash identities, filename/format, exact/coarse locations, native/OCR methods, parser/confidence/warnings and code-point spans into normalized text or cells. Repeated context is marked; missing cells differ from empty strings. Images and tables without reliable structure are explicit omissions. Text remains untrusted and unescaped backend data; later renderers must encode it. Byte guards do not prove model-input fit, and the cap does not cover structured metadata serialization. [Contract and tested examples](docs/benchmarks/t26-chunking.md).
 
 ## CSV extraction and previews
 

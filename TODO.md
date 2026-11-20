@@ -1,4 +1,8 @@
-## Current task — T25 complete; closeout and commit approved; T26 next session
+## Current task — T26 complete; closeout and commit approved
+
+The user explicitly instructed starting T26 after T25 commit `ebbe77b` and accepted CP09. [Chunking evidence](docs/benchmarks/t26-chunking.md): prose, table/CSV and stored-extraction integration increments completed; 32 new tests, full suite 273 passed/one existing permission skip and warning, Ruff passed. The 800-byte boundary mutation was caught and the original source hash restored. Final shared suite meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run, private sample read, schema or readiness change. The user explicitly approved the reviewed T26 closeout and ten-file commit on 2026-11-20; T27 is unstarted.
+
+## Earlier task — T25 complete; closeout and commit approved; T26 next session
 
 The user authorized T25 by instructing continuation after T24 commit `0e4502f`. [CSV evidence](docs/benchmarks/t25-csv.md): T25-A/B/C completed sequentially; 32 new tests, full suite 241 passed/one existing permission skip and warning; Ruff passed. Actual loopback upload → extraction → anchored preview and two additional abrupt-exit cases passed. Shared final meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run or private sample read. The user explicitly approved the reviewed T25/CP09 closeout and seventeen-file commit on 2026-11-20. T26 is unstarted and reserved for a new session at the user's request.
 
@@ -1491,15 +1495,21 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T26 — Chunk passages without losing source structure
 
-**Status:** Proposed. **Prerequisites:** T25; T16 chunk/context policy. **Scope:** M.
+**Status:** Complete; review and commit approved, 2026-11-20. **Prerequisites:** T25 (`ebbe77b`), accepted CP09; approved provisional T16 chunk policy; explicit user T26 instruction. **Scope:** M, sequential increments below.
 **Objective:** Produce deterministic bounded chunks with traceable boundaries.
 
-- [ ] Retain document/extraction/chunk identities, hashes, filename/format, exact/coarse locations and warnings under the approved size/overlap/context policy.
-- [ ] Preserve table headers/rows and native/OCR markers in contract fixtures; handle empty/oversized passages and cross-boundary evidence explicitly.
+| Increment | Objective / prerequisites | Acceptance / verification | Status |
+|---|---|---|---|
+| T26-A | Pure prose transform over T21/T25 contracts | Deterministic byte boundaries, complete overlap, exact normalized spans and explicit empty/oversized omissions | Verified; initial four failing/passing tests |
+| T26-B | Structured rows and CSV reconstruction after A | Preserve individual headers/keys/cells/anchors; no inferred CSV key or partial oversized row; native/OCR metadata | Verified; table cases failed before implementation and passed after |
+| T26-C | Boundary/negative/integration and quality review after B | Real stored CSV trace, exact 800-byte controls, version identities, mutation check, full suite and documentation | Verified; 32 new tests, full suite 273 passed |
+
+- [x] Retain document/extraction/chunk identities, hashes, filename/format, exact/coarse locations and warnings under the approved size/overlap/context policy.
+- [x] Preserve table headers/rows and native/OCR markers in contract fixtures; handle empty/oversized passages and cross-boundary evidence explicitly.
 
 **Verification:** Test-first deterministic boundaries/overlap/table/metadata checks and manual trace to expected anchors.
-**Evidence:** Pending — chunking tests and golden provenance examples.
-**Likely files:** `app/retrieval/chunking.py`, `app/retrieval/models.py`, `tests/unit/test_chunking.py`.
+**Evidence:** [T26 report](docs/benchmarks/t26-chunking.md): 32 new cases include persisted CSV envelope/unit integration, source/version identity, multibyte limits and omissions, original-span coverage, repeated context, formula-cache absence and coarse/native/OCR provenance. Full suite 273 passed/one existing skip and warning; Ruff passed. Boundary mutation failed both controls and the source hash was restored. Pure backend transform only; persistence/indexing, live scope enforcement and model fit remain later tasks. The 600/800/120 settings remain provisional; no full-size/target-machine quality or memory claim.
+**Files:** `app/retrieval/__init__.py`, `app/retrieval/chunking.py`, `app/retrieval/models.py`, `tests/unit/test_chunking.py`, `tests/integration/test_stored_chunking.py`; README, PLAN, TODO, contracts and linked report. CP10 remains open through T28.
 
 ### T27 — Embed through the approved local Ollama model
 
