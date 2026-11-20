@@ -1,4 +1,12 @@
-## Current execution point — T30 commit/native package approved; offline operator run pending
+## Current execution point — T30 results commit approved; T31 authorized
+
+The user explicitly approved the eight-document T30-N1 results/status commit and instructed proceeding to T31 on 2026-11-20. T31 follows the existing scoped citation/current-source preview contracts, with test-first verification and its source commit separately gated. All prior native allocations remain preserved/closed; no further trial, dependency, retention or stage change is authorized. Earlier pending wording below describes the preceding results review.
+
+## Earlier execution point — T30-N1 passed; results commit and T31 next
+
+T30 source/handoff is committed as `07a7d27`; the operator completed the approved disconnected T30-N1 run and requested inspection. [Native results](docs/benchmarks/t30-model-smoke.md): passed, actual Qwen answer contains 42 with supplied-only citations, exact saved exchange matches after store reopen, private port released. All 35 source pins and executable/manifest hashes match; 14 prior native receipts remain unchanged. The ledger records 18 charged starts, five HTTP attempts and ten sampled cumulative positive-tree starts, within the approved limits. T30 implementation/routine/bounded native verification is complete. The allocation is preserved/closed without rerun; broader semantic quality, combined real-model retrieval, final fit/resource/latency acceptance and readiness remain unverified. Eight-document results/status commit awaits approval; T31 citation validation/previews is next and unstarted. Earlier pending wording below is historical.
+
+## Earlier execution point — T30 commit/native package approved; offline operator run pending
 
 The user explicitly approved the reviewed 23-file T30 source/status/handoff commit and exact [T30-N1 run](docs/proposals/t30-model-smoke.md) on 2026-11-20. Its one operator-disconnected execution is authorized under the unchanged source/model/settings/allocation. The operator runs locally and reconnects for receipt review; no offline chat confirmation is needed. Native generation/persistence verification and T31 remain pending actual results, with no stage transition. Earlier pending wording below is historical.
 

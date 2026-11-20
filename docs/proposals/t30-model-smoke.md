@@ -1,6 +1,6 @@
 # T30-N1 — One disconnected Qwen generation/persistence smoke
 
-**Status: approved, prepared and source-sealed; not executed.** The user explicitly approved the reviewed 23-file T30 source/status/handoff commit and this exact T30-N1 package on 2026-11-20. No further project approval is needed for its one operator-disconnected run. T30 implementation is routine-verified; actual chat-purpose runtime/client verification remains pending. The [35-file seal](t30-model-smoke-seal.json) fixes all application sources, `pyproject.toml`/`uv.lock`, this helper and the existing generic T27 meter/supervisor it imports. Importing those utilities does not reopen S1/S2 or use their roots/ledgers/seals. Its allocation and stop conditions below are unchanged.
+**Status: executed, passed and closed, 2026-11-20. Do not rerun.** The user explicitly approved the reviewed 23-file T30 source/status/handoff commit and this exact T30-N1 package; source/handoff was committed as `07a7d27`. The operator completed the disconnected run and requested review. [Verified receipts and limits](../benchmarks/t30-model-smoke.md) establish the bounded Qwen generation/persistence bridge with authored retrieval. All [35 source pins](t30-model-smoke-seal.json) match; preserve the consumed root, ledger, claim, seal and fixture scratch without retry/reset/delete/reseal. Importing generic T27 meter/supervisor utilities did not reopen S1/S2 or use their roots/ledgers/seals. The original allocation and success conditions below remain the record of this completed run, not approval for further execution.
 
 Use existing project Python/HTTPX, Ollama **0.40.16**, executable SHA256 `4ccefcbfecc50fb6526471adabbc20869dd614e29e351120b15083cb174b0b8a`, and selected **qwen2.5:1.5b-instruct-q4_K_M**, manifest SHA256 `65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b`. The installed v2 manifest matches that identity during preparation. Full executable/manifest/blob size/hash/ancestry checks run before native launch and after generation. No download, install, model replacement, wrapper/build change, OCR, private corpus or new adoption is included.
 
@@ -22,15 +22,15 @@ Native controls remain eight active/16 cumulative sampled job starts, worker-pri
 
 A pass establishes only this chat-purpose owned runtime/request/structured-result/persistence bridge with authored retrieval. It does not establish combined real Nomic/sqlite-vec/Qwen retrieval quality, prompt-injection resistance of the model, quote correctness, final support scoring, warm-answer latency, full-scale memory, browser readiness or Stage 1 acceptance. All prior allocations remain closed and unchanged.
 
-## Approved operator handoff — run once while disconnected
+## Historical operator handoff — completed; command withdrawn
 
-Save/read these instructions while connected. The package is approved. Disconnect external networking and run **once** locally:
+The operator completed the approved one-run handoff below. It is retained only as the command used; **do not execute it again**:
 
 ```powershell
 cd F:\document_assistant
 .\.venv\Scripts\python.exe -m tests.evals.spikes.t30_model_smoke --execute-approved --offline-attested
 ```
 
-The flags attest to already granted approval and actual disconnection; they do not switch networking off. No online reply while disconnected is required. Read local `data/t30-model-01/ledger.json` for counters and, after the command returns, `result.json`, `worker-output.txt` and any `parent-stop.json`. Keep the ledger's worker token private. A stop can have incomplete receipts; preserve the root and do not retry even if it fails.
+The flags attested to already granted approval and actual disconnection; they did not switch networking off. The handoff required no online reply while disconnected. Local `data/t30-model-01/ledger.json`, `result.json`, `worker-output.txt` and the empty worker claim are preserved; no `parent-stop.json` was emitted on this successful path. Keep the ledger's worker token private. Do not reset or retry the allocation.
 
-Reconnect after the command returns and say **“T30-N1 finished; please inspect the results.”** I can read the local files directly. Review of those receipts precedes native T30 acceptance/T31 progression; this package alone does not approve another source commit or stage transition.
+The operator reconnected and reported **“T30-N1 finished; please inspect the results.”** Receipt review is complete. T30 implementation/routine/bounded native verification is complete; T31 citation validation/previews is next and unstarted. The eight-document results/status commit requires its own approval; this package does not approve another native run, broader runtime adoption or stage transition.
