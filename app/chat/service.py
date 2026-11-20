@@ -3,6 +3,7 @@
 import asyncio
 from contextlib import asynccontextmanager
 
+from app.chat.citations import validate_citations
 from app.chat.generation import Answer, Claim, build_prompt
 from app.ingestion.validation import UploadError
 from app.ollama import OllamaError
@@ -98,16 +99,7 @@ class ChatService:
                         answer = await model.generate(prompt)
                     self.store.busy = True
                     answer = Answer.model_validate(answer.model_dump())
-                    allowed = {item.evidence_id for item in prompt.evidence}
-                    if any(
-                        set(c.citations) - allowed
-                        or not c.text.strip()
-                        or (
-                            answer.status in {"answered", "partial"} and not c.citations
-                        )
-                        for c in answer.claims
-                    ):
-                        raise UploadError("CHAT_RESPONSE_INVALID", 503)
+                    validate_citations(answer, prompt.evidence)
                 await self.retriever._recheck(
                     conversation, tuple(references), result.snapshot, result.blocked
                 )

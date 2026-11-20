@@ -1,6 +1,18 @@
-## Current task — T30 results commit approved; T31 authorized
+## Current task — CP11 accepted; T31 commit approved; T32 authorized
 
-The user explicitly approved the eight-document T30-N1 results closeout and instructed proceeding to T31 on 2026-11-20. Commit only those reviewed documents, then implement scoped citation validation and safe passage previews under the existing T30/T25 contracts. Preserve every consumed native allocation/seal; no native retry, new dependency, retention change or stage transition is authorized. T31 source changes retain their own commit gate. Earlier pending wording below describes the preceding results review.
+The user explicitly accepted CP11, approved the reviewed 12-file T31 source/results commit and instructed proceeding to T32 on 2026-11-20. Commit only the reviewed files, then implement the approved observable evidence-support states, warnings and structural coverage without a correctness probability or semantic assurance. Prior native allocations and the closed T31 routine ledger remain preserved; T32 has its own routine allocation and source-commit gate. No dependency, schema, retention, native trial or stage change is authorized. Earlier pending wording below describes the preceding closeout.
+
+## Earlier task — T31 verified; CP11 review and commit pending
+
+T30 results are committed as `aff116e`. T31-A/B/C are implemented and verified: [evidence and CP11 review](docs/benchmarks/t31-citations.md), 35 new cases, full suite 541 passed/one existing skip and warning, scoped Ruff passed; cited-ID scope mutation caught/restored. Current-source previews derive checked normalized quotations/locations, enforce saved answer/conversation scope and escape the complete bounded response. Historical reads label unavailable or not-revalidated citations without replacing saved text or retaining new quote snapshots. Twelve-file source/results commit and CP11 acceptance await approval; T32 is next and unstarted. Native allocations remain closed; no schema, dependency, retention, readiness or stage change.
+
+## Earlier task — T30 results commit approved; T31 authorized
+
+The user explicitly approved the eight-document T30-N1 results closeout and instructed proceeding to T31 on 2026-11-20; T30 results are committed as `aff116e`. T31-A validates quotation spans/locations against normalized units and rejects inconsistent citation bindings. T31-B resolves saved answer/citation scope against current originals/extraction/index state and derives escaped previews, without new quotation snapshots. T31-C adds bounded scoped HTTP preview/status annotations, verifies missing/changed-source behavior and reviews CP11. Each increment is tested before the next. Intended files: `app/chat/citations.py`, `app/api/sources.py`, `app/api/chat.py`, focused citation/preview tests and affected documentation. Preserve every consumed native allocation/seal; no native retry, new dependency, schema/retention change or stage transition is authorized. T31 source changes retain their own commit gate.
+
+Routine allocation: fresh ignored `data/t31-01/`, 64 total starts, explicitly prepaid red 6, green 14, regression 22 (controller and all children/controls), quality/consistency 8, mutation 2 = 52 starts, no refunds/reset. Each run retains the existing shared 120-second/64-start/2,000,000-byte harness; conservative phase charges and combined retained artifact/log bytes also remain within this task allocation. No actual model/DLL/OCR execution, install, download or private document is included. Acceptance: supplied/cited IDs only, checked source spans and genuine coordinates, no current preview for unavailable/changed sources, historical answer still readable/labelled, escaped bounded output, conversation isolation, full routine regression and caught/restored scope mutation. Semantic claim correctness and later-format runtime ingestion remain unverified.
+
+Closeout accounting correction: five Windows `python -m ruff` commands each spawn a Ruff child. Quality charges were understated during execution; corrected to ten starts and assigned two previously unallocated starts to that phase, for 54 total conservative charges/prepaid starts under the unchanged 64-start ceiling. No extra command or reset occurred. The report preserves this procedural limitation; future quality admission must precharge both wrapper and child. Full regression observed 18 starts within 22 reserved, without refund. The allocation is closed after final artifact/diff accounting.
 
 ## Earlier task — T30-N1 passed; results commit and T31 next
 
@@ -1630,7 +1642,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T30 — Generate and persist grounded chat exchanges
 
-**Status:** Implementation, routine checks and bounded T30-N1 generation/persistence verification complete, 2026-11-20; results/status commit awaiting approval. **Prerequisites:** T29 (`4a618c2`)/native results (`b301d1d`); T11/T16/T17 generation/history contract; explicit continuation. **Scope:** M, sequential A/B/C/D increments and explicit routine allocation above.
+**Status:** Implementation, routine checks and bounded T30-N1 generation/persistence verification complete, 2026-11-20; results/status committed as `aff116e`. **Prerequisites:** T29 (`4a618c2`)/native results (`b301d1d`); T11/T16/T17 generation/history contract; explicit continuation. **Scope:** M, sequential A/B/C/D increments and explicit routine allocation above.
 **Objective:** Add the local chat API with evidence-bound answers and explicit abstention.
 
 - [x] Implement separate fixed policy/untrusted current evidence/bounded eligible history, complete byte packing, pinned typed local generation, explicit insufficiency and only supplied citation IDs. Mechanical boundaries are verified with mocks; semantic multi-file/ambiguous/unsupported-answer quality remains for model evaluation.
@@ -1639,21 +1651,21 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Verification:** Test-first mocked grounded/abstention/history-injection/API failure/persistence cases; separately labelled actual local-model smoke.
 **Evidence:** [T30 report](docs/benchmarks/t30-grounded-chat.md): 18 generation/runtime/transport/handoff cases, eight messages/migration/restart cases and 14 service/HTTP cases. Full suite 506 passed/one existing skip and warning; application/test/helper Ruff passed. Bad termination/model/output/citations, history exclusion, prompt bounds, replay/conflict, source/selection changes, pre-generation scope checks, quota/cancellation, CSRF/HTTP isolation and two forced exits/restarts passed. Publication mutation failed its control and exact source was restored before full regression. Separate [T30-N1](docs/benchmarks/t30-model-smoke.md) passed actual pinned Qwen generation, supplied-ID checks, teardown and exact saved-exchange reopen with authored retrieval/index vectors. Independent semantic/quote/calculation support, combined real-model retrieval, full-scale latency/memory and application readiness remain unverified.
-**Files:** T30 source/tests/helper/seal/package and status documentation were committed as `07a7d27`. Native review adds the linked report and updates affected documentation only; its eight-file results commit remains gated. Default app inference is disabled without trusted owned factories. T31 quote/preview validation, T32 support indicator and T33 UI remain later work; T31 is next and unstarted.
+**Files:** T30 source/tests/helper/seal/package and status documentation were committed as `07a7d27`; its eight-document native results closeout is committed as `aff116e`. Default app inference is disabled without trusted owned factories. T31's separate citation/preview implementation is tracked below; T32 support signals and T33 UI remain later work.
 
 ### T31 — Validate citations and resolve safe passage previews
 
-**Status:** Proposed. **Prerequisites:** T30, T25. **Scope:** M.
+**Status:** Implemented and routine-verified, 2026-11-20; source/results commit approved and CP11 accepted. **Prerequisites:** T30, T25; explicit continuation after results commit `aff116e`. **Scope:** M, ordered A/B/C increments above.
 **Objective:** Bind surfaced citations to supplied evidence rather than model-invented metadata.
 
-- [ ] Allow only citation IDs in the answer's supplied evidence; derive real filenames/locations from stored provenance and reject fabricated IDs/quotes/pages/sheets/rows.
-- [ ] Expose bounded escaped previews through scoped IDs and approved missing/removed-source behavior; disclose coarse location precision without arbitrary local-file access.
+- [x] Validate unique supplied citation IDs and require answered claims to cite evidence; resolve only IDs actually cited by that saved answer. Derive filenames/locations/quotation spans from current stored provenance; reject inconsistent IDs, source identities, normalized quotes, coordinates and parser metadata. Plain model-prose assertions remain semantically unverified.
+- [x] Expose escaped previews through answer/conversation-scoped IDs, with a 65,536-byte complete envelope guard and no path/quote/location inputs. Missing/changed/unreadable sources block live preview; saved text remains readable with availability labels. Coarse/missing precision stays explicit; no new quotation snapshots or retention behavior.
 
 **Verification:** Test-first allowlist/location/quote/preview-scope/XSS cases and manually trace a CSV answer to original records/columns.
-**Evidence:** Pending — citation/preview tests and source trace examples; no claim of full semantic verification.
-**Likely files:** `app/chat/citations.py`, `app/api/sources.py`, `app/chat/service.py`, `tests/unit/test_citations.py`, `tests/security/test_source_preview.py`.
+**Evidence:** [T31/CP11 report](docs/benchmarks/t31-citations.md): ten unit and 25 integration/HTTP cases, full suite 541 passed/one existing skip and warning in 89.44 s; scoped Ruff passed, 69 files already formatted. Cited-ID mutation failed its control; exact source restored before full regression. Actual CSV North/42 record/column/line spans and multiline/coarse/missing/header cases traced; original/selection/index changes, foreign/uncited IDs, output bounds, escaping and unsafe/unreadable paths refused. Routine models/native kernel remain injected; no new native/model trial or semantic-quality score.
+**Files:** New `app/chat/citations.py`, `tests/unit/test_citations.py`, `tests/integration/test_saved_citations.py`; narrow chat service and source/saved-answer route integration; README/PLAN/TODO/contracts/ADR and linked report. No schema/lockfile/retention change. The reviewed 12-file commit remains gated.
 
-**Checkpoint CP11 — T29–T31:** Proposed. Demonstrate selected evidence → answer/abstention → real citation; review unsupported/injection/error cases and persisted context. Apply G3.
+**Checkpoint CP11 — T29–T31:** Accepted by the user, 2026-11-20, with the [reviewed evidence and limits](docs/benchmarks/t31-citations.md#cp11-review-and-next-decision). Scoped retrieval, grounded answer/abstention, persistence and real source previews have mechanical boundary evidence. T29-N1/T30-N1 remain separate authored native bridge checks; combined real-model semantic quality is unverified. Unsupported/injection/error/history tests do not independently verify model meaning. The user authorized T32; no stage transition is implied. Apply G3 to its new source commit.
 
 ### T32 — Expose transparent evidence-support signals
 

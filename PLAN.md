@@ -1,4 +1,12 @@
-## Current execution point — T30 results commit approved; T31 authorized
+## Current execution point — CP11 accepted; T31 commit approved; T32 authorized
+
+The user explicitly accepted CP11, approved the reviewed 12-file T31 source/results commit and instructed proceeding to T32 on 2026-11-20. Implement only the approved observable support-state/warning/structural-coverage design; do not infer semantic support or a correctness probability from citation validity. Prior allocations remain preserved/closed, and T32 source commits retain their own gate. No schema, dependency, retention, native trial or stage change is authorized. Earlier pending wording below is historical.
+
+## Earlier execution point — T31 verified; CP11 review and commit pending
+
+T30 results are committed as `aff116e`; explicit continuation authorized T31. [T31/CP11 evidence](docs/benchmarks/t31-citations.md): 35 new citation/preview cases, full suite 541 passed/one existing skip and warning, scoped Ruff passed, cited-ID scope mutation caught/restored. The backend resolves saved answer/citation scope against current originals/extraction/index state, checks normalized quotation spans/locations, escapes bounded previews and labels historical-source availability. No schema, dependency, retention or native-trial change. CP11 technical review is complete with semantic/real-model/resource limitations explicit; user acceptance and the 12-file source/results commit remain gated. T32 support signals is next and unstarted; browser readiness/stage remain unchanged. Earlier pending wording below is historical.
+
+## Earlier execution point — T30 results commit approved; T31 authorized
 
 The user explicitly approved the eight-document T30-N1 results/status commit and instructed proceeding to T31 on 2026-11-20. T31 follows the existing scoped citation/current-source preview contracts, with test-first verification and its source commit separately gated. All prior native allocations remain preserved/closed; no further trial, dependency, retention or stage change is authorized. Earlier pending wording below describes the preceding results review.
 

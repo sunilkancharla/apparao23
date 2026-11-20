@@ -5,6 +5,7 @@ import re
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 
+from app.chat.citations import Citations
 from app.ingestion.validation import UploadError, validate_uuid
 from app.storage.extractions import Extractions
 
@@ -56,3 +57,21 @@ async def preview(conversation: str, reference: str, request: Request) -> dict:
             raise UploadError("INVALID_REQUEST")
         values[name] = int(supplied[0] if supplied else default)
     return {"data": await _service(request).preview(conversation, reference, **values)}
+
+
+@router.get("/api/conversations/{conversation}/sources/{citation}")
+async def citation_preview(conversation: str, citation: str, request: Request) -> dict:
+    """Resolve a response-local ID only with its explicit saved answer identity."""
+    validate_uuid(conversation)
+    if (
+        not re.fullmatch(r"[A-Za-z0-9_-]{1,128}", citation)
+        or set(request.query_params) != {"answer_id"}
+        or len(request.query_params.getlist("answer_id")) != 1
+        or request.headers.getlist("content-encoding")
+    ):
+        raise UploadError("INVALID_REQUEST")
+    identity = validate_uuid(request.query_params["answer_id"])
+    store = request.app.state.upload_store
+    if store is None:
+        raise UploadError("STORAGE_UNAVAILABLE", 503)
+    return {"data": await Citations(store).preview(conversation, identity, citation)}

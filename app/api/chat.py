@@ -8,6 +8,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 
+from app.chat.citations import Citations
 from app.chat.service import ChatService
 from app.ingestion.validation import UploadError, validate_uuid
 from app.ollama import _invalid_constant, _object
@@ -107,4 +108,4 @@ async def saved(conversation: str, identity: str, request: Request) -> dict:
     validate_uuid(identity)
     if request.query_params:
         raise UploadError("INVALID_REQUEST")
-    return {"data": Messages(_store(request)).get(conversation, identity)}
+    return {"data": await Citations(_store(request)).read(conversation, identity)}
