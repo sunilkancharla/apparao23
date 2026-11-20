@@ -6,6 +6,7 @@ import sqlite3
 from typing import TYPE_CHECKING, Literal, NotRequired, TypedDict
 from uuid import uuid4
 
+from app.ingestion.csv import EXTRACTION_VERSION, NORMALIZATION_VERSION, PARSER
 from app.ingestion.validation import UploadError, validate_filename
 
 if TYPE_CHECKING:
@@ -16,7 +17,7 @@ class OperationStatus(TypedDict):
     """Bounded metadata only; upload completion never asserts pipeline readiness."""
 
     operation_id: str
-    kind: Literal["upload_file", "upload_batch"]
+    kind: Literal["upload_file", "upload_batch", "csv_extraction"]
     state: str
     ready: Literal[False]
     indexed: Literal[False]
@@ -31,6 +32,11 @@ class OperationStatus(TypedDict):
     originals_stored: NotRequired[int]
     failed_files: NotRequired[int]
     files: NotRequired[list["OperationStatus"]]
+    extraction_id: NotRequired[str | None]
+    extraction_state: NotRequired[str]
+    record_count: NotRequired[int | None]
+    unit_count: NotRequired[int | None]
+    extraction_failed_files: NotRequired[int]
 
 
 def reserved_slots(connection: sqlite3.Connection, conversation: str) -> int:
@@ -95,6 +101,8 @@ class UploadOperations:
         self, conversation: str, key: str, names: list[str]
     ) -> OperationStatus:
         """Persist at most ten file intents, reserving slots for valid siblings."""
+        if self.store.busy or self.store.recovery_pending:
+            raise UploadError("UPLOAD_BUSY", 409)
         if not 1 <= len(names) <= 10:
             raise UploadError("BATCH_LIMIT", 413)
         fingerprint = hashlib.sha256(
@@ -197,6 +205,33 @@ class UploadOperations:
             if state == "cleanup_pending":
                 error = "CLEANUP_PENDING"
         stored = state == "awaiting_extraction"
+        extraction = None
+        warnings = ["EXTRACTION_PENDING"] if stored else []
+        if stored:
+            extraction = self.connection.execute(
+                """SELECT * FROM csv_extractions WHERE document_id=?
+                AND extraction_version=? AND normalization_version=? AND parser_version=? ORDER BY rowid DESC LIMIT 1""",
+                (
+                    row["document_id"],
+                    EXTRACTION_VERSION,
+                    NORMALIZATION_VERSION,
+                    PARSER.version,
+                ),
+            ).fetchone()
+            if extraction is not None:
+                if extraction["state"] == "complete":
+                    state, warnings = "awaiting_index", ["INDEX_PENDING"]
+                elif extraction["state"] == "processing":
+                    if self.store.recovery_pending:
+                        state, warnings, error = (
+                            "cleanup_pending",
+                            ["EXTRACTION_RECOVERY_PENDING"],
+                            "EXTRACTION_PENDING",
+                        )
+                    else:
+                        state, warnings = "extracting", []
+                else:
+                    error, warnings = extraction["error_code"], ["EXTRACTION_FAILED"]
         return {
             "operation_id": identity,
             "kind": "upload_file",
@@ -209,7 +244,9 @@ class UploadOperations:
             "document_id": row["document_id"] if stored else None,
             "reference_id": row["reference_id"] if stored else None,
             "bytes_stored": row["byte_size"] if stored else None,
-            "warning_codes": ["EXTRACTION_PENDING"] if stored else [],
+            "warning_codes": warnings,
+            "extraction_id": extraction["id"] if extraction else None,
+            "extraction_state": extraction["state"] if extraction else "not_started",
         }
 
     def status(self, conversation: str, identity: str) -> OperationStatus:
@@ -233,15 +270,22 @@ class UploadOperations:
                 )
             ]
             states = {item["state"] for item in files}
-            stored = sum(item["state"] == "awaiting_extraction" for item in files)
+            stored = sum(item["document_id"] is not None for item in files)
             failed = sum(item["state"] in {"failed", "interrupted"} for item in files)
-            state = "awaiting_extraction"
-            for candidate in ("processing", "cleanup_pending", "queued"):
+            extraction_failed = sum(
+                item["extraction_state"] == "failed" for item in files
+            )
+            state = (
+                "awaiting_extraction"
+                if "awaiting_extraction" in states
+                else "awaiting_index"
+            )
+            for candidate in ("processing", "extracting", "cleanup_pending", "queued"):
                 if candidate in states:
                     state = candidate
                     break
             else:
-                if failed:
+                if failed or extraction_failed:
                     state = "partial_failure" if stored else "failed"
             return {
                 "operation_id": identity,
@@ -252,6 +296,7 @@ class UploadOperations:
                 "total_files": len(files),
                 "originals_stored": stored,
                 "failed_files": failed,
+                "extraction_failed_files": extraction_failed,
                 "files": files,
             }
         file = self.connection.execute(
@@ -275,4 +320,34 @@ class UploadOperations:
             return self._file(
                 conversation, identity, upload["display_name"], None, identity
             )
+        extraction = self.connection.execute(
+            """SELECT e.* FROM csv_extractions e
+            JOIN document_references r ON r.document_id=e.document_id WHERE e.id=? AND r.conversation_id=?""",
+            (identity, conversation),
+        ).fetchone()
+        if extraction is not None:
+            return {
+                "operation_id": identity,
+                "kind": "csv_extraction",
+                "extraction_id": identity,
+                "document_id": extraction["document_id"],
+                "ready": False,
+                "indexed": False,
+                "state": {
+                    "complete": "awaiting_index",
+                    "processing": "cleanup_pending"
+                    if self.store.recovery_pending
+                    else "extracting",
+                    "failed": "failed",
+                }[extraction["state"]],
+                "error_code": "EXTRACTION_PENDING"
+                if self.store.recovery_pending and extraction["state"] == "processing"
+                else extraction["error_code"],
+                "record_count": extraction["record_count"]
+                if extraction["state"] == "complete"
+                else None,
+                "unit_count": extraction["unit_count"]
+                if extraction["state"] == "complete"
+                else None,
+            }
         raise UploadError("OPERATION_NOT_FOUND", 404)

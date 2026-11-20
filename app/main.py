@@ -8,7 +8,7 @@ from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from typing import Literal
 from urllib.parse import unquote
-from uuid import UUID, uuid4
+from uuid import uuid4
 
 import uvicorn
 from fastapi import FastAPI, Request
@@ -18,10 +18,12 @@ from starlette.exceptions import HTTPException
 from starlette.middleware.base import RequestResponseEndpoint
 from starlette.responses import Response
 
+from app.api.sources import router as source_router
 from app.config import ConfigurationError, Settings, prepare_data_root
 from app.diagnostics import ComponentState, inspect_prerequisites, reserve_port
 from app.ingestion.processing import UploadOperations
 from app.ingestion.validation import MAX_FILE_BYTES, UploadError, validate_filename
+from app.ingestion.validation import validate_uuid as _uuid
 from app.storage.files import UploadStore
 
 
@@ -46,15 +48,6 @@ def _error(code: str, message: str, status: int) -> JSONResponse:
     )
 
 
-def _uuid(value: str) -> str:
-    try:
-        if str(UUID(value)) != value:
-            raise ValueError
-    except ValueError:
-        raise UploadError("INVALID_REQUEST") from None
-    return value
-
-
 def create_app(settings: Settings | None = None) -> FastAPI:
     """Create the loopback diagnostics and single-CSV upload application."""
     config = Settings.from_env() if settings is None else settings
@@ -75,7 +68,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                     root = ComponentState(
                         component="data_root",
                         code="STORAGE_CLEANUP_PENDING",
-                        message="Interrupted upload cleanup is pending; status remains available.",
+                        message="Managed recovery is pending; status remains available.",
                     )
             except UploadError:
                 root = ComponentState(
@@ -153,9 +146,19 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @application.exception_handler(UploadError)
     async def operation_error(request: Request, error: UploadError) -> JSONResponse:
+        messages = {
+            "EMPTY_CSV": "The CSV contains no nonblank data records.",
+            "EXTRACTION_REQUIRED": "Extract this source before requesting a preview.",
+            "SOURCE_NOT_FOUND": "This source is not attached to the requested conversation.",
+            "SOURCE_UNAVAILABLE": "The stored source is missing or has changed.",
+            "PROCESSED_QUOTA": "This operation cannot reserve enough processed-data space.",
+        }
         return _error(
             error.code,
-            "Operation could not complete; check the request, file count and storage state.",
+            messages.get(
+                error.code,
+                "Operation could not complete; check the request, file count and storage state.",
+            ),
             error.status,
         )
 
@@ -315,6 +318,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 error.status,
             )
 
+    application.include_router(source_router)
     return application
 
 

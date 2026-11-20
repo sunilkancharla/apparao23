@@ -1,5 +1,13 @@
 # Stage 1 application boundary contracts
 
+## T25 — implemented CSV extraction and preview subset
+
+Authorized after T24 commit `0e4502f`. [Exact provenance, storage, API and verification contract](benchmarks/t25-csv.md). Empty-body, idempotent `POST /api/conversations/{id}/references/{reference_id}/extractions` now extracts the explicitly requested eligible CSV reference. UTF-8/BOM comma CSV and first-record headers remain explicit; typed per-column cell tables retain complete decoded strings, positional/missing/duplicate headers, data-record/physical-line spans and explicit coarse header/missing-cell/raw-offset limitations. No formulas, commands or model instructions execute.
+
+Schema v4 stores a versioned envelope and ordered complete T21 units separately from originals, with reference-scoped request bindings and one atomic generation commit. Growth reservation applies to each actual serialized unit before insertion, within the existing main/journal envelope. Incomplete transactions roll back; one startup pass marks interrupted intents without deleting originals. Unwritable recovery blocks admission and stays visible. Shared current-version complete work is idempotent per logical document; failed keys never silently rerun.
+
+`GET` on that reference's `/preview` route accepts only `after`/`limit` (default 0/20, maximum 50 units) within a 65,536-byte JSON response budget. Snippets retain at most 256 original UTF-8 bytes per header/value before escaping; truncation is labeled and complete normalized data stays intact. Source size/hash and conversation/reference membership are checked before preview. This is a JSON preview for the explicit reference, not a saved-citation or conversation-selection revision UI. Operation snapshots now include extraction IDs/derived status; `awaiting_index` still has ready/indexed false. Later pipeline stages, other-format adapters and general lifecycle remain unimplemented.
+
 ## T24 — implemented batch and operation-status subset
 
 Authorized by continuation after T23 commit `3dd27a1`. [Exact transport, state, capacity and retry contract](benchmarks/t24-processing.md). `POST /api/conversations/{id}/attachment-batches` accepts an idempotent JSON manifest `{files:["a.csv","b.csv"]}` of one through ten names within 32,768 observed UTF-8 bytes. Each file gets a stable operation ID; unsafe/unsupported metadata fails individually. Valid entries reserve reference slots alongside actual attachments, including across batches. Stream each original through the T23 attachment route with `X-Batch-File-Id`, its matching filename and per-attempt key. No multipart dependency or concurrent body processing is introduced.

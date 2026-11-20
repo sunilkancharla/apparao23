@@ -548,6 +548,23 @@ def test_real_loopback_upload_with_missing_model_prerequisites(tmp_path):
                 assert polled.status_code == 200
                 assert polled.json()["data"]["state"] == "partial_failure"
                 assert polled.json()["data"]["originals_stored"] == 1
+                source_base = f"/api/conversations/{conversation}/references/{accepted.json()['data']['reference_id']}"
+                extracted = client.post(
+                    source_base + "/extractions",
+                    headers={"Idempotency-Key": "extract-intent-01"},
+                )
+                assert extracted.status_code == 202
+                assert extracted.json()["data"]["state"] == "awaiting_index"
+                preview = client.get(source_base + "/preview")
+                assert preview.status_code == 200
+                assert [cell["value"] for cell in preview.json()["data"]["units"]] == [
+                    "A",
+                    "12",
+                ]
+                assert all(
+                    cell["record"] == 1 and cell["line_start"] == 2
+                    for cell in preview.json()["data"]["units"]
+                )
         finally:
             server.terminate()
             stdout, stderr = server.communicate(timeout=5)

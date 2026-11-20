@@ -1,4 +1,8 @@
-## Current task — T24 complete; closeout and commit approved
+## Current task — T25 complete; closeout and commit approved; T26 next session
+
+The user authorized T25 by instructing continuation after T24 commit `0e4502f`. [CSV evidence](docs/benchmarks/t25-csv.md): T25-A/B/C completed sequentially; 32 new tests, full suite 241 passed/one existing permission skip and warning; Ruff passed. Actual loopback upload → extraction → anchored preview and two additional abrupt-exit cases passed. Shared final meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run or private sample read. The user explicitly approved the reviewed T25/CP09 closeout and seventeen-file commit on 2026-11-20. T26 is unstarted and reserved for a new session at the user's request.
+
+## Earlier task — T24 complete; closeout and commit approved
 
 The user authorized T24 by instructing continuation after T23 commit `3dd27a1`. [Batch/status evidence](docs/benchmarks/t24-processing.md): 28 new tests; full suite 209 passed, one existing permission skip and warning; Ruff passed. Actual loopback mixed-success batch/polling and two additional abrupt-exit cases passed. Final shared meter: 11/64 starts, 263,224/2,000,000 retained factory-artifact/child-output bytes. No new dependencies, models/OCR, private samples or T25 work. The user explicitly approved the reviewed T24 closeout and twelve-file commit on 2026-11-20.
 
@@ -1465,17 +1469,23 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T25 — Extract and preview CSV with record/column provenance
 
-**Status:** Proposed. **Prerequisites:** T24, T21. **Scope:** M.
+**Status:** Complete; review and commit approved, 2026-11-20. **Prerequisites:** T24 (`0e4502f`), T21; explicit user continuation and accepted G2 data/privacy contracts. **Scope:** M, split into sequential increments below.
 **Objective:** Complete original upload → structured CSV records → safe source preview.
 
-- [ ] Extract approved CSV dialect/encoding behavior with deterministic record/header/column anchors and physical-line spans (including quoted multiline cells), hash/version/warnings and explicit empty/invalid-content errors; store normalized output separately from originals.
-- [ ] Preview bounded escaped text through document IDs and selected references, not arbitrary filesystem paths; disclose any unavailable precision.
+| Increment | Objective / prerequisites | Acceptance / verification | Status |
+|---|---|---|---|
+| T25-A | Streaming CSV normalization over T21 contracts and T23 validation | Preserve decoded cells, positional headers, logical records/physical spans and explicit limitations; focused parser/upload regressions | Verified; 10 new parser tests, warning regression corrected |
+| T25-B | Transactional normalized storage after T25-A | Versioned/idempotent extraction, growth reservation and real rollback/restart evidence; originals preserved | Verified; growth/rollback/recovery and real exit cases passed |
+| T25-C | API previews/status after T25-B | Explicit scoped reference, bounded escaped pagination, missing/corrupt-source refusal and full regression/security review | Verified; 22 new storage/API cases, full suite 241 passed |
+
+- [x] Extract approved CSV dialect/encoding behavior with deterministic record/header/column anchors and physical-line spans (including quoted multiline cells), hash/version/warnings and explicit empty/invalid-content errors; store normalized output separately from originals.
+- [x] Preview bounded escaped text through document IDs and selected references, not arbitrary filesystem paths; disclose any unavailable precision.
 
 **Verification:** Test-first record/column/quoted-multiline/encoding/empty-input/preview escaping/path/scope cases and a local upload-to-source walkthrough.
-**Evidence:** Pending — CSV provenance/preview tests and trace to original records/columns and physical lines.
-**Likely files:** `app/ingestion/csv.py`, `app/api/sources.py`, `app/storage/extractions.py`, `tests/unit/test_csv_extraction.py`, `tests/integration/test_source_preview.py`.
+**Evidence:** [T25 report](docs/benchmarks/t25-csv.md): 32 new tests verify UTF-8/BOM comma CSV, multiline spans, duplicate/missing headers, null versus empty cells, inert formulas, actual stored model round-trip, versioned/idempotent extraction, exact schema migration and quota/transaction/crash recovery. Scoped escaped previews enforce a 64 KiB response budget with labeled truncation and no stale/missing-source fallback. Real loopback walkthrough and scope mutation passed; full suite 241 passed/one existing skip and warning, Ruff passed. Header anchors/raw-byte mapping limitations are explicit. No browser UI, broad dialect/full-size/target-machine proof or T26 work is claimed.
+**Files:** Parser/validation and tests; normalized storage/schema/growth hooks; source API/status integration and walkthrough regression; linked closeout documentation. T25-A/B/C kept these changes sequential rather than creating one speculative pipeline.
 
-**Checkpoint CP09 — T23–T25:** Proposed. Demonstrate valid/bad/batch CSV upload, honest status and traceable local preview; review failure cleanup/privacy. Apply G3.
+**Checkpoint CP09 — T23–T25:** Accepted with the user's explicit T25 closeout approval, 2026-11-20. [Walkthrough and limits](docs/benchmarks/t25-csv.md): valid/bad/batch original upload, durable status, extraction and traceable bounded JSON preview work over actual loopback HTTP; failure/privacy/recovery checks passed. Frontend UI and complete Stage 1 acceptance remain later work. T26 is reserved for a new session; no stage transition is authorized.
 
 ## M3 — First complete grounded-answer path
 

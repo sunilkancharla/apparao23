@@ -94,6 +94,10 @@ class UploadStore:
                     # Safe status reads remain available; the durable active
                     # intent still blocks new uploads until cleanup succeeds.
                     self.recovery_pending = True
+            if not self.recovery_pending:
+                from app.storage.extractions import recover_extractions
+
+                recover_extractions(self)
         except Exception:  # noqa: BLE001 - startup privacy boundary, releasing ownership
             self.close()
             raise UploadError("STORAGE_UNAVAILABLE", 503) from None
@@ -133,8 +137,15 @@ class UploadStore:
             usage[category] += info.st_size
         return usage
 
-    @contextmanager
-    def _write(self) -> Iterator[None]:
+    def reserve_growth(self, serialized_bytes: int = 0) -> None:
+        """Bound the next database expansion, including during a streaming transaction.
+
+        Four payload lengths plus sixteen pages cover conservative row/index
+        growth; the existing main/journal envelope still limits total admission.
+        SQLite refuses growth beyond this ceiling before allocating more pages.
+        """
+        if type(serialized_bytes) is not int or serialized_bytes < 0:
+            raise UploadError("INVALID_STORAGE_BOUND", 503)
         usage = self._usage()
         page_size = self.connection.execute("PRAGMA page_size").fetchone()[0]
         pages = self.connection.execute("PRAGMA page_count").fetchone()[0]
@@ -142,8 +153,9 @@ class UploadStore:
         other = usage["processed"] - db_bytes
         # No ATTACH/savepoints/sort writes: reserve conservative main+rollback
         # space before each short transaction, including the ledger's own pages.
+        extra_pages = 16 + (serialized_bytes * 4 + page_size - 1) // page_size
         ceiling = min(
-            pages + 16, (PROCESSED_CAP - other - 1_048_576) // (4 * page_size)
+            pages + extra_pages, (PROCESSED_CAP - other - 1_048_576) // (4 * page_size)
         )
         if ceiling < pages:
             raise UploadError("PROCESSED_QUOTA", 507)
@@ -152,6 +164,10 @@ class UploadStore:
         ]
         if actual != ceiling:
             raise UploadError("PROCESSED_QUOTA", 507)
+
+    @contextmanager
+    def _write(self) -> Iterator[None]:
+        self.reserve_growth()
         try:
             with transaction(self.connection):
                 yield
@@ -204,6 +220,8 @@ class UploadStore:
             if self.connection.execute(
                 "SELECT 1 FROM uploads WHERE state IN ('receiving','promoting','cleanup_pending')"
             ).fetchone():
+                raise UploadError("UPLOAD_PENDING", 409)
+            if self.recovery_pending:
                 raise UploadError("UPLOAD_PENDING", 409)
             usage = self._usage()
             for category, cap, reserve in (
