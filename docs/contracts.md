@@ -1,5 +1,13 @@
 # Stage 1 application boundary contracts
 
+## T23 — implemented single-original upload subset
+
+Authorized on 2026-11-20 after T22 commit `57973a6`. [Implementation/evidence and limits](benchmarks/t23-uploads.md). The raw-body attachment route in C06 now requires exact Host/Origin plus a per-instance CSRF token from `GET /api/session`; headers are `X-CSRF-Token`, percent-encoded UTF-8 `X-Filename`, `Idempotency-Key` and `Content-Type: text/csv` or `application/octet-stream` (optional UTF-8 charset). Content encodings are refused. Existing conversation IDs come from the trusted T20 backend; public conversation creation is not implemented.
+
+Success is 202 `{data:{operation_id,document_id,reference_id,display_name,state:"original_stored",indexed:false}}`. It acknowledges validated original storage/reference creation, not extraction/index readiness. Validation currently checks complete UTF-8/BOM comma CSV syntax and common mismatches, streamed decimal 100 MB bounds, safe Windows labels and the ten-reference cap. Completed replay compares the actual body hash/size and display name before returning the same receipt. Pending/failed intent keys cannot create another effect; missing/corrupt originals are unavailable, not recreated. Errors retain safe codes/messages, request UUIDs and no-store headers.
+
+Schema v2 and one-owner upload storage implement the single-intent reservation/promotion/cleanup subset of C02–C05. Full-file original/temporary reservations precede staging; processed admission uses an enforced SQLite page ceiling and conservative main/journal envelope. Unknown files and retained free pages remain charged; cleanup failure keeps reservations. [Exact accounting, validation scope and refusal trade-offs](benchmarks/t23-uploads.md#reservation-and-recovery-implementation). This is not a library mutation, batch/status, normalized extraction, answer/publication or general deletion implementation; the remaining contracts below retain their scope.
+
 ## T21 — implemented normalized provenance contract
 
 Authorized on 2026-11-20 after T20 commit `99dc36e`. `app/ingestion/models.py` implements the T16 source-unit portion of these contracts, with no parser/storage/HTTP integration. [Verification and limits](benchmarks/t21-provenance.md). Later static requirements below retain their original scope and status.

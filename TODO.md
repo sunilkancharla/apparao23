@@ -1,4 +1,8 @@
-## Current task — T22 implemented and verified; review complete; commit approved
+## Current task — T23 complete; closeout and commit approved
+
+The user explicitly authorized T23 on 2026-11-20 after T22 commit `57973a6` and summary commit `beed4c5`. [Upload evidence](docs/benchmarks/t23-uploads.md): 58 new tests; full suite 181 passed, one existing permission skip and warning; Ruff passed. Actual loopback upload/refusal and process-exit recovery passed; the shared routine meter used 9/64 starts and 263,060/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run, private sample read or T24 work. The user explicitly approved the reviewed T23 closeout and thirteen-file commit on 2026-11-20.
+
+## Earlier task — T22 implemented and verified; review complete; commit approved
 
 T22 was authorized by the user's instruction to proceed after T21 commit **daf10c5**. [Fixture evidence](docs/benchmarks/t22-fixtures.md): 16 new tests; full suite 123 passed/one existing host-permission skip and warning; Ruff passed. Final shared meter: 6/64 starts (including controller and indirect platform probe), 262,980/2,000,000 retained artifact/child-output bytes, within 120-second child/admission boundary. All seven PDF pages were rendered and visually checked. Empty-page control approved; illegible-text and chart scoring remain deferred. The user explicitly approved the reviewed ten-file T22 closeout and commit on 2026-11-20; no T23 work or new dependencies.
 
