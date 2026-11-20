@@ -8,7 +8,7 @@ from pathlib import Path
 from app.config import ConfigurationError, prepare_data_root, validate_local_ancestry
 
 APPLICATION_ID = 0x44415331
-SCHEMA_VERSION = 5
+SCHEMA_VERSION = 6
 SCHEMA_V1 = (
     """CREATE TABLE content_objects (
         sha256 TEXT PRIMARY KEY CHECK(length(sha256)=64 AND sha256 NOT GLOB '*[^0-9a-f]*'),
@@ -181,7 +181,38 @@ INDEX_SCHEMA = (
         UNIQUE(reference_id,key_hash)
     ) STRICT""",
 )
-SCHEMA = (*SCHEMA_V4, *INDEX_SCHEMA)
+SCHEMA_V5 = (*SCHEMA_V4, *INDEX_SCHEMA)
+CHAT_SCHEMA = (
+    """CREATE TABLE chat_selections (
+        conversation_id TEXT PRIMARY KEY REFERENCES conversations(id),
+        revision INTEGER NOT NULL CHECK(revision>=0),
+        references_json TEXT NOT NULL
+    ) STRICT""",
+    """CREATE TABLE chat_requests (
+        id TEXT PRIMARY KEY,
+        conversation_id TEXT NOT NULL REFERENCES conversations(id),
+        key_hash TEXT NOT NULL,
+        fingerprint TEXT NOT NULL,
+        question TEXT NOT NULL,
+        selection_revision INTEGER NOT NULL CHECK(selection_revision>=0),
+        references_json TEXT NOT NULL,
+        state TEXT NOT NULL CHECK(state IN ('processing','complete','failed')),
+        error_code TEXT,
+        created_at TEXT NOT NULL,
+        UNIQUE(conversation_id,key_hash)
+    ) STRICT""",
+    """CREATE UNIQUE INDEX one_chat_processing ON chat_requests((1)) WHERE state='processing'""",
+    """CREATE TABLE chat_exchanges (
+        request_id TEXT PRIMARY KEY REFERENCES chat_requests(id),
+        answer TEXT NOT NULL,
+        sources_json TEXT NOT NULL,
+        evidence_json TEXT NOT NULL,
+        warnings_json TEXT NOT NULL,
+        model_json TEXT NOT NULL,
+        completed_at TEXT NOT NULL
+    ) STRICT""",
+)
+SCHEMA = (*SCHEMA_V5, *CHAT_SCHEMA)
 
 
 class StorageError(ValueError):
@@ -265,25 +296,36 @@ def open_database(root: Path, *, max_pages: int | None = None) -> sqlite3.Connec
                     connection.execute(statement)
                 connection.execute(f"PRAGMA application_id={APPLICATION_ID}")
                 connection.execute(f"PRAGMA user_version={SCHEMA_VERSION}")
-            elif version in {1, 2, 3, 4} and identity == APPLICATION_ID:
+            elif version in {1, 2, 3, 4, 5} and identity == APPLICATION_ID:
                 old_schema = {
                     row[0]
                     for row in connection.execute(
                         "SELECT sql FROM sqlite_master WHERE name NOT LIKE 'sqlite_%'"
                     )
                 }
-                expected = {1: SCHEMA_V1, 2: SCHEMA_V2, 3: SCHEMA_V3, 4: SCHEMA_V4}[
-                    version
-                ]
+                expected = {
+                    1: SCHEMA_V1,
+                    2: SCHEMA_V2,
+                    3: SCHEMA_V3,
+                    4: SCHEMA_V4,
+                    5: SCHEMA_V5,
+                }[version]
                 if old_schema != {statement.strip() for statement in expected}:
                     raise StorageError("DATABASE_SCHEMA_MISMATCH")
                 if connection.execute("PRAGMA journal_mode").fetchone()[0] != "delete":
                     raise StorageError("UNSUPPORTED_JOURNAL_MODE")
                 additions = {
-                    1: (*UPLOAD_SCHEMA, *PROCESSING_SCHEMA, *CSV_SCHEMA, *INDEX_SCHEMA),
-                    2: (*PROCESSING_SCHEMA, *CSV_SCHEMA, *INDEX_SCHEMA),
-                    3: (*CSV_SCHEMA, *INDEX_SCHEMA),
-                    4: INDEX_SCHEMA,
+                    1: (
+                        *UPLOAD_SCHEMA,
+                        *PROCESSING_SCHEMA,
+                        *CSV_SCHEMA,
+                        *INDEX_SCHEMA,
+                        *CHAT_SCHEMA,
+                    ),
+                    2: (*PROCESSING_SCHEMA, *CSV_SCHEMA, *INDEX_SCHEMA, *CHAT_SCHEMA),
+                    3: (*CSV_SCHEMA, *INDEX_SCHEMA, *CHAT_SCHEMA),
+                    4: (*INDEX_SCHEMA, *CHAT_SCHEMA),
+                    5: CHAT_SCHEMA,
                 }[version]
                 for statement in additions:
                     connection.execute(statement)

@@ -1,0 +1,61 @@
+# T30 — Grounded generation and atomic saved exchanges
+
+Date: 2026-11-20 (Asia/Calcutta). The user approved the eight-document T29-N1 results commit and explicitly instructed proceeding; committed as `b301d1d`. T30-A/B/C/D were implemented in ordered, verified increments using implementation/TDD/API/security/review/documentation workflows, existing dependencies and the explicit TODO allocation. No native model/DLL/OCR trial, installation or download was run. The separately approved [T30-N1 handoff](../proposals/t30-model-smoke.md) is source-sealed and unexecuted; its root does not exist.
+
+## Implemented behavior and boundaries
+
+`app/chat/generation.py` adds the exact selected Qwen2.5 1.5B model/digest/runtime contract, typed answer statuses/claims and response-local citation-ID allowlisting. Complete `done/stop` termination and an observed generated-token count no greater than 192 are required; malformed/oversized/unknown/incomplete output is discarded without retry. Runtime version/tags are verified before and after generation. The chat-purpose transport permits only version/tags/chat, while the unchanged default embedding purpose still permits only version/tags/embed. HTTPX's loopback/no-proxy/no-redirect/bounded-response and ownership checks remain binding.
+
+`OwnedRuntime(..., purpose="chat").session()` verifies the selected chat executable/model assets, supplies `ChatModel` and uses the existing exclusive work slot, private staging home, Windows Job/listener/resource/watchdog and verified-teardown controls. Its default embedding purpose is unchanged. Purpose integration and real-layout fixture asset checks were tested with fake process/HTTP seams; actual Qwen execution remains T30-N1. The app never adopts an answering unowned service or starts inference automatically.
+
+Prompt packing treats evidence, source names, history and the current question as JSON data in a user message under a fixed system policy. It retains at most two complete historical pairs within 500 UTF-8 bytes, at most 2,000 rendered evidence bytes and **3,000 bytes for the complete serialized chat request**, including model/options/format/messages. Oldest history drops first, then lowest-ranked complete evidence; no source value/quotation or partial pair is sliced. Only actually supplied IDs can appear in answered/partial claims. Input fit remains explicitly unverified: byte guards and post-generation counts are not a tokenizer proof. Policy separation/structural guards do not independently establish semantic grounding or model prompt-injection resistance.
+
+Schema v6 adds saved selections/revisions, idempotent answer intents and complete exchanges. Exact v1–v5 migrations preserve previous metadata/schema checks. A new intent captures the current explicit selection revision before retrieval/generation. Completed/processing/failed key replays do not create another inference; changed payloads conflict. One global processing intent and existing store admission prevent an unbounded queue. Selection metadata updates may proceed during inference, incrementing the revision and invalidating the in-flight answer.
+
+`ChatService` uses current selected retrieval only, rejects inconsistent/out-of-selection retrieval snapshots before generation, and excludes complete old history whose source versions are not a subset of current eligible scope. It commits no assistant text until valid output, verified runtime teardown and source-original rechecks pass. In the **same SQLite transaction** that writes the exchange, it checks selection revision/reference membership/current extraction/index identity again and marks the intent complete. Selection/source changes, quota refusal, cancellation, invalid output and uncertain cleanup cannot publish a complete exchange. Restart marks rolled-back processing intents `CHAT_INTERRUPTED` without inference or deletion; ambiguous published rows on processing intents block admission.
+
+Saved data includes user question, validated plain answer/claims/citation IDs, timestamps, model identity, warnings and source/evidence **identity/location metadata**. Full retrieved source text, rendered evidence and prompts are not saved as new quotation snapshots. Historical GET records explicitly say source availability was not revalidated; later live citation resolution must check it. History is never current factual authority, and complete historical pairs are conservatively omitted if their provenance is unavailable/changed/unselected. Lifecycle deletion/retention remains the approved later implementation; no automatic pruning or secure-erasure claim is introduced.
+
+## Implemented HTTP subset
+
+| Route | Input / result |
+|---|---|
+| PUT `/api/conversations/{id}/selection` | `{references:[...], expected_revision:n}`; at most ten distinct scoped references; compare-and-swap revision |
+| POST `/api/conversations/{id}/answers` | `{question:"...", expected_revision:n}` plus `Idempotency-Key` (16–128 ASCII letters/digits/underscore/hyphen); 202 durable status/exchange envelope |
+| GET `/api/conversations/{id}/answers/{answer_id}` | Scoped saved historical result or safe processing/failed status; unrelated IDs return 404 |
+
+Selection/answer JSON bodies are capped at 4,096 observed bytes; question remains at most 512 UTF-8 bytes. Extra fields, supplied history/model/evidence, duplicate JSON keys, bad UTF-8/lengths/revisions/IDs, encodings and query fields are refused. PUT joins POST under the same exact Host/Origin/CSRF boundary; no wildcard CORS/auth bypass is added. Errors remain content-free, and responses retain no-store/security headers. A 202 response can contain the completed inline result; there is no background task/queue or claimed latency pass.
+
+The backend has a trusted `app.state.chat_service` injection point for explicitly configured owned factories. Default factories fail closed with `CHAT_RUNTIME_UNAVAILABLE` when actual inference is needed; an empty/blocked scope can persist a deterministic `insufficient_evidence` result without any model. Health/browser readiness stays unchanged. This is not the T33 browser flow, T34 conversation listing/renaming, T31 live citation/quote resolver or T32 support indicator. Basic supplied-ID validation is necessary now; it does not independently verify quotations/calculations/semantic support. Unverified-meaning/input-fit warnings remain explicit.
+
+## Verification
+
+**40 new cases**: 18 generation/transport/runtime/handoff cases, eight message/migration/restart cases and 14 service/HTTP cases. Routine tests use synthetic retrieval/index vectors, native kernel and model responses, real SQLite/storage/source checks, a real HTTPX mock transport, fake owned-process boundaries and actual in-process HTTP routes. Two metered Python children exit after a durable intent and after complete publication; restart verifies respectively failed/no-exchange and complete/exchange states with `integrity_check: ok`.
+
+| Check | Actual result |
+|---|---|
+| Generation red / green | Missing chat module (0.29 s), then 11 passed (0.36 s) |
+| Storage red / green | Missing v5 schema export (0.48 s), then 16 combined checks passed (0.76 s) |
+| HTTP red / green | Four route failures before wiring (1.71 s), then 27 combined checks passed (2.96 s) |
+| Expanded non-child checks | 33 passed/two deselected, 3.35 s |
+| Retriever-output boundary red | 1 failed, 0.70 s: a deliberately mis-scoped retriever result reached generation before the added snapshot/selection check |
+| Publication mutation | Replaced the current-selection read with the original request's captured selection; concurrent-selection control failed; exact source restored |
+| Final full suite after restoration | **506 passed, 1 skipped, 1 warning in 55.53 s**; shared meter **18/64 starts, 739,284/2,000,000 retained metered bytes** |
+| Application/test/all current helpers Ruff | Passed lint; **66 files already formatted** |
+
+Tests cover pinned request/response identity and termination, bad output/IDs/uncited claims, complete prompt/history/evidence packing, no caller history injection, selected-source history exclusion, scope changes during generation, corrupted originals, no-evidence refusal without a model, idempotent/processing replay, request conflict, quota rollback, cancelled/failed generations with no assistant text, exact migration/restart, HTTP bounds/CSRF/scoped reads and guarded native handoff. The existing skip is Windows symlink permission and the warning is Starlette/HTTPX deprecation. The old v4-migration test now asserts the current schema constant; the new v5-migration test explicitly asserts v6, retaining the original preservation assertions.
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+.\.venv\Scripts\python.exe -m pytest -q -rP -p no:cacheprovider
+.\.venv\Scripts\python.exe -m ruff check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration tests/evals/spikes/t27_runtime_smoke.py tests/evals/spikes/t29_native_search.py tests/evals/spikes/t30_model_smoke.py
+.\.venv\Scripts\python.exe -m ruff format --check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration tests/evals/spikes/t27_runtime_smoke.py tests/evals/spikes/t29_native_search.py tests/evals/spikes/t30_model_smoke.py
+```
+
+Mutation-restored `app/storage/messages.py` SHA256: `d4b29e326e08f5b34daa7b248ab9286a9d72d4d8058819a1b574bc366aa7c719`. No test assertion was weakened or old test removed. The task allocation is `data/t30-01/budget.json`: 44 starts prepaid under the 64-start ceiling; conservative phase charges red 4/4, green 4/6, regression 20/24, mutation 2/2 and quality/review 8/8 = 38 charges. The final suite observed 18 of 20 reserved starts, without refund; observed owned test/quality starts total 36. Combined retained meter/log/review/seal accounting remains below 2,000,000 bytes. No native allocation is consumed by those routine checks.
+
+## Review, limits and next decision
+
+Review traced route/CSRF/payload boundaries, purpose-specific model routes, pinned assets/identity, bounded serialization, untrusted model/evidence/history handling, source rechecks, CAS publication in the exchange transaction, replay/no-retry semantics, quota rollback/recovery, no extra full-source snapshots and safe failures. No required finding remains in this routine-verified implementation. Actual model adherence, output/schema compatibility, whole real inference/persistence, token fit, independent semantic/quote/calculation correctness, full-scale memory/latency, live-source historical annotations and later lifecycle/UI acceptance are not inferred from mocks. File hashing/native calls have the documented cooperative/runtime ownership limits, not arbitrary native-code confinement.
+
+T30 backend implementation/routine verification is delivered. The user subsequently approved its reviewed **23-file source/status/handoff commit** and exact **T30-N1** execution package, 2026-11-20. Its one operator-disconnected run and receipt review remain pending; no further project approval is needed for that unchanged scope. The [native package](../proposals/t30-model-smoke.md) fixes one owned Qwen tree/question, authored retrieval/index seams, current source/model/settings and a distinct finite allocation/root; parent/worker require approval/disconnection flags and unchanged seals. The installed Qwen manifest matches the approved pin; full weight verification is deferred to the actual preflight. No model/native run has occurred. Native generation/persistence validation precedes T31 progression; no stage transition or readiness change is requested. Prior S1/S2/T29-N1 receipts/seals stay unchanged and closed; their source seals describe historical versions, not this new code. No checkpoint/session-summary or unrelated user content was edited. Readable diff including all 12 new authored files: `data/reviews/t30-grounded-chat.diff`.

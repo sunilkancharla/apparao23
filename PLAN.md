@@ -1,6 +1,10 @@
-## Current execution point — T29 results commit approved; T30 authorized
+## Current execution point — T30 commit/native package approved; offline operator run pending
 
-The user explicitly approved committing the eight reviewed T29 results/status documents and instructed proceeding to T30 on 2026-11-20. T29-N1 remains preserved/closed. Implement grounded generation and persisted exchanges under the approved contract; new source commits/native trials retain their separate gates. No stage transition is requested. Earlier pending wording below is historical.
+The user explicitly approved the reviewed 23-file T30 source/status/handoff commit and exact [T30-N1 run](docs/proposals/t30-model-smoke.md) on 2026-11-20. Its one operator-disconnected execution is authorized under the unchanged source/model/settings/allocation. The operator runs locally and reconnects for receipt review; no offline chat confirmation is needed. Native generation/persistence verification and T31 remain pending actual results, with no stage transition. Earlier pending wording below is historical.
+
+## Earlier execution point — T30 routine verified; commit/native smoke proposed
+
+T29 results committed as `b301d1d`; the user's explicit continuation authorized T30. Ordered generation/prompt, storage/revision, service/API and native-handoff preparation increments are implemented and routine-verified. [Evidence](docs/benchmarks/t30-grounded-chat.md): 40 new cases, full suite 506 passed/one existing skip and warning, scoped Ruff passed; publication mutation caught/restored and two process-exit recovery boundaries verified. Selection revisions and source checks fence exchange publication, with no new full-source quotation snapshots. T30's 23-file source/status commit and separate [T30-N1 package](docs/proposals/t30-model-smoke.md)/35-file seal await approval; no model/native run occurred. T31 follows native generation/persistence verification. No dependency, retention, readiness or stage change; all earlier trials stay closed. Earlier pending wording below is historical.
 
 ## Earlier execution point — T29-N1 passed; results commit and T30 next
 

@@ -1,4 +1,20 @@
-## Current task — T29 results commit approved; T30 authorized
+## Current task — T30 commit/native package approved; offline operator run pending
+
+The user explicitly approved the reviewed 23-file T30 source/status/handoff commit and exact [T30-N1 package](docs/proposals/t30-model-smoke.md) on 2026-11-20. Record the commit and verify unchanged source pins/fresh native root; the operator then disconnects, runs the approved command locally once and reconnects for receipt review. No offline chat reply or further project approval is required. Native T30 verification/T31 remain pending actual results; no stage transition is implied. Earlier pending wording below records the preceding review point.
+
+## Earlier task — T30 routine verified; commit/native smoke proposed
+
+[T30 results](docs/benchmarks/t30-grounded-chat.md): 40 new cases, full suite 506 passed/one existing skip and warning, scoped Ruff passed, publication mutation caught/restored and two process-exit recovery boundaries verified. Generation/prompt packing, schema v6 selections/intents/exchanges, source-checked atomic publication and local HTTP routes are implemented. T29 results commit is `b301d1d`; prior native allocations remain preserved/closed. Reviewed 23-file T30 source/status/handoff commit and [T30-N1](docs/proposals/t30-model-smoke.md) execution await approval. The 35-file native seal is prepared; no model/native run occurred. T31 is unstarted and follows native verification. No new dependency, full-source quotation snapshot policy, readiness or stage change.
+
+## Earlier task — T30 authorized; T29 results committed
+
+T29-N1 results are committed as `b301d1d`; the user explicitly instructed T30. Ordered increments: T30-A — pinned Qwen chat client, structured output and whole-request prompt packing; T30-B — exact schema v6, saved selections/revisions, idempotent intents, complete exchanges and interrupted-intent recovery; T30-C — source-checked orchestration, bounded answer/selection HTTP routes and mock integration/review. Each increment is verified before proceeding. Intended source/test groups are `app/chat/` plus generation tests; database/messages plus storage tests; then runtime/transport/API integration plus chat tests. No UI, citation preview resolver, deletion, new dependency, model installation or native trial is included. Minimal backend selection revision handling is required now for C04/C06 publication safety; the browser selection flow remains T33.
+
+T30-D prepares a separately proposed native chat handoff/helper/seal after A–C verification: one owned Qwen tree, authored North/42 evidence, fixture retrieval/embedding seams and real generation/persistence/reopen checks, reusing the reviewed generic meter/supervisor with a distinct T30-N1 identity/root. Routine gate tests remain fake; no actual model/native execution is authorized by this preparation. Its exact source/model/settings, allocation and disconnected handoff are reviewed before requesting that separate execution decision.
+
+Use approved Qwen2.5 1.5B identity and recorded CPU/2048-context/192-output settings, explicit model termination/error handling, 512-byte questions, 2,000-byte evidence, two/500-byte history pairs and a 3,000-byte complete request guard. Exact token fit remains unverified; no external fallback. Persist answer/message/citation-identity metadata, not new full-source quotation snapshots. Routine allocation: 64 starts, prepaid red 4, green 6, regression 24 including controllers/children/controls, quality/consistency 8, mutation 2 = 44 starts, no reset/refund. Retain existing 120-second per-run admission/owned-child deadlines and 2,000,000 combined metered artifact/child-output bytes, recording charges under ignored `data/t30-01/`. All previous trials stay closed. New source commit and any actual chat-model trial remain separately gated.
+
+## Earlier task — T29 results commit approved; T30 authorized
 
 The user explicitly approved the eight-document T29-N1 results closeout and instructed proceeding to T30 on 2026-11-20. Preserve the completed native root/receipts/seal; no additional trial or stage transition is implied. T30 implementation follows the approved generation/history/source-publication contract, with its new source commit and any new native package retaining separate gates. Earlier pending wording below describes the preceding results review.
 
@@ -1606,15 +1622,16 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T30 — Generate and persist grounded chat exchanges
 
-**Status:** Proposed. **Prerequisites:** T29; T11/T16/T17 approved generation/history contract. **Scope:** M.
+**Status:** Implemented and routine-verified; reviewed source commit and exact native smoke package approved, operator run pending, 2026-11-20. **Prerequisites:** T29 (`4a618c2`)/native results (`b301d1d`); T11/T16/T17 generation/history contract; explicit continuation. **Scope:** M, sequential A/B/C/D increments and explicit routine allocation above.
 **Objective:** Add the local chat API with evidence-bound answers and explicit abstention.
 
-- [ ] Separate system policy, untrusted current evidence and bounded history; answer multi-file questions only when supported and handle insufficient/ambiguous evidence without treating document instructions or old messages as authority.
-- [ ] Persist messages/timestamps/document context consistently using the approved local model/timeouts; handle missing model, malformed output and interrupted requests with clear safe errors.
+- [x] Implement separate fixed policy/untrusted current evidence/bounded eligible history, complete byte packing, pinned typed local generation, explicit insufficiency and only supplied citation IDs. Mechanical boundaries are verified with mocks; semantic multi-file/ambiguous/unsupported-answer quality remains for model evaluation.
+- [x] Persist complete questions/answers/timestamps/current-source identity metadata atomically after teardown and selection/source checks; refuse incomplete/malformed/unowned generation and recover interrupted intents without inference or partial assistant text.
+- [ ] Execute/review the approved exact T30-N1 Qwen generation/persistence smoke using the one-run operator-disconnected handoff. Prior native roots/seals remain closed; T31 has not started.
 
 **Verification:** Test-first mocked grounded/abstention/history-injection/API failure/persistence cases; separately labelled actual local-model smoke.
-**Evidence:** Pending — chat tests, known-evidence examples and local smoke limitations.
-**Likely files:** `app/chat/service.py`, `app/api/chat.py`, `app/storage/messages.py`, `tests/integration/test_chat.py`, `tests/security/test_prompt_boundaries.py`.
+**Evidence:** [T30 report](docs/benchmarks/t30-grounded-chat.md): 18 generation/runtime/transport/handoff cases, eight messages/migration/restart cases and 14 service/HTTP cases. Full suite 506 passed/one existing skip and warning; application/test/helper Ruff passed. Bad termination/model/output/citations, history exclusion, prompt bounds, replay/conflict, source/selection changes, pre-generation scope checks, quota/cancellation, CSRF/HTTP isolation and two forced exits/restarts passed. Publication mutation failed its control and exact source was restored before full regression. No actual Qwen inference, independent semantic/quote/calculation support, full-scale latency/memory or application-readiness proof is claimed.
+**Files:** New `app/chat/` generation/service, `app/api/chat.py`, `app/storage/messages.py`; bounded main/transport/runtime/schema/recovery integration, three new test files and narrow current-schema migration assertion update; native helper/seal/package and linked docs/contracts/ADR/report. Default app inference is disabled without trusted owned factories. T31 quote/preview validation, T32 support indicator and T33 UI remain later work; T30 source commit/native trial remain separately gated.
 
 ### T31 — Validate citations and resolve safe passage previews
 

@@ -7,10 +7,11 @@ import time
 from collections.abc import AsyncIterator, Callable
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Protocol
+from typing import Literal, Protocol
 
 import httpx
 
+from app.chat.generation import ChatModel
 from app.config import Settings, validate_local_ancestry
 from app.diagnostics import MODEL_MANIFESTS, OLLAMA_SHA256, _asset, _model, reserve_port
 from app.ollama import OllamaClient, OllamaError
@@ -48,6 +49,17 @@ def _process() -> OwnedProcess:
     return WindowsJob()
 
 
+def _verify_chat_assets(settings: Settings) -> None:
+    """Verify the selected executable/chat assets before a chat-purpose launch."""
+    states = [
+        _asset("ollama", settings.ollama_executable, OLLAMA_SHA256, 100_000_000),
+        _model(settings.model_root, "chat_model", *MODEL_MANIFESTS["chat_model"]),
+    ]
+    for state in states:
+        if not state.code.endswith("_VERIFIED"):
+            raise OllamaError(state.code)
+
+
 class OwnedRuntime:
     """Acquire the existing store's single event-loop work slot for one session.
 
@@ -63,11 +75,16 @@ class OwnedRuntime:
         home: Path,
         *,
         process_factory: Callable[[], OwnedProcess] = _process,
-        verify_assets: Callable[[Settings], None] = _verify_assets,
+        verify_assets: Callable[[Settings], None] | None = None,
         transport: httpx.AsyncBaseTransport | None = None,
         timeout: float = 84,
+        purpose: Literal["embedding", "chat"] = "embedding",
     ) -> None:
-        if type(timeout) not in (float, int) or not 0 < timeout <= 84:
+        if (
+            type(timeout) not in (float, int)
+            or not 0 < timeout <= 84
+            or purpose not in {"embedding", "chat"}
+        ):
             raise OllamaError("OLLAMA_CONFIG_INVALID")
         self.settings, self.store, self.home = settings, store, home
         self.factory, self.verify_assets, self.transport = (
@@ -76,6 +93,10 @@ class OwnedRuntime:
             transport,
         )
         self.timeout = float(timeout)
+        self.purpose = purpose
+        self.verify_assets = verify_assets or (
+            _verify_assets if purpose == "embedding" else _verify_chat_assets
+        )
         self._active: OwnedProcess | None = None
 
     def _environment(self) -> dict[str, str]:
@@ -129,7 +150,7 @@ class OwnedRuntime:
         return size
 
     @asynccontextmanager
-    async def session(self) -> AsyncIterator[Embedder]:
+    async def session(self) -> AsyncIterator[Embedder | ChatModel]:
         """Own process, listener and work slot until verified teardown, even on cancellation."""
         store = self.store
         if (
@@ -210,8 +231,13 @@ class OwnedRuntime:
                     ownership_check=check,
                     timeout=max(0.001, deadline - time.monotonic()),
                     transport=self.transport,
+                    purpose=self.purpose,
                 ) as client:
-                    yield Embedder(client)
+                    yield (
+                        Embedder(client)
+                        if self.purpose == "embedding"
+                        else ChatModel(client)
+                    )
         except TimeoutError:
             raise OllamaError("OLLAMA_TIMEOUT") from None
         except (OSError, ValueError):

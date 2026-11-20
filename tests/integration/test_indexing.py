@@ -33,11 +33,7 @@ def test_exact_v4_migration_preserves_prior_metadata(tmp_path):
     connection.close()
     connection = open_database(tmp_path)
     try:
-        assert (
-            connection.execute("PRAGMA user_version").fetchone()[0]
-            == SCHEMA_VERSION
-            == 5
-        )
+        assert connection.execute("PRAGMA user_version").fetchone()[0] == SCHEMA_VERSION
         assert (
             connection.execute("SELECT id FROM conversations").fetchone()[0]
             == "preserved"

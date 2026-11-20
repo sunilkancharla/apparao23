@@ -4,7 +4,7 @@ import asyncio
 import json
 import math
 from collections.abc import Callable
-from typing import Self
+from typing import Literal, Self
 
 import httpx
 
@@ -50,6 +50,7 @@ class OllamaClient:
         ownership_check: Callable[[], None] | None = None,
         timeout: float = 90,
         transport: httpx.AsyncBaseTransport | None = None,
+        purpose: Literal["embedding", "chat"] = "embedding",
     ) -> None:
         if type(port) is not int or not 1 <= port <= 65535:
             raise OllamaError("OLLAMA_CONFIG_INVALID")
@@ -59,6 +60,13 @@ class OllamaClient:
             or not 0 < timeout <= 90
         ):
             raise OllamaError("OLLAMA_CONFIG_INVALID")
+        if purpose not in {"embedding", "chat"}:
+            raise OllamaError("OLLAMA_CONFIG_INVALID")
+        self._routes = (
+            _ROUTES
+            if purpose == "embedding"
+            else {("GET", "/api/version"), ("GET", "/api/tags"), ("POST", "/api/chat")}
+        )
         self.timeout = float(timeout)
         self._ownership_check = ownership_check
         self._client = httpx.AsyncClient(
@@ -93,7 +101,9 @@ class OllamaClient:
         The wall deadline bounds cooperative HTTP I/O, not native computation
         after cancellation. The owning controller must stop abandoned work.
         """
-        if (method, path) not in _ROUTES or (method == "GET" and payload is not None):
+        if (method, path) not in self._routes or (
+            method == "GET" and payload is not None
+        ):
             raise OllamaError("OLLAMA_REQUEST_INVALID")
         try:
             content = (

@@ -18,6 +18,7 @@ from starlette.exceptions import HTTPException
 from starlette.middleware.base import RequestResponseEndpoint
 from starlette.responses import Response
 
+from app.api.chat import router as chat_router
 from app.api.sources import router as source_router
 from app.config import ConfigurationError, Settings, prepare_data_root
 from app.diagnostics import ComponentState, inspect_prerequisites, reserve_port
@@ -98,6 +99,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         redoc_url=None,
     )
     csrf_token = secrets.token_urlsafe(32)
+    application.state.chat_service = None
 
     @application.middleware("http")
     async def local_boundary(
@@ -107,7 +109,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         origins = request.headers.getlist("origin")
         tokens = request.headers.getlist("x-csrf-token")
         mutation_allowed = (
-            request.method == "POST"
+            request.method in {"POST", "PUT"}
             and origins == [config.origin]
             and len(tokens) == 1
             and tokens[0].isascii()
@@ -319,6 +321,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             )
 
     application.include_router(source_router)
+    application.include_router(chat_router)
     return application
 
 
