@@ -1,6 +1,10 @@
-## Current execution point — CP10 accepted; T28 commit approved; T29 authorized
+## Current execution point — T29 commit/native package approved; offline operator run pending
 
-The user explicitly accepted CP10, approved the reviewed 13-file T28 commit and instructed proceeding to T29 on 2026-11-20. Implement scoped retrieval under the approved provisional R01 contract; new source commits and any new native execution package retain their separate gates. No stage transition is requested. Earlier pending wording below is historical.
+The user explicitly approved the reviewed 14-file T29 source/status/handoff commit and exact [T29-N1 native package](docs/proposals/t29-native-search.md) on 2026-11-20. Its one operator-disconnected run is authorized within the unchanged allocation; the operator runs locally, reconnects and requests receipt review. No offline chat confirmation is needed. Native verification/T30 remain pending the actual result, with no stage transition. Earlier pending wording below is historical.
+
+## Earlier execution point — T29 routine verified; source commit/native bridge check proposed
+
+The user accepted CP10, requested the T28 commit and explicitly authorized T29; T28 is committed as `e9d5580`. T29 now implements explicit selected-reference eligibility, local query-vector validation, selected-only sqlite-vec cosine ranking, complete evidence packing and source rechecks. [Evidence](docs/benchmarks/t29-retrieval.md): 42 new cases, full suite 466 passed/one existing skip and warning, scoped Ruff passed; scope mutation caught/restored. Tests use injected models/native kernel with real SQLite/storage. A separate [T29-N1 package](docs/proposals/t29-native-search.md) and 29-file seal are prepared but unapproved/unexecuted. Reviewed 14-file source/status/handoff commit and this native check need decisions before native T29 acceptance/T30. No schema/dependency/retention/stage change; prior trials remain closed. Earlier pending wording below is historical.
 
 ## Earlier execution point — T28 verified; CP10 review and commit pending
 

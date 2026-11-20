@@ -1,4 +1,18 @@
-## Current task — CP10 accepted; T28 commit approved; T29 authorized
+## Current task — T29 commit/native package approved; offline operator run pending
+
+The user explicitly approved the reviewed 14-file T29 source/status/handoff commit and exact T29-N1 execution package on 2026-11-20. Commit the reviewed files only, verify the unchanged source/asset pins and fresh run-root condition, then use the [approved one-run local handoff](docs/proposals/t29-native-search.md). The operator disconnects, runs locally and reconnects for receipt review; no offline chat reply or further project approval is required. Native retrieval acceptance and T30 remain pending actual results. Earlier proposal/pending wording below records the preceding review point.
+
+## Earlier task — T29 routine verified; source commit/native bridge check proposed
+
+[T29 results](docs/benchmarks/t29-retrieval.md): selected-scope cosine ranking, current-source rechecks and complete evidence packing are implemented; 42 new cases, full suite 466 passed/one existing skip and warning, application/test/helper Ruff passed. T28 commit `e9d5580` and CP10 acceptance are recorded. Scope mutation caught/restored; no real DLL/model trial occurred. Reviewed 14-file source/status/handoff commit and [T29-N1](docs/proposals/t29-native-search.md) execution await approval; native bridge verification remains pending and T30 is unstarted.
+
+## Earlier task — T29 implementation authorized; T28 committed
+
+T28 is committed as `e9d5580`; CP10 is accepted. T29 proceeds in ordered increments: A — pinned sqlite-vec loader/cosine adapter and query-vector validation; B — selected-reference eligibility, stable top-five ranking and complete evidence packing; C — source-version rechecks, deterministic small retrieval evaluation and review. Intended files: `app/retrieval/search.py`, `app/retrieval/vector_search.py`, retrieval unit/integration tests and current docs/report/ADR. Use the existing canonical vector BLOBs and selected native cosine function; no schema, install, model, fallback backend or retention change. Native MATCH optimization is not implied by the earlier benchmark; document this streaming scalar-query implementation's distinct performance limits.
+
+Routine T29 checks use existing mocked-model/native seams and the shared harness. One fresh task allocation: 64 starts, explicitly prepaid red 4, green 6, regression 22 (controllers/children/controls), quality/consistency 8, mutation 2 = 42 starts, no reset/refund; 120-second per-run admission/owned-child deadlines and 2,000,000 combined metered artifact/child-output bytes. Record charges in ignored `data/t29-01/`. No real DLL/Ollama run in this routine allocation; native validation needs its own reviewable package before execution. Preserve S1/S2 and all earlier ledgers/seals. Scope is explicit selected CSV references until saved-selection UI/later formats exist; omitted selection must not broaden scope. T29 source commit remains separately gated.
+
+## Earlier task — CP10 accepted; T28 commit approved; T29 authorized
 
 The user explicitly approved all reviewed T28/CP10 items, requested the 13-file T28 commit and instructed proceeding to T29 on 2026-11-20. CP10 is accepted; no stage transition or additional native trial is implied. T29 implementation follows the approved retrieval contract; its new source commit remains separately gated. Earlier pending-approval wording below describes the reviewed closeout before this decision.
 
@@ -1560,7 +1574,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T28 — Persist an idempotent versioned local index
 
-**Status:** Implemented and verified; CP10 review and source/results commit pending approval, 2026-11-20. **Prerequisites:** T27 (`73cb659`); T12/T17 consistency/index design; explicit continuation. **Scope:** M, sequential A/B/C increments and explicit routine allocation above.
+**Status:** Complete and committed as `e9d5580`; CP10 accepted, 2026-11-20. **Prerequisites:** T27 (`73cb659`); T12/T17 consistency/index design; explicit continuation. **Scope:** M, sequential A/B/C increments and explicit routine allocation above.
 **Objective:** Index content once per approved identity/version and preserve searchable integrity across restart.
 
 - [x] Persist vectors/chunk metadata/index state; unchanged uploads reuse indexed content while retaining distinct ownership/reference/display metadata.
@@ -1570,19 +1584,20 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 **Evidence:** [T28 report](docs/benchmarks/t28-indexing.md): 18 vector/profile unit cases, 19 stored-CSV integration cases including three process-exit boundaries; full suite 424 passed/one existing skip and warning. Application/test Ruff passed; broader historical-script lint/format findings are disclosed and untouched. Complete batches, ordinal/hash/space validation, duplicate reuse, distinct source bindings, source tamper, quota rollback, cancellation/uncertain-cleanup refusal, status/version changes and explicit retries passed. Space mutation caught/restored before full regression. SQLite integration uses synthetic embeddings; no combined real-model indexing, native query/ranking, full-scale/16-GB or answer-quality claim.
 **Files:** `app/retrieval/index.py`, `app/storage/index_state.py`, database schema v5/store recovery/status integration, `tests/unit/test_index_vectors.py`, `tests/integration/test_indexing.py`; current docs/contracts/ADR/report. Canonical float32 vector persistence is ready for the approved sqlite-vec query backend; native search structures/query execution remain T29.
 
-**Checkpoint CP10 — T26–T28:** Technical review complete; user acceptance pending. [Evidence and limits](docs/benchmarks/t28-indexing.md#cp10-and-handoff) cover source-preserving chunks, local embedding errors/native S2 ownership and version/dedup/restart integrity; full suite 424 passed and application/test Ruff passed. Apply G3: approve the reviewed 13-file T28 commit and CP10 before T29. No stage transition is requested.
+**Checkpoint CP10 — T26–T28:** Accepted by the user, 2026-11-20; T28 committed as `e9d5580` and T29 explicitly authorized. [Evidence and limits](docs/benchmarks/t28-indexing.md#cp10-and-handoff) cover provenance/chunking, native S2 ownership and version/dedup/restart integrity. No stage transition is implied.
 
 ### T29 — Retrieve evidence within the selected document scope
 
-**Status:** Proposed. **Prerequisites:** T28; T16 retrieval contract. **Scope:** M.
+**Status:** Implemented and routine-verified; reviewed source commit and exact native bridge package approved, operator run pending, 2026-11-20. **Prerequisites:** T28 (`e9d5580`)/accepted CP10; T16 retrieval contract; explicit T29 instruction. **Scope:** M, ordered A/B/C implementation and explicit routine allocation above.
 **Objective:** Return useful bounded evidence without unrelated/removed attachments or old-context contamination.
 
-- [ ] Resolve selected references, embed queries locally and rank chunks with complete provenance under approved relevance/context budgets; support multiple files and table context.
-- [ ] Exclude unselected/unrelated/removed sources and apply no-evidence/ambiguous behavior; same-content attachments in different conversations must remain correctly scoped.
+- [x] Implement selected-reference resolution, owned local query seam and scoped native cosine ranking with complete provenance, top-five candidates and complete 2,000-byte evidence packing; multi-file/table fixtures verified with injected vectors/kernel.
+- [x] Exclude unselected/foreign/removed sources; disclose blocked/no-evidence/tied candidates without claiming semantic support; preserve same-content scope/provenance and recheck after query/ranking.
+- [ ] Execute/review the approved exact T29-N1 native DLL bridge package using the operator-disconnected handoff. No model run or prior-trial retry is included; T30 remains unstarted.
 
 **Verification:** Deterministic mocked ranking/scope/budget tests and a small agreed retrieval evaluation with expected relevant passages.
-**Evidence:** Pending — isolation and measured relevance results.
-**Likely files:** `app/retrieval/search.py`, `tests/unit/test_retrieval.py`, `tests/integration/test_retrieval_scope.py`.
+**Evidence:** [T29 report](docs/benchmarks/t29-retrieval.md): 18 query/loader unit, 18 scoped stored-source integration and six fake handoff cases; full suite 466 passed/one existing skip and warning, application/test/helper Ruff passed. Scope-join mutation failed and was restored before full regression. Expected North/42 rank, unselected North/999 exclusion, same-content cross-conversation denial, tied conflicting values, complete packing, bad question/vector, missing/changed source, cancellation and no-fallback errors verified mechanically. No real embedding relevance, native bridge, latency/memory or semantic answer-quality score is claimed.
+**Files:** `app/retrieval/search.py`, `app/retrieval/vector_search.py`, two unit files and scoped integration file; proposed native helper/seal/package and current docs/report/contracts/ADR. No schema, dependency, retention or runtime-adoption change. T29-native execution and new source commit remain separately gated.
 
 ### T30 — Generate and persist grounded chat exchanges
 
