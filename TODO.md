@@ -1,6 +1,16 @@
-## Current task — CP11 accepted; T31 commit approved; T32 authorized
+## Current task — T32 commit approved; T15 skipped; T33 reserved for a new session
 
-The user explicitly accepted CP11, approved the reviewed 12-file T31 source/results commit and instructed proceeding to T32 on 2026-11-20. Commit only the reviewed files, then implement the approved observable evidence-support states, warnings and structural coverage without a correctness probability or semantic assurance. Prior native allocations and the closed T31 routine ledger remain preserved; T32 has its own routine allocation and source-commit gate. No dependency, schema, retention, native trial or stage change is authorized. Earlier pending wording below describes the preceding closeout.
+The user approved all reviewed T32 changes and requested the commits, 2026-11-20. T15/UI UX Pro Max is explicitly skipped, including source review/use; T33 retains manual accessibility/design review with the approved stack. The user accepted T34A initial CSV validation after T34 and before format expansion. Its exact native package/fixtures/budgets remain separately gated. Do not start T33 now; it is reserved for a new session. Create the explicitly requested `docs/session_summaries/SESSION_4_AI_Session_SUMMARY.md` for T26–T32 in Session 3's format, preserve earlier summaries and all closed allocations, perform the approved source/decision and summary commits, then stop. No new implementation, installation or trial is authorized in this closeout.
+
+## Earlier task — T32 verified; commit pending; T15 review before T33
+
+T31 is committed as `fd830e5`, with CP11 accepted. T32-A/B/C are implemented and verified: [evidence](docs/benchmarks/t32-evidence-support.md), 30 unit and eight integration cases; full suite 579 passed/one existing skip and warning, scoped Ruff passed, 72 files formatted. Failure/no-evidence mutation caught/restored before full regression. Signals distinguish current checked citations from unverified input fit, preserve independent warnings and give N/A denominators to applicable clarification/refusal/no-evidence cases; no correctness score or semantic assurance is emitted. Thirteen-file source/results commit awaits approval. T15 source-only UI aid review is proposed next, as required before T33; no install/trial/framework decision is implied. Prior allocations stay closed; no schema, dependency, retention, readiness or stage change.
+
+## Earlier task — CP11 accepted; T31 commit approved; T32 authorized
+
+The user explicitly accepted CP11, approved the reviewed 12-file T31 source/results commit and instructed proceeding to T32 on 2026-11-20; T31 is committed as `fd830e5`. T32-A implements the approved observable-state classifier, declared-block counts, fixed explanations and independent warnings. T32-B adds ephemeral source/OCR observations and the indicator to POST/saved-answer HTTP envelopes, preserving raw historical storage/replay and source-preview semantics. T32-C verifies the truth table, error/no-evidence precedence, no semantic assurance and routine regression/review. Intended files: `app/chat/evidence.py`, narrow citation/service/answer-route integration, indicator unit/integration tests and affected documentation. Each increment is tested before proceeding. No schema, dependency, retention, model setting, native trial or stage change is authorized; new source commits retain their gate.
+
+Use fresh ignored `data/t32-01/`: 64 total routine starts, prepaid red 6, green 10, regression 22 (controller/children/controls), quality 8 (each Windows Ruff wrapper plus child charged as two before launch), mutation 2 = 48. The existing shared 120-second/64-start/2,000,000-byte per-run harness and 2,000,000 combined metered artifact/log/review-byte ceiling apply. No refunds/reset or reuse of closed ledgers. Acceptance: hard failures cannot become successful no-evidence/resolved signals; unknown context fit remains incomplete when generation was applicable; no-evidence without inference and clarification/refusal coverage are N/A; source/OCR/coarse/partial/omission warnings stay visible; counts describe declared blocks only; no correctness percentage or model-self-assessed meaning grade. No actual model/native run, install/download or private corpus is included.
 
 ## Earlier task — T31 verified; CP11 review and commit pending
 
@@ -1406,19 +1416,11 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 **Evidence:** Pending — `docs/benchmarks/ponytail.md`, trial/deferral and decision.
 **Likely files:** That report and at most one fixture description.
 
-### T15 — Evaluate UI UX Pro Max before frontend adoption
+### T15 — UI UX Pro Max evaluation skipped by user
 
-**Scheduling:** After core G2 and before T33; evaluate the aid/manual alternative without implicitly changing the approved frontend stack.
+**Status:** Skipped at the user's explicit direction, 2026-11-20. Do not review sources, install, trial or use the tool unless requested again. **Scheduling:** Removed as a prerequisite for T33; manual frontend accessibility/flow review remains required.
 
-**Status:** Proposed. **Prerequisites:** T02–T04; D05; exact optional tool/trial approved under G1. **Scope:** M, design aid only.
-**Objective:** Evaluate whether the aid improves required local browser flows without selecting a framework implicitly.
-
-- [ ] Verify repository/version, skill/scripts/code/assets licenses, Windows needs and file/network behavior; review generated outputs locally on non-sensitive content.
-- [ ] Compare a small chat/upload/library/citation-preview sketch with manual design for keyboard/focus/labels/contrast and loading/empty/error/status states; use supplied images only as references and obtain a tool decision.
-
-**Verification:** Walk the sketches against accessibility/flow criteria and review assets/code before reuse; a trial is not product UI implementation.
-**Evidence:** Pending — `docs/benchmarks/ui-ux-pro-max.md`, design notes and adopt/reject/defer decision.
-**Likely files:** That report, `docs/ui-design.md`, and at most two sketches.
+**Decision/evidence:** [Explicit user skip](docs/decisions.md#2026-11-20--t32-commit-approved-ui-aid-skipped-csv-validation-scheduled). No review/trial result is claimed and no empty tool report is required. Continue the already approved local HTML/CSS/JavaScript approach, Design 1/2 references and manual keyboard/focus/labels/contrast/state review under T33. Another framework/tool still requires approval.
 
 **Checkpoint CP05 — T13–T15:** Proposed. Review exact optional-tool identities/benefits and UI direction. Document approved deferrals/fallbacks; no automatic runtime additions. Apply G3.
 
@@ -1440,7 +1442,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Chart timing prerequisite resolved:** The user explicitly deferred T16A until after the first usable CSV flow/T34. The prior trial-or-deferral gate is satisfied by that timing decision; chart evaluation/adoption remains tracked before any chart-support claim. Other T17 prerequisites remain unchanged.
 
-**Status:** Proposed. **Prerequisites:** T01/T02/T02R/T03/T05/T07/T08/T09/T10/T11A/T11/T12/T16, T04 approved deferral, and chart-scope prerequisite above; all core blocking decisions resolved. T06 excluded; T13/T14 are scheduled after the first slice or before use; T15 remains required before T33, not core G2. **Scope:** M, review only.
+**Status:** Proposed. **Prerequisites:** T01/T02/T02R/T03/T05/T07/T08/T09/T10/T11A/T11/T12/T16, T04 approved deferral, and chart-scope prerequisite above; all core blocking decisions resolved. T06 excluded; T13/T14 are scheduled after the first slice or before use; T15 is skipped by the user; manual frontend review remains part of T33, not core G2. **Scope:** M, review only.
 **Objective:** Obtain G2 approval of exact components and interfaces before application implementation.
 
 - [ ] Present benchmark-backed parser/OCR/model/index/UI alternatives and selections, diagram/inventory, ownership/provenance/data-root/API/status/error boundaries, loopback security, retention and interruption/recovery design.
@@ -1655,7 +1657,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T31 — Validate citations and resolve safe passage previews
 
-**Status:** Implemented and routine-verified, 2026-11-20; source/results commit approved and CP11 accepted. **Prerequisites:** T30, T25; explicit continuation after results commit `aff116e`. **Scope:** M, ordered A/B/C increments above.
+**Status:** Implemented and routine-verified, 2026-11-20; committed as `fd830e5`, CP11 accepted. **Prerequisites:** T30, T25; explicit continuation after results commit `aff116e`. **Scope:** M, ordered A/B/C increments above.
 **Objective:** Bind surfaced citations to supplied evidence rather than model-invented metadata.
 
 - [x] Validate unique supplied citation IDs and require answered claims to cite evidence; resolve only IDs actually cited by that saved answer. Derive filenames/locations/quotation spans from current stored provenance; reject inconsistent IDs, source identities, normalized quotes, coordinates and parser metadata. Plain model-prose assertions remain semantically unverified.
@@ -1663,25 +1665,25 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Verification:** Test-first allowlist/location/quote/preview-scope/XSS cases and manually trace a CSV answer to original records/columns.
 **Evidence:** [T31/CP11 report](docs/benchmarks/t31-citations.md): ten unit and 25 integration/HTTP cases, full suite 541 passed/one existing skip and warning in 89.44 s; scoped Ruff passed, 69 files already formatted. Cited-ID mutation failed its control; exact source restored before full regression. Actual CSV North/42 record/column/line spans and multiline/coarse/missing/header cases traced; original/selection/index changes, foreign/uncited IDs, output bounds, escaping and unsafe/unreadable paths refused. Routine models/native kernel remain injected; no new native/model trial or semantic-quality score.
-**Files:** New `app/chat/citations.py`, `tests/unit/test_citations.py`, `tests/integration/test_saved_citations.py`; narrow chat service and source/saved-answer route integration; README/PLAN/TODO/contracts/ADR and linked report. No schema/lockfile/retention change. The reviewed 12-file commit remains gated.
+**Files:** New `app/chat/citations.py`, `tests/unit/test_citations.py`, `tests/integration/test_saved_citations.py`; narrow chat service and source/saved-answer route integration; README/PLAN/TODO/contracts/ADR and linked report. No schema/lockfile/retention change. The reviewed 12-file source/results commit is `fd830e5`; CP11 is accepted.
 
 **Checkpoint CP11 — T29–T31:** Accepted by the user, 2026-11-20, with the [reviewed evidence and limits](docs/benchmarks/t31-citations.md#cp11-review-and-next-decision). Scoped retrieval, grounded answer/abstention, persistence and real source previews have mechanical boundary evidence. T29-N1/T30-N1 remain separate authored native bridge checks; combined real-model semantic quality is unverified. Unsupported/injection/error/history tests do not independently verify model meaning. The user authorized T32; no stage transition is implied. Apply G3 to its new source commit.
 
 ### T32 — Expose transparent evidence-support signals
 
-**Status:** Proposed. **Prerequisites:** T31; T16 approved semantics. **Scope:** M.
+**Status:** Implemented and routine-verified, 2026-11-20; source/results commit pending. **Prerequisites:** T31 (`fd830e5`)/accepted CP11; T16 approved R02 semantics; explicit continuation. **Scope:** M, ordered A/B/C increments and routine allocation above.
 **Objective:** Explain observed citation/support coverage without implying calibrated accuracy.
 
-- [ ] Return the approved interpretable validity/coverage/abstention/warning states and explanations, distinguishing identifier validation from actual semantic support.
-- [ ] Handle absent/invalid/partial citations, mixed support and extraction limits consistently; no numerical correctness probability or unsupported semantic assurance.
+- [x] Return observable validity/coverage/abstention/warning states and fixed explanations on answer POST/GET. Count only declared text blocks; separate supplied-ID validity, current quotation/location checks and unknown input fit. Semantic support remains independently unverified.
+- [x] Preserve hard failure precedence, missing/invalid/mixed citations, partial answers and source/OCR/coarse/omission/conflict/formula limitations. Pre-generation no-evidence and applicable clarification/refusal coverage are N/A; no correctness percentage or model-self-assessment is accepted. Signals are ephemeral, not saved scores.
 
 **Verification:** Test-first indicator cases from T16 and manual comparison of wording with actual available evidence/limits.
-**Evidence:** Pending — indicator tests and reviewed examples/text.
-**Likely files:** `app/chat/evidence.py`, `app/chat/service.py`, `tests/unit/test_evidence_indicator.py`.
+**Evidence:** [T32 report](docs/benchmarks/t32-evidence-support.md): 30 unit and eight actual-storage/HTTP cases, full suite 579 passed/one existing skip and warning in 63.41 s; scoped Ruff passed, 72 files formatted. Five missing hard-warning cases failed before correction; all 38 focused cases passed after it. Mutation allowing unavailable selected sources to become successful no-evidence failed its control; exact source restored before full regression. Positive verified-fit/semantic-counterexample cases use authored predicates, not a claimed tokenizer result. OCR metadata bridge is synthetic; no actual OCR/model/native trial.
+**Files:** New `app/chat/evidence.py`, `tests/unit/test_evidence_indicator.py`, `tests/integration/test_evidence_support.py`; narrow source-observation/answer-route/blocked-source-warning integration and README/PLAN/TODO/contracts/ADR/evaluation/report. No schema/lockfile/retention change. Reviewed 13-file commit awaits approval; T15 source-only UI aid review is proposed before T33.
 
 ### T33 — Deliver the local browser CSV chat flow
 
-**Status:** Proposed. **Prerequisites:** T32; T15 conclusion and T17 approved UI approach. **Scope:** M.
+**Status:** Unstarted; reserved for a new session at the user's explicit request, 2026-11-20. **Prerequisites:** T32; T15 explicitly skipped; T17 approved manual HTML/CSS/JavaScript approach. **Scope:** M.
 **Objective:** Let the user upload, ask, read support signals and inspect sources through a minimal browser interface.
 
 - [ ] Connect existing upload/status/chat/source operations with selected-document context, per-file processing, loading/empty/success/warning/error states and safely rendered untrusted text; serve all assets locally.
@@ -1705,11 +1707,25 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Checkpoint CP12 — T32–T34:** Proposed. Demo full CSV upload → answer/citation/indicator → restart/reopen, including accessibility and error paths. Apply G3 before format expansion.
 
+### T34A — Validate selected-runtime input boundaries and the real CSV pipeline
+
+**Status:** Scheduling and initial scope approved by the user, 2026-11-20; unstarted. Exact execution package remains gated. **Prerequisites:** T34/CP12, existing T02/T16 rubric and selected T17 runtime/components. **Scope:** M, bounded validation before T35; no new runtime/tool selection.
+**Objective:** Obtain early CSV input-boundary and end-to-end quality evidence before expanding formats.
+
+- [ ] **T34A-A — Define the package.** Freeze authored CSV cases/gold answers/anchors for answerable, unanswerable, multi-file, ambiguous and table questions; pin the then-current source/model/runtime/index/settings. Define a fresh shared execution/output/time/resource allocation including controls/regressions/cleanup, offline conditions and stop rules; obtain approval before native execution. Do not reopen prior roots/seals.
+- [ ] **T34A-B — Examine input boundaries.** Use ordinary selected-Ollama interfaces to check near-boundary requests, input handling/truncation, output headroom, termination and failures. Keep whole-request/template/version identities. Byte caps, response token counts or one recovered sentinel alone do not prove exact pre-request fit. Report unsupported/unknown guarantees explicitly; no standalone tokenizer/private bridge/custom build is implicitly authorized.
+- [ ] **T34A-C — Evaluate the real CSV path.** Exercise upload/extraction/index → real local embedding/retrieval → real chat generation → checked citation/preview → saved conversation/restart, with selected-only scope. Score against fixed local ground truth for relevance, quotation/location fidelity, semantic support and abstention; preserve failures in the denominator and record latency/resource observations under the approved package.
+- [ ] **T34A-D — Review before expansion.** Record findings, remaining fit/quality limitations and any targeted fixes or new decision needed before T35. Do not infer a runtime per-answer semantic verifier from benchmark scores or mark an unproved guarantee verified. Keep T48's final all-format quality/resource baseline and existing targets unchanged.
+
+**Acceptance:** Reproducible pinned CSV results with separated mechanical/semantic/fit observations; honest unknowns/failures and scoped follow-up decisions, no silent acceptance waiver or unsupported runtime claim.
+**Verification/evidence:** A linked sanitized report and exact commands/fixture manifest under the approved future package; currently pending, no execution/benchmark claim.
+**Likely files:** A bounded proposal/helper/CSV fixture definitions and `docs/benchmarks/t34a-csv-validation.md`, selected only when the package is concretely prepared. No report or runner is created merely to imply execution now.
+
 ## M4 — Add each remaining format through the working path
 
 ### T35 — Support native-text PDFs with table/image references
 
-**Status:** Proposed. **Prerequisites:** T34; approved T05/T08/T17 parser selection. **Scope:** M.
+**Status:** Proposed. **Prerequisites:** T34, T34A review; approved T05/T08/T17 parser selection. **Scope:** M.
 **Objective:** Extend upload-to-answer support to native PDFs with honest page/region citations.
 
 - [ ] Extract native pages, practical table row/column structure, table regions/image references and warnings/parser version; detect pages requiring the later OCR path and preserve originals separately.
@@ -1931,7 +1947,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ## Approved delivery priority
 
-After T07 closeout: T10 → T11A (early CPU feasibility) → T08 → T09 → T11 (combined pressure) → T12 → T16 → T17/G2 → CSV-first T18–T34, with T15 before T33. T13/T14 follow the first slice or precede proposed use. These are scheduling changes approved with the three improvements; provisioning/execution of those future packages remains gated. New T11A is an early risk check, not runtime adoption or replacement of T11's combined measurements.
+After T07 closeout: T10 → T11A (early CPU feasibility) → T08 → T09 → T11 (combined pressure) → T12 → T16 → T17/G2 → CSV-first T18–T34, with T15 explicitly skipped and T34A after T34/before format expansion. T13/T14 follow the first slice or precede proposed use. These are scheduling changes approved with the three improvements; provisioning/execution of those future packages remains gated. New T11A is an early risk check, not runtime adoption or replacement of T11's combined measurements.
 
 ## Current handoff
 

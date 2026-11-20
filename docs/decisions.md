@@ -1,5 +1,13 @@
 # Stage 1 Decision Register
 
+## 2026-11-20 — T32 commit approved; UI aid skipped; CSV validation scheduled
+
+The user approved all reviewed T32 changes and explicitly requested the commits. T15/UI UX Pro Max is skipped entirely at the user's direction, including source review/use; remove its prerequisite from T33 and retain manual accessibility/flow review with the already approved local HTML/CSS/JavaScript stack. Do not research, install or use the skipped aid unless requested again.
+
+The user accepted initial CSV validation immediately after T34, before format expansion. T34A will define a fresh bounded package for selected-Ollama input boundaries and actual local embedding/retrieval/generation/citation/restart behavior against fixed CSV ground truth. Exact artifacts/fixtures/settings, execution budgets and controls still need the normal package gate before any native trial; no old allocation is reopened. The accepted T17 omissions remain historical limitations, not passes. Use ordinary selected Ollama interfaces; no standalone tokenizer, custom build, private runner bridge or runtime semantic verifier is implicitly selected. T48 remains the final all-format quality/resource baseline. Unknown input fit and per-answer meaning remain labelled until evidence supports a narrower claim.
+
+The user explicitly reserved T33 for a new session: do not start its implementation in this closeout. They also explicitly requested `docs/session_summaries/SESSION_4_AI_Session_SUMMARY.md`, covering T26–T32 in Session 3's format. This authorizes that one summary despite the standing no-checkpoint/default-summary rule; prior session summaries and historical checkpoint files remain unchanged. Record durable progress/decisions in PLAN/TODO and linked reports. No stage transition, dependency installation or new model/OCR/native run is authorized here.
+
 ## 2026-11-20 — G2 approved; T17 closed; bounded T18 authorized
 
 After presentation of the updated architecture, the bounded T18 foundations scope and the documentation commit, the user answered "I approve all of them, please proceed." Record G2 acceptance of [ADR0001](ADR/0001-stage1-architecture.md), its existing component pins/C01–C08 contracts and the Ollama-internal tokenizer route. The same approval covers committing the reviewed documentation and performing the [bounded T18 increment](../PLAN.md). T17 is complete as an architecture/decision task.

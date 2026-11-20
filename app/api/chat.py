@@ -9,6 +9,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 
 from app.chat.citations import Citations
+from app.chat.evidence import evidence_support
 from app.chat.service import ChatService
 from app.ingestion.validation import UploadError, validate_uuid
 from app.ollama import _invalid_constant, _object
@@ -98,7 +99,10 @@ async def answer(conversation: str, request: Request) -> JSONResponse:
     result = await service.ask(
         conversation, keys[0], payload.question, payload.expected_revision
     )
-    return JSONResponse({"data": result}, status_code=202)
+    return JSONResponse(
+        {"data": {**result, "evidence_support": evidence_support(result)}},
+        status_code=202,
+    )
 
 
 @router.get("/api/conversations/{conversation}/answers/{identity}")
@@ -108,4 +112,5 @@ async def saved(conversation: str, identity: str, request: Request) -> dict:
     validate_uuid(identity)
     if request.query_params:
         raise UploadError("INVALID_REQUEST")
-    return {"data": await Citations(_store(request)).read(conversation, identity)}
+    result = await Citations(_store(request)).read(conversation, identity)
+    return {"data": {**result, "evidence_support": evidence_support(result)}}

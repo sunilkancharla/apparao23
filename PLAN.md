@@ -1,4 +1,12 @@
-## Current execution point — CP11 accepted; T31 commit approved; T32 authorized
+## Current execution point — T32 commit approved; T15 skipped; T33 reserved for a new session
+
+The user approved the T32 source/results commit and these decision updates on 2026-11-20. T15/UI UX Pro Max is explicitly skipped, including its source review/use; retain manual frontend/accessibility review and the approved HTML/CSS/JavaScript stack. T33 is unstarted and must wait for a new session. Add T34A immediately after T34/CP12 and before T35 format expansion: prepare a separately bounded CSV package for selected-Ollama input boundaries and the actual local retrieval/generation/citation/restart path. Its exact trial remains gated; T48 still provides final all-format quality/resource evaluation, with no per-answer semantic verifier adopted. Complete the requested T26–T32 Session 4 summary and approved commits, then stop. Earlier pending wording below is historical.
+
+## Earlier execution point — T32 verified; commit pending; T15 review before T33
+
+T31 is committed as `fd830e5`, with CP11 accepted and explicit T32 continuation. [T32 evidence](docs/benchmarks/t32-evidence-support.md): 38 new cases, full suite 579 passed/one existing skip and warning, scoped Ruff passed; failure/no-evidence precedence mutation caught/restored. Answer HTTP envelopes now describe observable checks/declared-block counts and independent warnings, with semantic support always unverified and current model-input fit explicitly incomplete. The reviewed 13-file source/results commit remains gated. Next is T15's required UI UX Pro Max source-only review before T33, not automatic frontend/tool adoption. No schema, dependency, retention, native trial, readiness or stage change. Earlier pending wording below is historical.
+
+## Earlier execution point — CP11 accepted; T31 commit approved; T32 authorized
 
 The user explicitly accepted CP11, approved the reviewed 12-file T31 source/results commit and instructed proceeding to T32 on 2026-11-20. Implement only the approved observable support-state/warning/structural-coverage design; do not infer semantic support or a correctness probability from citation validity. Prior allocations remain preserved/closed, and T32 source commits retain their own gate. No schema, dependency, retention, native trial or stage change is authorized. Earlier pending wording below is historical.
 
@@ -438,9 +446,9 @@ T08 depends on T05 and T07 (T06 and T07A excluded). T17 must resolve all three r
 
 The user approved all three improvements while authorizing the complete T07 package: consolidate settled SPEC decisions, bundle exact bounded-task permissions, and prioritize model feasibility plus the CSV-first slice. The T07 approval covers its three pins, fixtures, tests, measurements and specified budgets without another task-start question. Git commit, G2 adoption, scope changes and work exceeding approved artifacts/budgets still need explicit approval.
 
-Revised execution order after T07: **T10 → T11A → T08 → T09 → T11 → T12 → T16 → T17/G2 → T18–T34**, with T15 before T33. T11A uses fixed verified evidence to expose CPU-only chat limitations early; T11 later combines those settings with OCR/embedding contention after T09. No model provisioning is authorized by moving the task. T08 MarkItDown remains required before parser adoption; T07A XLS is deferred. T16A chart evaluation or an explicit runtime-scope decision remains required at G2.
+Revised execution order after T07: **T10 → T11A → T08 → T09 → T11 → T12 → T16 → T17/G2 → T18–T34 → T34A**, with T15 explicitly skipped by the user's 2026-11-20 decision. T11A uses fixed verified evidence to expose CPU-only chat limitations early; T11 later combines those settings with OCR/embedding contention after T09. No model provisioning is authorized by moving the task. T08 MarkItDown remains required before parser adoption subject to its later approved exception; T07A XLS is deferred. T16A chart evaluation is subject to its later explicit post-T34 deferral.
 
-T13/T14 optional developer-tool reviews move after the first CSV slice (or immediately before proposed tool use); they cannot block core architecture or a working answer path. T15 UI UX Pro Max stays a separate evaluation before frontend implementation, with manual design as a reviewed alternative. No tool is implicitly adopted, installed or declared evaluated. Core G2 approves the already selected minimal HTML/CSS/JavaScript approach; later design-aid evaluation cannot silently change that stack.
+T13/T14 optional developer-tool reviews move after the first CSV slice (or immediately before proposed tool use); they cannot block core architecture or a working answer path. T15/UI UX Pro Max is skipped at the user's explicit request; perform frontend design/accessibility review manually. No skipped tool is declared evaluated or adopted. Core G2 approves the already selected minimal HTML/CSS/JavaScript approach; another framework requires a separate decision.
 
 This order prioritizes CSV upload → retrieval → local answer → citation → saved conversation. XLSX, native/scanned PDFs, lifecycle, privacy and full acceptance remain required later slices; a first CSV demo does not satisfy all Stage 1 criteria. Complete-model resource adoption still needs combined evidence, not early fixed-evidence timings alone.
 
@@ -562,7 +570,7 @@ For each candidate/artifact, record exact upstream repository/version/digest whe
 | T10/T11 | Ollama embedding/chat candidates | Actual-machine quality/latency/memory; `embeddinggemma` and `qwen2.5:3b` are candidates, not defaults |
 | T12 | SQLite metadata plus local vector alternatives | Minimal representation versus justified index library; ranking/persistence/delete/rebuild/versioning and interrupted-write integrity |
 | T13 and T14, separately | User-intended RTK and ponytail | Exact identity first; one representative developer-workflow trial, trust/license/Windows support and benefit; no assumptions from names |
-| T15 — before UI implementation | UI UX Pro Max | Local non-sensitive design exercise, generated-code/asset review, licensing, accessibility, upload/chat/library/citation states; manual design fallback |
+| T15 — skipped by user | UI UX Pro Max | No source review, trial, installation or use; manual accessibility/upload/chat/library/citation review remains part of T33 |
 | Checkpoints | `/status`, `/compact` | Host availability and persisted state; neither is a runtime dependency |
 
 Reading the explicitly requested local planning skill is authorized; it did not execute bundled scripts or install tools. T04 concerns later acceptance of additional third-party instructions. If an optional tool is unavailable, ambiguous or rejected, record the evidence and obtain agreement on deferral/manual fallback. Do not block required product functionality indefinitely or silently skip a mandated evaluation.
@@ -596,7 +604,8 @@ TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 
 | M0 — Decisions/evaluations/design | T01 decisions; T02 fixtures/rubric; T03 environment/dependencies; T04 SkillSpector; T05 PDF; T02R corpus revision; T06 excluded; T07 XLSX/CSV; T10 embeddings; T11A early chat; T07A XLS (deferred); T08 MarkItDown; T09 OCR; T11 combined chat; T12 storage; T16 grounding; T17 core architecture | G1 trial approvals throughout; G2 design/component adoption before app code |
 | M1 — Minimal foundations | T18 reproducible project; T19 local startup/config; T20 ownership persistence; T21 provenance contracts; T22 fixture harness | Tested foundations only; no complete future schema or unused modules |
 | M2 — First upload slice | T23 safe CSV attachment; T24 batch/status; T25 extraction/preview | User can upload and inspect traceable local text |
-| M3 — First answer slice | T26 chunk; T27 embed; T28 index; T29 retrieve; T30 grounded chat; T31 citations; T32 indicator; T15 UI aid review; T33 browser flow; T34 saved chats | CSV upload → answer/abstention → citation → restart/reopen |
+| M3 — First answer slice | T26 chunk; T27 embed; T28 index; T29 retrieve; T30 grounded chat; T31 citations; T32 indicator; T33 manual browser flow; T34 saved chats; T15 skipped | CSV upload → answer/abstention → citation → restart/reopen |
+| CSV validation before expansion | T34A — selected-runtime input boundaries and real CSV pipeline | Bounded ground-truth/fit findings and explicit remaining limitations before T35; T48 remains the final all-format baseline |
 | M4 — Required format expansion | T35 native PDF; T36 scanned/mixed OCR; T37 XLS (deferred); T38 XLSX; T39 CSV robustness; T40 mixed-format integration | Three formats with table/image/OCR provenance and disclosed limitations |
 | M5 — Library and lifecycle | T41 library upload/list; T42 references/scope; T43 impact warnings; T44 document removal; T45 chat deletion | Shared bytes, safe scope, approved removal/retention and citations |
 | M6 — Acceptance | T46 security/recovery; T47 offline traffic; T48 quality/resource baseline; T49 setup/inventory/docs; T50 demo/sign-off | G4 evidence; no automatic Stage 2 transition |
@@ -605,12 +614,12 @@ TODO holds the complete atomic criteria/files/evidence. T01 through T03 and T05 
 G0 → T01 → T02 → T03 → G1 approvals for trials
 T02/T03 → T04 → T05; T02R → T07; T05/T07 → T08 → T09
 T07 → T10 → T11A → T08/T09 → T11 → T12
-T34 → T13/T14 (or before tool use); T17 → T15 → T33
+T34 → T13/T14 (or before tool use); T15 skipped; T17's approved manual frontend approach → T33
 Required parser/model/storage/grounding evidence → T16 → T17 → G2 (T13–T15 do not block core G2)
 G2 → T18 → T19 → T20 → T21 → T22
 T22 → T23 → T24 → T25 → T26 → T27 → T28 → T29
 T29 → T30 → T31 → T32 → T33 → T34
-T34 → T35 → T36 → T38 → T39 → T40
+T34 → T34A → T35 → T36 → T38 → T39 → T40
 T40 → T41 → T42 → T43 → T44 → T45
 T45 → T46 → T47 → T48 → T49 → T50 → G4
 ```

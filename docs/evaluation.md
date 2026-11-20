@@ -1,6 +1,10 @@
 # Stage 1 Fixture and Evaluation Design
 
-## T16 draft — support indicators and grounding review
+## T32 — implemented observable support signals
+
+The [T32 classifier and HTTP evidence](benchmarks/t32-evidence-support.md) implement the approved observable-state design below, with 38 new cases/full suite 579 passed, one existing skip and warning. The response reports structural checks, declared-block counts, issues and independent warnings; meaning remains independently unverified and no correctness score is emitted. Current generated answers retain incomplete support because exact input fit remains unknown. Successful no-inference no-evidence and applicable clarification/refusal coverage are N/A; hard failures cannot become successful empty/resolved states. Positive verified-fit cases are authored predicates only, not a new model-fit measurement. Existing human-quality metrics, sample denominators, targets and scoring eligibility below are unchanged and unclaimed.
+
+## T16 historical design — support indicators and grounding review
 
 **T16 indicator design approved; no new scores, runtime implementation or G2 adoption.** Drafts were committed as `486fd1b`; the user then approved R02 wording/warnings/no correctness percentage, retained R01 as a provisional baseline and approved R08 recovery design. The [retrieval contract](retrieval-design.md) records those directions and remaining T17 mechanics. Existing facts, IDs, active/excluded scope and scoring flags remain unchanged. Initial quality targets are carried forward, not claimed achieved or automatically changed. Clarifications below distinguish pre-packing retrieval from evidence actually supplied to generation.
 

@@ -334,11 +334,30 @@ class Citations:
             async with asyncio.timeout(90):
                 for citation, item in items.items():
                     try:
-                        await self._resolve(conversation, item)
+                        preview = await self._resolve(conversation, item)
                     except UploadError as error:
                         status = {"availability": "unavailable", "code": error.code}
                     else:
-                        status = {"availability": "available", "code": None}
+                        ocr = [p for p in preview["passages"] if p["method"] == "ocr"]
+                        status = {
+                            "availability": "available",
+                            "code": None,
+                            "warning_codes": preview["warnings"],
+                            "methods": sorted(
+                                {p["method"] for p in preview["passages"]}
+                            ),
+                            "precisions": sorted(
+                                {
+                                    p["location"]["precision"]
+                                    for p in preview["passages"]
+                                }
+                            ),
+                            "ocr_confidence_available": all(
+                                p["confidence"] is not None for p in ocr
+                            )
+                            if ocr
+                            else None,
+                        }
                     saved["citations"].append({"citation_id": citation, **status})
                 saved["source_availability"] = (
                     "available"

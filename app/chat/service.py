@@ -80,6 +80,8 @@ class ChatService:
                 history = self.messages.history(conversation, result.snapshot)
                 prompt = build_prompt(question, result.evidence, history)
                 warnings = list(dict.fromkeys((*result.warnings, *prompt.warnings)))
+                if result.blocked and "SOURCES_UNAVAILABLE" not in warnings:
+                    warnings.append("SOURCES_UNAVAILABLE")
                 if not prompt.evidence:
                     answer = Answer(
                         status="insufficient_evidence",
