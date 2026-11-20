@@ -1,4 +1,8 @@
-## Current task — T22 implemented and verified; review complete; commit approved
+## Current task — T23 complete; closeout and commit approved
+
+The user explicitly authorized T23 on 2026-11-20 after T22 commit `57973a6` and summary commit `beed4c5`. [Upload evidence](docs/benchmarks/t23-uploads.md): 58 new tests; full suite 181 passed, one existing permission skip and warning; Ruff passed. Actual loopback upload/refusal and process-exit recovery passed; the shared routine meter used 9/64 starts and 263,060/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run, private sample read or T24 work. The user explicitly approved the reviewed T23 closeout and thirteen-file commit on 2026-11-20.
+
+## Earlier task — T22 implemented and verified; review complete; commit approved
 
 T22 was authorized by the user's instruction to proceed after T21 commit **daf10c5**. [Fixture evidence](docs/benchmarks/t22-fixtures.md): 16 new tests; full suite 123 passed/one existing host-permission skip and warning; Ruff passed. Final shared meter: 6/64 starts (including controller and indirect platform probe), 262,980/2,000,000 retained artifact/child-output bytes, within 120-second child/admission boundary. All seven PDF pages were rendered and visually checked. Empty-page control approved; illegible-text and chart scoring remain deferred. The user explicitly approved the reviewed ten-file T22 closeout and commit on 2026-11-20; no T23 work or new dependencies.
 
@@ -1427,21 +1431,21 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 **Evidence:** [T22 report](docs/benchmarks/t22-fixtures.md): repeated fixture bytes/hashes/ground truth match; CSV quoting/line spans, XLSX formulas/cache/merges and native/scanned/mixed PDFs checked; all seven pages rendered and visually reviewed. Shared session meter covers all actual regression children and the indirect read-only Windows version probe; deterministic start/output/deadline/overflow tests and a detected boundary mutation verify refusal. No private source original read, scoring change, model/OCR engine, installation or application ingestion. Empty page tests absence of evidence; actual illegible-text behavior is unverified.
 **Likely files:** `tests/conftest.py`, `tests/fixtures/factories.py`, `tests/unit/test_eval_fixtures.py`, `tests/evals/manifest.json`.
 
-**Checkpoint CP08 — T20–T22:** Proposed. Review ownership/provenance/fixture integrity and relevant tests/Ruff before first upload. Apply G3.
+**Checkpoint CP08 — T20–T22:** Passed for proceeding to T23 by the user's explicit instruction after the committed T22 closeout. Ownership/provenance/fixture evidence is retained in the T20–T22 reports; the T23 suite retains their regressions. This does not grant Git or later-task approval.
 
 ## M2 — First usable upload slice: CSV
 
 ### T23 — Upload a validated CSV conversation attachment
 
-**Status:** Proposed. **Prerequisites:** T22; D01 and T17 upload/security policy. **Scope:** M.
+**Status:** Complete; review and commit approved, 2026-11-20. **Prerequisites:** T22 (`57973a6`); approved D01/G2 upload/security policy; explicit user T23 instruction. **Scope:** M.
 **Objective:** Provide a safe API path from one local upload to a stored original/reference.
 
-- [ ] Validate CSV extension/content/size/parseability as feasible; use safe server-controlled storage identity, separate display filename and the configured data root under the correct conversation reference.
-- [ ] Reject invalid/unsupported/oversized/traversal/unsafe Windows filename cases with useful errors; clean partial/temporary artifacts without exposing paths or sensitive content.
+- [x] Validate CSV extension/content/size/parseability as feasible; use safe server-controlled storage identity, separate display filename and the configured data root under the correct conversation reference.
+- [x] Reject invalid/unsupported/oversized/traversal/unsafe Windows filename cases with useful errors; clean partial/temporary artifacts without exposing paths or sensitive content.
 
 **Verification:** Test-first upload/API/file-boundary tests including mismatches, boundary sizes and interrupted writes; local valid/invalid API smoke and security review.
-**Evidence:** Pending — upload tests and original-file/reference trace.
-**Likely files:** `app/api/uploads.py`, `app/ingestion/validation.py`, `app/storage/files.py`, `tests/integration/test_uploads.py`, `tests/security/test_upload_paths.py`.
+**Evidence:** [T23 report](docs/benchmarks/t23-uploads.md): 58 new tests cover actual stored bytes/scoped IDs, traversal/Windows names, strict CSV/content controls, byte/count/quota bounds, verified retry/conflict, partial-write/cancellation/cleanup failure, migration and concurrency. Actual SQLite growth refusal rolls back, and real process termination before/after publication reconciles correctly with integrity_check=ok. Full suite 181 passed/one existing skip and warning; Ruff passed. Actual loopback valid/invalid smoke passed. Real 100 MB throughput, full-cap storage/16 GB proof and normalized extraction remain unverified; T24 has not started.
+**Files:** `app/main.py`, `app/ingestion/validation.py`, `app/storage/files.py`, `app/storage/database.py`, `tests/integration/test_uploads.py`; minor existing test/harness adjustments and linked closeout documentation. Implementation proceeded sequentially through validation, metadata/ownership, admission/recovery and API verification; no separate router or empty security-test directory was needed for one route.
 
 ### T24 — Expose batch upload and per-file processing status
 

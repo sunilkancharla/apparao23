@@ -1,4 +1,14 @@
-**Current status — 2026-11-20:** T21 is committed as **daf10c5**. T22's local fixture harness is implemented and verified; the user approved the reviewed T22 closeout and commit on 2026-11-20. The normal suite passed **123 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T22 evidence and limits](docs/benchmarks/t22-fixtures.md). No application upload/parser pipeline, model execution or chat UI is claimed.
+**Current status — 2026-11-20:** T23 implements single CSV conversation-attachment upload with safe display names, streamed byte limits, scoped references, verified retries, quota reservations and interrupted-upload cleanup. The full suite passed **181 tests**, with one existing Windows permission skip and the Starlette warning; Ruff passed. [T23 evidence and limits](docs/benchmarks/t23-uploads.md). The user approved the reviewed T23 closeout and thirteen-file commit. Batch processing, normalized extraction/previews, model execution and a chat UI remain later tasks.
+
+## Single CSV upload
+
+Start the local launcher below. `GET /api/session` returns an ephemeral `data.csrf_token`. Send the raw CSV bytes to `POST /api/conversations/{id}/attachments`, with exact application `Origin`, `X-CSRF-Token`, `X-Filename`, `Idempotency-Key` and `Content-Type: text/csv`. Percent-encode UTF-8 display filenames; filenames are labels and never storage paths. Keys contain 16–128 ASCII letters/digits/underscore/hyphen and must be reused only for the same intended upload. The conversation must already exist through the T20 trusted backend interface; a public creation UI/API is not part of T23.
+
+A 202 `data` receipt contains `operation_id`, `document_id`, `reference_id`, `display_name`, `state: original_stored` and `indexed: false`. Matching retries hash the complete bounded body before returning the same receipt. Changed payloads conflict; pending/failed attempts are not silently repeated. Ten logical references count even when multiple attachments share bytes. Original files are stored by server-computed SHA256 beneath the configured data root, separately from staging and future extraction outputs.
+
+Admission accepts UTF-8/BOM comma CSV syntax, rejects unsafe Windows names, common binary/HTML mismatches, malformed quotes, invalid encoding and empty text, and enforces 100,000,000 bytes while streaming. CSV has no definitive magic signature; single-column text may be valid CSV. Broader encoding/dialect handling and semantic table validation remain T25/T39. This endpoint does not yet extract/index data or expose a source preview.
+
+The upload store holds one OS lock per root, reserves up to 100 MB each for original and staging before writes, and bounds database growth/journal space within the approved class caps. Worst-case reservation may refuse a smaller request near a cap. Startup reconciles the one interrupted upload; locked/unsafe cleanup stays unavailable with reservations retained. Unknown files are preserved and counted. [Accounting, failure codes and verification](docs/benchmarks/t23-uploads.md). There is no automatic eviction or general conversation/library deletion.
 
 ## Reproducible test fixtures
 
@@ -15,7 +25,7 @@ $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
 .\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration
 ```
 
-`-rP` displays the shared meter summary. The final verified run used 6 starts and 262,980 retained bytes. No environment installation or external service is needed with the existing provisioned project environment.
+`-rP` displays the shared meter summary. The final verified run used 9 starts and 263,060 retained factory-artifact/child-output bytes. The default ignored parent directory is created automatically. No environment installation or external service is needed with the existing provisioned project environment.
 
 ## Provenance contracts
 
@@ -27,11 +37,11 @@ These models validate structure without reading originals, executing formulas, r
 
 ## Metadata storage foundations
 
-`app/storage/database.py` opens `metadata.sqlite3` beneath a caller-supplied trusted managed root; the caller must close the returned connection. It initializes schema v1 with an application identifier, foreign keys, DELETE journaling and FULL synchronization; unsupported or changed schemas are refused. `app/storage/documents.py` provides backend methods to create conversation identities, register library documents, create exclusive attachments, attach library documents and resolve/list only a conversation's references.
+`app/storage/database.py` opens `metadata.sqlite3` beneath a caller-supplied trusted managed root; the caller must close the returned connection. It initializes schema v2 with an application identifier, foreign keys, DELETE journaling and FULL synchronization, or migrates an exact v1 schema while preserving identities. Unsupported or changed schemas are refused. `app/storage/documents.py` provides trusted backend methods to create conversation identities, register library documents, create exclusive attachments, attach library documents and resolve/list only a conversation's references. Browser writes use `UploadStore` validation/reservations rather than exposing these trusted primitives directly.
 
 Equal SHA256 identities share content metadata. Documents and references keep separate UUIDs and membership. Reattaching the same library document to the same conversation returns its existing reference; a new logical attachment consumes another slot even for equal bytes. Foreign keys, unique membership, immutable identities and a ten-reference constraint protect metadata integrity. These methods take already verified content metadata; they do not read, store or hash uploaded originals.
 
-Storage is not connected to the launcher or HTTP yet. The health endpoint remains unchanged and unready. Public writes must first integrate upload validation, quota reservations and operation idempotency in later tasks; this foundation does not implement deletion, content cleanup, saved messages, vectors or extraction. Tests use only generated synthetic databases under ignored temporary directories. No SQLite extension, model or new dependency is loaded. Run the normal test/lint commands below; focused storage verification is `python -m pytest tests/unit/test_document_storage.py -q` using the project interpreter and disabled plugin autoload.
+Startup now opens managed metadata/upload storage; failures keep diagnostics available and disable uploads. The health endpoint remains unready until later owned model integration. T23 adds upload-specific cleanup, not general document/conversation deletion, saved messages, vectors or extraction. Tests use generated synthetic databases under ignored temporary directories. No SQLite extension, model or new dependency is loaded. Focused storage verification is `python -m pytest tests/unit/test_document_storage.py -q`; upload verification is `python -m pytest tests/integration/test_uploads.py -q`, using the project interpreter and disabled plugin autoload.
 
 ## Local startup and diagnostics
 
@@ -45,7 +55,7 @@ Inspect `http://127.0.0.1:8000/api/health`. This is a JSON diagnostics endpoint;
 
 Configuration uses process environment variables; `.env` files are not loaded automatically. Defaults: `DA_HOST=127.0.0.1` (the only accepted host), `DA_PORT=8000`, `DA_OLLAMA_PORT=11435`, `DA_DATA_ROOT=data/app`, `DA_MODEL_ROOT=data/ollama/models`, and `DA_OLLAMA_EXECUTABLE=.venv/tools/ollama/0.40.16/ollama.exe`. Set `DA_OCR_ASSET` to the explicitly provisioned approved `eng.traineddata`; no historical trial directory is guessed. Relative paths resolve against the project root. UNC, traversal, control-character and drive-relative paths are refused; managed-root ancestry cannot contain symlinks/reparse points or overlap the environment, Git metadata or model store. Unknown `DA_*` keys fail explicitly.
 
-Use this launcher to retain exact loopback binding, port reservation, disabled proxy-header trust and disabled access logging. Request Host must equal the configured authority; supplied Origin must equal the configured app origin. All mutation methods are denied in this read-only slice. No frontend, persistent browser token or mutation/CSRF handshake is exposed yet. Health responses contain safe component codes/messages, no asset paths; inherited HTTP proxy settings are unused because the app makes no outbound HTTP requests. Same-account malicious processes and filesystem check/use races are not confined by these controls.
+Use this launcher to retain exact loopback binding, port reservation, disabled proxy-header trust and disabled access logging. Request Host must equal the configured authority; supplied Origin must equal the configured app origin. POST requests additionally require that exact Origin and the per-instance CSRF value obtained from `/api/session`. Other mutation methods are denied. Responses use no-store and security headers; neither the token nor source data belongs in logs or browser persistent storage. No frontend is exposed yet. Health responses contain safe component codes/messages, no asset paths; inherited HTTP proxy settings are unused because the app makes no outbound HTTP requests. Same-account malicious processes and filesystem check/use races are not confined by these controls.
 
 ```powershell
 $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
@@ -54,7 +64,7 @@ $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
 .\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/unit tests/integration
 ```
 
-The integration suite starts two short-lived Python launcher processes to verify real loopback HTTP and port refusal. It uses synthetic/missing asset paths and runs no native model/OCR engine. Historical `tests/evals/` scripts retain their separate execution gates.
+The integration suite starts three short-lived Python launcher processes for real loopback diagnostics, upload and port refusal, plus two abrupt-exit upload children for recovery checks. It uses synthetic/missing asset paths and runs no native model/OCR engine. Historical `tests/evals/` scripts retain their separate execution gates.
 
 ## Verified foundations checks
 

@@ -1,4 +1,8 @@
-## Current execution point — T22 fixture harness verified; review complete; commit approved
+## Current execution point — T23 upload verified; closeout and commit approved
+
+The user's explicit T23 instruction authorized the single-CSV attachment task after T22 commit `57973a6` and summary commit `beed4c5`. Validation, durable upload/reservation records, immutable originals, scoped references, body-verified replay and bounded startup reconciliation are implemented without new dependencies. Final suite: 181 passed, one existing permission skip and warning; Ruff passed. [Evidence, reviewable change map and limits](docs/benchmarks/t23-uploads.md). The user explicitly approved the reviewed T23 closeout and thirteen-file commit on 2026-11-20. T24 has not started.
+
+## Earlier execution point — T22 fixture harness verified; review complete; commit approved
 
 The user's instruction to proceed authorized T22 after T21 commit **daf10c5**. The local authored-fixture harness, loopback-only in-memory Ollama mocks and shared routine-suite budget are implemented. Final suite: 123 passed, one existing permission skip and warning; Ruff passed. [Evidence](docs/benchmarks/t22-fixtures.md). A blank image-only page is an empty-page control, not a verified illegible-text control. Chart trials/scoring remain deferred; scoring flags/private originals are untouched. The user explicitly approved the reviewed ten-file T22 closeout and commit on 2026-11-20. T23 has not started.
 

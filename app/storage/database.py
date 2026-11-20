@@ -8,8 +8,8 @@ from pathlib import Path
 from app.config import ConfigurationError, prepare_data_root, validate_local_ancestry
 
 APPLICATION_ID = 0x44415331
-SCHEMA_VERSION = 1
-SCHEMA = (
+SCHEMA_VERSION = 2
+SCHEMA_V1 = (
     """CREATE TABLE content_objects (
         sha256 TEXT PRIMARY KEY CHECK(length(sha256)=64 AND sha256 NOT GLOB '*[^0-9a-f]*'),
         byte_size INTEGER NOT NULL CHECK(byte_size BETWEEN 0 AND 100000000),
@@ -49,6 +49,27 @@ SCHEMA = (
         SELECT RAISE(ABORT, 'content identity is immutable');
     END""",
 )
+UPLOAD_SCHEMA = (
+    """CREATE TABLE uploads (
+        id TEXT PRIMARY KEY,
+        conversation_id TEXT NOT NULL REFERENCES conversations(id),
+        key_hash TEXT NOT NULL,
+        display_name TEXT NOT NULL CHECK(length(display_name) BETWEEN 1 AND 255),
+        state TEXT NOT NULL CHECK(state IN
+            ('receiving','promoting','original_stored','failed','cleanup_pending')),
+        content_hash TEXT,
+        byte_size INTEGER NOT NULL DEFAULT 0 CHECK(byte_size BETWEEN 0 AND 100000000),
+        document_id TEXT NOT NULL,
+        reference_id TEXT NOT NULL,
+        owns_original INTEGER NOT NULL DEFAULT 0 CHECK(owns_original IN (0,1)),
+        original_reserved INTEGER NOT NULL CHECK(original_reserved BETWEEN 0 AND 100000000),
+        temp_reserved INTEGER NOT NULL CHECK(temp_reserved BETWEEN 0 AND 100000000),
+        UNIQUE(conversation_id, key_hash)
+    ) STRICT""",
+    """CREATE UNIQUE INDEX one_active_upload ON uploads((1))
+        WHERE state IN ('receiving','promoting','cleanup_pending')""",
+)
+SCHEMA = (*SCHEMA_V1, *UPLOAD_SCHEMA)
 
 
 class StorageError(ValueError):
@@ -68,7 +89,9 @@ def transaction(connection: sqlite3.Connection) -> Iterator[None]:
         finally:
             if connection.in_transaction:
                 connection.rollback()
-    except sqlite3.Error:
+    except sqlite3.Error as error:
+        if getattr(error, "sqlite_errorcode", None) == sqlite3.SQLITE_FULL:
+            raise StorageError("STORAGE_QUOTA_OR_DISK_FULL") from None
         raise StorageError("STORAGE_CONFLICT_OR_UNAVAILABLE") from None
 
 
@@ -86,7 +109,7 @@ def _authorize(
     return sqlite3.SQLITE_OK
 
 
-def open_database(root: Path) -> sqlite3.Connection:
+def open_database(root: Path, *, max_pages: int | None = None) -> sqlite3.Connection:
     """Open metadata.sqlite3 under a trusted managed root; refuse foreign versions.
 
     The caller owns/closes the returned connection. This is a trusted backend
@@ -109,6 +132,14 @@ def open_database(root: Path) -> sqlite3.Connection:
         connection.execute("PRAGMA trusted_schema=OFF")
         connection.execute("PRAGMA synchronous=FULL")
         connection.set_authorizer(_authorize)
+        if max_pages is not None:
+            if type(max_pages) is not int or max_pages < 1:
+                raise StorageError("INVALID_DATABASE_BOUND")
+            if (
+                connection.execute(f"PRAGMA max_page_count={max_pages}").fetchone()[0]
+                > max_pages
+            ):
+                raise StorageError("DATABASE_BOUND_EXCEEDED")
         with transaction(connection):
             version = connection.execute("PRAGMA user_version").fetchone()[0]
             identity = connection.execute("PRAGMA application_id").fetchone()[0]
@@ -121,6 +152,18 @@ def open_database(root: Path) -> sqlite3.Connection:
                 for statement in SCHEMA:
                     connection.execute(statement)
                 connection.execute(f"PRAGMA application_id={APPLICATION_ID}")
+                connection.execute(f"PRAGMA user_version={SCHEMA_VERSION}")
+            elif version == 1 and identity == APPLICATION_ID:
+                old_schema = {
+                    row[0]
+                    for row in connection.execute(
+                        "SELECT sql FROM sqlite_master WHERE name NOT LIKE 'sqlite_%'"
+                    )
+                }
+                if old_schema != {statement.strip() for statement in SCHEMA_V1}:
+                    raise StorageError("DATABASE_SCHEMA_MISMATCH")
+                for statement in UPLOAD_SCHEMA:
+                    connection.execute(statement)
                 connection.execute(f"PRAGMA user_version={SCHEMA_VERSION}")
             elif version != SCHEMA_VERSION or identity != APPLICATION_ID:
                 raise StorageError("UNSUPPORTED_DATABASE_SCHEMA")
