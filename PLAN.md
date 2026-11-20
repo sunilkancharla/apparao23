@@ -1,4 +1,8 @@
-## Current execution point — T20 storage foundations verified; review complete; commit approved
+## Current execution point — T21 provenance models verified; review complete; commit approved
+
+The user explicitly authorized T21 on 2026-11-20 after T20 commit **99dc36e**. Typed normalized extraction, source-unit/table/image references and PDF/XLSX/CSV anchors are implemented using the existing Pydantic dependency. Full suite: 107 passed, one host-permission skip and the retained Starlette warning; Ruff passed. [Evidence](docs/benchmarks/t21-provenance.md). No parser/native model, upload route, generated fixture harness or T22 work was introduced. The user explicitly approved the reviewed eight-file T21 closeout and commit on 2026-11-20. T22 has not started.
+
+## Earlier execution point — T20 closeout
 
 The user authorized T20 on 2026-11-20 after the T19 closeout. Minimal SQLite content/document/conversation/reference persistence is implemented with stdlib SQLite only. The normal suite passed 57 tests, one host symlink-permission skip and the existing Starlette warning; Ruff passed. [T20 evidence](docs/benchmarks/t20-storage.md) includes real process-exit rollback/reopen and an isolation mutation check. This storage interface is not wired to HTTP/startup or uploads; quota/idempotency/lifecycle integration remains later work. The user explicitly approved the reviewed nine-file T20 closeout and commit on 2026-11-20. T21 has not started.
 

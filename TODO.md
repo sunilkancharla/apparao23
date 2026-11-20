@@ -1,4 +1,8 @@
-## Current task — T20 implemented and verified; review complete; commit approved
+## Current task — T21 implemented and verified; review complete; commit approved
+
+The user authorized T21 on 2026-11-20 after T20 commit **99dc36e**. [Evidence](docs/benchmarks/t21-provenance.md): 50 new provenance cases, full suite 107 passed/one host-permission skip and one existing Starlette warning; Ruff passed. Typed identities, parser versions, native/OCR labels, raw confidence/limitations, structured tables and format anchors round-trip without synthesizing coordinates. No parser execution, new dependency, generated document fixtures, product-data write or T22 work. The user explicitly approved the reviewed eight-file T21 closeout and commit on 2026-11-20.
+
+## Earlier task — T20 closeout
 
 The user explicitly authorized the presented T20 scope on 2026-11-20. [Storage evidence](docs/benchmarks/t20-storage.md): 21 new real-SQLite tests pass; full suite 57 passed, one host-permission skip and one retained Starlette warning; Ruff passed. Shared content identity, separate scoped document/reference identities, uniqueness/FK constraints, atomic rollback, version/schema refusal and restart persistence are covered. No new dependency, native model execution, live ingestion, quota/lifecycle implementation or T21 work. The user explicitly approved the reviewed nine-file T20 closeout and commit on 2026-11-20.
 
@@ -1396,14 +1400,14 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T21 — Implement normalized provenance contracts
 
-**Status:** Proposed. **Prerequisites:** T20; T17 approved interfaces. **Scope:** M.
+**Status:** Implemented and verified; review complete; commit approved, 2026-11-20. **Prerequisites:** T20 (99dc36e); T17 approved interfaces; explicit task authorization. **Scope:** M.
 **Objective:** Preserve exact/coarse source anchors through a common typed extraction representation.
 
-- [ ] Define document/passage/table/image references with stable IDs/hash/extraction version, filename/format, parser/version, native/OCR method, warnings/confidence and format-specific anchors.
-- [ ] Validate required metadata and explicit missing/coarser precision; round-trip structured tables/locations without confusing originals and normalized output or inventing anchors.
+- [x] Define document/passage/table/image references with stable IDs/hash/extraction version, filename/format, parser/version, native/OCR method, warnings/confidence and format-specific anchors.
+- [x] Validate required metadata and explicit missing/coarser precision; round-trip structured tables/locations without confusing originals and normalized output or inventing anchors.
 
 **Verification:** Test-first model/serialization/invalid-metadata and table/provenance round-trip fixtures for all planned formats.
-**Evidence:** Pending — contract tests and reviewed examples/limitations.
+**Evidence:** [T21 report](docs/benchmarks/t21-provenance.md): 50 new synthetic model cases cover format round-trips, mixed native/OCR, structured and unavailable tables, inert formulas/missing cache, merged origins, CSV multiline spans/duplicate headers, PDF image regions, metadata/range/mapping failures and identity uniqueness. Missing-cache disclosure test first failed, then passed after validation fix. Missing-page mutation detected; original source restored exactly. Full suite 107 passed/one host-permission skip; Ruff passed. Structural validity does not prove source fidelity or semantic support.
 **Likely files:** `app/ingestion/models.py`, `tests/unit/test_provenance_models.py`, `docs/contracts.md`.
 
 ### T22 — Build the reproducible local fixture harness

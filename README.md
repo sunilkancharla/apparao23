@@ -1,4 +1,12 @@
-**Current status — 2026-11-20:** T18 is committed as **0658bea** and T19 as **e99630a**. T20's minimal SQLite identity/ownership storage is implemented and verified; the user approved the reviewed T20 closeout and commit on 2026-11-20. The normal suite passed **57 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T20 evidence and limits](docs/benchmarks/t20-storage.md). G2/T17 remains closed with its recorded unverified limitations. Document ingestion, model execution and chat UI remain later work.
+**Current status — 2026-11-20:** T20 is committed as **99dc36e**. T21's normalized provenance contracts are implemented and verified; the user approved the reviewed T21 closeout and commit on 2026-11-20. The normal suite passed **107 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T21 evidence and limits](docs/benchmarks/t21-provenance.md). G2/T17 remains closed with its recorded unverified limitations. Parser execution, model execution and chat UI remain later work.
+
+## Provenance contracts
+
+`app/ingestion/models.py` defines immutable Pydantic values for normalized extractions, passages/tables/images, parser identities and format-specific locations. Serialization preserves supplied source IDs, SHA256 identity, extraction/normalization versions, filename, warnings and per-unit native/OCR labels. OCR confidence retains an engine-named raw scale, or stays unknown; it is not a correctness probability.
+
+PDF anchors preserve 1-based pages and optional page-local regions; XLSX anchors preserve sheets, canonical A1 ranges and merged origins; CSV anchors separate data-record indices, inclusive physical-line spans and positional headers. Tables keep cell row/column/role/location metadata and inert formula text. Coarse/unavailable locations and missing mappings/structure require explicit limitations. Missing formula caches require a warning and retain `None`. Text mappings use zero-based, end-exclusive Unicode code-point offsets.
+
+These models validate structure without reading originals, executing formulas, running OCR/parsers or proving quotations/semantic support. They are not wired to upload, persistence or citations yet. [Serialized field conventions](docs/contracts.md#t21--implemented-normalized-provenance-contract). Focused verification: `.\.venv\Scripts\python.exe -m pytest tests/unit/test_provenance_models.py -q` with plugin autoload disabled as in the normal test commands below.
 
 ## Metadata storage foundations
 
