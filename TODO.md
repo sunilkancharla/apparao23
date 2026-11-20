@@ -1,6 +1,6 @@
-## Current task — T17 closed; approved T18 foundations in progress
+## Current task — T17 closed; T18 verified, commit authorized
 
-[Approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved the architecture, bounded T18 task and reviewed documentation commit. T17 has no remaining mandatory task; the three omitted investigations remain unverified limitations. T18 acceptance/evidence will be recorded here after the actual foundations checks.
+[Approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved the architecture, bounded T18 task and reviewed documentation commit. T17 is closed in **2698240** and has no remaining mandatory task; the three omitted investigations remain unverified limitations. T18 checks passed as recorded below; the user explicitly authorized the scoped T18 commit on 2026-11-20.
 
 **Latest component choice:** [Ollama internal tokenizer, 2026-11-20](docs/decisions.md#2026-11-20--ollama-internal-tokenizer-selected). Standalone provisioning/parity tasks are historical and no longer part of the selected route. Exact pre-request fit and boundary handling remain unverified; no new trial is requested.
 
@@ -9,7 +9,7 @@
 - [x] **T17-D1 — record the verification decision.** Objective: stop the repeated investigation cycle. Prerequisite: current user instruction. Acceptance/evidence: decision register and ADR explicitly preserve the unverified risks and PDF/OCR limitations; SPEC unchanged.
 - [x] **T17-D2 — record internal tokenization selection.** Prerequisite: explicit 2026-11-20 choice. Acceptance/evidence: ADR, dependency/provisioning inventory and input contract use Ollama-native processing; no standalone installation or invented public counting API; historical tests retain their original limits.
 - [x] **T17-G2 — final architecture/component decision.** Prerequisite: T17-D1/D2. Acceptance/evidence: explicit 2026-11-20 approval of ADR/component contracts, the recorded limitations and bounded T18 authorization; documentation commit approved.
-- [ ] **T18 — approved reproducible project foundations.** Prerequisite: T17-G2. Reuse the existing project-local environment, baseline dependencies and lock; introduce only what the first implementation slice needs. Evidence: meaningful setup/feature checks and reviewed source/config changes, not another tokenizer or hardware research package.
+- [x] **T18 — approved reproducible project foundations.** Prerequisite: T17-G2. Existing project-local baseline reused; offline lock check passed (53 locked packages), four setup tests passed, Ruff lint/format passed. Tests exercise local-environment isolation and in-memory API/client validation, including invalid/missing input. Default discovery excludes explicit historical evaluations. Evidence: `tests/test_project_setup.py`, pytest configuration and [actual commands/one deprecation warning](docs/provisioning.md#t18-foundations-results--2026-11-20). No new dependency/download/model trial; scoped source commit authorized on 2026-11-20.
 
 Normal test-first implementation, privacy, source/citation correctness and Stage 1 acceptance requirements remain in force. No new installation or product code occurred in this handoff. Earlier unchecked investigations below are historical and are not an active retry queue.
 
@@ -1351,6 +1351,8 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 ## M1 — Minimal tested foundations
 
 ### T18 — Establish the approved reproducible Python project
+
+**Current status: verified, 2026-11-20; scoped source commit authorized.** Existing environment/lock/ignore rules reused; offline lock, four setup tests and Ruff passed. See the current checklist and provisioning evidence above. The original task definition below is retained as history.
 
 **Status:** Proposed. **Prerequisites:** T17/G2; explicit task/provisioning authorization. **Scope:** M.
 **Objective:** Introduce only the environment and tooling needed for the first implementation slice.

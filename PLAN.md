@@ -1,6 +1,8 @@
-## Current execution point — T17/G2 complete; bounded T18 in progress
+## Current execution point — T17/G2 closed; T18 foundations verified
 
-[G2 and T18 approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved all presented items and the reviewed documentation commit. T17 is closed with the recorded unverified limitations. Execute the bounded T18 foundations increment below; the three omitted investigations are not an active retry queue.
+[G2 and T18 approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved all presented items and the reviewed documentation commit. T17 is closed in commit **2698240**, with the recorded unverified limitations. T18's existing-baseline lock/smoke/lint/format checks passed; the user explicitly authorized its scoped source/configuration commit on 2026-11-20. The next implementation task is T19 under its applicable approval. The three omitted investigations are not an active retry queue.
+
+T18 evidence: offline lock check resolved the existing 53-package lock; the local uv/no-sync run passed four setup tests; Ruff lint/format passed. Default pytest discovery now excludes historical evaluation scripts because they require explicit fixture/budgeted runs. The in-memory client emitted one Starlette warning that its HTTPX integration is deprecated; the smoke tests passed, no HTTPX2 dependency was added, and no warning was suppressed. [Verified commands and limits](docs/provisioning.md#t18-foundations-results--2026-11-20).
 
 **Latest component decision, 2026-11-20:** use Ollama's internal model-native tokenizer; the separate standalone tokenizer graph is no longer proposed for Stage 1 installation. [Decision](docs/decisions.md#2026-11-20--ollama-internal-tokenizer-selected). Keep existing research as history. This selects the runtime tokenization path; exact application-facing pre-request counting remains unverified. No new comparison trial, private runner integration or model/runtime modification is planned by this choice. The G2 proposal below now uses this internal route.
 

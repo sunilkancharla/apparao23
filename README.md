@@ -1,4 +1,18 @@
-**Current status — 2026-11-20:** [G2 is approved and T17 is closed](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized). The bounded T18 foundations task is authorized and in progress. Ollama's internal tokenizer is selected; standalone dependencies are not selected for installation. The three omitted investigations remain unverified limitations. SPEC and normal implementation tests remain unchanged; no end-user application or new runtime-validation pass is claimed.
+**Current status — 2026-11-20:** [G2 is approved and T17 is closed](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized), committed as **2698240**. T18 foundations passed the offline lock check, four setup smoke tests and Ruff lint/format; the user authorized the scoped T18 commit on 2026-11-20. Ollama's internal tokenizer is selected; standalone dependencies are not selected for installation. The three omitted investigations remain unverified limitations. SPEC is unchanged; no end-user application or new model-validation pass is claimed.
+
+## Verified foundations checks
+
+Run from the project root using the existing environment:
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+.\.venv\Scripts\uv.exe lock --check --offline
+.\.venv\Scripts\uv.exe run --offline --no-sync python -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\ruff.exe check tests/test_project_setup.py
+.\.venv\Scripts\ruff.exe format --check tests/test_project_setup.py
+```
+
+Observed: four tests passed, lint/format passed, and the 53-package lock remained unchanged. The tests use an in-memory API; no product server or Ollama starts. Default pytest discovery excludes historical `tests/evals/` scripts, which keep their explicit evaluation commands and fixture/budget requirements. Starlette emitted one deprecation warning about its test client's HTTPX integration; no dependency upgrade was made. [Details](docs/provisioning.md#t18-foundations-results--2026-11-20).
 
 **Latest completed static work:** [T17-SV2](docs/benchmarks/t17-standalone-validation-closeout.md) verified ten exact wheels/470 payloads, seven reused distributions/158 payloads, the seventeen-node dependency graph and three exact publisher statements. Its unexecuted provisioning/parity checks remain unexecuted; the decision above changes their pre-G2 gating, not their measured results.
 
