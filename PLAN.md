@@ -1,6 +1,10 @@
-## Current execution point — T29 commit/native package approved; offline operator run pending
+## Current execution point — T29 results commit approved; T30 authorized
 
-The user explicitly approved the reviewed 14-file T29 source/status/handoff commit and exact [T29-N1 native package](docs/proposals/t29-native-search.md) on 2026-11-20. Its one operator-disconnected run is authorized within the unchanged allocation; the operator runs locally, reconnects and requests receipt review. No offline chat confirmation is needed. Native verification/T30 remain pending the actual result, with no stage transition. Earlier pending wording below is historical.
+The user explicitly approved committing the eight reviewed T29 results/status documents and instructed proceeding to T30 on 2026-11-20. T29-N1 remains preserved/closed. Implement grounded generation and persisted exchanges under the approved contract; new source commits/native trials retain their separate gates. No stage transition is requested. Earlier pending wording below is historical.
+
+## Earlier execution point — T29-N1 passed; results commit and T30 next
+
+T29 source/handoff committed as `4a618c2`; the operator completed the approved disconnected T29-N1 run and requested review. [Native results](docs/benchmarks/t29-native-search.md): passed, two expected ranked records/two evidence items, 768 dimensions, SQL load denied, integrity `ok`, worker reaped; two prepaid Python starts/one recorded DLL load. All 29 source pins and three assets match; prior S1/S2 receipts are unchanged. T29 implementation/routine/bounded native verification is complete. The native allocation is preserved/closed with no rerun. Eight-document results/status commit awaits approval; T30 grounded chat is next and unstarted. Semantic quality, combined real-model retrieval, resource/latency acceptance and stage/readiness remain unchanged. Earlier pending wording below is historical.
 
 ## Earlier execution point — T29 routine verified; source commit/native bridge check proposed
 

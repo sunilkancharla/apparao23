@@ -1,6 +1,10 @@
-## Current task — T29 commit/native package approved; offline operator run pending
+## Current task — T29 results commit approved; T30 authorized
 
-The user explicitly approved the reviewed 14-file T29 source/status/handoff commit and exact T29-N1 execution package on 2026-11-20. Commit the reviewed files only, verify the unchanged source/asset pins and fresh run-root condition, then use the [approved one-run local handoff](docs/proposals/t29-native-search.md). The operator disconnects, runs locally and reconnects for receipt review; no offline chat reply or further project approval is required. Native retrieval acceptance and T30 remain pending actual results. Earlier proposal/pending wording below records the preceding review point.
+The user explicitly approved the eight-document T29-N1 results closeout and instructed proceeding to T30 on 2026-11-20. Preserve the completed native root/receipts/seal; no additional trial or stage transition is implied. T30 implementation follows the approved generation/history/source-publication contract, with its new source commit and any new native package retaining separate gates. Earlier pending wording below describes the preceding results review.
+
+## Earlier task — T29-N1 passed; results commit and T30 next
+
+T29 source/handoff committed as `4a618c2`; the operator completed the approved disconnected run and requested inspection. [T29-N1 review](docs/benchmarks/t29-native-search.md): passed, two expected ranked records/two evidence items, 768 dimensions, SQL load denied, integrity `ok`, worker reaped; two prepaid Python starts/one recorded DLL load. All 29 sealed sources/three asset pins match, S1/S2 receipts remain unchanged, and N1 is preserved/closed without retry or reseal. T29 implementation/routine/bounded native verification is complete. Eight-document results/status commit awaits approval; T30 is next and unstarted. No new trial, model run, readiness or stage change occurred during this read-only review. Earlier pending wording below is historical.
 
 ## Earlier task — T29 routine verified; source commit/native bridge check proposed
 
@@ -1588,16 +1592,17 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T29 — Retrieve evidence within the selected document scope
 
-**Status:** Implemented and routine-verified; reviewed source commit and exact native bridge package approved, operator run pending, 2026-11-20. **Prerequisites:** T28 (`e9d5580`)/accepted CP10; T16 retrieval contract; explicit T29 instruction. **Scope:** M, ordered A/B/C implementation and explicit routine allocation above.
+**Status:** Implementation/routine/bounded native verification complete, 2026-11-20. Source/handoff committed as `4a618c2`; native N1 passed and closed, results-documentation commit pending approval. **Prerequisites:** T28 (`e9d5580`)/accepted CP10; T16 retrieval contract; explicit T29 instruction and N1 approval. **Scope:** M, ordered A/B/C implementation and exact separate allocations above.
 **Objective:** Return useful bounded evidence without unrelated/removed attachments or old-context contamination.
 
 - [x] Implement selected-reference resolution, owned local query seam and scoped native cosine ranking with complete provenance, top-five candidates and complete 2,000-byte evidence packing; multi-file/table fixtures verified with injected vectors/kernel.
 - [x] Exclude unselected/foreign/removed sources; disclose blocked/no-evidence/tied candidates without claiming semantic support; preserve same-content scope/provenance and recheck after query/ranking.
-- [ ] Execute/review the approved exact T29-N1 native DLL bridge package using the operator-disconnected handoff. No model run or prior-trial retry is included; T30 remains unstarted.
+- [x] Execute/review the approved exact T29-N1 native DLL bridge package using the operator-disconnected handoff. [Success receipts](docs/benchmarks/t29-native-search.md) verified; no model run, prior-trial retry or further N1 execution. T30 remains unstarted.
 
 **Verification:** Deterministic mocked ranking/scope/budget tests and a small agreed retrieval evaluation with expected relevant passages.
-**Evidence:** [T29 report](docs/benchmarks/t29-retrieval.md): 18 query/loader unit, 18 scoped stored-source integration and six fake handoff cases; full suite 466 passed/one existing skip and warning, application/test/helper Ruff passed. Scope-join mutation failed and was restored before full regression. Expected North/42 rank, unselected North/999 exclusion, same-content cross-conversation denial, tied conflicting values, complete packing, bad question/vector, missing/changed source, cancellation and no-fallback errors verified mechanically. No real embedding relevance, native bridge, latency/memory or semantic answer-quality score is claimed.
-**Files:** `app/retrieval/search.py`, `app/retrieval/vector_search.py`, two unit files and scoped integration file; proposed native helper/seal/package and current docs/report/contracts/ADR. No schema, dependency, retention or runtime-adoption change. T29-native execution and new source commit remain separately gated.
+**Evidence:** [T29 report](docs/benchmarks/t29-retrieval.md): 18 query/loader unit, 18 scoped stored-source integration and six fake handoff cases; full suite 466 passed/one existing skip and warning, application/test/helper Ruff passed. Scope-join mutation failed and was restored before full regression. Expected North/42 rank, unselected North/999 exclusion, same-content cross-conversation denial, tied conflicting values, complete packing, bad question/vector, missing/changed source, cancellation and no-fallback errors verified mechanically. Routine tests do not establish native execution or real embedding relevance/latency/memory/semantic answer quality; separate native results follow.
+**Native evidence:** [T29-N1](docs/benchmarks/t29-native-search.md) passed the real selected DLL against the actual stored-source retrieval path with synthetic vectors, expected distance/rank checks, disabled SQL load, SQLite integrity and parent reaping. This does not measure semantic model relevance, full application latency/memory or answer quality. No further native run is required for this bounded gate.
+**Files:** T29 retrieval/native boundary, tests, helper/seal/package and current docs were committed as `4a618c2`. N1 review adds the linked report and updates affected documentation only. Its eight-file results commit remains separately gated; T30 is next. No schema, dependency, retention, readiness or stage change.
 
 ### T30 — Generate and persist grounded chat exchanges
 

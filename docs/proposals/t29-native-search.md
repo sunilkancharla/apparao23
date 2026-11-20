@@ -1,6 +1,6 @@
 # T29-N1 — One disconnected native cosine bridge check
 
-**Status: approved, prepared and source-sealed; not executed.** The user explicitly approved this exact T29-N1 package and the reviewed 14-file T29 source/status/handoff commit on 2026-11-20. No further project approval is needed for its one operator-disconnected run. Routine retrieval tests inject a cosine function and models; this package checks the exact selected DLL against the real application database/query path, with synthetic embeddings only. Its limits and stop conditions below remain unchanged; execution alone does not establish native acceptance or authorize T30.
+**Status: executed, passed, reviewed and closed, 2026-11-20.** Source/handoff commit `4a618c2`; [success receipts and limits](../benchmarks/t29-native-search.md) verify two expected ranked records/two evidence items, 768 dimensions, SQL load denied, integrity `ok` and worker reaping. The ledger records two prepaid Python starts/one DLL load. All source/asset pins match. Preserve this root/receipts/seal; **the historical command below must not be repeated**. No Ollama inference or Stage transition occurred; T30 remains unstarted.
 
 ## Fixed inputs and work
 
@@ -27,11 +27,11 @@ The parent uses one **45-second shared deadline** from ledger creation, includin
 
 This small correctness check does not instrument strict aggregate RAM, CPU residency, network packets or all possible native descendants, and it does not validate the physical-16-GB/8-GiB application target. Native scratch is preserved and charged. The audited artifact and authored two-record scope limit the intended work; the explicit native-trust/resource limitations remain. This is not a performance benchmark or permission for a larger data set.
 
-Stop on any asset/source/version drift, occupied/existing run root, unexpected launch/load, resource/output/deadline guard, malformed vector/distance, wrong rank/count, SQL load allowance, integrity failure, worker error or uncertain reaping. Preserve the root/receipts; do not weaken guards, retry, change assets or allocate another root without a new decision. Source and fake supervisor/gate checks passed during T29 routine verification; actual native execution remains unverified.
+Stop on any asset/source/version drift, occupied/existing run root, unexpected launch/load, resource/output/deadline guard, malformed vector/distance, wrong rank/count, SQL load allowance, integrity failure, worker error or uncertain reaping. Preserve the root/receipts; do not weaken guards, retry, change assets or allocate another root without a new decision. Source/fake supervisor checks passed during routine verification; subsequent bounded native execution passed as recorded in the linked results.
 
-## Approved operator handoff — run once while disconnected
+## Historical operator handoff — closed; do not repeat
 
-Read/save these instructions while connected. The package is approved. Disconnect external networking and run **once** locally:
+The operator ran this approved command once while disconnected. It is retained for audit only:
 
 ```powershell
 cd F:\document_assistant
@@ -40,4 +40,4 @@ cd F:\document_assistant
 
 The flags attest to approval and actual disconnection; they do not change network settings. No chat reply is needed while offline. The terminal reports completion. Inspect local `data/t29-native-01/result.json`, `ledger.json`, `parent.json` and `worker-output.txt`; a pre-worker failure can leave no result file. Do not publish the ledger's worker token. A failure/stop is not acceptance and must not be retried.
 
-Once the command returns, reconnect and say **“T29-N1 finished; please inspect the results.”** I can read those local files directly. Review determines whether the T29 native bridge gate can close before T30; this command does not start chat implementation, approve an unreviewed Git commit or transition stages.
+The operator reconnected and requested inspection. [Receipt review](../benchmarks/t29-native-search.md) confirms this bounded native bridge gate passed; T30 grounded chat is next and unstarted. No screenshot/token or online chat while disconnected was needed. This completed package does not authorize another run, an unreviewed Git commit or a stage transition.
