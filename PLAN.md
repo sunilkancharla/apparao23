@@ -1,4 +1,8 @@
-## Current execution point — T26 complete; closeout and commit approved
+## Current execution point — T27 client closeout and commit approved; runtime integration pending
+
+The user's next-step instruction after T26 commit `f7f0a90` authorizes T27 implementation using the approved Nomic/Ollama selection. Bounded HTTP transport, pinned embedding identities/vector validation and synthetic real-loopback checks are implemented sequentially. There are 56 new tests; full suite: 329 passed, one existing skip and warning, Ruff passed. [Evidence and limits](docs/benchmarks/t27-embeddings.md). No dependency/native process/model execution or readiness change occurred. Production service ownership/global job coordination and a separately authorized actual-model smoke remain open before live integration; the client defaults to refusing requests without an owner check. The user explicitly approved the reviewed T27 client closeout and ten-file commit on 2026-11-20. T28 is unstarted and CP10 remains open.
+
+## Earlier execution point — T26 complete; closeout and commit approved
 
 The user's instruction to start T26 authorizes this task after T25 commit `ebbe77b` and accepted CP09. Pure source-preserving chunking is implemented with the approved provisional 600/800/120-byte policy. Sequential prose, structured-table/CSV and integration/review increments passed 32 new tests; full suite: 273 passed, one existing skip and warning, Ruff passed. [Evidence, provenance examples and limits](docs/benchmarks/t26-chunking.md). No dependency, storage schema, model execution or readiness change occurred. The user explicitly approved the reviewed T26 closeout and ten-file commit on 2026-11-20; T27 remains unstarted and CP10 remains open through T28.
 

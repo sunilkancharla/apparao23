@@ -1,4 +1,8 @@
-## Current task — T26 complete; closeout and commit approved
+## Current task — T27 client closeout and commit approved; runtime integration pending
+
+The user authorized the next step after T26 commit `f7f0a90`, starting T27's approved local embedding client. [Evidence](docs/benchmarks/t27-embeddings.md): 56 new cases; full suite 329 passed/one existing skip and warning, Ruff passed. Synthetic loopback CSV chunk → document/query vector checks passed with inherited proxies disabled; the wrong-digest mutation was caught and restored exactly. Shared final suite meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No download, dependency/native/model run, private sample read, schema or readiness change. The user explicitly approved the reviewed T27 client closeout and ten-file commit on 2026-11-20; production owned-service/global lease integration and the separately authorized actual-model smoke remain pending. T28 is unstarted.
+
+## Earlier task — T26 complete; closeout and commit approved
 
 The user explicitly instructed starting T26 after T25 commit `ebbe77b` and accepted CP09. [Chunking evidence](docs/benchmarks/t26-chunking.md): prose, table/CSV and stored-extraction integration increments completed; 32 new tests, full suite 273 passed/one existing permission skip and warning, Ruff passed. The 800-byte boundary mutation was caught and the original source hash restored. Final shared suite meter: 13/64 starts, 263,388/2,000,000 retained factory-artifact/child-output bytes. No installation, model/OCR run, private sample read, schema or readiness change. The user explicitly approved the reviewed T26 closeout and ten-file commit on 2026-11-20; T27 is unstarted.
 
@@ -1513,15 +1517,22 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T27 — Embed through the approved local Ollama model
 
-**Status:** Proposed. **Prerequisites:** T26; approved T10/T17 selection. **Scope:** M.
+**Status:** Client implemented and routine-verified; client closeout and commit approved, 2026-11-20. Production owned-service integration/real-model smoke remain pending. **Prerequisites:** T26 (`f7f0a90`); approved T10/T17/G2 Nomic/Ollama selection; explicit next-step instruction. **Scope:** M, sequential increments below; no native execution authorized by these routine checks.
 **Objective:** Add bounded loopback embeddings with explicit model/dimension/error handling.
 
-- [ ] Use only the approved endpoint/model with bounded batches/timeouts and recorded model identity/dimensions; validate missing/invalid/incompatible/truncated responses according to contract.
-- [ ] Surface absent service/model, timeout and malformed-response errors without downloads, sensitive logs or remote fallback.
+| Increment | Objective / prerequisites | Acceptance / verification | Status |
+|---|---|---|---|
+| T27-A | Bounded loopback HTTP seam over existing HTTPX | Explicit owner check, no proxy/redirect escape, bounded JSON, safe errors and deadline | Routine checks verified; actual process owner not implemented |
+| T27-B | Pinned document/query embeddings after A | Version/digest/prefix/dimension identity, complete batches, finite normalized vectors and source hashes | Verified with mocked responses; negative controls caught truncation/Unicode gaps before fixes |
+| T27-C | Synthetic loopback integration and review after B | Real HTTP CSV chunks/query flow, proxy isolation, unowned refusal, cancellation/busy/combined deadline, mutation and full suite | Verified; 56 new cases, full suite 329 passed |
+
+- [x] Implement the client for only the approved endpoint/model with bounded batches/timeouts and recorded identity/dimensions; reject invalid/incompatible responses and explicit truncation reports. Actual server fit/silent truncation remains unverified.
+- [x] Surface absent service/model, timeout and malformed-response errors without downloads, sensitive logs or remote fallback.
+- [ ] Connect a verified production runtime owner and shared heavy-job lease, then complete the separately authorized bounded actual-model embedding smoke. No native run or prior trial-budget reuse is authorized here; browser readiness remains false.
 
 **Verification:** Test-first mocked local HTTP/model/error cases; separately authorized actual-model embedding smoke with non-sensitive text.
-**Evidence:** Pending — routine tests and separately labelled local integration result.
-**Likely files:** `app/retrieval/embeddings.py`, `app/ollama.py`, `tests/unit/test_embeddings.py`, `tests/integration/test_local_embeddings.py`.
+**Evidence:** [T27 report](docs/benchmarks/t27-embeddings.md): 54 unit cases and two real-loopback synthetic integration cases; full suite 329 passed/one existing skip and warning, Ruff passed. Initial module absence and later truncation/Unicode controls failed before implementation/fixes. Wrong-digest mutation failed its guard test and restored the pre-mutation hash. No actual Ollama/native execution, model accuracy, owned-process lifecycle, global job coordination or target-resource proof is claimed. Real-model smoke remains pending rather than being represented by the synthetic server.
+**Files:** `app/ollama.py`, `app/retrieval/embeddings.py`, `tests/unit/test_ollama.py`, `tests/unit/test_embeddings.py`, `tests/integration/test_local_embeddings.py`; README, PLAN, TODO, contracts and report. T28/CP10 remain open.
 
 ### T28 — Persist an idempotent versioned local index
 

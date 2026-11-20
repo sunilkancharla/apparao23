@@ -1,5 +1,15 @@
 # Stage 1 application boundary contracts
 
+## T27 — implemented embedding-client subset
+
+`OllamaClient` owns an async HTTPX session for one literal IPv4 loopback port; it never launches/adopts an Ollama process. The trusted owner supplies `ownership_check`, required to raise unless its pinned process/model store and heavy-job lease remain owned. It runs before and after each HTTP exchange; absent/failed checks refuse requests. This injection seam is not production process-ownership verification. The app supplies no live owner yet, and readiness remains unchanged.
+
+The transport allows only `GET /api/version`, `GET /api/tags` and `POST /api/embed`, disables proxy inheritance/redirects and accepts bounded uncompressed UTF-8 JSON objects. Request/response caps are 65,536/262,144 bytes; duplicate keys, invalid constants, media/encoding errors and upstream errors are refused with content-free codes. Cooperative HTTP and whole-batch deadlines are at most 90 seconds, without automatic retry. Cancellation does not prove native work stopped; that belongs to the future owning controller.
+
+`Embedder.documents()` accepts one through eight complete T26 chunks; `query()` accepts one nonblank question within the provisional 512 UTF-8 bytes and a caller-owned query ID. It checks Ollama `0.40.16` and the selected Nomic v1.5 manifest digest before sending evidence and again before returning results. It uses `search_document: ` / `search_query: `, 768 dimensions, CPU/four-thread/2048-context/64 internal batch options, `truncate: false` and `keep_alive: 0`. The request batch ceiling is an internal work bound, not an upload limit. One embedder refuses concurrent calls; the owner must enforce the app-wide lease.
+
+Immutable `EmbeddingBatch`/`Embedding` values retain source IDs/text hashes, ordered vectors, kind, model/digest/runtime/dimension, normalization `l2-f64-1`, and `space_id` hashing the paired prefixes/settings/artifact identity. Returned components must be numeric, finite, nonzero-norm and exactly 768-dimensional; stable local L2 normalization avoids overflow/underflow. No partial batch is returned. Invalid counts/models, explicit truncation reports or changed post-request identities refuse all results. Optional prompt counts are observations after processing, not token-fit proof. There is no persisted index or public embedding route. [Synthetic verification, source references and open real-model/ownership gates](benchmarks/t27-embeddings.md).
+
 ## T25 — implemented CSV extraction and preview subset
 
 Authorized after T24 commit `0e4502f`. [Exact provenance, storage, API and verification contract](benchmarks/t25-csv.md). Empty-body, idempotent `POST /api/conversations/{id}/references/{reference_id}/extractions` now extracts the explicitly requested eligible CSV reference. UTF-8/BOM comma CSV and first-record headers remain explicit; typed per-column cell tables retain complete decoded strings, positional/missing/duplicate headers, data-record/physical-line spans and explicit coarse header/missing-cell/raw-offset limitations. No formulas, commands or model instructions execute.
