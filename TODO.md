@@ -1,6 +1,6 @@
-## Current task — T32 commit approved; T15 skipped; T33 reserved for a new session
+## Current task — T26–T32 committed; stop before T33
 
-The user approved all reviewed T32 changes and requested the commits, 2026-11-20. T15/UI UX Pro Max is explicitly skipped, including source review/use; T33 retains manual accessibility/design review with the approved stack. The user accepted T34A initial CSV validation after T34 and before format expansion. Its exact native package/fixtures/budgets remain separately gated. Do not start T33 now; it is reserved for a new session. Create the explicitly requested `docs/session_summaries/SESSION_4_AI_Session_SUMMARY.md` for T26–T32 in Session 3's format, preserve earlier summaries and all closed allocations, perform the approved source/decision and summary commits, then stop. No new implementation, installation or trial is authorized in this closeout.
+T32 source/results and approved workflow decisions are committed as `c3c6e61`; T26–T32 are complete within their recorded implementation/bounded-validation scopes. Last verified suite: 579 passed/one existing skip and warning, scoped Ruff passed. The explicitly requested [Session 4 summary](docs/session_summaries/SESSION_4_AI_Session_SUMMARY.md) follows Session 3's format and records actual Git inventories/evidence. T15/UI UX Pro Max source review/use is skipped. T33 remains unstarted and reserved for a new session; retain manual frontend review with the approved stack. T34A is scheduled after T34/CP12 and before format expansion, with the exact native execution package still gated. Earlier summaries, source seals and all closed allocations are preserved. Finish the approved summary/status commit and stop; no T33 implementation or new model/tool trial is included.
 
 ## Earlier task — T32 verified; commit pending; T15 review before T33
 
@@ -1671,7 +1671,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T32 — Expose transparent evidence-support signals
 
-**Status:** Implemented and routine-verified, 2026-11-20; source/results commit pending. **Prerequisites:** T31 (`fd830e5`)/accepted CP11; T16 approved R02 semantics; explicit continuation. **Scope:** M, ordered A/B/C increments and routine allocation above.
+**Status:** Implemented, routine-verified and committed as `c3c6e61`, 2026-11-20. **Prerequisites:** T31 (`fd830e5`)/accepted CP11; T16 approved R02 semantics; explicit continuation. **Scope:** M, ordered A/B/C increments and routine allocation above.
 **Objective:** Explain observed citation/support coverage without implying calibrated accuracy.
 
 - [x] Return observable validity/coverage/abstention/warning states and fixed explanations on answer POST/GET. Count only declared text blocks; separate supplied-ID validity, current quotation/location checks and unknown input fit. Semantic support remains independently unverified.
@@ -1679,7 +1679,7 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 **Verification:** Test-first indicator cases from T16 and manual comparison of wording with actual available evidence/limits.
 **Evidence:** [T32 report](docs/benchmarks/t32-evidence-support.md): 30 unit and eight actual-storage/HTTP cases, full suite 579 passed/one existing skip and warning in 63.41 s; scoped Ruff passed, 72 files formatted. Five missing hard-warning cases failed before correction; all 38 focused cases passed after it. Mutation allowing unavailable selected sources to become successful no-evidence failed its control; exact source restored before full regression. Positive verified-fit/semantic-counterexample cases use authored predicates, not a claimed tokenizer result. OCR metadata bridge is synthetic; no actual OCR/model/native trial.
-**Files:** New `app/chat/evidence.py`, `tests/unit/test_evidence_indicator.py`, `tests/integration/test_evidence_support.py`; narrow source-observation/answer-route/blocked-source-warning integration and README/PLAN/TODO/contracts/ADR/evaluation/report. No schema/lockfile/retention change. Reviewed 13-file commit awaits approval; T15 source-only UI aid review is proposed before T33.
+**Files:** New `app/chat/evidence.py`, `tests/unit/test_evidence_indicator.py`, `tests/integration/test_evidence_support.py`; narrow source-observation/answer-route/blocked-source-warning integration and README/PLAN/TODO/contracts/ADR/evaluation/report. The 13 implementation/report files plus three approved policy/decision updates were committed as `c3c6e61`. No schema/lockfile/retention change. T15 is skipped, T34A is scheduled after T34, and T33 remains reserved for a new session.
 
 ### T33 — Deliver the local browser CSV chat flow
 

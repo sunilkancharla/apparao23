@@ -1,6 +1,6 @@
-## Current execution point — T32 commit approved; T15 skipped; T33 reserved for a new session
+## Current execution point — T26–T32 committed; stop before T33
 
-The user approved the T32 source/results commit and these decision updates on 2026-11-20. T15/UI UX Pro Max is explicitly skipped, including its source review/use; retain manual frontend/accessibility review and the approved HTML/CSS/JavaScript stack. T33 is unstarted and must wait for a new session. Add T34A immediately after T34/CP12 and before T35 format expansion: prepare a separately bounded CSV package for selected-Ollama input boundaries and the actual local retrieval/generation/citation/restart path. Its exact trial remains gated; T48 still provides final all-format quality/resource evaluation, with no per-answer semantic verifier adopted. Complete the requested T26–T32 Session 4 summary and approved commits, then stop. Earlier pending wording below is historical.
+T32 source/results and the approved workflow updates are committed as `c3c6e61`. [Session 4 summary](docs/session_summaries/SESSION_4_AI_Session_SUMMARY.md) records T26–T32 files, commits, verification/native evidence and remaining limits; the last verified suite is 579 passed/one existing skip and warning, scoped Ruff passed. T15/UI UX Pro Max review/use is skipped; retain manual frontend review with the approved stack. T33 is unstarted and reserved for a new session. T34A is scheduled immediately after T34/CP12 and before T35, with its exact native package still gated; T48 remains the final all-format baseline. This documentation handoff starts no implementation/trial or stage transition. Earlier pending wording below is historical.
 
 ## Earlier execution point — T32 verified; commit pending; T15 review before T33
 
