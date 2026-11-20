@@ -1,4 +1,8 @@
-## Current execution point — T21 provenance models verified; review complete; commit approved
+## Current execution point — T22 fixture harness verified; review complete; commit approved
+
+The user's instruction to proceed authorized T22 after T21 commit **daf10c5**. The local authored-fixture harness, loopback-only in-memory Ollama mocks and shared routine-suite budget are implemented. Final suite: 123 passed, one existing permission skip and warning; Ruff passed. [Evidence](docs/benchmarks/t22-fixtures.md). A blank image-only page is an empty-page control, not a verified illegible-text control. Chart trials/scoring remain deferred; scoring flags/private originals are untouched. The user explicitly approved the reviewed ten-file T22 closeout and commit on 2026-11-20. T23 has not started.
+
+## Earlier execution point — T21 closeout
 
 The user explicitly authorized T21 on 2026-11-20 after T20 commit **99dc36e**. Typed normalized extraction, source-unit/table/image references and PDF/XLSX/CSV anchors are implemented using the existing Pydantic dependency. Full suite: 107 passed, one host-permission skip and the retained Starlette warning; Ruff passed. [Evidence](docs/benchmarks/t21-provenance.md). No parser/native model, upload route, generated fixture harness or T22 work was introduced. The user explicitly approved the reviewed eight-file T21 closeout and commit on 2026-11-20. T22 has not started.
 

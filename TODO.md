@@ -1,4 +1,8 @@
-## Current task — T21 implemented and verified; review complete; commit approved
+## Current task — T22 implemented and verified; review complete; commit approved
+
+T22 was authorized by the user's instruction to proceed after T21 commit **daf10c5**. [Fixture evidence](docs/benchmarks/t22-fixtures.md): 16 new tests; full suite 123 passed/one existing host-permission skip and warning; Ruff passed. Final shared meter: 6/64 starts (including controller and indirect platform probe), 262,980/2,000,000 retained artifact/child-output bytes, within 120-second child/admission boundary. All seven PDF pages were rendered and visually checked. Empty-page control approved; illegible-text and chart scoring remain deferred. The user explicitly approved the reviewed ten-file T22 closeout and commit on 2026-11-20; no T23 work or new dependencies.
+
+## Earlier task — T21 closeout
 
 The user authorized T21 on 2026-11-20 after T20 commit **99dc36e**. [Evidence](docs/benchmarks/t21-provenance.md): 50 new provenance cases, full suite 107 passed/one host-permission skip and one existing Starlette warning; Ruff passed. Typed identities, parser versions, native/OCR labels, raw confidence/limitations, structured tables and format anchors round-trip without synthesizing coordinates. No parser execution, new dependency, generated document fixtures, product-data write or T22 work. The user explicitly approved the reviewed eight-file T21 closeout and commit on 2026-11-20.
 
@@ -1412,15 +1416,15 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T22 — Build the reproducible local fixture harness
 
-**Status:** Proposed. **Prerequisites:** T21, T02. **Scope:** M.
+**Status:** Implemented and verified; review complete; commit approved, 2026-11-20. **Prerequisites:** T21 (daf10c5), T02; explicit instruction to proceed. **Scope:** M.
 **Objective:** Turn approved fixture definitions into reusable tests without committing private/generated documents.
 
-- [ ] Load stable evaluation manifests; create necessary synthetic document artifacts only in ignored/temporary paths using approved packages and keep private samples separate with ground truth/hashes.
-- [ ] Provide representative valid/invalid/native/scanned/table fixtures and mocked Ollama responses so routine tests need neither internet nor a running model.
-- [ ] Enforce one run budget across parser/model/negative/regression child processes and retained output, with deterministic exhaustion tests; do not repeat T07's counter gap. Before any earlier combined rerun, supply the equivalent shared meter/allocation in its approved package.
+- [x] Load stable evaluation manifests; create necessary synthetic document artifacts only in ignored/temporary paths using approved packages and keep private samples separate with ground truth/hashes.
+- [x] Provide representative valid/invalid/native/scanned/table fixtures and mocked Ollama responses so routine tests need neither internet nor a running model.
+- [x] Enforce one run budget across the routine harness's admitted children, controls/regressions and retained artifacts/output, with deterministic exhaustion tests. Native/model process trees remain outside this harness and require an approved descendant-accounted package; no historical combined trial is reopened.
 
 **Verification:** Repeat fixture generation/loading and compare expected content/anchors; run harness/mock checks and inspect ignored artifacts.
-**Evidence:** Pending — reproducibility, coverage and privacy review.
+**Evidence:** [T22 report](docs/benchmarks/t22-fixtures.md): repeated fixture bytes/hashes/ground truth match; CSV quoting/line spans, XLSX formulas/cache/merges and native/scanned/mixed PDFs checked; all seven pages rendered and visually reviewed. Shared session meter covers all actual regression children and the indirect read-only Windows version probe; deterministic start/output/deadline/overflow tests and a detected boundary mutation verify refusal. No private source original read, scoring change, model/OCR engine, installation or application ingestion. Empty page tests absence of evidence; actual illegible-text behavior is unverified.
 **Likely files:** `tests/conftest.py`, `tests/fixtures/factories.py`, `tests/unit/test_eval_fixtures.py`, `tests/evals/manifest.json`.
 
 **Checkpoint CP08 — T20–T22:** Proposed. Review ownership/provenance/fixture integrity and relevant tests/Ruff before first upload. Apply G3.

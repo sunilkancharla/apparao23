@@ -1,4 +1,21 @@
-**Current status — 2026-11-20:** T20 is committed as **99dc36e**. T21's normalized provenance contracts are implemented and verified; the user approved the reviewed T21 closeout and commit on 2026-11-20. The normal suite passed **107 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T21 evidence and limits](docs/benchmarks/t21-provenance.md). G2/T17 remains closed with its recorded unverified limitations. Parser execution, model execution and chat UI remain later work.
+**Current status — 2026-11-20:** T21 is committed as **daf10c5**. T22's local fixture harness is implemented and verified; the user approved the reviewed T22 closeout and commit on 2026-11-20. The normal suite passed **123 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T22 evidence and limits](docs/benchmarks/t22-fixtures.md). No application upload/parser pipeline, model execution or chat UI is claimed.
+
+## Reproducible test fixtures
+
+`tests/fixtures/factories.py` loads only active authored CSV/XLSX/PDF definitions from the checked-in evaluation manifest. It materializes deterministic native/scanned/mixed PDFs, XLSX sheets/formula-cache/merge cases, quoted/multiline/injection CSVs and small invalid artifacts, plus local ground truth/hashes. Private corpus originals and excluded DOCX/TXT/XLS definitions are never opened/materialized. Separate chart trials stay deferred. A blank image-only scan page is an empty-page control; it does not test illegible text. No scoring flags are enabled.
+
+The suite uses a fresh ignored `data/test-runs/<id>/` root unless `--basetemp` is explicit. Factories reject output outside ignored project roots, traversal/reparse ancestry and overwrites. Generated documents/databases/PNGs stay untracked. Fixture readers/rendering reuse pinned openpyxl/pypdf/Pillow/PDFium; they do not run OCR or model inference. `mock_ollama()` uses an in-memory HTTPX transport for tags/chat/embedding success and missing-model responses, with no network sockets.
+
+An autouse session fixture admits at most 64 total starts (including pytest), 2,000,000 retained artifact/child-output bytes and 120 seconds for admissions/owned child deadlines. Existing regression children share this meter; failed starts and conservative write charges are not refunded. Captured output is drained concurrently and refused before retention beyond the shared cap. Exhaustion is sticky. Only the current project Python interpreter and exact Windows `ver` probe are admitted; arbitrary shell/native executables and unmetered descendants are unsupported. The meter is test infrastructure, not a production policy or permission for historical model/native trials. It cannot terminate a hung pure-Python controller test or confine descendant processes.
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+.\.venv\Scripts\python.exe -m pytest -q -rP -p no:cacheprovider
+.\.venv\Scripts\ruff.exe check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration
+.\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration
+```
+
+`-rP` displays the shared meter summary. The final verified run used 6 starts and 262,980 retained bytes. No environment installation or external service is needed with the existing provisioned project environment.
 
 ## Provenance contracts
 
