@@ -12,6 +12,9 @@ from tests.fixtures.budget import Budget, MeteredProcess
 def pytest_configure(config):
     """Default generated test artifacts to a fresh ignored project-local root."""
     if config.option.basetemp is None:
+        (Path(__file__).resolve().parents[1] / "data/test-runs").mkdir(
+            parents=True, exist_ok=True
+        )
         config.option.basetemp = str(
             Path(__file__).resolve().parents[1] / "data/test-runs" / uuid4().hex
         )

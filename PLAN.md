@@ -1,4 +1,12 @@
-## Current execution point — T23 upload verified; closeout and commit approved
+## Current execution point — T25/CP09 closeout and commit approved; T26 next session
+
+The user's continuation after T24 commit `0e4502f` authorized T25. Streaming CSV provenance, atomic versioned normalized storage/recovery, bounded scoped JSON previews and derived-operation status are implemented sequentially under T25-A/B/C. Final suite: 241 passed, one existing permission skip and warning; Ruff passed. [Evidence, CP09 walkthrough and limits](docs/benchmarks/t25-csv.md). The user explicitly approved the reviewed T25/CP09 closeout and seventeen-file commit on 2026-11-20, and requested that T26 begin in a new session. T26 has not started.
+
+## Earlier execution point — T24 batch/status verified; closeout and commit approved
+
+The user's instruction to proceed after T23 commit `3dd27a1` authorized T24. Bounded batch manifests, shared reference-slot accounting, durable per-file status/failure codes and explicit verified-cleanup retries are implemented. Status remains available during blocked startup cleanup; originals awaiting later extraction are never marked ready/indexed. Final suite: 209 passed, one existing permission skip and warning; Ruff passed. [Evidence and contract](docs/benchmarks/t24-processing.md). The user explicitly approved the reviewed T24 closeout and twelve-file commit on 2026-11-20. T25 has not started.
+
+## Earlier execution point — T23 upload verified; closeout and commit approved
 
 The user's explicit T23 instruction authorized the single-CSV attachment task after T22 commit `57973a6` and summary commit `beed4c5`. Validation, durable upload/reservation records, immutable originals, scoped references, body-verified replay and bounded startup reconciliation are implemented without new dependencies. Final suite: 181 passed, one existing permission skip and warning; Ruff passed. [Evidence, reviewable change map and limits](docs/benchmarks/t23-uploads.md). The user explicitly approved the reviewed T23 closeout and thirteen-file commit on 2026-11-20. T24 has not started.
 

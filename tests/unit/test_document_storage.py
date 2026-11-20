@@ -8,7 +8,12 @@ import sys
 
 import pytest
 
-from app.storage.database import StorageError, open_database, transaction
+from app.storage.database import (
+    SCHEMA_VERSION,
+    StorageError,
+    open_database,
+    transaction,
+)
 from app.storage.documents import Documents
 
 HASH = hashlib.sha256(b"synthetic CSV bytes").hexdigest()
@@ -67,7 +72,7 @@ def test_references_survive_close_and_reopen(tmp_path):
             Documents(reopened).resolve(conversation, reference.reference_id)
             == reference
         )
-        assert reopened.execute("PRAGMA user_version").fetchone()[0] == 1
+        assert reopened.execute("PRAGMA user_version").fetchone()[0] == SCHEMA_VERSION
         assert reopened.execute("PRAGMA foreign_keys").fetchone()[0] == 1
         assert reopened.execute("PRAGMA journal_mode").fetchone()[0] == "delete"
         assert reopened.execute("PRAGMA synchronous").fetchone()[0] == 2

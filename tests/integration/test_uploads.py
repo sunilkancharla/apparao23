@@ -503,7 +503,7 @@ def test_real_loopback_upload_with_missing_model_prerequisites(tmp_path):
                     try:
                         response = client.get("/api/session")
                         break
-                    except httpx.ConnectError:
+                    except (httpx.ConnectError, httpx.ConnectTimeout):
                         assert server.poll() is None and time.monotonic() < deadline
                         time.sleep(0.05)
                 token = response.json()["data"]["csrf_token"]
@@ -517,13 +517,61 @@ def test_real_loopback_upload_with_missing_model_prerequisites(tmp_path):
                     **{"Idempotency-Key": "bad-upload-000001"},
                 )
                 assert rejected.status_code == 422
+                batch = client.post(
+                    f"/api/conversations/{conversation}/attachment-batches",
+                    json={"files": ["a.csv", "b.csv"]},
+                    headers={"Idempotency-Key": "batch-intent-001"},
+                )
+                assert batch.status_code == 202
+                entries = batch.json()["data"]["files"]
+                for index, (name, body, status) in enumerate(
+                    (
+                        ("a.csv", b"a,b\n1,2\n", 202),
+                        ("b.csv", b'a,"private broken', 422),
+                    )
+                ):
+                    response = upload(
+                        client,
+                        conversation,
+                        body=body,
+                        **{
+                            "Idempotency-Key": f"batch-upload-{index:04}",
+                            "X-Filename": name,
+                            "X-Batch-File-Id": entries[index]["operation_id"],
+                        },
+                    )
+                    assert response.status_code == status
+                polled = client.get(
+                    f"/api/operations/{batch.json()['data']['operation_id']}",
+                    params={"conversation_id": conversation},
+                )
+                assert polled.status_code == 200
+                assert polled.json()["data"]["state"] == "partial_failure"
+                assert polled.json()["data"]["originals_stored"] == 1
+                source_base = f"/api/conversations/{conversation}/references/{accepted.json()['data']['reference_id']}"
+                extracted = client.post(
+                    source_base + "/extractions",
+                    headers={"Idempotency-Key": "extract-intent-01"},
+                )
+                assert extracted.status_code == 202
+                assert extracted.json()["data"]["state"] == "awaiting_index"
+                preview = client.get(source_base + "/preview")
+                assert preview.status_code == 200
+                assert [cell["value"] for cell in preview.json()["data"]["units"]] == [
+                    "A",
+                    "12",
+                ]
+                assert all(
+                    cell["record"] == 1 and cell["line_start"] == 2
+                    for cell in preview.json()["data"]["units"]
+                )
         finally:
             server.terminate()
             stdout, stderr = server.communicate(timeout=5)
     assert b"private" not in stdout + stderr
     assert token.encode() not in stdout + stderr
     connection = open_database(root)
-    assert len(Documents(connection).references(conversation)) == 1
+    assert len(Documents(connection).references(conversation)) == 2
     connection.close()
 
 
