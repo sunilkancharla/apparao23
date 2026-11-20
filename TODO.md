@@ -1,4 +1,6 @@
-## Current task — T17 closed; T18 verified, commit authorized
+## Current task — T19 verified; review/commit pending
+
+The user authorized T19 on 2026-11-20 after T18 commit **0658bea**. Configuration, exclusive loopback startup and safe prerequisite diagnostics are implemented; 36 normal tests passed, one symlink-creation test skipped for host permissions, and Ruff passed. [T19 evidence](docs/benchmarks/t19-startup.md) records test-first failures, actual Python server/port-collision/log checks, mutation detection and limitations. Readiness stays false until later owned model integration. No provisioning, model/OCR execution, T20 implementation, staging or commit is included in this authorization.
 
 [Approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved the architecture, bounded T18 task and reviewed documentation commit. T17 is closed in **2698240** and has no remaining mandatory task; the three omitted investigations remain unverified limitations. T18 checks passed as recorded below; the user explicitly authorized the scoped T18 commit on 2026-11-20.
 
@@ -1366,14 +1368,14 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T19 — Implement loopback configuration and startup diagnostics
 
-**Status:** Proposed. **Prerequisites:** T18; approved T17 data/network contracts. **Scope:** M.
+**Status:** Implemented and verified, review/commit pending, 2026-11-20. **Prerequisites:** T18 (0658bea); approved T17 data/network contracts; explicit user instruction to proceed with T19. **Scope:** M.
 **Objective:** Start the local app with explicit prerequisites and useful failure behavior.
 
-- [ ] Configure loopback binding/Ollama endpoints and application-data root; keep assets/logging local and sensitive payloads out of logs.
-- [ ] Report missing service/models/OCR assets and unwritable paths clearly without silent downloads, external telemetry or cloud fallback.
+- [x] Configure loopback binding/Ollama endpoints and application-data root; keep assets/logging local and sensitive payloads out of logs.
+- [x] Report missing service/models/OCR assets and unwritable paths clearly without silent downloads, external telemetry or cloud fallback.
 
 **Verification:** Test-first mocked config/startup/API failures; actual local start and missing-prerequisite walkthrough, without unapproved provisioning.
-**Evidence:** Pending — startup tests, loopback checks and redacted-log review.
+**Evidence:** [Startup report](docs/benchmarks/t19-startup.md): 36 tests passed/one host-permission skip; actual local Python server answered health, rejected foreign Host, refused a second launcher on the same port, and emitted no test question/private path in captured output. Reparse-attribute rejection is separately tested without symlink privileges. Ruff lint/format passed. No Ollama/OCR process, installation or downloads. Health is a startup snapshot and always 503 until later owned model integration; this verifies diagnostics, not model availability or complete offline product acceptance.
 **Likely files:** `app/main.py`, `app/config.py`, `tests/unit/test_config.py`, `tests/integration/test_startup.py`.
 
 **Checkpoint CP07 — T18–T19:** Proposed. Review reproducibility, local startup/privacy/error behavior and validated commands; tests/Ruff and docs reflect reality. Apply G3.

@@ -1,4 +1,27 @@
-**Current status — 2026-11-20:** [G2 is approved and T17 is closed](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized), committed as **2698240**. T18 foundations passed the offline lock check, four setup smoke tests and Ruff lint/format; the user authorized the scoped T18 commit on 2026-11-20. Ollama's internal tokenizer is selected; standalone dependencies are not selected for installation. The three omitted investigations remain unverified limitations. SPEC is unchanged; no end-user application or new model-validation pass is claimed.
+**Current status — 2026-11-20:** T18 is committed as **0658bea**. The user authorized T19; its loopback launcher and startup diagnostics are implemented and verified, awaiting review/commit. The normal suite passed **36 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T19 evidence and limits](docs/benchmarks/t19-startup.md). G2/T17 remains closed with its recorded unverified limitations. No document ingestion, model execution or chat UI is implemented by T19.
+
+## Local startup and diagnostics
+
+From the project root, using the existing environment:
+
+```powershell
+.\.venv\Scripts\python.exe -m app.main
+```
+
+Inspect `http://127.0.0.1:8000/api/health`. This is a JSON diagnostics endpoint; it returns **503 / `ready: false`** until owned Ollama integration is implemented. It reports writable-data-root status, missing/changed local runtime/model/English OCR assets, and unavailable Ollama ports. Asset checks run once at startup; restart after fixing prerequisites. No service/model is started or downloaded. An occupied app port fails with exit code 2; no other process is killed or adopted.
+
+Configuration uses process environment variables; `.env` files are not loaded automatically. Defaults: `DA_HOST=127.0.0.1` (the only accepted host), `DA_PORT=8000`, `DA_OLLAMA_PORT=11435`, `DA_DATA_ROOT=data/app`, `DA_MODEL_ROOT=data/ollama/models`, and `DA_OLLAMA_EXECUTABLE=.venv/tools/ollama/0.40.16/ollama.exe`. Set `DA_OCR_ASSET` to the explicitly provisioned approved `eng.traineddata`; no historical trial directory is guessed. Relative paths resolve against the project root. UNC, traversal, control-character and drive-relative paths are refused; managed-root ancestry cannot contain symlinks/reparse points or overlap the environment, Git metadata or model store. Unknown `DA_*` keys fail explicitly.
+
+Use this launcher to retain exact loopback binding, port reservation, disabled proxy-header trust and disabled access logging. Request Host must equal the configured authority; supplied Origin must equal the configured app origin. All mutation methods are denied in this read-only slice. No frontend, persistent browser token or mutation/CSRF handshake is exposed yet. Health responses contain safe component codes/messages, no asset paths; inherited HTTP proxy settings are unused because the app makes no outbound HTTP requests. Same-account malicious processes and filesystem check/use races are not confined by these controls.
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\ruff.exe check app tests/test_project_setup.py tests/unit tests/integration
+.\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/unit tests/integration
+```
+
+The integration suite starts two short-lived Python launcher processes to verify real loopback HTTP and port refusal. It uses synthetic/missing asset paths and runs no native model/OCR engine. Historical `tests/evals/` scripts retain their separate execution gates.
 
 ## Verified foundations checks
 
