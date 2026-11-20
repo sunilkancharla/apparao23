@@ -1,6 +1,20 @@
-## Current execution point — T17/G2 complete; bounded T18 in progress
+## Current execution point — T22 fixture harness verified; review complete; commit approved
 
-[G2 and T18 approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved all presented items and the reviewed documentation commit. T17 is closed with the recorded unverified limitations. Execute the bounded T18 foundations increment below; the three omitted investigations are not an active retry queue.
+The user's instruction to proceed authorized T22 after T21 commit **daf10c5**. The local authored-fixture harness, loopback-only in-memory Ollama mocks and shared routine-suite budget are implemented. Final suite: 123 passed, one existing permission skip and warning; Ruff passed. [Evidence](docs/benchmarks/t22-fixtures.md). A blank image-only page is an empty-page control, not a verified illegible-text control. Chart trials/scoring remain deferred; scoring flags/private originals are untouched. The user explicitly approved the reviewed ten-file T22 closeout and commit on 2026-11-20. T23 has not started.
+
+## Earlier execution point — T21 closeout
+
+The user explicitly authorized T21 on 2026-11-20 after T20 commit **99dc36e**. Typed normalized extraction, source-unit/table/image references and PDF/XLSX/CSV anchors are implemented using the existing Pydantic dependency. Full suite: 107 passed, one host-permission skip and the retained Starlette warning; Ruff passed. [Evidence](docs/benchmarks/t21-provenance.md). No parser/native model, upload route, generated fixture harness or T22 work was introduced. The user explicitly approved the reviewed eight-file T21 closeout and commit on 2026-11-20. T22 has not started.
+
+## Earlier execution point — T20 closeout
+
+The user authorized T20 on 2026-11-20 after the T19 closeout. Minimal SQLite content/document/conversation/reference persistence is implemented with stdlib SQLite only. The normal suite passed 57 tests, one host symlink-permission skip and the existing Starlette warning; Ruff passed. [T20 evidence](docs/benchmarks/t20-storage.md) includes real process-exit rollback/reopen and an isolation mutation check. This storage interface is not wired to HTTP/startup or uploads; quota/idempotency/lifecycle integration remains later work. The user explicitly approved the reviewed nine-file T20 closeout and commit on 2026-11-20. T21 has not started.
+
+The user explicitly authorized T19 after T18 commit **0658bea** on 2026-11-20. The loopback launcher, local configuration and startup health API are implemented with the existing baseline only. The suite passed 36 tests, with one host symlink-permission skip and the existing Starlette warning; Ruff passed. [Evidence and limits](docs/benchmarks/t19-startup.md). T19 does not launch/adopt an Ollama process or execute inference; readiness remains false. The user approved the reviewed ten-file T19 commit on 2026-11-20. This T19 closeout predates the T20 authorization above.
+
+[G2 and T18 approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved all presented items and the reviewed documentation commit. T17 is closed in commit **2698240**, with the recorded unverified limitations. T18's existing-baseline lock/smoke/lint/format checks passed and were committed as **0658bea**. The three omitted investigations are not an active retry queue.
+
+T18 evidence: offline lock check resolved the existing 53-package lock; the local uv/no-sync run passed four setup tests; Ruff lint/format passed. Default pytest discovery now excludes historical evaluation scripts because they require explicit fixture/budgeted runs. The in-memory client emitted one Starlette warning that its HTTPX integration is deprecated; the smoke tests passed, no HTTPX2 dependency was added, and no warning was suppressed. [Verified commands and limits](docs/provisioning.md#t18-foundations-results--2026-11-20).
 
 **Latest component decision, 2026-11-20:** use Ollama's internal model-native tokenizer; the separate standalone tokenizer graph is no longer proposed for Stage 1 installation. [Decision](docs/decisions.md#2026-11-20--ollama-internal-tokenizer-selected). Keep existing research as history. This selects the runtime tokenization path; exact application-facing pre-request counting remains unverified. No new comparison trial, private runner integration or model/runtime modification is planned by this choice. The G2 proposal below now uses this internal route.
 

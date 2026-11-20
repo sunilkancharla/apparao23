@@ -1,5 +1,21 @@
 # T03 Provisioning Proposals
 
+## T18 foundations results — 2026-11-20
+
+G2/T17 closeout is committed as **2698240**. The approved T18 increment reused the existing project `.venv`, uv/cache, baseline dependency pins and lock. No package was installed, upgraded or removed; no model/native inference trial, network download, private document or global/PATH change was used.
+
+- `uv.exe lock --check --offline`: passed; resolved the existing 53-package lock in 1.57 seconds, with no lock change.
+- `uv.exe run --offline --no-sync python -m pytest -q -p no:cacheprovider`: four tests passed in 2.63 seconds, with plugin autoload disabled in the child environment. Tests prove project-local interpreter isolation and FastAPI/Pydantic/HTTPX request-validation interoperability in memory; valid, invalid and missing fields are exercised. No application server/listener is created.
+- `ruff.exe check tests/test_project_setup.py` and `ruff.exe format --check tests/test_project_setup.py`: passed; the file was already formatted.
+
+Pytest's normal discovery now targets `tests/` and avoids recursively collecting historical `evals/` scripts. Those explicit evaluation scripts remain unchanged and available through their documented commands; they are not ordinary unbudgeted application tests. The smoke endpoint exists only inside the test and is not an implemented product route. No artificial failing implementation was introduced for this existing-stack verification.
+
+One retained warning: `StarletteDeprecationWarning` reports that Starlette's test-client HTTPX integration is deprecated in favour of HTTPX2. Current interoperability passed. No warning filter, package substitution or expanded dependency graph was introduced; this is not a failed tokenizer check or a production HTTPX failure.
+
+Run the commands in [README](../README.md#verified-foundations-checks) from `F:/document_assistant`. Runtime/private/generated paths remain covered by the existing ignore rules. The user explicitly authorized the scoped T18 source/configuration/documentation commit on 2026-11-20. The omitted T17 investigations are not repeated by these setup checks; their unverified limitations remain recorded.
+
+Closeout verified the exact changed-file scope, UTF-8/whitespace, local documentation links, an empty index, unchanged SPEC/AGENTS/lock/ignore rules, and six representative private/runtime ignore patterns while retaining `.env.example`. The first ignore probe incorrectly sent Windows CRLF path terminators to Git; NUL-delimited binary input corrected that check, which passed without changing ignore rules. This was a check-transport error, not an application failure. Historical evaluation sources remain unchanged.
+
 ## Current tokenization choice — 2026-11-20
 
 Use [Ollama's internal tokenizer](decisions.md#2026-11-20--ollama-internal-tokenizer-selected). The standalone Tokenizers/Hub/HF-Xet candidate graph is no longer an installation requirement. Keep the existing project-local runtime and cached model identities; record actual provisioning only when an approved implementation task needs it. No new dependency, private runner integration, custom build, model trial or cache removal occurred for this decision. Earlier standalone provisioning proposals are historical, not pending commands to execute.

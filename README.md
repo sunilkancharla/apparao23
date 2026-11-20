@@ -1,4 +1,74 @@
-**Current status — 2026-11-20:** [G2 is approved and T17 is closed](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized). The bounded T18 foundations task is authorized and in progress. Ollama's internal tokenizer is selected; standalone dependencies are not selected for installation. The three omitted investigations remain unverified limitations. SPEC and normal implementation tests remain unchanged; no end-user application or new runtime-validation pass is claimed.
+**Current status — 2026-11-20:** T21 is committed as **daf10c5**. T22's local fixture harness is implemented and verified; the user approved the reviewed T22 closeout and commit on 2026-11-20. The normal suite passed **123 tests**, with one Windows symlink-permission skip and the existing Starlette warning; Ruff passed. [T22 evidence and limits](docs/benchmarks/t22-fixtures.md). No application upload/parser pipeline, model execution or chat UI is claimed.
+
+## Reproducible test fixtures
+
+`tests/fixtures/factories.py` loads only active authored CSV/XLSX/PDF definitions from the checked-in evaluation manifest. It materializes deterministic native/scanned/mixed PDFs, XLSX sheets/formula-cache/merge cases, quoted/multiline/injection CSVs and small invalid artifacts, plus local ground truth/hashes. Private corpus originals and excluded DOCX/TXT/XLS definitions are never opened/materialized. Separate chart trials stay deferred. A blank image-only scan page is an empty-page control; it does not test illegible text. No scoring flags are enabled.
+
+The suite uses a fresh ignored `data/test-runs/<id>/` root unless `--basetemp` is explicit. Factories reject output outside ignored project roots, traversal/reparse ancestry and overwrites. Generated documents/databases/PNGs stay untracked. Fixture readers/rendering reuse pinned openpyxl/pypdf/Pillow/PDFium; they do not run OCR or model inference. `mock_ollama()` uses an in-memory HTTPX transport for tags/chat/embedding success and missing-model responses, with no network sockets.
+
+An autouse session fixture admits at most 64 total starts (including pytest), 2,000,000 retained artifact/child-output bytes and 120 seconds for admissions/owned child deadlines. Existing regression children share this meter; failed starts and conservative write charges are not refunded. Captured output is drained concurrently and refused before retention beyond the shared cap. Exhaustion is sticky. Only the current project Python interpreter and exact Windows `ver` probe are admitted; arbitrary shell/native executables and unmetered descendants are unsupported. The meter is test infrastructure, not a production policy or permission for historical model/native trials. It cannot terminate a hung pure-Python controller test or confine descendant processes.
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+.\.venv\Scripts\python.exe -m pytest -q -rP -p no:cacheprovider
+.\.venv\Scripts\ruff.exe check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration
+.\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/conftest.py tests/fixtures tests/unit tests/integration
+```
+
+`-rP` displays the shared meter summary. The final verified run used 6 starts and 262,980 retained bytes. No environment installation or external service is needed with the existing provisioned project environment.
+
+## Provenance contracts
+
+`app/ingestion/models.py` defines immutable Pydantic values for normalized extractions, passages/tables/images, parser identities and format-specific locations. Serialization preserves supplied source IDs, SHA256 identity, extraction/normalization versions, filename, warnings and per-unit native/OCR labels. OCR confidence retains an engine-named raw scale, or stays unknown; it is not a correctness probability.
+
+PDF anchors preserve 1-based pages and optional page-local regions; XLSX anchors preserve sheets, canonical A1 ranges and merged origins; CSV anchors separate data-record indices, inclusive physical-line spans and positional headers. Tables keep cell row/column/role/location metadata and inert formula text. Coarse/unavailable locations and missing mappings/structure require explicit limitations. Missing formula caches require a warning and retain `None`. Text mappings use zero-based, end-exclusive Unicode code-point offsets.
+
+These models validate structure without reading originals, executing formulas, running OCR/parsers or proving quotations/semantic support. They are not wired to upload, persistence or citations yet. [Serialized field conventions](docs/contracts.md#t21--implemented-normalized-provenance-contract). Focused verification: `.\.venv\Scripts\python.exe -m pytest tests/unit/test_provenance_models.py -q` with plugin autoload disabled as in the normal test commands below.
+
+## Metadata storage foundations
+
+`app/storage/database.py` opens `metadata.sqlite3` beneath a caller-supplied trusted managed root; the caller must close the returned connection. It initializes schema v1 with an application identifier, foreign keys, DELETE journaling and FULL synchronization; unsupported or changed schemas are refused. `app/storage/documents.py` provides backend methods to create conversation identities, register library documents, create exclusive attachments, attach library documents and resolve/list only a conversation's references.
+
+Equal SHA256 identities share content metadata. Documents and references keep separate UUIDs and membership. Reattaching the same library document to the same conversation returns its existing reference; a new logical attachment consumes another slot even for equal bytes. Foreign keys, unique membership, immutable identities and a ten-reference constraint protect metadata integrity. These methods take already verified content metadata; they do not read, store or hash uploaded originals.
+
+Storage is not connected to the launcher or HTTP yet. The health endpoint remains unchanged and unready. Public writes must first integrate upload validation, quota reservations and operation idempotency in later tasks; this foundation does not implement deletion, content cleanup, saved messages, vectors or extraction. Tests use only generated synthetic databases under ignored temporary directories. No SQLite extension, model or new dependency is loaded. Run the normal test/lint commands below; focused storage verification is `python -m pytest tests/unit/test_document_storage.py -q` using the project interpreter and disabled plugin autoload.
+
+## Local startup and diagnostics
+
+From the project root, using the existing environment:
+
+```powershell
+.\.venv\Scripts\python.exe -m app.main
+```
+
+Inspect `http://127.0.0.1:8000/api/health`. This is a JSON diagnostics endpoint; it returns **503 / `ready: false`** until owned Ollama integration is implemented. It reports writable-data-root status, missing/changed local runtime/model/English OCR assets, and unavailable Ollama ports. Asset checks run once at startup; restart after fixing prerequisites. No service/model is started or downloaded. An occupied app port fails with exit code 2; no other process is killed or adopted.
+
+Configuration uses process environment variables; `.env` files are not loaded automatically. Defaults: `DA_HOST=127.0.0.1` (the only accepted host), `DA_PORT=8000`, `DA_OLLAMA_PORT=11435`, `DA_DATA_ROOT=data/app`, `DA_MODEL_ROOT=data/ollama/models`, and `DA_OLLAMA_EXECUTABLE=.venv/tools/ollama/0.40.16/ollama.exe`. Set `DA_OCR_ASSET` to the explicitly provisioned approved `eng.traineddata`; no historical trial directory is guessed. Relative paths resolve against the project root. UNC, traversal, control-character and drive-relative paths are refused; managed-root ancestry cannot contain symlinks/reparse points or overlap the environment, Git metadata or model store. Unknown `DA_*` keys fail explicitly.
+
+Use this launcher to retain exact loopback binding, port reservation, disabled proxy-header trust and disabled access logging. Request Host must equal the configured authority; supplied Origin must equal the configured app origin. All mutation methods are denied in this read-only slice. No frontend, persistent browser token or mutation/CSRF handshake is exposed yet. Health responses contain safe component codes/messages, no asset paths; inherited HTTP proxy settings are unused because the app makes no outbound HTTP requests. Same-account malicious processes and filesystem check/use races are not confined by these controls.
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\ruff.exe check app tests/test_project_setup.py tests/unit tests/integration
+.\.venv\Scripts\ruff.exe format --check app tests/test_project_setup.py tests/unit tests/integration
+```
+
+The integration suite starts two short-lived Python launcher processes to verify real loopback HTTP and port refusal. It uses synthetic/missing asset paths and runs no native model/OCR engine. Historical `tests/evals/` scripts retain their separate execution gates.
+
+## Verified foundations checks
+
+Run from the project root using the existing environment:
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+.\.venv\Scripts\uv.exe lock --check --offline
+.\.venv\Scripts\uv.exe run --offline --no-sync python -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\ruff.exe check tests/test_project_setup.py
+.\.venv\Scripts\ruff.exe format --check tests/test_project_setup.py
+```
+
+Observed: four tests passed, lint/format passed, and the 53-package lock remained unchanged. The tests use an in-memory API; no product server or Ollama starts. Default pytest discovery excludes historical `tests/evals/` scripts, which keep their explicit evaluation commands and fixture/budget requirements. Starlette emitted one deprecation warning about its test client's HTTPX integration; no dependency upgrade was made. [Details](docs/provisioning.md#t18-foundations-results--2026-11-20).
 
 **Latest completed static work:** [T17-SV2](docs/benchmarks/t17-standalone-validation-closeout.md) verified ten exact wheels/470 payloads, seven reused distributions/158 payloads, the seventeen-node dependency graph and three exact publisher statements. Its unexecuted provisioning/parity checks remain unexecuted; the decision above changes their pre-G2 gating, not their measured results.
 

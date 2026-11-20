@@ -1,6 +1,18 @@
-## Current task — T17 closed; approved T18 foundations in progress
+## Current task — T22 implemented and verified; review complete; commit approved
 
-[Approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved the architecture, bounded T18 task and reviewed documentation commit. T17 has no remaining mandatory task; the three omitted investigations remain unverified limitations. T18 acceptance/evidence will be recorded here after the actual foundations checks.
+T22 was authorized by the user's instruction to proceed after T21 commit **daf10c5**. [Fixture evidence](docs/benchmarks/t22-fixtures.md): 16 new tests; full suite 123 passed/one existing host-permission skip and warning; Ruff passed. Final shared meter: 6/64 starts (including controller and indirect platform probe), 262,980/2,000,000 retained artifact/child-output bytes, within 120-second child/admission boundary. All seven PDF pages were rendered and visually checked. Empty-page control approved; illegible-text and chart scoring remain deferred. The user explicitly approved the reviewed ten-file T22 closeout and commit on 2026-11-20; no T23 work or new dependencies.
+
+## Earlier task — T21 closeout
+
+The user authorized T21 on 2026-11-20 after T20 commit **99dc36e**. [Evidence](docs/benchmarks/t21-provenance.md): 50 new provenance cases, full suite 107 passed/one host-permission skip and one existing Starlette warning; Ruff passed. Typed identities, parser versions, native/OCR labels, raw confidence/limitations, structured tables and format anchors round-trip without synthesizing coordinates. No parser execution, new dependency, generated document fixtures, product-data write or T22 work. The user explicitly approved the reviewed eight-file T21 closeout and commit on 2026-11-20.
+
+## Earlier task — T20 closeout
+
+The user explicitly authorized the presented T20 scope on 2026-11-20. [Storage evidence](docs/benchmarks/t20-storage.md): 21 new real-SQLite tests pass; full suite 57 passed, one host-permission skip and one retained Starlette warning; Ruff passed. Shared content identity, separate scoped document/reference identities, uniqueness/FK constraints, atomic rollback, version/schema refusal and restart persistence are covered. No new dependency, native model execution, live ingestion, quota/lifecycle implementation or T21 work. The user explicitly approved the reviewed nine-file T20 closeout and commit on 2026-11-20.
+
+The user authorized T19 on 2026-11-20 after T18 commit **0658bea**, then explicitly approved its reviewed closeout and ten-file commit, created as **e99630a**. Configuration, exclusive loopback startup and safe prerequisite diagnostics are implemented; 36 normal tests passed, one symlink-creation test skipped for host permissions, and Ruff passed. [T19 evidence](docs/benchmarks/t19-startup.md) records test-first failures, actual Python server/port-collision/log checks, mutation detection and limitations. Readiness stays false until later owned model integration. This T19 closeout predates the T20 authorization above; no provisioning or model/OCR execution occurred.
+
+[Approval, 2026-11-20](docs/decisions.md#2026-11-20--g2-approved-t17-closed-bounded-t18-authorized): the user approved the architecture, bounded T18 task and reviewed documentation commit. T17 is closed in **2698240** and has no remaining mandatory task; the three omitted investigations remain unverified limitations. T18 checks passed as recorded below; the user explicitly authorized the scoped T18 commit on 2026-11-20.
 
 **Latest component choice:** [Ollama internal tokenizer, 2026-11-20](docs/decisions.md#2026-11-20--ollama-internal-tokenizer-selected). Standalone provisioning/parity tasks are historical and no longer part of the selected route. Exact pre-request fit and boundary handling remain unverified; no new trial is requested.
 
@@ -9,7 +21,7 @@
 - [x] **T17-D1 — record the verification decision.** Objective: stop the repeated investigation cycle. Prerequisite: current user instruction. Acceptance/evidence: decision register and ADR explicitly preserve the unverified risks and PDF/OCR limitations; SPEC unchanged.
 - [x] **T17-D2 — record internal tokenization selection.** Prerequisite: explicit 2026-11-20 choice. Acceptance/evidence: ADR, dependency/provisioning inventory and input contract use Ollama-native processing; no standalone installation or invented public counting API; historical tests retain their original limits.
 - [x] **T17-G2 — final architecture/component decision.** Prerequisite: T17-D1/D2. Acceptance/evidence: explicit 2026-11-20 approval of ADR/component contracts, the recorded limitations and bounded T18 authorization; documentation commit approved.
-- [ ] **T18 — approved reproducible project foundations.** Prerequisite: T17-G2. Reuse the existing project-local environment, baseline dependencies and lock; introduce only what the first implementation slice needs. Evidence: meaningful setup/feature checks and reviewed source/config changes, not another tokenizer or hardware research package.
+- [x] **T18 — approved reproducible project foundations.** Prerequisite: T17-G2. Existing project-local baseline reused; offline lock check passed (53 locked packages), four setup tests passed, Ruff lint/format passed. Tests exercise local-environment isolation and in-memory API/client validation, including invalid/missing input. Default discovery excludes explicit historical evaluations. Evidence: `tests/test_project_setup.py`, pytest configuration and [actual commands/one deprecation warning](docs/provisioning.md#t18-foundations-results--2026-11-20). No new dependency/download/model trial; scoped source commit authorized on 2026-11-20.
 
 Normal test-first implementation, privacy, source/citation correctness and Stage 1 acceptance requirements remain in force. No new installation or product code occurred in this handoff. Earlier unchecked investigations below are historical and are not an active retry queue.
 
@@ -1352,6 +1364,8 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T18 — Establish the approved reproducible Python project
 
+**Current status: verified, 2026-11-20; scoped source commit authorized.** Existing environment/lock/ignore rules reused; offline lock, four setup tests and Ruff passed. See the current checklist and provisioning evidence above. The original task definition below is retained as history.
+
 **Status:** Proposed. **Prerequisites:** T17/G2; explicit task/provisioning authorization. **Scope:** M.
 **Objective:** Introduce only the environment and tooling needed for the first implementation slice.
 
@@ -1364,53 +1378,53 @@ User approved PDF/XLSX/CSV only for this stage. DOCX/TXT are excluded entirely f
 
 ### T19 — Implement loopback configuration and startup diagnostics
 
-**Status:** Proposed. **Prerequisites:** T18; approved T17 data/network contracts. **Scope:** M.
+**Status:** Complete, committed as e99630a following explicit user approval, 2026-11-20. **Prerequisites:** T18 (0658bea); approved T17 data/network contracts; explicit user instruction to proceed with T19. **Scope:** M.
 **Objective:** Start the local app with explicit prerequisites and useful failure behavior.
 
-- [ ] Configure loopback binding/Ollama endpoints and application-data root; keep assets/logging local and sensitive payloads out of logs.
-- [ ] Report missing service/models/OCR assets and unwritable paths clearly without silent downloads, external telemetry or cloud fallback.
+- [x] Configure loopback binding/Ollama endpoints and application-data root; keep assets/logging local and sensitive payloads out of logs.
+- [x] Report missing service/models/OCR assets and unwritable paths clearly without silent downloads, external telemetry or cloud fallback.
 
 **Verification:** Test-first mocked config/startup/API failures; actual local start and missing-prerequisite walkthrough, without unapproved provisioning.
-**Evidence:** Pending — startup tests, loopback checks and redacted-log review.
+**Evidence:** [Startup report](docs/benchmarks/t19-startup.md): 36 tests passed/one host-permission skip; actual local Python server answered health, rejected foreign Host, refused a second launcher on the same port, and emitted no test question/private path in captured output. Reparse-attribute rejection is separately tested without symlink privileges. Ruff lint/format passed. No Ollama/OCR process, installation or downloads. Health is a startup snapshot and always 503 until later owned model integration; this verifies diagnostics, not model availability or complete offline product acceptance.
 **Likely files:** `app/main.py`, `app/config.py`, `tests/unit/test_config.py`, `tests/integration/test_startup.py`.
 
-**Checkpoint CP07 — T18–T19:** Proposed. Review reproducibility, local startup/privacy/error behavior and validated commands; tests/Ruff and docs reflect reality. Apply G3.
+**Checkpoint CP07 — T18–T19:** Accepted by explicit approval of the reviewed T19 closeout, 2026-11-20. Reproducibility, local startup/privacy/error behavior and validated commands reviewed; tests/Ruff and docs reflect the recorded evidence and limits. T20 has not started.
 
 ### T20 — Persist minimal ownership and conversation references
 
-**Status:** Proposed. **Prerequisites:** T19; approved D04/T17 schema/lifecycle. **Scope:** M.
+**Status:** Implemented and verified; review complete; commit approved, 2026-11-20. **Prerequisites:** completed T19; approved D04/T17 schema/lifecycle; explicit task approval. **Scope:** M.
 **Objective:** Establish only the SQLite identities/reference distinctions needed by upcoming uploads.
 
-- [ ] Persist content/document identity, minimal conversations, exclusive/library ownership and references with integrity/uniqueness constraints; shared content identity must not merge visibility.
-- [ ] Version/initialize schema and preserve references after restart with transaction rollback on failure; do not prebuild unrelated future message/lifecycle features.
+- [x] Persist content/document identity, minimal conversations, exclusive/library ownership and references with integrity/uniqueness constraints; shared content identity must not merge visibility.
+- [x] Version/initialize schema and preserve references after restart with transaction rollback on failure; do not prebuild unrelated future message/lifecycle features.
 
 **Verification:** Test-first identity/reference/uniqueness/rollback/reopen cases against approved ownership policy.
-**Evidence:** Pending — storage/schema/restart tests and contract review.
+**Evidence:** [T20 report](docs/benchmarks/t20-storage.md): 21 focused tests pass, full suite 57 passed/one host-permission skip; Ruff passed. Real process termination leaves committed membership intact and rolls back the uncommitted transaction on reopen with integrity_check=ok. Isolation mutation is detected; original source restored exactly. SQLite schema/version/ownership and statement boundaries reviewed against C02/D04. No automatic product-database creation or public mutation API added.
 **Likely files:** `app/storage/database.py`, `app/storage/documents.py`, `tests/unit/test_document_storage.py`, one schema file if warranted.
 
 ### T21 — Implement normalized provenance contracts
 
-**Status:** Proposed. **Prerequisites:** T20; T17 approved interfaces. **Scope:** M.
+**Status:** Implemented and verified; review complete; commit approved, 2026-11-20. **Prerequisites:** T20 (99dc36e); T17 approved interfaces; explicit task authorization. **Scope:** M.
 **Objective:** Preserve exact/coarse source anchors through a common typed extraction representation.
 
-- [ ] Define document/passage/table/image references with stable IDs/hash/extraction version, filename/format, parser/version, native/OCR method, warnings/confidence and format-specific anchors.
-- [ ] Validate required metadata and explicit missing/coarser precision; round-trip structured tables/locations without confusing originals and normalized output or inventing anchors.
+- [x] Define document/passage/table/image references with stable IDs/hash/extraction version, filename/format, parser/version, native/OCR method, warnings/confidence and format-specific anchors.
+- [x] Validate required metadata and explicit missing/coarser precision; round-trip structured tables/locations without confusing originals and normalized output or inventing anchors.
 
 **Verification:** Test-first model/serialization/invalid-metadata and table/provenance round-trip fixtures for all planned formats.
-**Evidence:** Pending — contract tests and reviewed examples/limitations.
+**Evidence:** [T21 report](docs/benchmarks/t21-provenance.md): 50 new synthetic model cases cover format round-trips, mixed native/OCR, structured and unavailable tables, inert formulas/missing cache, merged origins, CSV multiline spans/duplicate headers, PDF image regions, metadata/range/mapping failures and identity uniqueness. Missing-cache disclosure test first failed, then passed after validation fix. Missing-page mutation detected; original source restored exactly. Full suite 107 passed/one host-permission skip; Ruff passed. Structural validity does not prove source fidelity or semantic support.
 **Likely files:** `app/ingestion/models.py`, `tests/unit/test_provenance_models.py`, `docs/contracts.md`.
 
 ### T22 — Build the reproducible local fixture harness
 
-**Status:** Proposed. **Prerequisites:** T21, T02. **Scope:** M.
+**Status:** Implemented and verified; review complete; commit approved, 2026-11-20. **Prerequisites:** T21 (daf10c5), T02; explicit instruction to proceed. **Scope:** M.
 **Objective:** Turn approved fixture definitions into reusable tests without committing private/generated documents.
 
-- [ ] Load stable evaluation manifests; create necessary synthetic document artifacts only in ignored/temporary paths using approved packages and keep private samples separate with ground truth/hashes.
-- [ ] Provide representative valid/invalid/native/scanned/table fixtures and mocked Ollama responses so routine tests need neither internet nor a running model.
-- [ ] Enforce one run budget across parser/model/negative/regression child processes and retained output, with deterministic exhaustion tests; do not repeat T07's counter gap. Before any earlier combined rerun, supply the equivalent shared meter/allocation in its approved package.
+- [x] Load stable evaluation manifests; create necessary synthetic document artifacts only in ignored/temporary paths using approved packages and keep private samples separate with ground truth/hashes.
+- [x] Provide representative valid/invalid/native/scanned/table fixtures and mocked Ollama responses so routine tests need neither internet nor a running model.
+- [x] Enforce one run budget across the routine harness's admitted children, controls/regressions and retained artifacts/output, with deterministic exhaustion tests. Native/model process trees remain outside this harness and require an approved descendant-accounted package; no historical combined trial is reopened.
 
 **Verification:** Repeat fixture generation/loading and compare expected content/anchors; run harness/mock checks and inspect ignored artifacts.
-**Evidence:** Pending — reproducibility, coverage and privacy review.
+**Evidence:** [T22 report](docs/benchmarks/t22-fixtures.md): repeated fixture bytes/hashes/ground truth match; CSV quoting/line spans, XLSX formulas/cache/merges and native/scanned/mixed PDFs checked; all seven pages rendered and visually reviewed. Shared session meter covers all actual regression children and the indirect read-only Windows version probe; deterministic start/output/deadline/overflow tests and a detected boundary mutation verify refusal. No private source original read, scoring change, model/OCR engine, installation or application ingestion. Empty page tests absence of evidence; actual illegible-text behavior is unverified.
 **Likely files:** `tests/conftest.py`, `tests/fixtures/factories.py`, `tests/unit/test_eval_fixtures.py`, `tests/evals/manifest.json`.
 
 **Checkpoint CP08 — T20–T22:** Proposed. Review ownership/provenance/fixture integrity and relevant tests/Ruff before first upload. Apply G3.

@@ -1,0 +1,1 @@
+"""Local Document Assistant application."""
